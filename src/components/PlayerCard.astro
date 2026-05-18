@@ -1,0 +1,51 @@
+---
+interface Props {
+  name: string;
+  team: string;
+  position: string;
+  slug: string;
+}
+const { name, team, position, slug } = Astro.props;
+---
+<article class="player-card">
+  <a href={`/players/${slug}/`}>
+    <p class="player-team">{team}</p>
+    <h3 class="player-name">{name}</h3>
+    <p class="player-pos">{position}</p>
+  </a>
+</article>
+<style>
+.player-card {
+  background: #fff;
+  border: 1px solid var(--gray-200, #e9ecef);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.player-card a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+.player-card:hover {
+  border-color: var(--navy, #1a3a5c);
+}
+.player-team {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy, #1a3a5c);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.25rem;
+}
+.player-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+.player-pos {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+</style>
