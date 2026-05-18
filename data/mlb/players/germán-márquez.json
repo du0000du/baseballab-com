@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 608566,
+    "fullName": "Germán Márquez",
+    "link": "/api/v1/people/608566",
+    "firstName": "Germán",
+    "lastName": "Márquez",
+    "primaryNumber": "33",
+    "birthDate": "1995-02-22",
+    "currentAge": 31,
+    "birthCity": "San Felix",
+    "birthCountry": "Venezuela",
+    "height": "6' 1\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Germán",
+    "useLastName": "Márquez",
+    "middleName": "Andres",
+    "boxscoreName": "Márquez",
+    "nickName": "Marquee",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "hair-MAHN MAR-kehz",
+    "mlbDebutDate": "2016-09-08",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Germán Márquez",
+    "nameSlug": "german-marquez-608566",
+    "firstLastName": "Germán Márquez",
+    "lastFirstName": "Márquez, Germán",
+    "lastInitName": "Márquez, G",
+    "initLastName": "G Márquez",
+    "fullFMLName": "Germán Andres Márquez",
+    "fullLFMName": "Márquez, Germán Andres",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 1,
+            "gamesStarted": 1,
+            "groundOuts": 4,
+            "airOuts": 4,
+            "runs": 3,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 3,
+            "baseOnBalls": 4,
+            "intentionalWalks": 0,
+            "hits": 5,
+            "hitByPitch": 0,
+            "avg": ".313",
+            "atBats": 16,
+            "obp": ".450",
+            "slg": ".500",
+            "ops": ".950",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 70,
+            "era": "6.75",
+            "inningsPitched": "4.0",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 3,
+            "whip": "2.25",
+            "battersFaced": 20,
+            "outs": 12,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 41,
+            "strikePercentage": ".590",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 8,
+            "groundOutsToAirouts": "1.00",
+            "winPercentage": ".---",
+            "pitchesPerInning": "17.50",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "0.75",
+            "strikeoutsPer9Inn": "6.75",
+            "walksPer9Inn": "9.00",
+            "hitsPer9Inn": "11.25",
+            "runsScoredPer9": "6.75",
+            "homeRunsPer9": "2.25",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 608566,
+            "fullName": "Germán Márquez",
+            "link": "/api/v1/people/608566"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

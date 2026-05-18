@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 663158,
+    "fullName": "Robert Suarez",
+    "link": "/api/v1/people/663158",
+    "firstName": "Robert",
+    "lastName": "Suarez",
+    "primaryNumber": "75",
+    "birthDate": "1991-03-01",
+    "currentAge": 35,
+    "birthCity": "Bolivar",
+    "birthCountry": "Venezuela",
+    "height": "6' 2\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Robert",
+    "useLastName": "Suarez",
+    "middleName": "Alexander",
+    "boxscoreName": "Suarez, R",
+    "gender": "M",
+    "nameMatrilineal": "Subero",
+    "isPlayer": true,
+    "isVerified": false,
+    "mlbDebutDate": "2022-04-07",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Robert Suarez",
+    "nameSlug": "robert-suarez-663158",
+    "firstLastName": "Robert Suarez",
+    "lastFirstName": "Suarez, Robert",
+    "lastInitName": "Suarez, R",
+    "initLastName": "R Suarez",
+    "fullFMLName": "Robert Alexander Suarez",
+    "fullLFMName": "Suarez, Robert Alexander",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 33,
+            "gamesPlayed": 65,
+            "gamesStarted": 0,
+            "groundOuts": 57,
+            "airOuts": 74,
+            "runs": 21,
+            "doubles": 7,
+            "triples": 0,
+            "homeRuns": 7,
+            "strikeOuts": 59,
+            "baseOnBalls": 16,
+            "intentionalWalks": 1,
+            "hits": 52,
+            "hitByPitch": 0,
+            "avg": ".217",
+            "atBats": 240,
+            "obp": ".265",
+            "slg": ".333",
+            "ops": ".598",
+            "caughtStealing": 1,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 977,
+            "era": "2.77",
+            "inningsPitched": "65.0",
+            "wins": 9,
+            "losses": 3,
+            "saves": 36,
+            "saveOpportunities": 42,
+            "holds": 1,
+            "blownSaves": 6,
+            "earnedRuns": 20,
+            "whip": "1.05",
+            "battersFaced": 258,
+            "outs": 195,
+            "gamesPitched": 65,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 655,
+            "strikePercentage": ".670",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 80,
+            "groundOutsToAirouts": "0.77",
+            "winPercentage": ".750",
+            "pitchesPerInning": "15.03",
+            "gamesFinished": 55,
+            "strikeoutWalkRatio": "3.69",
+            "strikeoutsPer9Inn": "8.17",
+            "walksPer9Inn": "2.22",
+            "hitsPer9Inn": "7.20",
+            "runsScoredPer9": "2.91",
+            "homeRunsPer9": "0.97",
+            "inheritedRunners": 24,
+            "inheritedRunnersScored": 8,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 135,
+            "name": "San Diego Padres",
+            "link": "/api/v1/teams/135"
+          },
+          "player": {
+            "id": 663158,
+            "fullName": "Robert Suarez",
+            "link": "/api/v1/people/663158"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

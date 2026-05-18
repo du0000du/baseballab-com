@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 683737,
+    "fullName": "Michael Busch",
+    "link": "/api/v1/people/683737",
+    "firstName": "Michael",
+    "lastName": "Busch",
+    "primaryNumber": "29",
+    "birthDate": "1997-11-09",
+    "currentAge": 28,
+    "birthCity": "Inver Grove Heights",
+    "birthStateProvince": "MN",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Michael",
+    "useLastName": "Busch",
+    "middleName": "James",
+    "boxscoreName": "Busch",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2023-04-25",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Michael Busch",
+    "nameSlug": "michael-busch-683737",
+    "firstLastName": "Michael Busch",
+    "lastFirstName": "Busch, Michael",
+    "lastInitName": "Busch, M",
+    "initLastName": "M Busch",
+    "fullFMLName": "Michael James Busch",
+    "fullLFMName": "Busch, Michael James",
+    "strikeZoneTop": 3.166,
+    "strikeZoneBottom": 1.598
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 152,
+            "groundOuts": 102,
+            "airOuts": 113,
+            "runs": 73,
+            "doubles": 28,
+            "triples": 2,
+            "homeRuns": 21,
+            "strikeOuts": 162,
+            "baseOnBalls": 63,
+            "intentionalWalks": 1,
+            "hits": 123,
+            "hitByPitch": 4,
+            "avg": ".248",
+            "atBats": 496,
+            "obp": ".335",
+            "slg": ".440",
+            "ops": ".775",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 2365,
+            "plateAppearances": 567,
+            "totalBases": 218,
+            "rbi": 65,
+            "leftOnBase": 218,
+            "sacBunts": 0,
+            "sacFlies": 4,
+            "babip": ".322",
+            "groundOutsToAirouts": "0.90",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "23.62"
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 683737,
+            "fullName": "Michael Busch",
+            "link": "/api/v1/people/683737"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

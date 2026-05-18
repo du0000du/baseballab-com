@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 682998,
+    "fullName": "Corbin Carroll",
+    "link": "/api/v1/people/682998",
+    "firstName": "Corbin",
+    "lastName": "Carroll",
+    "primaryNumber": "7",
+    "birthDate": "2000-08-21",
+    "currentAge": 25,
+    "birthCity": "Seattle",
+    "birthStateProvince": "WA",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 165,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Corbin",
+    "useLastName": "Carroll",
+    "middleName": "Franklin",
+    "boxscoreName": "Carroll",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2022-08-29",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Corbin Carroll",
+    "nameSlug": "corbin-carroll-682998",
+    "firstLastName": "Corbin Carroll",
+    "lastFirstName": "Carroll, Corbin",
+    "lastInitName": "Carroll, C",
+    "initLastName": "C Carroll",
+    "fullFMLName": "Corbin Franklin Carroll",
+    "fullLFMName": "Carroll, Corbin Franklin",
+    "strikeZoneTop": 3.103,
+    "strikeZoneBottom": 1.566
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 158,
+            "groundOuts": 165,
+            "airOuts": 170,
+            "runs": 121,
+            "doubles": 22,
+            "triples": 14,
+            "homeRuns": 22,
+            "strikeOuts": 130,
+            "baseOnBalls": 73,
+            "intentionalWalks": 0,
+            "hits": 136,
+            "hitByPitch": 10,
+            "avg": ".231",
+            "atBats": 589,
+            "obp": ".322",
+            "slg": ".428",
+            "ops": ".750",
+            "caughtStealing": 8,
+            "stolenBases": 35,
+            "stolenBasePercentage": ".814",
+            "caughtStealingPercentage": ".186",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 2648,
+            "plateAppearances": 684,
+            "totalBases": 252,
+            "rbi": 74,
+            "leftOnBase": 241,
+            "sacBunts": 3,
+            "sacFlies": 9,
+            "babip": ".256",
+            "groundOutsToAirouts": "0.97",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "26.77"
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 682998,
+            "fullName": "Corbin Carroll",
+            "link": "/api/v1/people/682998"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

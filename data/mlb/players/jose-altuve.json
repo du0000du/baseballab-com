@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 514888,
+    "fullName": "Jose Altuve",
+    "link": "/api/v1/people/514888",
+    "firstName": "Jose",
+    "lastName": "Altuve",
+    "primaryNumber": "27",
+    "birthDate": "1990-05-06",
+    "currentAge": 36,
+    "birthCity": "Maracay",
+    "birthCountry": "Venezuela",
+    "height": "5' 6\"",
+    "weight": 167,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Jose",
+    "useLastName": "Altuve",
+    "middleName": "Carlos",
+    "boxscoreName": "Altuve",
+    "nickName": "Tuve",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "al-TOO-vay",
+    "mlbDebutDate": "2011-07-20",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jose Altuve",
+    "nameSlug": "jose-altuve-514888",
+    "firstLastName": "Jose Altuve",
+    "lastFirstName": "Altuve, Jose",
+    "lastInitName": "Altuve, J",
+    "initLastName": "J Altuve",
+    "fullFMLName": "Jose Carlos Altuve",
+    "fullLFMName": "Altuve, Jose Carlos",
+    "strikeZoneTop": 2.926,
+    "strikeZoneBottom": 1.477
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 153,
+            "groundOuts": 153,
+            "airOuts": 171,
+            "runs": 94,
+            "doubles": 31,
+            "triples": 0,
+            "homeRuns": 20,
+            "strikeOuts": 119,
+            "baseOnBalls": 47,
+            "intentionalWalks": 2,
+            "hits": 185,
+            "hitByPitch": 7,
+            "avg": ".295",
+            "atBats": 628,
+            "obp": ".350",
+            "slg": ".439",
+            "ops": ".789",
+            "caughtStealing": 7,
+            "stolenBases": 22,
+            "stolenBasePercentage": ".759",
+            "caughtStealingPercentage": ".241",
+            "groundIntoDoublePlay": 15,
+            "numberOfPitches": 2454,
+            "plateAppearances": 682,
+            "totalBases": 276,
+            "rbi": 65,
+            "leftOnBase": 193,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".337",
+            "groundOutsToAirouts": "0.89",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "31.40"
+          },
+          "team": {
+            "id": 117,
+            "name": "Houston Astros",
+            "link": "/api/v1/teams/117"
+          },
+          "player": {
+            "id": 514888,
+            "fullName": "Jose Altuve",
+            "link": "/api/v1/people/514888"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

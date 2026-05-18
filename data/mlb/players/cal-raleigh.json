@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 663728,
+    "fullName": "Cal Raleigh",
+    "link": "/api/v1/people/663728",
+    "firstName": "Caleb",
+    "lastName": "Raleigh",
+    "primaryNumber": "29",
+    "birthDate": "1996-11-26",
+    "currentAge": 29,
+    "birthCity": "Harrisonburg",
+    "birthStateProvince": "VA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "2",
+      "name": "Catcher",
+      "type": "Catcher",
+      "abbreviation": "C"
+    },
+    "useName": "Cal",
+    "useLastName": "Raleigh",
+    "middleName": "John",
+    "boxscoreName": "Raleigh",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "pronunciation": "rah-lee",
+    "mlbDebutDate": "2021-07-11",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Cal Raleigh",
+    "nameSlug": "cal-raleigh-663728",
+    "firstLastName": "Cal Raleigh",
+    "lastFirstName": "Raleigh, Cal",
+    "lastInitName": "Raleigh, C",
+    "initLastName": "C Raleigh",
+    "fullFMLName": "Caleb John Raleigh",
+    "fullLFMName": "Raleigh, Caleb John",
+    "strikeZoneTop": 3.282,
+    "strikeZoneBottom": 1.656
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 153,
+            "groundOuts": 84,
+            "airOuts": 172,
+            "runs": 73,
+            "doubles": 16,
+            "triples": 0,
+            "homeRuns": 34,
+            "strikeOuts": 176,
+            "baseOnBalls": 70,
+            "intentionalWalks": 4,
+            "hits": 120,
+            "hitByPitch": 6,
+            "avg": ".220",
+            "atBats": 546,
+            "obp": ".312",
+            "slg": ".436",
+            "ops": ".748",
+            "caughtStealing": 1,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 2514,
+            "plateAppearances": 628,
+            "totalBases": 238,
+            "rbi": 100,
+            "leftOnBase": 263,
+            "sacBunts": 0,
+            "sacFlies": 6,
+            "babip": ".251",
+            "groundOutsToAirouts": "0.49",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "16.06"
+          },
+          "team": {
+            "id": 136,
+            "name": "Seattle Mariners",
+            "link": "/api/v1/teams/136"
+          },
+          "player": {
+            "id": 663728,
+            "fullName": "Cal Raleigh",
+            "link": "/api/v1/people/663728"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

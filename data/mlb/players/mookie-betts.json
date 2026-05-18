@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 605141,
+    "fullName": "Mookie Betts",
+    "link": "/api/v1/people/605141",
+    "firstName": "Markus",
+    "lastName": "Betts",
+    "primaryNumber": "50",
+    "birthDate": "1992-10-07",
+    "currentAge": 33,
+    "birthCity": "Nashville",
+    "birthStateProvince": "TN",
+    "birthCountry": "USA",
+    "height": "5' 9\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Mookie",
+    "useLastName": "Betts",
+    "middleName": "Lynn",
+    "boxscoreName": "Betts",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2011,
+    "mlbDebutDate": "2014-06-29",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Mookie Betts",
+    "nameSlug": "mookie-betts-605141",
+    "firstLastName": "Mookie Betts",
+    "lastFirstName": "Betts, Mookie",
+    "lastInitName": "Betts, M",
+    "initLastName": "M Betts",
+    "fullFMLName": "Markus Lynn Betts",
+    "fullLFMName": "Betts, Markus Lynn",
+    "strikeZoneTop": 3.096,
+    "strikeZoneBottom": 1.563
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 116,
+            "groundOuts": 81,
+            "airOuts": 186,
+            "runs": 75,
+            "doubles": 24,
+            "triples": 5,
+            "homeRuns": 19,
+            "strikeOuts": 57,
+            "baseOnBalls": 61,
+            "intentionalWalks": 2,
+            "hits": 130,
+            "hitByPitch": 1,
+            "avg": ".289",
+            "atBats": 450,
+            "obp": ".372",
+            "slg": ".491",
+            "ops": ".863",
+            "caughtStealing": 2,
+            "stolenBases": 16,
+            "stolenBasePercentage": ".889",
+            "caughtStealingPercentage": ".111",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 2047,
+            "plateAppearances": 516,
+            "totalBases": 221,
+            "rbi": 75,
+            "leftOnBase": 138,
+            "sacBunts": 0,
+            "sacFlies": 4,
+            "babip": ".294",
+            "groundOutsToAirouts": "0.44",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "23.68"
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 605141,
+            "fullName": "Mookie Betts",
+            "link": "/api/v1/people/605141"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

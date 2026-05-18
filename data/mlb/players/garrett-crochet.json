@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 676979,
+    "fullName": "Garrett Crochet",
+    "link": "/api/v1/people/676979",
+    "firstName": "Garrett",
+    "lastName": "Crochet",
+    "primaryNumber": "35",
+    "birthDate": "1999-06-21",
+    "currentAge": 26,
+    "birthCity": "Ocean Springs",
+    "birthStateProvince": "MS",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 245,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Garrett",
+    "useLastName": "Crochet",
+    "middleName": "Nolan",
+    "boxscoreName": "Crochet",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2020,
+    "pronunciation": "crow-SHAY",
+    "mlbDebutDate": "2020-09-18",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Garrett Crochet",
+    "nameSlug": "garrett-crochet-676979",
+    "firstLastName": "Garrett Crochet",
+    "lastFirstName": "Crochet, Garrett",
+    "lastInitName": "Crochet, G",
+    "initLastName": "G Crochet",
+    "fullFMLName": "Garrett Nolan Crochet",
+    "fullLFMName": "Crochet, Garrett Nolan",
+    "strikeZoneTop": 3.66,
+    "strikeZoneBottom": 1.68
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 32,
+            "gamesStarted": 32,
+            "groundOuts": 108,
+            "airOuts": 117,
+            "runs": 61,
+            "doubles": 25,
+            "triples": 2,
+            "homeRuns": 18,
+            "strikeOuts": 209,
+            "baseOnBalls": 33,
+            "intentionalWalks": 0,
+            "hits": 123,
+            "hitByPitch": 5,
+            "avg": ".222",
+            "atBats": 555,
+            "obp": ".271",
+            "slg": ".371",
+            "ops": ".642",
+            "caughtStealing": 1,
+            "stolenBases": 17,
+            "stolenBasePercentage": ".944",
+            "caughtStealingPercentage": ".056",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 2395,
+            "era": "3.58",
+            "inningsPitched": "146.0",
+            "wins": 6,
+            "losses": 12,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 58,
+            "whip": "1.07",
+            "battersFaced": 595,
+            "outs": 438,
+            "gamesPitched": 32,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1622,
+            "strikePercentage": ".680",
+            "hitBatsmen": 5,
+            "balks": 1,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 206,
+            "groundOutsToAirouts": "0.92",
+            "winPercentage": ".333",
+            "pitchesPerInning": "16.40",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "6.33",
+            "strikeoutsPer9Inn": "12.88",
+            "walksPer9Inn": "2.03",
+            "hitsPer9Inn": "7.58",
+            "runsScoredPer9": "3.76",
+            "homeRunsPer9": "1.11",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 145,
+            "name": "Chicago White Sox",
+            "link": "/api/v1/teams/145"
+          },
+          "player": {
+            "id": 676979,
+            "fullName": "Garrett Crochet",
+            "link": "/api/v1/people/676979"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

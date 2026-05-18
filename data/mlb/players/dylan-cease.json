@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 656302,
+    "fullName": "Dylan Cease",
+    "link": "/api/v1/people/656302",
+    "firstName": "Dylan",
+    "lastName": "Cease",
+    "primaryNumber": "84",
+    "birthDate": "1995-12-28",
+    "currentAge": 30,
+    "birthCity": "Milton",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Dylan",
+    "useLastName": "Cease",
+    "middleName": "Edward",
+    "boxscoreName": "Cease",
+    "nickName": "Cease",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2019-07-03",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Dylan Cease",
+    "nameSlug": "dylan-cease-656302",
+    "firstLastName": "Dylan Cease",
+    "lastFirstName": "Cease, Dylan",
+    "lastInitName": "Cease, D",
+    "initLastName": "D Cease",
+    "fullFMLName": "Dylan Edward Cease",
+    "fullLFMName": "Cease, Dylan Edward",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 33,
+            "gamesStarted": 33,
+            "groundOuts": 146,
+            "airOuts": 186,
+            "runs": 80,
+            "doubles": 34,
+            "triples": 1,
+            "homeRuns": 18,
+            "strikeOuts": 224,
+            "baseOnBalls": 65,
+            "intentionalWalks": 0,
+            "hits": 137,
+            "hitByPitch": 2,
+            "avg": ".200",
+            "atBats": 684,
+            "obp": ".269",
+            "slg": ".332",
+            "ops": ".601",
+            "caughtStealing": 3,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 11,
+            "numberOfPitches": 3188,
+            "era": "3.47",
+            "inningsPitched": "189.1",
+            "wins": 14,
+            "losses": 11,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 73,
+            "whip": "1.07",
+            "battersFaced": 762,
+            "outs": 568,
+            "gamesPitched": 33,
+            "completeGames": 1,
+            "shutouts": 1,
+            "strikes": 1999,
+            "strikePercentage": ".630",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 12,
+            "pickoffs": 0,
+            "totalBases": 227,
+            "groundOutsToAirouts": "0.78",
+            "winPercentage": ".560",
+            "pitchesPerInning": "16.84",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.45",
+            "strikeoutsPer9Inn": "10.65",
+            "walksPer9Inn": "3.09",
+            "hitsPer9Inn": "6.51",
+            "runsScoredPer9": "3.80",
+            "homeRunsPer9": "0.86",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 2,
+            "sacBunts": 3,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 135,
+            "name": "San Diego Padres",
+            "link": "/api/v1/teams/135"
+          },
+          "player": {
+            "id": 656302,
+            "fullName": "Dylan Cease",
+            "link": "/api/v1/people/656302"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

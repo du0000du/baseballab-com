@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 543760,
+    "fullName": "Marcus Semien",
+    "link": "/api/v1/people/543760",
+    "firstName": "Marcus",
+    "lastName": "Semien",
+    "primaryNumber": "10",
+    "birthDate": "1990-09-17",
+    "currentAge": 35,
+    "birthCity": "San Francisco",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Marcus",
+    "useLastName": "Semien",
+    "middleName": "Andrew",
+    "boxscoreName": "Semien",
+    "nickName": "Simmy",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2011,
+    "pronunciation": "SIH-mee-ehn",
+    "mlbDebutDate": "2013-09-04",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Marcus Semien",
+    "nameSlug": "marcus-semien-543760",
+    "firstLastName": "Marcus Semien",
+    "lastFirstName": "Semien, Marcus",
+    "lastInitName": "Semien, M",
+    "initLastName": "M Semien",
+    "fullFMLName": "Marcus Andrew Semien",
+    "fullLFMName": "Semien, Marcus Andrew",
+    "strikeZoneTop": 3.212,
+    "strikeZoneBottom": 1.621
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 33,
+            "gamesPlayed": 159,
+            "groundOuts": 161,
+            "airOuts": 231,
+            "runs": 101,
+            "doubles": 27,
+            "triples": 2,
+            "homeRuns": 23,
+            "strikeOuts": 105,
+            "baseOnBalls": 64,
+            "intentionalWalks": 2,
+            "hits": 154,
+            "hitByPitch": 3,
+            "avg": ".237",
+            "atBats": 650,
+            "obp": ".308",
+            "slg": ".391",
+            "ops": ".699",
+            "caughtStealing": 3,
+            "stolenBases": 8,
+            "stolenBasePercentage": ".727",
+            "caughtStealingPercentage": ".273",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 2626,
+            "plateAppearances": 718,
+            "totalBases": 254,
+            "rbi": 74,
+            "leftOnBase": 208,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".250",
+            "groundOutsToAirouts": "0.70",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "28.26"
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 543760,
+            "fullName": "Marcus Semien",
+            "link": "/api/v1/people/543760"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

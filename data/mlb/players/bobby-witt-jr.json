@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 677951,
+    "fullName": "Bobby Witt Jr.",
+    "link": "/api/v1/people/677951",
+    "firstName": "Robert",
+    "lastName": "Witt",
+    "primaryNumber": "7",
+    "birthDate": "2000-06-14",
+    "currentAge": 25,
+    "birthCity": "Colleyville",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Bobby",
+    "useLastName": "Witt Jr.",
+    "middleName": "Andrew",
+    "boxscoreName": "Witt Jr.",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2022-04-07",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Bobby Witt Jr.",
+    "nameTitle": "Jr.",
+    "nameSuffix": "Jr.",
+    "nameSlug": "bobby-witt-jr-677951",
+    "firstLastName": "Bobby Witt Jr.",
+    "lastFirstName": "Witt Jr., Bobby",
+    "lastInitName": "Witt Jr., B",
+    "initLastName": "B Witt Jr.",
+    "fullFMLName": "Robert Andrew Witt Jr.",
+    "fullLFMName": "Witt Jr., Robert Andrew",
+    "strikeZoneTop": 3.238,
+    "strikeZoneBottom": 1.634
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 24,
+            "gamesPlayed": 161,
+            "groundOuts": 122,
+            "airOuts": 205,
+            "runs": 125,
+            "doubles": 45,
+            "triples": 11,
+            "homeRuns": 32,
+            "strikeOuts": 106,
+            "baseOnBalls": 57,
+            "intentionalWalks": 9,
+            "hits": 211,
+            "hitByPitch": 8,
+            "avg": ".332",
+            "atBats": 636,
+            "obp": ".389",
+            "slg": ".588",
+            "ops": ".977",
+            "caughtStealing": 12,
+            "stolenBases": 31,
+            "stolenBasePercentage": ".721",
+            "caughtStealingPercentage": ".279",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 2600,
+            "plateAppearances": 709,
+            "totalBases": 374,
+            "rbi": 109,
+            "leftOnBase": 181,
+            "sacBunts": 0,
+            "sacFlies": 8,
+            "babip": ".354",
+            "groundOutsToAirouts": "0.60",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "19.88"
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 677951,
+            "fullName": "Bobby Witt Jr.",
+            "link": "/api/v1/people/677951"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

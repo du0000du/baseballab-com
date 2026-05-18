@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 554430,
+    "fullName": "Zack Wheeler",
+    "link": "/api/v1/people/554430",
+    "firstName": "Zachary",
+    "lastName": "Wheeler",
+    "primaryNumber": "45",
+    "birthDate": "1990-05-30",
+    "currentAge": 35,
+    "birthCity": "Smyrna",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Zack",
+    "useLastName": "Wheeler",
+    "middleName": "Harrison",
+    "boxscoreName": "Wheeler",
+    "nickName": "Wheels",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2009,
+    "pronunciation": "WEE-lurr",
+    "mlbDebutDate": "2013-06-18",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Zack Wheeler",
+    "nameSlug": "zack-wheeler-554430",
+    "firstLastName": "Zack Wheeler",
+    "lastFirstName": "Wheeler, Zack",
+    "lastInitName": "Wheeler, Z",
+    "initLastName": "Z Wheeler",
+    "fullFMLName": "Zachary Harrison Wheeler",
+    "fullLFMName": "Wheeler, Zachary Harrison",
+    "strikeZoneTop": 3.61,
+    "strikeZoneBottom": 1.76
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 32,
+            "gamesStarted": 32,
+            "groundOuts": 173,
+            "airOuts": 191,
+            "runs": 62,
+            "doubles": 28,
+            "triples": 5,
+            "homeRuns": 20,
+            "strikeOuts": 224,
+            "baseOnBalls": 52,
+            "intentionalWalks": 0,
+            "hits": 139,
+            "hitByPitch": 8,
+            "avg": ".192",
+            "atBats": 723,
+            "obp": ".253",
+            "slg": ".328",
+            "ops": ".581",
+            "caughtStealing": 3,
+            "stolenBases": 8,
+            "stolenBasePercentage": ".727",
+            "caughtStealingPercentage": ".273",
+            "groundIntoDoublePlay": 13,
+            "numberOfPitches": 3134,
+            "era": "2.57",
+            "inningsPitched": "200.0",
+            "wins": 16,
+            "losses": 7,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 57,
+            "whip": "0.96",
+            "battersFaced": 787,
+            "outs": 600,
+            "gamesPitched": 32,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 2056,
+            "strikePercentage": ".660",
+            "hitBatsmen": 8,
+            "balks": 0,
+            "wildPitches": 8,
+            "pickoffs": 1,
+            "totalBases": 237,
+            "groundOutsToAirouts": "0.91",
+            "winPercentage": ".696",
+            "pitchesPerInning": "15.67",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "4.31",
+            "strikeoutsPer9Inn": "10.08",
+            "walksPer9Inn": "2.34",
+            "hitsPer9Inn": "6.26",
+            "runsScoredPer9": "2.79",
+            "homeRunsPer9": "0.90",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 554430,
+            "fullName": "Zack Wheeler",
+            "link": "/api/v1/people/554430"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

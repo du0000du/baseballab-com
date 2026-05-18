@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 641154,
+    "fullName": "Pablo López",
+    "link": "/api/v1/people/641154",
+    "firstName": "Pablo",
+    "lastName": "López",
+    "primaryNumber": "49",
+    "birthDate": "1996-03-07",
+    "currentAge": 30,
+    "birthCity": "Cabimas",
+    "birthCountry": "Venezuela",
+    "height": "6' 4\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Pablo",
+    "useLastName": "López",
+    "middleName": "Jose",
+    "boxscoreName": "López, P",
+    "nickName": "Pache",
+    "gender": "M",
+    "nameMatrilineal": "Serra",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2018-06-30",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Pablo López",
+    "nameSlug": "pablo-lopez-641154",
+    "firstLastName": "Pablo López",
+    "lastFirstName": "López, Pablo",
+    "lastInitName": "López, P",
+    "initLastName": "P López",
+    "fullFMLName": "Pablo Jose López",
+    "fullLFMName": "López, Pablo Jose",
+    "strikeZoneTop": 3.66,
+    "strikeZoneBottom": 1.72
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 32,
+            "gamesStarted": 32,
+            "groundOuts": 166,
+            "airOuts": 177,
+            "runs": 90,
+            "doubles": 33,
+            "triples": 0,
+            "homeRuns": 26,
+            "strikeOuts": 198,
+            "baseOnBalls": 41,
+            "intentionalWalks": 0,
+            "hits": 180,
+            "hitByPitch": 8,
+            "avg": ".252",
+            "atBats": 715,
+            "obp": ".298",
+            "slg": ".407",
+            "ops": ".705",
+            "caughtStealing": 1,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".917",
+            "caughtStealingPercentage": ".083",
+            "groundIntoDoublePlay": 11,
+            "numberOfPitches": 2986,
+            "era": "4.08",
+            "inningsPitched": "185.1",
+            "wins": 15,
+            "losses": 10,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 84,
+            "whip": "1.19",
+            "battersFaced": 772,
+            "outs": 556,
+            "gamesPitched": 32,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1991,
+            "strikePercentage": ".670",
+            "hitBatsmen": 8,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 291,
+            "groundOutsToAirouts": "0.94",
+            "winPercentage": ".600",
+            "pitchesPerInning": "16.11",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "4.83",
+            "strikeoutsPer9Inn": "9.62",
+            "walksPer9Inn": "1.99",
+            "hitsPer9Inn": "8.74",
+            "runsScoredPer9": "4.37",
+            "homeRunsPer9": "1.26",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 2,
+            "sacBunts": 2,
+            "sacFlies": 4
+          },
+          "team": {
+            "id": 142,
+            "name": "Minnesota Twins",
+            "link": "/api/v1/teams/142"
+          },
+          "player": {
+            "id": 641154,
+            "fullName": "Pablo López",
+            "link": "/api/v1/people/641154"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 641355,
+    "fullName": "Cody Bellinger",
+    "link": "/api/v1/people/641355",
+    "firstName": "Cody",
+    "lastName": "Bellinger",
+    "primaryNumber": "35",
+    "birthDate": "1995-07-13",
+    "currentAge": 30,
+    "birthCity": "Scottsdale",
+    "birthStateProvince": "AZ",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 204,
+    "active": true,
+    "primaryPosition": {
+      "code": "7",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "LF"
+    },
+    "useName": "Cody",
+    "useLastName": "Bellinger",
+    "middleName": "James",
+    "boxscoreName": "Bellinger",
+    "nickName": "Belli",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2013,
+    "mlbDebutDate": "2017-04-25",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Cody Bellinger",
+    "nameSlug": "cody-bellinger-641355",
+    "firstLastName": "Cody Bellinger",
+    "lastFirstName": "Bellinger, Cody",
+    "lastInitName": "Bellinger, C",
+    "initLastName": "C Bellinger",
+    "fullFMLName": "Cody James Bellinger",
+    "fullLFMName": "Bellinger, Cody James",
+    "strikeZoneTop": 3.345,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 130,
+            "groundOuts": 102,
+            "airOuts": 193,
+            "runs": 72,
+            "doubles": 23,
+            "triples": 3,
+            "homeRuns": 18,
+            "strikeOuts": 89,
+            "baseOnBalls": 45,
+            "intentionalWalks": 7,
+            "hits": 137,
+            "hitByPitch": 3,
+            "avg": ".266",
+            "atBats": 516,
+            "obp": ".325",
+            "slg": ".426",
+            "ops": ".751",
+            "caughtStealing": 2,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".818",
+            "caughtStealingPercentage": ".182",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 2083,
+            "plateAppearances": 569,
+            "totalBases": 220,
+            "rbi": 78,
+            "leftOnBase": 232,
+            "sacBunts": 0,
+            "sacFlies": 5,
+            "babip": ".287",
+            "groundOutsToAirouts": "0.53",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "28.67"
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 641355,
+            "fullName": "Cody Bellinger",
+            "link": "/api/v1/people/641355"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}

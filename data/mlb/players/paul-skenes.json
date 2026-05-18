@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 694973,
+    "fullName": "Paul Skenes",
+    "link": "/api/v1/people/694973",
+    "firstName": "Paul",
+    "lastName": "Skenes",
+    "primaryNumber": "30",
+    "birthDate": "2002-05-29",
+    "currentAge": 23,
+    "birthCity": "Fullerton",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 260,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Paul",
+    "useLastName": "Skenes",
+    "middleName": "David",
+    "boxscoreName": "Skenes",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2023,
+    "mlbDebutDate": "2024-05-11",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Paul Skenes",
+    "nameSlug": "paul-skenes-694973",
+    "firstLastName": "Paul Skenes",
+    "lastFirstName": "Skenes, Paul",
+    "lastInitName": "Skenes, P",
+    "initLastName": "P Skenes",
+    "fullFMLName": "Paul David Skenes",
+    "fullLFMName": "Skenes, Paul David",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 22,
+            "gamesPlayed": 23,
+            "gamesStarted": 23,
+            "groundOuts": 122,
+            "airOuts": 90,
+            "runs": 31,
+            "doubles": 14,
+            "triples": 1,
+            "homeRuns": 10,
+            "strikeOuts": 170,
+            "baseOnBalls": 32,
+            "intentionalWalks": 0,
+            "hits": 94,
+            "hitByPitch": 6,
+            "avg": ".198",
+            "atBats": 475,
+            "obp": ".257",
+            "slg": ".295",
+            "ops": ".552",
+            "caughtStealing": 1,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 15,
+            "numberOfPitches": 2125,
+            "era": "1.96",
+            "inningsPitched": "133.0",
+            "wins": 11,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 29,
+            "whip": "0.95",
+            "battersFaced": 514,
+            "outs": 399,
+            "gamesPitched": 23,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1404,
+            "strikePercentage": ".660",
+            "hitBatsmen": 6,
+            "balks": 1,
+            "wildPitches": 2,
+            "pickoffs": 3,
+            "totalBases": 140,
+            "groundOutsToAirouts": "1.36",
+            "winPercentage": ".786",
+            "pitchesPerInning": "15.98",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "5.31",
+            "strikeoutsPer9Inn": "11.50",
+            "walksPer9Inn": "2.17",
+            "hitsPer9Inn": "6.36",
+            "runsScoredPer9": "2.10",
+            "homeRunsPer9": "0.68",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 134,
+            "name": "Pittsburgh Pirates",
+            "link": "/api/v1/teams/134"
+          },
+          "player": {
+            "id": 694973,
+            "fullName": "Paul Skenes",
+            "link": "/api/v1/people/694973"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2024
+}
