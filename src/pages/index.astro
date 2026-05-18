@@ -1,296 +1,146 @@
 ---
 // baseballab.com — top page
-const title = 'Baseballab | 野球データを、もっと深く。';
-const description = 'MLB・NPBの統計データをデータドリブンな視点で分析。選手成績比較、チーム別データ、セイバーメトリクス解説まで、野球ファン・指導者・分析者のための情報サイト。';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://baseballab.com" />
-    <title>{title}</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZSRYVP3N9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JZSRYVP3N9');
-    </script>
-    <style>
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      :root {
-        --navy: #1a3a5c;
-        --navy-dark: #0f2540;
-        --navy-light: #274d75;
-        --red: #c0392b;
-        --red-hover: #a93226;
-        --white: #ffffff;
-        --gray-100: #f8f9fa;
-        --gray-200: #e9ecef;
-        --gray-400: #adb5bd;
-        --gray-600: #6c757d;
-        --text: #212529;
-        --font: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-      }
-      html { scroll-behavior: smooth; }
-      body { font-family: var(--font); font-size: 16px; line-height: 1.7; color: var(--text); background: var(--white); }
-      img { max-width: 100%; height: auto; display: block; }
-      a { color: inherit; text-decoration: none; }
-      ul { list-style: none; }
-      .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
-      .site-header { background: var(--navy); color: var(--white); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
-      .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem; max-width: 1100px; margin: 0 auto; }
-      .site-logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.03em; display: flex; align-items: center; gap: 0.4rem; }
-      .site-logo span { color: var(--red); }
-      .site-nav { display: flex; gap: 1.5rem; font-size: 0.9rem; font-weight: 500; }
-      .site-nav a { opacity: 0.85; transition: opacity 0.15s; }
-      .site-nav a:hover { opacity: 1; }
-      .hero { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%); color: var(--white); padding: 5rem 1.25rem 4rem; text-align: center; position: relative; overflow: hidden; }
-      .hero::before { content: '⚾'; position: absolute; font-size: 22rem; opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; line-height: 1; }
-      .hero-eyebrow { display: inline-block; background: rgba(192,57,43,0.85); color: var(--white); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 9999px; margin-bottom: 1.25rem; }
-      .hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 1.25rem; }
-      .hero h1 em { color: #7ec8e3; font-style: normal; }
-      .hero-sub { font-size: clamp(0.95rem, 2vw, 1.15rem); color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.25rem; line-height: 1.75; }
-      .hero-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-      .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.8rem 1.8rem; border-radius: 6px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
-      .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
-      .btn-primary { background: var(--red); color: var(--white); }
-      .btn-primary:hover { background: var(--red-hover); }
-      .btn-outline { border: 2px solid rgba(255,255,255,0.6); color: var(--white); background: transparent; }
-      .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
-      .section { padding: 4rem 0; }
-      .section-alt { background: var(--gray-100); }
-      .section-header { text-align: center; margin-bottom: 2.5rem; }
-      .section-label { display: inline-block; color: var(--red); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; }
-      .section-title { font-size: clamp(1.4rem, 3vw, 1.85rem); font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
-      .section-lead { margin-top: 0.6rem; color: var(--gray-600); font-size: 0.95rem; }
-      .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
-      .feature-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.75rem 1.5rem; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; gap: 0.75rem; }
-      .feature-card:hover { box-shadow: 0 8px 24px rgba(26,58,92,0.12); transform: translateY(-3px); }
-      .card-icon { font-size: 2rem; line-height: 1; }
-      .card-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
-      .card-desc { font-size: 0.88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
-      .card-link { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--red); font-size: 0.85rem; font-weight: 600; margin-top: 0.25rem; transition: gap 0.15s; }
-      .card-link:hover { gap: 0.55rem; }
-      .article-list { display: flex; flex-direction: column; gap: 1rem; }
-      .article-item { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 1.1rem 1.4rem; display: flex; align-items: center; gap: 1rem; transition: box-shadow 0.2s; }
-      .article-item:hover { box-shadow: 0 4px 16px rgba(26,58,92,0.1); }
-      .article-rank { flex-shrink: 0; width: 2rem; height: 2rem; background: var(--navy); color: var(--white); border-radius: 50%; font-weight: 800; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; }
-      .article-rank.gold { background: #c9a227; }
-      .article-rank.silver { background: #8c9496; }
-      .article-rank.bronze { background: #a0522d; }
-      .article-body { flex: 1; min-width: 0; }
-      .article-tag { font-size: 0.72rem; font-weight: 700; color: var(--red); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.2rem; }
-      .article-title { font-size: 0.95rem; font-weight: 600; color: var(--navy-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      .article-meta { font-size: 0.78rem; color: var(--gray-400); margin-top: 0.2rem; }
-      .article-arrow { flex-shrink: 0; color: var(--gray-400); font-size: 1.1rem; transition: color 0.15s, transform 0.15s; }
-      .article-item:hover .article-arrow { color: var(--red); transform: translateX(3px); }
-      .affiliate-section { background: var(--navy-dark); color: var(--white); padding: 3.5rem 0; }
-      .affiliate-label { display: inline-block; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.65rem; border-radius: 4px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); }
-      .affiliate-section .section-title { color: var(--white); text-align: center; margin-bottom: 0.5rem; }
-      .affiliate-section .section-lead { color: rgba(255,255,255,0.6); text-align: center; margin-bottom: 2rem; }
-      .affiliate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
-      .affiliate-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; transition: background 0.2s; }
-      .affiliate-card:hover { background: rgba(255,255,255,0.12); }
-      .affiliate-thumb { flex-shrink: 0; width: 72px; height: 72px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
-      .affiliate-info { flex: 1; min-width: 0; }
-      .affiliate-info .badge-sponsor { font-size: 0.68rem; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; }
-      .affiliate-info h3 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.35rem; }
-      .affiliate-info p { font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
-      .affiliate-info .affiliate-cta { display: inline-block; margin-top: 0.6rem; font-size: 0.78rem; font-weight: 600; color: #7ec8e3; }
-      .site-footer { background: var(--navy-dark); color: rgba(255,255,255,0.65); padding: 2.5rem 1.25rem; text-align: center; font-size: 0.85rem; }
-      .footer-nav { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
-      .footer-nav a { transition: color 0.15s; }
-      .footer-nav a:hover { color: var(--white); }
-      .footer-copy { font-size: 0.8rem; opacity: 0.55; }
-      @media (max-width: 768px) {
-        .site-nav { display: none; }
-        .hero { padding: 3.5rem 1.25rem 3rem; }
-        .hero::before { font-size: 14rem; }
-        .section { padding: 3rem 0; }
-        .article-title { font-size: 0.88rem; }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <a href="/" class="site-logo">⚾ Basel<span>lab</span></a>
-        <nav class="site-nav" aria-label="メインナビゲーション">
-          <a href="/mlb/">MLB</a>
-          <a href="/npb/">NPB</a>
-          <a href="/glossary/">指標解説</a>
-          <a href="/gear/">機材</a>
-          <a href="/streaming/">配信</a>
-        </nav>
+<Layout
+  title="Baseballab | 野球データを、もっと深く。"
+  description="MLB・NPBの統計データをデータドリブンな視点で分析。選手成績比較、チーム別データ、セイバーメトリクス解説まで、野球ファン・指導者・分析者のための情報サイト。"
+  ogUrl="https://baseballab.com"
+>
+  <style slot="head">
+    .hero { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%); color: var(--white); padding: 5rem 1.25rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: '⚾'; position: absolute; font-size: 22rem; opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; line-height: 1; }
+    .hero-eyebrow { display: inline-block; background: rgba(192,57,43,0.85); color: var(--white); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 9999px; margin-bottom: 1.25rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 1.25rem; }
+    .hero h1 em { color: #7ec8e3; font-style: normal; }
+    .hero-sub { font-size: clamp(0.95rem, 2vw, 1.15rem); color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.25rem; line-height: 1.75; }
+    .hero-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.8rem 1.8rem; border-radius: 6px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
+    .btn-primary { background: var(--red); color: var(--white); }
+    .btn-primary:hover { background: var(--red-hover); }
+    .btn-outline { border: 2px solid rgba(255,255,255,0.6); color: var(--white); background: transparent; }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+    .section { padding: 4rem 0; }
+    .section-alt { background: var(--gray-100); }
+    .section-header { text-align: center; margin-bottom: 2.5rem; }
+    .section-label { display: inline-block; color: var(--red); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .section-title { font-size: clamp(1.4rem, 3vw, 1.85rem); font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
+    .section-lead { margin-top: 0.6rem; color: var(--gray-600); font-size: 0.95rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .feature-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.75rem 1.5rem; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; gap: 0.75rem; }
+    .feature-card:hover { box-shadow: 0 8px 24px rgba(26,58,92,0.12); transform: translateY(-3px); }
+    .card-icon { font-size: 2rem; line-height: 1; }
+    .card-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+    .card-desc { font-size: 0.88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
+    .card-link { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--red); font-size: 0.85rem; font-weight: 600; margin-top: 0.25rem; transition: gap 0.15s; }
+    .card-link:hover { gap: 0.55rem; }
+    .article-list { display: flex; flex-direction: column; gap: 1rem; }
+    .article-item { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 1.1rem 1.4rem; display: flex; align-items: center; gap: 1rem; transition: box-shadow 0.2s; }
+    .article-item:hover { box-shadow: 0 4px 16px rgba(26,58,92,0.1); }
+    .article-rank { flex-shrink: 0; width: 2rem; height: 2rem; background: var(--navy); color: var(--white); border-radius: 50%; font-weight: 800; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; }
+    .article-rank.gold { background: #c9a227; }
+    .article-rank.silver { background: #8c9496; }
+    .article-rank.bronze { background: #a0522d; }
+    .article-body { flex: 1; min-width: 0; }
+    .article-tag { font-size: 0.72rem; font-weight: 700; color: var(--red); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.2rem; }
+    .article-title { font-size: 0.95rem; font-weight: 600; color: var(--navy-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .article-meta { font-size: 0.78rem; color: var(--gray-400); margin-top: 0.2rem; }
+    .article-arrow { flex-shrink: 0; color: var(--gray-400); font-size: 1.1rem; transition: color 0.15s, transform 0.15s; }
+    .article-item:hover .article-arrow { color: var(--red); transform: translateX(3px); }
+    .affiliate-section { background: var(--navy-dark); color: var(--white); padding: 3.5rem 0; }
+    .affiliate-label { display: inline-block; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.2rem 0.65rem; border-radius: 4px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); }
+    .affiliate-section .section-title { color: var(--white); text-align: center; margin-bottom: 0.5rem; }
+    .affiliate-section .section-lead { color: rgba(255,255,255,0.6); text-align: center; margin-bottom: 2rem; }
+    .affiliate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+    .affiliate-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; transition: background 0.2s; }
+    .affiliate-card:hover { background: rgba(255,255,255,0.12); }
+    .affiliate-thumb { flex-shrink: 0; width: 72px; height: 72px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+    .affiliate-info { flex: 1; min-width: 0; }
+    .affiliate-info .badge-sponsor { font-size: 0.68rem; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .affiliate-info h3 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.35rem; }
+    .affiliate-info p { font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+    .affiliate-info .affiliate-cta { display: inline-block; margin-top: 0.6rem; font-size: 0.78rem; font-weight: 600; color: #7ec8e3; }
+    @media (max-width: 768px) { .hero { padding: 3.5rem 1.25rem 3rem; } .hero::before { font-size: 14rem; } .section { padding: 3rem 0; } .article-title { font-size: 0.88rem; } }
+  </style>
+
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">⚾ Baseball Data Analysis</p>
+      <h1>野球データを、<br><em>もっと深く。</em></h1>
+      <p class="hero-sub">MLB・NPBの統計データをデータドリブンな独自視点で分析。<br>セイバーメトリクスから選手比較まで、野球ファン・指導者・アナリストのための情報ラボ。</p>
+      <div class="hero-cta">
+        <a href="/mlb/" class="btn btn-primary">📊 データ分析を見る</a>
+        <a href="/glossary/" class="btn btn-outline">📖 指標解説を読む</a>
       </div>
-    </header>
-    <section class="hero">
-      <div class="container">
-        <p class="hero-eyebrow">⚾ Baseball Data Analysis</p>
-        <h1>野球データを、<br><em>もっと深く。</em></h1>
-        <p class="hero-sub">MLB・NPBの統計データをデータドリブンな独自視点で分析。<br>セイバーメトリクスから選手比較まで、野球ファン・指導者・アナリストのための情報ラボ。</p>
-        <div class="hero-cta">
-          <a href="/mlb/" class="btn btn-primary">📊 データ分析を見る</a>
-          <a href="/glossary/" class="btn btn-outline">📖 指標解説を読む</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Features</p>
+        <h2 class="section-title">Baseballabでできること</h2>
+        <p class="section-lead">MLB・NPBのデータを多角的に分析・比較。あなたの野球観戦・指導を深める情報を提供します。</p>
+      </div>
+      <div class="card-grid">
+        <div class="feature-card">
+          <div class="card-icon">🏟️</div>
+          <h3 class="card-title">チーム別成績分析</h3>
+          <p class="card-desc">MLB全30球団・NPB12球団の打撃・投球・守備成績を独自集計。シーズン推移や対戦成績も可視化します。</p>
+          <a href="/team/" class="card-link">詳細を見る →</a>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">👤</div>
+          <h3 class="card-title">選手データ比較</h3>
+          <p class="card-desc">OPS・WAR・FIP・wRC+などセイバーメトリクス指標で選手を横断比較。大谷翔平ほか注目選手のStatcastデータも。</p>
+          <a href="/mlb/" class="card-link">詳細を見る →</a>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">📈</div>
+          <h3 class="card-title">試合結果・トレンド</h3>
+          <p class="card-desc">直近の試合結果と成績トレンドを時系列で追う。ホットストリーク・スランプの可視化で観戦をより深く楽しめます。</p>
+          <a href="/season/" class="card-link">詳細を見る →</a>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">📚</div>
+          <h3 class="card-title">指標・セイバーメトリクス解説</h3>
+          <p class="card-desc">WARとは？FIPとは？難解な野球指標をやさしく丁寧に解説。初心者から上級者まで使える用語集を整備しています。</p>
+          <a href="/glossary/" class="card-link">詳細を見る →</a>
         </div>
       </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Features</p>
-          <h2 class="section-title">Baseballabでできること</h2>
-          <p class="section-lead">MLB・NPBのデータを多角的に分析・比較。あなたの野球観戦・指導を深める情報を提供します。</p>
-        </div>
-        <div class="card-grid">
-          <div class="feature-card">
-            <div class="card-icon">🏟️</div>
-            <h3 class="card-title">チーム別成績分析</h3>
-            <p class="card-desc">MLB全30球団・NPB12球団の打撃・投球・守備成績を独自集計。シーズン推移や対戦成績も可視化します。</p>
-            <a href="/team/" class="card-link">詳細を見る →</a>
-          </div>
-          <div class="feature-card">
-            <div class="card-icon">👤</div>
-            <h3 class="card-title">選手データ比較</h3>
-            <p class="card-desc">OPS・WAR・FIP・wRC+などセイバーメトリクス指標で選手を横断比較。大谷翔平ほか注目選手のStatcastデータも。</p>
-            <a href="/mlb/" class="card-link">詳細を見る →</a>
-          </div>
-          <div class="feature-card">
-            <div class="card-icon">📈</div>
-            <h3 class="card-title">試合結果・トレンド</h3>
-            <p class="card-desc">直近の試合結果と成績トレンドを時系列で追う。ホットストリーク・スランプの可視化で観戦をより深く楽しめます。</p>
-            <a href="/season/" class="card-link">詳細を見る →</a>
-          </div>
-          <div class="feature-card">
-            <div class="card-icon">📚</div>
-            <h3 class="card-title">指標・セイバーメトリクス解説</h3>
-            <p class="card-desc">WARとは？FIPとは？難解な野球指標をやさしく丁寧に解説。初心者から上級者まで使える用語集を整備しています。</p>
-            <a href="/glossary/" class="card-link">詳細を見る →</a>
-          </div>
-        </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Popular</p>
+        <h2 class="section-title">人気のデータ記事</h2>
+        <p class="section-lead">多くの野球ファンに読まれているデータ分析コンテンツ</p>
       </div>
-    </section>
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-label">Popular</p>
-          <h2 class="section-title">人気のデータ記事</h2>
-          <p class="section-lead">多くの野球ファンに読まれているデータ分析コンテンツ</p>
-        </div>
-        <ul class="article-list">
-          <li>
-            <a href="/season/2024/batting-ranking/" class="article-item">
-              <span class="article-rank gold">1</span>
-              <div class="article-body">
-                <p class="article-tag">NPB / 打撃</p>
-                <p class="article-title">2024年セ・リーグ打率ランキングTOP10｜データで振り返る打撃王争い</p>
-                <p class="article-meta">2024年データ ・ 約5分で読めます</p>
-              </div>
-              <span class="article-arrow">›</span>
-            </a>
-          </li>
-          <li>
-            <a href="/glossary/era-fip/" class="article-item">
-              <span class="article-rank silver">2</span>
-              <div class="article-body">
-                <p class="article-tag">指標解説 / 投手</p>
-                <p class="article-title">投手防御率データで見るプロ野球分析｜FIPとERAの違いをわかりやすく解説</p>
-                <p class="article-meta">指標解説 ・ 約8分で読めます</p>
-              </div>
-              <span class="article-arrow">›</span>
-            </a>
-          </li>
-          <li>
-            <a href="/mlb/player/shohei-ohtani/" class="article-item">
-              <span class="article-rank bronze">3</span>
-              <div class="article-body">
-                <p class="article-tag">MLB / 選手分析</p>
-                <p class="article-title">大谷翔平 2024年Statcastデータ完全分析｜OPS・WAR・打球速度を徹底解剖</p>
-                <p class="article-meta">MLB ・ 約10分で読めます</p>
-              </div>
-              <span class="article-arrow">›</span>
-            </a>
-          </li>
-          <li>
-            <a href="/glossary/war/" class="article-item">
-              <span class="article-rank">4</span>
-              <div class="article-body">
-                <p class="article-tag">指標解説 / 総合</p>
-                <p class="article-title">WARとは何か？野球の「総合的な価値」を数値化する最重要指標をやさしく解説</p>
-                <p class="article-meta">指標解説 ・ 約7分で読めます</p>
-              </div>
-              <span class="article-arrow">›</span>
-            </a>
-          </li>
-          <li>
-            <a href="/gear/rapsodo/" class="article-item">
-              <span class="article-rank">5</span>
-              <div class="article-body">
-                <p class="article-tag">機材 / 計測機器</p>
-                <p class="article-title">ラプソード（Rapsodo）完全ガイド｜価格・機能・購入前に知っておくべきこと</p>
-                <p class="article-meta">機材比較 ・ 約12分で読めます</p>
-              </div>
-              <span class="article-arrow">›</span>
-            </a>
-          </li>
-        </ul>
+      <ul class="article-list">
+        <li><a href="/season/2024/batting-ranking/" class="article-item"><span class="article-rank gold">1</span><div class="article-body"><p class="article-tag">NPB / 打撃</p><p class="article-title">2024年セ・リーグ打率ランキングTOP10｜データで振り返る打撃王争い</p><p class="article-meta">2024年データ ・ 約5分で読めます</p></div><span class="article-arrow">›</span></a></li>
+        <li><a href="/glossary/era-fip/" class="article-item"><span class="article-rank silver">2</span><div class="article-body"><p class="article-tag">指標解説 / 投手</p><p class="article-title">投手防御率データで見るプロ野球分析｜FIPとERAの違いをわかりやすく解説</p><p class="article-meta">指標解説 ・ 約8分で読めます</p></div><span class="article-arrow">›</span></a></li>
+        <li><a href="/mlb/player/shohei-ohtani/" class="article-item"><span class="article-rank bronze">3</span><div class="article-body"><p class="article-tag">MLB / 選手分析</p><p class="article-title">大谷翔平 2024年Statcastデータ完全分析｜OPS・WAR・打球速度を徹底解剖</p><p class="article-meta">MLB ・ 約10分で読めます</p></div><span class="article-arrow">›</span></a></li>
+        <li><a href="/glossary/war/" class="article-item"><span class="article-rank">4</span><div class="article-body"><p class="article-tag">指標解説 / 総合</p><p class="article-title">WARとは何か？野球の「総合的な価値」を数値化する最重要指標をやさしく解説</p><p class="article-meta">指標解説 ・ 約7分で読めます</p></div><span class="article-arrow">›</span></a></li>
+        <li><a href="/gear/rapsodo/" class="article-item"><span class="article-rank">5</span><div class="article-body"><p class="article-tag">機材 / 計測機器</p><p class="article-title">ラプソード（Rapsodo）完全ガイド｜価格・機能・購入前に知っておくべきこと</p><p class="article-meta">機材比較 ・ 約12分で読めます</p></div><span class="article-arrow">›</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="affiliate-section">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:0.5rem;"><span class="affiliate-label">スポンサー</span></div>
+      <h2 class="section-title">おすすめの野球グッズ・書籍</h2>
+      <p class="section-lead">データ分析・スキルアップに役立つアイテムをご紹介</p>
+      <div class="affiliate-grid">
+        <div class="affiliate-card"><div class="affiliate-thumb">📗</div><div class="affiliate-info"><p class="badge-sponsor">スポンサー</p><h3>セイバーメトリクス入門</h3><p>野球データ分析の基礎から応用まで。MLB・NPBを数値で読み解くための必読書。</p><span class="affiliate-cta">Amazonで見る →</span></div></div>
+        <div class="affiliate-card"><div class="affiliate-thumb">⚙️</div><div class="affiliate-info"><p class="badge-sponsor">スポンサー</p><h3>スイング分析デバイス</h3><p>スマホ連携で打球速度・スイング軌道を即座に計測。アマチュア選手・指導者に人気。</p><span class="affiliate-cta">Amazonで見る →</span></div></div>
+        <div class="affiliate-card"><div class="affiliate-thumb">🧢</div><div class="affiliate-info"><p class="badge-sponsor">スポンサー</p><h3>MLB公式グッズ</h3><p>大谷翔平・山本由伸ほか人気選手のジャージ・キャップをAmazonで購入。</p><span class="affiliate-cta">Amazonで見る →</span></div></div>
       </div>
-    </section>
-    <!-- アフィリエイト実装メモ: 各カードに href追加、.affiliate-cta を実際のAmazonアソシエイトリンクに差し替え -->
-    <section class="affiliate-section">
-      <div class="container">
-        <div style="text-align:center; margin-bottom:0.5rem;">
-          <span class="affiliate-label">スポンサー</span>
-        </div>
-        <h2 class="section-title">おすすめの野球グッズ・書籍</h2>
-        <p class="section-lead">データ分析・スキルアップに役立つアイテムをご紹介</p>
-        <div class="affiliate-grid">
-          <div class="affiliate-card">
-            <div class="affiliate-thumb">📗</div>
-            <div class="affiliate-info">
-              <p class="badge-sponsor">スポンサー</p>
-              <h3>セイバーメトリクス入門</h3>
-              <p>野球データ分析の基礎から応用まで。MLB・NPBを数値で読み解くための必読書。</p>
-              <span class="affiliate-cta">Amazonで見る →</span>
-            </div>
-          </div>
-          <div class="affiliate-card">
-            <div class="affiliate-thumb">⚙️</div>
-            <div class="affiliate-info">
-              <p class="badge-sponsor">スポンサー</p>
-              <h3>スイング分析デバイス</h3>
-              <p>スマホ連携で打球速度・スイング軌道を即座に計測。アマチュア選手・指導者に人気。</p>
-              <span class="affiliate-cta">Amazonで見る →</span>
-            </div>
-          </div>
-          <div class="affiliate-card">
-            <div class="affiliate-thumb">🧢</div>
-            <div class="affiliate-info">
-              <p class="badge-sponsor">スポンサー</p>
-              <h3>MLB公式グッズ</h3>
-              <p>大谷翔平・山本由伸ほか人気選手のジャージ・キャップをAmazonで購入。</p>
-              <span class="affiliate-cta">Amazonで見る →</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="site-footer">
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <a href="/privacy/">プライバシーポリシー</a>
-        <a href="/disclaimer/">免責事項</a>
-        <a href="/about/">運営者情報</a>
-        <a href="/contact/">お問い合わせ</a>
-      </nav>
-      <p class="footer-copy">&copy; 2024 Baseballab. All rights reserved.</p>
-    </footer>
-  </body>
-</html>
+    </div>
+  </section>
+
+</Layout>
