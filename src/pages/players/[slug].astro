@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AtomicAnswer from '../../components/AtomicAnswer.astro';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+export async function getStaticPaths() {
+  const dir = join(process.cwd(), 'data/mlb/players');
+  const files = readdirSync(dir).filter(f => f.endsWith('.json'));
+
+  return files.map(file => {
+    const slug = file.replace('.json', '');
+    const raw = readFileSync(join(dir, file), 'utf-8');
+    const data = JSON.parse(raw);
+    return { params: { slug }, props: { data } };
+  });
+}
+
+const { data } = Astro.props;
+const { info } = data;
+
+const name = info.fullName ?? 'Unknown Player';
+const position = info.primaryPosition?.name ?? 'Player';
+const posAbbr = info.primaryPosition?.abbreviation ?? '';
+const number = info.primaryNumber ? `#${info.primaryNumber}` : '';
+const birthDate = info.birthDate ?? null;
+const birthCity = info.birthCity ?? '';
+const birthCountry = info.birthCountry ?? '';
+const height = info.height ?? '';
+const weight = info.weight ? `${info.weight} lbs` : '';
+const bats = info.batSide?.description ?? '';
+const throws = info.pitchHand?.description ?? '';
+const debut = info.mlbDebutDate ?? null;
+const age = info.currentAge ?? null;
+
+const atomicText = `${name}（${posAbbr}）はMLBの現役選手。${birthCountry ? birthCountry + '出身。' : ''}${height ? '身長' + height + '。' : ''}最新成績はBaseballabで確認できます。`;
+
+const pageTitle = `${name} 成績・プロフィール`;
+const description = `${name}（${posAbbr}）のMLB成績・プロフィール・最新情報。${birthCountry ? birthCountry + '出身。' : ''}Baseballabで詳細データを確認。`;
+---
+<Layout title={pageTitle} description={description}>
+  <style slot="head">
+  .player-hero {
+    background: var(--navy, #1a3a5c);
+    color: #fff;
+    padding: 3rem 0 2rem;
+  }
+  .player-hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .player-number {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-weight: 600;
+  }
+  .player-hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin: 0;
+  }
+  .player-position-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 0.2rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: fit-content;
+  }
+  .player-body { padding: 2rem 0 4rem; }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .info-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  .info-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.25rem;
+  }
+  .info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text, #212529);
+    margin: 0;
+  }
+  .stats-placeholder {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+    margin: 2rem 0;
+  }
+  .breadcrumb {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1rem;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  @media (max-width: 600px) {
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  </style>
+
+  <section class="player-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="/">Baseballab</a> &rsaquo; <a href="/players/">MLB選手</a> &rsaquo; {name}
+      </nav>
+      {number && <p class="player-number">{number}</p>}
+      <h1>{name}</h1>
+      <span class="player-position-badge">{position}</span>
+    </div>
+  </section>
+
+  <div class="player-body">
+    <div class="container">
+      <AtomicAnswer text={atomicText} />
+
+      <h2>プロフィール</h2>
+      <div class="info-grid">
+        {birthDate && (
+          <div class="info-item">
+            <p class="info-label">生年月日</p>
+            <p class="info-value">{birthDate}{age ? ` (${age}歳)` : ''}</p>
+          </div>
+        )}
+        {(birthCity || birthCountry) && (
+          <div class="info-item">
+            <p class="info-label">出身</p>
+            <p class="info-value">{[birthCity, birthCountry].filter(Boolean).join(', ')}</p>
+          </div>
+        )}
+        {height && (
+          <div class="info-item">
+            <p class="info-label">身長</p>
+            <p class="info-value">{height}</p>
+          </div>
+        )}
+        {weight && (
+          <div class="info-item">
+            <p class="info-label">体重</p>
+            <p class="info-value">{weight}</p>
+          </div>
+        )}
+        {bats && (
+          <div class="info-item">
+            <p class="info-label">打席</p>
+            <p class="info-value">{bats}</p>
+          </div>
+        )}
+        {throws && (
+          <div class="info-item">
+            <p class="info-label">投球腕</p>
+            <p class="info-value">{throws}</p>
+          </div>
+        )}
+        {debut && (
+          <div class="info-item">
+            <p class="info-label">MLBデビュー</p>
+            <p class="info-value">{debut}</p>
+          </div>
+        )}
+      </div>
+
+      <h2>2024年成績</h2>
+      <div class="stats-placeholder">
+        <p>📊 成績データは近日更新予定です。</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">MLB Stats API からの取得・整形を実施中。</p>
+      </div>
+    </div>
+  </div>
+</Layout>
