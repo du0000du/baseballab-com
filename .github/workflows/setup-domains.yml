@@ -1,0 +1,14 @@
+name: Setup Custom Domains
+on:
+  workflow_dispatch:
+jobs:
+  setup-domains:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add baseballab.com
+        run: |
+          curl -sf -X POST "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/baseballab-com/domains" -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" -H "Content-Type: application/json" -d '{"name":"baseballab.com"}' && echo "baseballab.com added" || echo "baseballab.com may already exist"
+      - name: Add www.baseballab.com
+        run: |
+          curl -sf -X POST "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/baseballab-com/domains" -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" -H "Content-Type: application/json" -d '{"name":"www.baseballab.com"}' && echo "www added" || echo "www may already exist"
+
