@@ -1,82 +1,54 @@
 ---
-const title = 'プライバシーポリシー | Baseballab';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Baseballabのプライバシーポリシーです。個人情報の取り扱いについて説明しています。" />
-    <title>{title}</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZSRYVP3N9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JZSRYVP3N9');
-    </script>
-    <style>
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      :root { --navy: #1a3a5c; --navy-dark: #0f2540; --red: #c0392b; --gray-100: #f8f9fa; --gray-600: #6c757d; --text: #212529; --font: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; }
-      body { font-family: var(--font); font-size: 16px; line-height: 1.75; color: var(--text); background: #fff; }
-      .site-header { background: var(--navy); color: #fff; padding: 0.75rem 1.25rem; }
-      .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-      .site-logo { font-size: 1.3rem; font-weight: 800; color: #fff; text-decoration: none; }
-      .site-logo span { color: var(--red); }
-      .breadcrumb { background: var(--gray-100); padding: 0.6rem 1.25rem; font-size: 0.82rem; color: var(--gray-600); }
-      .breadcrumb a { color: var(--navy); text-decoration: none; }
-      .breadcrumb a:hover { text-decoration: underline; }
-      main { max-width: 780px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
-      h1 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-      .updated { font-size: 0.82rem; color: var(--gray-600); margin-bottom: 2.5rem; }
-      h2 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin: 2.25rem 0 0.6rem; padding-left: 0.7rem; border-left: 3px solid var(--red); }
-      p { margin-bottom: 1rem; }
-      a { color: var(--navy); }
-      .site-footer { background: var(--navy-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem 1.25rem; font-size: 0.85rem; }
-      .footer-nav { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
-      .footer-nav a:hover { color: #fff; }
-    </style>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <a href="/" class="site-logo">⚾ Basel<span>lab</span></a>
-      </div>
-    </header>
-    <nav class="breadcrumb">
-      <div style="max-width:900px; margin:0 auto;">
-        <a href="/">ホーム</a> &rsaquo; プライバシーポリシー
-      </div>
-    </nav>
-    <main>
-      <h1>プライバシーポリシー</h1>
-      <p class="updated">最終更新日：2024年1月1日</p>
-      <p>Baseballab（以下「当サイト」）は、利用者の個人情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
-      <h2>1. 個人情報の収集</h2>
-      <p>当サイトでは、お問い合わせフォームのご利用時に氏名・メールアドレス等の個人情報をご提供いただく場合があります。取得した個人情報は、お問い合わせへの回答や必要な連絡のみに使用し、これらの目的以外には利用しません。</p>
-      <h2>2. アクセス解析ツール（Google Analytics）</h2>
-      <p>当サイトは、Googleが提供するアクセス解析サービス「Google Analytics 4」を使用しています。Google Analyticsはトラフィックデータの収集のためにCookieを使用します。このデータは匿名で収集されており、個人を特定するものではありません。</p>
-      <p>Cookieを無効にすることで、データ収集を拒否することも可能です。</p>
-      <h2>3. アフィリエイトプログラム</h2>
-      <p>当サイトは、Amazonアソシエイト・楽天アフィリエイト等のアフィリエイトプログラムに参加しています。アフィリエイトリンクを経由してご購入いただいた場合、当サイトに紹介料が発生することがあります。当サイトが取得するのは売上・報酬データのみで、購入者の個人情報は取得しません。</p>
-      <h2>4. Cookieについて</h2>
-      <p>当サイトでは、Google Analytics等のサービスにおいてCookieを使用しています。Cookieはブラウザの設定から無効にすることができますが、一部のサービスが正常に機能しない場合があります。</p>
-      <h2>5. 個人情報の第三者提供</h2>
-      <p>当サイトは、法令に基づく開示が必要な場合を除き、利用者の個人情報を第三者に提供することはありません。</p>
-      <h2>6. プライバシーポリシーの変更</h2>
-      <p>当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。変更した場合は、本ページにて更新日を記載の上、最新版を掲載します。</p>
-      <h2>7. お問い合わせ</h2>
-      <p>個人情報の取り扱いに関するお問い合わせは、<a href="/contact/">お問い合わせページ</a>よりご連絡ください。</p>
-    </main>
-    <footer class="site-footer">
-      <nav class="footer-nav">
-        <a href="/privacy/">プライバシーポリシー</a>
-        <a href="/disclaimer/">免責事項</a>
-        <a href="/about/">運営者情報</a>
-        <a href="/contact/">お問い合わせ</a>
-      </nav>
-      <p>&copy; 2024 Baseballab. All rights reserved.</p>
-    </footer>
-  </body>
-</html>
+<Layout
+  title="プライバシーポリシー | Baseballab"
+  description="Baseballabのプライバシーポリシーです。個人情報の取り扱いについて説明しています。"
+  ogUrl="https://baseballab.com/privacy/"
+>
+  <style slot="head">
+    .breadcrumb { background: var(--gray-100); padding: 0.6rem 1.25rem; font-size: 0.82rem; color: var(--gray-600); }
+    .breadcrumb a { color: var(--navy); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .updated { font-size: 0.82rem; color: var(--gray-600); margin-bottom: 2.5rem; }
+    h2 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin: 2.25rem 0 0.6rem; padding-left: 0.7rem; border-left: 3px solid var(--red); }
+    p { margin-bottom: 1rem; }
+    ul { padding-left: 1.5rem; margin-bottom: 1rem; list-style: disc; }
+    li { margin-bottom: 0.35rem; }
+    a { color: var(--navy); }
+  </style>
+
+  <nav class="breadcrumb">
+    <div style="max-width:900px; margin:0 auto;">
+      <a href="/">ホーム</a> &rsaquo; プライバシーポリシー
+    </div>
+  </nav>
+
+  <main>
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">最終更新日：2024年1月1日</p>
+    <p>Baseballab（以下「当サイト」）は、利用者の個人情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
+    <h2>1. 個人情報の収集</h2>
+    <p>当サイトでは、お問い合わせフォームのご利用時に氏名・メールアドレス等の個人情報をご提供いただく場合があります。取得した個人情報は、お問い合わせへの回答や必要な連絡のみに使用し、これらの目的以外には利用しません。</p>
+    <h2>2. アクセス解析ツール（Google Analytics）</h2>
+    <p>当サイトは、Googleが提供するアクセス解析サービス「Google Analytics 4」を使用しています。Google Analyticsはトラフィックデータの収集のためにCookieを使用します。このデータは匿名で収集されており、個人を特定するものではありません。</p>
+    <p>Google Analyticsの利用規約については<a href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank" rel="noopener noreferrer">Google Analyticsサービス利用規約</a>をご確認ください。Cookieを無効にすることで、データ収集を拒否することも可能です。</p>
+    <h2>3. アフィリエイトプログラム</h2>
+    <p>当サイトは、Amazonアソシエイト・楽天アフィリエイト等のアフィリエイトプログラムに参加しています。アフィリエイトリンクを経由してご購入いただいた場合、当サイトに紹介料が発生することがあります。</p>
+    <p>各アフィリエイトプログラムの規約については各サービスのプライバシーポリシーをご確認ください。当サイトが取得するのは売上・報酬データのみで、購入者の個人情報は取得しません。</p>
+    <h2>4. Cookieについて</h2>
+    <p>当サイトでは、Google Analytics等のサービスにおいてCookieを使用しています。Cookieはブラウザの設定から無効にすることができますが、一部のサービスが正常に機能しない場合があります。</p>
+    <h2>5. 個人情報の第三者提供</h2>
+    <p>当サイトは、法令に基づく開示が必要な場合を除き、利用者の個人情報を第三者に提供することはありません。</p>
+    <h2>6. 個人情報の管理・セキュリティ</h2>
+    <p>当サイトは、取得した個人情報の漏洩・滅失・き損の防止のため、適切なセキュリティ対策を実施します。</p>
+    <h2>7. プライバシーポリシーの変更</h2>
+    <p>当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。変更した場合は、本ページにて更新日を記載の上、最新版を掲載します。</p>
+    <h2>8. お問い合わせ</h2>
+    <p>個人情報の取り扱いに関するお問い合わせは、<a href="/contact/">お問い合わせページ</a>よりご連絡ください。</p>
+  </main>
+
+</Layout>
