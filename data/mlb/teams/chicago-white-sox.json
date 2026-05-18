@@ -1,0 +1,51 @@
+{
+  "info": {
+    "springLeague": {
+      "id": 114,
+      "name": "Cactus League",
+      "link": "/api/v1/league/114",
+      "abbreviation": "CL"
+    },
+    "allStarStatus": "N",
+    "id": 145,
+    "name": "Chicago White Sox",
+    "link": "/api/v1/teams/145",
+    "season": 2024,
+    "venue": {
+      "id": 4,
+      "name": "Guaranteed Rate Field",
+      "link": "/api/v1/venues/4"
+    },
+    "springVenue": {
+      "id": 3809,
+      "link": "/api/v1/venues/3809"
+    },
+    "teamCode": "cha",
+    "fileCode": "cws",
+    "abbreviation": "CWS",
+    "teamName": "White Sox",
+    "locationName": "Chicago",
+    "firstYearOfPlay": "1901",
+    "league": {
+      "id": 103,
+      "name": "American League",
+      "link": "/api/v1/league/103"
+    },
+    "division": {
+      "id": 202,
+      "name": "American League Central",
+      "link": "/api/v1/divisions/202"
+    },
+    "sport": {
+      "id": 1,
+      "link": "/api/v1/sports/1",
+      "name": "Major League Baseball"
+    },
+    "shortName": "Chi White Sox",
+    "franchiseName": "Chicago",
+    "clubName": "White Sox",
+    "active": true
+  },
+  "stats": [],
+  "season": 2024
+}

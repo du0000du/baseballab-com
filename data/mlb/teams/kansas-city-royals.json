@@ -1,0 +1,51 @@
+{
+  "info": {
+    "springLeague": {
+      "id": 114,
+      "name": "Cactus League",
+      "link": "/api/v1/league/114",
+      "abbreviation": "CL"
+    },
+    "allStarStatus": "N",
+    "id": 118,
+    "name": "Kansas City Royals",
+    "link": "/api/v1/teams/118",
+    "season": 2024,
+    "venue": {
+      "id": 7,
+      "name": "Kauffman Stadium",
+      "link": "/api/v1/venues/7"
+    },
+    "springVenue": {
+      "id": 2603,
+      "link": "/api/v1/venues/2603"
+    },
+    "teamCode": "kca",
+    "fileCode": "kc",
+    "abbreviation": "KC",
+    "teamName": "Royals",
+    "locationName": "Kansas City",
+    "firstYearOfPlay": "1968",
+    "league": {
+      "id": 103,
+      "name": "American League",
+      "link": "/api/v1/league/103"
+    },
+    "division": {
+      "id": 202,
+      "name": "American League Central",
+      "link": "/api/v1/divisions/202"
+    },
+    "sport": {
+      "id": 1,
+      "link": "/api/v1/sports/1",
+      "name": "Major League Baseball"
+    },
+    "shortName": "Kansas City",
+    "franchiseName": "Kansas City",
+    "clubName": "Royals",
+    "active": true
+  },
+  "stats": [],
+  "season": 2024
+}

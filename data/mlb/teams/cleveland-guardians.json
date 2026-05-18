@@ -1,0 +1,51 @@
+{
+  "info": {
+    "springLeague": {
+      "id": 114,
+      "name": "Cactus League",
+      "link": "/api/v1/league/114",
+      "abbreviation": "CL"
+    },
+    "allStarStatus": "N",
+    "id": 114,
+    "name": "Cleveland Guardians",
+    "link": "/api/v1/teams/114",
+    "season": 2024,
+    "venue": {
+      "id": 5,
+      "name": "Progressive Field",
+      "link": "/api/v1/venues/5"
+    },
+    "springVenue": {
+      "id": 3834,
+      "link": "/api/v1/venues/3834"
+    },
+    "teamCode": "cle",
+    "fileCode": "cle",
+    "abbreviation": "CLE",
+    "teamName": "Guardians",
+    "locationName": "Cleveland",
+    "firstYearOfPlay": "1901",
+    "league": {
+      "id": 103,
+      "name": "American League",
+      "link": "/api/v1/league/103"
+    },
+    "division": {
+      "id": 202,
+      "name": "American League Central",
+      "link": "/api/v1/divisions/202"
+    },
+    "sport": {
+      "id": 1,
+      "link": "/api/v1/sports/1",
+      "name": "Major League Baseball"
+    },
+    "shortName": "Cleveland",
+    "franchiseName": "Cleveland",
+    "clubName": "Guardians",
+    "active": true
+  },
+  "stats": [],
+  "season": 2024
+}

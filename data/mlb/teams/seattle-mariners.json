@@ -1,0 +1,51 @@
+{
+  "info": {
+    "springLeague": {
+      "id": 114,
+      "name": "Cactus League",
+      "link": "/api/v1/league/114",
+      "abbreviation": "CL"
+    },
+    "allStarStatus": "N",
+    "id": 136,
+    "name": "Seattle Mariners",
+    "link": "/api/v1/teams/136",
+    "season": 2024,
+    "venue": {
+      "id": 680,
+      "name": "T-Mobile Park",
+      "link": "/api/v1/venues/680"
+    },
+    "springVenue": {
+      "id": 2530,
+      "link": "/api/v1/venues/2530"
+    },
+    "teamCode": "sea",
+    "fileCode": "sea",
+    "abbreviation": "SEA",
+    "teamName": "Mariners",
+    "locationName": "Seattle",
+    "firstYearOfPlay": "1977",
+    "league": {
+      "id": 103,
+      "name": "American League",
+      "link": "/api/v1/league/103"
+    },
+    "division": {
+      "id": 200,
+      "name": "American League West",
+      "link": "/api/v1/divisions/200"
+    },
+    "sport": {
+      "id": 1,
+      "link": "/api/v1/sports/1",
+      "name": "Major League Baseball"
+    },
+    "shortName": "Seattle",
+    "franchiseName": "Seattle",
+    "clubName": "Mariners",
+    "active": true
+  },
+  "stats": [],
+  "season": 2024
+}
