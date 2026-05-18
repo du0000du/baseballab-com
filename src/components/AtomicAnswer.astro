@@ -1,0 +1,21 @@
+---
+interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+<div class="atomic-answer" role="note" aria-label="要約">
+  <p>{text}</p>
+</div>
+<style>
+.atomic-answer {
+  background: #f0f4f8;
+  border-left: 4px solid var(--navy, #1a3a5c);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text, #212529);
+}
+</style>
