@@ -1,0 +1,7 @@
+# MLB Stats API fetcher
+# Python標準ライブラリのみ使用（追加パッケージ不要）
+# python >= 3.9
+#
+# 将来的にデータ処理が必要になった場合:
+# pandas==2.2.0
+# requests==2.31.0
