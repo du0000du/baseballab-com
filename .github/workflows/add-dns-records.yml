@@ -1,0 +1,21 @@
+name: Add DNS Records
+on:
+  workflow_dispatch:
+jobs:
+  add-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Zone ID and add CNAME records
+        run: |
+          ZONE_ID=$(curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=baseballab.com" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" | jq -r '.result[0].id')
+          echo "Zone ID: $ZONE_ID"
+          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"type":"CNAME","name":"baseballab.com","content":"baseballab-com.pages.dev","ttl":1,"proxied":true}' | jq .
+          curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"type":"CNAME","name":"www","content":"baseballab-com.pages.dev","ttl":1,"proxied":true}' | jq .
