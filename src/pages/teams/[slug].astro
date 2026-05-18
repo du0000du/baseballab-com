@@ -1,0 +1,177 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AtomicAnswer from '../../components/AtomicAnswer.astro';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+export async function getStaticPaths() {
+  const dir = join(process.cwd(), 'data/mlb/teams');
+  const files = readdirSync(dir).filter(f => f.endsWith('.json'));
+
+  return files.map(file => {
+    const slug = file.replace('.json', '');
+    const raw = readFileSync(join(dir, file), 'utf-8');
+    const data = JSON.parse(raw);
+    return { params: { slug }, props: { data } };
+  });
+}
+
+const { data } = Astro.props;
+const { info } = data;
+
+const name = info.name ?? 'Unknown Team';
+const abbr = info.abbreviation ?? '';
+const location = info.locationName ?? '';
+const founded = info.firstYearOfPlay ?? null;
+const league = info.league?.name ?? '';
+const division = info.division?.name ?? '';
+const venue = info.venue?.name ?? '';
+
+const atomicText = `${name}（${abbr}）はMLBの${league}所属チーム。${division}地区。本拠地は${venue}。創設${founded}年。最新成績はBaseballabで確認できます。`;
+
+const pageTitle = `${name} チーム成績・情報`;
+const description = `${name}（${abbr}）のMLBチーム成績・情報。${division}。本拠地${venue}。Baseballabで詳細データを確認。`;
+---
+<Layout title={pageTitle} description={description}>
+  <style slot="head">
+  .team-hero {
+    background: var(--navy, #1a3a5c);
+    color: #fff;
+    padding: 3rem 0 2rem;
+  }
+  .team-hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .team-abbr {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .team-hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin: 0;
+  }
+  .team-division-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 0.2rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: fit-content;
+  }
+  .team-body { padding: 2rem 0 4rem; }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .info-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  .info-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.25rem;
+  }
+  .info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text, #212529);
+    margin: 0;
+  }
+  .stats-placeholder {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+    margin: 2rem 0;
+  }
+  .breadcrumb {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1rem;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  @media (max-width: 600px) {
+    .info-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  </style>
+
+  <section class="team-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="/">Baseballab</a> &rsaquo; <a href="/teams/">MLBチーム</a> &rsaquo; {name}
+      </nav>
+      {abbr && <p class="team-abbr">{abbr}</p>}
+      <h1>{name}</h1>
+      {division && <span class="team-division-badge">{division}</span>}
+    </div>
+  </section>
+
+  <div class="team-body">
+    <div class="container">
+      <AtomicAnswer text={atomicText} />
+
+      <h2>チーム情報</h2>
+      <div class="info-grid">
+        {league && (
+          <div class="info-item">
+            <p class="info-label">リーグ</p>
+            <p class="info-value">{league}</p>
+          </div>
+        )}
+        {division && (
+          <div class="info-item">
+            <p class="info-label">地区</p>
+            <p class="info-value">{division}</p>
+          </div>
+        )}
+        {venue && (
+          <div class="info-item">
+            <p class="info-label">本拠地球場</p>
+            <p class="info-value">{venue}</p>
+          </div>
+        )}
+        {location && (
+          <div class="info-item">
+            <p class="info-label">所在地</p>
+            <p class="info-value">{location}</p>
+          </div>
+        )}
+        {founded && (
+          <div class="info-item">
+            <p class="info-label">創設年</p>
+            <p class="info-value">{founded}年</p>
+          </div>
+        )}
+        {abbr && (
+          <div class="info-item">
+            <p class="info-label">略称</p>
+            <p class="info-value">{abbr}</p>
+          </div>
+        )}
+      </div>
+
+      <h2>2024年チーム成績</h2>
+      <div class="stats-placeholder">
+        <p>📊 成績データは近日更新予定です。</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">MLB Stats API からの取得・整形を実施中。</p>
+      </div>
+    </div>
+  </div>
+</Layout>
