@@ -36,7 +36,7 @@ const allPlayers = [
   { slug: 'matt-olson',          name: 'Matt Olson',          pos: '1B',   team: 'ATL' },
   { slug: 'michael-busch',       name: 'Michael Busch',       pos: '1B',   team: 'CHC' },
   { slug: 'mookie-betts',        name: 'Mookie Betts',        pos: 'SS',   team: 'LAD' },
-  { slug: 'pablo-lópez',         name: 'Pablo López',         pos: 'SP',   team: 'MIN' },
+  { slug: 'pablo-l�pez',         name: 'Pablo López',         pos: 'SP',   team: 'MIN' },
   { slug: 'paul-skenes',         name: 'Paul Skenes',         pos: 'SP',   team: 'PIT' },
   { slug: 'robert-suarez',       name: 'Robert Suárez',       pos: 'RP',   team: 'SD' },
   { slug: 'rowdy-tellez',        name: 'Rowdy Tellez',        pos: '1B',   team: '-' },
@@ -59,7 +59,7 @@ const divisions = [
     name: 'AL Central', teams: [
       { slug: 'chicago-white-sox',    name: 'Chicago White Sox',    abbr: 'CWS' },
       { slug: 'cleveland-guardians',  name: 'Cleveland Guardians',  abbr: 'CLE' },
-      { slug: 'detroit-tigers',       name: 'Detroit Tigers',       abbr: 'DET' },
+      { slug: 'detroit-tigers',n|mrname: 'Detroit Tigers',       abbr: 'DET' },
       { slug: 'kansas-city-royals',   name: 'Kansas City Royals',   abbr: 'KC' },
       { slug: 'minnesota-twins',      name: 'Minnesota Twins',      abbr: 'MIN' },
     ]
@@ -105,7 +105,7 @@ const divisions = [
 
 <Layout
   title="MLB データ分析 | Baseballab"
-  description="MLBの選手成績・チーム分析データを網羅。大谷翔平・Aaron Judge等の注目選手30名とドジャース・ヤンキース等の全30チームのデータを掲載。"
+  description="MLBの選手成績・チーム分析データを網羅。大谷翔平・Aaron Judge等の注目選手30名とドジャース・ナンキース等の全30チームのデータを掲載。"
   ogUrl="https://baseballab.com/mlb/"
 >
   <style slot="head">
@@ -277,7 +277,7 @@ const divisions = [
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      padding: 0.65rem 0.9rem;
+      padding: 0.75rem 1rem;
       background: var(--white);
       border: 1px solid var(--gray-200);
       border-radius: 8px;
@@ -396,7 +396,15 @@ const divisions = [
       .player-list { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
+      .hub-hero { padding: 2.5rem 0 2rem; }
+      .hub-stat-num { font-size: 1.6rem; }
       .player-grid { grid-template-columns: 1fr; }
+      .player-card { padding: 1.25rem; }
+      .division-grid { grid-template-columns: 1fr; }
+      .division-header { padding: 0.6rem 1rem; }
+      .division-row { padding: 0.6rem 1rem; }
+      .section { padding: 2rem 0; }
+      .section-header h2 { font-size: 1.3rem; }
     }
   </style>
 
