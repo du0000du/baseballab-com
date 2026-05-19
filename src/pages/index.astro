@@ -1,16 +1,16 @@
 ---
-// baseballab.com — top page
+// baseballab.com â top page
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Baseballab | 野球データを、もっと深く。"
-  description="MLB・NPBの統計データをデータドリブンな視点で分析。選手成績比較、チーム別データ、セイバーメトリクス解説まで、野球ファン・指導者・分析者のための情報サイト。"
+  title="Baseballab | éçãã¼ã¿ãããã£ã¨æ·±ãã"
+  description="MLBã»NPBã®çµ±è¨ãã¼ã¿ããã¼ã¿ããªãã³ãªè¦ç¹ã§åæãé¸ææç¸¾æ¯è¼ããã¼ã å¥ãã¼ã¿ãã»ã¤ãã¼ã¡ããªã¯ã¹è§£èª¬ã¾ã§ãéçãã¡ã³ã»æå°èã»åæèã®ããã®æå ±ãµã¤ãã"
   ogUrl="https://baseballab.com"
 >
   <style slot="head">
     .hero { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%); color: var(--white); padding: 5rem 1.25rem 4rem; text-align: center; position: relative; overflow: hidden; }
-    .hero::before { content: '⚾'; position: absolute; font-size: 22rem; opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; line-height: 1; }
+    .hero::before { content: 'â¾'; position: absolute; font-size: 22rem; opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; line-height: 1; }
     .hero-eyebrow { display: inline-block; background: rgba(192,57,43,0.85); color: var(--white); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 9999px; margin-bottom: 1.25rem; }
     .hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 1.25rem; }
     .hero h1 em { color: #7ec8e3; font-style: normal; }
@@ -67,12 +67,12 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="hero">
     <div class="container">
-      <p class="hero-eyebrow">⚾ Baseball Data Analysis</p>
-      <h1>野球データを、<br><em>もっと深く。</em></h1>
-      <p class="hero-sub">MLB・NPBの統計データをデータドリブンな独自視点で分析。<br>セイバーメトリクスから選手比較まで、野球ファン・指導者・アナリストのための情報ラボ。</p>
+      <p class="hero-eyebrow">â¾ Baseball Data Analysis</p>
+      <h1>éçãã¼ã¿ãã<br><em>ãã£ã¨æ·±ãã</em></h1>
+      <p class="hero-sub">MLBã»NPBã®çµ±è¨ãã¼ã¿ããã¼ã¿ããªãã³ãªç¬èªè¦ç¹ã§åæã<br>ã»ã¤ãã¼ã¡ããªã¯ã¹ããé¸ææ¯è¼ã¾ã§ãéçãã¡ã³ã»æå°èã»ã¢ããªã¹ãã®ããã®æå ±ã©ãã</p>
       <div class="hero-cta">
-        <a href="/mlb/" class="btn btn-primary">📊 データ分析を見る</a>
-        <a href="/glossary/" class="btn btn-outline">📖 指標解説を読む</a>
+        <a href="/mlb/" class="btn btn-primary">ð ãã¼ã¿åæãè¦ã</a>
+        <a href="/glossary/" class="btn btn-outline">ð ææ¨è§£èª¬ãèª­ã</a>
       </div>
     </div>
   </section>
@@ -81,33 +81,33 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="section-header">
         <p class="section-label">Features</p>
-        <h2 class="section-title">Baseballabでできること</h2>
-        <p class="section-lead">MLB・NPBのデータを多角的に分析・比較。あなたの野球観戦・指導を深める情報を提供します。</p>
+        <h2 class="section-title">Baseballabã§ã§ãããã¨</h2>
+        <p class="section-lead">MLBã»NPBã®ãã¼ã¿ãå¤è§çã«åæã»æ¯è¼ãããªãã®éçè¦³æ¦ã»æå°ãæ·±ããæå ±ãæä¾ãã¾ãã</p>
       </div>
       <div class="card-grid">
         <div class="feature-card">
-          <div class="card-icon">🏟️</div>
-          <h3 class="card-title">チーム別成績分析</h3>
-          <p class="card-desc">MLB全30球団・NPB12球団の打撃・投球・守備成績を独自集計。シーズン推移や対戦成績も可視化します。</p>
-          <a href="/team/" class="card-link">詳細を見る →</a>
+          <div class="card-icon">ðï¸</div>
+          <h3 class="card-title">ãã¼ã å¥æç¸¾åæ</h3>
+          <p class="card-desc">MLBå¨30çå£ã»NPB12çå£ã®ææã»æçã»å®åæç¸¾ãç¬èªéè¨ãã·ã¼ãºã³æ¨ç§»ãå¯¾æ¦æç¸¾ãå¯è¦åãã¾ãã</p>
+          <a href="/team/" class="card-link">è©³ç´°ãè¦ã â</a>
         </div>
         <div class="feature-card">
-          <div class="card-icon">👤</div>
-          <h3 class="card-title">選手データ比較</h3>
-          <p class="card-desc">OPS・WAR・FIP・wRC+などセイバーメトリクス指標で選手を横断比較。大谷翔平ほか注目選手のStatcastデータも。</p>
-          <a href="/mlb/" class="card-link">詳細を見る →</a>
+          <div class="card-icon">ð¤</div>
+          <h3 class="card-title">é¸æãã¼ã¿æ¯è¼</h3>
+          <p class="card-desc">OPSã»WARã»FIPã»wRC+ãªã©ã»ã¤ãã¼ã¡ããªã¯ã¹ææ¨ã§é¸æãæ¨ªæ­æ¯è¼ãå¤§è°·ç¿å¹³ã»ãæ³¨ç®é¸æã®Statcastãã¼ã¿ãã</p>
+          <a href="/mlb/" class="card-link">è©³ç´°ãè¦ã â</a>
         </div>
         <div class="feature-card">
-          <div class="card-icon">📈</div>
-          <h3 class="card-title">試合結果・トレンド</h3>
-          <p class="card-desc">直近の試合結果と成績トレンドを時系列で追う。ホットストリーク・スランプの可視化で観戦をより深く楽しめます。</p>
-          <a href="/season/" class="card-link">詳細を見る →</a>
+          <div class="card-icon">ð</div>
+          <h3 class="card-title">è©¦åçµæã»ãã¬ã³ã</h3>
+          <p class="card-desc">ç´è¿ã®è©¦åçµæã¨æç¸¾ãã¬ã³ããæç³»åã§è¿½ãããããã¹ããªã¼ã¯ã»ã¹ã©ã³ãã®å¯è¦åã§è¦³æ¦ãããæ·±ãæ¥½ããã¾ãã</p>
+          <a href="/season/" class="card-link">è©³ç´°ãè¦ã â</a>
         </div>
         <div class="feature-card">
-          <div class="card-icon">📚</div>
-          <h3 class="card-title">指標・セイバーメトリクス解説</h3>
-          <p class="card-desc">WARとは？FIPとは？難解な野球指標をやさしく丁寧に解説。初心者から上級者まで使える用語集を整備しています。</p>
-          <a href="/glossary/" class="card-link">詳細を見る →</a>
+          <div class="card-icon">ð</div>
+          <h3 class="card-title">ææ¨ã»ã»ã¤ãã¼ã¡ããªã¯ã¹è§£èª¬</h3>
+          <p class="card-desc">WARã¨ã¯ï¼FIPã¨ã¯ï¼é£è§£ãªéçææ¨ãããããä¸å¯§ã«è§£èª¬ãåå¿èããä¸ç´èã¾ã§ä½¿ããç¨èªéãæ´åãã¦ãã¾ãã</p>
+          <a href="/glossary/" class="card-link">è©³ç´°ãè¦ã â</a>
         </div>
       </div>
     </div>
@@ -117,30 +117,31 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="section-header">
         <p class="section-label">Popular</p>
-        <h2 class="section-title">人気のデータ記事</h2>
-        <p class="section-lead">多くの野球ファンに読まれているデータ分析コンテンツ</p>
+        <h2 class="section-title">äººæ°ã®ãã¼ã¿è¨äº</h2>
+        <p class="section-lead">å¤ãã®éçãã¡ã³ã«èª­ã¾ãã¦ãããã¼ã¿åæã³ã³ãã³ã</p>
       </div>
       <ul class="article-list">
-        <li><a href="/season/2024/batting-ranking/" class="article-item"><span class="article-rank gold">1</span><div class="article-body"><p class="article-tag">NPB / 打撃</p><p class="article-title">2024年セ・リーグ打率ランキングTOP10｜データで振り返る打撃王争い</p><p class="article-meta">2024年データ ・ 約5分で読めます</p></div><span class="article-arrow">›</span></a></li>
-        <li><a href="/glossary/era-fip/" class="article-item"><span class="article-rank silver">2</span><div class="article-body"><p class="article-tag">指標解説 / 投手</p><p class="article-title">投手防御率データで見るプロ野球分析｜FIPとERAの違いをわかりやすく解説</p><p class="article-meta">指標解説 ・ 約8分で読めます</p></div><span class="article-arrow">›</span></a></li>
-        <li><a href="/mlb/player/shohei-ohtani/" class="article-item"><span class="article-rank bronze">3</span><div class="article-body"><p class="article-tag">MLB / 選手分析</p><p class="article-title">大谷翔平 2024年Statcastデータ完全分析｜OPS・WAR・打球速度を徹底解剖</p><p class="article-meta">MLB ・ 約10分で読めます</p></div><span class="article-arrow">›</span></a></li>
-        <li><a href="/glossary/war/" class="article-item"><span class="article-rank">4</span><div class="article-body"><p class="article-tag">指標解説 / 総合</p><p class="article-title">WARとは何か？野球の「総合的な価値」を数値化する最重要指標をやさしく解説</p><p class="article-meta">指標解説 ・ 約7分で読めます</p></div><span class="article-arrow">›</span></a></li>
-        <li><a href="/gear/rapsodo/" class="article-item"><span class="article-rank">5</span><div class="article-body"><p class="article-tag">機材 / 計測機器</p><p class="article-title">ラプソード（Rapsodo）完全ガイド｜価格・機能・購入前に知っておくべきこと</p><p class="article-meta">機材比較 ・ 約12分で読めます</p></div><span class="article-arrow">›</span></a></li>
+        <li><a href="/season/2026/batting-ranking/" class="article-item"><span class="article-rank gold">1</span><div class="article-body"><p class="article-tag">NPB / ææ</p><p class="article-title">2026å¹´ã»ã»ãªã¼ã°æçã©ã³ã­ã³ã°TOP10ï½ãã¼ã¿ã§æ¯ãè¿ãææçäºã</p><p class="article-meta">2026å¹´ãã¼ã¿ ã» ç´5åã§èª­ãã¾ã</p></div><span class="article-arrow">âº</span></a></li>
+        <li><a href="/glossary/era-fip/" class="article-item"><span class="article-rank silver">2</span><div class="article-body"><p class="article-tag">ææ¨è§£èª¬ / ææ</p><p class="article-title">ææé²å¾¡çãã¼ã¿ã§è¦ããã­éçåæï½FIPã¨ERAã®éããããããããè§£èª¬</p><p class="article-meta">ææ¨è§£èª¬ ã» ç´8åã§èª­ãã¾ã</p></div><span class="article-arrow">âº</span></a></li>
+        <li><a href="/mlb/player/shohei-ohtani/" class="article-item"><span class="article-rank bronze">3</span><div class="article-body"><p class="article-tag">MLB / é¸æåæ</p><p class="article-title">å¤§è°·ç¿å¹³ 2026å¹´Statcastãã¼ã¿å®å¨åæï½OPSã»WARã»æçéåº¦ãå¾¹åºè§£å</p><p class="article-meta">MLB ã» ç´10åã§èª­ãã¾ã</p></div><span class="article-arrow">âº</span></a></li>
+        <li><a href="/glossary/war/" class="article-item"><span class="article-rank">4</span><div class="article-body"><p class="article-tag">ææ¨è§£èª¬ / ç·å</p><p class="article-title">WARã¨ã¯ä½ãï¼éçã®ãç·åçãªä¾¡å¤ããæ°å¤åããæéè¦ææ¨ãããããè§£èª¬</p><p class="article-meta">ææ¨è§£èª¬ ã» ç´7åã§èª­ãã¾ã</p></div><span class="article-arrow">âº</span></a></li>
+        <li><a href="/gear/rapsodo/" class="article-item"><span class="article-rank">5</span><div class="article-body"><p class="article-tag">æ©æ / è¨æ¸¬æ©å¨</p><p class="article-title">ã©ãã½ã¼ãï¼Rapsodoï¼å®å¨ã¬ã¤ãï½ä¾¡æ ¼ã»æ©è½ã»è³¼å¥åã«ç¥ã£ã¦ããã¹ããã¨</p><p class="article-meta">æ©ææ¯è¼ ã» ç´12åã§èª­ãã¾ã</p></div><span class="article-arrow">âº</span></a></li>
       </ul>
     </div>
   </section>
 
   <section class="affiliate-section">
     <div class="container">
-      <div style="text-align:center; margin-bottom:0.5rem;"><span class="affiliate-label">スポンサー</span></div>
-      <h2 class="section-title">おすすめの野球グッズ・書籍</h2>
-      <p class="section-lead">データ分析・スキルアップに役立つアイテムをご紹介</p>
+      <div style="text-align:center; margin-bottom:0.5rem;"><span class="affiliate-label">ã¹ãã³ãµã¼</span></div>
+      <h2 class="section-title">ããããã®éçã°ããºã»æ¸ç±</h2>
+      <p class="section-lead">ãã¼ã¿åæã»ã¹ã­ã«ã¢ããã«å½¹ç«ã¤ã¢ã¤ãã ããç´¹ä»</p>
       <div class="affiliate-grid">
-        <div class="affiliate-card"><div class="affiliate-thumb">📗</div><div class="affiliate-info"><p class="badge-sponsor">スポンサー</p><h3>セイバーメトリクス入門</h3><p>野球データ分析の基礎から応用まで。MLB・NPBを数値で読み解くための必読書。</p><span class="affiliate-cta">Amazonで見る →</span></div></div>
-        <div class="affiliate-card"><div class="affiliate-thumb">⚙️</div><div class="affiliate-info"><p class="badge-sponsor">スポンサー</p><h3>スイング分析デバイス</h3><p>スマホ連携で打球速度・スイング軌道を即座に計測。アマチュア選手・指導者に人気。</p><span class="affiliate-cta">Amazonで見る →</span></div></div>
-        <div class="affiliate-card"><div class="affiliate-thumb">🧢</div><div class="affiliate-info"><p class="badge-sponsor">スポンサー</p><h3>MLB公式グッズ</h3><p>大谷翔平・山本由伸ほか人気選手のジャージ・キャップをAmazonで購入。</p><span class="affiliate-cta">Amazonで見る →</span></div></div>
+        <div class="affiliate-card"><div class="affiliate-thumb">ð</div><div class="affiliate-info"><p class="badge-sponsor">ã¹ãã³ãµã¼</p><h3>ã»ã¤ãã¼ã¡ããªã¯ã¹å¥é</h3><p>éçãã¼ã¿åæã®åºç¤ããå¿ç¨ã¾ã§ãMLBã»NPBãæ°å¤ã§èª­ã¿è§£ãããã®å¿èª­æ¸ã</p><span class="affiliate-cta">Amazonã§è¦ã â</span></div></div>
+        <div class="affiliate-card"><div class="affiliate-thumb">âï¸</div><div class="affiliate-info"><p class="badge-sponsor">ã¹ãã³ãµã¼</p><h3>ã¹ã¤ã³ã°åæããã¤ã¹</h3><p>ã¹ããé£æºã§æçéåº¦ã»ã¹ã¤ã³ã°è»éãå³åº§ã«è¨æ¸¬ãã¢ããã¥ã¢é¸æã»æå°èã«äººæ°ã</p><span class="affiliate-cta">Amazonã§è¦ã â</span></div></div>
+        <div class="affiliate-card"><div class="affiliate-thumb">ð§¢</div><div class="affiliate-info"><p class="badge-sponsor">ã¹ãã³ãµã¼</p><h3>MLBå¬å¼ã°ããº</h3><p>å¤§è°·ç¿å¹³ã»å±±æ¬ç±ä¼¸ã»ãäººæ°é¸æã®ã¸ã£ã¼ã¸ã»ã­ã£ãããAmazonã§è³¼å¥ã</p><span class="affiliate-cta">Amazonã§è¦ã â</span></div></div>
       </div>
     </div>
   </section>
 
 </Layout>
+fix: update 2024 article references to 2026 (TASK-030)
