@@ -1,0 +1,91 @@
+---
+// src/components/Breadcrumb.astro
+// TASK-011: パンくずナビゲーション + BreadcrumbList JSON-LD
+
+export interface BreadcrumbItem {
+  label: string;
+  href?: string; // 最後の要素（現在ページ）は省略可
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+  baseUrl?: string;
+}
+
+const {
+  items,
+  baseUrl = 'https://baseballab.com',
+} = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => {
+    const entry: Record<string, unknown> = {
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+    };
+    if (item.href) {
+      entry.item = item.href.startsWith('http')
+        ? item.href
+        : `${baseUrl}${item.href}`;
+    }
+    return entry;
+  }),
+};
+---
+
+<nav aria-label="パンくずリスト" class="breadcrumb">
+  <ol>
+    {items.map((item, index) => (
+      <li>
+        {item.href ? (
+          <a href={item.href}>{item.label}</a>
+        ) : (
+          <span aria-current="page">{item.label}</span>
+        )}
+        {index < items.length - 1 && (
+          <span class="sep" aria-hidden="true">›</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<style>
+  .breadcrumb {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--gray-2, #666);
+  }
+  .breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    align-items: center;
+  }
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .breadcrumb a {
+    color: var(--navy, #1a2744);
+    text-decoration: none;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  .breadcrumb [aria-current="page"] {
+    color: var(--gray-2, #666);
+  }
+  .breadcrumb .sep {
+    color: var(--gray-2, #666);
+  }
+</style>
