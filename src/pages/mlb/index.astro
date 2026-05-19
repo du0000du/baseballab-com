@@ -406,6 +406,40 @@ const divisions = [
       .section { padding: 2rem 0; }
       .section-header h2 { font-size: 1.3rem; }
     }
+
+    /* ===== LEADERS BANNER ===== */
+    .leaders-banner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 16px rgba(26,58,92,0.25);
+    }
+    .leaders-banner:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26,58,92,0.35);
+    }
+    .leaders-banner-icon { font-size: 2rem; flex-shrink: 0; }
+    .leaders-banner-body { flex: 1; }
+    .leaders-banner-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .leaders-banner-sub {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+    .leaders-banner-arrow {
+      font-size: 1.4rem;
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
   </style>
 
   <!-- Hero -->
@@ -439,6 +473,21 @@ const divisions = [
       <span>MLB データ分析</span>
     </nav>
   </div>
+
+
+  <!-- Leaders Banner -->
+  <section class="section" style="padding:1.5rem 0 0;">
+    <div class="container">
+      <a href="/mlb/leaders/" class="leaders-banner">
+        <div class="leaders-banner-icon">📊</div>
+        <div class="leaders-banner-body">
+          <div class="leaders-banner-title">MLB 2025 成績ランキング</div>
+          <div class="leaders-banner-sub">ホームラン・打率・打点・防御率など、2025年シーズン最新リーダーボード</div>
+        </div>
+        <div class="leaders-banner-arrow">→</div>
+      </a>
+    </div>
+  </section>
 
   <!-- Featured Players -->
   <section class="section">
