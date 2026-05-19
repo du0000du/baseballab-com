@@ -1,0 +1,110 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const allTerms = await getCollection('glossary');
+allTerms.sort((a, b) => a.data.title.localeCompare(b.data.title, 'ja'));
+
+const categories: Record<string, { label: string; terms: typeof allTerms }> = {
+  batting:     { label: '打撃指標', terms: [] },
+  pitching:    { label: '投球指標', terms: [] },
+  fielding:    { label: '守備指標', terms: [] },
+  baserunning: { label: '走塁指標', terms: [] },
+  general:     { label: '総合指標', terms: [] },
+};
+for (const term of allTerms) {
+  categories[term.data.category].terms.push(term);
+}
+
+const difficultyLabel: Record<string, string> = {
+  basic: '基礎',
+  intermediate: '中級',
+  advanced: '上級',
+};
+---
+
+<Layout
+  title="野球指標解説一覧 | Baseballab"
+  description="WAR・OPS・FIP・wOBAなど野球データ分析で使われる指標を分かりやすく解説。打撃・投球・守備・走塁カテゴリ別に20指標を収録。"
+  ogUrl="https://baseballab.com/glossary/"
+>
+  <div class="glossary-index">
+    <Breadcrumb items={[
+      { label: 'ホーム', href: '/' },
+      { label: '指標解説' },
+    ]} />
+
+    <h1>野球指標解説一覧</h1>
+    <p class="lead">WAR・OPS・FIPなど、現代野球分析で使われる20の指標を解説します。カテゴリ別に探せます。</p>
+
+    {Object.entries(categories).filter(([, v]) => v.terms.length > 0).map(([, { label, terms }]) => (
+      <section class="category-section">
+        <h2>{label}</h2>
+        <ul class="term-list">
+          {terms.map(entry => (
+            <li class="term-card">
+              <a href={`/glossary/${entry.slug}/`}>
+                <div class="term-header">
+                  {entry.data.abbr && <span class="abbr">{entry.data.abbr}</span>}
+                  <span class="difficulty-badge">{difficultyLabel[entry.data.difficulty]}</span>
+                </div>
+                <p class="term-title">{entry.data.title}</p>
+                <p class="term-desc">{entry.data.description.slice(0, 80)}…</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .glossary-index {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+  }
+  h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .lead { color: #555; margin-bottom: 2rem; }
+  .category-section { margin-bottom: 2.5rem; }
+  .category-section h2 {
+    font-size: 1.1rem;
+    color: var(--navy, #1a2744);
+    border-left: 4px solid var(--navy, #1a2744);
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .term-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .term-card a {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .term-card a:hover {
+    border-color: var(--navy, #1a2744);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .term-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; }
+  .abbr { font-weight: 700; font-size: 0.95rem; color: var(--navy, #1a2744); }
+  .difficulty-badge {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+    background: #e8ecf4;
+    border-radius: 3px;
+    color: #555;
+  }
+  .term-title { font-size: 0.88rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .term-desc { font-size: 0.78rem; color: #666; margin: 0; line-height: 1.5; }
+</style>
