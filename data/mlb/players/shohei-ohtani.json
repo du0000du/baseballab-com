@@ -47,6 +47,45 @@
     "strikeZoneTop": 3.369,
     "strikeZoneBottom": 1.7
   },
-  "stats": [],
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2024",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 159,
+            "runs": 134,
+            "doubles": 26,
+            "triples": 3,
+            "homeRuns": 54,
+            "strikeOuts": 154,
+            "baseOnBalls": 81,
+            "hits": 197,
+            "avg": ".310",
+            "atBats": 536,
+            "obp": ".390",
+            "slg": ".646",
+            "ops": "1.036",
+            "rbi": 130,
+            "stolenBases": 59,
+            "plateAppearances": 626
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
   "season": 2024
 }
