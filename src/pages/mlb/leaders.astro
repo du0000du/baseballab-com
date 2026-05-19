@@ -1,0 +1,351 @@
+---
+// src/pages/mlb/leaders.astro
+// MLB 2025シーズン成績リーダーボード
+// データはビルド時にMLB Stats APIから直接取得
+
+import Layout from '../../layouts/Layout.astro';
+
+const SEASON = '2025';
+const BASE = 'https://statsapi.mlb.com/api/v1';
+
+async function getLeaders(group, sortStat, limit = 10) {
+  try {
+    const url = `${BASE}/stats?stats=season&season=${SEASON}&group=${group}&sortStat=${sortStat}&limit=${limit}&gameType=R&hydrate=person,team`;
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const json = await res.json();
+    const splits = json?.stats?.[0]?.splits ?? [];
+    return splits.map((item, i) => ({
+      rank: item.rank ?? (i + 1),
+      player: item.player?.fullName ?? '—',
+      team: item.team?.abbreviation ?? item.team?.teamName ?? '—',
+      value: item.stat?.[sortStat] ?? '—',
+    }));
+  } catch (e) {
+    return [];
+  }
+}
+
+const [hrLeaders, avgLeaders, rbiLeaders, sbLeaders] = await Promise.all([
+  getLeaders('hitting', 'homeRuns'),
+  getLeaders('hitting', 'avg'),
+  getLeaders('hitting', 'rbi'),
+  getLeaders('hitting', 'stolenBases'),
+]);
+
+const [eraLeaders, wLeaders, soLeaders, svLeaders] = await Promise.all([
+  getLeaders('pitching', 'era'),
+  getLeaders('pitching', 'wins'),
+  getLeaders('pitching', 'strikeOuts'),
+  getLeaders('pitching', 'saves'),
+]);
+
+const battingCategories = [
+  { label: 'ホームラン（HR）', unit: '',  leaders: hrLeaders },
+  { label: '打率（AVG）',      unit: '',  leaders: avgLeaders },
+  { label: '打点（RBI）',      unit: '',  leaders: rbiLeaders },
+  { label: '盗塁（SB）',       unit: '',  leaders: sbLeaders },
+];
+
+const pitchingCategories = [
+  { label: '防御率（ERA）',    unit: '',  leaders: eraLeaders },
+  { label: '勝利（W）',        unit: '',  leaders: wLeaders },
+  { label: '奪三振（SO）',     unit: '',  leaders: soLeaders },
+  { label: 'セーブ（SV）',     unit: '',  leaders: svLeaders },
+];
+
+const buildDate = new Date().toLocaleDateString('ja-JP', {
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Tokyo'
+});
+const hasData = hrLeaders.length > 0 || eraLeaders.length > 0;
+---
+
+<Layout
+  title={`MLB ${SEASON} 成績ランキング | Baseballab`}
+  description={`MLB ${SEASON}シーズン最新成績ランキング。ホームラン・打率・打点・防御率・奪三振など全部門のリーダーボード。毎日自動更新。`}
+  ogUrl="https://baseballab.com/mlb/leaders/"
+  ogType="website"
+>
+  <style slot="head">
+    /* ===== LEADERS PAGE ===== */
+    .leaders-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: var(--white);
+      padding: 3rem 0 2.5rem;
+    }
+    .breadcrumb {
+      font-size: 0.8rem;
+      opacity: 0.65;
+      margin-bottom: 1rem;
+    }
+    .breadcrumb a { color: inherit; }
+    .breadcrumb a:hover { text-decoration: underline; opacity: 0.9; }
+
+    .leaders-hero h1 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      opacity: 0.8;
+      margin-bottom: 0.75rem;
+    }
+    .updated-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 0.25rem 0.9rem;
+      font-size: 0.78rem;
+    }
+
+    /* ===== SECTIONS ===== */
+    .leaders-section {
+      padding: 3rem 0;
+      background: var(--gray-100);
+    }
+    .leaders-section--alt {
+      background: var(--white);
+    }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 3px solid var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* ===== GRID ===== */
+    .leaders-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    /* ===== CARD ===== */
+    .leaders-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+    .leaders-section--alt .leaders-card {
+      background: var(--gray-100);
+    }
+    .card-title {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.65rem 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* ===== TABLE ===== */
+    .leaders-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.87rem;
+    }
+    .leaders-table thead {
+      background: rgba(26,58,92,0.05);
+    }
+    .leaders-table th {
+      padding: 0.45rem 0.75rem;
+      text-align: left;
+      font-weight: 600;
+      color: var(--gray-600);
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .leaders-table th:last-child { text-align: right; padding-right: 1rem; }
+    .leaders-table tbody tr {
+      border-bottom: 1px solid var(--gray-200);
+      transition: background 0.1s;
+    }
+    .leaders-table tbody tr:hover { background: rgba(26,58,92,0.04); }
+    .leaders-table tbody tr:last-child { border-bottom: none; }
+    .leaders-table td {
+      padding: 0.5rem 0.75rem;
+      vertical-align: middle;
+    }
+
+    /* rank medal */
+    td.rank {
+      width: 2.2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gray-400);
+    }
+    tr:nth-child(1) td.rank { color: #c9a227; }
+    tr:nth-child(2) td.rank { color: #8e8e8e; }
+    tr:nth-child(3) td.rank { color: #a0714f; }
+
+    td.player-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+    td.team {
+      font-size: 0.75rem;
+      color: var(--gray-600);
+      white-space: nowrap;
+    }
+    td.stat-val {
+      font-weight: 700;
+      color: var(--navy);
+      text-align: right;
+      padding-right: 1rem;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    td.no-data {
+      text-align: center;
+      color: var(--gray-400);
+      padding: 2rem;
+      font-style: italic;
+      font-size: 0.85rem;
+    }
+
+    /* ===== NOTE ===== */
+    .data-note {
+      margin-top: 2.5rem;
+      padding: 2rem 0;
+      background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+    }
+    .data-note p {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .leaders-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .leaders-hero { padding: 2rem 0 1.75rem; }
+      .leaders-section { padding: 2rem 0; }
+      .section-title { font-size: 1.1rem; }
+    }
+  </style>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="leaders-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <a href="/">Home</a> &rsaquo;
+          <a href="/mlb/">MLB</a> &rsaquo;
+          <span>成績ランキング</span>
+        </nav>
+        <h1>📊 MLB {SEASON} 成績ランキング</h1>
+        <p class="hero-sub">{SEASON}等シーズン最新リーダーボード（毎日自動更新）</p>
+        <span class="updated-badge">🔄 {buildDate} 時点</span>
+      </div>
+    </section>
+
+    <!-- BATTING SECTION -->
+    <section class="leaders-section">
+      <div class="container">
+        <h2 class="section-title">🏏 打撃部門</h2>
+        {!hasData && (
+          <p style="color:var(--gray-600);padding:2rem 0;">データを取得中です。しばりくお待ちください。</p>
+        )}
+        <div class="leaders-grid">
+          {battingCategories.map(cat => (
+            <div class="leaders-card">
+              <h3 class="card-title">{cat.label}</h3>
+              <table class="leaders-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>選手名</th>
+                    <th>チーム</th>
+                    <th>記録</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cat.leaders.length > 0 ? cat.leaders.map(p => (
+                    <tr>
+                      <td class="rank">{p.rank}</td>
+                      <td class="player-name">{p.player}</td>
+                      <td class="team">{p.team}</td>
+                      <td class="stat-val">{p.value}</td>
+                    </tr>
+                  )) : (
+                    <tr>
+                      <td colspan="4" class="no-data">データ取得中...</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- PITCHING SECTION -->
+    <section class="leaders-section leaders-section--alt">
+      <div class="container">
+        <h2 class="section-title">⚾ 投球部門</h2>
+        <div class="leaders-grid">
+          {pitchingCategories.map(cat => (
+            <div class="leaders-card">
+              <h3 class="card-title">{cat.label}</h3>
+              <table class="leaders-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>選手名</th>
+                    <th>チーム</th>
+                    <th>記録</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cat.leaders.length > 0 ? cat.leaders.map(p => (
+                    <tr>
+                      <td class="rank">{p.rank}</td>
+                      <td class="player-name">{p.player}</td>
+                      <td class="team">{p.team}</td>
+                      <td class="stat-val">{p.value}</td>
+                    </tr>
+                  )) : (
+                    <tr>
+                      <td colspan="4" class="no-data">データ取得中...</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA NOTE -->
+    <div class="data-note">
+      <div class="container">
+        <p>
+          データ出典: <a href="https://statsapi.mlb.com" style="color:var(--navy);">MLB Stats API</a>（公式）&nbsp;／&nbsp;
+          レキュラーシーズン成績のみ対象&nbsp;／&nbsp;
+          毎日 JST 06:00 頃に自動更新
+        </p>
+      </div>
+    </div>
+
+  </main>
+</Layout>
