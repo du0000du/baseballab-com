@@ -2,6 +2,9 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+import { buildAmazonUrl } from '../../lib/affiliate.ts';
+import linksData from '../../../data/affiliates/links.json';
 
 export async function getStaticPaths() {
   const glossary = await getCollection('glossary');
@@ -50,6 +53,13 @@ const jsonLd = {
     },
   },
 };
+
+const affiliateLinks = linksData.links.map((item: any) => ({
+  label: item.label,
+  url: buildAmazonUrl(item.asin, linksData.amazon_tag),
+  pr: item.pr,
+  description: item.description,
+}));
 ---
 
 <Layout
@@ -82,6 +92,8 @@ const jsonLd = {
     <div class="entry-content">
       <Content />
     </div>
+
+    <AffiliateBlock links={affiliateLinks} heading="野球データ分析おすすめ商品" />
 
     {relatedTerms && relatedTerms.length > 0 && (
       <aside class="related-terms">
