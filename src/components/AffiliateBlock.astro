@@ -1,0 +1,90 @@
+---
+// src/components/AffiliateBlock.astro
+// TASK-016: アフィリエイトリンクブロック + PR表示 + GA4クリックイベント
+
+interface AffiliateLink {
+  label: string;
+  url: string;
+  pr: boolean;
+  description?: string;
+}
+interface Props {
+  links: AffiliateLink[];
+  heading?: string;
+}
+const { links, heading = 'おすすめ商品・サービス' } = Astro.props;
+---
+
+<aside class="affiliate-block" aria-label="広告・アフィリエイト">
+  <p class="pr-disclosure">
+    ※本セクションには広告（アフィリエイトリンク）が含まれます。
+    <a href="/disclosure/">詳細はこちら</a>
+  </p>
+  <h3>{heading}</h3>
+  <ul class="affiliate-list">
+    {links.map(link => (
+      <li>
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          data-affiliate-label={link.label}
+          onclick={`typeof gtag!=='undefined'&&gtag('event','affiliate_click',{affiliate_label:'${link.label}',page_location:location.href})`}
+        >
+          {link.pr && <span class="pr-badge">PR</span>}
+          {link.label}
+        </a>
+        {link.description && <p class="affiliate-desc">{link.description}</p>}
+      </li>
+    ))}
+  </ul>
+</aside>
+
+<style>
+  .affiliate-block {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+  }
+  .pr-disclosure {
+    font-size: 0.78rem;
+    color: #888;
+    margin: 0 0 0.75rem;
+  }
+  .pr-disclosure a { color: #888; text-decoration: underline; }
+  .affiliate-block h3 {
+    font-size: 1rem;
+    margin: 0 0 0.75rem;
+    color: var(--navy, #1a2744);
+  }
+  .affiliate-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .affiliate-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--navy, #1a2744);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .affiliate-list a:hover { text-decoration: underline; }
+  .pr-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    background: #e8ecf4;
+    color: #555;
+    padding: 0.1rem 0.35rem;
+    border-radius: 2px;
+    border: 1px solid #c0c8dc;
+    letter-spacing: 0.03em;
+  }
+  .affiliate-desc { font-size: 0.8rem; color: #666; margin: 0.2rem 0 0 0; }
+</style>
