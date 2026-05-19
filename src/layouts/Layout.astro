@@ -7,6 +7,8 @@ interface Props {
   description: string;
   ogUrl?: string;
   ogType?: string;
+  ogImage?: string;
+  jsonLd?: Record<string, unknown>;
 }
 
 const {
@@ -14,6 +16,8 @@ const {
   description,
   ogUrl = 'https://baseballab.com',
   ogType = 'website',
+  ogImage = 'https://baseballab.com/og-default.png',
+  jsonLd,
 } = Astro.props;
 ---
 
@@ -27,7 +31,15 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content="Baseballab" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <title>{title}</title>
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <!-- Google Search Console -->
     <meta name="google-site-verification" content="vWPBl9eQ48HmYqfIbqNQXHE8N6JbFVidI1Uu8N6rByI" />
     <!-- Google tag (gtag.js) -->
