@@ -41,7 +41,7 @@ const description = `${name}（${posAbbr}）のMLB成績・プロフィール・
 <Layout title={pageTitle} description={description}>
   <style slot="head">
   .player-hero {
-    background: var(--navy, #1a3a5c);
+    background: var(--navy-dark, #0c1e33);
     color: #fff;
     padding: 3rem 0 2rem;
   }
@@ -77,14 +77,15 @@ const description = `${name}（${posAbbr}）のMLB成績・プロフィール・
     margin: 2rem 0;
   }
   .info-item {
-    background: #f8f9fa;
+    background: var(--gray-100, #f2f0ec);
+    border: 1px solid var(--border, #e4e2dc);
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1rem 1.1rem;
   }
   .info-label {
     font-size: 0.75rem;
     font-weight: 700;
-    color: #666;
+    color: var(--gray-500, #8a8680);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin: 0 0 0.25rem;
@@ -96,12 +97,12 @@ const description = `${name}（${posAbbr}）のMLB成績・プロフィール・
     margin: 0;
   }
   .stats-placeholder {
-    background: #f8f9fa;
-    border: 2px dashed #dee2e6;
+    background: var(--gray-100, #f2f0ec);
+    border: 2px dashed var(--gray-200, #e4e2dc);
     border-radius: 8px;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
-    color: #666;
+    color: var(--gray-600, #6b6760);
     margin: 2rem 0;
   }
   .breadcrumb {
@@ -112,13 +113,20 @@ const description = `${name}（${posAbbr}）のMLB成績・プロフィール・
   .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
   .breadcrumb a:hover { color: #fff; }
   @media (max-width: 600px) {
-    .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .info-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .player-hero { padding: 2rem 0 1.5rem; }
+    .player-body { padding: 1.5rem 0 3rem; }
+  }
+  @media (max-width: 380px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .info-item { padding: 0.875rem 1rem; }
+    .player-hero h1 { font-size: 1.7rem; }
   }
   </style>
 
   <section class="player-hero">
     <div class="container">
-      <nav class="breadcrumb" aria-label="パンくずリスト">
+      <nav class="breadcrumb" aria-label="パンくぜリスト">
         <a href="/">Baseballab</a> &rsaquo; <a href="/players/">MLB選手</a> &rsaquo; {name}
       </nav>
       {number && <p class="player-number">{number}</p>}
