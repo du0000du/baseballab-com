@@ -1,0 +1,26 @@
+{
+  "amazon_tag": "baseballab-22",
+  "links": [
+    {
+      "id": "rapsodo-mlm2-pro",
+      "label": "ラプソード MLM2 PRO",
+      "asin": "B09N4THKGL",
+      "pr": true,
+      "description": "投球・打撃データを計測できるポータブルデバイス"
+    },
+    {
+      "id": "sabr-book",
+      "label": "データで勝つ野球 セイバーメトリクス入門",
+      "asin": "4862556639",
+      "pr": true,
+      "description": "セイバーメトリクスの基礎から実践まで"
+    },
+    {
+      "id": "baseball-score-book",
+      "label": "野球スコアブック 公式記録員監修版",
+      "asin": "4780422787",
+      "pr": true,
+      "description": "試合記録をつけながら野球をより深く楽しむ"
+    }
+  ]
+}
