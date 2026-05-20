@@ -1,0 +1,58 @@
+---
+// Baseballab — MLB選手一覧
+// TASK-033: /players/ index page
+
+import Layout from '../../layouts/Layout.astro';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+const playersDir = join(process.cwd(), 'data/mlb/players');
+const playerFiles = readdirSync(playersDir).filter(f => f.endsWith('.json'));
+
+const players = playerFiles.map(filename => {
+  const slug = filename.replace('.json', '');
+  const data = JSON.parse(readFileSync(join(playersDir, filename), 'utf-8'));
+  const info = data.info || {};
+  return {
+    slug,
+    fullName: info.fullName || slug,
+    position: info.primaryPosition?.abbreviation || '—',
+    positionName: info.primaryPosition?.name || '',
+  };
+}).sort((a, b) => a.fullName.localeCompare(b.fullName));
+---
+
+<Layout title="MLB選手一覧 | Baseballab" description="Baseballabが収録するMLB選手の一覧。各選手の詳細データ、成績、セイバーメトリクスをチェック。">
+  <main class="page-container">
+    <header class="page-header">
+      <h1>MLB 選手一覧</h1>
+      <p class="subtitle">{players.length}選手を収録 · 随時拡充予定</p>
+    </header>
+
+    <div class="players-grid">
+      {players.map(p => (
+        <a class="player-card" href={'/players/' + p.slug}>
+          <span class="player-pos">{p.position}</span>
+          <span class="player-name">{p.fullName}</span>
+          <span class="arrow">›</span>
+        </a>
+      ))}
+    </div>
+
+    <p class="note">※ 選手データは随時拡充予定です。現在{players.length}名収録中。</p>
+  </main>
+</Layout>
+
+<style>
+  .page-container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .page-header { text-align: center; margin-bottom: 2.5rem; }
+  .page-header h1 { font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+  .subtitle { color: var(--gray-400); font-size: 0.95rem; }
+  .players-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.5rem; }
+  .player-card { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 7px; text-decoration: none; color: var(--navy); transition: border-color 0.12s, background 0.12s; }
+  .player-card:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+  .player-pos { font-size: 0.75rem; font-weight: 700; font-family: monospace; color: var(--accent); width: 2.2rem; flex-shrink: 0; text-align: center; }
+  .player-name { flex: 1; font-size: 0.95rem; font-weight: 500; }
+  .arrow { color: var(--gray-400); }
+  .note { text-align: center; color: var(--gray-400); font-size: 0.85rem; margin-top: 2.5rem; }
+</style>
