@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import AtomicAnswer from '../../components/AtomicAnswer.astro';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+const SEASON_YEAR = new Date().getFullYear() - 1; // プロジェクトルール: 現在の年 - 1
 
 export async function getStaticPaths() {
   const dir = join(process.cwd(), 'data/mlb/players');
@@ -69,13 +70,13 @@ if (isBatter && avg) {
   if (hr !== null) parts.push(`${hr}本塁打`);
   if (rbi !== null) parts.push(`${rbi}打点`);
   if (ops) parts.push(`OPS ${ops}`);
-  statsSnippet = parts.length ? `2024年は${parts.join('・')}を記録。` : '';
+  statsSnippet = parts.length ? `${SEASON_YEAR}年は${parts.join('・')}を記録。` : '';
 } else if (isPitcher && era) {
   const parts = [];
   if (wins !== null && losses !== null) parts.push(`${wins}勝${losses}敗`);
   if (era) parts.push(`防御率${era}`);
   if (strikeOuts !== null) parts.push(`${strikeOuts}奪三振`);
-  statsSnippet = parts.length ? `2024年は${parts.join('・')}を記録。` : '';
+  statsSnippet = parts.length ? `${SEASON_YEAR}年は${parts.join('・')}を記録。` : '';
 }
 
 const teamSnippet = teamName ? `所属チーム: ${teamName}。` : '';
@@ -282,7 +283,7 @@ const description = `${name}（${posAbbr}）のMLB成績・プロフィール・
         )}
       </div>
 
-      <h2>2024年成績</h2>
+      <h2>{SEASON_YEAR}年成績</h2>
       {teamName && <p class="stats-team">{teamName}</p>}
 
       {isBatter && splitStat ? (
