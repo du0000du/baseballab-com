@@ -1,0 +1,88 @@
+---
+// Baseballab — MLBシーズン概要
+// TASK-034: /season/ page (minimal)
+
+import Layout from '../../layouts/Layout.astro';
+
+const SEASON_YEAR = new Date().getFullYear() - 1;
+---
+
+<Layout title={SEASON_YEAR + ' MLBシーズン | Baseballab'} description={SEASON_YEAR + '年のMLBシーズン概要。スタッツ、成績、選手データをチェック。'}>
+  <main class="page-container">
+    <header class="page-header">
+      <h1>{SEASON_YEAR} MLBシーズン</h1>
+      <p class="subtitle">レギュラーシーズン · {SEASON_YEAR}年3月〜10月 · 162試合</p>
+    </header>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-label">試合数</div>
+        <div class="info-value">162試合 / チーム</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">球団数</div>
+        <div class="info-value">30球団 (AL15 / NL15)</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">プレーオフ出場</div>
+        <div class="info-value">各リーグ6チーム</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">ワールドシリーズ</div>
+        <div class="info-value">{SEASON_YEAR}年10〜11月</div>
+      </div>
+    </div>
+
+    <section class="nav-section">
+      <h2>データを探す</h2>
+      <div class="nav-links">
+        <a class="nav-card" href="/mlb">
+          <span class="nav-icon">⚾</span>
+          <div>
+            <div class="nav-title">MLB ハブ</div>
+            <div class="nav-desc">全球団・成績・統計</div>
+          </div>
+        </a>
+        <a class="nav-card" href="/teams">
+          <span class="nav-icon">🏟</span>
+          <div>
+            <div class="nav-title">球団一覧</div>
+            <div class="nav-desc">全30球団のデータ</div>
+          </div>
+        </a>
+        <a class="nav-card" href="/players">
+          <span class="nav-icon">🏃</span>
+          <div>
+            <div class="nav-title">選手一覧</div>
+            <div class="nav-desc">収録選手のプロフィール</div>
+          </div>
+        </a>
+        <a class="nav-card" href="/mlb/leaders">
+          <span class="nav-icon">📊</span>
+          <div>
+            <div class="nav-title">スタッツリーダー</div>
+            <div class="nav-desc">HR・打率・防御率トップ</div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .page-container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .page-header { text-align: center; margin-bottom: 3rem; }
+  .page-header h1 { font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+  .subtitle { color: var(--gray-400); font-size: 0.95rem; }
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+  .info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+  .info-label { font-size: 0.78rem; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+  .info-value { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
+  .nav-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; border-left: 4px solid var(--accent); padding-left: 0.75rem; }
+  .nav-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.75rem; }
+  .nav-card { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--navy); transition: background 0.12s, border-color 0.12s; }
+  .nav-card:hover { background: var(--accent-light); border-color: var(--accent); }
+  .nav-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .nav-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; }
+  .nav-desc { font-size: 0.8rem; color: var(--gray-400); }
+</style>
