@@ -1,0 +1,107 @@
+---
+// Baseballab — MLB全30球団一覧
+// TASK-032: /teams/ index page
+
+import Layout from '../../layouts/Layout.astro';
+
+const SEASON_YEAR = new Date().getFullYear() - 1;
+
+const divisions = [
+  { league: 'AL', division: 'East', teams: [
+    { slug: 'baltimore-orioles',    name: 'Baltimore Orioles',    abbr: 'BAL' },
+    { slug: 'boston-red-sox',       name: 'Boston Red Sox',       abbr: 'BOS' },
+    { slug: 'new-york-yankees',     name: 'New York Yankees',     abbr: 'NYY' },
+    { slug: 'tampa-bay-rays',       name: 'Tampa Bay Rays',       abbr: 'TB'  },
+    { slug: 'toronto-blue-jays',    name: 'Toronto Blue Jays',    abbr: 'TOR' },
+  ]},
+  { league: 'AL', division: 'Central', teams: [
+    { slug: 'chicago-white-sox',    name: 'Chicago White Sox',    abbr: 'CWS' },
+    { slug: 'cleveland-guardians',  name: 'Cleveland Guardians',  abbr: 'CLE' },
+    { slug: 'detroit-tigers',       name: 'Detroit Tigers',       abbr: 'DET' },
+    { slug: 'kansas-city-royals',   name: 'Kansas City Royals',   abbr: 'KC'  },
+    { slug: 'minnesota-twins',      name: 'Minnesota Twins',      abbr: 'MIN' },
+  ]},
+  { league: 'AL', division: 'West', teams: [
+    { slug: 'houston-astros',       name: 'Houston Astros',       abbr: 'HOU' },
+    { slug: 'los-angeles-angels',   name: 'Los Angeles Angels',   abbr: 'LAA' },
+    { slug: 'oakland-athletics',    name: 'Oakland Athletics',    abbr: 'OAK' },
+    { slug: 'seattle-mariners',     name: 'Seattle Mariners',     abbr: 'SEA' },
+    { slug: 'texas-rangers',        name: 'Texas Rangers',        abbr: 'TEX' },
+  ]},
+  { league: 'NL', division: 'East', teams: [
+    { slug: 'atlanta-braves',       name: 'Atlanta Braves',       abbr: 'ATL' },
+    { slug: 'miami-marlins',        name: 'Miami Marlins',        abbr: 'MIA' },
+    { slug: 'new-york-mets',        name: 'New York Mets',        abbr: 'NYM' },
+    { slug: 'philadelphia-phillies',name: 'Philadelphia Phillies',abbr: 'PHI' },
+    { slug: 'washington-nationals', name: 'Washington Nationals', abbr: 'WSH' },
+  ]},
+  { league: 'NL', division: 'Central', teams: [
+    { slug: 'chicago-cubs',         name: 'Chicago Cubs',         abbr: 'CHC' },
+    { slug: 'cincinnati-reds',      name: 'Cincinnati Reds',      abbr: 'CIN' },
+    { slug: 'milwaukee-brewers',    name: 'Milwaukee Brewers',    abbr: 'MIL' },
+    { slug: 'pittsburgh-pirates',   name: 'Pittsburgh Pirates',   abbr: 'PIT' },
+    { slug: 'st-louis-cardinals',   name: 'St. Louis Cardinals',  abbr: 'STL' },
+  ]},
+  { league: 'NL', division: 'West', teams: [
+    { slug: 'arizona-diamondbacks', name: 'Arizona Diamondbacks', abbr: 'ARI' },
+    { slug: 'colorado-rockies',     name: 'Colorado Rockies',     abbr: 'COL' },
+    { slug: 'los-angeles-dodgers',  name: 'Los Angeles Dodgers',  abbr: 'LAD' },
+    { slug: 'san-diego-padres',     name: 'San Diego Padres',     abbr: 'SD'  },
+    { slug: 'san-francisco-giants', name: 'San Francisco Giants', abbr: 'SF'  },
+  ]},
+];
+---
+
+<Layout title="MLB 全30球団 | Baseballab" description="MLBアメリカン・リーグ・ナショナル・リーグ全30球団。各球団の詳細データをチェック。">
+  <main class="page-container">
+    <header class="page-header">
+      <h1>MLB 全30球団</h1>
+      <p class="subtitle">{SEASON_YEAR}シーズン · 全6地区30球団</p>
+    </header>
+
+    <div class="leagues">
+      {['AL', 'NL'].map(league => (
+        <section class="league-block">
+          <h2 class="league-heading">{league === 'AL' ? 'アメリカン・リーグ' : 'ナショナル・リーグ'}</h2>
+          <div class="divisions-row">
+            {divisions.filter(d => d.league === league).map(div => (
+              <div class="division-card">
+                <div class="division-label">{div.division}</div>
+                <ul class="team-list">
+                  {div.teams.map(t => (
+                    <li>
+                      <a class="team-row" href={'/teams/' + t.slug}>
+                        <span class="abbr">{t.abbr}</span>
+                        <span class="tname">{t.name}</span>
+                        <span class="arrow">›</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .page-container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+  .page-header { text-align: center; margin-bottom: 3rem; }
+  .page-header h1 { font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+  .subtitle { color: var(--gray-400); font-size: 0.95rem; }
+  .league-block { margin-bottom: 3rem; }
+  .league-heading { font-size: 1.3rem; font-weight: 700; color: var(--navy); border-left: 4px solid var(--accent); padding-left: 0.75rem; margin-bottom: 1.25rem; }
+  .divisions-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  @media (max-width: 700px) { .divisions-row { grid-template-columns: 1fr; } }
+  .division-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; }
+  .division-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-400); margin-bottom: 0.75rem; }
+  .team-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
+  .team-row { display: flex; align-items: center; gap: 0.6rem; padding: 0.45rem 0.5rem; border-radius: 5px; text-decoration: none; color: var(--navy); transition: background 0.12s; }
+  .team-row:hover { background: var(--accent-light); color: var(--accent); }
+  .abbr { font-size: 0.78rem; font-weight: 700; font-family: monospace; color: var(--accent); width: 2.8rem; flex-shrink: 0; }
+  .tname { font-size: 0.9rem; flex: 1; }
+  .arrow { color: var(--gray-400); font-size: 1rem; }
+</style>
