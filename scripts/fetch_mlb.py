@@ -2,7 +2,7 @@
 """
 MLB Stats API データ取得スクリプト
 TASK-003: 接続テスト / TASK-004: 選手データ取得 / TASK-005: チームデータ取得
-TASK-036: 2024年成績データ取得対応
+プロジェクトルール: SEASON = 現在の年 - 1 (直前シーズン)
 
 使用方法:
   python3 scripts/fetch_mlb.py --mode test        # 接続テスト
@@ -16,11 +16,13 @@ import time
 import argparse
 import urllib.request
 import urllib.error
+from datetime import datetime
 from pathlib import Path
 
 BASE_URL = "https://statsapi.mlb.com/api/v1"
 DATA_DIR = Path(__file__).parent.parent / "data" / "mlb"
-SEASON = 2024
+# プロジェクトルール: 現在の年 - 1 = 直前シーズン
+SEASON = datetime.now().year - 1
 
 # 取得対象選手ID（MLB主要選手）
 PLAYER_IDS = [
