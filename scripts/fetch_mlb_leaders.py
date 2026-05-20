@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
 fetch_mlb_leaders.py
-MLB 2025シーズン成績リーダーボードデータを取得してJSONに保存する
+MLB シーズン成績リーダーボードデータを取得してJSONに保存する
+
+プロジェクトルール: SEASON = 現在の年 - 1 (直前シーズン)
+例: 2026年実行 → 2025シーズンデータを取得
 
 使い方:
   python scripts/fetch_mlb_leaders.py
 
 出力先:
-  data/mlb/leaders/2025.json
+  data/mlb/leaders/{SEASON}.json
 """
 
 import json
@@ -18,7 +21,8 @@ from datetime import datetime, timezone
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
 
-SEASON = "2025"
+# プロジェクトルール: 現在の年 - 1 = 直前シーズン
+SEASON = str(datetime.now().year - 1)
 BASE = "https://statsapi.mlb.com/api/v1"
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "mlb", "leaders")
 
@@ -48,7 +52,6 @@ def fetch(path: str) -> dict:
 
 
 def get_leaders(group: str, sort_stat: str, limit: int = 10) -> list:
-    """指定部門・指標のリーダーボードを取得"""
     path = (
         f"/stats"
         f"?stats=season"
@@ -70,10 +73,8 @@ def get_leaders(group: str, sort_stat: str, limit: int = 10) -> list:
         player = item.get("player", {})
         team = item.get("team", {})
 
-        # 指標値の取得（キャメルケース・小文字両方試す）
         value = stat.get(sort_stat)
         if value is None:
-            # stolenBases -> stolenBases lowercase fallback
             value = stat.get(sort_stat[0].lower() + sort_stat[1:], "")
 
         result.append(
@@ -133,7 +134,6 @@ def main():
 
     print(f"\n✅ 保存完了: {out_path}")
 
-    # サマリー表示
     print("\n--- サマリー ---")
     hr_top = batting.get("homeRuns", [{}])
     if hr_top:
