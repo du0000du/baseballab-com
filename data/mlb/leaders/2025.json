@@ -1,0 +1,584 @@
+{
+  "fetched_at": "2026-05-20T08:43:39Z",
+  "season": "2025",
+  "batting": {
+    "homeRuns": [
+      {
+        "rank": 1,
+        "playerId": 663728,
+        "player": "Cal Raleigh",
+        "team": "SEA",
+        "value": 60
+      },
+      {
+        "rank": 2,
+        "playerId": 656941,
+        "player": "Kyle Schwarber",
+        "team": "PHI",
+        "value": 56
+      },
+      {
+        "rank": 3,
+        "playerId": 660271,
+        "player": "Shohei Ohtani",
+        "team": "LAD",
+        "value": 55
+      },
+      {
+        "rank": 4,
+        "playerId": 592450,
+        "player": "Aaron Judge",
+        "team": "NYY",
+        "value": 53
+      },
+      {
+        "rank": 5,
+        "playerId": 553993,
+        "player": "Eugenio Suárez",
+        "team": "SEA",
+        "value": 49
+      },
+      {
+        "rank": 6,
+        "playerId": 691406,
+        "player": "Junior Caminero",
+        "team": "TB",
+        "value": 45
+      },
+      {
+        "rank": 7,
+        "playerId": 665742,
+        "player": "Juan Soto",
+        "team": "NYM",
+        "value": 43
+      },
+      {
+        "rank": 8,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "NYM",
+        "value": 38
+      },
+      {
+        "rank": 9,
+        "playerId": 666176,
+        "player": "Jo Adell",
+        "team": "LAA",
+        "value": 37
+      },
+      {
+        "rank": 10,
+        "playerId": 682985,
+        "player": "Riley Greene",
+        "team": "DET",
+        "value": 36
+      }
+    ],
+    "avg": [
+      {
+        "rank": 1,
+        "playerId": 592450,
+        "player": "Aaron Judge",
+        "team": "NYY",
+        "value": ".331"
+      },
+      {
+        "rank": 2,
+        "playerId": 666182,
+        "player": "Bo Bichette",
+        "team": "TOR",
+        "value": ".311"
+      },
+      {
+        "rank": 3,
+        "playerId": 805779,
+        "player": "Jacob Wilson",
+        "team": "ATH",
+        "value": ".311"
+      },
+      {
+        "rank": 4,
+        "playerId": 543807,
+        "player": "George Springer",
+        "team": "TOR",
+        "value": ".309"
+      },
+      {
+        "rank": 5,
+        "playerId": 665161,
+        "player": "Jeremy Peña",
+        "team": "HOU",
+        "value": ".304"
+      },
+      {
+        "rank": 6,
+        "playerId": 607208,
+        "player": "Trea Turner",
+        "team": "PHI",
+        "value": ".304"
+      },
+      {
+        "rank": 7,
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".300"
+      },
+      {
+        "rank": 8,
+        "playerId": 663538,
+        "player": "Nico Hoerner",
+        "team": "CHC",
+        "value": ".297"
+      },
+      {
+        "rank": 9,
+        "playerId": 677951,
+        "player": "Bobby Witt Jr.",
+        "team": "KC",
+        "value": ".295"
+      },
+      {
+        "rank": 10,
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
+        "value": ".295"
+      }
+    ],
+    "rbi": [
+      {
+        "rank": 1,
+        "playerId": 656941,
+        "player": "Kyle Schwarber",
+        "team": "PHI",
+        "value": 132
+      },
+      {
+        "rank": 2,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "NYM",
+        "value": 126
+      },
+      {
+        "rank": 3,
+        "playerId": 663728,
+        "player": "Cal Raleigh",
+        "team": "SEA",
+        "value": 125
+      },
+      {
+        "rank": 4,
+        "playerId": 553993,
+        "player": "Eugenio Suárez",
+        "team": "SEA",
+        "value": 118
+      },
+      {
+        "rank": 5,
+        "playerId": 592450,
+        "player": "Aaron Judge",
+        "team": "NYY",
+        "value": 114
+      },
+      {
+        "rank": 6,
+        "playerId": 686469,
+        "player": "Vinnie Pasquantino",
+        "team": "KC",
+        "value": 113
+      },
+      {
+        "rank": 7,
+        "playerId": 682985,
+        "player": "Riley Greene",
+        "team": "DET",
+        "value": 111
+      },
+      {
+        "rank": 8,
+        "playerId": 691406,
+        "player": "Junior Caminero",
+        "team": "TB",
+        "value": 110
+      },
+      {
+        "rank": 9,
+        "playerId": 646240,
+        "player": "Rafael Devers",
+        "team": "SF",
+        "value": 109
+      },
+      {
+        "rank": 10,
+        "playerId": 665742,
+        "player": "Juan Soto",
+        "team": "NYM",
+        "value": 105
+      }
+    ],
+    "stolenBases": [
+      {
+        "rank": 1,
+        "playerId": 676609,
+        "player": "José Caballero",
+        "team": "NYY",
+        "value": 49
+      },
+      {
+        "rank": 2,
+        "playerId": 608070,
+        "player": "José Ramírez",
+        "team": "CLE",
+        "value": 44
+      },
+      {
+        "rank": 2,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
+        "value": 44
+      },
+      {
+        "rank": 4,
+        "playerId": 665833,
+        "player": "Oneil Cruz",
+        "team": "PIT",
+        "value": 38
+      },
+      {
+        "rank": 4,
+        "playerId": 665742,
+        "player": "Juan Soto",
+        "team": "NYM",
+        "value": 38
+      },
+      {
+        "rank": 4,
+        "playerId": 677951,
+        "player": "Bobby Witt Jr.",
+        "team": "KC",
+        "value": 38
+      },
+      {
+        "rank": 7,
+        "playerId": 682829,
+        "player": "Elly De La Cruz",
+        "team": "CIN",
+        "value": 37
+      },
+      {
+        "rank": 8,
+        "playerId": 607208,
+        "player": "Trea Turner",
+        "team": "PHI",
+        "value": 36
+      },
+      {
+        "rank": 9,
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
+        "value": 35
+      },
+      {
+        "rank": 10,
+        "playerId": 687363,
+        "player": "Victor Scott II",
+        "team": "STL",
+        "value": 34
+      }
+    ]
+  },
+  "pitching": {
+    "era": [
+      {
+        "rank": 1,
+        "playerId": 694973,
+        "player": "Paul Skenes",
+        "team": "PIT",
+        "value": "1.97"
+      },
+      {
+        "rank": 2,
+        "playerId": 669373,
+        "player": "Tarik Skubal",
+        "team": "DET",
+        "value": "2.21"
+      },
+      {
+        "rank": 3,
+        "playerId": 686613,
+        "player": "Hunter Brown",
+        "team": "HOU",
+        "value": "2.43"
+      },
+      {
+        "rank": 4,
+        "playerId": 808967,
+        "player": "Yoshinobu Yamamoto",
+        "team": "LAD",
+        "value": "2.49"
+      },
+      {
+        "rank": 5,
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
+        "value": "2.50"
+      },
+      {
+        "rank": 6,
+        "playerId": 676979,
+        "player": "Garrett Crochet",
+        "team": "BOS",
+        "value": "2.59"
+      },
+      {
+        "rank": 7,
+        "playerId": 642547,
+        "player": "Freddy Peralta",
+        "team": "MIL",
+        "value": "2.70"
+      },
+      {
+        "rank": 8,
+        "playerId": 608331,
+        "player": "Max Fried",
+        "team": "NYY",
+        "value": "2.86"
+      },
+      {
+        "rank": 9,
+        "playerId": 671096,
+        "player": "Andrew Abbott",
+        "team": "CIN",
+        "value": "2.87"
+      },
+      {
+        "rank": 10,
+        "playerId": 601713,
+        "player": "Nick Pivetta",
+        "team": "SD",
+        "value": "2.87"
+      }
+    ],
+    "wins": [
+      {
+        "rank": 1,
+        "playerId": 608331,
+        "player": "Max Fried",
+        "team": "NYY",
+        "value": 19
+      },
+      {
+        "rank": 2,
+        "playerId": 676979,
+        "player": "Garrett Crochet",
+        "team": "BOS",
+        "value": 18
+      },
+      {
+        "rank": 2,
+        "playerId": 607074,
+        "player": "Carlos Rodón",
+        "team": "NYY",
+        "value": 18
+      },
+      {
+        "rank": 4,
+        "playerId": 642547,
+        "player": "Freddy Peralta",
+        "team": "MIL",
+        "value": 17
+      },
+      {
+        "rank": 5,
+        "playerId": 666200,
+        "player": "Jesús Luzardo",
+        "team": "PHI",
+        "value": 15
+      },
+      {
+        "rank": 5,
+        "playerId": 657277,
+        "player": "Logan Webb",
+        "team": "SF",
+        "value": 15
+      },
+      {
+        "rank": 5,
+        "playerId": 693433,
+        "player": "Bryan Woo",
+        "team": "SEA",
+        "value": 15
+      },
+      {
+        "rank": 8,
+        "playerId": 571510,
+        "player": "Matthew Boyd",
+        "team": "CHC",
+        "value": 14
+      },
+      {
+        "rank": 8,
+        "playerId": 543243,
+        "player": "Sonny Gray",
+        "team": "STL",
+        "value": 14
+      },
+      {
+        "rank": 8,
+        "playerId": 663554,
+        "player": "Casey Mize",
+        "team": "DET",
+        "value": 14
+      }
+    ],
+    "strikeOuts": [
+      {
+        "rank": 1,
+        "playerId": 676979,
+        "player": "Garrett Crochet",
+        "team": "BOS",
+        "value": 255
+      },
+      {
+        "rank": 2,
+        "playerId": 669373,
+        "player": "Tarik Skubal",
+        "team": "DET",
+        "value": 241
+      },
+      {
+        "rank": 3,
+        "playerId": 657277,
+        "player": "Logan Webb",
+        "team": "SF",
+        "value": 224
+      },
+      {
+        "rank": 4,
+        "playerId": 666200,
+        "player": "Jesús Luzardo",
+        "team": "PHI",
+        "value": 216
+      },
+      {
+        "rank": 4,
+        "playerId": 694973,
+        "player": "Paul Skenes",
+        "team": "PIT",
+        "value": 216
+      },
+      {
+        "rank": 6,
+        "playerId": 656302,
+        "player": "Dylan Cease",
+        "team": "SD",
+        "value": 215
+      },
+      {
+        "rank": 7,
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
+        "value": 212
+      },
+      {
+        "rank": 8,
+        "playerId": 686613,
+        "player": "Hunter Brown",
+        "team": "HOU",
+        "value": 206
+      },
+      {
+        "rank": 9,
+        "playerId": 642547,
+        "player": "Freddy Peralta",
+        "team": "MIL",
+        "value": 204
+      },
+      {
+        "rank": 10,
+        "playerId": 607074,
+        "player": "Carlos Rodón",
+        "team": "NYY",
+        "value": 203
+      }
+    ],
+    "saves": [
+      {
+        "rank": 1,
+        "playerId": 608032,
+        "player": "Carlos Estévez",
+        "team": "KC",
+        "value": 42
+      },
+      {
+        "rank": 2,
+        "playerId": 663158,
+        "player": "Robert Suarez",
+        "team": "SD",
+        "value": 40
+      },
+      {
+        "rank": 3,
+        "playerId": 662253,
+        "player": "Andrés Muñoz",
+        "team": "SEA",
+        "value": 38
+      },
+      {
+        "rank": 4,
+        "playerId": 656546,
+        "player": "Jeff Hoffman",
+        "team": "TOR",
+        "value": 33
+      },
+      {
+        "rank": 5,
+        "playerId": 547973,
+        "player": "Aroldis Chapman",
+        "team": "BOS",
+        "value": 32
+      },
+      {
+        "rank": 5,
+        "playerId": 661395,
+        "player": "Jhoan Duran",
+        "team": "PHI",
+        "value": 32
+      },
+      {
+        "rank": 5,
+        "playerId": 641941,
+        "player": "Emilio Pagán",
+        "team": "CIN",
+        "value": 32
+      },
+      {
+        "rank": 8,
+        "playerId": 656730,
+        "player": "Trevor Megill",
+        "team": "MIL",
+        "value": 30
+      },
+      {
+        "rank": 9,
+        "playerId": 628452,
+        "player": "Raisel Iglesias",
+        "team": "ATL",
+        "value": 29
+      },
+      {
+        "rank": 9,
+        "playerId": 445276,
+        "player": "Kenley Jansen",
+        "team": "LAA",
+        "value": 29
+      }
+    ]
+  }
+}
