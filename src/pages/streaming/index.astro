@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="MLB・NPB 野球配信・視聴方法ガイド | Baseballab"
+  description="MLBをDAZN・スポナビライブ・パ・リーグTVで見る方法を解説。海外在住者向けのVPN活用法も紹介。"
+>
+  <style slot="head">
+    .stream-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%);
+      color: var(--white);
+      padding: 3.5rem 1.25rem 2.75rem;
+      text-align: center;
+    }
+    .stream-eyebrow {
+      display: inline-block;
+      background: rgba(192,57,43,.85);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+    .stream-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: .75rem;
+    }
+    .stream-sub {
+      color: rgba(255,255,255,.8);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: clamp(.9rem, 1.8vw, 1rem);
+      line-height: 1.75;
+    }
+    .breadcrumb { padding: .75rem 0; font-size: .8rem; color: var(--gray-500); }
+    .breadcrumb a { color: var(--gray-500); }
+    .breadcrumb span { margin: 0 .4rem; }
+    .section { padding: 3rem 0 4rem; }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 1.6rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+    }
+    .service-badge {
+      font-size: .72rem;
+      font-weight: 700;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 9999px;
+      padding: .2rem .7rem;
+      width: fit-content;
+    }
+    .service-badge.npb { background: #9b2335; }
+    .service-badge.both { background: #27751c; }
+    .service-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
+    .service-desc { font-size: .88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
+    .service-price { font-size: .85rem; font-weight: 600; color: var(--gray-600); }
+    .coming-badge {
+      font-size: .72rem;
+      font-weight: 700;
+      background: var(--gray-100);
+      color: var(--gray-500);
+      border-radius: 9999px;
+      padding: .15rem .6rem;
+      width: fit-content;
+    }
+  </style>
+
+  <section class="stream-hero">
+    <div class="container">
+      <p class="stream-eyebrow">📺 Baseball Streaming</p>
+      <h1>MLB・NPB 配信・視聴ガイド</h1>
+      <p class="stream-sub">メジャーリーグ・プロ野球をネットで見る方法を徹底比較。サービス別の特徴・料金・おすすめをまとめました。</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">トップ</a><span>›</span><span>配信</span>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-card">
+          <span class="service-badge">MLB</span>
+          <div class="service-title">MLB.TV</div>
+          <p class="service-desc">MLBの公式配信サービス。全球団の全試合をライブ・アーカイブで視聴可能。Statcastデータと連動したリアルタイム分析機能も充実。</p>
+          <p class="service-price">月額約 $24.99（海外向け）</p>
+          <span class="coming-badge">詳細ページ準備中</span>
+        </div>
+        <div class="service-card">
+          <span class="service-badge both">MLB・NPB</span>
+          <div class="service-title">DAZN（ダゾーン）</div>
+          <p class="service-desc">MLB・NPBのライブ中継を配信。スマホ・TV・PCから視聴可能。巨人・阪神など人気球団の主要試合も網羅。</p>
+          <p class="service-price">月額 3,700円〜</p>
+          <span class="coming-badge">詳細ページ準備中</span>
+        </div>
+        <div class="service-card">
+          <span class="service-badge npb">NPB</span>
+          <div class="service-title">パ・リーグTV</div>
+          <p class="service-desc">パ・リーグ6球団の試合をライブ・見逃し配信。試合データ・選手成績と連動した視聴体験が特徴。</p>
+          <p class="service-price">月額 550円〜</p>
+          <span class="coming-badge">詳細ページ準備中</span>
+        </div>
+        <div class="service-card">
+          <span class="service-badge npb">NPB</span>
+          <div class="service-title">Tver / NHK+</div>
+          <p class="service-desc">地上波放送された試合を無料で視聴可能。巨人戦・日本シリーズなど注目試合の見逃し配信が中心。</p>
+          <p class="service-price">無料</p>
+          <span class="coming-badge">詳細ページ準備中</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
