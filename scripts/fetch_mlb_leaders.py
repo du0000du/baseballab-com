@@ -3,8 +3,8 @@
 fetch_mlb_leaders.py
 MLB シーズン成績リーダーボードデータを取得してJSONに保存する
 
-プロジェクトルール: SEASON = 現在の年 - 1 (直前シーズン)
-例: 2026年実行 → 2025シーズンデータを取得
+シーズン判定: 3月〜12月は当年、1〜2月は前年（オフシーズン）。MLB_SEASON env varで上書き可
+例: 2026/05実行 → 2026シーズンデータを取得／ 2026/02実行 → 2025シーズンデータを取得
 
 使い方:
   python scripts/fetch_mlb_leaders.py
@@ -21,8 +21,8 @@ from datetime import datetime, timezone
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
 
-# プロジェクトルール: 現在の年 - 1 = 直前シーズン
-SEASON = str(datetime.now().year - 1)
+# シーズン判定: 3月以降は当年、1〜2月はオフシーズン扱いで前年。MLB_SEASON env varで明示上書き可
+SEASON = str(int(os.environ.get("MLB_SEASON") or (datetime.now().year if datetime.now().month >= 3 else datetime.now().year - 1)))BASE = "https://statsapi.mlb.com/api/v1"
 BASE = "https://statsapi.mlb.com/api/v1"
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "mlb", "leaders")
 
