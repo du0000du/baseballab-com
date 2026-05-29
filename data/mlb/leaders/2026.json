@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-29T00:28:43Z",
+  "fetched_at": "2026-05-29T22:26:23Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -112,37 +112,37 @@
       },
       {
         "rank": 6,
-        "playerId": 670541,
-        "player": "Yordan Alvarez",
-        "team": "HOU",
-        "value": ".312"
-      },
-      {
-        "rank": 7,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
         "value": ".311"
       },
       {
+        "rank": 7,
+        "playerId": 670541,
+        "player": "Yordan Alvarez",
+        "team": "HOU",
+        "value": ".307"
+      },
+      {
         "rank": 8,
+        "playerId": 673962,
+        "player": "Josh Jung",
+        "team": "TEX",
+        "value": ".307"
+      },
+      {
+        "rank": 9,
         "playerId": 682985,
         "player": "Riley Greene",
         "team": "DET",
         "value": ".304"
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 686948,
         "player": "Drake Baldwin",
         "team": "ATL",
-        "value": ".303"
-      },
-      {
-        "rank": 9,
-        "playerId": 545121,
-        "player": "Ildemaro Vargas",
-        "team": "AZ",
         "value": ".303"
       }
     ],
@@ -395,6 +395,13 @@
       },
       {
         "rank": 5,
+        "playerId": 681293,
+        "player": "Spencer Arrighetti",
+        "team": "HOU",
+        "value": 7
+      },
+      {
+        "rank": 5,
         "playerId": 695505,
         "player": "Chase Burns",
         "team": "CIN",
@@ -415,21 +422,14 @@
         "value": 7
       },
       {
-        "rank": 8,
-        "playerId": 681293,
-        "player": "Spencer Arrighetti",
-        "team": "HOU",
-        "value": 6
-      },
-      {
-        "rank": 8,
+        "rank": 9,
         "playerId": 656492,
         "player": "Foster Griffin",
         "team": "WSH",
         "value": 6
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 690986,
         "player": "Kyle Harrison",
         "team": "MIL",
