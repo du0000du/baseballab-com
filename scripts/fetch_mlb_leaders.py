@@ -22,7 +22,7 @@ from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
 
 # シーズン判定: 3月以降は当年、1〜2月はオフシーズン扱いで前年。MLB_SEASON env varで明示上書き可
-SEASON = str(int(os.environ.get("MLB_SEASON") or (datetime.now().year if datetime.now().month >= 3 else datetime.now().year - 1)))BASE = "https://statsapi.mlb.com/api/v1"
+SEASON = str(int(os.environ.get("MLB_SEASON") or (datetime.now().year if datetime.now().month >= 3 else datetime.now().year - 1)))
 BASE = "https://statsapi.mlb.com/api/v1"
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "mlb", "leaders")
 
