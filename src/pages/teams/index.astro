@@ -1,107 +1,274 @@
 ---
-// Baseballab — MLB全30球団一覧
-// TASK-032: /teams/ index page
-
+// /teams/ — MLB 全30球団 地区別一覧
 import Layout from '../../layouts/Layout.astro';
 
-const SEASON_YEAR = new Date().getFullYear() - 1;
+const AL = [
+  {
+    div: 'AL East',
+    teams: [
+      { slug: 'new-york-yankees',    name: 'New York Yankees',      abbr: 'NYY', color: '#003087' },
+      { slug: 'boston-red-sox',      name: 'Boston Red Sox',        abbr: 'BOS', color: '#bd3039' },
+      { slug: 'toronto-blue-jays',   name: 'Toronto Blue Jays',     abbr: 'TOR', color: '#134a8e' },
+      { slug: 'tampa-bay-rays',      name: 'Tampa Bay Rays',        abbr: 'TB',  color: '#092c5c' },
+      { slug: 'baltimore-orioles',   name: 'Baltimore Orioles',     abbr: 'BAL', color: '#df4601' },
+    ],
+  },
+  {
+    div: 'AL Central',
+    teams: [
+      { slug: 'detroit-tigers',      name: 'Detroit Tigers',        abbr: 'DET', color: '#0c2c56' },
+      { slug: 'chicago-white-sox',   name: 'Chicago White Sox',     abbr: 'CWS', color: '#27251f' },
+      { slug: 'cleveland-guardians', name: 'Cleveland Guardians',   abbr: 'CLE', color: '#0c2340' },
+      { slug: 'kansas-city-royals',  name: 'Kansas City Royals',    abbr: 'KC',  color: '#004687' },
+      { slug: 'minnesota-twins',     name: 'Minnesota Twins',       abbr: 'MIN', color: '#002b5c' },
+    ],
+  },
+  {
+    div: 'AL West',
+    teams: [
+      { slug: 'houston-astros',      name: 'Houston Astros',        abbr: 'HOU', color: '#002d62' },
+      { slug: 'athletics',           name: 'Athletics',             abbr: 'OAK', color: '#003831' },
+      { slug: 'seattle-mariners',    name: 'Seattle Mariners',      abbr: 'SEA', color: '#0c2c56' },
+      { slug: 'los-angeles-angels',  name: 'Los Angeles Angels',    abbr: 'LAA', color: '#ba0021' },
+      { slug: 'texas-rangers',       name: 'Texas Rangers',         abbr: 'TEX', color: '#003278' },
+    ],
+  },
+];
 
-const divisions = [
-  { league: 'AL', division: 'East', teams: [
-    { slug: 'baltimore-orioles',    name: 'Baltimore Orioles',    abbr: 'BAL' },
-    { slug: 'boston-red-sox',       name: 'Boston Red Sox',       abbr: 'BOS' },
-    { slug: 'new-york-yankees',     name: 'New York Yankees',     abbr: 'NYY' },
-    { slug: 'tampa-bay-rays',       name: 'Tampa Bay Rays',       abbr: 'TB'  },
-    { slug: 'toronto-blue-jays',    name: 'Toronto Blue Jays',    abbr: 'TOR' },
-  ]},
-  { league: 'AL', division: 'Central', teams: [
-    { slug: 'chicago-white-sox',    name: 'Chicago White Sox',    abbr: 'CWS' },
-    { slug: 'cleveland-guardians',  name: 'Cleveland Guardians',  abbr: 'CLE' },
-    { slug: 'detroit-tigers',       name: 'Detroit Tigers',       abbr: 'DET' },
-    { slug: 'kansas-city-royals',   name: 'Kansas City Royals',   abbr: 'KC'  },
-    { slug: 'minnesota-twins',      name: 'Minnesota Twins',      abbr: 'MIN' },
-  ]},
-  { league: 'AL', division: 'West', teams: [
-    { slug: 'houston-astros',       name: 'Houston Astros',       abbr: 'HOU' },
-    { slug: 'los-angeles-angels',   name: 'Los Angeles Angels',   abbr: 'LAA' },
-    { slug: 'oakland-athletics',    name: 'Oakland Athletics',    abbr: 'OAK' },
-    { slug: 'seattle-mariners',     name: 'Seattle Mariners',     abbr: 'SEA' },
-    { slug: 'texas-rangers',        name: 'Texas Rangers',        abbr: 'TEX' },
-  ]},
-  { league: 'NL', division: 'East', teams: [
-    { slug: 'atlanta-braves',       name: 'Atlanta Braves',       abbr: 'ATL' },
-    { slug: 'miami-marlins',        name: 'Miami Marlins',        abbr: 'MIA' },
-    { slug: 'new-york-mets',        name: 'New York Mets',        abbr: 'NYM' },
-    { slug: 'philadelphia-phillies',name: 'Philadelphia Phillies',abbr: 'PHI' },
-    { slug: 'washington-nationals', name: 'Washington Nationals', abbr: 'WSH' },
-  ]},
-  { league: 'NL', division: 'Central', teams: [
-    { slug: 'chicago-cubs',         name: 'Chicago Cubs',         abbr: 'CHC' },
-    { slug: 'cincinnati-reds',      name: 'Cincinnati Reds',      abbr: 'CIN' },
-    { slug: 'milwaukee-brewers',    name: 'Milwaukee Brewers',    abbr: 'MIL' },
-    { slug: 'pittsburgh-pirates',   name: 'Pittsburgh Pirates',   abbr: 'PIT' },
-    { slug: 'st-louis-cardinals',   name: 'St. Louis Cardinals',  abbr: 'STL' },
-  ]},
-  { league: 'NL', division: 'West', teams: [
-    { slug: 'arizona-diamondbacks', name: 'Arizona Diamondbacks', abbr: 'ARI' },
-    { slug: 'colorado-rockies',     name: 'Colorado Rockies',     abbr: 'COL' },
-    { slug: 'los-angeles-dodgers',  name: 'Los Angeles Dodgers',  abbr: 'LAD' },
-    { slug: 'san-diego-padres',     name: 'San Diego Padres',     abbr: 'SD'  },
-    { slug: 'san-francisco-giants', name: 'San Francisco Giants', abbr: 'SF'  },
-  ]},
+const NL = [
+  {
+    div: 'NL East',
+    teams: [
+      { slug: 'new-york-mets',        name: 'New York Mets',         abbr: 'NYM', color: '#002d72' },
+      { slug: 'atlanta-braves',       name: 'Atlanta Braves',        abbr: 'ATL', color: '#ce1141' },
+      { slug: 'philadelphia-phillies',name: 'Philadelphia Phillies', abbr: 'PHI', color: '#e81828' },
+      { slug: 'washington-nationals', name: 'Washington Nationals',  abbr: 'WSH', color: '#ab0003' },
+      { slug: 'miami-marlins',        name: 'Miami Marlins',         abbr: 'MIA', color: '#00a3e0' },
+    ],
+  },
+  {
+    div: 'NL Central',
+    teams: [
+      { slug: 'chicago-cubs',         name: 'Chicago Cubs',          abbr: 'CHC', color: '#0e3386' },
+      { slug: 'st-louis-cardinals',   name: 'St. Louis Cardinals',   abbr: 'STL', color: '#c41e3a' },
+      { slug: 'milwaukee-brewers',    name: 'Milwaukee Brewers',     abbr: 'MIL', color: '#12284b' },
+      { slug: 'cincinnati-reds',      name: 'Cincinnati Reds',       abbr: 'CIN', color: '#c6011f' },
+      { slug: 'pittsburgh-pirates',   name: 'Pittsburgh Pirates',    abbr: 'PIT', color: '#fdb827' },
+    ],
+  },
+  {
+    div: 'NL West',
+    teams: [
+      { slug: 'los-angeles-dodgers',  name: 'Los Angeles Dodgers',   abbr: 'LAD', color: '#005a9c' },
+      { slug: 'san-francisco-giants', name: 'San Francisco Giants',  abbr: 'SF',  color: '#fd5a1e' },
+      { slug: 'san-diego-padres',     name: 'San Diego Padres',      abbr: 'SD',  color: '#2f241d' },
+      { slug: 'arizona-diamondbacks', name: 'Arizona Diamondbacks',  abbr: 'ARI', color: '#a71930' },
+      { slug: 'colorado-rockies',     name: 'Colorado Rockies',      abbr: 'COL', color: '#33006f' },
+    ],
+  },
 ];
 ---
 
-<Layout title="MLB 全30球団 | Baseballab" description="MLBアメリカン・リーグ・ナショナル・リーグ全30球団。各球団の詳細データをチェック。">
-  <main class="page-container">
-    <header class="page-header">
-      <h1>MLB 全30球団</h1>
-      <p class="subtitle">{SEASON_YEAR}シーズン · 全6地区30球団</p>
-    </header>
+<Layout
+  title="MLB チーム一覧 | 全30球団 地区別データ | Baseballab"
+  description="MLB全30球団をア・リーグ／ナ・リーグ地区別に一覧。各球団の成績データ・所属選手情報を掲載。"
+  ogUrl="https://baseballab.com/teams/"
+>
+  <style slot="head">
+    .teams-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1a5276 100%);
+      color: var(--white);
+      padding: 3.5rem 1.25rem 2.75rem;
+      text-align: center;
+    }
+    .teams-eyebrow {
+      display: inline-block;
+      background: rgba(192,57,43,.85);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+    .teams-hero h1 {
+      font-size: clamp(1.8rem, 4.5vw, 2.75rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: .85rem;
+    }
+    .teams-hero h1 em { color: #7ec8e3; font-style: normal; }
+    .teams-sub {
+      color: rgba(255,255,255,.8);
+      max-width: 580px;
+      margin: 0 auto;
+      font-size: clamp(.9rem, 1.8vw, 1.02rem);
+      line-height: 1.75;
+    }
+    .breadcrumb {
+      padding: .75rem 0;
+      font-size: .8rem;
+      color: var(--gray-500);
+    }
+    .breadcrumb a { color: var(--gray-500); }
+    .breadcrumb span { margin: 0 .4rem; }
+    .section { padding: 3rem 0; }
+    .section-alt { background: var(--gray-100); }
+    .league-label {
+      display: inline-block;
+      color: var(--red);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: .4rem;
+    }
+    .league-title {
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -.02em;
+      margin-bottom: 1.5rem;
+    }
+    .div-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .div-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .div-head {
+      padding: .6rem 1.1rem;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: var(--white);
+      background: var(--navy);
+    }
+    .team-row {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .75rem 1.1rem;
+      border-bottom: 1px solid var(--gray-100);
+      color: inherit;
+      transition: background .15s;
+    }
+    .team-row:last-child { border-bottom: none; }
+    .team-row:hover { background: #f0f4f8; }
+    .team-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 1px solid rgba(0,0,0,.12);
+    }
+    .team-abbr {
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--gray-400);
+      width: 2.8rem;
+      flex-shrink: 0;
+      font-variant: small-caps;
+    }
+    .team-name {
+      flex: 1;
+      font-weight: 600;
+      color: var(--navy-dark);
+      font-size: .9rem;
+    }
+    .team-arrow { color: var(--gray-300); font-size: 1rem; }
+    .team-row:hover .team-arrow { color: var(--red); }
+    .npb-banner {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      background: linear-gradient(135deg, #9b2335 0%, #7d1c2a 100%);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 1.4rem 1.75rem;
+      margin-top: 2rem;
+    }
+    .npb-banner:hover { transform: translateY(-2px); }
+    .npb-banner-icon { font-size: 2rem; }
+    .npb-banner-body { flex: 1; }
+    .npb-banner-title { font-size: 1.05rem; font-weight: 700; margin-bottom: .2rem; }
+    .npb-banner-sub { font-size: .85rem; opacity: .8; }
+    @media (max-width: 768px) { .div-grid { grid-template-columns: 1fr; } }
+  </style>
 
-    <div class="leagues">
-      {['AL', 'NL'].map(league => (
-        <section class="league-block">
-          <h2 class="league-heading">{league === 'AL' ? 'アメリカン・リーグ' : 'ナショナル・リーグ'}</h2>
-          <div class="divisions-row">
-            {divisions.filter(d => d.league === league).map(div => (
-              <div class="division-card">
-                <div class="division-label">{div.division}</div>
-                <ul class="team-list">
-                  {div.teams.map(t => (
-                    <li>
-                      <a class="team-row" href={'/teams/' + t.slug}>
-                        <span class="abbr">{t.abbr}</span>
-                        <span class="tname">{t.name}</span>
-                        <span class="arrow">›</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+  <section class="teams-hero">
+    <div class="container">
+      <p class="teams-eyebrow">⚾ MLB Teams</p>
+      <h1>MLB 全<em>30</em>球団</h1>
+      <p class="teams-sub">アメリカン・リーグ／ナショナル・リーグ 各地区の球団データ。選手成績・チーム分析を掲載。</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">トップ</a><span>›</span><span>チーム一覧</span>
+    </nav>
+  </div>
+
+  <!-- AL -->
+  <section class="section">
+    <div class="container">
+      <p class="league-label">American League</p>
+      <h2 class="league-title">アメリカン・リーグ</h2>
+      <div class="div-grid">
+        {AL.map(({ div, teams }) => (
+          <div class="div-card">
+            <div class="div-head">{div}</div>
+            {teams.map(t => (
+              <a href={`/teams/${t.slug}/`} class="team-row">
+                <span class="team-dot" style={`background:${t.color}`}></span>
+                <span class="team-abbr">{t.abbr}</span>
+                <span class="team-name">{t.name}</span>
+                <span class="team-arrow">›</span>
+              </a>
             ))}
           </div>
-        </section>
-      ))}
+        ))}
+      </div>
     </div>
-  </main>
-</Layout>
+  </section>
 
-<style>
-  .page-container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
-  .page-header { text-align: center; margin-bottom: 3rem; }
-  .page-header h1 { font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
-  .subtitle { color: var(--gray-400); font-size: 0.95rem; }
-  .league-block { margin-bottom: 3rem; }
-  .league-heading { font-size: 1.3rem; font-weight: 700; color: var(--navy); border-left: 4px solid var(--accent); padding-left: 0.75rem; margin-bottom: 1.25rem; }
-  .divisions-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  @media (max-width: 700px) { .divisions-row { grid-template-columns: 1fr; } }
-  .division-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; }
-  .division-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-400); margin-bottom: 0.75rem; }
-  .team-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
-  .team-row { display: flex; align-items: center; gap: 0.6rem; padding: 0.45rem 0.5rem; border-radius: 5px; text-decoration: none; color: var(--navy); transition: background 0.12s; }
-  .team-row:hover { background: var(--accent-light); color: var(--accent); }
-  .abbr { font-size: 0.78rem; font-weight: 700; font-family: monospace; color: var(--accent); width: 2.8rem; flex-shrink: 0; }
-  .tname { font-size: 0.9rem; flex: 1; }
-  .arrow { color: var(--gray-400); font-size: 1rem; }
-</style>
+  <!-- NL -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="league-label">National League</p>
+      <h2 class="league-title">ナショナル・リーグ</h2>
+      <div class="div-grid">
+        {NL.map(({ div, teams }) => (
+          <div class="div-card">
+            <div class="div-head">{div}</div>
+            {teams.map(t => (
+              <a href={`/teams/${t.slug}/`} class="team-row">
+                <span class="team-dot" style={`background:${t.color}`}></span>
+                <span class="team-abbr">{t.abbr}</span>
+                <span class="team-name">{t.name}</span>
+                <span class="team-arrow">›</span>
+              </a>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <a href="/npb/" class="npb-banner">
+        <div class="npb-banner-icon">🇯🇵</div>
+        <div class="npb-banner-body">
+          <div class="npb-banner-title">NPBデータはこちら — セ・パ12球団</div>
+          <div class="npb-banner-sub">2026シーズン最新成績・選手データを毎日更新中</div>
+        </div>
+        <div style="font-size:1.4rem;opacity:.7">→</div>
+      </a>
+    </div>
+  </section>
+</Layout>

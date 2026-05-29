@@ -1,565 +1,254 @@
 ---
-// baseballab.com — MLBデータ分析ハブ
-// TASK-031: MLB hub page
+// /mlb/ — MLB データ分析ハブ
 import Layout from '../../layouts/Layout.astro';
 
-const featuredPlayers = [
-  { slug: 'shohei-ohtani',     name: '大谷翔平',           nameEn: 'Shohei Ohtani',     pos: 'DH/SP', team: 'LAD', note: '二刀流・2024年MVP' },
-  { slug: 'aaron-judge',       name: 'アーロン・ジャッジ',   nameEn: 'Aaron Judge',        pos: 'RF',    team: 'NYY', note: '2022年AL本塁打記録' },
-  { slug: 'mookie-betts',      name: 'ムーキー・ベッツ',     nameEn: 'Mookie Betts',       pos: 'SS',    team: 'LAD', note: '2020年WS優勝貢献' },
-  { slug: 'paul-skenes',       name: 'ポール・スキーンズ',   nameEn: 'Paul Skenes',        pos: 'SP',    team: 'PIT', note: '2024年NL新人王' },
-  { slug: 'juan-soto',         name: 'ファン・ソト',         nameEn: 'Juan Soto',          pos: 'LF',    team: 'NYM', note: '出塁率エリート' },
-  { slug: 'bobby-witt-jr',     name: 'ボビー・ウィット Jr.', nameEn: 'Bobby Witt Jr.',     pos: 'SS',    team: 'KC',  note: '2024年打撃タイトル争い' },
+const SEASON = '2026';
+
+const features = [
+  {
+    icon: '📊',
+    title: 'リーダーボード',
+    desc: '打率・本塁打・打点・防御率・奪三振など各部門のリーディングハイターをランキング形式で掲載。',
+    href: '/mlb/leaders/',
+    label: 'ランキングを見る',
+  },
+  {
+    icon: '👤',
+    title: '選手成績',
+    desc: 'OPS・WAR・FIP・wRC+などセイバーメトリクス指標で主要選手の成績を分析。大谷翔平ほか注目選手のデータも。',
+    href: '/mlb/players/',
+    label: '選手データを見る',
+  },
+  {
+    icon: '🏟️',
+    title: 'チーム成績',
+    desc: 'MLB全30球団の打撃・投球・守備成績。地区別ランキングとシーズン成績を掲載。',
+    href: '/teams/',
+    label: 'チーム一覧へ',
+  },
+  {
+    icon: '📈',
+    title: 'シーズントレンド',
+    desc: '2026シーズンの月別・週別成績推移。ホットストリーク・スランプを可視化。',
+    href: '/season/',
+    label: 'シーズンデータへ',
+  },
 ];
 
-const allPlayers = [
-  { slug: 'aaron-judge',         name: 'Aaron Judge',         pos: 'RF',   team: 'NYY' },
-  { slug: 'adley-rutschman',     name: 'Adley Rutschman',     pos: 'C',    team: 'BAL' },
-  { slug: 'andrew-abbott',       name: 'Andrew Abbott',       pos: 'SP',   team: 'CIN' },
-  { slug: 'austin-hedges',       name: 'Austin Hedges',       pos: 'C',    team: '-' },
-  { slug: 'bobby-witt-jr',       name: 'Bobby Witt Jr.',      pos: 'SS',   team: 'KC' },
-  { slug: 'cal-raleigh',         name: 'Cal Raleigh',         pos: 'C',    team: 'SEA' },
-  { slug: 'clayton-kershaw',     name: 'Clayton Kershaw',     pos: 'SP',   team: 'LAD' },
-  { slug: 'cody-bellinger',      name: 'Cody Bellinger',      pos: 'CF',   team: 'CHC' },
-  { slug: 'corbin-carroll',      name: 'Corbin Carroll',      pos: 'CF',   team: 'ARI' },
-  { slug: 'dylan-cease',         name: 'Dylan Cease',         pos: 'SP',   team: 'SD' },
-  { slug: 'francisco-lindor',    name: 'Francisco Lindor',    pos: 'SS',   team: 'NYM' },
-  { slug: 'freddy-fermin',       name: 'Freddy Fermín',       pos: 'C',    team: 'KC' },
-  { slug: 'garrett-crochet',     name: 'Garrett Crochet',     pos: 'SP',   team: 'BOS' },
-  { slug: 'george-kirby',        name: 'George Kirby',        pos: 'SP',   team: 'SEA' },
-  { slug: 'germán-márquez',      name: 'Germán Márquez',      pos: 'SP',   team: 'COL' },
-  { slug: 'jose-altuve',         name: 'José Altuve',         pos: '2B',   team: 'HOU' },
-  { slug: 'juan-soto',           name: 'Juan Soto',           pos: 'LF',   team: 'NYM' },
-  { slug: 'kevin-gausman',       name: 'Kevin Gausman',       pos: 'SP',   team: 'TOR' },
-  { slug: 'manny-machado',       name: 'Manny Machado',       pos: '3B',   team: 'SD' },
-  { slug: 'marcus-semien',       name: 'Marcus Semien',       pos: '2B',   team: 'TEX' },
-  { slug: 'matt-olson',          name: 'Matt Olson',          pos: '1B',   team: 'ATL' },
-  { slug: 'michael-busch',       name: 'Michael Busch',       pos: '1B',   team: 'CHC' },
-  { slug: 'mookie-betts',        name: 'Mookie Betts',        pos: 'SS',   team: 'LAD' },
-  { slug: 'pablo-l�pez',         name: 'Pablo López',         pos: 'SP',   team: 'MIN' },
-  { slug: 'paul-skenes',         name: 'Paul Skenes',         pos: 'SP',   team: 'PIT' },
-  { slug: 'robert-suarez',       name: 'Robert Suárez',       pos: 'RP',   team: 'SD' },
-  { slug: 'rowdy-tellez',        name: 'Rowdy Tellez',        pos: '1B',   team: '-' },
-  { slug: 'shohei-ohtani',       name: '大谷翔平 (Shohei Ohtani)', pos: 'DH/SP', team: 'LAD' },
-  { slug: 'vinnie-pasquantino',  name: 'Vinnie Pasquantino',  pos: '1B',   team: 'KC' },
-  { slug: 'zack-wheeler',        name: 'Zack Wheeler',        pos: 'SP',   team: 'PHI' },
-];
-
-const divisions = [
-  {
-    name: 'AL East', teams: [
-      { slug: 'baltimore-orioles',  name: 'Baltimore Orioles',  abbr: 'BAL' },
-      { slug: 'boston-red-sox',     name: 'Boston Red Sox',     abbr: 'BOS' },
-      { slug: 'new-york-yankees',   name: 'New York Yankees',   abbr: 'NYY' },
-      { slug: 'tampa-bay-rays',     name: 'Tampa Bay Rays',     abbr: 'TB' },
-      { slug: 'toronto-blue-jays',  name: 'Toronto Blue Jays',  abbr: 'TOR' },
-    ]
-  },
-  {
-    name: 'AL Central', teams: [
-      { slug: 'chicago-white-sox',    name: 'Chicago White Sox',    abbr: 'CWS' },
-      { slug: 'cleveland-guardians',  name: 'Cleveland Guardians',  abbr: 'CLE' },
-      { slug: 'detroit-tigers', name: 'Detroit Tigers',       abbr: 'DET' },
-      { slug: 'kansas-city-royals',   name: 'Kansas City Royals',   abbr: 'KC' },
-      { slug: 'minnesota-twins',      name: 'Minnesota Twins',      abbr: 'MIN' },
-    ]
-  },
-  {
-    name: 'AL West', teams: [
-      { slug: 'houston-astros',      name: 'Houston Astros',      abbr: 'HOU' },
-      { slug: 'los-angeles-angels',  name: 'Los Angeles Angels',  abbr: 'LAA' },
-      { slug: 'oakland-athletics',   name: 'Oakland Athletics',   abbr: 'OAK' },
-      { slug: 'seattle-mariners',    name: 'Seattle Mariners',    abbr: 'SEA' },
-      { slug: 'texas-rangers',       name: 'Texas Rangers',       abbr: 'TEX' },
-    ]
-  },
-  {
-    name: 'NL East', teams: [
-      { slug: 'atlanta-braves',        name: 'Atlanta Braves',        abbr: 'ATL' },
-      { slug: 'miami-marlins',         name: 'Miami Marlins',         abbr: 'MIA' },
-      { slug: 'new-york-mets',         name: 'New York Mets',         abbr: 'NYM' },
-      { slug: 'philadelphia-phillies', name: 'Philadelphia Phillies', abbr: 'PHI' },
-      { slug: 'washington-nationals',  name: 'Washington Nationals',  abbr: 'WSH' },
-    ]
-  },
-  {
-    name: 'NL Central', teams: [
-      { slug: 'chicago-cubs',       name: 'Chicago Cubs',       abbr: 'CHC' },
-      { slug: 'cincinnati-reds',    name: 'Cincinnati Reds',    abbr: 'CIN' },
-      { slug: 'milwaukee-brewers',  name: 'Milwaukee Brewers',  abbr: 'MIL' },
-      { slug: 'pittsburgh-pirates', name: 'Pittsburgh Pirates', abbr: 'PIT' },
-      { slug: 'st.-louis-cardinals',name: 'St. Louis Cardinals',abbr: 'STL' },
-    ]
-  },
-  {
-    name: 'NL West', teams: [
-      { slug: 'arizona-diamondbacks', name: 'Arizona Diamondbacks', abbr: 'ARI' },
-      { slug: 'colorado-rockies',     name: 'Colorado Rockies',     abbr: 'COL' },
-      { slug: 'los-angeles-dodgers',  name: 'Los Angeles Dodgers',  abbr: 'LAD' },
-      { slug: 'san-diego-padres',     name: 'San Diego Padres',     abbr: 'SD' },
-      { slug: 'san-francisco-giants', name: 'San Francisco Giants', abbr: 'SF' },
-    ]
-  },
+const spotlightPlayers = [
+  { name: '大谷 翔平', nameEn: 'Shohei Ohtani', team: 'Los Angeles Dodgers', note: '2024 MVP・本塁打王', slug: 'shohei-ohtani' },
+  { name: '山本 由伸', nameEn: 'Yoshinobu Yamamoto', team: 'Los Angeles Dodgers', note: 'エース右腕', slug: 'yoshinobu-yamamoto' },
+  { name: '今永 昇太', nameEn: 'Shota Imanaga', team: 'Chicago Cubs', note: '2024新人王', slug: 'shota-imanaga' },
+  { name: '吉田 正尚', nameEn: 'Masataka Yoshida', team: 'Boston Red Sox', note: '高打率の巧打者', slug: 'masataka-yoshida' },
 ];
 ---
 
 <Layout
-  title="MLB データ分析 | Baseballab"
-  description="MLBの選手成績・チーム分析データを網羅。大谷翔平・Aaron Judge等の注目選手30名とドジャース・ナンキース等の全30チームのデータを掲載。"
+  title={`MLB データ分析 ${SEASON} | 選手・チーム成績 | Baseballab`}
+  description={`MLB ${SEASON}シーズンの選手成績・チーム成績・リーダーボードを掲載。大谷翔平ほか日本人選手のStatcastデータも。セイバーメトリクスで野球を深く読む。`}
   ogUrl="https://baseballab.com/mlb/"
 >
   <style slot="head">
-    .hub-hero {
+    .mlb-hero {
       background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #1a4a7a 100%);
       color: var(--white);
-      padding: 4rem 1.25rem 3rem;
+      padding: 3.5rem 1.25rem 2.75rem;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
-    .hub-hero::before {
-      content: '🏟️';
-      position: absolute;
-      font-size: 18rem;
-      opacity: 0.04;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      line-height: 1;
-    }
-    .hub-eyebrow {
+    .mlb-eyebrow {
       display: inline-block;
-      background: rgba(192,57,43,0.85);
-      color: var(--white);
-      font-size: 0.78rem;
+      background: rgba(192,57,43,.85);
+      font-size: .75rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: .1em;
       text-transform: uppercase;
-      padding: 0.3rem 0.9rem;
+      padding: .3rem .9rem;
       border-radius: 9999px;
-      margin-bottom: 1.25rem;
-    }
-    .hub-hero h1 {
-      font-size: clamp(1.9rem, 4.5vw, 3rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
       margin-bottom: 1rem;
     }
-    .hub-hero h1 em { color: #7ec8e3; font-style: normal; }
-    .hub-sub {
-      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
-      color: rgba(255,255,255,0.78);
-      max-width: 580px;
-      margin: 0 auto 2rem;
-      line-height: 1.75;
-    }
-    .hub-stats {
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-    }
-    .hub-stat { text-align: center; }
-    .hub-stat-num {
-      font-size: 2rem;
+    .mlb-hero h1 {
+      font-size: clamp(1.8rem, 4.5vw, 2.9rem);
       font-weight: 900;
-      color: #7ec8e3;
-      line-height: 1;
-      display: block;
+      letter-spacing: -.03em;
+      line-height: 1.2;
+      margin-bottom: .85rem;
     }
-    .hub-stat-label {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.6);
-      margin-top: 0.2rem;
-      letter-spacing: 0.05em;
+    .mlb-hero h1 em { color: #7ec8e3; font-style: normal; }
+    .mlb-sub {
+      color: rgba(255,255,255,.8);
+      max-width: 600px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.75;
+      font-size: clamp(.9rem, 1.8vw, 1.02rem);
     }
-
-    .section { padding: 3.5rem 0; }
+    .mlb-stats { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+    .stat-num { font-size: 2rem; font-weight: 900; color: #7ec8e3; display: block; line-height: 1; }
+    .stat-label { font-size: .78rem; color: rgba(255,255,255,.6); margin-top: .2rem; }
+    .breadcrumb { padding: .75rem 0; font-size: .8rem; color: var(--gray-500); }
+    .breadcrumb a { color: var(--gray-500); }
+    .breadcrumb span { margin: 0 .4rem; }
+    .section { padding: 3rem 0; }
     .section-alt { background: var(--gray-100); }
-    .section-header { margin-bottom: 2rem; }
-    .section-label {
-      display: inline-block;
-      color: var(--red);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
-    }
-    .section-title {
-      font-size: clamp(1.3rem, 2.8vw, 1.7rem);
-      font-weight: 800;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-    }
-    .section-lead {
-      margin-top: 0.5rem;
-      color: var(--gray-600);
-      font-size: 0.9rem;
-    }
-
-    /* Featured player cards */
-    .player-grid {
+    .section-label { display: inline-block; color: var(--red); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .4rem; }
+    .section-title { font-size: clamp(1.3rem, 2.8vw, 1.7rem); font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
+    .section-lead { margin-top: .5rem; color: var(--gray-600); font-size: .9rem; }
+    .section-header { margin-bottom: 1.75rem; }
+    .feature-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.25rem;
+    }
+    .feature-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 1.6rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .feature-card:hover { box-shadow: 0 8px 24px rgba(26,58,92,.12); transform: translateY(-3px); }
+    .fc-icon { font-size: 1.9rem; line-height: 1; }
+    .fc-title { font-size: 1.02rem; font-weight: 700; color: var(--navy); }
+    .fc-desc { font-size: .86rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
+    .fc-link { display: inline-flex; align-items: center; gap: .3rem; color: var(--red); font-size: .84rem; font-weight: 600; margin-top: .2rem; transition: gap .15s; }
+    .fc-link:hover { gap: .55rem; }
+    .spotlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
     }
     .player-card {
       background: var(--white);
       border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      padding: 1.4rem 1.4rem 1.2rem;
-      transition: box-shadow 0.2s, transform 0.2s;
+      border-radius: 10px;
+      padding: 1.2rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: inherit;
+      gap: .5rem;
+      transition: box-shadow .2s, transform .2s;
     }
-    .player-card:hover {
-      box-shadow: 0 8px 24px rgba(26,58,92,0.13);
-      transform: translateY(-3px);
-    }
-    .player-card-top {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+    .player-card:hover { box-shadow: 0 6px 18px rgba(26,58,92,.12); transform: translateY(-2px); }
     .player-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
       font-size: 1.3rem;
-      flex-shrink: 0;
     }
-    .player-meta { flex: 1; min-width: 0; }
-    .player-name {
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--navy-dark);
-      line-height: 1.3;
-    }
-    .player-pos-team {
-      font-size: 0.78rem;
-      color: var(--gray-500);
-      margin-top: 0.1rem;
-    }
-    .player-note {
-      font-size: 0.8rem;
-      color: var(--gray-600);
-      line-height: 1.5;
-      padding-top: 0.2rem;
-      border-top: 1px solid var(--gray-100);
-    }
-    .player-link-hint {
-      font-size: 0.78rem;
-      color: var(--red);
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    /* All players list */
-    .player-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 0.6rem;
-    }
-    .player-list-item {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.75rem 1rem;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 8px;
-      text-decoration: none;
-      color: inherit;
-      transition: background 0.15s, box-shadow 0.15s;
-      font-size: 0.87rem;
-    }
-    .player-list-item:hover {
-      background: #f0f5ff;
-      box-shadow: 0 2px 8px rgba(26,58,92,0.08);
-    }
-    .player-list-item .pos-badge {
-      flex-shrink: 0;
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: var(--white);
-      background: var(--navy);
-      padding: 0.15rem 0.4rem;
-      border-radius: 4px;
-      letter-spacing: 0.04em;
-    }
-    .player-list-item .player-list-name {
-      flex: 1;
-      font-weight: 600;
-      color: var(--navy-dark);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .player-list-item .team-tag {
-      flex-shrink: 0;
-      font-size: 0.72rem;
-      color: var(--gray-400);
-    }
-
-    /* Division grid */
-    .division-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .division-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .division-header {
-      background: var(--navy);
-      color: var(--white);
-      padding: 0.65rem 1.1rem;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .division-header.al { background: #c0392b; }
-    .division-header.nl { background: #1a5276; }
-    .team-link {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.65rem 1.1rem;
-      text-decoration: none;
-      color: inherit;
-      border-bottom: 1px solid var(--gray-100);
-      transition: background 0.15s;
-      font-size: 0.88rem;
-    }
-    .team-link:last-child { border-bottom: none; }
-    .team-link:hover { background: #f0f5ff; }
-    .team-abbr {
-      flex-shrink: 0;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--white);
-      background: var(--navy);
-      padding: 0.15rem 0.45rem;
-      border-radius: 4px;
-      min-width: 36px;
-      text-align: center;
-      letter-spacing: 0.03em;
-    }
-    .team-name-text {
-      flex: 1;
-      font-weight: 600;
-      color: var(--navy-dark);
-    }
-    .team-arrow {
-      color: var(--gray-300);
-      font-size: 0.9rem;
-      transition: color 0.15s, transform 0.15s;
-    }
-    .team-link:hover .team-arrow {
-      color: var(--red);
-      transform: translateX(3px);
-    }
-
-    /* Breadcrumb */
-    .breadcrumb {
-      padding: 0.75rem 0;
-      font-size: 0.8rem;
-      color: var(--gray-500);
-    }
-    .breadcrumb a { color: var(--gray-500); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--navy); }
-    .breadcrumb span { margin: 0 0.4rem; }
-
-    @media (max-width: 768px) {
-      .hub-hero { padding: 3rem 1.25rem 2.5rem; }
-      .hub-hero::before { font-size: 10rem; }
-      .hub-stats { gap: 1.5rem; }
-      .section { padding: 2.5rem 0; }
-      .player-grid { grid-template-columns: 1fr 1fr; }
-      .player-list { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .hub-hero { padding: 2.5rem 0 2rem; }
-      .hub-stat-num { font-size: 1.6rem; }
-      .player-grid { grid-template-columns: 1fr; }
-      .player-card { padding: 1.25rem; }
-      .division-grid { grid-template-columns: 1fr; }
-      .division-header { padding: 0.6rem 1rem; }
-      .division-row { padding: 0.6rem 1rem; }
-      .section { padding: 2rem 0; }
-      .section-header h2 { font-size: 1.3rem; }
-    }
-
-    /* ===== LEADERS BANNER ===== */
+    .player-name { font-weight: 700; color: var(--navy-dark); font-size: .95rem; line-height: 1.3; }
+    .player-en { font-size: .78rem; color: var(--gray-400); }
+    .player-team { font-size: .8rem; color: var(--gray-600); }
+    .player-note { font-size: .8rem; color: var(--red); font-weight: 600; }
+    .player-link { font-size: .78rem; color: var(--navy); font-weight: 600; margin-top: auto; }
+    .player-link:hover { color: var(--red); }
     .leaders-banner {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+      display: flex; align-items: center; gap: 1rem;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-      color: var(--white);
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s;
-      box-shadow: 0 4px 16px rgba(26,58,92,0.25);
+      color: var(--white); border-radius: 12px; padding: 1.25rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(15,37,64,.3);
+      transition: transform .2s;
     }
-    .leaders-banner:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(26,58,92,0.35);
+    .leaders-banner:hover { transform: translateY(-2px); }
+    .lb-icon { font-size: 2rem; }
+    .lb-body { flex: 1; }
+    .lb-title { font-size: 1.05rem; font-weight: 700; margin-bottom: .25rem; }
+    .lb-sub { font-size: .85rem; opacity: .8; }
+    .lb-arrow { font-size: 1.4rem; opacity: .7; }
+    .npb-link-banner {
+      margin-top: 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+      background: linear-gradient(135deg, #9b2335 0%, #7d1c2a 100%);
+      color: var(--white); border-radius: 12px; padding: 1.1rem 1.5rem;
+      transition: transform .2s;
     }
-    .leaders-banner-icon { font-size: 2rem; flex-shrink: 0; }
-    .leaders-banner-body { flex: 1; }
-    .leaders-banner-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-    .leaders-banner-sub {
-      font-size: 0.85rem;
-      opacity: 0.8;
-    }
-    .leaders-banner-arrow {
-      font-size: 1.4rem;
-      opacity: 0.7;
-      flex-shrink: 0;
-    }
+    .npb-link-banner:hover { transform: translateY(-2px); }
+    @media (max-width: 768px) { .spotlight-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .spotlight-grid { grid-template-columns: 1fr; } }
   </style>
 
-  <!-- Hero -->
-  <section class="hub-hero">
+  <!-- HERO -->
+  <section class="mlb-hero">
     <div class="container">
-      <p class="hub-eyebrow">⚾ MLB Data Analysis</p>
-      <h1>MLB データ分析<br><em>ハブページ</em></h1>
-      <p class="hub-sub">メジャーリーグ全30チーム・注目選手のデータを網羅。<br>成績・プロフィール・セイバーメトリクスまで、最新データをチェック。</p>
-      <div class="hub-stats">
-        <div class="hub-stat">
-          <span class="hub-stat-num">30</span>
-          <div class="hub-stat-label">選手データ</div>
-        </div>
-        <div class="hub-stat">
-          <span class="hub-stat-num">30</span>
-          <div class="hub-stat-label">チームデータ</div>
-        </div>
-        <div class="hub-stat">
-          <span class="hub-stat-num">6</span>
-          <div class="hub-stat-label">ディビジョン</div>
-        </div>
+      <p class="mlb-eyebrow">⚾ MLB Data Analysis</p>
+      <h1>MLB <em>{SEASON}</em><br>データ分析ハブ</h1>
+      <p class="mlb-sub">メジャーリーグ {SEASON}シーズンの選手成績・チーム成績・リーダーボードをセイバーメトリクスで深掘り。</p>
+      <div class="mlb-stats">
+        <div><span class="stat-num">30</span><div class="stat-label">球団</div></div>
+        <div><span class="stat-num">9+</span><div class="stat-label">成績部門</div></div>
+        <div><span class="stat-num">毎日</span><div class="stat-label">データ更新</div></div>
       </div>
     </div>
   </section>
 
-  <!-- Breadcrumb -->
   <div class="container">
-    <nav class="breadcrumb" aria-label="パンくずリスト">
-      <a href="/">トップ</a>
-      <span>›</span>
-      <span>MLB データ分析</span>
-    </nav>
+    <nav class="breadcrumb"><a href="/">トップ</a><span>›</span><span>MLB データ分析</span></nav>
   </div>
 
-
-  <!-- Leaders Banner -->
-  <section class="section" style="padding:1.5rem 0 0;">
+  <!-- リーダーボードバナー -->
+  <section class="section" style="padding: 0 0 1rem;">
     <div class="container">
       <a href="/mlb/leaders/" class="leaders-banner">
-        <div class="leaders-banner-icon">📊</div>
-        <div class="leaders-banner-body">
-          <div class="leaders-banner-title">MLB 2025 成績ランキング</div>
-          <div class="leaders-banner-sub">ホームラン・打率・打点・防御率など、2025年シーズン最新リーダーボード</div>
+        <div class="lb-icon">📊</div>
+        <div class="lb-body">
+          <div class="lb-title">MLB {SEASON} 成績ランキング</div>
+          <div class="lb-sub">打率・本塁打・打点・防御率・奪三振など各部門のリーダーボード</div>
         </div>
-        <div class="leaders-banner-arrow">→</div>
+        <div class="lb-arrow">→</div>
       </a>
     </div>
   </section>
 
-  <!-- Featured Players -->
+  <!-- 機能カード -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">⭐ 注目選手</p>
-        <h2 class="section-title">フィーチャード・プレイヤー</h2>
-        <p class="section-lead">今注目のMLB選手のデータ・プロフィールをチェック</p>
+        <p class="section-label">Features</p>
+        <h2 class="section-title">MLBデータでできること</h2>
+        <p class="section-lead">セイバーメトリクスを使った深い分析で、野球観戦がもっと楽しくなる</p>
       </div>
-      <div class="player-grid">
-        {featuredPlayers.map(p => (
-          <a href={`/players/${p.slug}/`} class="player-card">
-            <div class="player-card-top">
-              <div class="player-avatar">⚾</div>
-              <div class="player-meta">
-                <div class="player-name">{p.name}</div>
-                <div class="player-pos-team">{p.pos} · {p.team}</div>
-              </div>
-            </div>
-            <div class="player-note">{p.note}</div>
-            <div class="player-link-hint">詳細データを見る →</div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- All Players -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">📋 全選手一覧</p>
-        <h2 class="section-title">選手データ一覧（30名）</h2>
-        <p class="section-lead">掲載中の全選手のプロフィール・成績データ</p>
-      </div>
-      <div class="player-list">
-        {allPlayers.map(p => (
-          <a href={`/players/${p.slug}/`} class="player-list-item">
-            <span class="pos-badge">{p.pos}</span>
-            <span class="player-list-name">{p.name}</span>
-            <span class="team-tag">{p.team}</span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Teams by Division -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">🏟️ チーム別データ</p>
-        <h2 class="section-title">全30チーム — ディビジョン別</h2>
-        <p class="section-lead">各チームの詳細データ・ロスター・成績を確認</p>
-      </div>
-      <div class="division-grid">
-        {divisions.map(div => (
-          <div class="division-card">
-            <div class={`division-header ${div.name.startsWith('AL') ? 'al' : 'nl'}`}>
-              {div.name}
-            </div>
-            {div.teams.map(t => (
-              <a href={`/teams/${t.slug}/`} class="team-link">
-                <span class="team-abbr">{t.abbr}</span>
-                <span class="team-name-text">{t.name}</span>
-                <span class="team-arrow">›</span>
-              </a>
-            ))}
+      <div class="feature-grid">
+        {features.map(f => (
+          <div class="feature-card">
+            <div class="fc-icon">{f.icon}</div>
+            <div class="fc-title">{f.title}</div>
+            <p class="fc-desc">{f.desc}</p>
+            <a href={f.href} class="fc-link">{f.label} →</a>
           </div>
         ))}
       </div>
     </div>
   </section>
 
+  <!-- 注目選手 -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Spotlight</p>
+        <h2 class="section-title">注目の日本人選手</h2>
+        <p class="section-lead">MLB で活躍する日本人選手の成績データ</p>
+      </div>
+      <div class="spotlight-grid">
+        {spotlightPlayers.map(p => (
+          <div class="player-card">
+            <div class="player-avatar">⚾</div>
+            <div class="player-name">{p.name}</div>
+            <div class="player-en">{p.nameEn}</div>
+            <div class="player-team">{p.team}</div>
+            <div class="player-note">{p.note}</div>
+            <a href={`/mlb/players/${p.slug}/`} class="player-link">成績データを見る →</a>
+          </div>
+        ))}
+      </div>
+
+      <a href="/npb/" class="npb-link-banner">
+        <div style="font-size:1.5rem">🇯🇵</div>
+        <div style="flex:1">
+          <div style="font-weight:700;margin-bottom:.2rem">NPBデータはこちら — セ・パ12球団</div>
+          <div style="font-size:.85rem;opacity:.8">2026シーズン最新成績・87選手データを毎日更新</div>
+        </div>
+        <div style="font-size:1.4rem;opacity:.7">→</div>
+      </a>
+    </div>
+  </section>
 </Layout>

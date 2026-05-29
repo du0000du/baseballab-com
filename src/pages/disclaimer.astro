@@ -8,13 +8,40 @@ import Layout from '../layouts/Layout.astro';
   ogUrl="https://baseballab.com/disclaimer/"
 >
   <style slot="head">
-    .breadcrumb { background: var(--gray-100); padding: 0.6rem 1.25rem; font-size: 0.82rem; color: var(--gray-600); }
+    .breadcrumb {
+      background: var(--gray-100);
+      padding: 0.6rem 1.25rem;
+      font-size: 0.82rem;
+      color: var(--gray-600);
+    }
     .breadcrumb a { color: var(--navy); text-decoration: none; }
     .breadcrumb a:hover { text-decoration: underline; }
-    main { max-width: 780px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
-    h1 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-    .updated { font-size: 0.82rem; color: var(--gray-600); margin-bottom: 2.5rem; }
-    h2 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin: 2.25rem 0 0.6rem; padding-left: 0.7rem; border-left: 3px solid var(--red); }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .updated {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 2.25rem 0 0.6rem;
+      padding-left: 0.7rem;
+      border-left: 3px solid var(--red);
+    }
     p { margin-bottom: 1rem; }
     a { color: var(--navy); }
   </style>
@@ -28,20 +55,27 @@ import Layout from '../layouts/Layout.astro';
   <main>
     <h1>免責事項</h1>
     <p class="updated">最終更新日：2024年1月1日</p>
+
     <h2>1. 情報の正確性について</h2>
     <p>当サイト（Baseballab）に掲載しているデータ・統計情報・分析コンテンツは、公開されている情報源をもとに作成していますが、その正確性・完全性・最新性を保証するものではありません。特に選手成績・試合結果等のデータは更新タイミングにより最新情報と異なる場合があります。</p>
     <p>掲載内容に起因して利用者が被った損害について、当サイトは一切の責任を負いかねます。</p>
+
     <h2>2. アフィリエイトリンクについて</h2>
     <p>当サイトはAmazonアソシエイト・楽天アフィリエイト等のアフィリエイトプログラムに参加しており、商品・サービスへのリンクに紹介料が発生する場合があります。紹介している商品・サービスの品質・安全性・価格については各販売事業者の責任であり、当サイトは保証しません。</p>
     <p>また、商品価格・仕様・在庫状況は変動することがあります。最新情報は必ず各販売ページでご確認ください。</p>
+
     <h2>3. 外部リンクについて</h2>
     <p>当サイトには外部サイトへのリンクが含まれる場合があります。リンク先のコンテンツ・プライバシーポリシー・運営方針について当サイトは責任を負いません。外部サイトの利用は各サイトの規約に従ってください。</p>
+
     <h2>4. 著作権について</h2>
     <p>当サイトのオリジナルコンテンツ（文章・グラフ・分析・デザイン等）の著作権は当サイトに帰属します。無断転載・複製・改変はお断りします。引用する場合は出典を明示してください。なお、MLB・NPBおよび各球団・選手に関するデータは各権利者に帰属します。</p>
+
     <h2>5. データ利用規約</h2>
     <p>当サイトが使用するMLB・NPBのデータは公開情報の範囲内で利用しています。商業目的でのデータの二次利用はお控えください。各データソースの利用規約に従い、適正な範囲での引用・参照をお願いします。</p>
+
     <h2>6. 免責事項の変更</h2>
     <p>当サイトは、必要に応じて本免責事項を変更することがあります。変更した場合は、本ページにて更新日を記載の上、最新版を掲載します。</p>
+
     <h2>7. お問い合わせ</h2>
     <p>本免責事項に関するご質問は、<a href="/contact/">お問い合わせページ</a>よりご連絡ください。</p>
   </main>

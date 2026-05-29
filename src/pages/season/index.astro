@@ -1,88 +1,191 @@
 ---
-// Baseballab — MLBシーズン概要
-// TASK-034: /season/ page (minimal)
-
+// /season/ — 2026 シーズン概要
 import Layout from '../../layouts/Layout.astro';
 
-const SEASON_YEAR = new Date().getFullYear() - 1;
+const SEASON = '2026';
+
+const highlights = [
+  {
+    league: 'NPB セ・リーグ',
+    note: '阪神・ヤクルトが首位争い。2026年5月時点',
+    href: '/npb/',
+    color: '#9b2335',
+  },
+  {
+    league: 'NPB パ・リーグ',
+    note: 'ソフトバンクが例年通りの強さを見せる',
+    href: '/npb/',
+    color: '#1a5276',
+  },
+  {
+    league: 'MLB',
+    note: '各地区の首位争いが激化。大谷翔平の活躍に注目',
+    href: '/mlb/',
+    color: '#003087',
+  },
+];
+
+const dataPages = [
+  { icon: '🏆', label: 'NPB リーダーボード', desc: '打撃・投球 12部門の最新ランキング', href: '/npb/leaders/' },
+  { icon: '📊', label: 'MLB リーダーボード', desc: '各部門のMLBトップ選手', href: '/mlb/leaders/' },
+  { icon: '🏟️', label: '球団一覧', desc: 'MLB全30球団・NPB12球団の成績', href: '/teams/' },
+  { icon: '⚾', label: 'NPB選手データ', desc: '87名の2026成績を掲載', href: '/npb/' },
+];
 ---
 
-<Layout title={SEASON_YEAR + ' MLBシーズン | Baseballab'} description={SEASON_YEAR + '年のMLBシーズン概要。スタッツ、成績、選手データをチェック。'}>
-  <main class="page-container">
-    <header class="page-header">
-      <h1>{SEASON_YEAR} MLBシーズン</h1>
-      <p class="subtitle">レギュラーシーズン · {SEASON_YEAR}年3月〜10月 · 162試合</p>
-    </header>
+<Layout
+  title={`${SEASON} シーズン概要 | MLB・NPB 最新成績 | Baseballab`}
+  description={`MLB・NPB ${SEASON}シーズンの最新成績・トレンドを掲載。各リーグの首位争い、注目選手の成績推移をデータで追う。`}
+  ogUrl="https://baseballab.com/season/"
+>
+  <style slot="head">
+    .season-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, #1a4035 60%, #0e6655 100%);
+      color: var(--white);
+      padding: 3.5rem 1.25rem 2.75rem;
+      text-align: center;
+    }
+    .season-eyebrow {
+      display: inline-block;
+      background: rgba(46,125,50,.9);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+    .season-hero h1 {
+      font-size: clamp(1.8rem, 4.5vw, 2.9rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: .85rem;
+    }
+    .season-hero h1 em { color: #a9dfbf; font-style: normal; }
+    .season-sub {
+      color: rgba(255,255,255,.8);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.75;
+      font-size: clamp(.9rem, 1.8vw, 1.02rem);
+    }
+    .breadcrumb { padding: .75rem 0; font-size: .8rem; color: var(--gray-500); }
+    .breadcrumb a { color: var(--gray-500); }
+    .breadcrumb span { margin: 0 .4rem; }
+    .section { padding: 3rem 0; }
+    .section-alt { background: var(--gray-100); }
+    .section-label { display: inline-block; color: var(--red); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .4rem; }
+    .section-title { font-size: clamp(1.3rem, 2.8vw, 1.7rem); font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
+    .section-lead { margin-top: .5rem; color: var(--gray-600); font-size: .9rem; }
+    .section-header { margin-bottom: 1.75rem; }
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .highlight-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .highlight-card:hover { box-shadow: 0 8px 24px rgba(26,58,92,.12); transform: translateY(-3px); }
+    .hc-head {
+      padding: .65rem 1.1rem;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      color: var(--white);
+    }
+    .hc-body { padding: 1.1rem; }
+    .hc-note { font-size: .88rem; color: var(--gray-600); line-height: 1.6; margin-bottom: .75rem; }
+    .hc-link { font-size: .83rem; color: var(--red); font-weight: 600; }
+    .hc-link:hover { text-decoration: underline; }
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .data-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      transition: box-shadow .2s;
+    }
+    .data-card:hover { box-shadow: 0 4px 14px rgba(26,58,92,.1); }
+    .dc-icon { font-size: 1.75rem; }
+    .dc-label { font-size: .92rem; font-weight: 700; color: var(--navy); }
+    .dc-desc { font-size: .82rem; color: var(--gray-600); line-height: 1.55; flex: 1; }
+    .dc-link { font-size: .8rem; color: var(--red); font-weight: 600; margin-top: .25rem; }
+    .dc-link:hover { text-decoration: underline; }
+    .update-note {
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: .82rem;
+      color: var(--gray-400);
+    }
+    @media (max-width: 768px) { .highlight-grid { grid-template-columns: 1fr; } }
+  </style>
 
-    <div class="info-grid">
-      <div class="info-card">
-        <div class="info-label">試合数</div>
-        <div class="info-value">162試合 / チーム</div>
+  <section class="season-hero">
+    <div class="container">
+      <p class="season-eyebrow">📈 Season {SEASON}</p>
+      <h1><em>{SEASON}</em> シーズン<br>概要・トレンド</h1>
+      <p class="season-sub">MLB・NPB {SEASON}シーズンの成績推移と注目トピックをデータで追う。</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb"><a href="/">トップ</a><span>›</span><span>{SEASON} シーズン</span></nav>
+  </div>
+
+  <!-- リーグ別ハイライト -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Highlights</p>
+        <h2 class="section-title">{SEASON} シーズン ハイライト</h2>
+        <p class="section-lead">MLB・NPB 各リーグの見どころをピックアップ</p>
       </div>
-      <div class="info-card">
-        <div class="info-label">球団数</div>
-        <div class="info-value">30球団 (AL15 / NL15)</div>
-      </div>
-      <div class="info-card">
-        <div class="info-label">プレーオフ出場</div>
-        <div class="info-value">各リーグ6チーム</div>
-      </div>
-      <div class="info-card">
-        <div class="info-label">ワールドシリーズ</div>
-        <div class="info-value">{SEASON_YEAR}年10〜11月</div>
+      <div class="highlight-grid">
+        {highlights.map(h => (
+          <div class="highlight-card">
+            <div class="hc-head" style={`background:${h.color}`}>{h.league}</div>
+            <div class="hc-body">
+              <p class="hc-note">{h.note}</p>
+              <a href={h.href} class="hc-link">最新データを見る →</a>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
+  </section>
 
-    <section class="nav-section">
-      <h2>データを探す</h2>
-      <div class="nav-links">
-        <a class="nav-card" href="/mlb">
-          <span class="nav-icon">⚾</span>
-          <div>
-            <div class="nav-title">MLB ハブ</div>
-            <div class="nav-desc">全球団・成績・統計</div>
-          </div>
-        </a>
-        <a class="nav-card" href="/teams">
-          <span class="nav-icon">🏟</span>
-          <div>
-            <div class="nav-title">球団一覧</div>
-            <div class="nav-desc">全30球団のデータ</div>
-          </div>
-        </a>
-        <a class="nav-card" href="/players">
-          <span class="nav-icon">🏃</span>
-          <div>
-            <div class="nav-title">選手一覧</div>
-            <div class="nav-desc">収録選手のプロフィール</div>
-          </div>
-        </a>
-        <a class="nav-card" href="/mlb/leaders">
-          <span class="nav-icon">📊</span>
-          <div>
-            <div class="nav-title">スタッツリーダー</div>
-            <div class="nav-desc">HR・打率・防御率トップ</div>
-          </div>
-        </a>
+  <!-- データページへの導線 -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Data</p>
+        <h2 class="section-title">成績データを確認する</h2>
+        <p class="section-lead">MLB・NPBの最新成績データにアクセス</p>
       </div>
-    </section>
-  </main>
+      <div class="data-grid">
+        {dataPages.map(d => (
+          <div class="data-card">
+            <div class="dc-icon">{d.icon}</div>
+            <div class="dc-label">{d.label}</div>
+            <p class="dc-desc">{d.desc}</p>
+            <a href={d.href} class="dc-link">データを見る →</a>
+          </div>
+        ))}
+      </div>
+      <p class="update-note">NPBデータは毎日 05:15 JST に自動更新されます</p>
+    </div>
+  </section>
 </Layout>
-
-<style>
-  .page-container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
-  .page-header { text-align: center; margin-bottom: 3rem; }
-  .page-header h1 { font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
-  .subtitle { color: var(--gray-400); font-size: 0.95rem; }
-  .info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
-  .info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
-  .info-label { font-size: 0.78rem; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
-  .info-value { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
-  .nav-section h2 { font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; border-left: 4px solid var(--accent); padding-left: 0.75rem; }
-  .nav-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.75rem; }
-  .nav-card { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--navy); transition: background 0.12s, border-color 0.12s; }
-  .nav-card:hover { background: var(--accent-light); border-color: var(--accent); }
-  .nav-icon { font-size: 1.4rem; flex-shrink: 0; }
-  .nav-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; }
-  .nav-desc { font-size: 0.8rem; color: var(--gray-400); }
-</style>
