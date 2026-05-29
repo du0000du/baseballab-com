@@ -88,9 +88,9 @@ const pageTitle = `${name} 成績・プロフィール`;
 const description = `${name}（${posAbbr}）のMLB成績・プロフィール・最新情報。${birthCountry ? birthCountry + '出身。' : ''}${statsSnippet}Baseballabで詳細データを確認。`;
 const AMAZON_TAG = 'baseballab22-22';
 const affiliateLinks = [
-  { label: 'データで勝つ野球 セイバーメトリクス入門', url: buildAmazonUrl('4862556639', AMAZON_TAG), pr: true, description: '指標で読み解く野球分析の入門書' },
+  { label: 'データで勝つ野球 セイバーメトリクス入門', url: `https://www.amazon.co.jp/s?k=%E3%83%87%E3%83%BC%E3%82%BF%E3%81%A7%E5%8B%9D%E3%81%A4%E9%87%8E%E7%90%83+%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9&tag=${AMAZON_TAG}`, pr: true, description: '指標で読み解く野球分析の入門書' },
   { label: '野球スコアブック 公式記録員監修版', url: buildAmazonUrl('4780422787', AMAZON_TAG), pr: true, description: '試合記録をつけて選手成績をより深く理解' },
-  { label: 'ラプソード MLM2 PRO', url: buildAmazonUrl('B09N4THKGL', AMAZON_TAG), pr: true, description: '投球データを計測できるポータブルデバイス' },
+  { label: 'ラプソード MLM2 PRO', url: `https://www.amazon.co.jp/s?k=%E3%83%A9%E3%83%97%E3%82%BD%E3%83%BC%E3%83%89+MLM2+PRO&tag=${AMAZON_TAG}`, pr: true, description: '投球データを計測できるポータブルデバイス' },
 ];
 ---
 <Layout title={pageTitle} description={description}>
