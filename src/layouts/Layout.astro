@@ -125,19 +125,46 @@ const {
         font-size: 0.85rem;
       }
 
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1.5rem 2rem;
+        max-width: 900px;
+        margin: 0 auto 2rem;
+        text-align: left;
+      }
+      .footer-col-title {
+        font-size: .72rem;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,.5);
+        margin: 0 0 .6rem;
+      }
+      .footer-col-nav { display: flex; flex-direction: column; gap: .35rem; }
+      .footer-col-nav a { font-size: .8rem; color: rgba(255,255,255,.65); transition: color .15s; }
+      .footer-col-nav a:hover { color: var(--white); }
+
       .footer-nav {
         display: flex;
         justify-content: center;
         gap: 2rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
         flex-wrap: wrap;
+        border-top: 1px solid rgba(255,255,255,.1);
+        padding-top: 1.25rem;
+        margin-top: .5rem;
       }
-      .footer-nav a { transition: color 0.15s; }
+      .footer-nav a { transition: color 0.15s; font-size: .8rem; }
       .footer-nav a:hover { color: var(--white); }
 
       .footer-copy {
         font-size: 0.8rem;
         opacity: 0.55;
+      }
+
+      @media (max-width: 600px) {
+        .footer-links { grid-template-columns: repeat(2, 1fr); }
       }
 
       /* ===== RESPONSIVE ===== */
@@ -169,13 +196,55 @@ const {
 
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-col-title">指標解説</p>
+          <nav class="footer-col-nav">
+            <a href="/glossary/sabermetrics/">セイバーメトリクスとは</a>
+            <a href="/glossary/war/">WAR</a>
+            <a href="/glossary/ops/">OPS</a>
+            <a href="/glossary/fip/">FIP</a>
+            <a href="/glossary/woba/">wOBA</a>
+            <a href="/glossary/">すべての指標 →</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">打撃指標</p>
+          <nav class="footer-col-nav">
+            <a href="/glossary/avg/">打率（AVG）</a>
+            <a href="/glossary/obp/">出塁率（OBP）</a>
+            <a href="/glossary/slg/">長打率（SLG）</a>
+            <a href="/glossary/wrc-plus/">wRC+</a>
+            <a href="/glossary/babip/">BABIP</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">投球指標</p>
+          <nav class="footer-col-nav">
+            <a href="/glossary/era/">防御率（ERA）</a>
+            <a href="/glossary/whip/">WHIP</a>
+            <a href="/glossary/k9/">K/9</a>
+            <a href="/glossary/xfip/">xFIP</a>
+            <a href="/glossary/siera/">SIERA</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">データ</p>
+          <nav class="footer-col-nav">
+            <a href="/mlb/">MLB データ</a>
+            <a href="/mlb/leaders/">MLB ランキング</a>
+            <a href="/npb/">NPB データ</a>
+            <a href="/players/">MLB 選手一覧</a>
+            <a href="/teams/">チーム一覧</a>
+          </nav>
+        </div>
+      </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">
         <a href="/privacy/">プライバシーポリシー</a>
         <a href="/disclaimer/">免責事項</a>
-        <a href="/about/">運営者情報</a>
-        <a href="/contact/">お問い合わせ</a>
+        <a href="/disclosure/">広告について</a>
       </nav>
-      <p class="footer-copy">&copy; 2024 Baseballab. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Baseballab. All rights reserved.</p>
     </footer>
 
   </body>

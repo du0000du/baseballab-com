@@ -1,110 +1,164 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const allTerms = await getCollection('glossary');
 allTerms.sort((a, b) => a.data.title.localeCompare(b.data.title, 'ja'));
 
-const categories: Record<string, { label: string; terms: typeof allTerms }> = {
-  batting:     { label: '打撃指標', terms: [] },
-  pitching:    { label: '投球指標', terms: [] },
-  fielding:    { label: '守備指標', terms: [] },
-  baserunning: { label: '走塁指標', terms: [] },
-  general:     { label: '総合指標', terms: [] },
+const categories: Record<string, { label: string; icon: string; desc: string; terms: typeof allTerms }> = {
+  batting:     { label: '打撃指標', icon: '🏏', desc: 'AVG・OPS・wOBAなど打者の攻撃力を測る指標', terms: [] },
+  pitching:    { label: '投球指標', icon: '⚾', desc: 'ERA・FIP・WHIPなど投手の実力を測る指標', terms: [] },
+  fielding:    { label: '守備指標', icon: '🧤', desc: 'UZR・DRSなど守備貢献を数値化する指標', terms: [] },
+  baserunning: { label: '走塁指標', icon: '🏃', desc: 'BsRなど走塁価値を定量化する指標', terms: [] },
+  general:     { label: '総合・概論', icon: '📊', desc: 'WAR・セイバーメトリクス概論・Statcastなど', terms: [] },
 };
 for (const term of allTerms) {
-  categories[term.data.category].terms.push(term);
+  categories[term.data.category]?.terms.push(term);
 }
 
-const difficultyLabel: Record<string, string> = {
-  basic: '基礎',
-  intermediate: '中級',
-  advanced: '上級',
-};
+const difficultyLabel: Record<string, string> = { basic: '基礎', intermediate: '中級', advanced: '上級' };
+const difficultyColor: Record<string, string> = { basic: '#2e7d32', intermediate: '#f57c00', advanced: '#c62828' };
+
+const total = allTerms.length;
 ---
 
 <Layout
-  title="野球指標解説一覧 | Baseballab"
-  description="WAR・OPS・FIP・wOBAなど野球データ分析で使われる指標を分かりやすく解説。打撃・投球・守備・走塁カテゴリ別に20指標を収録。"
+  title={`野球指標解説一覧 ${total}記事 | セイバーメトリクス用語集 | Baseballab`}
+  description={`WAR・OPS・FIP・wOBAなど野球データ分析で使われる${total}指標を分かりやすく解説。打撃・投球・守備・走塁カテゴリ別に収録。セイバーメトリクス入門から上級者向けまで網羅。`}
   ogUrl="https://baseballab.com/glossary/"
 >
-  <div class="glossary-index">
-    <Breadcrumb items={[
-      { label: 'ホーム', href: '/' },
-      { label: '指標解説' },
-    ]} />
+  <style slot="head">
+    .gl-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #1a4a7a 100%);
+      color: var(--white);
+      padding: 3.5rem 1.25rem 2.75rem;
+      text-align: center;
+    }
+    .gl-eyebrow {
+      display: inline-block;
+      background: rgba(192,57,43,.85);
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 9999px; margin-bottom: 1rem;
+    }
+    .gl-hero h1 { font-size: clamp(1.8rem,4vw,2.7rem); font-weight: 900; letter-spacing: -.03em; margin-bottom: .75rem; }
+    .gl-hero h1 em { color: #7ec8e3; font-style: normal; }
+    .gl-sub { color: rgba(255,255,255,.8); max-width: 580px; margin: 0 auto 1.75rem; font-size: clamp(.9rem,1.8vw,1rem); line-height: 1.75; }
+    .gl-stats { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+    .gl-stat-num { font-size: 2rem; font-weight: 900; color: #7ec8e3; display: block; line-height: 1; }
+    .gl-stat-label { font-size: .78rem; color: rgba(255,255,255,.6); margin-top: .2rem; }
 
-    <h1>野球指標解説一覧</h1>
-    <p class="lead">WAR・OPS・FIPなど、現代野球分析で使われる20の指標を解説します。カテゴリ別に探せます。</p>
+    .breadcrumb { padding: .75rem 0; font-size: .8rem; color: var(--gray-500); }
+    .breadcrumb a { color: var(--gray-500); }
+    .breadcrumb span { margin: 0 .4rem; }
 
-    {Object.entries(categories).filter(([, v]) => v.terms.length > 0).map(([, { label, terms }]) => (
-      <section class="category-section">
-        <h2>{label}</h2>
-        <ul class="term-list">
-          {terms.map(entry => (
-            <li class="term-card">
-              <a href={`/glossary/${entry.slug}/`}>
-                <div class="term-header">
-                  {entry.data.abbr && <span class="abbr">{entry.data.abbr}</span>}
-                  <span class="difficulty-badge">{difficultyLabel[entry.data.difficulty]}</span>
-                </div>
-                <p class="term-title">{entry.data.title}</p>
-                <p class="term-desc">{entry.data.description.slice(0, 80)}…</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))}
+    /* クイックナビ */
+    .quick-nav { background: var(--white); border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 10; }
+    .quick-nav-inner { display: flex; gap: .5rem; padding: .6rem 1rem; max-width: 1100px; margin: 0 auto; overflow-x: auto; }
+    .quick-nav-inner::-webkit-scrollbar { height: 0; }
+    .qn-btn {
+      display: inline-flex; align-items: center; gap: .3rem;
+      background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 20px;
+      padding: .3rem .85rem; font-size: .8rem; font-weight: 600; color: var(--navy);
+      white-space: nowrap; text-decoration: none; transition: background .15s, border-color .15s;
+      flex-shrink: 0;
+    }
+    .qn-btn:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+    /* カテゴリセクション */
+    .section { padding: 2.5rem 0; }
+    .section-alt { background: var(--gray-100); }
+    .cat-header { margin-bottom: 1.5rem; }
+    .cat-icon { font-size: 1.6rem; margin-bottom: .3rem; display: block; }
+    .cat-title { font-size: 1.35rem; font-weight: 800; color: var(--navy); margin: 0 0 .3rem; }
+    .cat-desc { font-size: .88rem; color: var(--gray-600); margin: 0; }
+
+    /* カードグリッド */
+    .term-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .term-card a {
+      display: flex; flex-direction: column; gap: .4rem;
+      padding: 1.1rem 1.2rem;
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: 10px; text-decoration: none; color: inherit;
+      transition: border-color .15s, box-shadow .15s, transform .15s;
+      height: 100%;
+    }
+    .term-card a:hover {
+      border-color: var(--navy); box-shadow: 0 4px 16px rgba(26,58,92,.1); transform: translateY(-2px);
+    }
+    .term-head { display: flex; align-items: center; gap: .5rem; }
+    .term-abbr { font-weight: 800; font-size: 1rem; color: var(--navy); }
+    .term-diff {
+      font-size: .68rem; font-weight: 700; padding: .12rem .45rem;
+      border-radius: 3px; color: var(--white);
+    }
+    .term-title { font-size: .88rem; font-weight: 600; color: var(--navy-dark); line-height: 1.4; margin: 0; }
+    .term-desc { font-size: .77rem; color: var(--gray-600); margin: 0; line-height: 1.55; flex: 1; }
+    .term-arrow { font-size: .8rem; color: var(--red); font-weight: 700; margin-top: auto; }
+
+    @media (max-width: 600px) {
+      .term-grid { grid-template-columns: 1fr; }
+      .gl-stats { gap: 1.5rem; }
+    }
+  </style>
+
+  <!-- HERO -->
+  <section class="gl-hero">
+    <div class="container">
+      <p class="gl-eyebrow">📖 Baseball Glossary</p>
+      <h1>野球指標<em>解説</em>一覧</h1>
+      <p class="gl-sub">WAR・OPS・FIP・wOBAなど、現代野球分析で使われる指標を分かりやすく解説。基礎から上級まで網羅。</p>
+      <div class="gl-stats">
+        <div><span class="gl-stat-num">{total}</span><div class="gl-stat-label">記事数</div></div>
+        <div><span class="gl-stat-num">5</span><div class="gl-stat-label">カテゴリ</div></div>
+        <div><span class="gl-stat-num">3</span><div class="gl-stat-label">難易度レベル</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- クイックナビ -->
+  <nav class="quick-nav" aria-label="カテゴリジャンプ">
+    <div class="quick-nav-inner">
+      {Object.entries(categories).filter(([, v]) => v.terms.length > 0).map(([key, { label, icon }]) => (
+        <a href={`#cat-${key}`} class="qn-btn">{icon} {label}（{categories[key].terms.length}）</a>
+      ))}
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav class="breadcrumb"><a href="/">トップ</a><span>›</span><span>指標解説</span></nav>
   </div>
-</Layout>
 
-<style>
-  .glossary-index {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1.5rem 1rem;
-  }
-  h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-  .lead { color: #555; margin-bottom: 2rem; }
-  .category-section { margin-bottom: 2.5rem; }
-  .category-section h2 {
-    font-size: 1.1rem;
-    color: var(--navy, #1a2744);
-    border-left: 4px solid var(--navy, #1a2744);
-    padding-left: 0.75rem;
-    margin-bottom: 1rem;
-  }
-  .term-list {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
-  }
-  .term-card a {
-    display: block;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .term-card a:hover {
-    border-color: var(--navy, #1a2744);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-  .term-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; }
-  .abbr { font-weight: 700; font-size: 0.95rem; color: var(--navy, #1a2744); }
-  .difficulty-badge {
-    font-size: 0.7rem;
-    padding: 0.1rem 0.4rem;
-    background: #e8ecf4;
-    border-radius: 3px;
-    color: #555;
-  }
-  .term-title { font-size: 0.88rem; font-weight: 600; margin: 0 0 0.3rem; }
-  .term-desc { font-size: 0.78rem; color: #666; margin: 0; line-height: 1.5; }
-</style>
+  <!-- カテゴリ別 -->
+  {Object.entries(categories).filter(([, v]) => v.terms.length > 0).map(([key, { label, icon, desc, terms }], i) => (
+    <section id={`cat-${key}`} class={i % 2 === 1 ? 'section section-alt' : 'section'}>
+      <div class="container">
+        <div class="cat-header">
+          <span class="cat-icon">{icon}</span>
+          <h2 class="cat-title">{label}</h2>
+          <p class="cat-desc">{desc}</p>
+        </div>
+        <div class="term-grid">
+          {terms.map(entry => (
+            <div class="term-card">
+              <a href={`/glossary/${entry.slug}/`}>
+                <div class="term-head">
+                  {entry.data.abbr && <span class="term-abbr">{entry.data.abbr}</span>}
+                  <span class="term-diff" style={`background:${difficultyColor[entry.data.difficulty]}`}>
+                    {difficultyLabel[entry.data.difficulty]}
+                  </span>
+                </div>
+                <p class="term-title">{entry.data.title.split('とは')[0].split('（')[0].split('？')[0]}</p>
+                <p class="term-desc">{entry.data.atomicAnswer.slice(0, 75)}…</p>
+                <span class="term-arrow">詳しく読む →</span>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+</Layout>

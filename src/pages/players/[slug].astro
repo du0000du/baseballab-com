@@ -198,6 +198,11 @@ const affiliateLinks = [
   .stats-team {
     font-size: 0.85rem;
     color: var(--gray-600, #6b6760);
+    margin: 0 0 0.25rem;
+  }
+  .stats-asof {
+    font-size: 0.75rem;
+    color: var(--gray-500, #8a8680);
     margin: 0 0 1rem;
   }
   .stats-placeholder {
@@ -293,6 +298,7 @@ const affiliateLinks = [
 
       <h2>{SEASON_YEAR}年成績</h2>
       {teamName && <p class="stats-team">{teamName}</p>}
+      <p class="stats-asof">MLB Stats API データ（{SEASON_YEAR}シーズン）</p>
 
       {isBatter && splitStat ? (
         <div class="stats-grid">
