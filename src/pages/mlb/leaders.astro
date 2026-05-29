@@ -1,13 +1,13 @@
 ---
 // src/pages/mlb/leaders.astro
 // MLB シーズン成績リーダーボード
-// SEASON = 現在の年 - 1（プロジェクトルール: 直前シーズンを表示）
+// SEASON シーズン判定: 3月以降は当年、1〜2月は前年（オフシーズン）。env MLB_SEASON で上書き可
 // データはビルド時にMLB Stats APIから直接取得
 
 import Layout from '../../layouts/Layout.astro';
 
-// プロジェクトルール: 現在年 - 1 = 直前シーズン
-const SEASON = String(new Date().getFullYear() - 1);
+// シーズン判定: 3月以降は当年、1〜2月はオフシーズン扱いで前年。MLB_SEASON envで上書き可
+const SEASON = String(process.env.MLB_SEASON || (new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1));
 const BASE = 'https://statsapi.mlb.com/api/v1';
 
 async function getLeaders(group, sortStat, limit = 10) {
