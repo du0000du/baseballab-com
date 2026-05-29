@@ -2,7 +2,7 @@ name: NPB Daily Data Sync
 
 on:
   schedule:
-    - cron: '15 20 * * *'   # 毎日 20:15 UTC = 05:15 JST（MLB syncの直後）
+    - cron: '40 16 * * *'   # 毎日 16:40 UTC = 01:40 JST
   workflow_dispatch:          # 手動実行可
 
 permissions:

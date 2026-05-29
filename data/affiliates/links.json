@@ -4,21 +4,21 @@
     {
       "id": "rapsodo-mlm2-pro",
       "label": "ラプソード MLM2 PRO",
-      "asin": "B09N4THKGL",
+      "url": "https://www.amazon.co.jp/s?k=%E3%83%A9%E3%83%97%E3%82%BD%E3%83%BC%E3%83%89+MLM2+PRO&tag=baseballab22-22",
       "pr": true,
       "description": "投球・打撃データを計測できるポータブルデバイス"
     },
     {
       "id": "sabr-book",
       "label": "データで勝つ野球 セイバーメトリクス入門",
-      "asin": "4862556639",
+      "url": "https://www.amazon.co.jp/s?k=%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9+%E5%85%A5%E9%96%80+%E9%87%8E%E7%90%83&tag=baseballab22-22",
       "pr": true,
       "description": "セイバーメトリクスの基礎から実践まで"
     },
     {
       "id": "baseball-score-book",
       "label": "野球スコアブック 公式記録員監修版",
-      "asin": "4780422787",
+      "url": "https://www.amazon.co.jp/s?k=%E9%87%8E%E7%90%83+%E3%82%B9%E3%82%B3%E3%82%A2%E3%83%96%E3%83%83%E3%82%AF+%E5%85%AC%E5%BC%8F&tag=baseballab22-22",
       "pr": true,
       "description": "試合記録をつけながら野球をより深く楽しむ"
     }

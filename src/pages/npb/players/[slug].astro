@@ -2,7 +2,6 @@
 import Layout from '../../../layouts/Layout.astro';
 import AtomicAnswer from '../../../components/AtomicAnswer.astro';
 import AffiliateBlock from '../../../components/AffiliateBlock.astro';
-import { buildAmazonUrl } from '../../../lib/affiliate';
 import { loadPlayers, NPB_SEASON } from '../../../lib/npb';
 
 export async function getStaticPaths() {
@@ -45,8 +44,8 @@ const atomic = `${p.name}（${p.nameRomaji}）は${p.teamName}に所属するNPB
 
 const AMAZON_TAG = 'baseballab22-22';
 const links = [
-  { label: 'プロ野球データ分析の教科書', url: buildAmazonUrl('4583116683', AMAZON_TAG), pr: true, description: '指標で読み解くNPB観戦の入門書' },
-  { label: '野球スコアブック 公式記録員監修版', url: buildAmazonUrl('4780422787', AMAZON_TAG), pr: true, description: '試合記録をつけて選手成績をより深く理解' },
+  { label: 'プロ野球データ分析の教科書', url: `https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83+%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90+%E6%95%99%E7%A7%91%E6%9B%B8&tag=${AMAZON_TAG}`, pr: true, description: '指標で読み解くNPB観戦の入門書' },
+  { label: '野球スコアブック 公式記録員監修版', url: `https://www.amazon.co.jp/s?k=%E9%87%8E%E7%90%83+%E3%82%B9%E3%82%B3%E3%82%A2%E3%83%96%E3%83%83%E3%82%AF+%E5%85%AC%E5%BC%8F&tag=${AMAZON_TAG}`, pr: true, description: '試合記録をつけて選手成績をより深く理解' },
   { label: 'プロ野球 観戦ガイド 2026', url: `https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83+%E8%A6%B3%E6%88%A6%E3%82%AC%E3%82%A4%E3%83%89+2026&tag=${AMAZON_TAG}`, pr: true, description: '12球団の戦力・注目選手を網羅' },
 ];
 const title = `${p.name}（${p.nameRomaji}）${NPB_SEASON}成績・プロフィール | ${p.teamName} | Baseballab`;

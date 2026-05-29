@@ -2,8 +2,8 @@ name: Fetch MLB Data
 
 on:
   schedule:
-    # Daily at JST 06:00 = UTC 21:00
-    - cron: '0 21 * * *'
+    - cron: '20 16 * * *'  # 毎日 16:20 UTC = 01:20 JST（data-sync の直後）
+    - cron: '20 4 * * *'   # 毎日 04:20 UTC = 13:20 JST
   workflow_dispatch:
     # Manual trigger from GitHub Actions tab
 
@@ -33,7 +33,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes. Skipping commit."
           else
-            git commit -m "data: auto-update MLB 2025 leaders [$(date -u '+%Y-%m-%d')]"
+            git commit -m "data: auto-update MLB 2026 leaders [$(date -u '+%Y-%m-%d')]"
             git push
             echo "Committed and pushed -> Cloudflare Pages redeploy triggered"
           fi
