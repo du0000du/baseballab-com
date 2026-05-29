@@ -10,7 +10,7 @@
     "id": 135,
     "name": "San Diego Padres",
     "link": "/api/v1/teams/135",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 2680,
       "name": "Petco Park",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

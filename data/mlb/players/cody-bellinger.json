@@ -60,47 +60,47 @@
       "exemptions": [],
       "splits": [
         {
-          "season": "2024",
+          "season": "2026",
           "stat": {
-            "age": 28,
-            "gamesPlayed": 130,
-            "groundOuts": 102,
-            "airOuts": 193,
-            "runs": 72,
-            "doubles": 23,
+            "age": 30,
+            "gamesPlayed": 55,
+            "groundOuts": 43,
+            "airOuts": 74,
+            "runs": 34,
+            "doubles": 13,
             "triples": 3,
-            "homeRuns": 18,
-            "strikeOuts": 89,
-            "baseOnBalls": 45,
-            "intentionalWalks": 7,
-            "hits": 137,
-            "hitByPitch": 3,
-            "avg": ".266",
-            "atBats": 516,
-            "obp": ".325",
-            "slg": ".426",
-            "ops": ".751",
-            "caughtStealing": 2,
-            "stolenBases": 9,
-            "stolenBasePercentage": ".818",
-            "caughtStealingPercentage": ".182",
-            "groundIntoDoublePlay": 10,
-            "numberOfPitches": 2083,
-            "plateAppearances": 569,
-            "totalBases": 220,
-            "rbi": 78,
-            "leftOnBase": 232,
+            "homeRuns": 8,
+            "strikeOuts": 31,
+            "baseOnBalls": 34,
+            "intentionalWalks": 0,
+            "hits": 54,
+            "hitByPitch": 0,
+            "avg": ".271",
+            "atBats": 199,
+            "obp": ".373",
+            "slg": ".487",
+            "ops": ".860",
+            "caughtStealing": 3,
+            "stolenBases": 5,
+            "stolenBasePercentage": ".625",
+            "caughtStealingPercentage": ".375",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 889,
+            "plateAppearances": 236,
+            "totalBases": 97,
+            "rbi": 36,
+            "leftOnBase": 77,
             "sacBunts": 0,
-            "sacFlies": 5,
-            "babip": ".287",
-            "groundOutsToAirouts": "0.53",
+            "sacFlies": 3,
+            "babip": ".282",
+            "groundOutsToAirouts": "0.58",
             "catchersInterference": 0,
-            "atBatsPerHomeRun": "28.67"
+            "atBatsPerHomeRun": "24.88"
           },
           "team": {
-            "id": 112,
-            "name": "Chicago Cubs",
-            "link": "/api/v1/teams/112"
+            "id": 147,
+            "name": "New York Yankees",
+            "link": "/api/v1/teams/147"
           },
           "player": {
             "id": 641355,
@@ -108,9 +108,9 @@
             "link": "/api/v1/people/641355"
           },
           "league": {
-            "id": 104,
-            "name": "National League",
-            "link": "/api/v1/league/104"
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
           },
           "sport": {
             "id": 1,
@@ -122,5 +122,5 @@
       ]
     }
   ],
-  "season": 2024
+  "season": 2026
 }

@@ -10,10 +10,10 @@
     "id": 145,
     "name": "Chicago White Sox",
     "link": "/api/v1/teams/145",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 4,
-      "name": "Guaranteed Rate Field",
+      "name": "Rate Field",
       "link": "/api/v1/venues/4"
     },
     "springVenue": {
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

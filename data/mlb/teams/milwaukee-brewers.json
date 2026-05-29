@@ -10,7 +10,7 @@
     "id": 158,
     "name": "Milwaukee Brewers",
     "link": "/api/v1/teams/158",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 32,
       "name": "American Family Field",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

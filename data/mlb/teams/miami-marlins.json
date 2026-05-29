@@ -10,7 +10,7 @@
     "id": 146,
     "name": "Miami Marlins",
     "link": "/api/v1/teams/146",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 4169,
       "name": "loanDepot park",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

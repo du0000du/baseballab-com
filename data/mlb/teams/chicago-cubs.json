@@ -10,7 +10,7 @@
     "id": 112,
     "name": "Chicago Cubs",
     "link": "/api/v1/teams/112",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 17,
       "name": "Wrigley Field",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

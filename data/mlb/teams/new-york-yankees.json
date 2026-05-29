@@ -10,7 +10,7 @@
     "id": 147,
     "name": "New York Yankees",
     "link": "/api/v1/teams/147",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 3313,
       "name": "Yankee Stadium",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

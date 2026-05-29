@@ -10,7 +10,7 @@
     "id": 111,
     "name": "Boston Red Sox",
     "link": "/api/v1/teams/111",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 3,
       "name": "Fenway Park",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

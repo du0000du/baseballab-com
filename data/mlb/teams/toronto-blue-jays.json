@@ -10,7 +10,7 @@
     "id": 141,
     "name": "Toronto Blue Jays",
     "link": "/api/v1/teams/141",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 14,
       "name": "Rogers Centre",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

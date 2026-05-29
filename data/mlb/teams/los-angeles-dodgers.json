@@ -10,10 +10,10 @@
     "id": 119,
     "name": "Los Angeles Dodgers",
     "link": "/api/v1/teams/119",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 22,
-      "name": "Dodger Stadium",
+      "name": "UNIQLO Field at Dodger Stadium",
       "link": "/api/v1/venues/22"
     },
     "springVenue": {
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

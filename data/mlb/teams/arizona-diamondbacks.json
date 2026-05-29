@@ -10,7 +10,7 @@
     "id": 109,
     "name": "Arizona Diamondbacks",
     "link": "/api/v1/teams/109",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 15,
       "name": "Chase Field",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

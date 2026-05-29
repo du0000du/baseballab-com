@@ -10,7 +10,7 @@
     "id": 120,
     "name": "Washington Nationals",
     "link": "/api/v1/teams/120",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 3309,
       "name": "Nationals Park",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

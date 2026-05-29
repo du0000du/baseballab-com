@@ -10,7 +10,7 @@
     "id": 144,
     "name": "Atlanta Braves",
     "link": "/api/v1/teams/144",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 4705,
       "name": "Truist Park",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

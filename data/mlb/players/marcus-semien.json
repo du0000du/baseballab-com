@@ -47,8 +47,8 @@
     "initLastName": "M Semien",
     "fullFMLName": "Marcus Andrew Semien",
     "fullLFMName": "Semien, Marcus Andrew",
-    "strikeZoneTop": 3.212,
-    "strikeZoneBottom": 1.621
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
   },
   "stats": [
     {
@@ -61,47 +61,47 @@
       "exemptions": [],
       "splits": [
         {
-          "season": "2024",
+          "season": "2026",
           "stat": {
-            "age": 33,
-            "gamesPlayed": 159,
-            "groundOuts": 161,
-            "airOuts": 231,
-            "runs": 101,
-            "doubles": 27,
-            "triples": 2,
-            "homeRuns": 23,
-            "strikeOuts": 105,
-            "baseOnBalls": 64,
-            "intentionalWalks": 2,
-            "hits": 154,
-            "hitByPitch": 3,
-            "avg": ".237",
-            "atBats": 650,
-            "obp": ".308",
-            "slg": ".391",
-            "ops": ".699",
-            "caughtStealing": 3,
-            "stolenBases": 8,
-            "stolenBasePercentage": ".727",
-            "caughtStealingPercentage": ".273",
-            "groundIntoDoublePlay": 9,
-            "numberOfPitches": 2626,
-            "plateAppearances": 718,
-            "totalBases": 254,
-            "rbi": 74,
-            "leftOnBase": 208,
-            "sacBunts": 0,
-            "sacFlies": 1,
-            "babip": ".250",
-            "groundOutsToAirouts": "0.70",
+            "age": 35,
+            "gamesPlayed": 56,
+            "groundOuts": 44,
+            "airOuts": 75,
+            "runs": 19,
+            "doubles": 7,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 44,
+            "baseOnBalls": 14,
+            "intentionalWalks": 0,
+            "hits": 43,
+            "hitByPitch": 1,
+            "avg": ".213",
+            "atBats": 202,
+            "obp": ".264",
+            "slg": ".307",
+            "ops": ".571",
+            "caughtStealing": 1,
+            "stolenBases": 5,
+            "stolenBasePercentage": ".833",
+            "caughtStealingPercentage": ".167",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 790,
+            "plateAppearances": 221,
+            "totalBases": 62,
+            "rbi": 19,
+            "leftOnBase": 84,
+            "sacBunts": 1,
+            "sacFlies": 3,
+            "babip": ".248",
+            "groundOutsToAirouts": "0.59",
             "catchersInterference": 0,
-            "atBatsPerHomeRun": "28.26"
+            "atBatsPerHomeRun": "50.50"
           },
           "team": {
-            "id": 140,
-            "name": "Texas Rangers",
-            "link": "/api/v1/teams/140"
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121"
           },
           "player": {
             "id": 543760,
@@ -109,9 +109,9 @@
             "link": "/api/v1/people/543760"
           },
           "league": {
-            "id": 103,
-            "name": "American League",
-            "link": "/api/v1/league/103"
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
           },
           "sport": {
             "id": 1,
@@ -123,5 +123,5 @@
       ]
     }
   ],
-  "season": 2024
+  "season": 2026
 }

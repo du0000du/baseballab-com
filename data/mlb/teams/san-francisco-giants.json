@@ -10,7 +10,7 @@
     "id": 137,
     "name": "San Francisco Giants",
     "link": "/api/v1/teams/137",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 2395,
       "name": "Oracle Park",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

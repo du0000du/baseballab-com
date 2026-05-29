@@ -10,7 +10,7 @@
     "id": 110,
     "name": "Baltimore Orioles",
     "link": "/api/v1/teams/110",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 2,
       "name": "Oriole Park at Camden Yards",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

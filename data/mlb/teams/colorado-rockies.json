@@ -10,7 +10,7 @@
     "id": 115,
     "name": "Colorado Rockies",
     "link": "/api/v1/teams/115",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 19,
       "name": "Coors Field",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

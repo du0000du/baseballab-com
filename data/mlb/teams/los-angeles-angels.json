@@ -10,7 +10,7 @@
     "id": 108,
     "name": "Los Angeles Angels",
     "link": "/api/v1/teams/108",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 1,
       "name": "Angel Stadium",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

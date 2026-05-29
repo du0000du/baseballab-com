@@ -10,7 +10,7 @@
     "id": 143,
     "name": "Philadelphia Phillies",
     "link": "/api/v1/teams/143",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 2681,
       "name": "Citizens Bank Park",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

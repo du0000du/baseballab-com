@@ -10,7 +10,7 @@
     "id": 142,
     "name": "Minnesota Twins",
     "link": "/api/v1/teams/142",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 3312,
       "name": "Target Field",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

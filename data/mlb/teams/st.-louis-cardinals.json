@@ -10,7 +10,7 @@
     "id": 138,
     "name": "St. Louis Cardinals",
     "link": "/api/v1/teams/138",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 2889,
       "name": "Busch Stadium",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }

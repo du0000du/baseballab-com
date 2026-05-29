@@ -10,7 +10,7 @@
     "id": 114,
     "name": "Cleveland Guardians",
     "link": "/api/v1/teams/114",
-    "season": 2024,
+    "season": 2026,
     "venue": {
       "id": 5,
       "name": "Progressive Field",
@@ -47,5 +47,5 @@
     "active": true
   },
   "stats": [],
-  "season": 2024
+  "season": 2026
 }
