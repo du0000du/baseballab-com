@@ -1,0 +1,129 @@
+---
+// /npb/leaders/ — NPB セ・パ 成績リーダーボード
+import Layout from '../../layouts/Layout.astro';
+import { loadLeaders, loadMeta, NPB_SEASON } from '../../lib/npb';
+
+const leaders = loadLeaders(NPB_SEASON);
+const meta = loadMeta();
+const asOf = meta.asOf || '';
+
+const BAT_CATS = [
+  ['avg', '打率（AVG）'], ['hr', '本塁打（HR）'], ['rbi', '打点（RBI）'],
+  ['ops', 'OPS'], ['hits', '安打（H）'], ['sb', '盗塁（SB）'],
+];
+const PIT_CATS = [
+  ['era', '防御率（ERA）'], ['wins', '勝利（W）'], ['so', '奪三振（SO）'],
+  ['saves', 'セーブ（SV）'], ['holds', 'ホールド（H）'], ['whip', 'WHIP'],
+];
+const MEDALS = ['🥇', '🥈', '🥉'];
+const LEAGUES = [['central', 'セントラル・リーグ', 'cl'], ['pacific', 'パシフィック・リーグ', 'pl']];
+
+function rows(lg: string, group: string, key: string) {
+  return leaders?.[lg]?.[group]?.[key] ?? [];
+}
+const hasData = !!leaders;
+---
+<Layout
+  title={`NPB ${NPB_SEASON} 成績ランキング | セ・パ両リーグ リーダーボード | Baseballab`}
+  description={`NPB ${NPB_SEASON}シーズン最新成績ランキング。セ・パ両リーグの打率・本塁打・打点・防御率・奪三振・セーブなど全部門のリーダーボード。毎日更新。`}
+  ogUrl="https://baseballab.com/npb/leaders/"
+>
+  <style slot="head">
+    .lh-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .lh-hero h1 { font-size:clamp(1.5rem,4vw,2.2rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .lg-section { padding:2.75rem 0; }
+    .lg-section.alt { background:var(--gray-100); }
+    .lg-title { font-size:1.25rem; font-weight:800; color:var(--navy); margin-bottom:.3rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .6rem; border-radius:9999px; }
+    .lg-badge.cl { background:#9b2335; } .lg-badge.pl { background:#1a5276; }
+    .sub-title { font-size:1rem; font-weight:700; color:var(--gray-600); margin:1.75rem 0 1rem; border-bottom:2px solid var(--navy); padding-bottom:.35rem; }
+    .leaders-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
+    .lcard { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .card-title { background:var(--navy); color:#fff; font-size:.85rem; font-weight:600; padding:.55rem 1rem; }
+    table.lt { width:100%; border-collapse:collapse; font-size:.85rem; }
+    table.lt th { font-size:.66rem; color:var(--gray-500); text-transform:uppercase; padding:.35rem .6rem; text-align:left; }
+    table.lt th:last-child { text-align:right; }
+    table.lt td { padding:.42rem .6rem; border-top:1px solid var(--gray-100); }
+    table.lt tr:hover { background:rgba(22,45,71,.03); }
+    td.rk { width:2.2rem; text-align:center; } td.rk.n { font-size:.75rem; color:var(--gray-400); font-weight:600; }
+    td.pl-name { font-weight:600; color:var(--text); } td.pl-name a { color:inherit; } td.pl-name a:hover { color:var(--red); }
+    td.tm { font-size:.72rem; color:var(--gray-500); }
+    td.val { font-weight:700; color:var(--navy); text-align:right; font-variant-numeric:tabular-nums; }
+    .data-note { padding:1.75rem 0; background:var(--gray-100); border-top:1px solid var(--gray-200); }
+    .data-note p { font-size:.78rem; color:var(--gray-600); text-align:center; line-height:1.8; }
+    @media(max-width:900px){ .leaders-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:560px){ .leaders-grid{grid-template-columns:1fr;} }
+  </style>
+
+  <section class="lh-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="/">Home</a> › <a href="/npb/">NPB</a> › <span>成績ランキング</span></nav>
+      <h1>📊 NPB {NPB_SEASON} 成績ランキング</h1>
+      <p class="hero-sub">セントラル・パシフィック両リーグ 各部門リーダーボード</p>
+      {asOf && <span class="updated-badge">🔄 {asOf} 時点</span>}
+    </div>
+  </section>
+
+  {!hasData && (
+    <section class="lg-section"><div class="container"><p style="color:var(--gray-600);padding:2rem 0;">データを準備中です。しばらくお待ちください。</p></div></section>
+  )}
+
+  {hasData && LEAGUES.map(([lg, label, cls], idx) => (
+    <section class={`lg-section ${idx % 2 ? 'alt' : ''}`}>
+      <div class="container">
+        <h2 class="lg-title"><span class={`lg-badge ${cls}`}>{cls.toUpperCase()}</span>{label}</h2>
+        <h3 class="sub-title">🏏 打撃部門</h3>
+        <div class="leaders-grid">
+          {BAT_CATS.map(([key, clabel]) => (
+            <div class="lcard">
+              <div class="card-title">{clabel}</div>
+              <table class="lt">
+                <thead><tr><th></th><th>選手</th><th>球団</th><th>記録</th></tr></thead>
+                <tbody>
+                  {rows(lg, 'batting', key).slice(0, 5).map((r:any) => (
+                    <tr>
+                      <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
+                      <td class="pl-name"><a href={`/npb/players/${r.slug}/`}>{r.player}</a></td>
+                      <td class="tm">{r.team}</td>
+                      <td class="val">{r.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
+        <h3 class="sub-title">⚾ 投球部門</h3>
+        <div class="leaders-grid">
+          {PIT_CATS.map(([key, clabel]) => (
+            <div class="lcard">
+              <div class="card-title">{clabel}</div>
+              <table class="lt">
+                <thead><tr><th></th><th>選手</th><th>球団</th><th>記録</th></tr></thead>
+                <tbody>
+                  {rows(lg, 'pitching', key).slice(0, 5).map((r:any) => (
+                    <tr>
+                      <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
+                      <td class="pl-name"><a href={`/npb/players/${r.slug}/`}>{r.player}</a></td>
+                      <td class="tm">{r.team}</td>
+                      <td class="val">{r.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <div class="data-note">
+    <div class="container">
+      <p>データ出典: <a href="https://npb.jp/" rel="nofollow noopener" target="_blank" style="color:var(--navy)">NPB.jp 日本野球機構</a>（公式成績数値）&nbsp;／&nbsp;打率・防御率は規定到達者対象&nbsp;／&nbsp;毎日 JST 朝に自動更新</p>
+    </div>
+  </div>
+</Layout>

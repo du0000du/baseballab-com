@@ -1,0 +1,114 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import AtomicAnswer from '../../../components/AtomicAnswer.astro';
+import AffiliateBlock from '../../../components/AffiliateBlock.astro';
+import { buildAmazonUrl } from '../../../lib/affiliate';
+import { loadPlayers, NPB_SEASON } from '../../../lib/npb';
+
+export async function getStaticPaths() {
+  return loadPlayers().map(p => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+const s = p.stats || {};
+const isBat = p.group === 'batting';
+const leagueJa = p.league === 'central' ? 'セントラル・リーグ' : 'パシフィック・リーグ';
+
+const batCards = [
+  ['打率', s.avg, 'AVG', true], ['本塁打', s.hr, 'HR', false], ['打点', s.rbi, 'RBI', false],
+  ['OPS', s.ops, '出塁+長打', false], ['安打', s.hits, 'H', false], ['得点', s.runs, 'R', false],
+  ['盗塁', s.sb, 'SB', false], ['出塁率', s.obp, 'OBP', false], ['長打率', s.slg, 'SLG', false], ['試合', s.games, 'G', false],
+];
+const pitCards = [
+  ['防御率', s.era, 'ERA', true], ['勝-敗', (s.wins != null ? `${s.wins}-${s.losses ?? 0}` : null), 'W-L', false],
+  ['奪三振', s.so, 'SO', false], ['セーブ', s.saves, 'SV', false], ['ホールド', s.holds, 'H', false],
+  ['WHIP', s.whip, 'WHIP', false], ['投球回', s.ip, 'IP', false], ['登板', s.games, 'G', false], ['勝率', s.winpct, 'PCT', false],
+];
+const cards = (isBat ? batCards : pitCards).filter(c => c[1] != null && c[1] !== '');
+
+let snip = '';
+if (isBat) {
+  const parts = [];
+  if (s.avg != null) parts.push(`打率${s.avg}`);
+  if (s.hr != null) parts.push(`${s.hr}本塁打`);
+  if (s.rbi != null) parts.push(`${s.rbi}打点`);
+  if (s.ops != null) parts.push(`OPS ${s.ops}`);
+  snip = parts.length ? `${NPB_SEASON}年は${parts.join('・')}を記録。` : '';
+} else {
+  const parts = [];
+  if (s.wins != null) parts.push(`${s.wins}勝${s.losses ?? 0}敗`);
+  if (s.era != null) parts.push(`防御率${s.era}`);
+  if (s.so != null) parts.push(`${s.so}奪三振`);
+  if (s.saves) parts.push(`${s.saves}セーブ`);
+  snip = parts.length ? `${NPB_SEASON}年は${parts.join('・')}を記録。` : '';
+}
+const atomic = `${p.name}（${p.nameRomaji}）は${p.teamName}に所属するNPB${leagueJa}の選手。${snip}最新の成績データはBaseballabで確認できます。`;
+
+const AMAZON_TAG = 'baseballab22-22';
+const links = [
+  { label: 'プロ野球データ分析の教科書', url: buildAmazonUrl('4583116683', AMAZON_TAG), pr: true, description: '指標で読み解くNPB観戦の入門書' },
+  { label: '野球スコアブック 公式記録員監修版', url: buildAmazonUrl('4780422787', AMAZON_TAG), pr: true, description: '試合記録をつけて選手成績をより深く理解' },
+  { label: 'プロ野球 観戦ガイド 2026', url: buildAmazonUrl('B0CXXXXX01', AMAZON_TAG), pr: true, description: '12球団の戦力・注目選手を網羅' },
+];
+const title = `${p.name}（${p.nameRomaji}）${NPB_SEASON}成績・プロフィール | ${p.teamName} | Baseballab`;
+const desc = `${p.name}（${p.teamName}・NPB${leagueJa}）の${NPB_SEASON}シーズン成績・プロフィール。${snip}Baseballabで詳細データを確認。`;
+---
+<Layout title={title} description={desc} ogUrl={`https://baseballab.com/npb/players/${p.slug}/`}>
+  <style slot="head">
+    .ph { background:var(--navy-dark); color:#fff; padding:2.75rem 0 2rem; }
+    .ph .container { display:flex; flex-direction:column; gap:.5rem; }
+    .breadcrumb { font-size:.82rem; color:rgba(255,255,255,.7); } .breadcrumb a { color:rgba(255,255,255,.7); }
+    .ph-team { font-size:.9rem; opacity:.8; font-weight:600; }
+    .ph h1 { font-size:clamp(1.8rem,4vw,2.7rem); font-weight:800; margin:0; }
+    .ph-romaji { font-size:1rem; opacity:.7; font-weight:500; }
+    .ph-badges { display:flex; gap:.5rem; margin-top:.3rem; flex-wrap:wrap; }
+    .ph-badge { background:rgba(255,255,255,.15); padding:.2rem .75rem; border-radius:20px; font-size:.82rem; font-weight:600; }
+    .pbody { padding:2rem 0 3.5rem; }
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:1rem; margin:1rem 0 2rem; }
+    .stat-card { background:#fff; border:1px solid var(--border); border-radius:10px; padding:1.2rem 1rem; text-align:center; box-shadow:var(--shadow-sm); }
+    .stat-label { font-size:.7rem; font-weight:700; color:var(--gray-500); text-transform:uppercase; letter-spacing:.06em; margin-bottom:.4rem; }
+    .stat-value { font-size:1.8rem; font-weight:800; color:var(--navy); line-height:1; font-variant-numeric:tabular-nums; }
+    .stat-value.hl { color:var(--accent); }
+    .stat-sub { font-size:.72rem; color:var(--gray-400); margin-top:.3rem; }
+    h2.sec { font-size:1.2rem; color:var(--navy); margin:1.5rem 0 .25rem; }
+    .src-box { margin-top:2rem; padding:1rem 1.25rem; background:var(--gray-100); border-left:4px solid var(--navy); border-radius:0 6px 6px 0; font-size:.8rem; color:var(--gray-600); line-height:1.7; }
+    .src-box a { color:var(--navy); font-weight:600; }
+    @media(max-width:600px){ .stats-grid{grid-template-columns:repeat(2,1fr);} }
+  </style>
+
+  <section class="ph">
+    <div class="container">
+      <nav class="breadcrumb"><a href="/">Baseballab</a> › <a href="/npb/">NPB</a> › <a href={`/npb/teams/${p.teamSlug}/`}>{p.teamName}</a> › {p.name}</nav>
+      <p class="ph-team">{p.teamName}</p>
+      <h1>{p.name}</h1>
+      <p class="ph-romaji">{p.nameRomaji}</p>
+      <div class="ph-badges">
+        <span class="ph-badge">{leagueJa}</span>
+        <span class="ph-badge">{isBat ? '野手' : '投手'}</span>
+        {p.qualified && <span class="ph-badge">{isBat ? '規定打席到達' : '規定投球回到達'}</span>}
+      </div>
+    </div>
+  </section>
+
+  <div class="pbody">
+    <div class="container">
+      <AtomicAnswer text={atomic} />
+      <h2 class="sec">{NPB_SEASON}年 {isBat ? '打撃' : '投球'}成績</h2>
+      <div class="stats-grid">
+        {cards.map(c => (
+          <div class="stat-card">
+            <p class="stat-label">{c[0]}</p>
+            <p class={c[3] ? 'stat-value hl' : 'stat-value'}>{c[1]}</p>
+            <p class="stat-sub">{c[2]}</p>
+          </div>
+        ))}
+      </div>
+
+      <AffiliateBlock links={links} heading="この選手をもっと楽しむためのおすすめ" />
+
+      <div class="src-box">
+        成績データ出典: <a href={p.sourceUrl} rel="nofollow noopener" target="_blank">NPB.jp 日本野球機構</a>（公式記録）{p.asOf && `／${p.asOf} 時点`}。
+        当サイトは公式に公表された成績数値を引用・整理して掲載しています。数値の正確性は公式サイトをご確認ください。
+      </div>
+    </div>
+  </div>
+</Layout>

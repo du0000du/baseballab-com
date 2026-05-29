@@ -1,0 +1,202 @@
+---
+// /npb/ — NPB データ分析ハブ
+import Layout from '../../layouts/Layout.astro';
+import { NPB_TEAMS, loadPlayers, loadStandings, loadMeta, NPB_SEASON } from '../../lib/npb';
+
+const players = loadPlayers();
+const standings = loadStandings();
+const meta = loadMeta();
+
+const batters = players.filter(p => p.group === 'batting');
+const pitchers = players.filter(p => p.group === 'pitching');
+
+// 注目選手: 打率上位（規定）+ HR上位 + ERA上位（規定）
+const featBat = [...batters].filter(p => p.qualified)
+  .sort((a, b) => (Number(b.stats.avg) || 0) - (Number(a.stats.avg) || 0)).slice(0, 4);
+const featHr = [...batters].sort((a, b) => (Number(b.stats.hr) || 0) - (Number(a.stats.hr) || 0)).slice(0, 2);
+const featPit = [...pitchers].filter(p => p.qualified)
+  .sort((a, b) => (Number(a.stats.era) ?? 99) - (Number(b.stats.era) ?? 99)).slice(0, 2);
+const seen = new Set<string>();
+const featured = [...featBat, ...featHr, ...featPit].filter(p => {
+  if (seen.has(p.slug)) return false; seen.add(p.slug); return true;
+}).slice(0, 8);
+
+const centralTeams = NPB_TEAMS.filter(t => t.league === 'central');
+const pacificTeams = NPB_TEAMS.filter(t => t.league === 'pacific');
+const allBySlug = [...players].sort((a, b) => a.teamSlug.localeCompare(b.teamSlug) || a.name.localeCompare(b.name, 'ja'));
+
+const asOf = meta.asOf || '';
+---
+<Layout
+  title={`NPB データ分析 | プロ野球12球団・選手成績 ${NPB_SEASON} | Baseballab`}
+  description={`日本プロ野球（NPB）${NPB_SEASON}シーズンのセ・パ12球団の順位表、選手成績、リーダーボードを掲載。規定到達の打者・投手データを毎日更新。`}
+  ogUrl="https://baseballab.com/npb/"
+>
+  <style slot="head">
+    .npb-hero { background: linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,#7d1c2a 100%); color:#fff; padding:3.5rem 1.25rem 2.75rem; text-align:center; }
+    .npb-eyebrow { display:inline-block; background:rgba(155,35,53,.9); font-size:.75rem; font-weight:700; letter-spacing:.1em; padding:.3rem .9rem; border-radius:9999px; margin-bottom:1rem; }
+    .npb-hero h1 { font-size:clamp(1.8rem,4.5vw,2.9rem); font-weight:900; letter-spacing:-.03em; line-height:1.2; margin-bottom:.85rem; }
+    .npb-hero h1 em { color:#f2b8c0; font-style:normal; }
+    .npb-sub { color:rgba(255,255,255,.8); max-width:600px; margin:0 auto 1.75rem; line-height:1.75; font-size:clamp(.9rem,1.8vw,1.02rem); }
+    .npb-stats { display:flex; justify-content:center; gap:2.5rem; flex-wrap:wrap; }
+    .npb-stat-num { font-size:2rem; font-weight:900; color:#f2b8c0; display:block; line-height:1; }
+    .npb-stat-label { font-size:.78rem; color:rgba(255,255,255,.6); margin-top:.2rem; }
+    .breadcrumb { padding:.75rem 0; font-size:.8rem; color:var(--gray-500); }
+    .breadcrumb a { color:var(--gray-500); }
+    .breadcrumb span { margin:0 .4rem; }
+    .section { padding:3rem 0; }
+    .section-alt { background:var(--gray-100); }
+    .section-label { display:inline-block; color:var(--red); font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.4rem; }
+    .section-title { font-size:clamp(1.3rem,2.8vw,1.7rem); font-weight:800; color:var(--navy); letter-spacing:-.02em; }
+    .section-lead { margin-top:.5rem; color:var(--gray-600); font-size:.9rem; }
+    .section-header { margin-bottom:1.75rem; }
+    /* standings */
+    .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+    .std-card { background:#fff; border:1px solid var(--gray-200); border-radius:12px; overflow:hidden; }
+    .std-head { padding:.6rem 1.1rem; font-weight:700; font-size:.85rem; letter-spacing:.05em; color:#fff; }
+    .std-head.cl { background:#9b2335; } .std-head.pl { background:#1a5276; }
+    table.std { width:100%; border-collapse:collapse; font-size:.86rem; }
+    table.std th { font-size:.68rem; color:var(--gray-500); text-transform:uppercase; padding:.45rem .5rem; text-align:right; }
+    table.std th:nth-child(2) { text-align:left; }
+    table.std td { padding:.5rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; }
+    table.std td.tm { text-align:left; font-weight:600; color:var(--navy-dark); }
+    table.std td.tm a { color:inherit; }
+    table.std td.tm a:hover { color:var(--red); }
+    table.std tr:first-child td { font-weight:700; }
+    .leaders-banner { display:flex; align-items:center; gap:1rem; background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; border-radius:12px; padding:1.25rem 1.5rem; box-shadow:var(--shadow-md); }
+    .leaders-banner:hover { transform:translateY(-2px); }
+    .lb-icon { font-size:2rem; } .lb-body { flex:1; } .lb-title { font-size:1.1rem; font-weight:700; margin-bottom:.25rem; } .lb-sub { font-size:.85rem; opacity:.8; } .lb-arrow { font-size:1.4rem; opacity:.7; }
+    .player-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1.1rem; }
+    .pcard { background:#fff; border:1px solid var(--gray-200); border-radius:12px; padding:1.3rem; display:flex; flex-direction:column; gap:.5rem; color:inherit; transition:box-shadow .2s,transform .2s; }
+    .pcard:hover { box-shadow:var(--shadow-lg); transform:translateY(-3px); }
+    .pcard-top { display:flex; align-items:center; gap:.7rem; }
+    .pavatar { width:42px; height:42px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
+    .pname { font-weight:700; color:var(--navy-dark); line-height:1.3; }
+    .pmeta { font-size:.76rem; color:var(--gray-500); }
+    .pnote { font-size:.8rem; color:var(--gray-600); border-top:1px solid var(--gray-100); padding-top:.4rem; }
+    .plink { font-size:.78rem; color:var(--red); font-weight:600; }
+    .plist { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:.55rem; }
+    .plist-item { display:flex; align-items:center; gap:.55rem; padding:.7rem .9rem; background:#fff; border:1px solid var(--gray-200); border-radius:8px; color:inherit; font-size:.86rem; }
+    .plist-item:hover { background:#fbf3f4; }
+    .pos-badge { font-size:.66rem; font-weight:700; color:#fff; background:var(--navy); padding:.12rem .4rem; border-radius:4px; }
+    .plist-name { flex:1; font-weight:600; color:var(--navy-dark); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .team-tag { font-size:.72rem; color:var(--gray-400); }
+    .division-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; }
+    .division-card { background:#fff; border:1px solid var(--gray-200); border-radius:12px; overflow:hidden; }
+    .division-header { padding:.65rem 1.1rem; font-size:.82rem; font-weight:700; letter-spacing:.05em; color:#fff; }
+    .division-header.cl { background:#9b2335; } .division-header.pl { background:#1a5276; }
+    .team-link { display:flex; align-items:center; gap:.6rem; padding:.65rem 1.1rem; color:inherit; border-bottom:1px solid var(--gray-100); font-size:.88rem; }
+    .team-link:last-child { border-bottom:none; } .team-link:hover { background:#fbf3f4; }
+    .team-dot { width:14px; height:14px; border-radius:50%; flex-shrink:0; border:1px solid rgba(0,0,0,.1); }
+    .team-name-text { flex:1; font-weight:600; color:var(--navy-dark); }
+    .src-note { padding:1.5rem 0 0; font-size:.78rem; color:var(--gray-500); text-align:center; }
+    @media(max-width:768px){ .std-grid{grid-template-columns:1fr;} .player-grid{grid-template-columns:1fr 1fr;} .plist{grid-template-columns:1fr;} }
+    @media(max-width:480px){ .player-grid{grid-template-columns:1fr;} .division-grid{grid-template-columns:1fr;} }
+  </style>
+
+  <section class="npb-hero">
+    <div class="container">
+      <p class="npb-eyebrow">⚾ NPB Data Analysis</p>
+      <h1>NPB データ分析<br><em>セ・パ12球団ハブ</em></h1>
+      <p class="npb-sub">日本プロ野球 {NPB_SEASON} シーズン。12球団の順位表・規定到達選手の成績・各部門リーダーボードを掲載。NPB公式データをもとに毎日更新。</p>
+      <div class="npb-stats">
+        <div><span class="npb-stat-num">12</span><div class="npb-stat-label">球団</div></div>
+        <div><span class="npb-stat-num">{players.length}</span><div class="npb-stat-label">選手データ</div></div>
+        <div><span class="npb-stat-num">2</span><div class="npb-stat-label">リーグ</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb"><a href="/">トップ</a><span>›</span><span>NPB データ分析</span></nav>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><p class="section-label">🏆 順位表</p><h2 class="section-title">{NPB_SEASON} シーズン順位表</h2>{asOf && <p class="section-lead">{asOf} 時点</p>}</div>
+      <div class="std-grid">
+        {[['central','セントラル・リーグ','cl'],['pacific','パシフィック・リーグ','pl']].map(([key,label,cls]) => (
+          <div class="std-card">
+            <div class={`std-head ${cls}`}>{label}</div>
+            <table class="std">
+              <thead><tr><th>順</th><th>球団</th><th>勝</th><th>敗</th><th>分</th><th>勝率</th><th>差</th></tr></thead>
+              <tbody>
+                {(standings[key] || []).map((r:any) => (
+                  <tr>
+                    <td>{r.rank}</td>
+                    <td class="tm"><a href={`/npb/teams/${r.teamSlug}/`}>{r.teamName}</a></td>
+                    <td>{r.wins}</td><td>{r.losses}</td><td>{r.ties}</td><td>{r.pct}</td><td>{r.gb}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding:0 0 1rem;">
+    <div class="container">
+      <a href="/npb/leaders/" class="leaders-banner">
+        <div class="lb-icon">📊</div>
+        <div class="lb-body"><div class="lb-title">NPB {NPB_SEASON} 成績ランキング</div><div class="lb-sub">打率・本塁打・打点・防御率・奪三振・セーブなど セ／パ両リーグの最新リーダーボード</div></div>
+        <div class="lb-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><p class="section-label">⭐ 注目選手</p><h2 class="section-title">フィーチャード・プレイヤー</h2><p class="section-lead">{NPB_SEASON}シーズンの成績上位選手</p></div>
+      <div class="player-grid">
+        {featured.map(p => (
+          <a href={`/npb/players/${p.slug}/`} class="pcard">
+            <div class="pcard-top">
+              <div class="pavatar">⚾</div>
+              <div><div class="pname">{p.name}</div><div class="pmeta">{p.teamName} · {p.group === 'batting' ? '野手' : '投手'}</div></div>
+            </div>
+            <div class="pnote">{p.group === 'batting' ? `打率 ${p.stats.avg ?? '-'} / ${p.stats.hr ?? 0}本 / ${p.stats.rbi ?? 0}打点` : `防御率 ${p.stats.era ?? '-'} / ${p.stats.wins ?? 0}勝 / ${p.stats.so ?? 0}奪三振`}</div>
+            <div class="plink">詳細データを見る →</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header"><p class="section-label">📋 選手一覧</p><h2 class="section-title">掲載選手（{players.length}名）</h2><p class="section-lead">規定到達の打者・投手を中心に掲載</p></div>
+      <div class="plist">
+        {allBySlug.map(p => (
+          <a href={`/npb/players/${p.slug}/`} class="plist-item">
+            <span class="pos-badge">{p.group === 'batting' ? '打' : '投'}</span>
+            <span class="plist-name">{p.name}</span>
+            <span class="team-tag">{p.teamAbbr}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><p class="section-label">🏟️ 球団別データ</p><h2 class="section-title">12球団 — リーグ別</h2><p class="section-lead">各球団の成績・順位・所属選手を確認</p></div>
+      <div class="division-grid">
+        <div class="division-card">
+          <div class="division-header cl">セントラル・リーグ</div>
+          {centralTeams.map(t => (
+            <a href={`/npb/teams/${t.slug}/`} class="team-link"><span class="team-dot" style={`background:${t.color}`}></span><span class="team-name-text">{t.name}</span><span style="color:var(--gray-300)">›</span></a>
+          ))}
+        </div>
+        <div class="division-card">
+          <div class="division-header pl">パシフィック・リーグ</div>
+          {pacificTeams.map(t => (
+            <a href={`/npb/teams/${t.slug}/`} class="team-link"><span class="team-dot" style={`background:${t.color}`}></span><span class="team-name-text">{t.name}</span><span style="color:var(--gray-300)">›</span></a>
+          ))}
+        </div>
+      </div>
+      <p class="src-note">データ出典: <a href="https://npb.jp/" rel="nofollow noopener" target="_blank" style="color:var(--navy)">NPB.jp 日本野球機構</a>（公式成績数値）。当サイトは成績データを引用・整理して掲載しています。</p>
+    </div>
+  </section>
+</Layout>

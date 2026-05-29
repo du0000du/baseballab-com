@@ -1,0 +1,104 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { NPB_TEAMS, teamBySlug, loadPlayers, loadStandings, NPB_SEASON } from '../../../lib/npb';
+
+export async function getStaticPaths() {
+  return NPB_TEAMS.map(t => ({ params: { slug: t.slug }, props: { t } }));
+}
+const { t } = Astro.props;
+const players = loadPlayers().filter(p => p.teamSlug === t.slug);
+const batters = players.filter(p => p.group === 'batting').sort((a, b) => (Number(b.stats.avg) || 0) - (Number(a.stats.avg) || 0));
+const pitchers = players.filter(p => p.group === 'pitching').sort((a, b) => (Number(a.stats.era) ?? 99) - (Number(b.stats.era) ?? 99));
+const standings = loadStandings();
+const rec = (standings[t.league] || []).find((r: any) => r.teamSlug === t.slug);
+const leagueJa = t.league === 'central' ? 'セントラル・リーグ' : 'パシフィック・リーグ';
+
+const title = `${t.name} ${NPB_SEASON}成績・選手一覧 | NPB${leagueJa} | Baseballab`;
+const desc = `${t.name}（NPB${leagueJa}）の${NPB_SEASON}シーズン順位・チーム成績・所属選手の打撃/投球データ一覧。`;
+---
+<Layout title={title} description={desc} ogUrl={`https://baseballab.com/npb/teams/${t.slug}/`}>
+  <style slot="head" set:html={`
+    .th { color:#fff; padding:2.75rem 0 2rem; background:linear-gradient(135deg, ${t.color} 0%, ${t.color}cc 100%); }
+    .th .inner { color:${t.accent}; }
+  `}></style>
+  <style slot="head">
+    .th .container { display:flex; flex-direction:column; gap:.4rem; }
+    .breadcrumb { font-size:.82rem; opacity:.85; } .breadcrumb a { color:inherit; }
+    .th h1 { font-size:clamp(1.7rem,4vw,2.6rem); font-weight:800; margin:0; }
+    .th-badge { display:inline-block; background:rgba(0,0,0,.18); padding:.2rem .8rem; border-radius:20px; font-size:.82rem; font-weight:600; width:fit-content; }
+    .tbody { padding:2rem 0 3.5rem; }
+    .rec-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:1rem; margin:0 0 2.5rem; }
+    .rec-card { background:#fff; border:1px solid var(--border); border-radius:10px; padding:1.1rem; text-align:center; box-shadow:var(--shadow-sm); }
+    .rec-label { font-size:.7rem; font-weight:700; color:var(--gray-500); text-transform:uppercase; margin-bottom:.35rem; }
+    .rec-value { font-size:1.7rem; font-weight:800; color:var(--navy); font-variant-numeric:tabular-nums; }
+    h2.sec { font-size:1.2rem; color:var(--navy); margin:2rem 0 1rem; border-bottom:2px solid var(--navy); padding-bottom:.35rem; }
+    table.roster { width:100%; border-collapse:collapse; font-size:.86rem; background:#fff; border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; }
+    table.roster th { background:rgba(22,45,71,.05); font-size:.68rem; color:var(--gray-600); text-transform:uppercase; padding:.5rem .6rem; text-align:right; }
+    table.roster th:first-child { text-align:left; }
+    table.roster td { padding:.5rem .6rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; }
+    table.roster td.nm { text-align:left; font-weight:600; } table.roster td.nm a { color:var(--navy-dark); } table.roster td.nm a:hover { color:var(--red); }
+    .empty { color:var(--gray-500); padding:1.5rem 0; }
+    .src-box { margin-top:2rem; padding:1rem 1.25rem; background:var(--gray-100); border-left:4px solid var(--navy); border-radius:0 6px 6px 0; font-size:.8rem; color:var(--gray-600); line-height:1.7; }
+    .src-box a { color:var(--navy); font-weight:600; }
+    @media(max-width:600px){ table.roster .hide-sp{display:none;} }
+  </style>
+
+  <section class="th">
+    <div class="container inner">
+      <nav class="breadcrumb"><a href="/">Baseballab</a> › <a href="/npb/">NPB</a> › {t.name}</nav>
+      <h1>{t.name}</h1>
+      <span class="th-badge">{leagueJa}</span>
+    </div>
+  </section>
+
+  <div class="tbody">
+    <div class="container">
+      {rec && (
+        <div class="rec-grid">
+          <div class="rec-card"><p class="rec-label">順位</p><p class="rec-value">{rec.rank}位</p></div>
+          <div class="rec-card"><p class="rec-label">勝</p><p class="rec-value">{rec.wins}</p></div>
+          <div class="rec-card"><p class="rec-label">敗</p><p class="rec-value">{rec.losses}</p></div>
+          <div class="rec-card"><p class="rec-label">分</p><p class="rec-value">{rec.ties}</p></div>
+          <div class="rec-card"><p class="rec-label">勝率</p><p class="rec-value">{rec.pct}</p></div>
+          <div class="rec-card"><p class="rec-label">ゲーム差</p><p class="rec-value">{rec.gb}</p></div>
+        </div>
+      )}
+
+      <h2 class="sec">打撃成績（{batters.length}名）</h2>
+      {batters.length ? (
+        <table class="roster">
+          <thead><tr><th>選手</th><th>打率</th><th>本</th><th>点</th><th class="hide-sp">OPS</th><th class="hide-sp">安</th><th class="hide-sp">盗</th></tr></thead>
+          <tbody>
+            {batters.map(p => (
+              <tr>
+                <td class="nm"><a href={`/npb/players/${p.slug}/`}>{p.name}</a></td>
+                <td>{p.stats.avg ?? '-'}</td><td>{p.stats.hr ?? '-'}</td><td>{p.stats.rbi ?? '-'}</td>
+                <td class="hide-sp">{p.stats.ops ?? '-'}</td><td class="hide-sp">{p.stats.hits ?? '-'}</td><td class="hide-sp">{p.stats.sb ?? '-'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : <p class="empty">掲載中の規定到達打者はいません。</p>}
+
+      <h2 class="sec">投球成績（{pitchers.length}名）</h2>
+      {pitchers.length ? (
+        <table class="roster">
+          <thead><tr><th>選手</th><th>防御率</th><th>勝</th><th>敗</th><th class="hide-sp">S</th><th class="hide-sp">奪三振</th><th class="hide-sp">投球回</th></tr></thead>
+          <tbody>
+            {pitchers.map(p => (
+              <tr>
+                <td class="nm"><a href={`/npb/players/${p.slug}/`}>{p.name}</a></td>
+                <td>{p.stats.era ?? '-'}</td><td>{p.stats.wins ?? '-'}</td><td>{p.stats.losses ?? '-'}</td>
+                <td class="hide-sp">{p.stats.saves ?? '-'}</td><td class="hide-sp">{p.stats.so ?? '-'}</td><td class="hide-sp">{p.stats.ip ?? '-'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : <p class="empty">掲載中の規定到達投手はいません。</p>}
+
+      <div class="src-box">
+        データ出典: <a href="https://npb.jp/" rel="nofollow noopener" target="_blank">NPB.jp 日本野球機構</a>（公式成績数値）。掲載選手は規定到達者および主要救援投手を中心に随時拡張します。
+      </div>
+    </div>
+  </div>
+</Layout>

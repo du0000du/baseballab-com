@@ -1,7 +1,4 @@
-# MLB Stats API fetcher
-# Python標準ライブラリのみ使用（追加パッケージ不要）
-# python >= 3.9
-#
-# 将来的にデータ処理が必要になった場合:
-# pandas==2.2.0
-# requests==2.31.0
+# データ取得スクリプト依存
+# MLB: Python標準ライブラリのみ（追加不要）
+# NPB: pykakasi（選手名ローマ字slug生成）
+pykakasi>=2.3.0
