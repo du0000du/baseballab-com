@@ -91,7 +91,7 @@ def fetch_player_stats(pid: int, position_type: str = "") -> list:
                 pitching = data2.get("stats", [])
                 if pitching and pitching[0].get("splits"):
                     return hitting + pitching
-         return hitting
+                     return hitting
 
     # 投手 or 打撃データなし → 投球成績を試す
     data = fetch(f"/people/{pid}/stats?stats=season&season={SEASON}&group=pitching")
