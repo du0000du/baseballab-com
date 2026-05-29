@@ -2,7 +2,7 @@
 """
 MLB Stats API データ取得スクリプト
 TASK-003: 接続テスト / TASK-004: 選手データ取得 / TASK-005: チームデータ取得
-プロジェクトルール: SEASON = 現在の年 - 1 (直前シーズン)
+シーズン判定: 3月〜12月は当年、1〜2月は前年（オフシーズン）。MLB_SEASON env varで上書き可
 
 使用方法:
   python3 scripts/fetch_mlb.py --mode test        # 接続テスト
@@ -21,9 +21,8 @@ from pathlib import Path
 
 BASE_URL = "https://statsapi.mlb.com/api/v1"
 DATA_DIR = Path(__file__).parent.parent / "data" / "mlb"
-# プロジェクトルール: 現在の年 - 1 = 直前シーズン
-SEASON = datetime.now().year - 1
-
+# シーズン判定: 3月以降は当年、1〜2月はオフシーズン扱いで前年。MLB_SEASON env varで明示上書き可
+SEASON = int(__import__("os").environ.get("MLB_SEASON") or (datetime.now().year if datetime.now().month >= 3 else datetime.now().year - 1))
 # 取得対象選手ID（MLB主要選手）
 PLAYER_IDS = [
     660271,  # 大谷翔平
