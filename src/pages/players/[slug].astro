@@ -239,6 +239,15 @@ const affiliateLinks = [
       <nav class="breadcrumb" aria-label="パンくずリスト">
         <a href="/">Baseballab</a> &rsaquo; <a href="/players/">MLB選手</a> &rsaquo; {name}
       </nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Baseballab", "item": "https://baseballab.com/" },
+          { "@type": "ListItem", "position": 2, "name": "MLB選手", "item": "https://baseballab.com/players/" },
+          { "@type": "ListItem", "position": 3, "name": name }
+        ]
+      })} />
       {number && <p class="player-number">{number}</p>}
       <h1>{name}</h1>
       <span class="player-position-badge">{position}</span>
