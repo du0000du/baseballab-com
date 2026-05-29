@@ -301,6 +301,8 @@ import Layout from '../layouts/Layout.astro';
       gap: 1rem;
       align-items: flex-start;
       transition: background 0.2s;
+      text-decoration: none;
+      color: inherit;
     }
     .affiliate-card:hover {
       background: rgba(255,255,255,0.12);
@@ -432,34 +434,34 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <ul class="article-list">
         <li>
-          <a href="/season/2024/batting-ranking/" class="article-item">
+          <a href="/mlb/leaders/" class="article-item">
             <span class="article-rank gold">1</span>
             <div class="article-body">
-              <p class="article-tag">NPB / 打撃</p>
-              <p class="article-title">2024年セ・リーグ打率ランキングTOP10｜データで振り返る打撃王争い</p>
-              <p class="article-meta">2024年データ ・ 約5分で読めます</p>
+              <p class="article-tag">MLB / 打撃</p>
+              <p class="article-title">MLB 2026 打者成績ランキングTOP10｜打率・本塁打・打点リーダーボード</p>
+              <p class="article-meta">2026年データ ・ 随時更新</p>
             </div>
             <span class="article-arrow">›</span>
           </a>
         </li>
         <li>
-          <a href="/glossary/era-fip/" class="article-item">
+          <a href="/glossary/fip/" class="article-item">
             <span class="article-rank silver">2</span>
             <div class="article-body">
               <p class="article-tag">指標解説 / 投手</p>
-              <p class="article-title">投手防御率データで見るプロ野球分析｜FIPとERAの違いをわかりやすく解説</p>
+              <p class="article-title">FIPとERAの違いをわかりやすく解説｜守備に左右されない投手評価指標</p>
               <p class="article-meta">指標解説 ・ 約8分で読めます</p>
             </div>
             <span class="article-arrow">›</span>
           </a>
         </li>
         <li>
-          <a href="/mlb/player/shohei-ohtani/" class="article-item">
+          <a href="/players/shohei-ohtani/" class="article-item">
             <span class="article-rank bronze">3</span>
             <div class="article-body">
               <p class="article-tag">MLB / 選手分析</p>
-              <p class="article-title">大谷翔平 2024年Statcastデータ完全分析｜OPS・WAR・打球速度を徹底解剖</p>
-              <p class="article-meta">MLB ・ 約10分で読めます</p>
+              <p class="article-title">大谷翔平 2026年成績・プロフィール｜OPS・本塁打・投球データを徹底解剖</p>
+              <p class="article-meta">MLB ・ 随時更新</p>
             </div>
             <span class="article-arrow">›</span>
           </a>
@@ -476,12 +478,12 @@ import Layout from '../layouts/Layout.astro';
           </a>
         </li>
         <li>
-          <a href="/gear/rapsodo/" class="article-item">
+          <a href="/glossary/exit-velocity/" class="article-item">
             <span class="article-rank">5</span>
             <div class="article-body">
-              <p class="article-tag">機材 / 計測機器</p>
-              <p class="article-title">ラプソード（Rapsodo）完全ガイド｜価格・機能・購入前に知っておくべきこと</p>
-              <p class="article-meta">機材比較 ・ 約12分で読めます</p>
+              <p class="article-tag">指標解説 / Statcast</p>
+              <p class="article-title">打球速度（Exit Velocity）完全解説｜長打力を数値で見る最新Statcast指標</p>
+              <p class="article-meta">指標解説 ・ 約6分で読めます</p>
             </div>
             <span class="article-arrow">›</span>
           </a>
@@ -491,15 +493,6 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ===== AFFILIATE BANNER ===== -->
-  <!--
-    ★ アフィリエイト実装メモ ★
-    - 各 .affiliate-card に href属性を追加してリンク先を設定
-    - .affiliate-thumb 内を実際の商品画像タグに差し替える
-    - .affiliate-cta の href にAmazonアソシエイトタグ付きURLを記述
-      例: https://www.amazon.co.jp/dp/XXXXXXXXXX?tag=YOUR_ASSOCIATE_TAG
-    - rel="noopener noreferrer" と target="_blank" を必ず付ける
-    - 景表法対応のため .badge-sponsor "スポンサー" 表示は維持すること
-  -->
   <section class="affiliate-section">
     <div class="container">
       <div style="text-align:center; margin-bottom:0.5rem;">
@@ -509,27 +502,27 @@ import Layout from '../layouts/Layout.astro';
       <p class="section-lead">データ分析・スキルアップに役立つアイテムをご紹介</p>
       <div class="affiliate-grid">
         <!-- アフィリエイト枠1: 書籍 -->
-        <div class="affiliate-card">
+        <a href="https://www.amazon.co.jp/dp/4862556639?tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer">
           <div class="affiliate-thumb">📗</div>
           <div class="affiliate-info">
             <p class="badge-sponsor">スポンサー</p>
-            <h3>セイバーメトリクス入門</h3>
-            <p>野球データ分析の基礎から応用まで。MLB・NPBを数値で読み解くための必読書。</p>
+            <h3>データで勝つ野球 セイバーメトリクス入門</h3>
+            <p>MLB・NPBを数値で読み解く必読書。指標の基礎から実戦活用まで丁寧に解説。</p>
             <span class="affiliate-cta">Amazonで見る →</span>
           </div>
-        </div>
+        </a>
         <!-- アフィリエイト枠2: 計測機器 -->
-        <div class="affiliate-card">
+        <a href="https://www.amazon.co.jp/dp/B09N4THKGL?tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer">
           <div class="affiliate-thumb">⚙️</div>
           <div class="affiliate-info">
             <p class="badge-sponsor">スポンサー</p>
-            <h3>スイング分析デバイス</h3>
-            <p>スマホ連携で打球速度・スイング軌道を即座に計測。アマチュア選手・指導者に人気。</p>
+            <h3>ラプソード MLM2 PRO</h3>
+            <p>投球・打撃データをリアルタイム計測。回転数・打球速度・スイング軌道を可視化。</p>
             <span class="affiliate-cta">Amazonで見る →</span>
           </div>
-        </div>
+        </a>
         <!-- アフィリエイト枠3: 野球グッズ -->
-        <div class="affiliate-card">
+        <a href="https://www.amazon.co.jp/s?k=MLB+大谷翔平+公式グッズ&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer">
           <div class="affiliate-thumb">🧢</div>
           <div class="affiliate-info">
             <p class="badge-sponsor">スポンサー</p>
@@ -537,7 +530,7 @@ import Layout from '../layouts/Layout.astro';
             <p>大谷翔平・山本由伸ほか人気選手のジャージ・キャップをAmazonで購入。</p>
             <span class="affiliate-cta">Amazonで見る →</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
