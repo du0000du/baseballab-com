@@ -109,6 +109,14 @@ const asOf = meta.asOf || '';
 
   <div class="container">
     <nav class="breadcrumb"><a href="/">トップ</a><span>›</span><span>NPB データ分析</span></nav>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Baseballab", "item": "https://baseballab.com/" },
+        { "@type": "ListItem", "position": 2, "name": "NPB データ分析" }
+      ]
+    })} />
   </div>
 
   <section class="section">

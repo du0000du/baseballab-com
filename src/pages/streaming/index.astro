@@ -69,15 +69,17 @@ import Layout from '../../layouts/Layout.astro';
     .service-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
     .service-desc { font-size: .88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
     .service-price { font-size: .85rem; font-weight: 600; color: var(--gray-600); }
-    .coming-badge {
-      font-size: .72rem;
-      font-weight: 700;
-      background: var(--gray-100);
-      color: var(--gray-500);
-      border-radius: 9999px;
-      padding: .15rem .6rem;
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      color: var(--red);
+      font-size: .84rem;
+      font-weight: 600;
+      text-decoration: none;
       width: fit-content;
     }
+    .service-link:hover { gap: .55rem; }
   </style>
 
   <section class="stream-hero">
@@ -92,6 +94,14 @@ import Layout from '../../layouts/Layout.astro';
     <nav class="breadcrumb">
       <a href="/">トップ</a><span>›</span><span>配信</span>
     </nav>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Baseballab", "item": "https://baseballab.com/" },
+        { "@type": "ListItem", "position": 2, "name": "配信・視聴ガイド" }
+      ]
+    })} />
   </div>
 
   <section class="section">
@@ -102,28 +112,28 @@ import Layout from '../../layouts/Layout.astro';
           <div class="service-title">MLB.TV</div>
           <p class="service-desc">MLBの公式配信サービス。全球団の全試合をライブ・アーカイブで視聴可能。Statcastデータと連動したリアルタイム分析機能も充実。</p>
           <p class="service-price">月額約 $24.99（海外向け）</p>
-          <span class="coming-badge">詳細ページ準備中</span>
+          <a href="https://www.mlb.com/live-stream-games/subscribe" class="service-link" target="_blank" rel="noopener noreferrer">公式サイトで見る →</a>
         </div>
         <div class="service-card">
           <span class="service-badge both">MLB・NPB</span>
           <div class="service-title">DAZN（ダゾーン）</div>
           <p class="service-desc">MLB・NPBのライブ中継を配信。スマホ・TV・PCから視聴可能。巨人・阪神など人気球団の主要試合も網羅。</p>
           <p class="service-price">月額 3,700円〜</p>
-          <span class="coming-badge">詳細ページ準備中</span>
+          <a href="https://www.dazn.com/ja-JP/welcome" class="service-link" target="_blank" rel="noopener noreferrer">公式サイトで見る →</a>
         </div>
         <div class="service-card">
           <span class="service-badge npb">NPB</span>
           <div class="service-title">パ・リーグTV</div>
           <p class="service-desc">パ・リーグ6球団の試合をライブ・見逃し配信。試合データ・選手成績と連動した視聴体験が特徴。</p>
           <p class="service-price">月額 550円〜</p>
-          <span class="coming-badge">詳細ページ準備中</span>
+          <a href="https://tv.pacificleague.jp/" class="service-link" target="_blank" rel="noopener noreferrer">公式サイトで見る →</a>
         </div>
         <div class="service-card">
           <span class="service-badge npb">NPB</span>
-          <div class="service-title">Tver / NHK+</div>
+          <div class="service-title">TVer / NHK+</div>
           <p class="service-desc">地上波放送された試合を無料で視聴可能。巨人戦・日本シリーズなど注目試合の見逃し配信が中心。</p>
           <p class="service-price">無料</p>
-          <span class="coming-badge">詳細ページ準備中</span>
+          <a href="https://tver.jp/" class="service-link" target="_blank" rel="noopener noreferrer">TVer で見る →</a>
         </div>
       </div>
     </div>

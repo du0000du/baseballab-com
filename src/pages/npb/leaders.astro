@@ -61,6 +61,15 @@ const hasData = !!leaders;
   <section class="lh-hero">
     <div class="container">
       <nav class="breadcrumb"><a href="/">Home</a> › <a href="/npb/">NPB</a> › <span>成績ランキング</span></nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Baseballab", "item": "https://baseballab.com/" },
+          { "@type": "ListItem", "position": 2, "name": "NPB", "item": "https://baseballab.com/npb/" },
+          { "@type": "ListItem", "position": 3, "name": "成績ランキング" }
+        ]
+      })} />
       <h1>📊 NPB {NPB_SEASON} 成績ランキング</h1>
       <p class="hero-sub">セントラル・パシフィック両リーグ 各部門リーダーボード</p>
       {asOf && <span class="updated-badge">🔄 {asOf} 時点</span>}
