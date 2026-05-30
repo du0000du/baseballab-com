@@ -310,14 +310,27 @@ import Layout from '../layouts/Layout.astro';
 
     .affiliate-thumb {
       flex-shrink: 0;
-      width: 72px;
-      height: 72px;
+      width: 90px;
+      min-height: 120px;
       background: rgba(255,255,255,0.1);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .affiliate-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0.35rem;
+    }
+    .aff-icon-fallback {
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .affiliate-info {
@@ -345,9 +358,12 @@ import Layout from '../layouts/Layout.astro';
     .affiliate-info .affiliate-cta {
       display: inline-block;
       margin-top: 0.6rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #7ec8e3;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: #FF9900;
+      color: #111;
+      padding: 0.25rem 0.7rem;
+      border-radius: 4px;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -513,8 +529,12 @@ import Layout from '../layouts/Layout.astro';
       <p class="section-lead">データ分析・スキルアップに役立つアイテムをご紹介</p>
       <div class="affiliate-grid">
         <!-- アフィリエイト枠1: 書籍 -->
-        <a href="https://www.amazon.co.jp/s?k=%E3%83%87%E3%83%BC%E3%82%BF%E3%81%A7%E5%8B%9D%E3%81%A4%E9%87%8E%E7%90%83+%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
-          <div class="affiliate-thumb">📗</div>
+        <a href="https://www.amazon.co.jp/s?k=%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9+%E5%85%A5%E9%96%80+%E9%87%8E%E7%90%83&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+          <div class="affiliate-thumb" style="background:#1b5e20">
+            <img src="https://covers.openlibrary.org/b/isbn/4862556639-M.jpg" alt="" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <span class="aff-icon-fallback" style="display:none">📗</span>
+          </div>
           <div class="affiliate-info">
             <p class="badge-sponsor">スポンサー</p>
             <h3>データで勝つ野球 セイバーメトリクス入門</h3>
@@ -524,7 +544,9 @@ import Layout from '../layouts/Layout.astro';
         </a>
         <!-- アフィリエイト枠2: 計測機器 -->
         <a href="https://www.amazon.co.jp/s?k=%E3%83%A9%E3%83%97%E3%82%BD%E3%83%BC%E3%83%89+MLM2+PRO&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
-          <div class="affiliate-thumb">⚙️</div>
+          <div class="affiliate-thumb" style="background:#0f2540">
+            <span class="aff-icon-fallback">📡</span>
+          </div>
           <div class="affiliate-info">
             <p class="badge-sponsor">スポンサー</p>
             <h3>ラプソード MLM2 PRO</h3>
@@ -533,8 +555,10 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
         <!-- アフィリエイト枠3: 野球グッズ -->
-        <a href="https://www.amazon.co.jp/s?k=MLB+大谷翔平+公式グッズ&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
-          <div class="affiliate-thumb">🧢</div>
+        <a href="https://www.amazon.co.jp/s?k=MLB+%E5%A4%A7%E8%B0%B7%E7%BF%94%E5%B9%B3+%E5%85%AC%E5%BC%8F%E3%82%B0%E3%83%83%E3%82%BA&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+          <div class="affiliate-thumb" style="background:#c0392b">
+            <span class="aff-icon-fallback">🧢</span>
+          </div>
           <div class="affiliate-info">
             <p class="badge-sponsor">スポンサー</p>
             <h3>MLB公式グッズ</h3>

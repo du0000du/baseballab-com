@@ -99,6 +99,25 @@ const total = allTerms.length;
     .term-desc { font-size: .77rem; color: var(--gray-600); margin: 0; line-height: 1.55; flex: 1; }
     .term-arrow { font-size: .8rem; color: var(--red); font-weight: 700; margin-top: auto; }
 
+    .gl-search-wrap {
+      position: relative;
+      max-width: 480px;
+      margin: 1rem auto 0;
+    }
+    .gl-search-input {
+      width: 100%;
+      padding: .65rem 2.75rem .65rem 1.1rem;
+      font-size: .93rem;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 9999px;
+      outline: none;
+      transition: border-color .15s, box-shadow .15s;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .gl-search-input:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(26,58,92,.12); }
+    .gl-search-icon { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); font-size: .88rem; pointer-events: none; color: var(--gray-400); }
+    .gl-no-result { text-align: center; color: var(--gray-600); padding: 3rem 0; font-size: .95rem; }
+
     @media (max-width: 600px) {
       .term-grid { grid-template-columns: 1fr; }
       .gl-stats { gap: 1.5rem; }
@@ -130,7 +149,37 @@ const total = allTerms.length;
 
   <div class="container">
     <nav class="breadcrumb"><a href="/">トップ</a><span>›</span><span>指標解説</span></nav>
+    <div class="gl-search-wrap">
+      <input type="search" id="glossary-search" class="gl-search-input"
+             placeholder="指標を検索（例: OPS, 防御率, WAR…）" autocomplete="off" />
+      <span class="gl-search-icon">🔍</span>
+    </div>
+    <p id="gl-no-result" class="gl-no-result" hidden>該当する指標が見つかりません。</p>
   </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      var input = document.getElementById('glossary-search');
+      if (!input) return;
+      var noResult = document.getElementById('gl-no-result');
+      var cards = Array.from(document.querySelectorAll('.term-card'));
+      var sections = Array.from(document.querySelectorAll('section[id^="cat-"]'));
+      input.addEventListener('input', function () {
+        var q = this.value.trim().toLowerCase();
+        var visible = 0;
+        cards.forEach(function (c) {
+          var match = !q || c.textContent.toLowerCase().includes(q);
+          c.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        sections.forEach(function (s) {
+          var hasVisible = Array.from(s.querySelectorAll('.term-card')).some(function (c) { return c.style.display !== 'none'; });
+          s.style.display = hasVisible ? '' : 'none';
+        });
+        if (noResult) noResult.hidden = visible > 0 || !q;
+      });
+    });
+  </script>
 
   <!-- カテゴリ別 -->
   {Object.entries(categories).filter(([, v]) => v.terms.length > 0).map(([key, { label, icon, desc, terms }], i) => (

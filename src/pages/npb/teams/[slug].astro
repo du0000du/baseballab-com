@@ -46,6 +46,15 @@ const desc = `${t.name}（NPB${leagueJa}）の${NPB_SEASON}シーズン順位・
   <section class="th">
     <div class="container inner">
       <nav class="breadcrumb"><a href="/">Baseballab</a> › <a href="/npb/">NPB</a> › {t.name}</nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Baseballab", "item": "https://baseballab.com/" },
+          { "@type": "ListItem", "position": 2, "name": "NPB", "item": "https://baseballab.com/npb/" },
+          { "@type": "ListItem", "position": 3, "name": t.name }
+        ]
+      })} />
       <h1>{t.name}</h1>
       <span class="th-badge">{leagueJa}</span>
     </div>
