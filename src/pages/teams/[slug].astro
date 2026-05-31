@@ -32,7 +32,7 @@ const atomicText = `${name}（${abbr}）はMLBの${league}所属チーム。${di
 const pageTitle = `${name} チーム成績・情報`;
 const description = `${name}（${abbr}）のMLBチーム成績・情報。${division}。本拠地${venue}。Baseballabで詳細データを確認。`;
 ---
-<Layout title={pageTitle} description={description}>
+<Layout title={pageTitle} description={description} ogUrl={`https://baseballab.com/teams/${Astro.params.slug}/`}>
   <style slot="head">
   .team-hero {
     background: var(--navy, #1a3a5c);

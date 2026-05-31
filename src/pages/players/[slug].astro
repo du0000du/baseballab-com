@@ -92,7 +92,7 @@ const affiliateLinks = [
   { label: 'ラプソード MLM2 PRO', url: `https://www.amazon.co.jp/s?k=%E3%83%A9%E3%83%97%E3%82%BD%E3%83%BC%E3%83%89+MLM2+PRO&tag=${AMAZON_TAG}`, pr: true, description: '投球データを計測できるポータブルデバイス', icon: '📡', bgColor: '#0f2540' },
 ];
 ---
-<Layout title={pageTitle} description={description}>
+<Layout title={pageTitle} description={description} ogUrl={`https://baseballab.com/players/${Astro.params.slug}/`}>
   <style slot="head">
   .player-hero {
     background: var(--navy-dark, #0c1e33);

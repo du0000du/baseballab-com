@@ -7,6 +7,7 @@ interface Props {
   description: string;
   ogUrl?: string;
   ogType?: string;
+  jsonLd?: Record<string, unknown>;
 }
 
 const {
@@ -14,6 +15,7 @@ const {
   description,
   ogUrl = 'https://baseballab.com',
   ogType = 'website',
+  jsonLd,
 } = Astro.props;
 ---
 
@@ -168,10 +170,45 @@ const {
       }
 
       /* ===== RESPONSIVE ===== */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+      }
+      .hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--white);
+        border-radius: 2px;
+        transition: transform 0.2s, opacity 0.2s;
+      }
+      .mobile-nav {
+        display: none;
+        flex-direction: column;
+        background: var(--navy-dark);
+        padding: 0.5rem 1.25rem 1rem;
+      }
+      .mobile-nav a {
+        color: rgba(255,255,255,0.85);
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .mobile-nav a:last-child { border-bottom: none; }
+      .mobile-nav.open { display: flex; }
+
       @media (max-width: 768px) {
         .site-nav { display: none; }
+        .hamburger { display: flex; }
       }
     </style>
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <!-- ページ固有のスタイル・メタをここに差し込む -->
     <slot name="head" />
   </head>
@@ -188,8 +225,29 @@ const {
           <a href="/gear/">機材</a>
           <a href="/streaming/">配信</a>
         </nav>
+        <button class="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="モバイルナビゲーション">
+      <a href="/mlb/">MLB</a>
+      <a href="/npb/">NPB</a>
+      <a href="/glossary/">指標解説</a>
+      <a href="/gear/">機材</a>
+      <a href="/streaming/">配信</a>
+    </nav>
+    <script is:inline>
+      (function(){
+        var btn = document.querySelector('.hamburger');
+        var nav = document.getElementById('mobile-nav');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', function(){
+          var open = nav.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      })();
+    </script>
 
     <!-- ===== ページコンテンツ ===== -->
     <slot />
