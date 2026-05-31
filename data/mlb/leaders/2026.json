@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-31T07:53:21Z",
+  "fetched_at": "2026-05-31T17:31:31Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -133,17 +133,17 @@
       },
       {
         "rank": 9,
-        "playerId": 665489,
-        "player": "Vladimir Guerrero Jr.",
-        "team": "TOR",
-        "value": ".305"
-      },
-      {
-        "rank": 10,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
         "value": ".305"
+      },
+      {
+        "rank": 10,
+        "playerId": 700250,
+        "player": "Ben Rice",
+        "team": "NYY",
+        "value": ".304"
       }
     ],
     "rbi": [
