@@ -179,6 +179,20 @@ import Layout from '../layouts/Layout.astro';
     }
     .card-link:hover { gap: 0.55rem; }
 
+    .card-league-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      color: var(--white);
+      width: fit-content;
+    }
+    .card-league-badge.mlb { background: #1a3a5c; }
+    .card-league-badge.npb { background: #9b2335; }
+
     /* ===== ARTICLES ===== */
     .article-list {
       display: flex;
@@ -385,8 +399,9 @@ import Layout from '../layouts/Layout.astro';
         セイバーメトリクスから選手比較まで、野球ファン・指導者・アナリストのための情報ラボ。
       </p>
       <div class="hero-cta">
-        <a href="/mlb/" class="btn btn-primary">📊 データ分析を見る</a>
-        <a href="/glossary/" class="btn btn-outline">📖 指標解説を読む</a>
+        <a href="/mlb/" class="btn btn-primary">🇺🇸 MLB データ分析</a>
+        <a href="/npb/" class="btn btn-primary" style="background:#9b2335">🇯🇵 NPB データ分析</a>
+        <a href="/glossary/" class="btn btn-outline">📖 指標解説</a>
       </div>
     </div>
   </section>
@@ -400,23 +415,25 @@ import Layout from '../layouts/Layout.astro';
         <p class="section-lead">MLB・NPBのデータを多角的に分析・比較。あなたの野球観戦・指導を深める情報を提供します。</p>
       </div>
       <div class="card-grid">
-        <!-- カード1: チーム別成績分析 -->
+        <!-- カード1: MLB データ分析 -->
         <div class="feature-card">
-          <div class="card-icon">🏟️</div>
-          <h3 class="card-title">チーム別成績分析</h3>
+          <span class="card-league-badge mlb">🇺🇸 MLB</span>
+          <div class="card-icon">📊</div>
+          <h3 class="card-title">MLB データ分析</h3>
           <p class="card-desc">
-            MLB全30球団・NPB12球団の打撃・投球・守備成績を独自集計。シーズン推移や対戦成績も可視化します。
+            全30球団・選手の打撃・投球・守備成績を網羅。WAR・OPS・FIPなどセイバーメトリクス指標で大谷翔平ほか注目選手を分析。
           </p>
-          <a href="/teams/" class="card-link">詳細を見る →</a>
+          <a href="/mlb/" class="card-link">MLBを見る →</a>
         </div>
-        <!-- カード2: 選手データ比較 -->
+        <!-- カード2: NPB データ分析 -->
         <div class="feature-card">
-          <div class="card-icon">👤</div>
-          <h3 class="card-title">選手データ比較</h3>
+          <span class="card-league-badge npb">🇯🇵 NPB</span>
+          <div class="card-icon">⚾</div>
+          <h3 class="card-title">NPB データ分析</h3>
           <p class="card-desc">
-            OPS・WAR・FIP・wRC+などセイバーメトリクス指標で選手を横断比較。大谷翔平ほか注目選手のStatcastデータも。
+            セ・パ12球団の順位表・選手成績を随時更新。打率・防御率・OPSなど主要指標で日本プロ野球を数値で読み解く。
           </p>
-          <a href="/mlb/" class="card-link">詳細を見る →</a>
+          <a href="/npb/" class="card-link">NPBを見る →</a>
         </div>
         <!-- カード3: 試合結果・トレンド -->
         <div class="feature-card">
