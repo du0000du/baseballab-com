@@ -1,0 +1,141 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+<Layout
+  title="How to Watch MLB & NPB Online | Streaming Guide | Baseballab"
+  description="The best ways to stream MLB and NPB games — MLB.TV, DAZN, and more. Pricing, features, and recommendations for every viewer."
+  ogUrl="https://baseballab.com/en/streaming/"
+>
+  <style slot="head">
+    .stream-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%);
+      color: var(--white);
+      padding: 3.5rem 1.25rem 2.75rem;
+      text-align: center;
+    }
+    .stream-eyebrow {
+      display: inline-block;
+      background: rgba(192,57,43,.85);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+    .stream-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: .75rem;
+    }
+    .stream-sub {
+      color: rgba(255,255,255,.8);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: clamp(.9rem, 1.8vw, 1rem);
+      line-height: 1.75;
+    }
+    .breadcrumb { padding: .75rem 0; font-size: .8rem; color: var(--gray-500); }
+    .breadcrumb a { color: var(--gray-500); }
+    .breadcrumb span { margin: 0 .4rem; }
+    .section { padding: 3rem 0 4rem; }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 1.6rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+    }
+    .service-badge {
+      font-size: .72rem;
+      font-weight: 700;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 9999px;
+      padding: .2rem .7rem;
+      width: fit-content;
+    }
+    .service-badge.npb { background: #9b2335; }
+    .service-badge.both { background: #27751c; }
+    .service-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
+    .service-desc { font-size: .88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
+    .service-price { font-size: .85rem; font-weight: 600; color: var(--gray-600); }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      color: var(--red);
+      font-size: .84rem;
+      font-weight: 600;
+      text-decoration: none;
+      width: fit-content;
+    }
+    .service-link:hover { gap: .55rem; }
+  </style>
+
+  <section class="stream-hero">
+    <div class="container">
+      <p class="stream-eyebrow">📺 Baseball Streaming</p>
+      <h1>MLB & NPB Streaming Guide</h1>
+      <p class="stream-sub">Compare the best ways to watch Major League Baseball and NPB online. Pricing, features, and what's right for you.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/en/">Home</a><span>›</span><span>Streaming</span>
+    </nav>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context":"https://schema.org","@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
+        {"@type":"ListItem","position":2,"name":"Streaming Guide","item":"https://baseballab.com/en/streaming/"}
+      ]
+    })} />
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-card">
+          <span class="service-badge">MLB</span>
+          <div class="service-title">MLB.TV</div>
+          <p class="service-desc">MLB's official streaming service. Watch every game from every team — live and on demand. Includes real-time Statcast data integration and in-depth analytics features.</p>
+          <p class="service-price">~$24.99/month (international)</p>
+          <a href="https://www.mlb.com/live-stream-games/subscribe" class="service-link" target="_blank" rel="noopener noreferrer">Official site →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-badge both">MLB · NPB</span>
+          <div class="service-title">DAZN</div>
+          <p class="service-desc">Live MLB and NPB coverage. Watch on mobile, TV, or PC. Covers major NPB matchups including Giants and Tigers. Available globally.</p>
+          <p class="service-price">From ¥3,700/month</p>
+          <a href="https://www.dazn.com/en-JP/welcome" class="service-link" target="_blank" rel="noopener noreferrer">Official site →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-badge npb">NPB</span>
+          <div class="service-title">PL.TV (Pacific League TV)</div>
+          <p class="service-desc">Live and replay coverage of all 6 Pacific League teams. Integrated game data and player stats create a unique viewing experience for NPB fans.</p>
+          <p class="service-price">From ¥550/month</p>
+          <a href="https://tv.pacificleague.jp/" class="service-link" target="_blank" rel="noopener noreferrer">Official site →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-badge npb">NPB</span>
+          <div class="service-title">TVer / NHK+</div>
+          <p class="service-desc">Free catch-up streaming of terrestrial broadcasts. Mainly covers Giants games, Japan Series, and high-profile NPB matchups that aired on free TV.</p>
+          <p class="service-price">Free</p>
+          <a href="https://tver.jp/" class="service-link" target="_blank" rel="noopener noreferrer">Watch on TVer →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

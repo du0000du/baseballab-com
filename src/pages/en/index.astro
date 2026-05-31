@@ -1,0 +1,140 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Baseballab | Baseball Data, Deeply Analyzed."
+  description="Data-driven analysis of MLB & NPB statistics. Player performance, team data, sabermetrics explained — for fans, coaches, and analysts."
+  ogUrl="https://baseballab.com/en/"
+>
+  <style slot="head">
+    .hero { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, var(--navy-light) 100%); color: var(--white); padding: 5rem 1.25rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: '⚾'; position: absolute; font-size: 22rem; opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+    .hero-eyebrow { display: inline-block; background: rgba(192,57,43,.85); color: var(--white); font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .9rem; border-radius: 9999px; margin-bottom: 1.25rem; }
+    .hero h1 { font-size: clamp(2rem,5vw,3.25rem); font-weight: 900; letter-spacing: -.03em; line-height: 1.2; margin-bottom: 1.25rem; }
+    .hero h1 em { color: #7ec8e3; font-style: normal; }
+    .hero-sub { font-size: clamp(.95rem,2vw,1.15rem); color: rgba(255,255,255,.8); max-width: 600px; margin: 0 auto 2.25rem; line-height: 1.75; }
+    .hero-cta { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: .4rem; padding: .8rem 1.8rem; border-radius: 6px; font-weight: 700; font-size: .95rem; transition: transform .15s, box-shadow .15s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+    .btn-primary { background: var(--red); color: var(--white); }
+    .btn-primary:hover { background: var(--red-hover); }
+    .btn-navy { background: #1a3a5c; color: var(--white); }
+    .btn-navy:hover { background: #0f2540; }
+    .btn-outline { border: 2px solid rgba(255,255,255,.6); color: var(--white); background: transparent; }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.1); }
+    .section { padding: 4rem 0; }
+    .section-alt { background: var(--gray-100); }
+    .section-header { text-align: center; margin-bottom: 2.5rem; }
+    .section-label { display: inline-block; color: var(--red); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .5rem; }
+    .section-title { font-size: clamp(1.4rem,3vw,1.85rem); font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
+    .section-lead { margin-top: .6rem; color: var(--gray-600); font-size: .95rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem; }
+    .feature-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 1.75rem 1.5rem; transition: box-shadow .2s, transform .2s; display: flex; flex-direction: column; gap: .75rem; }
+    .feature-card:hover { box-shadow: 0 8px 24px rgba(26,58,92,.12); transform: translateY(-3px); }
+    .card-icon { font-size: 2rem; line-height: 1; }
+    .card-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+    .card-desc { font-size: .88rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
+    .card-link { display: inline-flex; align-items: center; gap: .3rem; color: var(--red); font-size: .85rem; font-weight: 600; margin-top: .25rem; transition: gap .15s; }
+    .card-link:hover { gap: .55rem; }
+    .card-league-badge { display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .15rem .6rem; border-radius: 9999px; color: var(--white); width: fit-content; }
+    .card-league-badge.mlb { background: #1a3a5c; }
+    .card-league-badge.npb { background: #9b2335; }
+    .article-list { display: flex; flex-direction: column; gap: 1rem; }
+    .article-item { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 1.1rem 1.4rem; display: flex; align-items: center; gap: 1rem; transition: box-shadow .2s; }
+    .article-item:hover { box-shadow: 0 4px 16px rgba(26,58,92,.1); }
+    .article-rank { flex-shrink: 0; width: 2rem; height: 2rem; background: var(--navy); color: var(--white); border-radius: 50%; font-weight: 800; font-size: .85rem; display: flex; align-items: center; justify-content: center; }
+    .article-rank.gold { background: #c9a227; } .article-rank.silver { background: #8c9496; } .article-rank.bronze { background: #a0522d; }
+    .article-body { flex: 1; min-width: 0; }
+    .article-tag { font-size: .72rem; font-weight: 700; color: var(--red); letter-spacing: .06em; text-transform: uppercase; margin-bottom: .2rem; }
+    .article-title { font-size: .95rem; font-weight: 600; color: var(--navy-dark); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .article-meta { font-size: .78rem; color: var(--gray-400); margin-top: .2rem; }
+    .article-arrow { flex-shrink: 0; color: var(--gray-400); font-size: 1.1rem; transition: color .15s, transform .15s; }
+    .article-item:hover .article-arrow { color: var(--red); transform: translateX(3px); }
+  </style>
+
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">⚾ Baseball Data Analysis</p>
+      <h1>Baseball Data,<br><em>Deeply Analyzed.</em></h1>
+      <p class="hero-sub">
+        Data-driven insights on MLB & NPB statistics.<br>
+        Sabermetrics, player comparisons, and live standings — for fans, coaches, and analysts.
+      </p>
+      <div class="hero-cta">
+        <a href="/en/mlb/" class="btn btn-primary">🇺🇸 MLB Data</a>
+        <a href="/en/npb/" class="btn btn-navy">🇯🇵 NPB Data</a>
+        <a href="/en/glossary/" class="btn btn-outline">📖 Stats Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Features</p>
+        <h2 class="section-title">What You Can Do on Baseballab</h2>
+        <p class="section-lead">Multi-angle analysis of MLB & NPB data — deepen your understanding of the game.</p>
+      </div>
+      <div class="card-grid">
+        <div class="feature-card">
+          <span class="card-league-badge mlb">🇺🇸 MLB</span>
+          <div class="card-icon">📊</div>
+          <h3 class="card-title">MLB Data Analysis</h3>
+          <p class="card-desc">All 30 teams, batting/pitching/fielding stats. WAR, OPS, FIP, wRC+ sabermetrics for Shohei Ohtani and more.</p>
+          <a href="/en/mlb/" class="card-link">View MLB →</a>
+        </div>
+        <div class="feature-card">
+          <span class="card-league-badge npb">🇯🇵 NPB</span>
+          <div class="card-icon">⚾</div>
+          <h3 class="card-title">NPB Data Analysis</h3>
+          <p class="card-desc">Central & Pacific League standings and player stats updated daily. Read Japan's professional baseball by the numbers.</p>
+          <a href="/en/npb/" class="card-link">View NPB →</a>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">📈</div>
+          <h3 class="card-title">Season Trends</h3>
+          <p class="card-desc">Track game results and performance trends over time. Visualize hot streaks and slumps for a deeper viewing experience.</p>
+          <a href="/season/" class="card-link">View Season →</a>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">📚</div>
+          <h3 class="card-title">Stats Guide</h3>
+          <p class="card-desc">What is WAR? What is FIP? Clear explanations of complex baseball metrics — from beginner to advanced.</p>
+          <a href="/en/glossary/" class="card-link">View Stats Guide →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Popular</p>
+        <h2 class="section-title">Popular Stats Articles</h2>
+        <p class="section-lead">Top baseball data analysis content read by fans around the world</p>
+      </div>
+      <ul class="article-list">
+        <li><a href="/en/mlb/leaders/" class="article-item">
+          <span class="article-rank gold">1</span>
+          <div class="article-body"><p class="article-tag">MLB / Rankings</p><p class="article-title">MLB 2026 Season Leaders — AVG, HR, RBI, ERA, SO Leaderboard</p><p class="article-meta">2026 Data · Updated daily</p></div>
+          <span class="article-arrow">›</span>
+        </a></li>
+        <li><a href="/en/players/shohei-ohtani/" class="article-item">
+          <span class="article-rank silver">2</span>
+          <div class="article-body"><p class="article-tag">MLB / Player</p><p class="article-title">Shohei Ohtani — Stats, Profile & Sabermetrics</p><p class="article-meta">Dodgers · Two-way superstar</p></div>
+          <span class="article-arrow">›</span>
+        </a></li>
+        <li><a href="/en/npb/leaders/" class="article-item">
+          <span class="article-rank bronze">3</span>
+          <div class="article-body"><p class="article-tag">NPB / Rankings</p><p class="article-title">NPB 2026 Season Leaders — Central & Pacific League Leaderboard</p><p class="article-meta">2026 Data · Updated daily</p></div>
+          <span class="article-arrow">›</span>
+        </a></li>
+        <li><a href="/en/players/" class="article-item">
+          <span class="article-rank">4</span>
+          <div class="article-body"><p class="article-tag">MLB / Players</p><p class="article-title">MLB Player Index — Stats & Sabermetrics for Every Player</p><p class="article-meta">100+ players covered</p></div>
+          <span class="article-arrow">›</span>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+</Layout>

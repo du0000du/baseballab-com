@@ -1,0 +1,119 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { loadLeaders, loadMeta, NPB_SEASON } from '../../../lib/npb';
+
+const leaders = loadLeaders(NPB_SEASON);
+const meta = loadMeta();
+const asOf = meta.asOf || '';
+
+const BAT_CATS: [string, string][] = [
+  ['avg','Batting Average (AVG)'],['hr','Home Runs (HR)'],['rbi','RBI'],
+  ['ops','OPS'],['hits','Hits (H)'],['sb','Stolen Bases (SB)'],
+];
+const PIT_CATS: [string, string][] = [
+  ['era','ERA'],['wins','Wins (W)'],['so','Strikeouts (SO)'],
+  ['saves','Saves (SV)'],['holds','Holds (H)'],['whip','WHIP'],
+];
+const MEDALS = ['🥇','🥈','🥉'];
+const LEAGUES: [string, string, string][] = [['central','Central League','cl'],['pacific','Pacific League','pl']];
+
+function rows(lg: string, group: string, key: string) {
+  return leaders?.[lg]?.[group]?.[key] ?? [];
+}
+const hasData = !!leaders;
+---
+<Layout
+  title={`NPB ${NPB_SEASON} Season Leaders | Baseballab`}
+  description={`NPB ${NPB_SEASON} season leaderboard. AVG, HR, RBI, ERA, SO for Central and Pacific leagues. Updated daily.`}
+  ogUrl="https://baseballab.com/en/npb/leaders/"
+>
+  <style slot="head">
+    .lh-hero { background:linear-gradient(135deg,#7b1a2a 0%,#9b2335 60%); color:var(--white); padding:3rem 1.25rem 2.5rem; }
+    .breadcrumb { font-size:.82rem; opacity:.85; margin-bottom:.75rem; } .breadcrumb a { color:rgba(255,255,255,.8); }
+    .lh-hero h1 { font-size:clamp(1.6rem,4vw,2.3rem); font-weight:900; margin:.4rem 0; }
+    .hero-sub { color:rgba(255,255,255,.75); font-size:.95rem; }
+    .updated-badge { display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:9999px; padding:.2rem .75rem; font-size:.75rem; margin-top:.5rem; }
+    .lg-section { padding:2.5rem 0; } .lg-section.alt { background:var(--gray-100); }
+    .lg-title { font-size:1.2rem; font-weight:800; color:var(--navy); margin-bottom:1.25rem; display:flex; align-items:center; gap:.6rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; padding:.18rem .55rem; border-radius:4px; color:var(--white); }
+    .lg-badge.cl { background:#1a3a5c; } .lg-badge.pl { background:#9b2335; }
+    .bat-section { margin-bottom:2.5rem; }
+    .bat-title { font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:1rem; padding-bottom:.3rem; border-bottom:2px solid var(--navy); }
+    .leaders-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem; }
+    .leaders-card { background:var(--white); border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; }
+    .lc-head { background:var(--navy); color:var(--white); padding:.55rem .9rem; font-size:.82rem; font-weight:700; }
+    .lc-row { display:flex; align-items:center; gap:.6rem; padding:.45rem .9rem; border-top:1px solid var(--gray-100); font-size:.82rem; }
+    .lc-rank { flex-shrink:0; width:1.4rem; text-align:center; font-weight:800; color:var(--gray-600); }
+    .lc-player { flex:1; font-weight:600; color:var(--navy-dark); }
+    .lc-value { font-weight:800; color:var(--navy); font-variant-numeric:tabular-nums; }
+    .no-data { color:var(--gray-600); padding:2rem 0; }
+    @media(max-width:560px){ .leaders-grid{grid-template-columns:1fr;} }
+  </style>
+
+  <section class="lh-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="/en/">Home</a> › <a href="/en/npb/">NPB</a> › <span>Season Leaders</span></nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
+          {"@type":"ListItem","position":2,"name":"NPB","item":"https://baseballab.com/en/npb/"},
+          {"@type":"ListItem","position":3,"name":"Season Leaders"}
+        ]
+      })} />
+      <h1>📊 NPB {NPB_SEASON} Season Leaders</h1>
+      <p class="hero-sub">Central & Pacific League — all departments leaderboard</p>
+      {asOf && <span class="updated-badge">🔄 As of {asOf}</span>}
+    </div>
+  </section>
+
+  {!hasData && <section class="lg-section"><div class="container"><p class="no-data">Data loading. Please wait.</p></div></section>}
+
+  {hasData && LEAGUES.map(([lg, label, cls], idx) => (
+    <section class={`lg-section ${idx % 2 ? 'alt' : ''}`}>
+      <div class="container">
+        <h2 class="lg-title"><span class={`lg-badge ${cls}`}>{cls.toUpperCase()}</span>{label}</h2>
+        <div class="bat-section">
+          <p class="bat-title">🏏 Batting</p>
+          <div class="leaders-grid">
+            {BAT_CATS.map(([key, label]) => {
+              const data = rows(lg, 'batting', key);
+              return data.length > 0 ? (
+                <div class="leaders-card">
+                  <div class="lc-head">{label}</div>
+                  {data.slice(0,5).map((r: any, i: number) => (
+                    <div class="lc-row">
+                      <span class="lc-rank">{i < 3 ? MEDALS[i] : r.rank}</span>
+                      <span class="lc-player">{r.name}</span>
+                      <span class="lc-value">{r.value}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : null;
+            })}
+          </div>
+        </div>
+        <div>
+          <p class="bat-title">⚾ Pitching</p>
+          <div class="leaders-grid">
+            {PIT_CATS.map(([key, label]) => {
+              const data = rows(lg, 'pitching', key);
+              return data.length > 0 ? (
+                <div class="leaders-card">
+                  <div class="lc-head">{label}</div>
+                  {data.slice(0,5).map((r: any, i: number) => (
+                    <div class="lc-row">
+                      <span class="lc-rank">{i < 3 ? MEDALS[i] : r.rank}</span>
+                      <span class="lc-player">{r.name}</span>
+                      <span class="lc-value">{r.value}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : null;
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+</Layout>

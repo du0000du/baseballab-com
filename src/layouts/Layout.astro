@@ -17,10 +17,18 @@ const {
   ogType = 'website',
   jsonLd,
 } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const isEn = pathname.startsWith('/en/') || pathname === '/en';
+const lang = isEn ? 'en' : 'ja';
+const jaUrl = isEn ? (pathname.replace(/^\/en/, '') || '/') : pathname;
+const enUrl = isEn ? pathname : ('/en' + pathname);
+const jaAbsolute = `https://baseballab.com${jaUrl}`;
+const enAbsolute = `https://baseballab.com${enUrl}`;
 ---
 
 <!doctype html>
-<html lang="ja">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,6 +37,9 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
+    <link rel="alternate" hreflang="ja" href={jaAbsolute} />
+    <link rel="alternate" hreflang="en" href={enAbsolute} />
+    <link rel="alternate" hreflang="x-default" href={jaAbsolute} />
     <title>{title}</title>
     <!-- Google Search Console -->
     <meta name="google-site-verification" content="vWPBl9eQ48HmYqfIbqNQXHE8N6JbFVidI1Uu8N6rByI" />
@@ -207,6 +218,30 @@ const {
         .site-nav { display: none; }
         .hamburger { display: flex; }
       }
+
+      /* ===== LANG SWITCHER ===== */
+      .lang-switcher {
+        display: flex;
+        align-items: center;
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 6px;
+        overflow: hidden;
+        font-size: 0.78rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-left: 0.75rem;
+      }
+      .lang-btn {
+        padding: 0.28rem 0.6rem;
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+        transition: background 0.15s, color 0.15s;
+        white-space: nowrap;
+      }
+      .lang-btn:hover { background: rgba(255,255,255,0.12); color: var(--white); }
+      .lang-btn.active { background: rgba(255,255,255,0.18); color: var(--white); }
+      .lang-divider { color: rgba(255,255,255,0.2); padding: 0 1px; font-size: 0.65rem; }
+      @media (max-width: 768px) { .lang-switcher { margin-left: 0; } }
     </style>
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <!-- ページ固有のスタイル・メタをここに差し込む -->
@@ -225,6 +260,11 @@ const {
           <a href="/gear/">機材</a>
           <a href="/streaming/">配信</a>
         </nav>
+        <div class="lang-switcher" role="navigation" aria-label="言語切替 / Language">
+          <a href={jaUrl} class={`lang-btn${!isEn ? ' active' : ''}`}>日本語</a>
+          <span class="lang-divider">|</span>
+          <a href={enUrl} class={`lang-btn${isEn ? ' active' : ''}`}>English</a>
+        </div>
         <button class="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>

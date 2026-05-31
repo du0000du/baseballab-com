@@ -1,0 +1,105 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const SEASON = '2026';
+const spotlightPlayers = [
+  { nameEn: 'Shohei Ohtani',      team: 'Los Angeles Dodgers', note: '2024 MVP & HR leader', slug: 'shohei-ohtani' },
+  { nameEn: 'Yoshinobu Yamamoto', team: 'Los Angeles Dodgers', note: 'Ace right-hander', slug: 'yoshinobu-yamamoto' },
+  { nameEn: 'Shota Imanaga',      team: 'Chicago Cubs',        note: '2024 Rookie of the Year', slug: 'shota-imanaga' },
+  { nameEn: 'Masataka Yoshida',   team: 'Boston Red Sox',      note: 'High-average hitter', slug: 'masataka-yoshida' },
+];
+---
+<Layout
+  title={`MLB Data Analysis ${SEASON} | Player & Team Stats | Baseballab`}
+  description={`MLB ${SEASON} season player stats, team standings, and leaderboards. Shohei Ohtani and more Japanese MLB players analyzed with Statcast & sabermetrics.`}
+  ogUrl="https://baseballab.com/en/mlb/"
+>
+  <style slot="head">
+    .mlb-hero { background: linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,#1a4a7a 100%); color:var(--white); padding:3.5rem 1.25rem 2.75rem; text-align:center; }
+    .mlb-eyebrow { display:inline-block; background:rgba(192,57,43,.85); font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.3rem .9rem; border-radius:9999px; margin-bottom:1rem; }
+    .mlb-hero h1 { font-size:clamp(1.8rem,4vw,2.7rem); font-weight:900; letter-spacing:-.03em; margin-bottom:.75rem; }
+    .mlb-hero h1 em { color:#7ec8e3; font-style:normal; }
+    .mlb-sub { color:rgba(255,255,255,.8); max-width:560px; margin:0 auto; font-size:clamp(.9rem,1.8vw,1rem); line-height:1.75; }
+    .breadcrumb { padding:.75rem 0; font-size:.8rem; color:var(--gray-500); }
+    .breadcrumb a { color:var(--gray-500); } .breadcrumb span { margin:0 .4rem; }
+    .section { padding:3rem 0 4rem; } .section-alt { background:var(--gray-100); }
+    .section-header { margin-bottom:2rem; }
+    .section-label { display:inline-block; color:var(--red); font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.4rem; }
+    .section-title { font-size:clamp(1.3rem,2.5vw,1.65rem); font-weight:800; color:var(--navy); letter-spacing:-.02em; }
+    .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.25rem; margin-top:1.5rem; }
+    .feature-card { background:var(--white); border:1px solid var(--gray-200); border-radius:12px; padding:1.5rem 1.25rem; display:flex; flex-direction:column; gap:.6rem; transition:box-shadow .2s,transform .2s; }
+    .feature-card:hover { box-shadow:0 8px 24px rgba(26,58,92,.12); transform:translateY(-3px); }
+    .f-icon { font-size:1.75rem; } .f-title { font-size:1rem; font-weight:700; color:var(--navy); }
+    .f-desc { font-size:.85rem; color:var(--gray-600); line-height:1.6; flex:1; }
+    .f-link { display:inline-flex; align-items:center; gap:.3rem; color:var(--red); font-size:.84rem; font-weight:600; transition:gap .15s; }
+    .f-link:hover { gap:.55rem; }
+    .leaders-banner { display:flex; align-items:center; gap:1.25rem; background:var(--navy-dark); color:var(--white); padding:1.25rem 1.5rem; border-radius:12px; text-decoration:none; transition:background .2s; }
+    .leaders-banner:hover { background:var(--navy); }
+    .lb-icon { font-size:2.25rem; flex-shrink:0; }
+    .lb-title { font-size:1.05rem; font-weight:700; } .lb-desc { font-size:.85rem; color:rgba(255,255,255,.7); margin-top:.2rem; }
+    .spotlight-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin-top:1.5rem; }
+    .spotlight-card a { display:block; background:var(--white); border:1px solid var(--gray-200); border-radius:10px; padding:1.1rem 1.2rem; text-decoration:none; transition:border-color .15s,box-shadow .15s,transform .15s; }
+    .spotlight-card a:hover { border-color:var(--navy); box-shadow:0 4px 16px rgba(26,58,92,.1); transform:translateY(-2px); }
+    .sp-name { font-size:.95rem; font-weight:700; color:var(--navy); margin-bottom:.2rem; }
+    .sp-team { font-size:.78rem; color:var(--gray-600); margin-bottom:.3rem; }
+    .sp-note { font-size:.75rem; color:var(--red); font-weight:600; }
+  </style>
+
+  <section class="mlb-hero">
+    <div class="container">
+      <p class="mlb-eyebrow">🇺🇸 MLB {SEASON}</p>
+      <h1>MLB <em>Data Analysis</em></h1>
+      <p class="mlb-sub">Player stats, team standings, and sabermetrics for the {SEASON} MLB season.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb"><a href="/en/">Home</a><span>›</span><span>MLB</span></nav>
+  </div>
+
+  <section class="section" style="padding:0 0 1rem;">
+    <div class="container">
+      <a href="/en/mlb/leaders/" class="leaders-banner">
+        <div class="lb-icon">📊</div>
+        <div>
+          <div class="lb-title">MLB {SEASON} Season Leaders</div>
+          <div class="lb-desc">HR · AVG · RBI · ERA · SO — all departments updated daily</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Navigation</p>
+        <h2 class="section-title">MLB Data Hub</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="f-icon">📊</div><h3 class="f-title">Leaderboard</h3><p class="f-desc">Top hitters and pitchers by HR, AVG, RBI, ERA, SO.</p><a href="/en/mlb/leaders/" class="f-link">View Rankings →</a></div>
+        <div class="feature-card"><div class="f-icon">👤</div><h3 class="f-title">Player Stats</h3><p class="f-desc">OPS, WAR, FIP, wRC+ and more for major MLB players.</p><a href="/en/players/" class="f-link">View Players →</a></div>
+        <div class="feature-card"><div class="f-icon">🏟️</div><h3 class="f-title">Team Stats</h3><p class="f-desc">All 30 MLB teams — batting, pitching, and defense by division.</p><a href="/en/teams/" class="f-link">View Teams →</a></div>
+        <div class="feature-card"><div class="f-icon">📈</div><h3 class="f-title">Season Trends</h3><p class="f-desc">Monthly & weekly performance trends for the {SEASON} season.</p><a href="/season/" class="f-link">View Season →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Spotlight</p>
+        <h2 class="section-title">Japanese MLB Players</h2>
+      </div>
+      <div class="spotlight-grid">
+        {spotlightPlayers.map(p => (
+          <div class="spotlight-card">
+            <a href={`/en/players/${p.slug}/`}>
+              <p class="sp-name">{p.nameEn}</p>
+              <p class="sp-team">{p.team}</p>
+              <p class="sp-note">{p.note}</p>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

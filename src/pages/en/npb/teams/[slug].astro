@@ -1,0 +1,110 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import { NPB_TEAMS, loadPlayers, loadStandings, NPB_SEASON } from '../../../../lib/npb';
+
+export async function getStaticPaths() {
+  return NPB_TEAMS.map(t => ({ params: { slug: t.slug }, props: { t } }));
+}
+const { t } = Astro.props;
+const players   = loadPlayers().filter(p => p.teamSlug === t.slug);
+const batters   = players.filter(p => p.group === 'batting').sort((a,b) => (Number(b.stats.avg)||0) - (Number(a.stats.avg)||0));
+const pitchers  = players.filter(p => p.group === 'pitching').sort((a,b) => (Number(a.stats.era)??99) - (Number(b.stats.era)??99));
+const standings = loadStandings();
+const rec       = (standings[t.league] || []).find((r: any) => r.teamSlug === t.slug);
+const leagueEn  = t.league === 'central' ? 'Central League' : 'Pacific League';
+---
+<Layout
+  title={`${t.name} — ${NPB_SEASON} Stats | NPB ${leagueEn} | Baseballab`}
+  description={`${t.name} (NPB ${leagueEn}) ${NPB_SEASON} season standings and player stats.`}
+  ogUrl={`https://baseballab.com/en/npb/teams/${t.slug}/`}
+>
+  <style slot="head" set:html={`
+    .th { color:#fff; padding:2.75rem 0 2rem; background:linear-gradient(135deg, ${t.color} 0%, ${t.color}cc 100%); }
+    .th .inner { color:${t.accent}; }
+  `}></style>
+  <style slot="head">
+    .th .container { display:flex; flex-direction:column; gap:.4rem; }
+    .breadcrumb { font-size:.82rem; opacity:.85; } .breadcrumb a { color:inherit; }
+    .th h1 { font-size:clamp(1.7rem,4vw,2.6rem); font-weight:800; margin:0; }
+    .th-badge { display:inline-block; background:rgba(0,0,0,.18); padding:.2rem .8rem; border-radius:20px; font-size:.82rem; font-weight:600; width:fit-content; }
+    .tbody { padding:2rem 0 3.5rem; }
+    .rec-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:1rem; margin:0 0 2.5rem; }
+    .rec-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; padding:1.1rem; text-align:center; }
+    .rec-label { font-size:.7rem; font-weight:700; color:var(--gray-600); text-transform:uppercase; margin-bottom:.35rem; }
+    .rec-value { font-size:1.7rem; font-weight:800; color:var(--navy); font-variant-numeric:tabular-nums; }
+    h2.sec { font-size:1.2rem; color:var(--navy); margin:2rem 0 1rem; border-bottom:2px solid var(--navy); padding-bottom:.35rem; }
+    table.roster { width:100%; border-collapse:collapse; font-size:.86rem; background:#fff; border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; }
+    table.roster th { background:rgba(22,45,71,.05); font-size:.68rem; color:var(--gray-600); text-transform:uppercase; padding:.5rem .6rem; text-align:right; }
+    table.roster th:first-child { text-align:left; }
+    table.roster td { padding:.5rem .6rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; }
+    table.roster td.nm { text-align:left; font-weight:600; }
+    table.roster td.nm a { color:var(--navy-dark); } table.roster td.nm a:hover { color:var(--red); }
+    .empty { color:var(--gray-500); padding:1.5rem 0; }
+    .src-box { margin-top:2rem; padding:1rem 1.25rem; background:var(--gray-100); border-left:4px solid var(--navy); border-radius:0 6px 6px 0; font-size:.8rem; color:var(--gray-600); line-height:1.7; }
+    @media(max-width:600px){ table.roster .hide-sp{display:none;} }
+  </style>
+
+  <section class="th">
+    <div class="container inner">
+      <nav class="breadcrumb"><a href="/en/">Baseballab</a> › <a href="/en/npb/">NPB</a> › {t.name}</nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
+          {"@type":"ListItem","position":2,"name":"NPB","item":"https://baseballab.com/en/npb/"},
+          {"@type":"ListItem","position":3,"name":t.name}
+        ]
+      })} />
+      <h1>{t.name}</h1>
+      <span class="th-badge">{leagueEn}</span>
+    </div>
+  </section>
+
+  <div class="tbody">
+    <div class="container">
+      {rec && (
+        <div class="rec-grid">
+          <div class="rec-card"><p class="rec-label">Rank</p><p class="rec-value">{rec.rank}</p></div>
+          <div class="rec-card"><p class="rec-label">W</p><p class="rec-value">{rec.wins}</p></div>
+          <div class="rec-card"><p class="rec-label">L</p><p class="rec-value">{rec.losses}</p></div>
+          <div class="rec-card"><p class="rec-label">T</p><p class="rec-value">{rec.ties}</p></div>
+          <div class="rec-card"><p class="rec-label">PCT</p><p class="rec-value">{rec.pct}</p></div>
+          <div class="rec-card"><p class="rec-label">GB</p><p class="rec-value">{rec.gb}</p></div>
+        </div>
+      )}
+      <h2 class="sec">Batting ({batters.length})</h2>
+      {batters.length ? (
+        <table class="roster">
+          <thead><tr><th>Player</th><th>AVG</th><th>HR</th><th>RBI</th><th class="hide-sp">OPS</th><th class="hide-sp">H</th><th class="hide-sp">SB</th></tr></thead>
+          <tbody>
+            {batters.map(p => (
+              <tr>
+                <td class="nm"><a href={`/en/npb/players/${p.slug}/`}>{p.name}</a></td>
+                <td>{p.stats.avg??'-'}</td><td>{p.stats.hr??'-'}</td><td>{p.stats.rbi??'-'}</td>
+                <td class="hide-sp">{p.stats.ops??'-'}</td><td class="hide-sp">{p.stats.hits??'-'}</td><td class="hide-sp">{p.stats.sb??'-'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : <p class="empty">No qualifying batters listed.</p>}
+
+      <h2 class="sec">Pitching ({pitchers.length})</h2>
+      {pitchers.length ? (
+        <table class="roster">
+          <thead><tr><th>Player</th><th>ERA</th><th>W</th><th>L</th><th class="hide-sp">SV</th><th class="hide-sp">SO</th><th class="hide-sp">IP</th></tr></thead>
+          <tbody>
+            {pitchers.map(p => (
+              <tr>
+                <td class="nm"><a href={`/en/npb/players/${p.slug}/`}>{p.name}</a></td>
+                <td>{p.stats.era??'-'}</td><td>{p.stats.wins??'-'}</td><td>{p.stats.losses??'-'}</td>
+                <td class="hide-sp">{p.stats.saves??'-'}</td><td class="hide-sp">{p.stats.so??'-'}</td><td class="hide-sp">{p.stats.ip??'-'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : <p class="empty">No qualifying pitchers listed.</p>}
+
+      <div class="src-box">Data source: <a href="https://npb.jp/" rel="nofollow noopener" target="_blank">NPB.jp</a> (official stats). Covers qualified players and key relievers.</div>
+    </div>
+  </div>
+</Layout>

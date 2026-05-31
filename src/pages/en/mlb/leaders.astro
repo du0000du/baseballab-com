@@ -1,0 +1,131 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const SEASON = String(process.env.MLB_SEASON || (new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1));
+const BASE = 'https://statsapi.mlb.com/api/v1';
+
+async function getLeaders(group: string, sortStat: string, limit = 10) {
+  try {
+    const url = `${BASE}/stats?stats=season&season=${SEASON}&group=${group}&sortStat=${sortStat}&limit=${limit}&gameType=R&hydrate=person,team`;
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const json = await res.json();
+    const splits = json?.stats?.[0]?.splits ?? [];
+    return splits.map((item: any, i: number) => ({
+      rank: item.rank ?? (i + 1),
+      player: item.player?.fullName ?? '—',
+      team: item.team?.abbreviation ?? item.team?.teamName ?? '—',
+      value: item.stat?.[sortStat] ?? '—',
+    }));
+  } catch { return []; }
+}
+
+const [hrLeaders, avgLeaders, rbiLeaders, sbLeaders] = await Promise.all([
+  getLeaders('hitting','homeRuns'), getLeaders('hitting','avg'),
+  getLeaders('hitting','rbi'), getLeaders('hitting','stolenBases'),
+]);
+const [eraLeaders, wLeaders, soLeaders, svLeaders] = await Promise.all([
+  getLeaders('pitching','era'), getLeaders('pitching','wins'),
+  getLeaders('pitching','strikeOuts'), getLeaders('pitching','saves'),
+]);
+
+const battingCategories = [
+  { label: 'Home Runs (HR)', leaders: hrLeaders },
+  { label: 'Batting Average (AVG)', leaders: avgLeaders },
+  { label: 'RBI', leaders: rbiLeaders },
+  { label: 'Stolen Bases (SB)', leaders: sbLeaders },
+];
+const pitchingCategories = [
+  { label: 'ERA', leaders: eraLeaders },
+  { label: 'Wins (W)', leaders: wLeaders },
+  { label: 'Strikeouts (SO)', leaders: soLeaders },
+  { label: 'Saves (SV)', leaders: svLeaders },
+];
+const MEDALS = ['🥇','🥈','🥉'];
+const buildDate = new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric', timeZone:'America/New_York' });
+const hasData = hrLeaders.length > 0 || eraLeaders.length > 0;
+---
+<Layout
+  title={`MLB ${SEASON} Season Leaders | Baseballab`}
+  description={`MLB ${SEASON} season leaderboard. HR, AVG, RBI, ERA, SO and all departments updated daily.`}
+  ogUrl="https://baseballab.com/en/mlb/leaders/"
+>
+  <style slot="head">
+    .leaders-hero { background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%); color:var(--white); padding:3rem 1.25rem 2.5rem; }
+    .breadcrumb { font-size:.82rem; opacity:.85; margin-bottom:.75rem; } .breadcrumb a { color:rgba(255,255,255,.8); }
+    .leaders-hero h1 { font-size:clamp(1.7rem,4vw,2.4rem); font-weight:900; margin:.5rem 0 .4rem; }
+    .hero-sub { color:rgba(255,255,255,.75); font-size:.95rem; }
+    .updated-badge { display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:9999px; padding:.2rem .75rem; font-size:.75rem; margin-top:.5rem; }
+    .leaders-section { padding:2.5rem 0; } .leaders-section.alt { background:var(--gray-100); }
+    .section-title { font-size:1.3rem; font-weight:800; color:var(--navy); margin-bottom:1.5rem; padding-bottom:.35rem; border-bottom:2px solid var(--navy); }
+    .leaders-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1.25rem; }
+    .leaders-card { background:var(--white); border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; }
+    .lc-head { background:var(--navy); color:var(--white); padding:.6rem 1rem; font-size:.85rem; font-weight:700; }
+    .lc-row { display:flex; align-items:center; gap:.75rem; padding:.5rem 1rem; border-top:1px solid var(--gray-100); font-size:.85rem; }
+    .lc-rank { flex-shrink:0; width:1.5rem; text-align:center; font-weight:800; color:var(--gray-600); }
+    .lc-player { flex:1; font-weight:600; color:var(--navy-dark); } .lc-team { font-size:.75rem; color:var(--gray-400); }
+    .lc-value { font-weight:800; color:var(--navy); font-variant-numeric:tabular-nums; }
+    .no-data { color:var(--gray-600); text-align:center; padding:2.5rem 0; }
+    @media(max-width:600px){ .leaders-grid{grid-template-columns:1fr;} }
+  </style>
+
+  <section class="leaders-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="/en/">Home</a> › <a href="/en/mlb/">MLB</a> › <span>Season Leaders</span></nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
+          {"@type":"ListItem","position":2,"name":"MLB","item":"https://baseballab.com/en/mlb/"},
+          {"@type":"ListItem","position":3,"name":"Season Leaders"}
+        ]
+      })} />
+      <h1>📊 MLB {SEASON} Season Leaders</h1>
+      <p class="hero-sub">{SEASON} season final stats leaderboard</p>
+      <span class="updated-badge">🔄 Updated {buildDate}</span>
+    </div>
+  </section>
+
+  {!hasData && <section class="leaders-section"><div class="container"><p class="no-data">Data is loading. Please check back shortly.</p></div></section>}
+
+  {hasData && (
+    <section class="leaders-section">
+      <div class="container">
+        <h2 class="section-title">🏏 Batting</h2>
+        <div class="leaders-grid">
+          {battingCategories.map(cat => (
+            <div class="leaders-card">
+              <div class="lc-head">{cat.label}</div>
+              {cat.leaders.map((r: any, i: number) => (
+                <div class="lc-row">
+                  <span class="lc-rank">{i < 3 ? MEDALS[i] : r.rank}</span>
+                  <span class="lc-player">{r.player}<br/><span class="lc-team">{r.team}</span></span>
+                  <span class="lc-value">{r.value}</span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="leaders-section alt">
+      <div class="container">
+        <h2 class="section-title">⚾ Pitching</h2>
+        <div class="leaders-grid">
+          {pitchingCategories.map(cat => (
+            <div class="leaders-card">
+              <div class="lc-head">{cat.label}</div>
+              {cat.leaders.map((r: any, i: number) => (
+                <div class="lc-row">
+                  <span class="lc-rank">{i < 3 ? MEDALS[i] : r.rank}</span>
+                  <span class="lc-player">{r.player}<br/><span class="lc-team">{r.team}</span></span>
+                  <span class="lc-value">{r.value}</span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</Layout>

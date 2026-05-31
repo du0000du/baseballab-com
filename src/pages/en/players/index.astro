@@ -1,0 +1,51 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+const playersDir = join(process.cwd(), 'data/mlb/players');
+const players = readdirSync(playersDir).filter(f => f.endsWith('.json')).map(f => {
+  const slug = f.replace('.json','');
+  const data = JSON.parse(readFileSync(join(playersDir, f), 'utf-8'));
+  const info = data.info || {};
+  return { slug, fullName: info.fullName || slug, position: info.primaryPosition?.abbreviation || '—' };
+}).sort((a,b) => a.fullName.localeCompare(b.fullName));
+---
+<Layout
+  title="MLB Player Index | Baseballab"
+  description={`Full index of ${players.length} MLB players with stats, sabermetrics, and profiles on Baseballab.`}
+  ogUrl="https://baseballab.com/en/players/"
+>
+  <style>
+    .page-container { max-width:900px; margin:0 auto; padding:2rem 1.5rem 5rem; }
+    .page-header { text-align:center; margin-bottom:2.5rem; }
+    .page-header h1 { font-size:2rem; font-weight:700; color:var(--navy); margin-bottom:.4rem; }
+    .subtitle { color:var(--gray-400); font-size:.95rem; }
+    .breadcrumb { padding:.75rem 0; font-size:.8rem; color:var(--gray-500); }
+    .breadcrumb a { color:var(--gray-500); } .breadcrumb span { margin:0 .4rem; }
+    .players-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:.75rem; }
+    .player-card { display:flex; align-items:center; gap:.75rem; padding:.7rem 1rem; background:var(--white); border:1px solid var(--gray-200); border-radius:8px; text-decoration:none; color:inherit; transition:border-color .15s,box-shadow .15s; }
+    .player-card:hover { border-color:var(--navy); box-shadow:0 2px 8px rgba(26,58,92,.1); }
+    .player-pos { font-size:.72rem; font-weight:700; color:var(--white); background:var(--navy); border-radius:4px; padding:.1rem .4rem; flex-shrink:0; }
+    .player-name { flex:1; font-size:.9rem; font-weight:600; color:var(--navy-dark); }
+    .arrow { color:var(--gray-400); }
+    .note { margin-top:2rem; text-align:center; color:var(--gray-500); font-size:.85rem; }
+  </style>
+  <div class="page-container">
+    <nav class="breadcrumb"><a href="/en/">Home</a><span>›</span><a href="/en/mlb/">MLB</a><span>›</span><span>Players</span></nav>
+    <header class="page-header">
+      <h1>MLB Players</h1>
+      <p class="subtitle">{players.length} players covered · Expanding regularly</p>
+    </header>
+    <div class="players-grid">
+      {players.map(p => (
+        <a class="player-card" href={`/en/players/${p.slug}/`}>
+          <span class="player-pos">{p.position}</span>
+          <span class="player-name">{p.fullName}</span>
+          <span class="arrow">›</span>
+        </a>
+      ))}
+    </div>
+    <p class="note">Player data is updated regularly. Currently covering {players.length} players.</p>
+  </div>
+</Layout>

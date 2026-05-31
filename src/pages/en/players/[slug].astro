@@ -1,0 +1,178 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import AffiliateBlock from '../../../components/AffiliateBlock.astro';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+const SEASON_YEAR = new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1;
+
+export async function getStaticPaths() {
+  const dir = join(process.cwd(), 'data/mlb/players');
+  return readdirSync(dir).filter(f => f.endsWith('.json')).map(file => {
+    const slug = file.replace('.json','');
+    const data = JSON.parse(readFileSync(join(dir, file), 'utf-8'));
+    return { params: { slug }, props: { data } };
+  });
+}
+
+const { data } = Astro.props;
+const { info } = data;
+
+const name       = info.fullName ?? 'Unknown Player';
+const position   = info.primaryPosition?.name ?? 'Player';
+const posAbbr    = info.primaryPosition?.abbreviation ?? '';
+const number     = info.primaryNumber ? `#${info.primaryNumber}` : '';
+const birthDate  = info.birthDate ?? null;
+const birthCity  = info.birthCity ?? '';
+const birthCountry = info.birthCountry ?? '';
+const height     = info.height ?? '';
+const weight     = info.weight ? `${info.weight} lbs` : '';
+const bats       = info.batSide?.description ?? '';
+const throws     = info.pitchHand?.description ?? '';
+const debut      = info.mlbDebutDate ?? null;
+const age        = info.currentAge ?? null;
+
+const statsEntry = data.stats?.[0] ?? null;
+const statGroup  = statsEntry?.group?.displayName ?? '';
+const splitStat  = statsEntry?.splits?.[0]?.stat ?? null;
+const teamName   = statsEntry?.splits?.[0]?.team?.name ?? '';
+
+const isBatter  = statGroup === 'hitting';
+const isPitcher = statGroup === 'pitching';
+
+const avg = splitStat?.avg ?? null;
+const hr  = splitStat?.homeRuns ?? null;
+const rbi = splitStat?.rbi ?? null;
+const ops = splitStat?.ops ?? null;
+const gamesPlayed = splitStat?.gamesPlayed ?? null;
+const hits = splitStat?.hits ?? null;
+const sb   = splitStat?.stolenBases ?? null;
+const runs = splitStat?.runs ?? null;
+
+const era    = splitStat?.era ?? null;
+const wins   = splitStat?.wins ?? null;
+const losses = splitStat?.losses ?? null;
+const strikeOuts = splitStat?.strikeOuts ?? null;
+const whip   = splitStat?.whip ?? null;
+const ip     = splitStat?.inningsPitched ?? null;
+const saves  = splitStat?.saves ?? null;
+
+let statsSnippet = '';
+if (isBatter && avg) {
+  const parts: string[] = [];
+  if (avg) parts.push(`AVG ${avg}`);
+  if (hr !== null) parts.push(`${hr} HR`);
+  if (rbi !== null) parts.push(`${rbi} RBI`);
+  if (ops) parts.push(`OPS ${ops}`);
+  statsSnippet = parts.length ? `In ${SEASON_YEAR}: ${parts.join(' · ')}.` : '';
+} else if (isPitcher && era) {
+  const parts: string[] = [];
+  if (wins !== null && losses !== null) parts.push(`${wins}W-${losses}L`);
+  if (era) parts.push(`ERA ${era}`);
+  if (strikeOuts !== null) parts.push(`${strikeOuts} SO`);
+  statsSnippet = parts.length ? `In ${SEASON_YEAR}: ${parts.join(' · ')}.` : '';
+}
+
+const description = `${name} (${posAbbr}) — MLB player profile & stats. ${birthCountry ? birthCountry + '-born. ' : ''}${statsSnippet} Full sabermetrics on Baseballab.`;
+const AMAZON_TAG = 'baseballab22-22';
+const affiliateLinks = [
+  { label: 'Winning with Data: Sabermetrics Intro', url: `https://www.amazon.co.jp/s?k=%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9+%E5%85%A5%E9%96%80+%E9%87%8E%E7%90%83&tag=${AMAZON_TAG}`, pr: true, description: 'Essential reading for understanding baseball analytics', icon: '📗', bgColor: '#1b5e20', imgUrl: 'https://covers.openlibrary.org/b/isbn/4862556639-M.jpg' },
+  { label: 'Baseball Score Book', url: `https://www.amazon.co.jp/s?k=%E9%87%8E%E7%90%83+%E3%82%B9%E3%82%B3%E3%82%A2%E3%83%96%E3%83%83%E3%82%AF+%E5%85%AC%E5%BC%8F&tag=${AMAZON_TAG}`, pr: true, description: 'Keep score to deepen your understanding of every play', icon: '📓', bgColor: '#1a3a5c', imgUrl: 'https://covers.openlibrary.org/b/isbn/4780422787-M.jpg' },
+  { label: 'Rapsodo MLM2 PRO', url: `https://www.amazon.co.jp/s?k=%E3%83%A9%E3%83%97%E3%82%BD%E3%83%BC%E3%83%89+MLM2+PRO&tag=${AMAZON_TAG}`, pr: true, description: 'Real-time pitch & swing data measurement device', icon: '📡', bgColor: '#0f2540' },
+];
+---
+<Layout
+  title={`${name} — Stats & Profile | MLB | Baseballab`}
+  description={description}
+  ogUrl={`https://baseballab.com/en/players/${Astro.params.slug}/`}
+>
+  <style slot="head">
+    .player-hero { background:var(--navy-dark); color:#fff; padding:3rem 0 2rem; }
+    .player-hero .container { display:flex; flex-direction:column; gap:.5rem; }
+    .player-number { font-size:.9rem; opacity:.7; font-weight:600; }
+    .player-hero h1 { font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; margin:0; }
+    .player-position-badge { display:inline-block; background:rgba(255,255,255,.15); padding:.2rem .75rem; border-radius:20px; font-size:.85rem; font-weight:600; width:fit-content; }
+    .player-body { padding:2rem 0 4rem; }
+    .info-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin:2rem 0; }
+    .info-item { background:var(--gray-100); border:1px solid var(--gray-200); border-radius:8px; padding:1rem 1.1rem; }
+    .info-label { font-size:.75rem; font-weight:700; color:var(--gray-600); text-transform:uppercase; letter-spacing:.05em; margin:0 0 .25rem; }
+    .info-value { font-size:1rem; font-weight:600; color:var(--text); margin:0; }
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:1rem; margin:1.5rem 0 2rem; }
+    .stat-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; padding:1.25rem 1rem; text-align:center; }
+    .stat-label { font-size:.7rem; font-weight:700; color:var(--gray-600); text-transform:uppercase; letter-spacing:.08em; margin:0 0 .4rem; }
+    .stat-value { font-size:1.8rem; font-weight:800; color:var(--navy); margin:0; line-height:1; font-variant-numeric:tabular-nums; }
+    .stat-value.highlight { color:var(--red); }
+    .stat-sub { font-size:.75rem; color:var(--gray-400); margin:.3rem 0 0; }
+    .stats-team { font-size:.85rem; color:var(--gray-600); margin:0 0 .25rem; }
+    .stats-asof { font-size:.75rem; color:var(--gray-400); margin:0 0 1rem; }
+    .breadcrumb { font-size:.85rem; color:rgba(255,255,255,.7); margin-bottom:1rem; }
+    .breadcrumb a { color:rgba(255,255,255,.7); } .breadcrumb a:hover { color:#fff; }
+    h2 { font-size:1.2rem; font-weight:700; color:var(--navy); margin:1.5rem 0 .75rem; }
+    @media(max-width:600px){ .info-grid{grid-template-columns:repeat(2,1fr);} .stats-grid{grid-template-columns:repeat(2,1fr);} }
+  </style>
+
+  <section class="player-hero">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/en/">Baseballab</a> › <a href="/en/players/">MLB Players</a> › {name}
+      </nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
+          {"@type":"ListItem","position":2,"name":"MLB Players","item":"https://baseballab.com/en/players/"},
+          {"@type":"ListItem","position":3,"name":name}
+        ]
+      })} />
+      {number && <p class="player-number">{number}</p>}
+      <h1>{name}</h1>
+      <span class="player-position-badge">{position}</span>
+    </div>
+  </section>
+
+  <div class="player-body">
+    <div class="container">
+      <h2>Profile</h2>
+      <div class="info-grid">
+        {birthDate && <div class="info-item"><p class="info-label">Date of Birth</p><p class="info-value">{birthDate}{age ? ` (age ${age})` : ''}</p></div>}
+        {(birthCity || birthCountry) && <div class="info-item"><p class="info-label">Birthplace</p><p class="info-value">{[birthCity, birthCountry].filter(Boolean).join(', ')}</p></div>}
+        {height && <div class="info-item"><p class="info-label">Height</p><p class="info-value">{height}</p></div>}
+        {weight && <div class="info-item"><p class="info-label">Weight</p><p class="info-value">{weight}</p></div>}
+        {bats && <div class="info-item"><p class="info-label">Bats</p><p class="info-value">{bats}</p></div>}
+        {throws && <div class="info-item"><p class="info-label">Throws</p><p class="info-value">{throws}</p></div>}
+        {debut && <div class="info-item"><p class="info-label">MLB Debut</p><p class="info-value">{debut}</p></div>}
+      </div>
+
+      <h2>{SEASON_YEAR} Stats</h2>
+      {teamName && <p class="stats-team">{teamName}</p>}
+      <p class="stats-asof">MLB Stats API ({SEASON_YEAR} season)</p>
+
+      {isBatter && splitStat ? (
+        <div class="stats-grid">
+          {avg && <div class="stat-card"><p class="stat-label">Batting Avg</p><p class="stat-value">{avg}</p><p class="stat-sub">AVG</p></div>}
+          {hr !== null && <div class="stat-card"><p class="stat-label">Home Runs</p><p class="stat-value highlight">{hr}</p><p class="stat-sub">HR</p></div>}
+          {rbi !== null && <div class="stat-card"><p class="stat-label">RBI</p><p class="stat-value">{rbi}</p><p class="stat-sub">RBI</p></div>}
+          {ops && <div class="stat-card"><p class="stat-label">OPS</p><p class="stat-value">{ops}</p><p class="stat-sub">OBP+SLG</p></div>}
+          {runs !== null && <div class="stat-card"><p class="stat-label">Runs</p><p class="stat-value">{runs}</p><p class="stat-sub">R</p></div>}
+          {hits !== null && <div class="stat-card"><p class="stat-label">Hits</p><p class="stat-value">{hits}</p><p class="stat-sub">H</p></div>}
+          {sb !== null && <div class="stat-card"><p class="stat-label">Stolen Bases</p><p class="stat-value">{sb}</p><p class="stat-sub">SB</p></div>}
+          {gamesPlayed !== null && <div class="stat-card"><p class="stat-label">Games</p><p class="stat-value">{gamesPlayed}</p><p class="stat-sub">G</p></div>}
+        </div>
+      ) : isPitcher && splitStat ? (
+        <div class="stats-grid">
+          {era && <div class="stat-card"><p class="stat-label">ERA</p><p class="stat-value highlight">{era}</p><p class="stat-sub">ERA</p></div>}
+          {wins !== null && losses !== null && <div class="stat-card"><p class="stat-label">Record</p><p class="stat-value">{wins}-{losses}</p><p class="stat-sub">W-L</p></div>}
+          {strikeOuts !== null && <div class="stat-card"><p class="stat-label">Strikeouts</p><p class="stat-value">{strikeOuts}</p><p class="stat-sub">SO</p></div>}
+          {whip && <div class="stat-card"><p class="stat-label">WHIP</p><p class="stat-value">{whip}</p><p class="stat-sub">WHIP</p></div>}
+          {ip && <div class="stat-card"><p class="stat-label">Innings</p><p class="stat-value">{ip}</p><p class="stat-sub">IP</p></div>}
+          {saves !== null && <div class="stat-card"><p class="stat-label">Saves</p><p class="stat-value">{saves}</p><p class="stat-sub">SV</p></div>}
+          {gamesPlayed !== null && <div class="stat-card"><p class="stat-label">Games</p><p class="stat-value">{gamesPlayed}</p><p class="stat-sub">G</p></div>}
+        </div>
+      ) : (
+        <p style="color:var(--gray-600);padding:1rem 0;">Stats not available for this player.</p>
+      )}
+
+      <AffiliateBlock links={affiliateLinks} heading="Recommended for Baseball Analytics" />
+    </div>
+  </div>
+</Layout>

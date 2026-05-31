@@ -1,0 +1,69 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+const teamsDir = join(process.cwd(), 'data/mlb/teams');
+const teams = readdirSync(teamsDir).filter(f => f.endsWith('.json')).map(f => {
+  const slug = f.replace('.json','');
+  const data = JSON.parse(readFileSync(join(teamsDir, f), 'utf-8'));
+  const info = data.info || {};
+  return {
+    slug, name: info.name || slug, abbreviation: info.abbreviation || '',
+    division: info.division?.name || '', league: info.league?.name || '',
+  };
+}).sort((a,b) => a.name.localeCompare(b.name));
+
+const divisions = [...new Set(teams.map(t => t.division))].sort();
+---
+<Layout
+  title="MLB Teams | Baseballab"
+  description="All 30 MLB teams — stats, rosters, and sabermetrics by division. American and National League."
+  ogUrl="https://baseballab.com/en/teams/"
+>
+  <style>
+    .page-container { max-width:960px; margin:0 auto; padding:2rem 1.5rem 5rem; }
+    .page-header { text-align:center; margin-bottom:2.5rem; }
+    .page-header h1 { font-size:2rem; font-weight:700; color:var(--navy); margin-bottom:.4rem; }
+    .subtitle { color:var(--gray-400); font-size:.95rem; }
+    .breadcrumb { padding:.75rem 0; font-size:.8rem; color:var(--gray-500); }
+    .breadcrumb a { color:var(--gray-500); } .breadcrumb span { margin:0 .4rem; }
+    .division { margin-bottom:2rem; }
+    .division-title { font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:.75rem; padding-bottom:.35rem; border-bottom:2px solid var(--gray-200); }
+    .teams-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:.75rem; }
+    .team-card { display:flex; align-items:center; gap:.75rem; padding:.75rem 1rem; background:var(--white); border:1px solid var(--gray-200); border-radius:8px; text-decoration:none; color:inherit; transition:border-color .15s,box-shadow .15s; }
+    .team-card:hover { border-color:var(--navy); box-shadow:0 2px 8px rgba(26,58,92,.1); }
+    .team-abbr { font-size:.75rem; font-weight:700; background:var(--navy); color:#fff; border-radius:4px; padding:.1rem .4rem; flex-shrink:0; }
+    .team-name { flex:1; font-size:.9rem; font-weight:600; color:var(--navy-dark); }
+    .arrow { color:var(--gray-400); }
+  </style>
+  <div class="page-container">
+    <nav class="breadcrumb"><a href="/en/">Home</a><span>›</span><a href="/en/mlb/">MLB</a><span>›</span><span>Teams</span></nav>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context":"https://schema.org","@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
+        {"@type":"ListItem","position":2,"name":"MLB","item":"https://baseballab.com/en/mlb/"},
+        {"@type":"ListItem","position":3,"name":"Teams","item":"https://baseballab.com/en/teams/"}
+      ]
+    })} />
+    <header class="page-header">
+      <h1>MLB Teams</h1>
+      <p class="subtitle">All 30 MLB teams · Stats, rosters & more</p>
+    </header>
+    {divisions.map(div => (
+      <div class="division">
+        <h2 class="division-title">{div}</h2>
+        <div class="teams-grid">
+          {teams.filter(t => t.division === div).map(t => (
+            <a class="team-card" href={`/en/teams/${t.slug}/`}>
+              <span class="team-abbr">{t.abbreviation}</span>
+              <span class="team-name">{t.name}</span>
+              <span class="arrow">›</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</Layout>

@@ -1,0 +1,75 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+export async function getStaticPaths() {
+  const dir = join(process.cwd(), 'data/mlb/teams');
+  return readdirSync(dir).filter(f => f.endsWith('.json')).map(file => {
+    const slug = file.replace('.json','');
+    const data = JSON.parse(readFileSync(join(dir, file), 'utf-8'));
+    return { params: { slug }, props: { data } };
+  });
+}
+
+const { data } = Astro.props;
+const { info } = data;
+const name     = info.name ?? 'Unknown Team';
+const abbr     = info.abbreviation ?? '';
+const division = info.division?.name ?? '';
+const league   = info.league?.name ?? '';
+const venue    = info.venue?.name ?? '';
+const founded  = info.firstYearOfPlay ?? null;
+
+const description = `${name} (${abbr}) — MLB ${league}. ${division}. Home: ${venue}. Founded ${founded}. Stats & sabermetrics on Baseballab.`;
+---
+<Layout
+  title={`${name} — Stats & Info | MLB | Baseballab`}
+  description={description}
+  ogUrl={`https://baseballab.com/en/teams/${Astro.params.slug}/`}
+>
+  <style slot="head">
+    .team-hero { background:var(--navy); color:#fff; padding:3rem 0 2rem; }
+    .team-hero .container { display:flex; flex-direction:column; gap:.5rem; }
+    .team-hero h1 { font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; margin:0; }
+    .team-badge { display:inline-block; background:rgba(255,255,255,.15); padding:.2rem .75rem; border-radius:20px; font-size:.85rem; font-weight:600; width:fit-content; }
+    .team-body { padding:2rem 0 4rem; }
+    .info-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin:2rem 0; }
+    .info-item { background:var(--gray-100); border:1px solid var(--gray-200); border-radius:8px; padding:1rem 1.1rem; }
+    .info-label { font-size:.75rem; font-weight:700; color:var(--gray-600); text-transform:uppercase; letter-spacing:.05em; margin:0 0 .25rem; }
+    .info-value { font-size:1rem; font-weight:600; color:var(--text); margin:0; }
+    .breadcrumb { font-size:.85rem; color:rgba(255,255,255,.7); margin-bottom:1rem; }
+    .breadcrumb a { color:rgba(255,255,255,.7); }
+    .players-link { display:inline-flex; align-items:center; gap:.5rem; background:var(--red); color:#fff; padding:.75rem 1.5rem; border-radius:8px; font-weight:700; font-size:.95rem; text-decoration:none; margin-top:1rem; transition:background .15s; }
+    .players-link:hover { background:var(--red-hover); }
+  </style>
+
+  <section class="team-hero">
+    <div class="container">
+      <nav class="breadcrumb"><a href="/en/">Baseballab</a> › <a href="/en/teams/">MLB Teams</a> › {name}</nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
+          {"@type":"ListItem","position":2,"name":"MLB Teams","item":"https://baseballab.com/en/teams/"},
+          {"@type":"ListItem","position":3,"name":name}
+        ]
+      })} />
+      <h1>{name}</h1>
+      <span class="team-badge">{league}</span>
+    </div>
+  </section>
+
+  <div class="team-body">
+    <div class="container">
+      <div class="info-grid">
+        {abbr && <div class="info-item"><p class="info-label">Abbreviation</p><p class="info-value">{abbr}</p></div>}
+        {league && <div class="info-item"><p class="info-label">League</p><p class="info-value">{league}</p></div>}
+        {division && <div class="info-item"><p class="info-label">Division</p><p class="info-value">{division}</p></div>}
+        {venue && <div class="info-item"><p class="info-label">Home Stadium</p><p class="info-value">{venue}</p></div>}
+        {founded && <div class="info-item"><p class="info-label">Founded</p><p class="info-value">{founded}</p></div>}
+      </div>
+      <a href="/en/players/" class="players-link">View All MLB Players →</a>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,117 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { loadStandings, loadMeta, NPB_TEAMS, NPB_SEASON } from '../../../lib/npb';
+
+const standings = loadStandings();
+const meta = loadMeta();
+const asOf = meta.asOf || '';
+
+const teamNameEn: Record<string, string> = {
+  'yomiuri-giants':'Yomiuri Giants','hanshin-tigers':'Hanshin Tigers','hiroshima-carp':'Hiroshima Carp',
+  'yakult-swallows':'Tokyo Yakult Swallows','baystars':'Yokohama DeNA BayStars','chunichi-dragons':'Chunichi Dragons',
+  'softbank-hawks':'Fukuoka SoftBank Hawks','lotte-marines':'Chiba Lotte Marines','seibu-lions':'Saitama Seibu Lions',
+  'orix-buffaloes':'Orix Buffaloes','rakuten-eagles':'Tohoku Rakuten Golden Eagles','nihon-ham-fighters':'Hokkaido Nippon-Ham Fighters',
+};
+---
+<Layout
+  title={`NPB Data Analysis ${NPB_SEASON} | Central & Pacific League | Baseballab`}
+  description={`NPB ${NPB_SEASON} season standings, player stats for all 12 teams. Central and Pacific League data updated daily.`}
+  ogUrl="https://baseballab.com/en/npb/"
+>
+  <style slot="head">
+    .npb-hero { background:linear-gradient(135deg,#7b1a2a 0%,#9b2335 55%,#c0392b 100%); color:var(--white); padding:3.5rem 1.25rem 2.75rem; text-align:center; }
+    .npb-eyebrow { display:inline-block; background:rgba(0,0,0,.2); font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.3rem .9rem; border-radius:9999px; margin-bottom:1rem; }
+    .npb-hero h1 { font-size:clamp(1.8rem,4vw,2.7rem); font-weight:900; letter-spacing:-.03em; margin-bottom:.75rem; }
+    .npb-hero h1 em { color:#ffcdd2; font-style:normal; }
+    .npb-sub { color:rgba(255,255,255,.85); max-width:560px; margin:0 auto; font-size:clamp(.9rem,1.8vw,1rem); line-height:1.75; }
+    .breadcrumb { padding:.75rem 0; font-size:.8rem; color:var(--gray-500); } .breadcrumb a { color:var(--gray-500); } .breadcrumb span { margin:0 .4rem; }
+    .section { padding:2.5rem 0 3.5rem; } .section-alt { background:var(--gray-100); }
+    .section-header { margin-bottom:1.5rem; }
+    .section-label { display:inline-block; color:var(--red); font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.4rem; }
+    .section-title { font-size:clamp(1.2rem,2.5vw,1.5rem); font-weight:800; color:var(--navy); }
+    .std-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
+    .std-card { background:var(--white); border:1px solid var(--gray-200); border-radius:12px; overflow:hidden; }
+    .std-head { padding:.65rem 1rem; font-size:.82rem; font-weight:700; color:var(--white); }
+    .std-head.cl { background:#1a3a5c; } .std-head.pl { background:#7b1a2a; }
+    table.std-table { width:100%; border-collapse:collapse; font-size:.82rem; }
+    table.std-table th { background:rgba(0,0,0,.04); font-size:.68rem; color:var(--gray-600); text-transform:uppercase; padding:.4rem .6rem; text-align:right; }
+    table.std-table th:first-child { text-align:left; }
+    table.std-table td { padding:.45rem .6rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; }
+    table.std-table td:first-child { text-align:left; font-weight:600; }
+    .leaders-banner { display:flex; align-items:center; gap:1.25rem; background:var(--navy-dark); color:var(--white); padding:1.25rem 1.5rem; border-radius:12px; text-decoration:none; transition:background .2s; margin-bottom:1.5rem; }
+    .leaders-banner:hover { background:var(--navy); }
+    .lb-icon { font-size:2.25rem; flex-shrink:0; }
+    .lb-title { font-size:1.05rem; font-weight:700; } .lb-desc { font-size:.85rem; color:rgba(255,255,255,.7); margin-top:.2rem; }
+    .team-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin-top:1.25rem; }
+    .team-card a { display:flex; align-items:center; gap:.75rem; background:var(--white); border:1px solid var(--gray-200); border-radius:10px; padding:.85rem 1rem; text-decoration:none; transition:border-color .15s,box-shadow .15s; }
+    .team-card a:hover { border-color:var(--navy); box-shadow:0 4px 12px rgba(26,58,92,.1); }
+    .team-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+    .team-name { font-size:.88rem; font-weight:600; color:var(--navy-dark); }
+  </style>
+
+  <section class="npb-hero">
+    <div class="container">
+      <p class="npb-eyebrow">🇯🇵 NPB {NPB_SEASON}</p>
+      <h1>NPB <em>Data Analysis</em></h1>
+      <p class="npb-sub">Central & Pacific League standings and player stats — updated daily from NPB.jp.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="breadcrumb"><a href="/en/">Home</a><span>›</span><span>NPB</span></nav>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <a href="/en/npb/leaders/" class="leaders-banner">
+        <div class="lb-icon">📊</div>
+        <div>
+          <div class="lb-title">NPB {NPB_SEASON} Season Leaders</div>
+          <div class="lb-desc">AVG · HR · RBI · ERA · SO — both leagues{asOf ? ` · As of ${asOf}` : ''}</div>
+        </div>
+      </a>
+
+      <div class="section-header">
+        <p class="section-label">🏆 Standings</p>
+        <h2 class="section-title">NPB {NPB_SEASON} Standings{asOf ? ` (as of ${asOf})` : ''}</h2>
+      </div>
+      <div class="std-grid">
+        {[['central','Central League','cl'],['pacific','Pacific League','pl']].map(([key,label,cls]) => (
+          <div class="std-card">
+            <div class={`std-head ${cls}`}>{label}</div>
+            <table class="std-table">
+              <thead><tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>GB</th></tr></thead>
+              <tbody>
+                {(standings[key] || []).map((r: any) => (
+                  <tr>
+                    <td><a href={`/en/npb/teams/${r.teamSlug}/`} style="color:inherit">{teamNameEn[r.teamSlug] || r.teamName}</a></td>
+                    <td>{r.wins}</td><td>{r.losses}</td><td>{r.ties}</td><td>{r.pct}</td><td>{r.gb}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Teams</p>
+        <h2 class="section-title">NPB Teams</h2>
+      </div>
+      <div class="team-grid">
+        {NPB_TEAMS.map(t => (
+          <div class="team-card">
+            <a href={`/en/npb/teams/${t.slug}/`}>
+              <span class="team-dot" style={`background:${t.color}`}></span>
+              <span class="team-name">{teamNameEn[t.slug] || t.name}</span>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

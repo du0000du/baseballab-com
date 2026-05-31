@@ -1,0 +1,112 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import AffiliateBlock from '../../../../components/AffiliateBlock.astro';
+import { loadPlayers, NPB_SEASON } from '../../../../lib/npb';
+
+export async function getStaticPaths() {
+  return loadPlayers().map(p => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+const s = p.stats || {};
+const isBat   = p.group === 'batting';
+const leagueEn = p.league === 'central' ? 'Central League' : 'Pacific League';
+
+let snip = '';
+if (isBat) {
+  const parts: string[] = [];
+  if (s.avg  != null) parts.push(`AVG ${s.avg}`);
+  if (s.hr   != null) parts.push(`${s.hr} HR`);
+  if (s.rbi  != null) parts.push(`${s.rbi} RBI`);
+  if (s.ops  != null) parts.push(`OPS ${s.ops}`);
+  snip = parts.length ? `In ${NPB_SEASON}: ${parts.join(' · ')}.` : '';
+} else {
+  const parts: string[] = [];
+  if (s.wins != null) parts.push(`${s.wins}W-${s.losses??0}L`);
+  if (s.era  != null) parts.push(`ERA ${s.era}`);
+  if (s.so   != null) parts.push(`${s.so} SO`);
+  if (s.saves) parts.push(`${s.saves} SV`);
+  snip = parts.length ? `In ${NPB_SEASON}: ${parts.join(' · ')}.` : '';
+}
+
+const batCards: [string, any, string, boolean][] = [
+  ['Batting Avg', s.avg, 'AVG', true], ['Home Runs', s.hr, 'HR', false], ['RBI', s.rbi, 'RBI', false],
+  ['OPS', s.ops, 'OBP+SLG', false], ['Hits', s.hits, 'H', false], ['Runs', s.runs, 'R', false],
+  ['Stolen Bases', s.sb, 'SB', false], ['OBP', s.obp, 'OBP', false], ['SLG', s.slg, 'SLG', false], ['Games', s.games, 'G', false],
+];
+const pitCards: [string, any, string, boolean][] = [
+  ['ERA', s.era, 'ERA', true], ['Record', (s.wins != null ? `${s.wins}-${s.losses??0}` : null), 'W-L', false],
+  ['Strikeouts', s.so, 'SO', false], ['Saves', s.saves, 'SV', false], ['Holds', s.holds, 'H', false],
+  ['WHIP', s.whip, 'WHIP', false], ['Innings', s.ip, 'IP', false], ['Games', s.games, 'G', false], ['Win Pct', s.winpct, 'PCT', false],
+];
+const cards = (isBat ? batCards : pitCards).filter(c => c[1] != null && c[1] !== '');
+
+const AMAZON_TAG = 'baseballab22-22';
+const links = [
+  { label: 'NPB Data Analysis Guide', url: `https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83+%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90+%E6%95%99%E7%A7%91%E6%9B%B8&tag=${AMAZON_TAG}`, pr: true, description: 'Essential intro to reading NPB stats', icon: '📘', bgColor: '#1a3a5c', imgUrl: 'https://covers.openlibrary.org/b/isbn/4583116683-M.jpg' },
+  { label: 'Baseball Score Book', url: `https://www.amazon.co.jp/s?k=%E9%87%8E%E7%90%83+%E3%82%B9%E3%82%B3%E3%82%A2%E3%83%96%E3%83%83%E3%82%AF+%E5%85%AC%E5%BC%8F&tag=${AMAZON_TAG}`, pr: true, description: 'Track every play to deepen game understanding', icon: '📓', bgColor: '#0f2540', imgUrl: 'https://covers.openlibrary.org/b/isbn/4780422787-M.jpg' },
+  { label: 'NPB 2026 Season Preview', url: `https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83+%E8%A6%B3%E6%88%A6%E3%82%AC%E3%82%A4%E3%83%89+2026&tag=${AMAZON_TAG}`, pr: true, description: 'All 12 teams, key players, season outlook', icon: '⚾', bgColor: '#c0392b' },
+];
+
+const title = `${p.nameRomaji} (${p.name}) — ${NPB_SEASON} Stats | ${p.teamName} | Baseballab`;
+const desc  = `${p.nameRomaji} (${p.teamName}, NPB ${leagueEn}) ${NPB_SEASON} season stats & profile. ${snip} Full data on Baseballab.`;
+---
+<Layout title={title} description={desc} ogUrl={`https://baseballab.com/en/npb/players/${p.slug}/`}>
+  <style slot="head">
+    .ph { background:var(--navy-dark); color:#fff; padding:2.75rem 0 2rem; }
+    .ph .container { display:flex; flex-direction:column; gap:.5rem; }
+    .breadcrumb { font-size:.82rem; color:rgba(255,255,255,.7); } .breadcrumb a { color:rgba(255,255,255,.7); }
+    .ph-team { font-size:.9rem; opacity:.8; font-weight:600; }
+    .ph h1 { font-size:clamp(1.8rem,4vw,2.7rem); font-weight:800; margin:0; }
+    .ph-sub { font-size:.9rem; opacity:.8; }
+    .pb { padding:2rem 0 4rem; }
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:.85rem; margin:1.5rem 0 2.5rem; }
+    .sc { background:#fff; border:1px solid var(--gray-200); border-radius:10px; padding:1.1rem .9rem; text-align:center; }
+    .sc-label { font-size:.68rem; font-weight:700; color:var(--gray-600); text-transform:uppercase; letter-spacing:.06em; margin:0 0 .35rem; }
+    .sc-val { font-size:1.7rem; font-weight:800; color:var(--navy); margin:0; line-height:1; font-variant-numeric:tabular-nums; }
+    .sc-val.hi { color:var(--red); }
+    .sc-sub { font-size:.72rem; color:var(--gray-400); margin:.25rem 0 0; }
+    h2.sec { font-size:1.15rem; font-weight:700; color:var(--navy); margin:0 0 .5rem; border-bottom:2px solid var(--navy); padding-bottom:.3rem; }
+    .src-note { font-size:.78rem; color:var(--gray-500); margin:0 0 1rem; }
+    @media(max-width:560px){ .stats-grid{grid-template-columns:repeat(2,1fr);} }
+  </style>
+
+  <section class="ph">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/en/">Baseballab</a> › <a href="/en/npb/">NPB</a> › <a href={`/en/npb/teams/${p.teamSlug}/`}>{p.teamName}</a> › {p.nameRomaji}
+      </nav>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
+          {"@type":"ListItem","position":2,"name":"NPB","item":"https://baseballab.com/en/npb/"},
+          {"@type":"ListItem","position":3,"name":p.teamName,"item":`https://baseballab.com/en/npb/teams/${p.teamSlug}/`},
+          {"@type":"ListItem","position":4,"name":p.nameRomaji}
+        ]
+      })} />
+      <p class="ph-team">{p.teamName} · {leagueEn}</p>
+      <h1>{p.nameRomaji}</h1>
+      <p class="ph-sub">{p.name} · {isBat ? 'Batter' : 'Pitcher'}</p>
+    </div>
+  </section>
+
+  <div class="pb">
+    <div class="container">
+      <h2 class="sec">{NPB_SEASON} Stats</h2>
+      <p class="src-note">Source: NPB.jp official stats</p>
+      {cards.length > 0 ? (
+        <div class="stats-grid">
+          {cards.map(([label, val, sub, hi]) => (
+            <div class="sc">
+              <p class="sc-label">{label}</p>
+              <p class={`sc-val${hi ? ' hi' : ''}`}>{val}</p>
+              <p class="sc-sub">{sub}</p>
+            </div>
+          ))}
+        </div>
+      ) : <p style="color:var(--gray-600);padding:1rem 0;">Stats not available for this player.</p>}
+
+      <AffiliateBlock links={links} heading="Recommended for Baseball Analytics" />
+    </div>
+  </div>
+</Layout>
