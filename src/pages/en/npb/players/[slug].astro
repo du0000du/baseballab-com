@@ -40,11 +40,12 @@ const pitCards: [string, any, string, boolean][] = [
 ];
 const cards = (isBat ? batCards : pitCards).filter(c => c[1] != null && c[1] !== '');
 
-const AMAZON_TAG = 'baseballab22-22';
+// TODO: Replace YOURTAG-20 with your Amazon.com Associates tag after registering at affiliate-program.amazon.com
 const links = [
-  { label: 'NPB Data Analysis Guide', url: `https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83+%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90+%E6%95%99%E7%A7%91%E6%9B%B8&tag=${AMAZON_TAG}`, pr: true, description: 'Essential intro to reading NPB stats', icon: '📘', bgColor: '#1a3a5c', imgUrl: 'https://covers.openlibrary.org/b/isbn/4583116683-M.jpg' },
-  { label: 'Baseball Score Book', url: `https://www.amazon.co.jp/s?k=%E9%87%8E%E7%90%83+%E3%82%B9%E3%82%B3%E3%82%A2%E3%83%96%E3%83%83%E3%82%AF+%E5%85%AC%E5%BC%8F&tag=${AMAZON_TAG}`, pr: true, description: 'Track every play to deepen game understanding', icon: '📓', bgColor: '#0f2540', imgUrl: 'https://covers.openlibrary.org/b/isbn/4780422787-M.jpg' },
-  { label: 'NPB 2026 Season Preview', url: `https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83+%E8%A6%B3%E6%88%A6%E3%82%AC%E3%82%A4%E3%83%89+2026&tag=${AMAZON_TAG}`, pr: true, description: 'All 12 teams, key players, season outlook', icon: '⚾', bgColor: '#c0392b' },
+  { label: 'Moneyball: The Art of Winning an Unfair Game', url: 'https://www.amazon.com/dp/0393324818?tag=YOURTAG-20', pr: true, description: 'The story that brought sabermetrics to the mainstream. The perfect on-ramp for any fan curious about why data is reshaping baseball.', icon: '💰', bgColor: '#1b5e20', imgUrl: 'https://covers.openlibrary.org/b/isbn/0393324818-M.jpg' },
+  { label: 'The Book: Playing the Percentages in Baseball', url: 'https://www.amazon.com/dp/1597971294?tag=YOURTAG-20', pr: true, description: 'The sabermetrics reference that pros actually cite—matchups, platoons, clutch myths, and run/win expectancy, backed by the data.', icon: '📊', bgColor: '#1a3a5c', imgUrl: 'https://covers.openlibrary.org/b/isbn/1597971294-M.jpg' },
+  { label: 'Analyzing Baseball Data with R (3rd Ed.)', url: 'https://www.amazon.com/dp/1032668091?tag=YOURTAG-20', pr: true, description: 'Hands-on sabermetrics in R: run expectancy, catcher framing, launch angle and exit velocity. For readers who want to crunch the numbers themselves.', icon: '📈', bgColor: '#2d6a4f', imgUrl: 'https://covers.openlibrary.org/b/isbn/1032668091-M.jpg' },
+  { label: 'Pocket Radar Ball Coach (Radar Gun)', url: 'https://www.amazon.com/dp/B00ISCXPJA?tag=YOURTAG-20', pr: true, description: 'Pro-level speed readings (±1 mph) in your pocket—used by MLB teams. Capture your own pitch and exit velocities.', icon: '📡', bgColor: '#0f2540' },
 ];
 
 const title = `${p.nameRomaji} (${p.name}) — ${NPB_SEASON} Stats | ${p.teamName} | Baseballab`;
@@ -106,7 +107,7 @@ const desc  = `${p.nameRomaji} (${p.teamName}, NPB ${leagueEn}) ${NPB_SEASON} se
         </div>
       ) : <p style="color:var(--gray-600);padding:1rem 0;">Stats not available for this player.</p>}
 
-      <AffiliateBlock links={links} heading="Recommended for Baseball Analytics" />
+      <AffiliateBlock links={links} heading="Recommended for Baseball Analytics" locale="en" />
     </div>
   </div>
 </Layout>

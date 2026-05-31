@@ -379,6 +379,13 @@ import Layout from '../layouts/Layout.astro';
       padding: 0.25rem 0.7rem;
       border-radius: 4px;
     }
+    .affiliate-disclosure {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 1.25rem;
+      text-align: center;
+    }
+    .affiliate-disclosure a { color: rgba(255,255,255,0.55); text-decoration: underline; }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
@@ -545,45 +552,58 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="section-title">おすすめの野球グッズ・書籍</h2>
       <p class="section-lead">データ分析・スキルアップに役立つアイテムをご紹介</p>
       <div class="affiliate-grid">
-        <!-- アフィリエイト枠1: 書籍 -->
-        <a href="https://www.amazon.co.jp/s?k=%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9+%E5%85%A5%E9%96%80+%E9%87%8E%E7%90%83&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+        <a href="https://www.amazon.co.jp/dp/4880654779?tag=baseballab22-22" class="affiliate-card" target="_blank" rel="sponsored noopener">
           <div class="affiliate-thumb" style="background:#1b5e20">
-            <img src="https://covers.openlibrary.org/b/isbn/4862556639-M.jpg" alt="" loading="lazy"
+            <img src="https://covers.openlibrary.org/b/isbn/4880654779-M.jpg" alt="" loading="lazy"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
             <span class="aff-icon-fallback" style="display:none">📗</span>
           </div>
           <div class="affiliate-info">
             <p class="badge-sponsor">スポンサー</p>
-            <h3>データで勝つ野球 セイバーメトリクス入門</h3>
-            <p>MLB・NPBを数値で読み解く必読書。指標の基礎から実戦活用まで丁寧に解説。</p>
+            <h3>セイバーメトリクス入門 脱常識で野球を科学する</h3>
+            <p>データで野球を読み解く思想と主要指標を体系的に解説。指標解説をより深く理解したい人に最適。</p>
             <span class="affiliate-cta">Amazonで見る →</span>
           </div>
         </a>
-        <!-- アフィリエイト枠2: 計測機器 -->
-        <a href="https://www.amazon.co.jp/s?k=%E3%83%A9%E3%83%97%E3%82%BD%E3%83%BC%E3%83%89+MLM2+PRO&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
+        <a href="https://www.amazon.co.jp/dp/4768318029?tag=baseballab22-22" class="affiliate-card" target="_blank" rel="sponsored noopener">
+          <div class="affiliate-thumb" style="background:#1a3a5c">
+            <img src="https://covers.openlibrary.org/b/isbn/4768318029-M.jpg" alt="" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <span class="aff-icon-fallback" style="display:none">📘</span>
+          </div>
+          <div class="affiliate-info">
+            <p class="badge-sponsor">スポンサー</p>
+            <h3>プロ野球・MLBが10倍楽しくなる！ よくわかるセイバーメトリクス</h3>
+            <p>大谷翔平らの実数値を題材に、OPS・WAR・FIPからトラッキングデータまで図解。</p>
+            <span class="affiliate-cta">Amazonで見る →</span>
+          </div>
+        </a>
+        <a href="https://www.amazon.co.jp/dp/453406067X?tag=baseballab22-22" class="affiliate-card" target="_blank" rel="sponsored noopener">
+          <div class="affiliate-thumb" style="background:#2d6a4f">
+            <img src="https://covers.openlibrary.org/b/isbn/453406067X-M.jpg" alt="" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <span class="aff-icon-fallback" style="display:none">🐍</span>
+          </div>
+          <div class="affiliate-info">
+            <p class="badge-sponsor">スポンサー</p>
+            <h3>野球データでやさしく学べるPython入門</h3>
+            <p>プロ野球データを題材にPythonでの分析を実践習得。「読む」から「自分で分析する」へ。</p>
+            <span class="affiliate-cta">Amazonで見る →</span>
+          </div>
+        </a>
+        <a href="https://www.amazon.co.jp/dp/B00KGHXUZ4?tag=baseballab22-22" class="affiliate-card" target="_blank" rel="sponsored noopener">
           <div class="affiliate-thumb" style="background:#0f2540">
             <span class="aff-icon-fallback">📡</span>
           </div>
           <div class="affiliate-info">
             <p class="badge-sponsor">スポンサー</p>
-            <h3>ラプソード MLM2 PRO</h3>
-            <p>投球・打撃データをリアルタイム計測。回転数・打球速度・スイング軌道を可視化。</p>
-            <span class="affiliate-cta">Amazonで見る →</span>
-          </div>
-        </a>
-        <!-- アフィリエイト枠3: 野球グッズ -->
-        <a href="https://www.amazon.co.jp/s?k=MLB+%E5%A4%A7%E8%B0%B7%E7%BF%94%E5%B9%B3+%E5%85%AC%E5%BC%8F%E3%82%B0%E3%83%83%E3%82%BA&tag=baseballab22-22" class="affiliate-card" target="_blank" rel="noopener noreferrer sponsored">
-          <div class="affiliate-thumb" style="background:#c0392b">
-            <span class="aff-icon-fallback">🧢</span>
-          </div>
-          <div class="affiliate-info">
-            <p class="badge-sponsor">スポンサー</p>
-            <h3>MLB公式グッズ</h3>
-            <p>大谷翔平・山本由伸ほか人気選手のジャージ・キャップをAmazonで購入。</p>
+            <h3>Pocket Radar ボールコーチ（スピードガン）</h3>
+            <p>手のひらサイズで球速・打球速度を±1mph精度で計測。指導者・選手が自分のデータを取りに行くための実機。</p>
             <span class="affiliate-cta">Amazonで見る →</span>
           </div>
         </a>
       </div>
+      <p class="affiliate-disclosure">当サイトはAmazonアソシエイト・プログラムの参加者です。適格販売により収入を得ることがあります。<a href="/disclosure/">詳細</a></p>
     </div>
   </section>
 

@@ -42,11 +42,11 @@ if (isBat) {
 }
 const atomic = `${p.name}（${p.nameRomaji}）は${p.teamName}に所属するNPB${leagueJa}の選手。${snip}最新の成績データはBaseballabで確認できます。`;
 
-const AMAZON_TAG = 'baseballab22-22';
 const links = [
-  { label: 'プロ野球データ分析の教科書', url: `https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83+%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90+%E6%95%99%E7%A7%91%E6%9B%B8&tag=${AMAZON_TAG}`, pr: true, description: '指標で読み解くNPB観戦の入門書', icon: '📘', bgColor: '#1a3a5c', imgUrl: 'https://covers.openlibrary.org/b/isbn/4583116683-M.jpg' },
-  { label: '野球スコアブック 公式記録員監修版', url: `https://www.amazon.co.jp/s?k=%E9%87%8E%E7%90%83+%E3%82%B9%E3%82%B3%E3%82%A2%E3%83%96%E3%83%83%E3%82%AF+%E5%85%AC%E5%BC%8F&tag=${AMAZON_TAG}`, pr: true, description: '試合記録をつけて選手成績をより深く理解', icon: '📓', bgColor: '#0f2540', imgUrl: 'https://covers.openlibrary.org/b/isbn/4780422787-M.jpg' },
-  { label: 'プロ野球 観戦ガイド 2026', url: `https://www.amazon.co.jp/s?k=%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83+%E8%A6%B3%E6%88%A6%E3%82%AC%E3%82%A4%E3%83%89+2026&tag=${AMAZON_TAG}`, pr: true, description: '12球団の戦力・注目選手を網羅', icon: '⚾', bgColor: '#c0392b' },
+  { label: 'セイバーメトリクス入門 脱常識で野球を科学する', url: 'https://www.amazon.co.jp/dp/4880654779?tag=baseballab22-22', pr: true, description: 'データで野球を読み解く思想と主要指標を体系的に解説。当サイトの指標解説と合わせて読みたい一冊。', icon: '📗', bgColor: '#1b5e20', imgUrl: 'https://covers.openlibrary.org/b/isbn/4880654779-M.jpg' },
+  { label: 'プロ野球・MLBが10倍楽しくなる！ よくわかるセイバーメトリクス', url: 'https://www.amazon.co.jp/dp/4768318029?tag=baseballab22-22', pr: true, description: '大谷翔平らの実数値を題材に、OPS・WAR・FIPからトラッキングデータまで図解。', icon: '📘', bgColor: '#1a3a5c', imgUrl: 'https://covers.openlibrary.org/b/isbn/4768318029-M.jpg' },
+  { label: '野球データでやさしく学べるPython入門', url: 'https://www.amazon.co.jp/dp/453406067X?tag=baseballab22-22', pr: true, description: 'プロ野球データを題材にPythonでの分析を実践習得。「読む」から「自分で分析する」へ。', icon: '🐍', bgColor: '#2d6a4f', imgUrl: 'https://covers.openlibrary.org/b/isbn/453406067X-M.jpg' },
+  { label: 'Pocket Radar ボールコーチ（スピードガン）', url: 'https://www.amazon.co.jp/dp/B00KGHXUZ4?tag=baseballab22-22', pr: true, description: '手のひらサイズで球速・打球速度を±1mph精度で計測。指導者・選手が自分のデータを取りに行くための実機。', icon: '📡', bgColor: '#0f2540' },
 ];
 const title = `${p.name}（${p.nameRomaji}）${NPB_SEASON}成績・プロフィール | ${p.teamName} | Baseballab`;
 const desc = `${p.name}（${p.teamName}・NPB${leagueJa}）の${NPB_SEASON}シーズン成績・プロフィール。${snip}Baseballabで詳細データを確認。`;

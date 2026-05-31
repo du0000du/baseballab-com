@@ -14,14 +14,19 @@ interface AffiliateLink {
 interface Props {
   links: AffiliateLink[];
   heading?: string;
+  locale?: 'ja' | 'en';
 }
-const { links, heading = 'おすすめ商品・サービス' } = Astro.props;
+const { links, heading = 'おすすめ商品・サービス', locale = 'ja' } = Astro.props;
+const ctaText = locale === 'en' ? 'View on Amazon →' : 'Amazonで見る →';
+const disclosureText = locale === 'en'
+  ? 'As an Amazon Associate, Baseballab earns from qualifying purchases.'
+  : '当サイトはAmazonアソシエイト・プログラムの参加者です。適格販売により収入を得ることがあります。';
 ---
 
 <aside class="affiliate-block" aria-label="広告・アフィリエイト">
   <p class="pr-disclosure">
-    ※本セクションには広告（アフィリエイトリンク）が含まれます。
-    <a href="/disclosure/">詳細はこちら</a>
+    {disclosureText}
+    {locale === 'ja' && <a href="/disclosure/">詳細はこちら</a>}
   </p>
   <h3 class="aff-heading">{heading}</h3>
   <div class="aff-cards">
@@ -29,7 +34,7 @@ const { links, heading = 'おすすめ商品・サービス' } = Astro.props;
       <a
         href={link.url}
         target="_blank"
-        rel="noopener noreferrer sponsored"
+        rel="sponsored noopener"
         class="aff-card"
         data-affiliate-label={link.label}
         onclick={`typeof gtag!=='undefined'&&gtag('event','affiliate_click',{affiliate_label:'${link.label.replace(/'/g,"\\'")}',page_location:location.href})`}
@@ -49,7 +54,7 @@ const { links, heading = 'おすすめ商品・サービス' } = Astro.props;
           {link.pr && <span class="aff-pr-badge">PR</span>}
           <p class="aff-name">{link.label}</p>
           {link.description && <p class="aff-desc">{link.description}</p>}
-          <span class="aff-btn">Amazonで見る →</span>
+          <span class="aff-btn">{ctaText}</span>
         </div>
       </a>
     ))}

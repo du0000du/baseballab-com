@@ -2,33 +2,43 @@
   "amazon_tag": "baseballab22-22",
   "links": [
     {
-      "id": "rapsodo-mlm2-pro",
-      "label": "ラプソード MLM2 PRO",
-      "url": "https://www.amazon.co.jp/s?k=%E3%83%A9%E3%83%97%E3%82%BD%E3%83%BC%E3%83%89+MLM2+PRO&tag=baseballab22-22",
+      "id": "sabr-intro",
+      "label": "セイバーメトリクス入門 脱常識で野球を科学する",
+      "url": "https://www.amazon.co.jp/dp/4880654779?tag=baseballab22-22",
+      "icon": "📗",
+      "bgColor": "#1b5e20",
+      "imgUrl": "https://covers.openlibrary.org/b/isbn/4880654779-M.jpg",
+      "pr": true,
+      "description": "データで野球を読み解く思想と主要指標を、定説を疑う視点から体系的に解説。当サイトの「指標解説」をより深く理解したい人に最適な一冊。"
+    },
+    {
+      "id": "sabr-fun",
+      "label": "プロ野球・MLBが10倍楽しくなる！ よくわかるセイバーメトリクス",
+      "url": "https://www.amazon.co.jp/dp/4768318029?tag=baseballab22-22",
+      "icon": "📘",
+      "bgColor": "#1a3a5c",
+      "imgUrl": "https://covers.openlibrary.org/b/isbn/4768318029-M.jpg",
+      "pr": true,
+      "description": "大谷翔平らの実数値を題材に、OPS・WAR・FIPからトラッキングデータまで図解。数式が苦手なファンでも読み進められる入門書。"
+    },
+    {
+      "id": "python-baseball",
+      "label": "野球データでやさしく学べるPython入門",
+      "url": "https://www.amazon.co.jp/dp/453406067X?tag=baseballab22-22",
+      "icon": "🐍",
+      "bgColor": "#2d6a4f",
+      "imgUrl": "https://covers.openlibrary.org/b/isbn/453406067X-M.jpg",
+      "pr": true,
+      "description": "プロ野球・大谷翔平のデータを題材に、Pythonでのグラフ作成・分析を実践しながら習得。「読む」から「自分で分析する」へ進みたい人へ。"
+    },
+    {
+      "id": "pocket-radar-jp",
+      "label": "Pocket Radar ボールコーチ（スピードガン）",
+      "url": "https://www.amazon.co.jp/dp/B00KGHXUZ4?tag=baseballab22-22",
       "icon": "📡",
       "bgColor": "#0f2540",
       "pr": true,
-      "description": "投球・打撃データを計測できるポータブルデバイス"
-    },
-    {
-      "id": "sabr-book",
-      "label": "データで勝つ野球 セイバーメトリクス入門",
-      "url": "https://www.amazon.co.jp/s?k=%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9+%E5%85%A5%E9%96%80+%E9%87%8E%E7%90%83&tag=baseballab22-22",
-      "icon": "📗",
-      "bgColor": "#1b5e20",
-      "imgUrl": "https://covers.openlibrary.org/b/isbn/4862556639-M.jpg",
-      "pr": true,
-      "description": "セイバーメトリクスの基礎から実践まで"
-    },
-    {
-      "id": "baseball-score-book",
-      "label": "野球スコアブック 公式記録員監修版",
-      "url": "https://www.amazon.co.jp/s?k=%E9%87%8E%E7%90%83+%E3%82%B9%E3%82%B3%E3%82%A2%E3%83%96%E3%83%83%E3%82%AF+%E5%85%AC%E5%BC%8F&tag=baseballab22-22",
-      "icon": "📓",
-      "bgColor": "#1a3a5c",
-      "imgUrl": "https://covers.openlibrary.org/b/isbn/4780422787-M.jpg",
-      "pr": true,
-      "description": "試合記録をつけながら野球をより深く楽しむ"
+      "description": "手のひらサイズで球速・打球速度を±1mph精度で計測。指導者・プレーヤーが自分のデータを取りに行くための実機。"
     }
   ]
 }
