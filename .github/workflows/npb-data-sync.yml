@@ -2,19 +2,22 @@ name: NPB Daily Data Sync
 
 on:
   schedule:
-    - cron: '0 1 * * *'    # 毎日 01:00 UTC = 10:00 JST（NPB.jp更新後）
-  workflow_dispatch:          # 手動実行可
+    - cron: '0 1 * * *'   # 毎日 01:00 UTC = 10:00 JST（NPB.jp更新後）
+    - cron: '0 2 * * *'   # 毎日 02:00 UTC = 11:00 JST（フォールバック）
+  workflow_dispatch:        # 手動実行可
 
 permissions:
   contents: write
 
 concurrency:
   group: npb-data-sync
-  cancel-in-progress: false
+  cancel-in-progress: false  # 先行ジョブ完了後に後続が走る（二重コミット防止）
 
 jobs:
   sync-npb:
     runs-on: ubuntu-latest
+    timeout-minutes: 20     # ハング防止
+
     steps:
       - uses: actions/checkout@v4
 
@@ -24,10 +27,16 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install pykakasi
+        run: pip install pykakasi --quiet
 
-      - name: Fetch NPB official stats
-        run: python3 scripts/fetch_npb.py --mode all
+      - name: Fetch NPB official stats (retry up to 3 times)
+        run: |
+          for i in 1 2 3; do
+            echo "Attempt $i/3"
+            python3 scripts/fetch_npb.py --mode all && break
+            echo "Attempt $i failed."
+            [ $i -lt 3 ] && sleep 30
+          done
 
       - name: Check generated files
         run: |
