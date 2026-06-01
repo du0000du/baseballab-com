@@ -86,10 +86,10 @@ const atomicText = `${name}（${posAbbr}）はMLBの現役選手。${birthCountr
 const pageTitle = `${name} 成績・プロフィール`;
 const description = `${name}（${posAbbr}）のMLB成績・プロフィール・最新情報。${birthCountry ? birthCountry + '出身。' : ''}${statsSnippet}Baseballabで詳細データを確認。`;
 const affiliateLinks = [
-  { label: 'セイバーメトリクス入門 脱常識で野球を科学する', url: 'https://www.amazon.co.jp/dp/4880654779?tag=baseballab22-22', pr: true, description: 'データで野球を読み解く思想と主要指標を体系的に解説。指標解説をより深く理解したい人に最適。', icon: '📗', bgColor: '#1b5e20', imgUrl: 'https://covers.openlibrary.org/b/isbn/4880654779-M.jpg' },
-  { label: 'プロ野球・MLBが10倍楽しくなる！ よくわかるセイバーメトリクス', url: 'https://www.amazon.co.jp/dp/4768318029?tag=baseballab22-22', pr: true, description: '大谷翔平らの実数値を題材に、OPS・WAR・FIPからトラッキングデータまで図解。', icon: '📘', bgColor: '#1a3a5c', imgUrl: 'https://covers.openlibrary.org/b/isbn/4768318029-M.jpg' },
-  { label: '野球データでやさしく学べるPython入門', url: 'https://www.amazon.co.jp/dp/453406067X?tag=baseballab22-22', pr: true, description: 'プロ野球データを題材にPythonでの分析を実践習得。「読む」から「自分で分析する」へ。', icon: '🐍', bgColor: '#2d6a4f', imgUrl: 'https://covers.openlibrary.org/b/isbn/453406067X-M.jpg' },
-  { label: 'Pocket Radar ボールコーチ（スピードガン）', url: 'https://www.amazon.co.jp/dp/B00KGHXUZ4?tag=baseballab22-22', pr: true, description: '手のひらサイズで球速・打球速度を±1mph精度で計測。指導者・選手が自分のデータを取りに行くための実機。', icon: '📡', bgColor: '#0f2540' },
+  { label: 'セイバーメトリクス入門 脱常識で野球を科学する', url: 'https://www.amazon.co.jp/dp/4880654779?tag=baseballab22-22', pr: true, description: 'データで野球を読み解く思想と主要指標を体系的に解説。指標解説をより深く理解したい人に最適。', icon: '📗', bgColor: '#1b5e20', imgUrl: 'https://m.media-amazon.com/images/I/519rUSeuIYL.jpg' },
+  { label: 'プロ野球・MLBが10倍楽しくなる！ よくわかるセイバーメトリクス', url: 'https://www.amazon.co.jp/dp/4768318029?tag=baseballab22-22', pr: true, description: '大谷翔平らの実数値を題材に、OPS・WAR・FIPからトラッキングデータまで図解。', icon: '📘', bgColor: '#1a3a5c', imgUrl: 'https://m.media-amazon.com/images/I/51lStvg+NoL.jpg' },
+  { label: '野球データでやさしく学べるPython入門', url: 'https://www.amazon.co.jp/dp/453406067X?tag=baseballab22-22', pr: true, description: 'プロ野球データを題材にPythonでの分析を実践習得。「読む」から「自分で分析する」へ。', icon: '🐍', bgColor: '#2d6a4f', imgUrl: 'https://m.media-amazon.com/images/I/51EilUzMNvL.jpg' },
+  { label: 'Pocket Radar ボールコーチ（スピードガン）', url: 'https://www.amazon.co.jp/dp/B00KGHXUZ4?tag=baseballab22-22', pr: true, description: '手のひらサイズで球速・打球速度を±1mph精度で計測。指導者・選手が自分のデータを取りに行くための実機。', icon: '📡', bgColor: '#0f2540', imgUrl: 'https://m.media-amazon.com/images/I/41+v5H4-36L._AC_.jpg' },
 ];
 ---
 <Layout title={pageTitle} description={description} ogUrl={`https://baseballab.com/players/${Astro.params.slug}/`}>
