@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-01T20:36:15Z",
+  "fetched_at": "2026-06-02T08:48:07Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -80,7 +80,7 @@
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".326"
+        "value": ".333"
       },
       {
         "rank": 2,
@@ -98,52 +98,52 @@
       },
       {
         "rank": 4,
-        "playerId": 673962,
-        "player": "Josh Jung",
-        "team": "TEX",
-        "value": ".316"
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".317"
       },
       {
         "rank": 5,
         "playerId": 669364,
         "player": "Xavier Edwards",
         "team": "MIA",
-        "value": ".314"
+        "value": ".313"
       },
       {
         "rank": 6,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
-        "value": ".310"
-      },
-      {
-        "rank": 7,
         "playerId": 687859,
         "player": "Troy Johnston",
         "team": "COL",
+        "value": ".312"
+      },
+      {
+        "rank": 7,
+        "playerId": 673962,
+        "player": "Josh Jung",
+        "team": "TEX",
         "value": ".310"
       },
       {
         "rank": 8,
+        "playerId": 682985,
+        "player": "Riley Greene",
+        "team": "DET",
+        "value": ".309"
+      },
+      {
+        "rank": 9,
         "playerId": 671739,
         "player": "Michael Harris II",
         "team": "ATL",
         "value": ".307"
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 700250,
         "player": "Ben Rice",
         "team": "NYY",
         "value": ".306"
-      },
-      {
-        "rank": 10,
-        "playerId": 808982,
-        "player": "Jung Hoo Lee",
-        "team": "SF",
-        "value": ".304"
       }
     ],
     "rbi": [
@@ -166,10 +166,10 @@
         "playerId": 689414,
         "player": "Liam Hicks",
         "team": "MIA",
-        "value": 45
+        "value": 46
       },
       {
-        "rank": 3,
+        "rank": 4,
         "playerId": 621566,
         "player": "Matt Olson",
         "team": "ATL",
@@ -242,17 +242,17 @@
       },
       {
         "rank": 4,
+        "playerId": 668227,
+        "player": "Randy Arozarena",
+        "team": "SEA",
+        "value": 17
+      },
+      {
+        "rank": 4,
         "playerId": 677951,
         "player": "Bobby Witt Jr.",
         "team": "KC",
         "value": 17
-      },
-      {
-        "rank": 5,
-        "playerId": 668227,
-        "player": "Randy Arozarena",
-        "team": "SEA",
-        "value": 15
       },
       {
         "rank": 6,
@@ -354,7 +354,7 @@
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
-        "value": "2.31"
+        "value": "2.24"
       },
       {
         "rank": 10,
@@ -467,45 +467,45 @@
       },
       {
         "rank": 5,
+        "playerId": 667755,
+        "player": "José Soriano",
+        "team": "LAA",
+        "value": 85
+      },
+      {
+        "rank": 6,
         "playerId": 672282,
         "player": "Reid Detmers",
         "team": "LAA",
         "value": 82
       },
       {
-        "rank": 6,
+        "rank": 7,
         "playerId": 677952,
         "player": "Braxton Ashcraft",
         "team": "PIT",
         "value": 81
       },
       {
-        "rank": 6,
+        "rank": 7,
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
         "value": 81
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 519242,
         "player": "Chris Sale",
         "team": "ATL",
         "value": 80
       },
       {
-        "rank": 9,
-        "playerId": 666200,
-        "player": "Jesús Luzardo",
-        "team": "PHI",
-        "value": 78
-      },
-      {
-        "rank": 9,
-        "playerId": 667755,
-        "player": "José Soriano",
-        "team": "LAA",
-        "value": 78
+        "rank": 10,
+        "playerId": 657746,
+        "player": "Joe Ryan",
+        "team": "MIN",
+        "value": 79
       }
     ],
     "saves": [
@@ -532,16 +532,16 @@
       },
       {
         "rank": 4,
-        "playerId": 676617,
-        "player": "Riley O'Brien",
-        "team": "STL",
-        "value": 14
-      },
-      {
-        "rank": 4,
         "playerId": 623149,
         "player": "Paul Sewald",
         "team": "AZ",
+        "value": 15
+      },
+      {
+        "rank": 5,
+        "playerId": 676617,
+        "player": "Riley O'Brien",
+        "team": "STL",
         "value": 14
       },
       {
