@@ -1,0 +1,210 @@
+---
+// /en/npb/trends/ -- NPB team trend analysis (last 3 games momentum)
+// Data: data/npb/results.json (scraped from npb.jp)
+import Layout from '../../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let data: any = null;
+try {
+  data = JSON.parse(readFileSync(join(process.cwd(), 'data/npb/results.json'), 'utf-8'));
+} catch {}
+
+const EN_NAME: Record<string, string> = {
+  '阪神タイガース':               'Hanshin Tigers',
+  '横浜DeNAベイスターズ':         'DeNA BayStars',
+  '読売ジャイアンツ':             'Yomiuri Giants',
+  '中日ドラゴンズ':               'Chunichi Dragons',
+  '広島東洋カープ':               'Hiroshima Carp',
+  '東京ヤクルトスワローズ':       'Yakult Swallows',
+  'オリックス・バファローズ':     'Orix Buffaloes',
+  '福岡ソフトバンクホークス':     'SoftBank Hawks',
+  '北海道日本ハムファイターズ':   'Nippon-Ham Fighters',
+  '東北楽天ゴールデンイーグルス': 'Rakuten Eagles',
+  '埼玉西武ライオンズ':           'Seibu Lions',
+  '千葉ロッテマリーンズ':         'Lotte Marines',
+};
+
+type TrendTeam = { slug: string; name: string; enName: string; league: string; color: string;
+  wins3: number; losses3: number; ties3: number; rsTotal: number; raTotal: number; games: number };
+
+const trendTeams: TrendTeam[] = (data?.teams ?? []).map((t: any) => {
+  const g = t.recentGames ?? [];
+  const wins3 = g.filter((x: any) => x.result === 'W').length;
+  const losses3 = g.filter((x: any) => x.result === 'L').length;
+  const ties3 = g.filter((x: any) => x.result === 'T').length;
+  const rsTotal = g.reduce((s: number, x: any) => s + (x.score ?? 0), 0);
+  const raTotal = g.reduce((s: number, x: any) => s + (x.opponentScore ?? 0), 0);
+  return { slug: t.slug, name: t.name, enName: EN_NAME[t.name] ?? t.name,
+    league: t.league, color: t.color, wins3, losses3, ties3, rsTotal, raTotal, games: g.length };
+}).filter((t: TrendTeam) => t.games > 0);
+
+const hotAll = trendTeams.filter(t => t.wins3 === 3);
+const coldAll = trendTeams.filter(t => t.losses3 === 3);
+
+function sortByTrend(arr: TrendTeam[]) {
+  return [...arr].sort((a, b) => {
+    const wA = a.wins3 * 2 + a.ties3 - a.losses3 * 2;
+    const wB = b.wins3 * 2 + b.ties3 - b.losses3 * 2;
+    return wB !== wA ? wB - wA : (b.rsTotal - b.raTotal) - (a.rsTotal - a.raTotal);
+  });
+}
+
+const asOf = data?.asOfDate ?? '';
+const season = data?.season ?? '';
+
+function rnd1(n: number) { return n.toFixed(1); }
+---
+<Layout
+  title={`NPB ${season} Team Trends | Hot/Cold Rankings | Baseballab`}
+  description={`NPB ${season} team trend analysis for all 12 Central and Pacific League teams. Last 3 games momentum, runs scored/allowed, and hot/cold rankings updated daily.`}
+  ogUrl="https://baseballab.com/en/npb/trends/"
+>
+  <style slot="head">
+    .tr-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .tr-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .tr-section { padding:2.5rem 0; }
+    .tr-section.alt { background:var(--gray-100); }
+    .sec-title { font-size:1.15rem; font-weight:800; color:var(--navy); margin-bottom:.25rem; }
+    .sec-desc { font-size:.82rem; color:var(--gray-600); margin-bottom:1.25rem; line-height:1.6; }
+    .hc-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .hc-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .hc-head { padding:.5rem 1rem; font-size:.88rem; font-weight:800; }
+    .hc-head.hot { background:#dcfce7; color:#166534; }
+    .hc-head.cold { background:#fee2e2; color:#991b1b; }
+    .hc-row { display:flex; align-items:center; gap:.6rem; padding:.38rem 1rem; border-bottom:1px solid var(--gray-100); font-size:.85rem; }
+    .hc-row:last-child { border-bottom:none; }
+    .hc-color { width:5px; height:1.2rem; border-radius:2px; flex-shrink:0; }
+    .hc-name { flex:1; color:var(--text); font-weight:600; }
+    .hc-wl { font-weight:700; color:var(--gray-600); }
+    .hc-rsg { font-size:.75rem; color:var(--gray-500); margin-left:auto; }
+    .empty-note { padding:1rem; font-size:.82rem; color:var(--gray-400); }
+    .lg-title { font-size:1.05rem; font-weight:800; color:var(--navy); margin:1.5rem 0 .75rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .6rem; border-radius:9999px; }
+    .lg-badge.central { background:#9b2335; } .lg-badge.pacific { background:#1a5276; }
+    table.trend-tbl { width:100%; border-collapse:collapse; font-size:.84rem; }
+    table.trend-tbl th { font-size:.68rem; color:var(--gray-500); text-transform:uppercase; padding:.3rem .65rem; text-align:left; }
+    table.trend-tbl th.r { text-align:right; }
+    table.trend-tbl td { padding:.4rem .65rem; border-top:1px solid var(--gray-100); vertical-align:middle; }
+    .td-color { width:5px; height:1.2rem; border-radius:2px; display:inline-block; }
+    .td-name { font-weight:700; color:var(--navy); }
+    .td-r { text-align:right; font-variant-numeric:tabular-nums; }
+    .wl-dots { display:flex; gap:3px; }
+    .dot { width:14px; height:14px; border-radius:3px; font-size:.58rem; font-weight:800; display:flex; align-items:center; justify-content:center; }
+    .dot.W { background:#dcfce7; color:#166534; }
+    .dot.L { background:#fee2e2; color:#991b1b; }
+    .dot.T { background:#f3f4f6; color:#6b7280; }
+    .rd-pos { color:#166534; font-weight:700; }
+    .rd-neg { color:#991b1b; font-weight:700; }
+    .insight { background:rgba(22,45,71,.05); border-left:3px solid var(--navy); padding:.75rem 1rem; border-radius:0 6px 6px 0; margin-top:1.25rem; font-size:.82rem; line-height:1.65; }
+    .insight a { color:var(--red); }
+    @media(max-width:600px) { .hc-grid { grid-template-columns:1fr; } }
+  </style>
+
+  <section class="tr-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/">Baseballab EN</a> &rsaquo; <a href="/en/npb/">NPB</a> &rsaquo; Trends</p>
+      <h1>NPB Team Trend Analysis</h1>
+      <p class="hero-sub">All 12 Central & Pacific League teams — last 3 games momentum</p>
+      {asOf && <span class="updated-badge">📅 As of {asOf}</span>}
+    </div>
+  </section>
+
+  {!data ? (
+    <div style="padding:3rem 0;text-align:center;color:var(--gray-500)" class="container"><p>Data unavailable.</p></div>
+  ) : (
+    <>
+      <section class="tr-section">
+        <div class="container">
+          <h2 class="sec-title">Hot / Cold Teams</h2>
+          <p class="sec-desc">Teams that swept their last 3 games are "hot"; teams that lost all three are "cold." Short-term momentum is a rough indicator — streaks in NPB often track with pitching rotation cycles.</p>
+          <div class="hc-grid">
+            <div class="hc-card">
+              <div class="hc-head hot">🔥 Hot (3-0 last 3)</div>
+              {hotAll.length === 0
+                ? <p class="empty-note">No qualifying teams</p>
+                : hotAll.map(t => (
+                  <div class="hc-row">
+                    <div class="hc-color" style={`background:${t.color}`}></div>
+                    <span class="hc-name">{t.enName}</span>
+                    <span class="hc-wl">3-0</span>
+                    <span class="hc-rsg">{rnd1(t.rsTotal / t.games)} R/G</span>
+                  </div>
+                ))
+              }
+            </div>
+            <div class="hc-card">
+              <div class="hc-head cold">🥶 Cold (0-3 last 3)</div>
+              {coldAll.length === 0
+                ? <p class="empty-note">No qualifying teams</p>
+                : coldAll.map(t => (
+                  <div class="hc-row">
+                    <div class="hc-color" style={`background:${t.color}`}></div>
+                    <span class="hc-name">{t.enName}</span>
+                    <span class="hc-wl">0-3</span>
+                    <span class="hc-rsg">{rnd1(t.raTotal / t.games)} RA/G</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tr-section alt">
+        <div class="container">
+          <h2 class="sec-title">League Momentum Rankings</h2>
+          <p class="sec-desc">Ranked by last-3-game point score (Win=2, Draw=1, Loss=0), then by run differential as tiebreaker.</p>
+
+          {[['central', 'Central League'], ['pacific', 'Pacific League']].map(([lg, label]) => (
+            <>
+              <h3 class="lg-title">
+                <span class={`lg-badge ${lg}`}>{lg === 'central' ? 'CL' : 'PL'}</span>
+                {label}
+              </h3>
+              <table class="trend-tbl">
+                <thead>
+                  <tr>
+                    <th colspan="2">Team</th>
+                    <th>Last 3</th>
+                    <th class="r">RS</th>
+                    <th class="r">RA</th>
+                    <th class="r">Diff</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sortByTrend(trendTeams.filter(t => t.league === lg)).map(t => {
+                    const rd = t.rsTotal - t.raTotal;
+                    return (
+                      <tr>
+                        <td><div class="td-color" style={`background:${t.color}`}></div></td>
+                        <td class="td-name"><a href={`/en/npb/teams/${t.slug}/`}>{t.enName}</a></td>
+                        <td>
+                          <div class="wl-dots">
+                            {(data.teams.find((x: any) => x.slug === t.slug)?.recentGames ?? []).slice().reverse().map((g: any) => (
+                              <span class={`dot ${g.result}`}>{g.result}</span>
+                            ))}
+                          </div>
+                        </td>
+                        <td class="td-r">{t.rsTotal}</td>
+                        <td class="td-r">{t.raTotal}</td>
+                        <td class={`td-r ${rd >= 0 ? 'rd-pos' : 'rd-neg'}`}>{rd >= 0 ? '+' : ''}{rd}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </>
+          ))}
+
+          <div class="insight">
+            <strong>Analytical note:</strong> A team winning despite negative run differential is likely excelling in one-run games — sustainable if driven by bullpen depth, less so if reliant on sequencing luck. For a deeper statistical framework, see the <a href="/en/mlb/trends/">MLB Pythagorean Win% analysis</a> and our <a href="/glossary/sabermetrics/">Sabermetrics guide</a>.
+          </div>
+        </div>
+      </section>
+    </>
+  )}
+</Layout>

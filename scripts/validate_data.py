@@ -77,6 +77,19 @@ else:
     check(False, "MLB leaders file", f"data/mlb/leaders/{SEASON}.json missing")
 
 
+# --- MLB standings (Pythagorean) -------------------------------------------
+mlb_standings = ROOT / "data" / "mlb" / "standings.json"
+if mlb_standings.exists():
+    ms = json.loads(mlb_standings.read_text(encoding="utf-8"))
+    age = days_old(ms.get("fetchedAt", ""))
+    n_teams = len(ms.get("teams", []))
+    has_pyth = all("pythWinPct" in t for t in ms.get("teams", [])[:5])
+    check(age <= 3, "MLB standings freshness", f"{ms.get('fetchedAt','?')[:10]} ({age}d ago)")
+    check(n_teams >= 30, "MLB standings team count", f"{n_teams}")
+    check(has_pyth, "MLB standings has Pythagorean", "pythWinPct present")
+else:
+    check(False, "MLB standings file", "data/mlb/standings.json missing")
+
 # --- NPB results -----------------------------------------------------------
 npb_results = ROOT / "data" / "npb" / "results.json"
 if npb_results.exists():

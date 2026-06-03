@@ -1,0 +1,187 @@
+---
+// /en/mlb/trends/ -- MLB team trend analysis (recent 3 games + Pythagorean Win%)
+// Data: data/mlb/results.json + data/mlb/standings.json (MLB Stats API)
+import Layout from '../../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+function readJson(rel: string) {
+  try { return JSON.parse(readFileSync(join(process.cwd(), rel), 'utf-8')); }
+  catch { return null; }
+}
+
+const results = readJson('data/mlb/results.json');
+const standings = readJson('data/mlb/standings.json');
+
+type TeamResult = { name: string; abbreviation: string; wins3: number; losses3: number; rsPerGame: number; raPerGame: number };
+const recentMap: Record<string, TeamResult> = {};
+for (const t of results?.teams ?? []) {
+  const g = t.recentGames ?? [];
+  if (!g.length) continue;
+  const wins3 = g.filter((x: any) => x.result === 'W').length;
+  const losses3 = g.filter((x: any) => x.result === 'L').length;
+  const rs = g.reduce((s: number, x: any) => s + (x.score ?? 0), 0);
+  const ra = g.reduce((s: number, x: any) => s + (x.opponentScore ?? 0), 0);
+  recentMap[t.abbreviation] = { name: t.name, abbreviation: t.abbreviation, wins3, losses3, rsPerGame: rs / g.length, raPerGame: ra / g.length };
+}
+const hotTeams = Object.values(recentMap).filter(t => t.wins3 >= 3);
+const coldTeams = Object.values(recentMap).filter(t => t.losses3 >= 3);
+
+type StandingTeam = { name: string; abbreviation: string; wins: number; losses: number;
+  winPct: number; pythWinPct: number; luckDelta: number };
+const standTeams: StandingTeam[] = standings?.teams ?? [];
+const luckiest = [...standTeams].sort((a, b) => b.luckDelta - a.luckDelta).slice(0, 7);
+const unluckiest = [...standTeams].sort((a, b) => a.luckDelta - b.luckDelta).slice(0, 7);
+
+const asOf = results?.asOfDate ?? '';
+const season = results?.season ?? standings?.season ?? '';
+
+function pct(n: number) { return n.toFixed(3).replace(/^0/, ''); }
+function sign(n: number) { return n >= 0 ? '+' : ''; }
+function rnd1(n: number) { return n.toFixed(1); }
+---
+<Layout
+  title={`MLB ${season} Team Trends | Hot/Cold & Pythagorean Win% | Baseballab`}
+  description={`MLB ${season} team trend analysis: hot and cold teams from last 3 games, plus Pythagorean Win% divergence to identify overperforming and underperforming teams.`}
+  ogUrl="https://baseballab.com/en/mlb/trends/"
+>
+  <style slot="head">
+    .tr-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .tr-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .tr-section { padding:2.5rem 0; }
+    .tr-section.alt { background:var(--gray-100); }
+    .sec-title { font-size:1.15rem; font-weight:800; color:var(--navy); margin-bottom:.25rem; }
+    .sec-desc { font-size:.82rem; color:var(--gray-600); margin-bottom:1.25rem; line-height:1.6; }
+    .team-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .hc-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .hc-head { padding:.5rem 1rem; font-size:.88rem; font-weight:800; }
+    .hc-head.hot { background:#dcfce7; color:#166534; }
+    .hc-head.cold { background:#fee2e2; color:#991b1b; }
+    .hc-row { display:flex; align-items:center; gap:.6rem; padding:.35rem 1rem; border-bottom:1px solid var(--gray-100); font-size:.85rem; }
+    .hc-row:last-child { border-bottom:none; }
+    .hc-abbr { font-weight:800; color:var(--navy); width:2.8rem; }
+    .hc-name { flex:1; color:var(--text); }
+    .hc-wl { font-weight:700; color:var(--gray-600); }
+    .hc-rsg { font-size:.75rem; color:var(--gray-500); }
+    .empty-note { padding:1rem; font-size:.82rem; color:var(--gray-400); }
+    .pyth-wrap { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+    .pyth-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .pyth-card h3 { padding:.6rem 1rem; font-size:.88rem; font-weight:800; margin:0; }
+    .pyth-card h3.over { background:#fef9c3; color:#92400e; }
+    .pyth-card h3.under { background:#eff6ff; color:#1e40af; }
+    table.pyth-tbl { width:100%; border-collapse:collapse; font-size:.82rem; }
+    table.pyth-tbl th { font-size:.66rem; color:var(--gray-500); text-transform:uppercase; padding:.3rem .7rem; text-align:left; }
+    table.pyth-tbl th.r { text-align:right; }
+    table.pyth-tbl td { padding:.38rem .7rem; border-top:1px solid var(--gray-100); }
+    .td-abbr { font-weight:800; color:var(--navy); }
+    .td-wl { color:var(--gray-600); font-size:.78rem; }
+    .td-r { text-align:right; font-variant-numeric:tabular-nums; }
+    .delta-pos { color:#92400e; font-weight:700; }
+    .delta-neg { color:#1e40af; font-weight:700; }
+    .insight { background:rgba(22,45,71,.05); border-left:3px solid var(--navy); padding:.75rem 1rem; border-radius:0 6px 6px 0; margin-top:1.25rem; font-size:.82rem; color:var(--text); line-height:1.65; }
+    .insight a { color:var(--red); }
+    @media(max-width:700px) { .team-grid, .pyth-wrap { grid-template-columns:1fr; } }
+  </style>
+
+  <section class="tr-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/">Baseballab EN</a> &rsaquo; <a href="/en/mlb/">MLB</a> &rsaquo; Trends</p>
+      <h1>MLB Team Trend Analysis</h1>
+      <p class="hero-sub">Last 3 games hot/cold + Pythagorean Win% divergence</p>
+      {asOf && <span class="updated-badge">📅 As of {asOf}</span>}
+    </div>
+  </section>
+
+  <section class="tr-section">
+    <div class="container">
+      <h2 class="sec-title">Last 3 Games: Hot / Cold Teams</h2>
+      <p class="sec-desc">Teams that won all three recent games are "hot"; teams that lost all three are "cold." Short-term momentum can signal which clubs are peaking heading into their next series.</p>
+      <div class="team-grid">
+        <div class="hc-card">
+          <div class="hc-head hot">🔥 Hot (3-0 last 3)</div>
+          {hotTeams.length === 0
+            ? <p class="empty-note">No qualifying teams</p>
+            : hotTeams.map(t => (
+              <div class="hc-row">
+                <span class="hc-abbr">{t.abbreviation}</span>
+                <span class="hc-name">{t.name}</span>
+                <span class="hc-wl">3-0</span>
+                <span class="hc-rsg">{rnd1(t.rsPerGame)} R/G</span>
+              </div>
+            ))
+          }
+        </div>
+        <div class="hc-card">
+          <div class="hc-head cold">🥶 Cold (0-3 last 3)</div>
+          {coldTeams.length === 0
+            ? <p class="empty-note">No qualifying teams</p>
+            : coldTeams.map(t => (
+              <div class="hc-row">
+                <span class="hc-abbr">{t.abbreviation}</span>
+                <span class="hc-name">{t.name}</span>
+                <span class="hc-wl">0-3</span>
+                <span class="hc-rsg">{rnd1(t.raPerGame)} RA/G</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tr-section alt">
+    <div class="container">
+      <h2 class="sec-title">Pythagorean Win% Divergence</h2>
+      <p class="sec-desc">
+        Pythagorean Win% estimates expected winning percentage from runs scored and allowed:
+        <strong>RS^1.83 / (RS^1.83 + RA^1.83)</strong> (Pythagenport formula, used by Baseball Reference).
+        A large positive gap means the team wins more than their run differential suggests — often bullpen strength, clutch hitting, or luck. Historically, such gaps tend to close over the course of a season.
+      </p>
+      {standTeams.length > 0 && (
+        <div class="pyth-wrap">
+          <div class="pyth-card">
+            <h3 class="over">▲ Outperforming Pythagorean (Lucky?) TOP 7</h3>
+            <table class="pyth-tbl">
+              <thead><tr><th>Team</th><th>W-L</th><th class="r">Actual</th><th class="r">Pyth</th><th class="r">Delta</th></tr></thead>
+              <tbody>
+                {luckiest.map(t => (
+                  <tr>
+                    <td class="td-abbr">{t.abbreviation}</td>
+                    <td class="td-wl">{t.wins}-{t.losses}</td>
+                    <td class="td-r">{pct(t.winPct)}</td>
+                    <td class="td-r">{pct(t.pythWinPct)}</td>
+                    <td class="td-r delta-pos">{sign(t.luckDelta)}{pct(Math.abs(t.luckDelta))}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div class="pyth-card">
+            <h3 class="under">▼ Underperforming Pythagorean (Unlucky?) TOP 7</h3>
+            <table class="pyth-tbl">
+              <thead><tr><th>Team</th><th>W-L</th><th class="r">Actual</th><th class="r">Pyth</th><th class="r">Delta</th></tr></thead>
+              <tbody>
+                {unluckiest.map(t => (
+                  <tr>
+                    <td class="td-abbr">{t.abbreviation}</td>
+                    <td class="td-wl">{t.wins}-{t.losses}</td>
+                    <td class="td-r">{pct(t.winPct)}</td>
+                    <td class="td-r">{pct(t.pythWinPct)}</td>
+                    <td class="td-r delta-neg">{sign(t.luckDelta)}{pct(Math.abs(t.luckDelta))}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+      <div class="insight">
+        <strong>Key insight:</strong> Teams with large positive deltas tend to win close games at an unsustainable rate — watch for regression. Teams with large negative deltas (like LAD at -0.076 this season) are stronger than their record shows and likely to improve. This metric is a guide, not a guarantee — elite bullpens genuinely outperform Pythagorean expectations over time.
+        <br>Learn more: <a href="/glossary/war/">WAR</a> · <a href="/glossary/sabermetrics/">Sabermetrics overview</a>
+      </div>
+    </div>
+  </section>
+</Layout>

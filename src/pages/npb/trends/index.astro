@@ -1,0 +1,232 @@
+---
+// /npb/trends/ -- NPB チームトレンド分析（直近3試合の勢い + 得失点率）
+// データソース: data/npb/results.json (npb.jp スクレイピング)
+import Layout from '../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let data: any = null;
+try {
+  data = JSON.parse(readFileSync(join(process.cwd(), 'data/npb/results.json'), 'utf-8'));
+} catch {}
+
+const SHORT: Record<string, string> = {
+  '阪神タイガース':               '阪神',
+  '横浜DeNAベイスターズ':         'DeNA',
+  '読売ジャイアンツ':             '巨人',
+  '中日ドラゴンズ':               '中日',
+  '広島東洋カープ':               '広島',
+  '東京ヤクルトスワローズ':       'ヤクルト',
+  'オリックス・バファローズ':     'オリックス',
+  '福岡ソフトバンクホークス':     'ソフトバンク',
+  '北海道日本ハムファイターズ':   '日本ハム',
+  '東北楽天ゴールデンイーグルス': '楽天',
+  '埼玉西武ライオンズ':           '西武',
+  '千葉ロッテマリーンズ':         'ロッテ',
+};
+
+type TrendTeam = {
+  slug: string; name: string; shortName: string; league: string; color: string;
+  wins3: number; losses3: number; ties3: number;
+  rsTotal: number; raTotal: number; games: number;
+};
+
+const trendTeams: TrendTeam[] = (data?.teams ?? []).map((t: any) => {
+  const g = t.recentGames ?? [];
+  const wins3 = g.filter((x: any) => x.result === 'W').length;
+  const losses3 = g.filter((x: any) => x.result === 'L').length;
+  const ties3 = g.filter((x: any) => x.result === 'T').length;
+  const rsTotal = g.reduce((s: number, x: any) => s + (x.score ?? 0), 0);
+  const raTotal = g.reduce((s: number, x: any) => s + (x.opponentScore ?? 0), 0);
+  return { slug: t.slug, name: t.name, shortName: SHORT[t.name] ?? t.name,
+    league: t.league, color: t.color,
+    wins3, losses3, ties3, rsTotal, raTotal, games: g.length };
+}).filter((t: TrendTeam) => t.games > 0);
+
+const central = trendTeams.filter(t => t.league === 'central');
+const pacific = trendTeams.filter(t => t.league === 'pacific');
+
+const hotAll = trendTeams.filter(t => t.wins3 === 3);
+const coldAll = trendTeams.filter(t => t.losses3 === 3);
+
+// Sort by win% (desc), then run diff (desc)
+function sortByTrend(arr: TrendTeam[]) {
+  return [...arr].sort((a, b) => {
+    const wA = a.wins3 * 2 + a.ties3 - a.losses3 * 2;
+    const wB = b.wins3 * 2 + b.ties3 - b.losses3 * 2;
+    if (wB !== wA) return wB - wA;
+    return (b.rsTotal - b.raTotal) - (a.rsTotal - a.raTotal);
+  });
+}
+
+const asOf = data?.asOfDate ?? '';
+const season = data?.season ?? '';
+
+function rnd1(n: number) { return n.toFixed(1); }
+---
+<Layout
+  title={`NPB ${season} チームトレンド分析 | 直近3試合の勢い | Baseballab`}
+  description={`NPB ${season}シーズン最新チームトレンド。セ・パ全12球団の直近3試合の勝敗・得失点を分析し、勢いのあるチームと苦境のチームを分かりやすく可視化。`}
+  ogUrl="https://baseballab.com/npb/trends/"
+>
+  <style slot="head">
+    .tr-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .tr-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .tr-section { padding:2.5rem 0; }
+    .tr-section.alt { background:var(--gray-100); }
+    .sec-title { font-size:1.15rem; font-weight:800; color:var(--navy); margin-bottom:.25rem; }
+    .sec-desc { font-size:.82rem; color:var(--gray-600); margin-bottom:1.25rem; line-height:1.6; }
+    /* Hot/Cold */
+    .hc-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem; }
+    .hc-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .hc-head { padding:.5rem 1rem; font-size:.88rem; font-weight:800; }
+    .hc-head.hot { background:#dcfce7; color:#166534; }
+    .hc-head.cold { background:#fee2e2; color:#991b1b; }
+    .hc-row { display:flex; align-items:center; gap:.6rem; padding:.38rem 1rem; border-bottom:1px solid var(--gray-100); font-size:.85rem; }
+    .hc-row:last-child { border-bottom:none; }
+    .hc-color { width:5px; height:1.2rem; border-radius:2px; flex-shrink:0; }
+    .hc-short { font-weight:800; color:var(--navy); width:4.5rem; }
+    .hc-wl { font-weight:700; color:var(--gray-600); }
+    .hc-rsg { font-size:.75rem; color:var(--gray-500); margin-left:auto; }
+    .empty-note { padding:1rem; font-size:.82rem; color:var(--gray-400); }
+    /* Trend table per league */
+    .lg-title { font-size:1.05rem; font-weight:800; color:var(--navy); margin:1.5rem 0 .75rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .6rem; border-radius:9999px; }
+    .lg-badge.cl { background:#9b2335; } .lg-badge.pl { background:#1a5276; }
+    table.trend-tbl { width:100%; border-collapse:collapse; font-size:.84rem; }
+    table.trend-tbl th { font-size:.68rem; color:var(--gray-500); text-transform:uppercase; padding:.3rem .65rem; text-align:left; }
+    table.trend-tbl th.r { text-align:right; }
+    table.trend-tbl td { padding:.4rem .65rem; border-top:1px solid var(--gray-100); vertical-align:middle; }
+    .td-color { width:5px; height:1.2rem; border-radius:2px; display:inline-block; }
+    .td-short { font-weight:800; color:var(--navy); }
+    .td-r { text-align:right; font-variant-numeric:tabular-nums; }
+    .wl-dots { display:flex; gap:3px; }
+    .dot { width:14px; height:14px; border-radius:3px; font-size:.58rem; font-weight:800; display:flex; align-items:center; justify-content:center; }
+    .dot.W { background:#dcfce7; color:#166534; }
+    .dot.L { background:#fee2e2; color:#991b1b; }
+    .dot.T { background:#f3f4f6; color:#6b7280; }
+    .rd-pos { color:#166534; font-weight:700; }
+    .rd-neg { color:#991b1b; font-weight:700; }
+    .insight { background:rgba(22,45,71,.05); border-left:3px solid var(--navy); padding:.75rem 1rem; border-radius:0 6px 6px 0; margin-top:1.25rem; font-size:.82rem; color:var(--text); line-height:1.65; }
+    @media(max-width:600px) { .hc-grid { grid-template-columns:1fr; } }
+  </style>
+
+  <section class="tr-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/npb/">NPB</a> &rsaquo; トレンド分析</p>
+      <h1>NPB チームトレンド分析</h1>
+      <p class="hero-sub">セ・パ全12球団の直近3試合をもとにした勢い分析</p>
+      {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
+    </div>
+  </section>
+
+  {!data ? (
+    <div style="padding:3rem 0;text-align:center;color:var(--gray-500)" class="container"><p>データを読み込めませんでした。</p></div>
+  ) : (
+    <>
+      {/* Hot / Cold */}
+      <section class="tr-section">
+        <div class="container">
+          <h2 class="sec-title">ホット / コールド チーム</h2>
+          <p class="sec-desc">
+            直近3試合を全勝したチームを「ホット」、全敗を「コールド」として抽出。
+            短期的な勢いはシリーズ展開の参考になるが、長期的なパフォーマンスとは別物。
+          </p>
+          <div class="hc-grid">
+            <div class="hc-card">
+              <div class="hc-head hot">🔥 ホット（3連勝）</div>
+              {hotAll.length === 0
+                ? <p class="empty-note">該当チームなし</p>
+                : hotAll.map(t => (
+                  <div class="hc-row">
+                    <div class="hc-color" style={`background:${t.color}`}></div>
+                    <span class="hc-short">{t.shortName}</span>
+                    <span class="hc-wl">3W-0L</span>
+                    <span class="hc-rsg">{rnd1(t.rsTotal / t.games)} 得点/試合</span>
+                  </div>
+                ))
+              }
+            </div>
+            <div class="hc-card">
+              <div class="hc-head cold">🥶 コールド（3連敗）</div>
+              {coldAll.length === 0
+                ? <p class="empty-note">該当チームなし</p>
+                : coldAll.map(t => (
+                  <div class="hc-row">
+                    <div class="hc-color" style={`background:${t.color}`}></div>
+                    <span class="hc-short">{t.shortName}</span>
+                    <span class="hc-wl">0W-3L</span>
+                    <span class="hc-rsg">{rnd1(t.raTotal / t.games)} 失点/試合</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Per-league trend table */}
+      <section class="tr-section alt">
+        <div class="container">
+          <h2 class="sec-title">リーグ別 勢いランキング</h2>
+          <p class="sec-desc">
+            直近3試合の勝敗（勝=2点・引分=1点・負=0点）と得失点差でランキング。
+            各試合の結果を○●の記号で可視化。
+          </p>
+
+          {[['central', 'CL', 'セントラル・リーグ'], ['pacific', 'PL', 'パシフィック・リーグ']].map(([lg, badge, label]) => (
+            <>
+              <h3 class="lg-title">
+                <span class={`lg-badge ${lg}`}>{badge}</span>
+                {label}
+              </h3>
+              <table class="trend-tbl">
+                <thead>
+                  <tr>
+                    <th colspan="2">チーム</th>
+                    <th>直近3試合</th>
+                    <th class="r">得点</th>
+                    <th class="r">失点</th>
+                    <th class="r">得失点差</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sortByTrend(trendTeams.filter(t => t.league === lg)).map(t => {
+                    const rd = t.rsTotal - t.raTotal;
+                    return (
+                      <tr>
+                        <td><div class="td-color" style={`background:${t.color}`}></div></td>
+                        <td class="td-short"><a href={`/npb/teams/${t.slug}/`}>{t.shortName}</a></td>
+                        <td>
+                          <div class="wl-dots">
+                            {/* recentGames are newest-first, show newest on right */}
+                            {(data.teams.find((x: any) => x.slug === t.slug)?.recentGames ?? []).slice().reverse().map((g: any) => (
+                              <span class={`dot ${g.result}`}>{g.result === 'W' ? '○' : g.result === 'L' ? '●' : '△'}</span>
+                            ))}
+                          </div>
+                        </td>
+                        <td class="td-r">{t.rsTotal}</td>
+                        <td class="td-r">{t.raTotal}</td>
+                        <td class={`td-r ${rd >= 0 ? 'rd-pos' : 'rd-neg'}`}>{rd >= 0 ? '+' : ''}{rd}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </>
+          ))}
+
+          <div class="insight">
+            <strong>分析メモ:</strong>
+            得失点差がプラスでも勝ち越せていないチームは、接戦の勝率（クラッチ度）に課題がある可能性。
+            逆に得失点差がマイナスでも勝ち越しているチームは、僅差試合での勝負強さが光っている。
+            中長期的な実力評価には <a href="/mlb/trends/">MLB版のピタゴラス期待勝率分析</a> も参考になる。
+          </div>
+        </div>
+      </section>
+    </>
+  )}
+</Layout>

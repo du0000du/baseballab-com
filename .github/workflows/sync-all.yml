@@ -160,9 +160,45 @@ jobs:
           fi
 
   # ──────────────────────────────────────────────────────────────────────────
+  sync-mlb-standings:
+    name: "MLB Standings & Pythagorean"
+    needs: sync-mlb-leaders
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch MLB standings (retry x3)
+        run: |
+          for i in 1 2 3; do
+            echo "Attempt $i/3"
+            python3 scripts/fetch_mlb_standings.py && break
+            echo "Attempt $i failed."
+            [ $i -lt 3 ] && sleep 30
+          done
+
+      - name: Commit MLB standings data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add data/mlb/standings.json
+          if git diff --cached --quiet; then
+            echo "No standings changes -- skipping commit."
+          else
+            git commit -m "data: MLB standings sync $(date -u '+%Y-%m-%d')"
+            git push
+          fi
+
+  # ──────────────────────────────────────────────────────────────────────────
   sync-mlb-results:
     name: "MLB Game Results"
-    needs: sync-mlb-leaders
+    needs: sync-mlb-standings
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -198,7 +234,7 @@ jobs:
   # ──────────────────────────────────────────────────────────────────────────
   validate:
     name: "Validate Data"
-    needs: [sync-npb-results, sync-mlb-players, sync-mlb-leaders, sync-mlb-results]
+    needs: [sync-npb-results, sync-mlb-players, sync-mlb-leaders, sync-mlb-standings, sync-mlb-results]
     runs-on: ubuntu-latest
     if: always()   # even if earlier jobs skipped (no changes)
 

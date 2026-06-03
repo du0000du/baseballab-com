@@ -1,0 +1,220 @@
+---
+// /mlb/trends/ -- MLB チームトレンド分析（直近3試合 + ピタゴラス期待勝率）
+// データソース: data/mlb/results.json (MLB Stats API) + data/mlb/standings.json (MLB Stats API)
+import Layout from '../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+function readJson(rel: string) {
+  try { return JSON.parse(readFileSync(join(process.cwd(), rel), 'utf-8')); }
+  catch { return null; }
+}
+
+const results = readJson('data/mlb/results.json');
+const standings = readJson('data/mlb/standings.json');
+
+// --- Hot/Cold from recent 3 games ---
+type TeamResult = { name: string; abbreviation: string; league: string; leagueShort: string;
+  division: string; divisionShort: string; wins3: number; losses3: number; rsPerGame: number; raPerGame: number };
+
+const recentMap: Record<string, TeamResult> = {};
+for (const t of results?.teams ?? []) {
+  const g = t.recentGames ?? [];
+  if (g.length === 0) continue;
+  const wins3 = g.filter((x: any) => x.result === 'W').length;
+  const losses3 = g.filter((x: any) => x.result === 'L').length;
+  const rs = g.reduce((s: number, x: any) => s + (x.score ?? 0), 0);
+  const ra = g.reduce((s: number, x: any) => s + (x.opponentScore ?? 0), 0);
+  recentMap[t.abbreviation] = {
+    name: t.name, abbreviation: t.abbreviation, league: t.league, leagueShort: t.leagueShort,
+    division: t.division, divisionShort: t.divisionShort,
+    wins3, losses3, rsPerGame: rs / g.length, raPerGame: ra / g.length,
+  };
+}
+
+const hotTeams = Object.values(recentMap).filter((t) => t.wins3 >= 3).sort((a, b) => b.wins3 - a.wins3);
+const coldTeams = Object.values(recentMap).filter((t) => t.losses3 >= 3).sort((a, b) => b.losses3 - a.losses3);
+
+// --- Pythagorean luck from standings ---
+type StandingTeam = { name: string; abbreviation: string; wins: number; losses: number;
+  winPct: number; pythWinPct: number; luckDelta: number; runsScored: number; runsAllowed: number; leagueShort: string };
+
+const standTeams: StandingTeam[] = standings?.teams ?? [];
+const luckiest = [...standTeams].sort((a, b) => b.luckDelta - a.luckDelta).slice(0, 7);
+const unluckiest = [...standTeams].sort((a, b) => a.luckDelta - b.luckDelta).slice(0, 7);
+
+const asOf = results?.asOfDate ?? standings?.fetchedAt?.slice(0, 10) ?? '';
+const season = results?.season ?? standings?.season ?? '';
+
+function pct(n: number) { return n.toFixed(3).replace(/^0/, ''); }
+function sign(n: number) { return n >= 0 ? '+' : ''; }
+function rnd1(n: number) { return n.toFixed(1); }
+---
+<Layout
+  title={`MLB ${season} トレンド分析 | 直近3試合・ピタゴラス期待勝率 | Baseballab`}
+  description={`MLB ${season}シーズン最新トレンド。直近3試合のホット/コールドチームランキングと、ピタゴラス期待勝率（得点力ベース）との乖離から「運の良いチーム・悪いチーム」を分析。`}
+  ogUrl="https://baseballab.com/mlb/trends/"
+>
+  <style slot="head">
+    .tr-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .tr-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .tr-section { padding:2.5rem 0; }
+    .tr-section.alt { background:var(--gray-100); }
+    .sec-title { font-size:1.15rem; font-weight:800; color:var(--navy); margin-bottom:.25rem; }
+    .sec-desc { font-size:.82rem; color:var(--gray-600); margin-bottom:1.25rem; line-height:1.6; }
+    .team-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .hc-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .hc-head { padding:.5rem 1rem; font-size:.88rem; font-weight:800; }
+    .hc-head.hot { background:#dcfce7; color:#166534; }
+    .hc-head.cold { background:#fee2e2; color:#991b1b; }
+    .hc-teams { padding:.5rem 0; }
+    .hc-row { display:flex; align-items:center; gap:.6rem; padding:.35rem 1rem; border-bottom:1px solid var(--gray-100); font-size:.85rem; }
+    .hc-row:last-child { border-bottom:none; }
+    .hc-abbr { font-weight:800; color:var(--navy); width:2.8rem; }
+    .hc-name { color:var(--text); flex:1; }
+    .hc-wl { font-weight:700; color:var(--gray-600); font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .hc-rsg { font-size:.75rem; color:var(--gray-500); }
+    .empty-note { padding:1rem; font-size:.82rem; color:var(--gray-400); }
+    /* Pythagorean table */
+    .pyth-wrap { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+    .pyth-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .pyth-card h3 { padding:.6rem 1rem; font-size:.88rem; font-weight:800; margin:0; }
+    .pyth-card h3.over { background:#fef9c3; color:#92400e; }
+    .pyth-card h3.under { background:#eff6ff; color:#1e40af; }
+    table.pyth-tbl { width:100%; border-collapse:collapse; font-size:.82rem; }
+    table.pyth-tbl th { font-size:.66rem; color:var(--gray-500); text-transform:uppercase; padding:.3rem .7rem; text-align:left; }
+    table.pyth-tbl th.r { text-align:right; }
+    table.pyth-tbl td { padding:.38rem .7rem; border-top:1px solid var(--gray-100); }
+    .td-abbr { font-weight:800; color:var(--navy); }
+    .td-wl { color:var(--gray-600); font-size:.78rem; font-variant-numeric:tabular-nums; }
+    .td-r { text-align:right; font-variant-numeric:tabular-nums; }
+    .delta-pos { color:#92400e; font-weight:700; }
+    .delta-neg { color:#1e40af; font-weight:700; }
+    /* Insight box */
+    .insight { background:rgba(22,45,71,.05); border-left:3px solid var(--navy); padding:.75rem 1rem; border-radius:0 6px 6px 0; margin-top:1.25rem; font-size:.82rem; color:var(--text); line-height:1.65; }
+    .insight strong { color:var(--navy); }
+    .insight a { color:var(--red); }
+    @media(max-width:700px) { .team-grid, .pyth-wrap { grid-template-columns:1fr; } }
+  </style>
+
+  <section class="tr-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/mlb/">MLB</a> &rsaquo; トレンド分析</p>
+      <h1>MLB チームトレンド分析</h1>
+      <p class="hero-sub">直近3試合の勢い + ピタゴラス期待勝率による実力評価</p>
+      {asOf && (
+        <span class="updated-badge">📅 {asOf} 時点</span>
+      )}
+    </div>
+  </section>
+
+  {/* 1. Hot / Cold ランキング */}
+  <section class="tr-section">
+    <div class="container">
+      <h2 class="sec-title">直近3試合 ホット/コールド チーム</h2>
+      <p class="sec-desc">
+        直近3試合の勝敗をもとにランキング。全勝チームは「ホット」、全敗チームは「コールド」として抽出。
+        直近の勢いは翌日の試合展開を予測する簡易指標として参照できる。
+      </p>
+      <div class="team-grid">
+        <div class="hc-card">
+          <div class="hc-head hot">🔥 ホット（直近3試合 全勝）</div>
+          <div class="hc-teams">
+            {hotTeams.length === 0
+              ? <p class="empty-note">該当チームなし</p>
+              : hotTeams.map(t => (
+                <div class="hc-row">
+                  <span class="hc-abbr">{t.abbreviation}</span>
+                  <span class="hc-name">{t.name}</span>
+                  <span class="hc-wl">{t.wins3}W-{t.losses3}L</span>
+                  <span class="hc-rsg">{rnd1(t.rsPerGame)}得点/試合</span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+        <div class="hc-card">
+          <div class="hc-head cold">🥶 コールド（直近3試合 全敗）</div>
+          <div class="hc-teams">
+            {coldTeams.length === 0
+              ? <p class="empty-note">該当チームなし</p>
+              : coldTeams.map(t => (
+                <div class="hc-row">
+                  <span class="hc-abbr">{t.abbreviation}</span>
+                  <span class="hc-name">{t.name}</span>
+                  <span class="hc-wl">{t.wins3}W-{t.losses3}L</span>
+                  <span class="hc-rsg">{rnd1(t.raPerGame)}失点/試合</span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* 2. Pythagorean 乖離分析 */}
+  <section class="tr-section alt">
+    <div class="container">
+      <h2 class="sec-title">ピタゴラス期待勝率 乖離分析</h2>
+      <p class="sec-desc">
+        ピタゴラス期待勝率（Pythagorean Win%）とは、得点と失点のみから算出した「理論上の勝率」。
+        計算式: <strong>得点^1.83 ÷ (得点^1.83 + 失点^1.83)</strong>（Baseball Reference 採用の Pythagenport 式）。
+        実際の勝率との乖離（差分）が大きいほど、「運による上振れ・下振れ」が起きていると解釈できる。
+      </p>
+      {standTeams.length > 0 && (
+        <div class="pyth-wrap">
+          <div class="pyth-card">
+            <h3 class="over">▲ 運に助けられているチーム TOP7（実際 &gt; 期待）</h3>
+            <table class="pyth-tbl">
+              <thead><tr>
+                <th>チーム</th><th>勝敗</th><th class="r">実際</th><th class="r">期待</th><th class="r">差分</th>
+              </tr></thead>
+              <tbody>
+                {luckiest.map(t => (
+                  <tr>
+                    <td class="td-abbr">{t.abbreviation}</td>
+                    <td class="td-wl">{t.wins}-{t.losses}</td>
+                    <td class="td-r">{pct(t.winPct)}</td>
+                    <td class="td-r">{pct(t.pythWinPct)}</td>
+                    <td class="td-r delta-pos">{sign(t.luckDelta)}{pct(Math.abs(t.luckDelta))}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div class="pyth-card">
+            <h3 class="under">▼ 実力以上に負けているチーム TOP7（実際 &lt; 期待）</h3>
+            <table class="pyth-tbl">
+              <thead><tr>
+                <th>チーム</th><th>勝敗</th><th class="r">実際</th><th class="r">期待</th><th class="r">差分</th>
+              </tr></thead>
+              <tbody>
+                {unluckiest.map(t => (
+                  <tr>
+                    <td class="td-abbr">{t.abbreviation}</td>
+                    <td class="td-wl">{t.wins}-{t.losses}</td>
+                    <td class="td-r">{pct(t.winPct)}</td>
+                    <td class="td-r">{pct(t.pythWinPct)}</td>
+                    <td class="td-r delta-neg">{sign(t.luckDelta)}{pct(Math.abs(t.luckDelta))}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+      <div class="insight">
+        <strong>読み方のヒント:</strong>
+        「運に助けられているチーム」は接戦勝率が高い・救援が優秀・あるいは単純に運が良い状態。
+        過去のMLBデータでは、乖離が大きいチームはシーズン後半に期待勝率へ回帰する傾向がある。
+        一方「実力以上に負けているチーム」は逆で、今後の巻き返しに注目。
+        なお本指標は参考値であり、ブルペン能力・クラッチ打撃など運以外の要因も含む。
+        指標の詳細は <a href="/glossary/sabermetrics/">セイバーメトリクス解説</a> を参照。
+      </div>
+    </div>
+  </section>
+</Layout>
