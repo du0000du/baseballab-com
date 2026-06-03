@@ -1,10 +1,7 @@
 name: Fetch MLB Data
 
 on:
-  schedule:
-    - cron: '20 16 * * *'  # 毎日 16:20 UTC = 01:20 JST（data-sync の直後）
-    - cron: '20 4 * * *'   # 毎日 04:20 UTC = 13:20 JST
-  workflow_dispatch:
+  workflow_dispatch:        # sync-all.yml に統合済み。手動実行用のみ残す
     # Manual trigger from GitHub Actions tab
 
 permissions:

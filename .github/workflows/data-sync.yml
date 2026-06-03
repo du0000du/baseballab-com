@@ -1,10 +1,7 @@
 name: Daily Data Sync
 
 on:
-  schedule:
-    - cron: '0 16 * * *'   # 毎日 16:00 UTC = 01:00 JST
-    - cron: '0 4 * * *'    # 毎日 04:00 UTC = 13:00 JST
-  workflow_dispatch:         # 手動実行も可能
+  workflow_dispatch:        # sync-all.yml に統合済み。手動実行用のみ残す
 
 jobs:
   sync-data:

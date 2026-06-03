@@ -1,10 +1,7 @@
 name: NPB Daily Data Sync
 
 on:
-  schedule:
-    - cron: '0 1 * * *'   # 毎日 01:00 UTC = 10:00 JST（NPB.jp更新後）
-    - cron: '0 2 * * *'   # 毎日 02:00 UTC = 11:00 JST（フォールバック）
-  workflow_dispatch:        # 手動実行可
+  workflow_dispatch:        # sync-all.yml に統合済み。手動実行用のみ残す
 
 permissions:
   contents: write
