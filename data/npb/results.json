@@ -1,0 +1,439 @@
+{
+  "fetchedAt": "2026-06-03T03:41:18Z",
+  "season": "2026",
+  "asOfDate": "2026-06-03",
+  "teams": [
+    {
+      "slug": "hanshin-tigers",
+      "name": "阪神タイガース",
+      "league": "central",
+      "color": "#fdef00",
+      "accent": "#000000",
+      "recentGames": [
+        {
+          "date": "2026-05-31",
+          "opponent": "千葉ロッテマリーンズ",
+          "opponentSlug": "lotte-marines",
+          "home": true,
+          "score": 2,
+          "opponentScore": 4,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "千葉ロッテマリーンズ",
+          "opponentSlug": "lotte-marines",
+          "home": true,
+          "score": 4,
+          "opponentScore": 3,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-29",
+          "opponent": "千葉ロッテマリーンズ",
+          "opponentSlug": "lotte-marines",
+          "home": true,
+          "score": 1,
+          "opponentScore": 0,
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "slug": "yokohama-dena",
+      "name": "横浜DeNAベイスターズ",
+      "league": "central",
+      "color": "#0091d2",
+      "accent": "#ffffff",
+      "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "東北楽天ゴールデンイーグルス",
+          "opponentSlug": "rakuten-eagles",
+          "home": false,
+          "score": 3,
+          "opponentScore": 7,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-31",
+          "opponent": "埼玉西武ライオンズ",
+          "opponentSlug": "seibu-lions",
+          "home": true,
+          "score": 6,
+          "opponentScore": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "埼玉西武ライオンズ",
+          "opponentSlug": "seibu-lions",
+          "home": true,
+          "score": 0,
+          "opponentScore": 6,
+          "result": "L"
+        }
+      ]
+    },
+    {
+      "slug": "yomiuri-giants",
+      "name": "読売ジャイアンツ",
+      "league": "central",
+      "color": "#f97709",
+      "accent": "#000000",
+      "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "オリックス・バファローズ",
+          "opponentSlug": "orix-buffaloes",
+          "home": false,
+          "score": 3,
+          "opponentScore": 2,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-31",
+          "opponent": "北海道日本ハムファイターズ",
+          "opponentSlug": "nipponham-fighters",
+          "home": true,
+          "score": 0,
+          "opponentScore": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "北海道日本ハムファイターズ",
+          "opponentSlug": "nipponham-fighters",
+          "home": true,
+          "score": 5,
+          "opponentScore": 3,
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "slug": "chunichi-dragons",
+      "name": "中日ドラゴンズ",
+      "league": "central",
+      "color": "#002569",
+      "accent": "#ffffff",
+      "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "福岡ソフトバンクホークス",
+          "opponentSlug": "softbank-hawks",
+          "home": false,
+          "score": 0,
+          "opponentScore": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-31",
+          "opponent": "オリックス・バファローズ",
+          "opponentSlug": "orix-buffaloes",
+          "home": true,
+          "score": 5,
+          "opponentScore": 7,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "オリックス・バファローズ",
+          "opponentSlug": "orix-buffaloes",
+          "home": true,
+          "score": 1,
+          "opponentScore": 3,
+          "result": "L"
+        }
+      ]
+    },
+    {
+      "slug": "hiroshima-carp",
+      "name": "広島東洋カープ",
+      "league": "central",
+      "color": "#e60012",
+      "accent": "#ffffff",
+      "recentGames": [
+        {
+          "date": "2026-05-31",
+          "opponent": "福岡ソフトバンクホークス",
+          "opponentSlug": "softbank-hawks",
+          "home": true,
+          "score": 1,
+          "opponentScore": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "福岡ソフトバンクホークス",
+          "opponentSlug": "softbank-hawks",
+          "home": true,
+          "score": 2,
+          "opponentScore": 4,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-29",
+          "opponent": "福岡ソフトバンクホークス",
+          "opponentSlug": "softbank-hawks",
+          "home": true,
+          "score": 0,
+          "opponentScore": 2,
+          "result": "L"
+        }
+      ]
+    },
+    {
+      "slug": "yakult-swallows",
+      "name": "東京ヤクルトスワローズ",
+      "league": "central",
+      "color": "#00913a",
+      "accent": "#ffffff",
+      "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "千葉ロッテマリーンズ",
+          "opponentSlug": "lotte-marines",
+          "home": false,
+          "score": 0,
+          "opponentScore": 5,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-31",
+          "opponent": "東北楽天ゴールデンイーグルス",
+          "opponentSlug": "rakuten-eagles",
+          "home": true,
+          "score": 2,
+          "opponentScore": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "東北楽天ゴールデンイーグルス",
+          "opponentSlug": "rakuten-eagles",
+          "home": true,
+          "score": 8,
+          "opponentScore": 7,
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "slug": "orix-buffaloes",
+      "name": "オリックス・バファローズ",
+      "league": "pacific",
+      "color": "#000019",
+      "accent": "#b09b5b",
+      "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "読売ジャイアンツ",
+          "opponentSlug": "yomiuri-giants",
+          "home": true,
+          "score": 2,
+          "opponentScore": 3,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-31",
+          "opponent": "中日ドラゴンズ",
+          "opponentSlug": "chunichi-dragons",
+          "home": false,
+          "score": 7,
+          "opponentScore": 5,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "中日ドラゴンズ",
+          "opponentSlug": "chunichi-dragons",
+          "home": false,
+          "score": 3,
+          "opponentScore": 1,
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "slug": "softbank-hawks",
+      "name": "福岡ソフトバンクホークス",
+      "league": "pacific",
+      "color": "#fbc600",
+      "accent": "#000000",
+      "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "中日ドラゴンズ",
+          "opponentSlug": "chunichi-dragons",
+          "home": true,
+          "score": 3,
+          "opponentScore": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-31",
+          "opponent": "広島東洋カープ",
+          "opponentSlug": "hiroshima-carp",
+          "home": false,
+          "score": 3,
+          "opponentScore": 1,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "広島東洋カープ",
+          "opponentSlug": "hiroshima-carp",
+          "home": false,
+          "score": 4,
+          "opponentScore": 2,
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "slug": "nipponham-fighters",
+      "name": "北海道日本ハムファイターズ",
+      "league": "pacific",
+      "color": "#0a1f44",
+      "accent": "#cdd1d4",
+      "recentGames": [
+        {
+          "date": "2026-05-31",
+          "opponent": "読売ジャイアンツ",
+          "opponentSlug": "yomiuri-giants",
+          "home": false,
+          "score": 3,
+          "opponentScore": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "読売ジャイアンツ",
+          "opponentSlug": "yomiuri-giants",
+          "home": false,
+          "score": 3,
+          "opponentScore": 5,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-29",
+          "opponent": "読売ジャイアンツ",
+          "opponentSlug": "yomiuri-giants",
+          "home": false,
+          "score": 2,
+          "opponentScore": 4,
+          "result": "L"
+        }
+      ]
+    },
+    {
+      "slug": "rakuten-eagles",
+      "name": "東北楽天ゴールデンイーグルス",
+      "league": "pacific",
+      "color": "#860010",
+      "accent": "#000000",
+      "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "横浜DeNAベイスターズ",
+          "opponentSlug": "yokohama-dena",
+          "home": true,
+          "score": 7,
+          "opponentScore": 3,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-31",
+          "opponent": "東京ヤクルトスワローズ",
+          "opponentSlug": "yakult-swallows",
+          "home": false,
+          "score": 1,
+          "opponentScore": 2,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "東京ヤクルトスワローズ",
+          "opponentSlug": "yakult-swallows",
+          "home": false,
+          "score": 7,
+          "opponentScore": 8,
+          "result": "L"
+        }
+      ]
+    },
+    {
+      "slug": "seibu-lions",
+      "name": "埼玉西武ライオンズ",
+      "league": "pacific",
+      "color": "#003e92",
+      "accent": "#ffffff",
+      "recentGames": [
+        {
+          "date": "2026-05-31",
+          "opponent": "横浜DeNAベイスターズ",
+          "opponentSlug": "yokohama-dena",
+          "home": false,
+          "score": 0,
+          "opponentScore": 6,
+          "result": "L"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "横浜DeNAベイスターズ",
+          "opponentSlug": "yokohama-dena",
+          "home": false,
+          "score": 6,
+          "opponentScore": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-29",
+          "opponent": "横浜DeNAベイスターズ",
+          "opponentSlug": "yokohama-dena",
+          "home": false,
+          "score": 13,
+          "opponentScore": 4,
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "slug": "lotte-marines",
+      "name": "千葉ロッテマリーンズ",
+      "league": "pacific",
+      "color": "#000000",
+      "accent": "#ffffff",
+      "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "東京ヤクルトスワローズ",
+          "opponentSlug": "yakult-swallows",
+          "home": true,
+          "score": 5,
+          "opponentScore": 0,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-31",
+          "opponent": "阪神タイガース",
+          "opponentSlug": "hanshin-tigers",
+          "home": false,
+          "score": 4,
+          "opponentScore": 2,
+          "result": "W"
+        },
+        {
+          "date": "2026-05-30",
+          "opponent": "阪神タイガース",
+          "opponentSlug": "hanshin-tigers",
+          "home": false,
+          "score": 3,
+          "opponentScore": 4,
+          "result": "L"
+        }
+      ]
+    }
+  ]
+}

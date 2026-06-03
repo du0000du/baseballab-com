@@ -52,9 +52,45 @@ jobs:
           fi
 
   # ──────────────────────────────────────────────────────────────────────────
+  sync-npb-results:
+    name: "NPB Game Results"
+    needs: sync-npb
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch NPB results (retry x3)
+        run: |
+          for i in 1 2 3; do
+            echo "Attempt $i/3"
+            python3 scripts/fetch_npb_results.py && break
+            echo "Attempt $i failed."
+            [ $i -lt 3 ] && sleep 30
+          done
+
+      - name: Commit NPB results data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add data/npb/results.json
+          if git diff --cached --quiet; then
+            echo "No NPB results changes -- skipping commit."
+          else
+            git commit -m "data: NPB results sync $(date -u '+%Y-%m-%d')"
+            git push
+          fi
+
+  # ──────────────────────────────────────────────────────────────────────────
   sync-mlb-players:
     name: "MLB Players & Teams"
-    needs: sync-npb
+    needs: sync-npb-results
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -124,9 +160,45 @@ jobs:
           fi
 
   # ──────────────────────────────────────────────────────────────────────────
+  sync-mlb-results:
+    name: "MLB Game Results"
+    needs: sync-mlb-leaders
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch MLB results (retry x3)
+        run: |
+          for i in 1 2 3; do
+            echo "Attempt $i/3"
+            python3 scripts/fetch_mlb_results.py && break
+            echo "Attempt $i failed."
+            [ $i -lt 3 ] && sleep 30
+          done
+
+      - name: Commit MLB results data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add data/mlb/results.json
+          if git diff --cached --quiet; then
+            echo "No MLB results changes -- skipping commit."
+          else
+            git commit -m "data: MLB results sync $(date -u '+%Y-%m-%d')"
+            git push
+          fi
+
+  # ──────────────────────────────────────────────────────────────────────────
   validate:
     name: "Validate Data"
-    needs: [sync-npb, sync-mlb-players, sync-mlb-leaders]
+    needs: [sync-npb-results, sync-mlb-players, sync-mlb-leaders, sync-mlb-results]
     runs-on: ubuntu-latest
     if: always()   # even if earlier jobs skipped (no changes)
 

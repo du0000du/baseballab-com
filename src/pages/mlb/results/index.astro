@@ -1,0 +1,139 @@
+---
+// /mlb/results/ — MLB 直近3試合 チーム別試合結果
+import Layout from '../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let data: any = null;
+try {
+  const raw = readFileSync(join(process.cwd(), 'data/mlb/results.json'), 'utf-8');
+  data = JSON.parse(raw);
+} catch (e) {}
+
+const teams: any[] = data?.teams ?? [];
+
+// Group by league → division
+const byDiv: Record<string, Record<string, any[]>> = {};
+for (const t of teams) {
+  const lg = t.leagueShort || t.league || 'Other';
+  const div = t.divisionShort || t.division || 'Other';
+  if (!byDiv[lg]) byDiv[lg] = {};
+  if (!byDiv[lg][div]) byDiv[lg][div] = [];
+  byDiv[lg][div].push(t);
+}
+
+const LEAGUE_ORDER = ['AL', 'NL'];
+const DIV_ORDER_AL = ['AL East', 'AL Central', 'AL West'];
+const DIV_ORDER_NL = ['NL East', 'NL Central', 'NL West'];
+const DIV_ORDER: Record<string, string[]> = { AL: DIV_ORDER_AL, NL: DIV_ORDER_NL };
+
+const asOf = data?.asOfDate ?? '';
+
+function fmtDate(d: string) {
+  const parts = d.split('-');
+  return parts.length === 3 ? `${parseInt(parts[1])}/${parseInt(parts[2])}` : d;
+}
+---
+<Layout
+  title={`MLB ${data?.season ?? ''} 直近3試合 試合結果 | Baseballab`}
+  description={`MLB全30球団の直近3試合の試合結果。AL・NL地区別にスコア・勝敗・対戦相手を一覧表示。毎日自動更新。`}
+  ogUrl="https://baseballab.com/mlb/results/"
+>
+  <style slot="head">
+    .res-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .res-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .lg-section { padding:2.5rem 0; }
+    .lg-section.alt { background:var(--gray-100); }
+    .lg-title { font-size:1.3rem; font-weight:800; color:var(--navy); margin-bottom:.25rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .6rem; border-radius:9999px; }
+    .lg-badge.AL { background:#00539b; } .lg-badge.NL { background:#c8102e; }
+    .div-title { font-size:.95rem; font-weight:700; color:var(--gray-600); margin:1.5rem 0 .75rem; border-bottom:2px solid var(--navy); padding-bottom:.3rem; }
+    .teams-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .team-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .team-header { padding:.65rem 1rem; background:var(--navy); }
+    .team-name { font-weight:800; font-size:.9rem; color:#fff; }
+    .team-abbr { font-size:.72rem; color:rgba(255,255,255,.65); margin-left:.4rem; }
+    .games-list { }
+    .game-row { display:grid; grid-template-columns:2.6rem 1fr auto; align-items:center; gap:.5rem; padding:.48rem .85rem; border-bottom:1px solid var(--gray-100); font-size:.82rem; }
+    .game-row:last-child { border-bottom:none; }
+    .result-badge { font-size:.71rem; font-weight:800; width:1.55rem; height:1.55rem; display:flex; align-items:center; justify-content:center; border-radius:4px; }
+    .result-badge.W { background:#dcfce7; color:#166534; }
+    .result-badge.L { background:#fee2e2; color:#991b1b; }
+    .result-badge.T { background:#f3f4f6; color:#6b7280; }
+    .game-info { line-height:1.35; }
+    .game-opp { font-weight:600; color:var(--text); }
+    .game-meta { font-size:.7rem; color:var(--gray-500); }
+    .game-score { font-weight:700; color:var(--navy); font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .no-game { padding:.85rem 1rem; font-size:.8rem; color:var(--gray-400); }
+    .no-data { padding:3rem 0; text-align:center; color:var(--gray-500); }
+    @media(max-width:900px){ .teams-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:560px){ .teams-grid{grid-template-columns:1fr;} }
+  </style>
+
+  <section class="res-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/mlb/">MLB</a> &rsaquo; 試合結果</p>
+      <h1>MLB 直近3試合 結果</h1>
+      <p class="hero-sub">AL・NL全30球団の最新試合結果</p>
+      {asOf && (
+        <span class="updated-badge">
+          <span>📅</span>
+          <span>{asOf} 時点</span>
+        </span>
+      )}
+    </div>
+  </section>
+
+  {!data ? (
+    <div class="no-data container"><p>データを読み込めませんでした。</p></div>
+  ) : (
+    LEAGUE_ORDER.map((lg, lgIdx) => (
+      byDiv[lg] && (
+        <section class={`lg-section${lgIdx % 2 === 1 ? ' alt' : ''}`}>
+          <div class="container">
+            <h2 class="lg-title">
+              <span class={`lg-badge ${lg}`}>{lg}</span>
+              {lg === 'AL' ? 'アメリカン・リーグ' : 'ナショナル・リーグ'}
+            </h2>
+            {(DIV_ORDER[lg] ?? Object.keys(byDiv[lg])).map((div) => (
+              byDiv[lg][div] && (
+                <>
+                  <h3 class="div-title">{div}</h3>
+                  <div class="teams-grid">
+                    {byDiv[lg][div].map((team: any) => (
+                      <div class="team-card">
+                        <div class="team-header">
+                          <span class="team-name">{team.name}</span>
+                          <span class="team-abbr">{team.abbreviation}</span>
+                        </div>
+                        <div class="games-list">
+                          {team.recentGames.length === 0 ? (
+                            <p class="no-game">試合データなし</p>
+                          ) : (
+                            team.recentGames.map((g: any) => (
+                              <div class="game-row">
+                                <span class={`result-badge ${g.result}`}>{g.result}</span>
+                                <div class="game-info">
+                                  <div class="game-opp">{g.home ? 'vs ' : '@ '}{g.opponentAbbr || g.opponent}</div>
+                                  <div class="game-meta">{fmtDate(g.date)}{g.home ? ' 主場' : ' 客場'}</div>
+                                </div>
+                                <span class="game-score">{g.score}–{g.opponentScore}</span>
+                              </div>
+                            ))
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )
+            ))}
+          </div>
+        </section>
+      )
+    ))
+  )}
+</Layout>

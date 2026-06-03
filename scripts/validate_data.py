@@ -77,6 +77,28 @@ else:
     check(False, "MLB leaders file", f"data/mlb/leaders/{SEASON}.json missing")
 
 
+# --- NPB results -----------------------------------------------------------
+npb_results = ROOT / "data" / "npb" / "results.json"
+if npb_results.exists():
+    nr = json.loads(npb_results.read_text(encoding="utf-8"))
+    age = days_old(nr.get("fetchedAt", ""))
+    teams_with_games = sum(1 for t in nr.get("teams", []) if t.get("recentGames"))
+    check(age <= 3, "NPB results freshness", f"{nr.get('fetchedAt','?')[:10]} ({age}d ago)")
+    check(teams_with_games >= 6, "NPB results coverage", f"{teams_with_games}/12 teams")
+else:
+    check(False, "NPB results file", "data/npb/results.json missing")
+
+# --- MLB results -----------------------------------------------------------
+mlb_results = ROOT / "data" / "mlb" / "results.json"
+if mlb_results.exists():
+    mr = json.loads(mlb_results.read_text(encoding="utf-8"))
+    age = days_old(mr.get("fetchedAt", ""))
+    teams_with_games = sum(1 for t in mr.get("teams", []) if t.get("recentGames"))
+    check(age <= 3, "MLB results freshness", f"{mr.get('fetchedAt','?')[:10]} ({age}d ago)")
+    check(teams_with_games >= 20, "MLB results coverage", f"{teams_with_games}/30 teams")
+else:
+    check(False, "MLB results file", "data/mlb/results.json missing")
+
 # --- Output ----------------------------------------------------------------
 header = f"## Data Validation — {NOW_UTC.strftime('%Y-%m-%d %H:%M')} UTC\n\n"
 table = "| | Check | Detail |\n|---|---|---|\n"
