@@ -10,6 +10,7 @@ TASK-003: 接続テスト / TASK-004: 選手データ取得 / TASK-005: チー�
   python3 scripts/fetch_mlb.py --mode teams       # チームJSONを取得
 """
 
+import io
 import json
 import sys
 import time
@@ -18,6 +19,8 @@ import urllib.request
 import urllib.error
 from datetime import datetime
 from pathlib import Path
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 BASE_URL = "https://statsapi.mlb.com/api/v1"
 DATA_DIR = Path(__file__).parent.parent / "data" / "mlb"
@@ -153,7 +156,7 @@ def fetch_players():
         slug = p["fullName"].lower().replace(" ", "-").replace(".", "")
         result = {"info": p, "stats": stats, "season": SEASON}
         out_path = out_dir / f"{slug}.json"
-        out_path.write_text(json.dumps(result, ensure_ascii=False, indent=2))
+        out_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
         # 成績サマリーを表示
         if stats and stats[0].get("splits"):
@@ -188,7 +191,7 @@ def fetch_teams():
         stats_data = fetch(f"/teams/{team_id}/stats?stats=season&season={SEASON}")
         result = {"info": t, "stats": stats_data.get("stats", []), "season": SEASON}
         out_path = out_dir / f"{slug}.json"
-        out_path.write_text(json.dumps(result, ensure_ascii=False, indent=2))
+        out_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"  ✅ {t['name']} ({t['abbreviation']}) → {out_path.name}")
         time.sleep(0.2)
 

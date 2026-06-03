@@ -13,6 +13,7 @@ MLB シーズン成績リーダーボードデータを取得してJSONに保存
   data/mlb/leaders/{SEASON}.json
 """
 
+import io
 import json
 import os
 import sys
@@ -20,6 +21,8 @@ import time
 from datetime import datetime, timezone
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 # シーズン判定: 3月以降は当年、1〜2月はオフシーズン扱いで前年。MLB_SEASON env varで明示上書き可
 SEASON = str(int(os.environ.get("MLB_SEASON") or (datetime.now().year if datetime.now().month >= 3 else datetime.now().year - 1)))

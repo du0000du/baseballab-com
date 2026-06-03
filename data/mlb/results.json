@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-03T03:41:33Z",
+  "fetchedAt": "2026-06-03T07:42:27Z",
   "season": "2026",
   "asOfDate": "2026-06-03",
   "teams": [
@@ -469,6 +469,15 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-06-02",
+          "opponent": "Colorado Rockies",
+          "opponentAbbr": "COL",
+          "home": true,
+          "score": 2,
+          "opponentScore": 8,
+          "result": "L"
+        },
+        {
           "date": "2026-06-01",
           "opponent": "Colorado Rockies",
           "opponentAbbr": "COL",
@@ -485,15 +494,6 @@
           "score": 2,
           "opponentScore": 5,
           "result": "L"
-        },
-        {
-          "date": "2026-05-30",
-          "opponent": "Tampa Bay Rays",
-          "opponentAbbr": "TB",
-          "home": false,
-          "score": 14,
-          "opponentScore": 3,
-          "result": "W"
         }
       ]
     },
@@ -506,6 +506,15 @@
       "division": "American League West",
       "divisionShort": "AL West",
       "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "New York Mets",
+          "opponentAbbr": "NYM",
+          "home": true,
+          "score": 8,
+          "opponentScore": 3,
+          "result": "W"
+        },
         {
           "date": "2026-06-01",
           "opponent": "New York Mets",
@@ -522,15 +531,6 @@
           "home": true,
           "score": 3,
           "opponentScore": 2,
-          "result": "W"
-        },
-        {
-          "date": "2026-05-30",
-          "opponent": "Arizona Diamondbacks",
-          "opponentAbbr": "AZ",
-          "home": true,
-          "score": 5,
-          "opponentScore": 1,
           "result": "W"
         }
       ]
@@ -849,6 +849,15 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-06-02",
+          "opponent": "Seattle Mariners",
+          "opponentAbbr": "SEA",
+          "home": false,
+          "score": 3,
+          "opponentScore": 8,
+          "result": "L"
+        },
+        {
           "date": "2026-06-01",
           "opponent": "Seattle Mariners",
           "opponentAbbr": "SEA",
@@ -863,15 +872,6 @@
           "opponentAbbr": "MIA",
           "home": true,
           "score": 10,
-          "opponentScore": 1,
-          "result": "W"
-        },
-        {
-          "date": "2026-05-30",
-          "opponent": "Miami Marlins",
-          "opponentAbbr": "MIA",
-          "home": true,
-          "score": 6,
           "opponentScore": 1,
           "result": "W"
         }
@@ -963,6 +963,15 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-06-02",
+          "opponent": "Los Angeles Dodgers",
+          "opponentAbbr": "LAD",
+          "home": true,
+          "score": 5,
+          "opponentScore": 6,
+          "result": "L"
+        },
+        {
           "date": "2026-06-01",
           "opponent": "Los Angeles Dodgers",
           "opponentAbbr": "LAD",
@@ -979,15 +988,6 @@
           "score": 2,
           "opponentScore": 3,
           "result": "L"
-        },
-        {
-          "date": "2026-05-30",
-          "opponent": "Seattle Mariners",
-          "opponentAbbr": "SEA",
-          "home": false,
-          "score": 1,
-          "opponentScore": 5,
-          "result": "L"
         }
       ]
     },
@@ -1000,6 +1000,15 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "Los Angeles Angels",
+          "opponentAbbr": "LAA",
+          "home": false,
+          "score": 8,
+          "opponentScore": 2,
+          "result": "W"
+        },
         {
           "date": "2026-06-01",
           "opponent": "Los Angeles Angels",
@@ -1017,15 +1026,6 @@
           "score": 6,
           "opponentScore": 19,
           "result": "L"
-        },
-        {
-          "date": "2026-05-30",
-          "opponent": "San Francisco Giants",
-          "opponentAbbr": "SF",
-          "home": true,
-          "score": 8,
-          "opponentScore": 3,
-          "result": "W"
         }
       ]
     },
@@ -1038,6 +1038,15 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "recentGames": [
+        {
+          "date": "2026-06-02",
+          "opponent": "Arizona Diamondbacks",
+          "opponentAbbr": "AZ",
+          "home": false,
+          "score": 6,
+          "opponentScore": 5,
+          "result": "W"
+        },
         {
           "date": "2026-06-01",
           "opponent": "Arizona Diamondbacks",
@@ -1055,15 +1064,6 @@
           "score": 9,
           "opponentScore": 1,
           "result": "W"
-        },
-        {
-          "date": "2026-05-30",
-          "opponent": "Philadelphia Phillies",
-          "opponentAbbr": "PHI",
-          "home": true,
-          "score": 3,
-          "opponentScore": 4,
-          "result": "L"
         }
       ]
     },
