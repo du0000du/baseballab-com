@@ -1,0 +1,234 @@
+---
+// /en/mlb/analysis/ -- MLB 2026 Sabermetrics Analysis (EN)
+import Layout from '../../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let leaders: any = null;
+let standings: any = null;
+try {
+  leaders = JSON.parse(readFileSync(join(process.cwd(), 'data/mlb/leaders/2026.json'), 'utf-8'));
+  standings = JSON.parse(readFileSync(join(process.cwd(), 'data/mlb/standings.json'), 'utf-8'));
+} catch {}
+
+const season = leaders?.season ?? standings?.season ?? '2026';
+const asOf = standings?.fetchedAt?.slice(0, 10) ?? leaders?.fetched_at?.slice(0, 10) ?? '';
+
+const bat = leaders?.batting ?? {};
+const pit = leaders?.pitching ?? {};
+const teams: any[] = standings?.teams ?? [];
+
+const gamesMap: Record<string, number> = {};
+for (const t of teams) gamesMap[t.abbreviation] = t.gamesPlayed || t.games || 62;
+
+function pace(value: number, team: string): number {
+  const gp = gamesMap[team] ?? 62;
+  return Math.round(value / gp * 162);
+}
+
+const batCats = [
+  { key: 'homeRuns', label: 'HR', proj: true },
+  { key: 'avg', label: 'AVG', proj: false },
+  { key: 'rbi', label: 'RBI', proj: true },
+  { key: 'stolenBases', label: 'SB', proj: true },
+];
+const pitCats = [
+  { key: 'era', label: 'ERA', proj: false },
+  { key: 'wins', label: 'W', proj: true },
+  { key: 'strikeOuts', label: 'SO', proj: true },
+  { key: 'saves', label: 'SV', proj: true },
+];
+
+const JP_PLAYERS = ['Munetaka Murakami', 'Shohei Ohtani', 'Masataka Yoshida', 'Yoshinobu Yamamoto'];
+
+type JpEntry = { cat: string; player: string; team: string; value: string; rank: number };
+const jpEntries: JpEntry[] = [];
+for (const { key, label } of [...batCats, ...pitCats]) {
+  const list: any[] = bat[key] ?? pit[key] ?? [];
+  for (const p of list) {
+    if (JP_PLAYERS.includes(p.player)) {
+      const val = key === 'avg' ? Number(p.value).toFixed(3) : String(p.value);
+      jpEntries.push({ cat: label, player: p.player, team: p.team, value: val, rank: p.rank });
+    }
+  }
+}
+
+const runDiffTop = [...teams].sort((a, b) => b.runDiff - a.runDiff).slice(0, 5);
+
+const phiLeads: string[] = [];
+if ((bat.homeRuns?.[0]?.team) === 'PHI') phiLeads.push('HR');
+if ((bat.avg?.[0]?.team) === 'PHI') phiLeads.push('AVG');
+if ((bat.rbi?.[0]?.team) === 'PHI') phiLeads.push('RBI');
+if ((pit.era?.[0]?.team) === 'PHI') phiLeads.push('ERA');
+if ((pit.strikeOuts?.[0]?.team) === 'PHI') phiLeads.push('SO');
+if ((pit.wins?.[0]?.team) === 'PHI') phiLeads.push('W');
+---
+<Layout
+  title={`MLB ${season} Sabermetrics Analysis | Pace Projections & Pythagorean | Baseballab`}
+  description={`MLB ${season} data analysis: pace projections for batting and pitching leaders, Pythagorean win% divergence, and Japanese player spotlight.`}
+  ogUrl="https://baseballab.com/en/mlb/analysis/"
+>
+  <style slot="head">
+    .an-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .an-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .an-section { padding:2.5rem 0; }
+    .an-section.alt { background:var(--gray-100); }
+    .sec-title { font-size:1.2rem; font-weight:800; color:var(--navy); margin-bottom:1.25rem; }
+    .lg-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+    .cat-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .cat-head { background:var(--navy); color:#fff; padding:.45rem 1rem; font-size:.78rem; font-weight:700; letter-spacing:.03em; }
+    table.an-tbl { width:100%; border-collapse:collapse; font-size:.82rem; }
+    table.an-tbl th { font-size:.62rem; color:var(--gray-400); text-transform:uppercase; padding:.28rem .55rem; text-align:right; font-weight:600; }
+    table.an-tbl th:first-child { text-align:left; padding-left:.8rem; }
+    table.an-tbl td { padding:.32rem .55rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; }
+    table.an-tbl td:first-child { text-align:left; padding-left:.8rem; }
+    table.an-tbl tr.top1 td { background:rgba(22,45,71,.04); font-weight:600; }
+    .proj { font-size:.68rem; color:var(--gray-400); margin-left:.2rem; }
+    .phi-box { background:#fff8f0; border:2px solid #f97316; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem; }
+    .phi-box h3 { font-size:1rem; font-weight:800; color:#c2410c; margin-bottom:.5rem; }
+    .phi-cats { display:flex; gap:.5rem; flex-wrap:wrap; }
+    .phi-cat { background:#fed7aa; color:#9a3412; font-size:.72rem; font-weight:700; padding:.2rem .6rem; border-radius:4px; }
+    .jp-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; }
+    .jp-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; padding:1rem; box-shadow:var(--shadow-sm); }
+    .jp-name { font-weight:700; color:var(--navy); font-size:.9rem; margin-bottom:.3rem; }
+    .jp-sub { font-size:.78rem; color:var(--gray-500); }
+    .jp-stat { font-size:1.1rem; font-weight:800; color:var(--red); margin-top:.3rem; }
+    .rd-row { display:flex; align-items:center; justify-content:space-between; padding:.4rem 0; border-bottom:1px solid var(--gray-100); }
+    .rd-team { font-weight:700; color:var(--navy); font-size:.9rem; width:3rem; }
+    .rd-bar-wrap { flex:1; margin:0 .75rem; background:var(--gray-100); border-radius:4px; height:8px; overflow:hidden; }
+    .rd-bar { height:8px; border-radius:4px; background:#166534; }
+    .rd-num { font-size:.85rem; font-weight:700; color:#166534; width:3.5rem; text-align:right; }
+    .rd-pyth { font-size:.72rem; color:var(--gray-400); width:5.5rem; text-align:right; }
+    .note { margin-top:.75rem; font-size:.75rem; color:var(--gray-500); line-height:1.6; }
+    .note a { color:var(--red); }
+    @media(max-width:680px) { .lg-grid { grid-template-columns:1fr; } }
+  </style>
+
+  <section class="an-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/">Baseballab EN</a> &rsaquo; <a href="/en/mlb/">MLB</a> &rsaquo; Analysis</p>
+      <h1>MLB {season} Sabermetrics Analysis</h1>
+      <p class="hero-sub">Pace projections · Pythagorean divergence · Japanese player spotlight</p>
+      {asOf && <span class="updated-badge">📅 As of {asOf}</span>}
+    </div>
+  </section>
+
+  {!leaders ? (
+    <div style="padding:3rem 0;text-align:center;color:var(--gray-500)" class="container"><p>Data unavailable.</p></div>
+  ) : (
+    <>
+      {/* Section 1: Pace Projections */}
+      <section class="an-section">
+        <div class="container">
+          <h2 class="sec-title">162-Game Pace Projections</h2>
+          <div class="lg-grid">
+            {batCats.map(({ key, label, proj }) => {
+              const list: any[] = bat[key] ?? [];
+              return (
+                <div class="cat-card">
+                  <div class="cat-head">Batting — {label}</div>
+                  <table class="an-tbl">
+                    <thead><tr><th>Player</th><th>Team</th><th>{label}</th>{proj && <th>Pace</th>}</tr></thead>
+                    <tbody>
+                      {list.slice(0, 5).map((p, i) => (
+                        <tr class={i === 0 ? 'top1' : ''}>
+                          <td>{p.player}</td>
+                          <td>{p.team}</td>
+                          <td>{key === 'avg' ? Number(p.value).toFixed(3) : p.value}</td>
+                          {proj && <td><span class="proj">▶{pace(Number(p.value), p.team)}</span></td>}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            })}
+            {pitCats.map(({ key, label, proj }) => {
+              const list: any[] = pit[key] ?? [];
+              return (
+                <div class="cat-card">
+                  <div class="cat-head">Pitching — {label}</div>
+                  <table class="an-tbl">
+                    <thead><tr><th>Player</th><th>Team</th><th>{label}</th>{proj && <th>Pace</th>}</tr></thead>
+                    <tbody>
+                      {list.slice(0, 5).map((p, i) => (
+                        <tr class={i === 0 ? 'top1' : ''}>
+                          <td>{p.player}</td>
+                          <td>{p.team}</td>
+                          <td>{key === 'era' ? Number(p.value).toFixed(2) : p.value}</td>
+                          {proj && <td><span class="proj">▶{pace(Number(p.value), p.team)}</span></td>}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            })}
+          </div>
+          <p class="note">Pace = current value ÷ games played × 162. AVG and ERA are not projected. See <a href="/en/glossary/sabermetrics/">glossary</a> for more.</p>
+        </div>
+      </section>
+
+      {/* Section 2: PHI dominance */}
+      {phiLeads.length >= 2 && (
+        <section class="an-section alt">
+          <div class="container">
+            <h2 class="sec-title">Team Spotlight</h2>
+            <div class="phi-box">
+              <h3>Philadelphia Phillies — Multi-Category Leaders</h3>
+              <p style="font-size:.85rem;margin-bottom:.75rem">PHI currently leads <strong>{phiLeads.length} statistical categories</strong>, showing dominance across both offense and pitching.</p>
+              <div class="phi-cats">
+                {phiLeads.map(c => <span class="phi-cat">{c} #1</span>)}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Section 3: Japanese player spotlight */}
+      {jpEntries.length > 0 && (
+        <section class={`an-section${phiLeads.length >= 2 ? '' : ' alt'}`}>
+          <div class="container">
+            <h2 class="sec-title">Japanese Players in MLB Rankings</h2>
+            <div class="jp-grid">
+              {jpEntries.map(e => (
+                <div class="jp-card">
+                  <div class="jp-name">{e.player}</div>
+                  <div class="jp-sub">{e.team} — {e.cat} Rank #{e.rank}</div>
+                  <div class="jp-stat">{e.value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Section 4: Run differential top 5 */}
+      {teams.length > 0 && (
+        <section class={`an-section${jpEntries.length > 0 ? ' alt' : ''}`}>
+          <div class="container">
+            <h2 class="sec-title">Run Differential Top 5 vs. Pythagorean Win%</h2>
+            {runDiffTop.map(t => {
+              const maxRd = runDiffTop[0].runDiff;
+              const barW = Math.round((t.runDiff / maxRd) * 100);
+              return (
+                <div class="rd-row">
+                  <span class="rd-team">{t.abbreviation}</span>
+                  <div class="rd-bar-wrap"><div class="rd-bar" style={`width:${barW}%`}></div></div>
+                  <span class="rd-num">+{t.runDiff}</span>
+                  <span class="rd-pyth">Pyth {t.pythWinPct.toFixed(3).replace(/^0/, '')}</span>
+                </div>
+              );
+            })}
+            <p class="note">
+              Pythagorean Win% = RS^1.83 / (RS^1.83 + RA^1.83). Full divergence table: <a href="/en/mlb/trends/">Pythagorean analysis →</a>
+            </p>
+          </div>
+        </section>
+      )}
+    </>
+  )}
+</Layout>

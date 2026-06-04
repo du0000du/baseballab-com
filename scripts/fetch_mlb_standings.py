@@ -21,6 +21,21 @@ NOW = datetime.now(timezone.utc)
 SEASON = str(NOW.year if NOW.month >= 3 else NOW.year - 1)
 EXP = 1.83  # Pythagenport exponent (Smyth, Baseball Reference)
 
+# MLB Stats API returns league/division as {id, link} — name field is empty.
+# Map IDs directly.
+LEAGUE_ID_MAP = {
+    103: ("American League", "AL"),
+    104: ("National League", "NL"),
+}
+DIV_ID_MAP = {
+    200: ("American League West",    "AL West"),
+    201: ("American League East",    "AL East"),
+    202: ("American League Central", "AL Central"),
+    203: ("National League West",    "NL West"),
+    204: ("National League East",    "NL East"),
+    205: ("National League Central", "NL Central"),
+}
+
 
 def fetch(path: str, retries: int = 3) -> dict:
     url = BASE + path
@@ -50,8 +65,11 @@ def main() -> None:
 
     teams = []
     for record in raw.get("records", []):
-        div_name = record.get("division", {}).get("name", "")
-        lg_name = record.get("league", {}).get("name", "")
+        lg_id = record.get("league", {}).get("id", 0)
+        div_id = record.get("division", {}).get("id", 0)
+        lg_name, lg_short = LEAGUE_ID_MAP.get(lg_id, ("", ""))
+        div_name, div_short = DIV_ID_MAP.get(div_id, ("", ""))
+
         for tr in record.get("teamRecords", []):
             team = tr.get("team", {})
             w = tr.get("wins", 0)
@@ -59,6 +77,8 @@ def main() -> None:
             rs = tr.get("runsScored", 0)
             ra = tr.get("runsAllowed", 0)
             games = w + l
+            gp = tr.get("gamesPlayed", games)
+            gb = tr.get("gamesBack", "-")
             actual_pct = round(w / games, 4) if games > 0 else 0.0
             pyth_pct = pythagorean(rs, ra)
             luck_delta = round(actual_pct - pyth_pct, 4)
@@ -68,12 +88,14 @@ def main() -> None:
                 "name": team.get("name", ""),
                 "abbreviation": team.get("abbreviation", ""),
                 "league": lg_name,
-                "leagueShort": "AL" if "American" in lg_name else "NL",
+                "leagueShort": lg_short,
                 "division": div_name,
-                "divisionShort": div_name.replace("American League ", "AL ").replace("National League ", "NL "),
+                "divisionShort": div_short,
                 "wins": w,
                 "losses": l,
                 "games": games,
+                "gamesPlayed": gp,
+                "gamesBack": gb,
                 "winPct": actual_pct,
                 "runsScored": rs,
                 "runsAllowed": ra,

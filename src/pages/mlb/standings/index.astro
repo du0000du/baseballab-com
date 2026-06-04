@@ -1,0 +1,148 @@
+---
+// /mlb/standings/ -- MLB 2026 シーズン順位表
+// データソース: data/mlb/standings.json (MLB Stats API /standings)
+import Layout from '../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let data: any = null;
+try {
+  data = JSON.parse(readFileSync(join(process.cwd(), 'data/mlb/standings.json'), 'utf-8'));
+} catch {}
+
+const teams: any[] = data?.teams ?? [];
+const LEAGUE_ORDER = ['American League', 'National League'];
+const DIV_ORDER = [
+  'American League East', 'American League Central', 'American League West',
+  'National League East', 'National League Central', 'National League West',
+];
+const LG_SHORT: Record<string, string> = { 'American League': 'AL', 'National League': 'NL' };
+
+const byDiv: Record<string, any[]> = {};
+for (const t of teams) {
+  if (!byDiv[t.division]) byDiv[t.division] = [];
+  byDiv[t.division].push(t);
+}
+for (const div of Object.values(byDiv)) {
+  div.sort((a, b) => b.winPct - a.winPct);
+}
+
+const asOf = data?.fetchedAt?.slice(0, 10) ?? '';
+const season = data?.season ?? '';
+
+function pct(n: number) { return n.toFixed(3).replace(/^0/, ''); }
+function gb(v: any) { return v === '-' ? '—' : String(v); }
+function rdColor(n: number) { return n > 0 ? '#166534' : n < 0 ? '#991b1b' : 'var(--gray-500)'; }
+function luckTag(delta: number) {
+  if (delta > 0.06) return { label: '▲ラッキー', bg: '#fef9c3', color: '#92400e' };
+  if (delta < -0.06) return { label: '▼実力', bg: '#eff6ff', color: '#1e40af' };
+  return null;
+}
+---
+<Layout
+  title={`MLB ${season} 順位表 | AL・NL 地区別スタンディング | Baseballab`}
+  description={`MLB ${season}シーズン最新順位表。アメリカン・リーグ・ナショナル・リーグ各地区の勝敗・勝率・得失点差を毎日更新。ピタゴラス期待勝率との乖離インジケーター付き。`}
+  ogUrl="https://baseballab.com/mlb/standings/"
+>
+  <style slot="head">
+    .st-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .st-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .st-section { padding:2.5rem 0; }
+    .st-section.alt { background:var(--gray-100); }
+    .lg-title { font-size:1.3rem; font-weight:800; color:var(--navy); margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .7rem; border-radius:9999px; }
+    .lg-badge.AL { background:#00539b; } .lg-badge.NL { background:#c8102e; }
+    .div-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.25rem; }
+    .div-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .div-head { background:var(--navy); color:#fff; padding:.5rem 1rem; font-size:.8rem; font-weight:700; letter-spacing:.03em; }
+    table.st-tbl { width:100%; border-collapse:collapse; font-size:.83rem; }
+    table.st-tbl th { font-size:.63rem; color:var(--gray-400); text-transform:uppercase; padding:.3rem .55rem; text-align:right; font-weight:600; letter-spacing:.04em; }
+    table.st-tbl th:first-child { text-align:left; padding-left:.8rem; }
+    table.st-tbl td { padding:.38rem .55rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; }
+    table.st-tbl td:first-child { text-align:left; padding-left:.8rem; }
+    table.st-tbl tr.leader td { background:rgba(22,45,71,.03); }
+    .td-team { font-weight:700; color:var(--navy); display:flex; align-items:center; gap:.4rem; }
+    .td-team a { color:inherit; }
+    .luck-tag { font-size:.6rem; font-weight:700; padding:.1rem .35rem; border-radius:3px; white-space:nowrap; }
+    .pyth-note { margin-top:1rem; font-size:.75rem; color:var(--gray-500); line-height:1.6; }
+    .pyth-note a { color:var(--red); }
+    @media(max-width:960px) { .div-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:580px) { .div-grid { grid-template-columns:1fr; } }
+  </style>
+
+  <section class="st-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/mlb/">MLB</a> &rsaquo; 順位表</p>
+      <h1>MLB {season} 順位表</h1>
+      <p class="hero-sub">AL・NL 全6地区 最新スタンディング</p>
+      {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
+    </div>
+  </section>
+
+  {!data ? (
+    <div style="padding:3rem 0;text-align:center;color:var(--gray-500)" class="container"><p>データを読み込めませんでした。</p></div>
+  ) : (
+    LEAGUE_ORDER.map((lg, lgIdx) => (
+      <section class={`st-section${lgIdx % 2 === 1 ? ' alt' : ''}`}>
+        <div class="container">
+          <h2 class="lg-title">
+            <span class={`lg-badge ${LG_SHORT[lg]}`}>{LG_SHORT[lg]}</span>
+            {lg === 'American League' ? 'アメリカン・リーグ' : 'ナショナル・リーグ'}
+          </h2>
+          <div class="div-grid">
+            {DIV_ORDER.filter(d => d.startsWith(lg.split(' ')[0])).map(divName => {
+              const divTeams = byDiv[divName] ?? [];
+              if (!divTeams.length) return null;
+              const shortDiv = divName.replace('American League ', 'AL ').replace('National League ', 'NL ');
+              return (
+                <div class="div-card">
+                  <div class="div-head">{shortDiv}</div>
+                  <table class="st-tbl">
+                    <thead>
+                      <tr>
+                        <th>チーム</th>
+                        <th>W</th><th>L</th><th>PCT</th><th>GB</th>
+                        <th>得点</th><th>失点</th><th>差</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {divTeams.map((t, i) => {
+                        const rd = t.runDiff;
+                        const tag = luckTag(t.luckDelta);
+                        return (
+                          <tr class={i === 0 ? 'leader' : ''}>
+                            <td>
+                              <div class="td-team">
+                                <a href={`/teams/${t.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/`}>{t.abbreviation}</a>
+                                {tag && <span class="luck-tag" style={`background:${tag.bg};color:${tag.color}`}>{tag.label}</span>}
+                              </div>
+                            </td>
+                            <td>{t.wins}</td>
+                            <td>{t.losses}</td>
+                            <td>{pct(t.winPct)}</td>
+                            <td>{gb(t.gamesBack)}</td>
+                            <td>{t.runsScored}</td>
+                            <td>{t.runsAllowed}</td>
+                            <td style={`color:${rdColor(rd)};font-weight:700`}>{rd > 0 ? '+' : ''}{rd}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            })}
+          </div>
+          <p class="pyth-note">
+            ▲ラッキー = 実際の勝率がピタゴラス期待勝率より+6%以上。
+            ▼実力 = 実際の勝率が期待より-6%以上（得点力の割に負けすぎている強豪）。
+            詳細は <a href="/mlb/trends/">ピタゴラス乖離分析</a> を参照。
+          </p>
+        </div>
+      </section>
+    ))
+  )}
+</Layout>
