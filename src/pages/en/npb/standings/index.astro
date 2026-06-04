@@ -1,0 +1,138 @@
+---
+// /en/npb/standings/ — NPB 2026 Central & Pacific League standings (EN)
+import Layout from '../../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let data: any = null;
+try {
+  data = JSON.parse(readFileSync(join(process.cwd(), 'data/npb/standings.json'), 'utf-8'));
+} catch {}
+
+const central: any[] = data?.central ?? [];
+const pacific: any[] = data?.pacific ?? [];
+const season = data?.season ?? '2026';
+const asOf = data?.fetchedAt?.slice(0, 10) ?? '';
+
+const TEAM_EN: Record<string, string> = {
+  'yakult-swallows':     'Tokyo Yakult Swallows',
+  'hanshin-tigers':      'Hanshin Tigers',
+  'yomiuri-giants':      'Yomiuri Giants',
+  'yokohama-dena':       'Yokohama DeNA BayStars',
+  'hiroshima-carp':      'Hiroshima Toyo Carp',
+  'chunichi-dragons':    'Chunichi Dragons',
+  'seibu-lions':         'Saitama Seibu Lions',
+  'softbank-hawks':      'Fukuoka SoftBank Hawks',
+  'orix-buffaloes':      'Orix Buffaloes',
+  'nipponham-fighters':  'Hokkaido Nippon-Ham Fighters',
+  'lotte-marines':       'Chiba Lotte Marines',
+  'rakuten-eagles':      'Tohoku Rakuten Golden Eagles',
+};
+
+function pctColor(rank: number) { return rank === 1 ? '#166534' : rank <= 3 ? 'var(--navy)' : 'var(--gray-600)'; }
+---
+<Layout
+  title={`NPB ${season} Standings | Central & Pacific League | Baseballab`}
+  description={`NPB ${season} standings for all 12 teams in the Central and Pacific Leagues — wins, losses, ties, PCT, and games back. Updated daily.`}
+  ogUrl="https://baseballab.com/en/npb/standings/"
+>
+  <style slot="head">
+    .st-hero { background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,#7d1c2a 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .st-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .st-section { padding:2.5rem 0; }
+    .st-section.alt { background:var(--gray-100); }
+    .lg-title { font-size:1.3rem; font-weight:800; color:var(--navy); margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .7rem; border-radius:9999px; }
+    .lg-badge.cl { background:#9b2335; } .lg-badge.pl { background:#1a5276; }
+    .st-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); max-width:700px; }
+    table.st-tbl { width:100%; border-collapse:collapse; font-size:.85rem; }
+    table.st-tbl th { font-size:.65rem; color:var(--gray-400); text-transform:uppercase; padding:.3rem .7rem; text-align:right; font-weight:600; letter-spacing:.04em; }
+    table.st-tbl th:first-child { text-align:center; width:2rem; }
+    table.st-tbl th:nth-child(2) { text-align:left; padding-left:.8rem; }
+    table.st-tbl td { padding:.45rem .7rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; }
+    table.st-tbl td:first-child { text-align:center; font-weight:700; }
+    table.st-tbl td:nth-child(2) { text-align:left; padding-left:.8rem; }
+    table.st-tbl tr.leader td { background:rgba(22,45,71,.03); }
+    .td-team { font-weight:700; }
+    .td-team a { color:var(--navy); }
+    .gb-dash { color:var(--gray-400); }
+    .cs-note { margin-top:1rem; font-size:.75rem; color:var(--gray-500); line-height:1.6; }
+    .cs-note a { color:var(--red); }
+  </style>
+
+  <section class="st-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/">Baseballab EN</a> &rsaquo; <a href="/en/npb/">NPB</a> &rsaquo; Standings</p>
+      <h1>NPB {season} Standings</h1>
+      <p class="hero-sub">Central & Pacific League — all 12 teams</p>
+      {asOf && <span class="updated-badge">📅 As of {asOf}</span>}
+    </div>
+  </section>
+
+  {!data ? (
+    <div style="padding:3rem 0;text-align:center;color:var(--gray-500)" class="container"><p>Data unavailable.</p></div>
+  ) : (
+    <>
+      <section class="st-section">
+        <div class="container">
+          <h2 class="lg-title">
+            <span class="lg-badge cl">CL</span>
+            Central League
+          </h2>
+          <div class="st-card">
+            <table class="st-tbl">
+              <thead><tr><th>#</th><th>Team</th><th>G</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>GB</th></tr></thead>
+              <tbody>
+                {central.map((t, i) => (
+                  <tr class={i === 0 ? 'leader' : ''}>
+                    <td style={`color:${pctColor(t.rank)}`}>{t.rank}</td>
+                    <td><div class="td-team"><a href={`/en/npb/teams/${t.teamSlug}/`}>{t.teamAbbr}</a> {TEAM_EN[t.teamSlug] ?? t.teamName}</div></td>
+                    <td>{t.games}</td>
+                    <td>{t.wins}</td>
+                    <td>{t.losses}</td>
+                    <td>{t.ties}</td>
+                    <td>{t.pct}</td>
+                    <td class={t.gb === '--' ? 'gb-dash' : ''}>{t.gb === '--' ? '—' : t.gb}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="cs-note">PCT = W ÷ (W + L), ties excluded. <a href="/en/npb/trends/">NPB trends →</a></p>
+        </div>
+      </section>
+
+      <section class="st-section alt">
+        <div class="container">
+          <h2 class="lg-title">
+            <span class="lg-badge pl">PL</span>
+            Pacific League
+          </h2>
+          <div class="st-card">
+            <table class="st-tbl">
+              <thead><tr><th>#</th><th>Team</th><th>G</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>GB</th></tr></thead>
+              <tbody>
+                {pacific.map((t, i) => (
+                  <tr class={i === 0 ? 'leader' : ''}>
+                    <td style={`color:${pctColor(t.rank)}`}>{t.rank}</td>
+                    <td><div class="td-team"><a href={`/en/npb/teams/${t.teamSlug}/`}>{t.teamAbbr}</a> {TEAM_EN[t.teamSlug] ?? t.teamName}</div></td>
+                    <td>{t.games}</td>
+                    <td>{t.wins}</td>
+                    <td>{t.losses}</td>
+                    <td>{t.ties}</td>
+                    <td>{t.pct}</td>
+                    <td class={t.gb === '--' ? 'gb-dash' : ''}>{t.gb === '--' ? '—' : t.gb}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="cs-note">PCT = W ÷ (W + L), ties excluded. <a href="/en/npb/trends/">NPB trends →</a></p>
+        </div>
+      </section>
+    </>
+  )}
+</Layout>

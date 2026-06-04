@@ -1,0 +1,123 @@
+---
+// /npb/standings/ — NPB 2026 セ・パ順位表
+import Layout from '../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let data: any = null;
+try {
+  data = JSON.parse(readFileSync(join(process.cwd(), 'data/npb/standings.json'), 'utf-8'));
+} catch {}
+
+const central: any[] = data?.central ?? [];
+const pacific: any[] = data?.pacific ?? [];
+const season = data?.season ?? '2026';
+const asOf = data?.fetchedAt?.slice(0, 10) ?? '';
+
+function pctColor(rank: number) { return rank === 1 ? '#166534' : rank <= 3 ? 'var(--navy)' : 'var(--gray-600)'; }
+---
+<Layout
+  title={`NPB ${season} 順位表 | セ・パ全12球団スタンディング | Baseballab`}
+  description={`NPB ${season}シーズン最新順位表。セントラル・リーグ・パシフィック・リーグの勝敗・勝率・ゲーム差を毎日更新。`}
+  ogUrl="https://baseballab.com/npb/standings/"
+>
+  <style slot="head">
+    .st-hero { background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,#7d1c2a 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .st-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .st-section { padding:2.5rem 0; }
+    .st-section.alt { background:var(--gray-100); }
+    .lg-title { font-size:1.3rem; font-weight:800; color:var(--navy); margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .7rem; border-radius:9999px; }
+    .lg-badge.cl { background:#9b2335; } .lg-badge.pl { background:#1a5276; }
+    .st-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); max-width:640px; }
+    table.st-tbl { width:100%; border-collapse:collapse; font-size:.85rem; }
+    table.st-tbl th { font-size:.65rem; color:var(--gray-400); text-transform:uppercase; padding:.3rem .7rem; text-align:right; font-weight:600; letter-spacing:.04em; }
+    table.st-tbl th:first-child { text-align:center; width:2rem; }
+    table.st-tbl th:nth-child(2) { text-align:left; padding-left:.8rem; }
+    table.st-tbl td { padding:.45rem .7rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; }
+    table.st-tbl td:first-child { text-align:center; font-weight:700; }
+    table.st-tbl td:nth-child(2) { text-align:left; padding-left:.8rem; }
+    table.st-tbl tr.leader td { background:rgba(22,45,71,.03); }
+    .td-team { font-weight:700; }
+    .td-team a { color:var(--navy); }
+    .gb-dash { color:var(--gray-400); }
+    .cs-note { margin-top:1rem; font-size:.75rem; color:var(--gray-500); line-height:1.6; }
+    .cs-note a { color:var(--red); }
+  </style>
+
+  <section class="st-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/npb/">NPB</a> &rsaquo; 順位表</p>
+      <h1>NPB {season} 順位表</h1>
+      <p class="hero-sub">セ・パ全12球団 最新スタンディング</p>
+      {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
+    </div>
+  </section>
+
+  {!data ? (
+    <div style="padding:3rem 0;text-align:center;color:var(--gray-500)" class="container"><p>データを読み込めませんでした。</p></div>
+  ) : (
+    <>
+      <section class="st-section">
+        <div class="container">
+          <h2 class="lg-title">
+            <span class="lg-badge cl">CL</span>
+            セントラル・リーグ
+          </h2>
+          <div class="st-card">
+            <table class="st-tbl">
+              <thead><tr><th>順</th><th>チーム</th><th>試</th><th>勝</th><th>負</th><th>分</th><th>率</th><th>GB</th></tr></thead>
+              <tbody>
+                {central.map((t, i) => (
+                  <tr class={i === 0 ? 'leader' : ''}>
+                    <td style={`color:${pctColor(t.rank)}`}>{t.rank}</td>
+                    <td><div class="td-team"><a href={`/npb/teams/${t.teamSlug}/`}>{t.teamAbbr}</a> {t.teamName}</div></td>
+                    <td>{t.games}</td>
+                    <td>{t.wins}</td>
+                    <td>{t.losses}</td>
+                    <td>{t.ties}</td>
+                    <td>{t.pct}</td>
+                    <td class={t.gb === '--' ? 'gb-dash' : ''}>{t.gb === '--' ? '—' : t.gb}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="cs-note">勝率 = 勝 ÷ (勝 + 負)。引き分けは除外。NPB公式 <a href="/npb/trends/">トレンド分析 →</a></p>
+        </div>
+      </section>
+
+      <section class="st-section alt">
+        <div class="container">
+          <h2 class="lg-title">
+            <span class="lg-badge pl">PL</span>
+            パシフィック・リーグ
+          </h2>
+          <div class="st-card">
+            <table class="st-tbl">
+              <thead><tr><th>順</th><th>チーム</th><th>試</th><th>勝</th><th>負</th><th>分</th><th>率</th><th>GB</th></tr></thead>
+              <tbody>
+                {pacific.map((t, i) => (
+                  <tr class={i === 0 ? 'leader' : ''}>
+                    <td style={`color:${pctColor(t.rank)}`}>{t.rank}</td>
+                    <td><div class="td-team"><a href={`/npb/teams/${t.teamSlug}/`}>{t.teamAbbr}</a> {t.teamName}</div></td>
+                    <td>{t.games}</td>
+                    <td>{t.wins}</td>
+                    <td>{t.losses}</td>
+                    <td>{t.ties}</td>
+                    <td>{t.pct}</td>
+                    <td class={t.gb === '--' ? 'gb-dash' : ''}>{t.gb === '--' ? '—' : t.gb}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="cs-note">勝率 = 勝 ÷ (勝 + 負)。引き分けは除外。NPB公式 <a href="/npb/trends/">トレンド分析 →</a></p>
+        </div>
+      </section>
+    </>
+  )}
+</Layout>
