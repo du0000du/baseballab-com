@@ -1,0 +1,164 @@
+---
+// /en/npb/results/ — NPB last 3 games results (EN)
+import Layout from '../../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let data: any = null;
+try {
+  data = JSON.parse(readFileSync(join(process.cwd(), 'data/npb/results.json'), 'utf-8'));
+} catch {}
+
+const EN_NAME: Record<string, string> = {
+  '阪神タイガース':               'Hanshin Tigers',
+  '横浜DeNAベイスターズ':         'DeNA BayStars',
+  '読売ジャイアンツ':             'Yomiuri Giants',
+  '中日ドラゴンズ':               'Chunichi Dragons',
+  '広島東洋カープ':               'Hiroshima Carp',
+  '東京ヤクルトスワローズ':       'Yakult Swallows',
+  'オリックス・バファローズ':     'Orix Buffaloes',
+  '福岡ソフトバンクホークス':     'SoftBank Hawks',
+  '北海道日本ハムファイターズ':   'Nippon-Ham Fighters',
+  '東北楽天ゴールデンイーグルス': 'Rakuten Eagles',
+  '埼玉西武ライオンズ':           'Seibu Lions',
+  '千葉ロッテマリーンズ':         'Lotte Marines',
+};
+
+const teams: any[] = data?.teams ?? [];
+const central = teams.filter((t: any) => t.league === 'central');
+const pacific = teams.filter((t: any) => t.league === 'pacific');
+const asOf = data?.asOfDate ?? '';
+
+function fmtDate(d: string) {
+  const parts = d.split('-');
+  return parts.length === 3 ? `${parseInt(parts[1])}/${parseInt(parts[2])}` : d;
+}
+---
+<Layout
+  title={`NPB ${data?.season ?? ''} Last 3 Games Results | Baseballab`}
+  description={`NPB Central & Pacific League last 3 game results for all 12 teams. Scores, opponents, and win/loss records updated daily.`}
+  ogUrl="https://baseballab.com/en/npb/results/"
+>
+  <style slot="head">
+    .res-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .res-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .lg-section { padding:2.5rem 0; }
+    .lg-section.alt { background:var(--gray-100); }
+    .lg-title { font-size:1.2rem; font-weight:800; color:var(--navy); margin-bottom:1.2rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .6rem; border-radius:9999px; }
+    .lg-badge.cl { background:#9b2335; } .lg-badge.pl { background:#1a5276; }
+    .teams-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
+    .team-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .team-header { display:flex; align-items:center; gap:.6rem; padding:.7rem 1rem; }
+    .team-color { width:6px; border-radius:3px; align-self:stretch; flex-shrink:0; }
+    .team-name { font-weight:800; font-size:.95rem; color:var(--navy); }
+    .games-list { border-top:1px solid var(--gray-100); }
+    .game-row { display:grid; grid-template-columns:2.8rem 1fr auto; align-items:center; gap:.5rem; padding:.5rem 1rem; border-bottom:1px solid var(--gray-100); font-size:.83rem; }
+    .game-row:last-child { border-bottom:none; }
+    .result-badge { font-size:.72rem; font-weight:800; width:1.6rem; height:1.6rem; display:flex; align-items:center; justify-content:center; border-radius:4px; }
+    .result-badge.W { background:#dcfce7; color:#166534; }
+    .result-badge.L { background:#fee2e2; color:#991b1b; }
+    .result-badge.T { background:#f3f4f6; color:#6b7280; }
+    .game-info { line-height:1.35; }
+    .game-opp { font-weight:600; color:var(--text); }
+    .game-meta { font-size:.72rem; color:var(--gray-500); }
+    .game-score { font-weight:700; color:var(--navy); font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .no-game { padding:.9rem 1rem; font-size:.82rem; color:var(--gray-400); }
+    .no-data { padding:3rem 0; text-align:center; color:var(--gray-500); }
+    @media(max-width:900px){ .teams-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:560px){ .teams-grid{grid-template-columns:1fr;} }
+  </style>
+
+  <section class="res-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/">Baseballab EN</a> &rsaquo; <a href="/en/npb/">NPB</a> &rsaquo; Results</p>
+      <h1>NPB Last 3 Games Results</h1>
+      <p class="hero-sub">All 12 Central & Pacific League teams</p>
+      {asOf && (
+        <span class="updated-badge">
+          <span>📅</span>
+          <span>As of {asOf}</span>
+        </span>
+      )}
+    </div>
+  </section>
+
+  {!data ? (
+    <div class="no-data container"><p>Data unavailable.</p></div>
+  ) : (
+    <>
+      <section class="lg-section">
+        <div class="container">
+          <h2 class="lg-title">
+            <span class="lg-badge cl">CL</span>
+            Central League
+          </h2>
+          <div class="teams-grid">
+            {central.map((team: any) => (
+              <div class="team-card">
+                <div class="team-header">
+                  <div class="team-color" style={`background:${team.color}`}></div>
+                  <a href={`/en/npb/teams/${team.slug}/`} class="team-name">{EN_NAME[team.name] ?? team.name}</a>
+                </div>
+                <div class="games-list">
+                  {team.recentGames.length === 0 ? (
+                    <p class="no-game">No game data</p>
+                  ) : (
+                    team.recentGames.map((g: any) => (
+                      <div class="game-row">
+                        <span class={`result-badge ${g.result}`}>{g.result}</span>
+                        <div class="game-info">
+                          <div class="game-opp">{g.home ? 'vs ' : '@ '}{EN_NAME[g.opponent] ?? g.opponent}</div>
+                          <div class="game-meta">{fmtDate(g.date)} · {g.home ? 'Home' : 'Away'}</div>
+                        </div>
+                        <span class="game-score">{g.score}–{g.opponentScore}</span>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="lg-section alt">
+        <div class="container">
+          <h2 class="lg-title">
+            <span class="lg-badge pl">PL</span>
+            Pacific League
+          </h2>
+          <div class="teams-grid">
+            {pacific.map((team: any) => (
+              <div class="team-card">
+                <div class="team-header">
+                  <div class="team-color" style={`background:${team.color}`}></div>
+                  <a href={`/en/npb/teams/${team.slug}/`} class="team-name">{EN_NAME[team.name] ?? team.name}</a>
+                </div>
+                <div class="games-list">
+                  {team.recentGames.length === 0 ? (
+                    <p class="no-game">No game data</p>
+                  ) : (
+                    team.recentGames.map((g: any) => (
+                      <div class="game-row">
+                        <span class={`result-badge ${g.result}`}>{g.result}</span>
+                        <div class="game-info">
+                          <div class="game-opp">{g.home ? 'vs ' : '@ '}{EN_NAME[g.opponent] ?? g.opponent}</div>
+                          <div class="game-meta">{fmtDate(g.date)} · {g.home ? 'Home' : 'Away'}</div>
+                        </div>
+                        <span class="game-score">{g.score}–{g.opponentScore}</span>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  )}
+</Layout>

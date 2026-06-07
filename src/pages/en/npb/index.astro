@@ -42,6 +42,10 @@ const teamNameEn: Record<string, string> = {
     .leaders-banner:hover { background:var(--navy); }
     .lb-icon { font-size:2.25rem; flex-shrink:0; }
     .lb-title { font-size:1.05rem; font-weight:700; } .lb-desc { font-size:.85rem; color:rgba(255,255,255,.7); margin-top:.2rem; }
+    .qlink-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.75rem; margin-top:1rem; }
+    .qlink { display:flex; flex-direction:column; align-items:center; gap:.25rem; background:var(--white); border:1px solid var(--gray-200); border-radius:10px; padding:.9rem .75rem; text-align:center; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+    .qlink:hover { border-color:var(--navy); box-shadow:0 2px 8px rgba(15,37,64,.12); }
+    .ql-icon { font-size:1.5rem; } .ql-label { font-size:.85rem; font-weight:700; color:var(--navy); } .ql-sub { font-size:.72rem; color:var(--gray-500); }
     .team-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; margin-top:1.25rem; }
     .team-card a { display:flex; align-items:center; gap:.75rem; background:var(--white); border:1px solid var(--gray-200); border-radius:10px; padding:.85rem 1rem; text-decoration:none; transition:border-color .15s,box-shadow .15s; }
     .team-card a:hover { border-color:var(--navy); box-shadow:0 4px 12px rgba(26,58,92,.1); }
@@ -70,6 +74,13 @@ const teamNameEn: Record<string, string> = {
           <div class="lb-desc">AVG · HR · RBI · ERA · SO — both leagues{asOf ? ` · As of ${asOf}` : ''}</div>
         </div>
       </a>
+
+      <div class="qlink-grid">
+        <a href="/en/npb/standings/" class="qlink"><span class="ql-icon">🏆</span><span class="ql-label">Standings</span><span class="ql-sub">All 12 teams</span></a>
+        <a href="/en/npb/trends/" class="qlink"><span class="ql-icon">📈</span><span class="ql-label">Trends</span><span class="ql-sub">Hot / Cold</span></a>
+        <a href="/en/npb/results/" class="qlink"><span class="ql-icon">⚾</span><span class="ql-label">Results</span><span class="ql-sub">Last 3 games</span></a>
+        <a href="/en/npb/leaders/" class="qlink"><span class="ql-icon">📊</span><span class="ql-label">Leaders</span><span class="ql-sub">Stat rankings</span></a>
+      </div>
 
       <div class="section-header">
         <p class="section-label">🏆 Standings</p>
