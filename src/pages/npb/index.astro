@@ -65,6 +65,10 @@ const asOf = meta.asOf || '';
     table.std tr:first-child td { font-weight:700; }
     .leaders-banner { display:flex; align-items:center; gap:1rem; background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; border-radius:12px; padding:1.25rem 1.5rem; box-shadow:var(--shadow-md); }
     .leaders-banner:hover { transform:translateY(-2px); }
+    .qlink-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.75rem; }
+    .qlink { display:flex; flex-direction:column; align-items:center; gap:.25rem; background:#fff; border:1px solid var(--gray-200); border-radius:10px; padding:.9rem .75rem; text-align:center; transition:border-color .15s,box-shadow .15s; box-shadow:var(--shadow-sm); }
+    .qlink:hover { border-color:var(--navy); box-shadow:0 2px 8px rgba(15,37,64,.12); }
+    .ql-icon { font-size:1.5rem; } .ql-label { font-size:.85rem; font-weight:700; color:var(--navy); } .ql-sub { font-size:.72rem; color:var(--gray-500); }
     .lb-icon { font-size:2rem; } .lb-body { flex:1; } .lb-title { font-size:1.1rem; font-weight:700; margin-bottom:.25rem; } .lb-sub { font-size:.85rem; opacity:.8; } .lb-arrow { font-size:1.4rem; opacity:.7; }
     .player-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1.1rem; }
     .pcard { background:#fff; border:1px solid var(--gray-200); border-radius:12px; padding:1.3rem; display:flex; flex-direction:column; gap:.5rem; color:inherit; transition:box-shadow .2s,transform .2s; }
@@ -151,6 +155,17 @@ const asOf = meta.asOf || '';
         <div class="lb-body"><div class="lb-title">NPB {NPB_SEASON} 成績ランキング</div><div class="lb-sub">打率・本塁打・打点・防御率・奪三振・セーブなど セ／パ両リーグの最新リーダーボード</div></div>
         <div class="lb-arrow">→</div>
       </a>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="qlink-grid">
+        <a href="/npb/standings/" class="qlink"><span class="ql-icon">🏆</span><span class="ql-label">順位表</span><span class="ql-sub">セ・パ全12球団</span></a>
+        <a href="/npb/trends/" class="qlink"><span class="ql-icon">📈</span><span class="ql-label">トレンド</span><span class="ql-sub">ホット/コールド</span></a>
+        <a href="/npb/results/" class="qlink"><span class="ql-icon">⚾</span><span class="ql-label">試合結果</span><span class="ql-sub">直近3試合</span></a>
+        <a href="/npb/leaders/" class="qlink"><span class="ql-icon">📊</span><span class="ql-label">リーダー</span><span class="ql-sub">各部門ランキング</span></a>
+      </div>
     </div>
   </section>
 

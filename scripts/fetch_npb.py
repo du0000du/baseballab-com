@@ -492,6 +492,12 @@ def run_all():
         time.sleep(0.5)
     write_json(DATA_DIR / "standings.json", standings)
 
+    # リーダーボード生成（players データから算出して毎回更新）
+    leaders = build_leaders(all_players)
+    write_json(DATA_DIR / "leaders" / f"{SEASON}.json", leaders)
+    hr_c = len(leaders.get("central", {}).get("batting", {}).get("hr", []))
+    hr_p = len(leaders.get("pacific", {}).get("batting", {}).get("hr", []))
+    print(f"  leaders: HR central={hr_c}件, pacific={hr_p}件")
 
     as_of = max(as_of_dates) if as_of_dates else ""
     write_json(DATA_DIR / "meta.json", {

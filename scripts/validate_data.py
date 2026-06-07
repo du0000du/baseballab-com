@@ -52,6 +52,21 @@ if npb_meta.exists():
 else:
     check(False, "NPB meta.json", "file missing")
 
+# --- NPB leaders -----------------------------------------------------------
+npb_leaders_file = ROOT / "data" / "npb" / "leaders" / f"{SEASON}.json"
+if npb_leaders_file.exists():
+    nl = json.loads(npb_leaders_file.read_text(encoding="utf-8"))
+    age = days_old(nl.get("fetchedAt", ""))
+    c_hr = len(nl.get("central", {}).get("batting", {}).get("hr", []))
+    p_hr = len(nl.get("pacific", {}).get("batting", {}).get("hr", []))
+    c_era = len(nl.get("central", {}).get("pitching", {}).get("era", []))
+    p_era = len(nl.get("pacific", {}).get("pitching", {}).get("era", []))
+    check(age <= 3, "NPB leaders freshness", f"{nl.get('fetchedAt','?')[:10]} ({age}d ago)")
+    check(c_hr >= 5 and p_hr >= 5, "NPB leaders HR entries", f"central={c_hr}, pacific={p_hr}")
+    check(c_era >= 5 and p_era >= 5, "NPB leaders ERA entries", f"central={c_era}, pacific={p_era}")
+else:
+    check(False, "NPB leaders file", f"data/npb/leaders/{SEASON}.json missing")
+
 # --- MLB players -----------------------------------------------------------
 mlb_players = ROOT / "data" / "mlb" / "players"
 if mlb_players.exists():

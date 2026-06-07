@@ -32,6 +32,10 @@ const spotlightPlayers = [
     .f-desc { font-size:.85rem; color:var(--gray-600); line-height:1.6; flex:1; }
     .f-link { display:inline-flex; align-items:center; gap:.3rem; color:var(--red); font-size:.84rem; font-weight:600; transition:gap .15s; }
     .f-link:hover { gap:.55rem; }
+    .qlink-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.75rem; }
+    .qlink { display:flex; flex-direction:column; align-items:center; gap:.25rem; background:var(--white); border:1px solid var(--gray-200); border-radius:10px; padding:.9rem .75rem; text-align:center; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+    .qlink:hover { border-color:var(--navy); box-shadow:0 2px 8px rgba(15,37,64,.12); }
+    .ql-icon { font-size:1.5rem; } .ql-label { font-size:.85rem; font-weight:700; color:var(--navy); } .ql-sub { font-size:.72rem; color:var(--gray-500); }
     .leaders-banner { display:flex; align-items:center; gap:1.25rem; background:var(--navy-dark); color:var(--white); padding:1.25rem 1.5rem; border-radius:12px; text-decoration:none; transition:background .2s; }
     .leaders-banner:hover { background:var(--navy); }
     .lb-icon { font-size:2.25rem; flex-shrink:0; }
@@ -79,6 +83,17 @@ const spotlightPlayers = [
         <div class="feature-card"><div class="f-icon">👤</div><h3 class="f-title">Player Stats</h3><p class="f-desc">OPS, WAR, FIP, wRC+ and more for major MLB players.</p><a href="/en/players/" class="f-link">View Players →</a></div>
         <div class="feature-card"><div class="f-icon">🏟️</div><h3 class="f-title">Team Stats</h3><p class="f-desc">All 30 MLB teams — batting, pitching, and defense by division.</p><a href="/en/teams/" class="f-link">View Teams →</a></div>
         <div class="feature-card"><div class="f-icon">📈</div><h3 class="f-title">Season Trends</h3><p class="f-desc">Monthly & weekly performance trends for the {SEASON} season.</p><a href="/season/" class="f-link">View Season →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="qlink-grid">
+        <a href="/en/mlb/standings/" class="qlink"><span class="ql-icon">🏆</span><span class="ql-label">Standings</span><span class="ql-sub">Division tables</span></a>
+        <a href="/en/mlb/analysis/" class="qlink"><span class="ql-icon">🔬</span><span class="ql-label">Analysis</span><span class="ql-sub">Pace & Pythagorean</span></a>
+        <a href="/en/mlb/trends/" class="qlink"><span class="ql-icon">📈</span><span class="ql-label">Trends</span><span class="ql-sub">Hot / Cold teams</span></a>
+        <a href="/en/mlb/results/" class="qlink"><span class="ql-icon">⚾</span><span class="ql-label">Results</span><span class="ql-sub">Last 3 games</span></a>
       </div>
     </div>
   </section>
