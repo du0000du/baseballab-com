@@ -252,30 +252,50 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
     <!-- ===== HEADER ===== -->
     <header class="site-header">
       <div class="header-inner">
-        <a href="/" class="site-logo"><span class="logo-icon">⚾</span><span class="logo-text">Basebal<span class="logo-accent">lab</span></span></a>
-        <nav class="site-nav" aria-label="メインナビゲーション">
-          <a href="/mlb/">MLB</a>
-          <a href="/npb/">NPB</a>
-          <a href="/glossary/">指標解説</a>
-          <a href="/gear/">機材</a>
-          <a href="/streaming/">配信</a>
+        <a href={isEn ? '/en/' : '/'} class="site-logo"><span class="logo-icon">⚾</span><span class="logo-text">Basebal<span class="logo-accent">lab</span></span></a>
+        <nav class="site-nav" aria-label={isEn ? 'Main navigation' : 'メインナビゲーション'}>
+          {isEn ? (
+            <>
+              <a href="/en/mlb/">MLB</a>
+              <a href="/en/npb/">NPB</a>
+              <a href="/en/glossary/">Stats Guide</a>
+            </>
+          ) : (
+            <>
+              <a href="/mlb/">MLB</a>
+              <a href="/npb/">NPB</a>
+              <a href="/glossary/">指標解説</a>
+              <a href="/gear/">機材</a>
+              <a href="/streaming/">配信</a>
+            </>
+          )}
         </nav>
         <div class="lang-switcher" role="navigation" aria-label="言語切替 / Language">
           <a href={jaUrl} class={`lang-btn${!isEn ? ' active' : ''}`}>日本語</a>
           <span class="lang-divider">|</span>
           <a href={enUrl} class={`lang-btn${isEn ? ' active' : ''}`}>English</a>
         </div>
-        <button class="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <button class="hamburger" aria-label={isEn ? 'Open menu' : 'メニューを開く'} aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
       </div>
     </header>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="モバイルナビゲーション">
-      <a href="/mlb/">MLB</a>
-      <a href="/npb/">NPB</a>
-      <a href="/glossary/">指標解説</a>
-      <a href="/gear/">機材</a>
-      <a href="/streaming/">配信</a>
+    <nav id="mobile-nav" class="mobile-nav" aria-label={isEn ? 'Mobile navigation' : 'モバイルナビゲーション'}>
+      {isEn ? (
+        <>
+          <a href="/en/mlb/">MLB</a>
+          <a href="/en/npb/">NPB</a>
+          <a href="/en/glossary/">Stats Guide</a>
+        </>
+      ) : (
+        <>
+          <a href="/mlb/">MLB</a>
+          <a href="/npb/">NPB</a>
+          <a href="/glossary/">指標解説</a>
+          <a href="/gear/">機材</a>
+          <a href="/streaming/">配信</a>
+        </>
+      )}
     </nav>
     <script is:inline>
       (function(){
@@ -294,53 +314,97 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
 
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
-      <div class="footer-links">
-        <div class="footer-col">
-          <p class="footer-col-title">指標解説</p>
-          <nav class="footer-col-nav">
-            <a href="/glossary/sabermetrics/">セイバーメトリクスとは</a>
-            <a href="/glossary/war/">WAR</a>
-            <a href="/glossary/ops/">OPS</a>
-            <a href="/glossary/fip/">FIP</a>
-            <a href="/glossary/woba/">wOBA</a>
-            <a href="/glossary/">すべての指標 →</a>
-          </nav>
+      {isEn ? (
+        <div class="footer-links">
+          <div class="footer-col">
+            <p class="footer-col-title">Stats Guide</p>
+            <nav class="footer-col-nav">
+              <a href="/en/glossary/">What is Sabermetrics?</a>
+              <a href="/en/glossary/">WAR</a>
+              <a href="/en/glossary/">OPS</a>
+              <a href="/en/glossary/">FIP</a>
+              <a href="/en/glossary/">All Stats →</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">MLB</p>
+            <nav class="footer-col-nav">
+              <a href="/en/mlb/">MLB Data</a>
+              <a href="/en/mlb/leaders/">MLB Leaders</a>
+              <a href="/en/mlb/standings/">Standings</a>
+              <a href="/en/mlb/trends/">Trends</a>
+              <a href="/en/mlb/analysis/">Analysis</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">NPB</p>
+            <nav class="footer-col-nav">
+              <a href="/en/npb/">NPB Data</a>
+              <a href="/en/npb/leaders/">NPB Leaders</a>
+              <a href="/en/npb/standings/">Standings</a>
+              <a href="/en/npb/trends/">Trends</a>
+              <a href="/en/npb/results/">Results</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">Players</p>
+            <nav class="footer-col-nav">
+              <a href="/en/players/">MLB Players</a>
+              <a href="/en/teams/">MLB Teams</a>
+              <a href="/en/players/shohei-ohtani/">Shohei Ohtani</a>
+              <a href="/en/players/yoshinobu-yamamoto/">Yoshinobu Yamamoto</a>
+            </nav>
+          </div>
         </div>
-        <div class="footer-col">
-          <p class="footer-col-title">打撃指標</p>
-          <nav class="footer-col-nav">
-            <a href="/glossary/avg/">打率（AVG）</a>
-            <a href="/glossary/obp/">出塁率（OBP）</a>
-            <a href="/glossary/slg/">長打率（SLG）</a>
-            <a href="/glossary/wrc-plus/">wRC+</a>
-            <a href="/glossary/babip/">BABIP</a>
-          </nav>
+      ) : (
+        <div class="footer-links">
+          <div class="footer-col">
+            <p class="footer-col-title">指標解説</p>
+            <nav class="footer-col-nav">
+              <a href="/glossary/sabermetrics/">セイバーメトリクスとは</a>
+              <a href="/glossary/war/">WAR</a>
+              <a href="/glossary/ops/">OPS</a>
+              <a href="/glossary/fip/">FIP</a>
+              <a href="/glossary/woba/">wOBA</a>
+              <a href="/glossary/">すべての指標 →</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">打撃指標</p>
+            <nav class="footer-col-nav">
+              <a href="/glossary/avg/">打率（AVG）</a>
+              <a href="/glossary/obp/">出塁率（OBP）</a>
+              <a href="/glossary/slg/">長打率（SLG）</a>
+              <a href="/glossary/wrc-plus/">wRC+</a>
+              <a href="/glossary/babip/">BABIP</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">投球指標</p>
+            <nav class="footer-col-nav">
+              <a href="/glossary/era/">防御率（ERA）</a>
+              <a href="/glossary/whip/">WHIP</a>
+              <a href="/glossary/k9/">K/9</a>
+              <a href="/glossary/xfip/">xFIP</a>
+              <a href="/glossary/siera/">SIERA</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">データ</p>
+            <nav class="footer-col-nav">
+              <a href="/mlb/">MLB データ</a>
+              <a href="/mlb/leaders/">MLB ランキング</a>
+              <a href="/npb/">NPB データ</a>
+              <a href="/players/">MLB 選手一覧</a>
+              <a href="/teams/">チーム一覧</a>
+            </nav>
+          </div>
         </div>
-        <div class="footer-col">
-          <p class="footer-col-title">投球指標</p>
-          <nav class="footer-col-nav">
-            <a href="/glossary/era/">防御率（ERA）</a>
-            <a href="/glossary/whip/">WHIP</a>
-            <a href="/glossary/k9/">K/9</a>
-            <a href="/glossary/xfip/">xFIP</a>
-            <a href="/glossary/siera/">SIERA</a>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <p class="footer-col-title">データ</p>
-          <nav class="footer-col-nav">
-            <a href="/mlb/">MLB データ</a>
-            <a href="/mlb/leaders/">MLB ランキング</a>
-            <a href="/npb/">NPB データ</a>
-            <a href="/players/">MLB 選手一覧</a>
-            <a href="/teams/">チーム一覧</a>
-          </nav>
-        </div>
-      </div>
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <a href="/privacy/">プライバシーポリシー</a>
-        <a href="/disclaimer/">免責事項</a>
-        <a href="/disclosure/">広告について</a>
+      )}
+      <nav class="footer-nav" aria-label={isEn ? 'Footer navigation' : 'フッターナビゲーション'}>
+        <a href="/privacy/">{isEn ? 'Privacy Policy' : 'プライバシーポリシー'}</a>
+        <a href="/disclaimer/">{isEn ? 'Disclaimer' : '免責事項'}</a>
+        <a href="/disclosure/">{isEn ? 'Advertising' : '広告について'}</a>
       </nav>
       <p class="footer-copy">&copy; 2026 Baseballab. All rights reserved.</p>
     </footer>
