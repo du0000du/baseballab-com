@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-06-13T17:21:09Z",
+  "fetchedAt": "2026-06-14T05:50:53Z",
   "central": [
     {
       "rank": 1,
@@ -8,11 +8,11 @@
       "teamName": "読売ジャイアンツ",
       "teamAbbr": "G",
       "league": "central",
-      "games": 62,
-      "wins": 33,
+      "games": 63,
+      "wins": 34,
       "losses": 27,
       "ties": 2,
-      "pct": ".550",
+      "pct": ".557",
       "gb": "--"
     },
     {
@@ -21,11 +21,11 @@
       "teamName": "阪神タイガース",
       "teamAbbr": "T",
       "league": "central",
-      "games": 60,
-      "wins": 32,
+      "games": 61,
+      "wins": 33,
       "losses": 27,
       "ties": 1,
-      "pct": ".542",
+      "pct": ".550",
       "gb": "0.5"
     },
     {
@@ -34,12 +34,12 @@
       "teamName": "東京ヤクルトスワローズ",
       "teamAbbr": "S",
       "league": "central",
-      "games": 62,
+      "games": 63,
       "wins": 33,
-      "losses": 28,
+      "losses": 29,
       "ties": 1,
-      "pct": ".541",
-      "gb": "0.5"
+      "pct": ".532",
+      "gb": "1.5"
     },
     {
       "rank": 4,
@@ -47,11 +47,11 @@
       "teamName": "横浜DeNAベイスターズ",
       "teamAbbr": "DB",
       "league": "central",
-      "games": 62,
-      "wins": 25,
+      "games": 63,
+      "wins": 26,
       "losses": 35,
       "ties": 2,
-      "pct": ".417",
+      "pct": ".426",
       "gb": "8.0"
     },
     {
@@ -60,11 +60,11 @@
       "teamName": "広島東洋カープ",
       "teamAbbr": "C",
       "league": "central",
-      "games": 59,
-      "wins": 21,
+      "games": 60,
+      "wins": 22,
       "losses": 35,
       "ties": 3,
-      "pct": ".375",
+      "pct": ".386",
       "gb": "10.0"
     },
     {
@@ -73,12 +73,12 @@
       "teamName": "中日ドラゴンズ",
       "teamAbbr": "D",
       "league": "central",
-      "games": 62,
+      "games": 63,
       "wins": 21,
-      "losses": 40,
+      "losses": 41,
       "ties": 1,
-      "pct": ".344",
-      "gb": "12.5"
+      "pct": ".339",
+      "gb": "13.5"
     }
   ],
   "pacific": [
@@ -88,11 +88,11 @@
       "teamName": "埼玉西武ライオンズ",
       "teamAbbr": "L",
       "league": "pacific",
-      "games": 63,
+      "games": 64,
       "wins": 39,
-      "losses": 22,
+      "losses": 23,
       "ties": 2,
-      "pct": ".639",
+      "pct": ".629",
       "gb": "--"
     },
     {
@@ -101,38 +101,38 @@
       "teamName": "福岡ソフトバンクホークス",
       "teamAbbr": "H",
       "league": "pacific",
-      "games": 61,
-      "wins": 36,
+      "games": 62,
+      "wins": 37,
       "losses": 25,
       "ties": 0,
-      "pct": ".590",
-      "gb": "3.0"
+      "pct": ".597",
+      "gb": "2.0"
     },
     {
       "rank": 3,
-      "teamSlug": "orix-buffaloes",
-      "teamName": "オリックス・バファローズ",
-      "teamAbbr": "B",
-      "league": "pacific",
-      "games": 62,
-      "wins": 34,
-      "losses": 27,
-      "ties": 1,
-      "pct": ".557",
-      "gb": "5.0"
-    },
-    {
-      "rank": 4,
       "teamSlug": "nipponham-fighters",
       "teamName": "北海道日本ハムファイターズ",
       "teamAbbr": "F",
       "league": "pacific",
-      "games": 64,
-      "wins": 35,
+      "games": 65,
+      "wins": 36,
       "losses": 29,
       "ties": 0,
-      "pct": ".547",
-      "gb": "5.5"
+      "pct": ".554",
+      "gb": "4.5"
+    },
+    {
+      "rank": 4,
+      "teamSlug": "orix-buffaloes",
+      "teamName": "オリックス・バファローズ",
+      "teamAbbr": "B",
+      "league": "pacific",
+      "games": 63,
+      "wins": 34,
+      "losses": 28,
+      "ties": 1,
+      "pct": ".548",
+      "gb": "5.0"
     },
     {
       "rank": 5,
@@ -140,11 +140,11 @@
       "teamName": "千葉ロッテマリーンズ",
       "teamAbbr": "M",
       "league": "pacific",
-      "games": 62,
+      "games": 63,
       "wins": 30,
-      "losses": 30,
+      "losses": 31,
       "ties": 2,
-      "pct": ".500",
+      "pct": ".492",
       "gb": "8.5"
     },
     {
@@ -153,11 +153,11 @@
       "teamName": "東北楽天ゴールデンイーグルス",
       "teamAbbr": "E",
       "league": "pacific",
-      "games": 61,
+      "games": 62,
       "wins": 23,
-      "losses": 37,
+      "losses": 38,
       "ties": 1,
-      "pct": ".383",
+      "pct": ".377",
       "gb": "15.5"
     }
   ]
