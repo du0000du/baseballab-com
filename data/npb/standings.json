@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-06-17T06:15:00Z",
+  "fetchedAt": "2026-06-17T18:13:51Z",
   "central": [
     {
       "rank": 1,
@@ -17,9 +17,9 @@
     },
     {
       "rank": 2,
-      "teamSlug": "yakult-swallows",
-      "teamName": "東京ヤクルトスワローズ",
-      "teamAbbr": "S",
+      "teamSlug": "hanshin-tigers",
+      "teamName": "阪神タイガース",
+      "teamAbbr": "T",
       "league": "central",
       "games": 64,
       "wins": 34,
@@ -30,16 +30,16 @@
     },
     {
       "rank": 3,
-      "teamSlug": "hanshin-tigers",
-      "teamName": "阪神タイガース",
-      "teamAbbr": "T",
+      "teamSlug": "yakult-swallows",
+      "teamName": "東京ヤクルトスワローズ",
+      "teamAbbr": "S",
       "league": "central",
-      "games": 63,
-      "wins": 33,
+      "games": 64,
+      "wins": 34,
       "losses": 29,
       "ties": 1,
-      "pct": ".532",
-      "gb": "1.0"
+      "pct": ".540",
+      "gb": "0.5"
     },
     {
       "rank": 4,
@@ -153,12 +153,12 @@
       "teamName": "東北楽天ゴールデンイーグルス",
       "teamAbbr": "E",
       "league": "pacific",
-      "games": 63,
+      "games": 64,
       "wins": 23,
-      "losses": 39,
+      "losses": 40,
       "ties": 1,
-      "pct": ".371",
-      "gb": "17.0"
+      "pct": ".365",
+      "gb": "17.5"
     }
   ]
 }

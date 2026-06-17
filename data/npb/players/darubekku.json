@@ -9,7 +9,7 @@
   "group": "batting",
   "qualified": true,
   "season": "2026",
-  "rank": 9,
+  "rank": 10,
   "stats": {
     "avg": 0.249,
     "games": 61,
@@ -35,8 +35,8 @@
     "obp": 0.333,
     "ops": 0.794
   },
-  "asOf": "2026-06-16",
-  "fetchedAt": "2026-06-17T06:15:00Z",
+  "asOf": "2026-06-17",
+  "fetchedAt": "2026-06-17T18:13:51Z",
   "source": "NPB.jp 日本野球機構",
   "sourceUrl": "https://npb.jp/bis/2026/stats/bat_c.html"
 }
