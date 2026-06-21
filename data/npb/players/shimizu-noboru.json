@@ -12,7 +12,7 @@
   "rank": 10,
   "stats": {
     "era": 0.96,
-    "games": 20,
+    "games": 21,
     "wins": 1,
     "losses": 0,
     "saves": 1,
@@ -22,9 +22,9 @@
     "sho": 0,
     "nbb": 0,
     "winpct": 1.0,
-    "bf": 70,
+    "bf": 71,
     "ip": 18.2,
-    "hits": 12,
+    "hits": 13,
     "hr": 0,
     "bb": 1,
     "ibb": 0,
@@ -34,10 +34,10 @@
     "balk": 0,
     "runs": 2,
     "er": 2,
-    "whip": 0.7
+    "whip": 0.75
   },
-  "asOf": "2026-06-19",
-  "fetchedAt": "2026-06-20T17:24:55Z",
+  "asOf": "2026-06-20",
+  "fetchedAt": "2026-06-21T06:04:30Z",
   "source": "NPB.jp 日本野球機構",
   "sourceUrl": "https://npb.jp/bis/2026/stats/pit_c.html"
 }
