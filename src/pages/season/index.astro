@@ -1,35 +1,59 @@
 ---
 // /season/ — 2026 シーズン概要
 import Layout from '../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 const SEASON = '2026';
+
+let npbStandings: any = null;
+let npbMeta: any = null;
+let mlbStandings: any = null;
+try {
+  npbStandings = JSON.parse(readFileSync(join(process.cwd(), 'data/npb/standings.json'), 'utf-8'));
+  npbMeta = JSON.parse(readFileSync(join(process.cwd(), 'data/npb/meta.json'), 'utf-8'));
+  mlbStandings = JSON.parse(readFileSync(join(process.cwd(), 'data/mlb/standings.json'), 'utf-8'));
+} catch {}
+
+const clLeader = npbStandings?.central?.[0];
+const plLeader = npbStandings?.pacific?.[0];
+const npbAsOf = npbMeta?.asOf ?? '';
+const mlbAsOf = mlbStandings?.fetchedAt?.slice(0, 10) ?? '';
 
 const highlights = [
   {
     league: 'NPB セ・リーグ',
-    note: '阪神・ヤクルトが首位争い。2026年5月時点',
-    href: '/npb/',
+    note: clLeader
+      ? `首位: ${clLeader.teamName}（${clLeader.wins}勝${clLeader.losses}敗 勝率${clLeader.pct}）${npbAsOf ? ` ${npbAsOf}時点` : ''}`
+      : 'セ・リーグ最新順位表を確認',
+    href: '/npb/standings/',
     color: '#9b2335',
   },
   {
     league: 'NPB パ・リーグ',
-    note: 'ソフトバンクが例年通りの強さを見せる',
-    href: '/npb/',
+    note: plLeader
+      ? `首位: ${plLeader.teamName}（${plLeader.wins}勝${plLeader.losses}敗 勝率${plLeader.pct}）${npbAsOf ? ` ${npbAsOf}時点` : ''}`
+      : 'パ・リーグ最新順位表を確認',
+    href: '/npb/standings/',
     color: '#1a5276',
   },
   {
     league: 'MLB',
-    note: '各地区の首位争いが激化。大谷翔平の活躍に注目',
-    href: '/mlb/',
+    note: `${SEASON}シーズン進行中。大谷翔平・山本由伸の活躍に注目${mlbAsOf ? `（${mlbAsOf}時点）` : ''}`,
+    href: '/mlb/standings/',
     color: '#003087',
   },
 ];
 
+const npbPlayerCount = npbMeta?.count?.batting != null
+  ? (npbMeta.count.batting + npbMeta.count.pitching)
+  : 107;
+
 const dataPages = [
-  { icon: '🏆', label: 'NPB リーダーボード', desc: '打撃・投球 12部門の最新ランキング', href: '/npb/leaders/' },
+  { icon: '🏆', label: 'NPB リーダーボード', desc: '打撃・投球 各部門の最新ランキング', href: '/npb/leaders/' },
   { icon: '📊', label: 'MLB リーダーボード', desc: '各部門のMLBトップ選手', href: '/mlb/leaders/' },
-  { icon: '🏟️', label: '球団一覧', desc: 'MLB全30球団・NPB12球団の成績', href: '/teams/' },
-  { icon: '⚾', label: 'NPB選手データ', desc: '87名の2026成績を掲載', href: '/npb/' },
+  { icon: '📈', label: 'NPB 順位表', desc: 'セ・パ全12球団の最新順位表', href: '/npb/standings/' },
+  { icon: '⚾', label: 'NPB選手データ', desc: `${npbPlayerCount}名の${SEASON}成績を掲載`, href: '/npb/' },
 ];
 ---
 
@@ -185,7 +209,7 @@ const dataPages = [
           </div>
         ))}
       </div>
-      <p class="update-note">NPBデータは毎日 05:15 JST に自動更新されます</p>
+      <p class="update-note">NPBデータは毎日 10:00 JST 頃に自動更新されます</p>
     </div>
   </section>
 </Layout>
