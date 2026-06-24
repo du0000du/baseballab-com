@@ -45,9 +45,7 @@ const highlights = [
   },
 ];
 
-const npbPlayerCount = npbMeta?.count?.batting != null
-  ? (npbMeta.count.batting + npbMeta.count.pitching)
-  : 107;
+const npbPlayerCount = npbMeta?.playerCount ?? npbMeta?.count?.total ?? 107;
 
 const dataPages = [
   { icon: '🏆', label: 'NPB リーダーボード', desc: '打撃・投球 各部門の最新ランキング', href: '/npb/leaders/' },
