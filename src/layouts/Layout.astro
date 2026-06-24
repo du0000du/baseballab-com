@@ -37,6 +37,7 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={ogUrl} />
+    <link rel="canonical" href={ogUrl} />
     <link rel="alternate" hreflang="ja" href={jaAbsolute} />
     <link rel="alternate" hreflang="en" href={enAbsolute} />
     <link rel="alternate" hreflang="x-default" href={jaAbsolute} />
@@ -251,6 +252,18 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
       .lang-divider { color: rgba(255,255,255,0.2); padding: 0 1px; font-size: 0.65rem; }
       @media (max-width: 768px) { .lang-switcher { margin-left: 0; } }
     </style>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Baseballab",
+      "url": "https://baseballab.com",
+      "logo": "https://baseballab.com/favicon.svg",
+      "description": isEn
+        ? "Data-driven analysis of MLB & NPB statistics — sabermetrics explained for fans, coaches and analysts."
+        : "MLB・NPBのデータをセイバーメトリクスで深掘りする野球統計メディア",
+      "sameAs": [],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@transdata.tv", "contactType": "customer support" }
+    })} />
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <!-- ページ固有のスタイル・メタをここに差し込む -->
     <slot name="head" />
