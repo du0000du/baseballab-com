@@ -13,9 +13,12 @@ export async function getStaticPaths() {
   }));
 }
 
+const allTerms = await getCollection('glossary');
+const termMap = Object.fromEntries(allTerms.map(t => [t.slug, t.data]));
+
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, description, abbr, atomicAnswer, relatedTerms, difficulty, category } = entry.data;
+const { title, description, abbr, atomicAnswer, relatedTerms, difficulty, category, publishedAt } = entry.data;
 
 const difficultyLabel: Record<string, string> = {
   basic: '基礎',
@@ -38,6 +41,8 @@ const jsonLd = {
   headline: title,
   description,
   url: ogUrl,
+  datePublished: publishedAt,
+  dateModified: publishedAt,
   publisher: {
     '@type': 'Organization',
     name: 'Baseballab',
@@ -52,6 +57,15 @@ const jsonLd = {
     },
   },
 };
+
+const affHeadings: Record<string, string> = {
+  batting:     `${abbr ?? title}を深掘りする — 打撃分析の参考書`,
+  pitching:    `${abbr ?? title}を深掘りする — 投球分析の参考書`,
+  fielding:    `${abbr ?? title}を深掘りする — 守備分析の参考書`,
+  baserunning: `${abbr ?? title}を深掘りする — セイバーメトリクス参考書`,
+  general:     `${abbr ?? title}を深掘りする — セイバーメトリクス参考書`,
+};
+const affHeading = affHeadings[category] ?? '野球データ分析おすすめ商品';
 
 const affiliateLinks = linksData.links.map((item: any) => ({
   label: item.label,
@@ -95,15 +109,17 @@ const affiliateLinks = linksData.links.map((item: any) => ({
       <Content />
     </div>
 
-    <AffiliateBlock links={affiliateLinks} heading="野球データ分析おすすめ商品" />
+    <AffiliateBlock links={affiliateLinks} heading={affHeading} />
 
     {relatedTerms && relatedTerms.length > 0 && (
       <aside class="related-terms">
         <h2>関連指標</h2>
         <ul>
-          {relatedTerms.map(slug => (
-            <li><a href={`/glossary/${slug}/`}>{slug.toUpperCase()}</a></li>
-          ))}
+          {relatedTerms.map(slug => {
+            const t = termMap[slug];
+            const label = t?.abbr ?? t?.title ?? slug.toUpperCase();
+            return <li><a href={`/glossary/${slug}/`}>{label}</a></li>;
+          })}
         </ul>
       </aside>
     )}
