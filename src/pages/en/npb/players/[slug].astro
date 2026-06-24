@@ -49,8 +49,24 @@ const links = [
 
 const title = `${p.nameRomaji} (${p.name}) — ${NPB_SEASON} Stats | ${p.teamName} | Baseballab`;
 const desc  = `${p.nameRomaji} (${p.teamName}, NPB ${leagueEn}) ${NPB_SEASON} season stats & profile. ${snip} Full data on Baseballab.`;
+const atomic = `${p.nameRomaji} (${p.name}) is a ${isBat ? 'batter' : 'pitcher'} for ${p.teamName} in the NPB ${leagueEn}. ${snip} Full stats available on Baseballab.`;
+const ogUrl = `https://baseballab.com/en/npb/players/${p.slug}/`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: p.nameRomaji,
+  alternateName: p.name,
+  description: atomic,
+  url: ogUrl,
+  memberOf: {
+    '@type': 'SportsTeam',
+    name: p.teamName,
+    sport: 'Baseball',
+    memberOf: { '@type': 'SportsOrganization', name: 'NPB' },
+  },
+};
 ---
-<Layout title={title} description={desc} ogUrl={`https://baseballab.com/en/npb/players/${p.slug}/`}>
+<Layout title={title} description={desc} ogUrl={ogUrl} jsonLd={jsonLd}>
   <style slot="head">
     .ph { background:var(--navy-dark); color:#fff; padding:2.75rem 0 2rem; }
     .ph .container { display:flex; flex-direction:column; gap:.5rem; }

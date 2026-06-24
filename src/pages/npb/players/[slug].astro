@@ -50,8 +50,23 @@ const links = [
 ];
 const title = `${p.name}（${p.nameRomaji}）${NPB_SEASON}成績・プロフィール | ${p.teamName} | Baseballab`;
 const desc = `${p.name}（${p.teamName}・NPB${leagueJa}）の${NPB_SEASON}シーズン成績・プロフィール。${snip}Baseballabで詳細データを確認。`;
+const ogUrl = `https://baseballab.com/npb/players/${p.slug}/`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: p.name,
+  alternateName: p.nameRomaji,
+  description: atomic,
+  url: ogUrl,
+  memberOf: {
+    '@type': 'SportsTeam',
+    name: p.teamName,
+    sport: 'Baseball',
+    memberOf: { '@type': 'SportsOrganization', name: 'NPB' },
+  },
+};
 ---
-<Layout title={title} description={desc} ogUrl={`https://baseballab.com/npb/players/${p.slug}/`}>
+<Layout title={title} description={desc} ogUrl={ogUrl} jsonLd={jsonLd}>
   <style slot="head">
     .ph { background:var(--navy-dark); color:#fff; padding:2.75rem 0 2rem; }
     .ph .container { display:flex; flex-direction:column; gap:.5rem; }
