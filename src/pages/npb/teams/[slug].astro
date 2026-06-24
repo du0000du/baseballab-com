@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import GlossaryLinks from '../../../components/GlossaryLinks.astro';
 import { NPB_TEAMS, teamBySlug, loadPlayers, loadStandings, NPB_SEASON } from '../../../lib/npb';
 
 export async function getStaticPaths() {
@@ -114,6 +115,8 @@ const jsonLd = {
           </tbody>
         </table>
       ) : <p class="empty">掲載中の規定到達投手はいません。</p>}
+
+      <GlossaryLinks type="both" />
 
       <div class="src-box">
         データ出典: <a href="https://npb.jp/" rel="nofollow noopener" target="_blank">NPB.jp 日本野球機構</a>（公式成績数値）。掲載選手は規定到達者および主要救援投手を中心に随時拡張します。

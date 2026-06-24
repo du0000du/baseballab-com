@@ -1,0 +1,44 @@
+---
+interface Props {
+  type: 'batting' | 'pitching' | 'both';
+}
+const { type } = Astro.props;
+
+const battingLinks = [
+  { href: '/glossary/avg/', label: '打率 AVG' },
+  { href: '/glossary/ops/', label: 'OPS' },
+  { href: '/glossary/obp/', label: '出塁率 OBP' },
+  { href: '/glossary/slg/', label: '長打率 SLG' },
+  { href: '/glossary/woba/', label: 'wOBA' },
+  { href: '/glossary/wrc-plus/', label: 'wRC+' },
+  { href: '/glossary/babip/', label: 'BABIP' },
+  { href: '/glossary/rbi/', label: '打点 RBI' },
+];
+const pitchingLinks = [
+  { href: '/glossary/era/', label: '防御率 ERA' },
+  { href: '/glossary/whip/', label: 'WHIP' },
+  { href: '/glossary/fip/', label: 'FIP' },
+  { href: '/glossary/xfip/', label: 'xFIP' },
+  { href: '/glossary/k-rate/', label: '奪三振率 K%' },
+  { href: '/glossary/k9/', label: 'K/9' },
+  { href: '/glossary/sv/', label: 'セーブ SV' },
+  { href: '/glossary/era-plus/', label: 'ERA+' },
+];
+
+const links = type === 'batting' ? battingLinks
+  : type === 'pitching' ? pitchingLinks
+  : [...battingLinks, ...pitchingLinks];
+---
+<section class="gl-block">
+  <p class="gl-heading">指標の意味を調べる</p>
+  <ul class="gl-list">
+    {links.map(l => <li><a href={l.href}>{l.label}</a></li>)}
+  </ul>
+</section>
+<style>
+  .gl-block { margin: 1.75rem 0 0; }
+  .gl-heading { font-size: .78rem; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 .6rem; }
+  .gl-list { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0; }
+  .gl-list a { display: inline-block; background: var(--bg-card, #fff); border: 1px solid var(--border, #e4e2dc); border-radius: 20px; padding: .18rem .7rem; font-size: .8rem; font-weight: 600; color: var(--navy); text-decoration: none; }
+  .gl-list a:hover { border-color: var(--accent); color: var(--accent); }
+</style>

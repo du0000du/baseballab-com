@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import AtomicAnswer from '../../components/AtomicAnswer.astro';
+import GlossaryLinks from '../../components/GlossaryLinks.astro';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -184,6 +185,7 @@ const jsonLd: Record<string, any> = {
         <p>📊 成績データは近日更新予定です。</p>
         <p style="font-size: 0.85rem; margin-top: 0.5rem;">MLB Stats API からの取得・整形を実施中。</p>
       </div>
+      <GlossaryLinks type="both" />
     </div>
   </div>
 </Layout>

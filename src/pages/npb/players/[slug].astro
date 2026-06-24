@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import AtomicAnswer from '../../../components/AtomicAnswer.astro';
 import AffiliateBlock from '../../../components/AffiliateBlock.astro';
+import GlossaryLinks from '../../../components/GlossaryLinks.astro';
 import { loadPlayers, NPB_SEASON } from '../../../lib/npb';
 
 export async function getStaticPaths() {
@@ -127,6 +128,7 @@ const jsonLd = {
         ))}
       </div>
 
+      <GlossaryLinks type={isBat ? 'batting' : 'pitching'} />
       <AffiliateBlock links={links} heading="この選手をもっと楽しむためのおすすめ" />
 
       <div class="src-box">

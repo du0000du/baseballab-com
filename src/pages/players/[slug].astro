@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import AtomicAnswer from '../../components/AtomicAnswer.astro';
 import AffiliateBlock from '../../components/AffiliateBlock.astro';
+import GlossaryLinks from '../../components/GlossaryLinks.astro';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 const SEASON_YEAR = new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1; // 3月以降は当年、1〜2月は前年
@@ -441,6 +442,7 @@ const affiliateLinks = [
           <p style="font-size: 0.85rem; margin-top: 0.5rem;">MLB Stats API からの取得・整形を実施中。</p>
         </div>
       )}
+      <GlossaryLinks type={isBatter ? 'batting' : 'pitching'} />
       <AffiliateBlock links={affiliateLinks} heading="この選手をさらに知るためのおすすめ" />
 </div>
   </div>
