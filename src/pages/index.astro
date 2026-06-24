@@ -1,12 +1,29 @@
 ---
 // baseballab.com — top page
 import Layout from '../layouts/Layout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Baseballab",
+  "url": "https://baseballab.com",
+  "description": "MLB・NPBの統計データをデータドリブンな視点で分析するメディア",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://baseballab.com/glossary/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
 
 <Layout
   title="Baseballab | 野球データを、もっと深く。"
   description="MLB・NPBの統計データをデータドリブンな視点で分析。選手成績比較、チーム別データ、セイバーメトリクス解説まで、野球ファン・指導者・分析者のための情報サイト。"
   ogUrl="https://baseballab.com"
+  jsonLd={jsonLd}
 >
   <style slot="head">
     /* ===== HERO ===== */
