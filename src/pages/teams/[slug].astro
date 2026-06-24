@@ -31,8 +31,20 @@ const atomicText = `${name}（${abbr}）はMLBの${league}所属チーム。${di
 
 const pageTitle = `${name} チーム成績・情報`;
 const description = `${name}（${abbr}）のMLBチーム成績・情報。${division}。本拠地${venue}。Baseballabで詳細データを確認。`;
+const ogUrl = `https://baseballab.com/teams/${Astro.params.slug}/`;
+const jsonLd: Record<string, any> = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsTeam',
+  name,
+  description,
+  url: ogUrl,
+  sport: 'Baseball',
+  ...(venue && { location: { '@type': 'Place', name: venue } }),
+  ...(founded && { foundingDate: String(founded) }),
+  memberOf: { '@type': 'SportsOrganization', name: 'MLB' },
+};
 ---
-<Layout title={pageTitle} description={description} ogUrl={`https://baseballab.com/teams/${Astro.params.slug}/`}>
+<Layout title={pageTitle} description={description} ogUrl={ogUrl} jsonLd={jsonLd}>
   <style slot="head">
   .team-hero {
     background: var(--navy, #1a3a5c);

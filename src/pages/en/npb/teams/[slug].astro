@@ -12,11 +12,23 @@ const pitchers  = players.filter(p => p.group === 'pitching').sort((a,b) => (Num
 const standings = loadStandings();
 const rec       = (standings[t.league] || []).find((r: any) => r.teamSlug === t.slug);
 const leagueEn  = t.league === 'central' ? 'Central League' : 'Pacific League';
+const descEn = `${t.name} (NPB ${leagueEn}) ${NPB_SEASON} season standings and player stats.`;
+const ogUrl = `https://baseballab.com/en/npb/teams/${t.slug}/`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsTeam',
+  name: t.name,
+  description: descEn,
+  url: ogUrl,
+  sport: 'Baseball',
+  memberOf: { '@type': 'SportsOrganization', name: 'NPB' },
+};
 ---
 <Layout
   title={`${t.name} — ${NPB_SEASON} Stats | NPB ${leagueEn} | Baseballab`}
-  description={`${t.name} (NPB ${leagueEn}) ${NPB_SEASON} season standings and player stats.`}
-  ogUrl={`https://baseballab.com/en/npb/teams/${t.slug}/`}
+  description={descEn}
+  ogUrl={ogUrl}
+  jsonLd={jsonLd}
 >
   <style slot="head" set:html={`
     .th { color:#fff; padding:2.75rem 0 2rem; background:linear-gradient(135deg, ${t.color} 0%, ${t.color}cc 100%); }

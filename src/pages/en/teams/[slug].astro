@@ -22,11 +22,24 @@ const venue    = info.venue?.name ?? '';
 const founded  = info.firstYearOfPlay ?? null;
 
 const description = `${name} (${abbr}) — MLB ${league}. ${division}. Home: ${venue}. Founded ${founded}. Stats & sabermetrics on Baseballab.`;
+const ogUrl = `https://baseballab.com/en/teams/${Astro.params.slug}/`;
+const jsonLd: Record<string, any> = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsTeam',
+  name,
+  description,
+  url: ogUrl,
+  sport: 'Baseball',
+  ...(venue && { location: { '@type': 'Place', name: venue } }),
+  ...(founded && { foundingDate: String(founded) }),
+  memberOf: { '@type': 'SportsOrganization', name: 'MLB' },
+};
 ---
 <Layout
   title={`${name} — Stats & Info | MLB | Baseballab`}
   description={description}
-  ogUrl={`https://baseballab.com/en/teams/${Astro.params.slug}/`}
+  ogUrl={ogUrl}
+  jsonLd={jsonLd}
 >
   <style slot="head">
     .team-hero { background:var(--navy); color:#fff; padding:3rem 0 2rem; }
