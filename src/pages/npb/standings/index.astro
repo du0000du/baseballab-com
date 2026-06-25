@@ -9,10 +9,12 @@ try {
   data = JSON.parse(readFileSync(join(process.cwd(), 'data/npb/standings.json'), 'utf-8'));
 } catch {}
 
-const central: any[] = data?.central ?? [];
-const pacific: any[] = data?.pacific ?? [];
+const isEstimated = !!data?.estimatedAsOf;
+const central: any[] = (isEstimated ? data?.estimatedCentral : null) ?? data?.central ?? [];
+const pacific: any[] = (isEstimated ? data?.estimatedPacific : null) ?? data?.pacific ?? [];
 const season = data?.season ?? '2026';
-const asOf = data?.fetchedAt?.slice(0, 10) ?? '';
+const displayAsOf = isEstimated ? data.estimatedAsOf : (data?.fetchedAt?.slice(0, 10) ?? '');
+const officialAsOf = data?.fetchedAt?.slice(0, 10) ?? '';
 
 function pctColor(rank: number) { return rank === 1 ? '#166534' : rank <= 3 ? 'var(--navy)' : 'var(--gray-600)'; }
 ---
@@ -27,6 +29,8 @@ function pctColor(rank: number) { return rank === 1 ? '#166534' : rank <= 3 ? 'v
     .st-hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.5rem; }
     .hero-sub { opacity:.8; margin-bottom:.75rem; }
     .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .updated-badge.est { background:rgba(255,210,0,.18); border-color:rgba(255,210,0,.4); }
+    .est-note { margin-top:.6rem; font-size:.75rem; opacity:.7; }
     .st-section { padding:2.5rem 0; }
     .st-section.alt { background:var(--gray-100); }
     .lg-title { font-size:1.3rem; font-weight:800; color:var(--navy); margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
@@ -53,7 +57,12 @@ function pctColor(rank: number) { return rank === 1 ? '#166534' : rank <= 3 ? 'v
       <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/npb/">NPB</a> &rsaquo; 順位表</p>
       <h1>NPB {season} 順位表</h1>
       <p class="hero-sub">セ・パ全12球団 最新スタンディング</p>
-      {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
+      {displayAsOf && (
+        <span class={`updated-badge${isEstimated ? ' est' : ''}`}>
+          {isEstimated ? '⚡' : '📅'} {displayAsOf} 時点{isEstimated ? '（速報推定）' : ''}
+        </span>
+      )}
+      {isEstimated && <p class="est-note">公式データ（{officialAsOf}）に直近の試合結果を反映した推定順位です</p>}
     </div>
   </section>
 
