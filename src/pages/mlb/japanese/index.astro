@@ -43,6 +43,18 @@ function eraFmt(v: any) {
   if (!v || v === '-.--') return '-.--';
   return String(v);
 }
+function hitSummary(lg: any): string {
+  if (!lg) return '';
+  const st = lg.stat;
+  return `${st.hits ?? 0}/${st.atBats ?? 0}` +
+    (st.homeRuns ? ` ${st.homeRuns}HR` : '') +
+    (st.rbi ? ` ${st.rbi}打点` : '');
+}
+function pitchSummary(lg: any): string {
+  if (!lg) return '';
+  const st = lg.stat;
+  return `${st.inningsPitched ?? '?'}回 ${st.strikeOuts ?? 0}K ${st.earnedRuns ?? 0}失点`;
+}
 function lastGameSummary(p: any): string {
   const lg = p.lastGame;
   if (!lg) return '';
@@ -245,16 +257,40 @@ function lastGameSummary(p: any): string {
                     </>
                   )}
 
-                  {lg && (
-                    <>
-                      <div class="divider"></div>
-                      <div class="last-game">
-                        <span class="last-label">直近</span>
-                        <span class="last-date">{fmtDate(lg.date)}</span>
-                        <span class="last-perf">{lastGameSummary(p)}</span>
-                        <span class="last-opp">vs {lg.opponent}</span>
-                      </div>
-                    </>
+                  {isTWP ? (
+                    (p.lastGameHitting || p.lastGamePitching) && (
+                      <>
+                        <div class="divider"></div>
+                        {p.lastGameHitting && (
+                          <div class="last-game">
+                            <span class="last-label">直近打</span>
+                            <span class="last-date">{fmtDate(p.lastGameHitting.date)}</span>
+                            <span class="last-perf">{hitSummary(p.lastGameHitting)}</span>
+                            <span class="last-opp">vs {p.lastGameHitting.opponent}</span>
+                          </div>
+                        )}
+                        {p.lastGamePitching && (
+                          <div class="last-game" style="margin-top:.25rem">
+                            <span class="last-label">直近投</span>
+                            <span class="last-date">{fmtDate(p.lastGamePitching.date)}</span>
+                            <span class="last-perf">{pitchSummary(p.lastGamePitching)}</span>
+                            <span class="last-opp">vs {p.lastGamePitching.opponent}</span>
+                          </div>
+                        )}
+                      </>
+                    )
+                  ) : (
+                    lg && (
+                      <>
+                        <div class="divider"></div>
+                        <div class="last-game">
+                          <span class="last-label">直近</span>
+                          <span class="last-date">{fmtDate(lg.date)}</span>
+                          <span class="last-perf">{lastGameSummary(p)}</span>
+                          <span class="last-opp">vs {lg.opponent}</span>
+                        </div>
+                      </>
+                    )
                   )}
                 </div>
               </div>
@@ -380,12 +416,33 @@ function lastGameSummary(p: any): string {
                           <div class={`stat-box${parseFloat(String(hit.ops ?? '0')) >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{hit.ops ?? '---'}</span><span class="stat-lbl">OPS</span></div>
                         </div>
                       )}
-                      {lg && (
-                        <div class="last-game" style="margin-top:.5rem">
-                          <span class="last-label">直近</span>
-                          <span class="last-date">{fmtDate(lg.date)}</span>
-                          <span class="last-perf">{lastGameSummary(p)}</span>
-                        </div>
+                      {isTWP ? (
+                        (p.lastGameHitting || p.lastGamePitching) && (
+                          <>
+                            {p.lastGameHitting && (
+                              <div class="last-game" style="margin-top:.5rem">
+                                <span class="last-label">直近打</span>
+                                <span class="last-date">{fmtDate(p.lastGameHitting.date)}</span>
+                                <span class="last-perf">{hitSummary(p.lastGameHitting)}</span>
+                              </div>
+                            )}
+                            {p.lastGamePitching && (
+                              <div class="last-game" style="margin-top:.2rem">
+                                <span class="last-label">直近投</span>
+                                <span class="last-date">{fmtDate(p.lastGamePitching.date)}</span>
+                                <span class="last-perf">{pitchSummary(p.lastGamePitching)}</span>
+                              </div>
+                            )}
+                          </>
+                        )
+                      ) : (
+                        lg && (
+                          <div class="last-game" style="margin-top:.5rem">
+                            <span class="last-label">直近</span>
+                            <span class="last-date">{fmtDate(lg.date)}</span>
+                            <span class="last-perf">{lastGameSummary(p)}</span>
+                          </div>
+                        )
                       )}
                     </div>
                   </a>

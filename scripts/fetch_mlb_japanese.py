@@ -109,7 +109,9 @@ def build_player(meta: dict) -> dict:
         hit = fetch_season_stats(pid, "hitting")
         pit = fetch_season_stats(pid, "pitching")
         result["season"] = {"hitting": hit, "pitching": pit}
-        result["lastGame"] = fetch_last_game(pid, "hitting")
+        result["lastGame"] = None
+        result["lastGameHitting"] = fetch_last_game(pid, "hitting")
+        result["lastGamePitching"] = fetch_last_game(pid, "pitching")
     elif pos_type == "P":
         pit = fetch_season_stats(pid, "pitching")
         result["season"] = {"pitching": pit}
