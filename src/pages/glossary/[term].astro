@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AffiliateBlock from '../../components/AffiliateBlock.astro';
 import linksData from '../../../data/affiliates/links.json';
+import { loadLeaders, NPB_SEASON } from '../../lib/npb';
 
 export async function getStaticPaths() {
   const glossary = await getCollection('glossary');
@@ -76,6 +77,26 @@ const affiliateLinks = linksData.links.map((item: any) => ({
   imgUrl: item.imgUrl,
   bgColor: item.bgColor,
 }));
+
+// glossary slug → leaders data key
+const STAT_TO_LEADER: Record<string, {group: 'batting'|'pitching', key: string}> = {
+  'avg':  {group: 'batting',  key: 'avg'},
+  'ops':  {group: 'batting',  key: 'ops'},
+  'rbi':  {group: 'batting',  key: 'rbi'},
+  'era':  {group: 'pitching', key: 'era'},
+  'whip': {group: 'pitching', key: 'whip'},
+  'sv':   {group: 'pitching', key: 'saves'},
+  'hld':  {group: 'pitching', key: 'holds'},
+};
+const leaderDef = STAT_TO_LEADER[entry.slug];
+const leadersData = leaderDef ? loadLeaders(NPB_SEASON) : null;
+const MEDALS = ['🥇', '🥈', '🥉'];
+const npbLeaders: any[] = leaderDef && leadersData
+  ? [
+      ...((leadersData?.central?.[leaderDef.group]?.[leaderDef.key] ?? []).slice(0, 3).map((r: any) => ({...r, league: 'セ'}))),
+      ...((leadersData?.pacific?.[leaderDef.group]?.[leaderDef.key] ?? []).slice(0, 3).map((r: any) => ({...r, league: 'パ'}))),
+    ]
+  : [];
 ---
 
 <Layout
@@ -108,6 +129,34 @@ const affiliateLinks = linksData.links.map((item: any) => ({
     <div class="entry-content">
       <Content />
     </div>
+
+    {npbLeaders.length > 0 && (
+      <aside class="npb-leaders-block">
+        <p class="nlb-heading">📊 NPB {NPB_SEASON} {abbr ?? title} — 現在の首位選手</p>
+        <div class="nlb-cols">
+          {(['セ', 'パ'] as const).map(lg => {
+            const rows = npbLeaders.filter(r => r.league === lg);
+            if (!rows.length) return null;
+            return (
+              <div class="nlb-col">
+                <p class="nlb-lg">{lg === 'セ' ? 'セントラル・リーグ' : 'パシフィック・リーグ'}</p>
+                <ol class="nlb-list">
+                  {rows.map((r: any, i: number) => (
+                    <li>
+                      <span class="nlb-medal">{MEDALS[i]}</span>
+                      <a href={`/npb/players/${r.slug}/`} class="nlb-player">{r.player}</a>
+                      <span class="nlb-team">{r.team}</span>
+                      <span class="nlb-val">{r.value}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            );
+          })}
+        </div>
+        <a href="/npb/leaders/" class="nlb-more">全部門ランキングを見る →</a>
+      </aside>
+    )}
 
     <AffiliateBlock links={affiliateLinks} heading={affHeading} />
 
@@ -171,6 +220,20 @@ const affiliateLinks = linksData.links.map((item: any) => ({
   .entry-content :global(th) { background: var(--navy, #1a2744); color: #fff; padding: 0.5rem 0.75rem; text-align: left; }
   .entry-content :global(td) { padding: 0.45rem 0.75rem; border-bottom: 1px solid #ddd; }
   .entry-content :global(tr:nth-child(even) td) { background: #f5f7fa; }
+  .npb-leaders-block { margin-top: 2.5rem; padding: 1rem 1.25rem; background: #f0f4f8; border-radius: 8px; border-left: 4px solid var(--navy, #1a2744); }
+  .nlb-heading { font-size: .78rem; font-weight: 700; color: var(--navy, #1a2744); text-transform: uppercase; letter-spacing: .05em; margin: 0 0 .85rem; }
+  .nlb-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .nlb-lg { font-size: .7rem; font-weight: 700; color: var(--gray-500, #666); margin: 0 0 .4rem; }
+  .nlb-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .35rem; }
+  .nlb-list li { display: flex; align-items: center; gap: .4rem; font-size: .83rem; }
+  .nlb-medal { font-size: .9rem; flex-shrink: 0; }
+  .nlb-player { font-weight: 700; color: var(--navy, #1a2744); text-decoration: none; }
+  .nlb-player:hover { text-decoration: underline; color: var(--accent, #c0392b); }
+  .nlb-team { font-size: .7rem; color: var(--gray-500, #666); }
+  .nlb-val { font-weight: 800; color: var(--navy, #1a2744); margin-left: auto; font-variant-numeric: tabular-nums; }
+  .nlb-more { display: inline-block; margin-top: .75rem; font-size: .78rem; font-weight: 700; color: var(--navy, #1a2744); text-decoration: none; }
+  .nlb-more:hover { text-decoration: underline; }
+  @media (max-width: 480px) { .nlb-cols { grid-template-columns: 1fr; } }
   .see-also { margin-top: 2.5rem; padding: 1rem 1.25rem; background: #f0f4f8; border-radius: 8px; }
   .see-also-heading { font-size: .78rem; font-weight: 700; color: var(--gray-500, #6b6760); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 .6rem; }
   .see-also-links { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0; }

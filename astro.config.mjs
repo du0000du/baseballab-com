@@ -20,8 +20,12 @@ export default defineConfig({
           return { ...item, changefreq: 'weekly', priority: 0.8 };
         }
         // hub pages: daily
-        if (/\/(mlb|npb|players|teams)\/$/.test(item.url)) {
+        if (/\/(mlb|npb|players|teams|glossary)\/$/.test(item.url)) {
           return { ...item, changefreq: 'daily', priority: 0.85 };
+        }
+        // NPB/MLB player & team detail pages: primary content
+        if (/\/(npb|players)\/[^/]+\/$/.test(item.url) && !item.url.includes('/en/')) {
+          return { ...item, changefreq: 'daily', priority: 0.8 };
         }
         // root and main hubs
         if (item.url === 'https://baseballab.com/' || item.url === 'https://baseballab.com/en/') {
