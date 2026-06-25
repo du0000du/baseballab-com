@@ -17,23 +17,32 @@ const fetchedTime = data?.fetchedAt ? data.fetchedAt.replace('T', ' ').slice(0, 
 const pitchers = players.filter(p => p.posType === 'P');
 const hitters  = players.filter(p => p.posType !== 'P');
 
+// チーム別グループ（3名以上）
+const teamMap: Record<string, any[]> = {};
+for (const p of players) {
+  if (!teamMap[p.teamAbbr]) teamMap[p.teamAbbr] = [];
+  teamMap[p.teamAbbr].push(p);
+}
+const bigTeams = Object.entries(teamMap)
+  .filter(([, ps]) => ps.length >= 2)
+  .sort((a, b) => b[1].length - a[1].length);
+
+function slug(p: any) { return p.en.toLowerCase().replace(/[^a-z0-9]+/g, '-'); }
+
 function fmtDate(d: string) {
   if (!d) return '';
   const [, m, day] = d.split('-');
   return `${parseInt(m)}/${parseInt(day)}`;
 }
-
 function pctFmt(v: any) {
   if (!v) return '.---';
   const s = String(v);
   return s.startsWith('.') ? s : `.${s}`;
 }
-
 function eraFmt(v: any) {
   if (!v || v === '-.--') return '-.--';
   return String(v);
 }
-
 function lastGameSummary(p: any): string {
   const lg = p.lastGame;
   if (!lg) return '';
@@ -52,57 +61,143 @@ function lastGameSummary(p: any): string {
   ogUrl="https://baseballab.com/mlb/japanese/"
 >
   <style slot="head">
-    .hero { background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,#1a5276 100%); color:#fff; padding:3rem 0 2.5rem; }
-    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:.75rem; } .breadcrumb a { color:inherit; }
-    .hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.4rem; }
-    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    /* ── Hero ── */
+    .hero { background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,#1a5276 100%); color:#fff; padding:2.5rem 0 1.75rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:.6rem; } .breadcrumb a { color:inherit; }
+    .hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.35rem; }
+    .hero-sub { opacity:.75; margin-bottom:1rem; font-size:.9rem; }
+    .hero-meta { display:flex; align-items:center; gap:.75rem; flex-wrap:wrap; margin-bottom:1.25rem; }
     .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
-    .fetch-time { font-size:.7rem; opacity:.55; margin:.3rem 0 0; }
+    .fetch-time { font-size:.7rem; opacity:.5; }
+
+    /* ── Player roster pills in hero ── */
+    .roster-wrap { margin-top:.25rem; }
+    .roster-label { font-size:.68rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; opacity:.5; margin-bottom:.45rem; }
+    .roster-pills { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .roster-pill { display:inline-flex; align-items:center; gap:.3rem; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18); border-radius:9999px; padding:.22rem .7rem; font-size:.75rem; font-weight:600; color:#fff; text-decoration:none; transition:background .12s; cursor:pointer; }
+    .roster-pill:hover { background:rgba(255,255,255,.22); }
+    .roster-pill .pill-pos { font-size:.6rem; opacity:.65; }
+
+    /* ── Sticky jump nav ── */
+    .jump-nav { position:sticky; top:0; z-index:100; background:#fff; border-bottom:2px solid var(--gray-200); box-shadow:0 2px 8px rgba(0,0,0,.07); }
+    .jump-nav-inner { display:flex; align-items:stretch; gap:0; overflow-x:auto; scrollbar-width:none; }
+    .jump-nav-inner::-webkit-scrollbar { display:none; }
+    .jnav-item { display:flex; align-items:center; gap:.5rem; padding:.65rem 1.1rem; font-size:.82rem; font-weight:700; color:var(--gray-600); text-decoration:none; white-space:nowrap; border-bottom:3px solid transparent; transition:color .12s,border-color .12s; }
+    .jnav-item:hover { color:var(--navy); border-bottom-color:var(--navy); }
+    .jnav-item.active { color:var(--navy); border-bottom-color:var(--navy); }
+    .jnav-sep { width:1px; background:var(--gray-200); margin:.5rem 0; align-self:stretch; }
+    .jnav-count { font-size:.65rem; font-weight:700; color:#fff; background:var(--navy); border-radius:9999px; padding:.08rem .4rem; }
+    .jnav-count.red { background:#9b2335; }
+    .jnav-count.teal { background:#0d7377; }
+
+    /* ── Body ── */
     .body { padding:2rem 0 4rem; }
-    .sec { margin-bottom:3rem; }
-    .sec-title { font-size:1.1rem; font-weight:800; color:var(--navy); border-left:4px solid var(--navy); padding-left:.7rem; margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
-    .lg-badge { font-size:.65rem; font-weight:700; color:#fff; padding:.15rem .55rem; border-radius:9999px; background:var(--navy); }
-    /* Player cards */
+    .sec { margin-bottom:3.5rem; scroll-margin-top:3.5rem; }
+    .sec-header { display:flex; align-items:center; gap:.75rem; margin-bottom:1.25rem; padding-bottom:.75rem; border-bottom:2px solid var(--gray-100); }
+    .sec-icon { font-size:1.6rem; line-height:1; }
+    .sec-title-text { font-size:1.15rem; font-weight:800; color:var(--navy); }
+    .sec-subtitle { font-size:.78rem; color:var(--gray-500); }
+    .sec-badge { font-size:.68rem; font-weight:700; color:#fff; padding:.18rem .65rem; border-radius:9999px; background:var(--navy); }
+    .sec-badge.red { background:#9b2335; }
+    .sec-badge.teal { background:#0d7377; }
+
+    /* ── Cards ── */
     .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1rem; }
-    .card { background:#fff; border:1px solid var(--gray-200); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm); transition:box-shadow .15s,transform .15s; }
+    .card { background:#fff; border:1px solid var(--gray-200); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm); transition:box-shadow .15s,transform .15s; scroll-margin-top:4.5rem; }
     .card:hover { box-shadow:0 4px 16px rgba(0,0,0,.1); transform:translateY(-2px); }
-    .card-head { padding:.75rem 1rem .6rem; background:var(--navy-dark); color:#fff; display:flex; justify-content:space-between; align-items:flex-start; }
+    .card-head { padding:.7rem 1rem .55rem; background:var(--navy-dark); color:#fff; display:grid; grid-template-columns:1fr auto; align-items:start; gap:.5rem; }
     .card-name { font-weight:800; font-size:1.05rem; line-height:1.2; }
-    .card-en { font-size:.72rem; opacity:.7; margin-top:.15rem; }
-    .card-tag { font-size:.65rem; font-weight:700; background:rgba(255,255,255,.15); border-radius:4px; padding:.15rem .45rem; white-space:nowrap; }
+    .card-en { font-size:.7rem; opacity:.65; margin-top:.1rem; }
+    .card-tag { font-size:.62rem; font-weight:700; background:rgba(255,255,255,.15); border-radius:4px; padding:.15rem .45rem; white-space:nowrap; text-align:center; }
     .card-body { padding:.85rem 1rem; }
-    .team-line { font-size:.78rem; color:var(--gray-500); margin-bottom:.75rem; display:flex; align-items:center; gap:.4rem; }
-    .team-dot { width:8px; height:8px; border-radius:50%; background:var(--navy); display:inline-block; }
-    .stats-row { display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:.65rem; }
-    .stat-box { display:flex; flex-direction:column; align-items:center; min-width:3.5rem; background:var(--gray-100); border-radius:6px; padding:.35rem .5rem; }
-    .stat-val { font-size:1.05rem; font-weight:800; color:var(--navy-dark); font-variant-numeric:tabular-nums; line-height:1; }
-    .stat-lbl { font-size:.6rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--gray-500); margin-top:.2rem; }
+    .team-line { font-size:.78rem; color:var(--gray-500); margin-bottom:.7rem; display:flex; align-items:center; gap:.4rem; }
+    .team-dot { width:8px; height:8px; border-radius:50%; background:var(--navy); flex-shrink:0; }
+    .stats-label { font-size:.62rem; font-weight:700; color:var(--gray-400); text-transform:uppercase; letter-spacing:.05em; margin:0 0 .35rem; }
+    .stats-row { display:flex; gap:.45rem; flex-wrap:wrap; margin-bottom:.5rem; }
+    .stat-box { display:flex; flex-direction:column; align-items:center; min-width:3.2rem; background:var(--gray-100); border-radius:6px; padding:.3rem .45rem; }
+    .stat-val { font-size:1rem; font-weight:800; color:var(--navy-dark); font-variant-numeric:tabular-nums; line-height:1; }
+    .stat-val.wide { font-size:.82rem; }
+    .stat-lbl { font-size:.58rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--gray-500); margin-top:.18rem; }
+    .stat-box.hi { background:#f0fdf4; }
     .stat-box.hi .stat-val { color:#166534; }
-    .divider { height:1px; background:var(--gray-100); margin:.65rem 0; }
-    .last-game { font-size:.78rem; color:var(--gray-600); display:flex; gap:.4rem; align-items:baseline; flex-wrap:wrap; }
+    .divider { height:1px; background:var(--gray-100); margin:.6rem 0; }
+    .last-game { font-size:.77rem; color:var(--gray-600); display:flex; gap:.35rem; align-items:center; flex-wrap:wrap; }
+    .last-label { font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--gray-400); }
     .last-date { font-weight:700; color:var(--navy); }
-    .last-perf { background:#f0f4ff; color:var(--navy); border-radius:4px; padding:.1rem .45rem; font-weight:600; }
-    .last-opp { color:var(--gray-400); }
-    .no-stats { font-size:.8rem; color:var(--gray-400); padding:.5rem 0; }
-    @media(max-width:640px) { .cards { grid-template-columns:1fr; } }
+    .last-perf { background:#eff6ff; color:var(--navy); border-radius:4px; padding:.1rem .45rem; font-weight:700; font-size:.75rem; }
+    .last-opp { color:var(--gray-400); font-size:.72rem; }
+    .no-stats { font-size:.8rem; color:var(--gray-400); padding:.4rem 0; }
+
+    /* ── Team section ── */
+    .team-sec { margin-bottom:2.5rem; scroll-margin-top:3.5rem; }
+    .team-sec-head { font-size:.9rem; font-weight:700; color:var(--navy); padding:.4rem .85rem; background:var(--gray-100); border-radius:6px; margin-bottom:.75rem; display:inline-flex; align-items:center; gap:.5rem; }
+
+    @media(max-width:640px) { .cards { grid-template-columns:1fr; } .jnav-item { padding:.55rem .85rem; font-size:.78rem; } }
   </style>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/mlb/">MLB</a> &rsaquo; 日本人選手</p>
       <h1>MLB {season} 日本人選手 速報成績</h1>
-      <p class="hero-sub">2026シーズン活躍中の日本人選手 {players.length}名 — 成績は毎日自動更新</p>
-      {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
-      {fetchedTime && <p class="fetch-time">取得: {fetchedTime}</p>}
+      <p class="hero-sub">{season}シーズン活躍中の日本人選手 {players.length}名 — 成績は毎日自動更新</p>
+      <div class="hero-meta">
+        {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
+        {fetchedTime && <span class="fetch-time">取得: {fetchedTime}</span>}
+      </div>
+
+      <!-- Player roster jump links -->
+      <div class="roster-wrap">
+        <p class="roster-label">選手一覧 — タップで移動</p>
+        <div class="roster-pills">
+          {players.map((p: any) => (
+            <a class="roster-pill" href={`#${slug(p)}`}>
+              {p.ja}
+              <span class="pill-pos">
+                {p.posType === 'TWP' ? '二刀流' : p.posType === 'P' ? '投' : '野'}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Sticky jump nav -->
+  <nav class="jump-nav" aria-label="セクションナビ">
+    <div class="container">
+      <div class="jump-nav-inner">
+        <a class="jnav-item" href="#hitters">
+          🏏 野手・二刀流
+          <span class="jnav-count">{hitters.length}</span>
+        </a>
+        <div class="jnav-sep"></div>
+        <a class="jnav-item" href="#pitchers">
+          ⚾ 投手
+          <span class="jnav-count red">{pitchers.length}</span>
+        </a>
+        <div class="jnav-sep"></div>
+        <a class="jnav-item" href="#by-team">
+          🏟 チーム別
+          <span class="jnav-count teal">{bigTeams.length}</span>
+        </a>
+      </div>
+    </div>
+  </nav>
 
   <div class="body">
     <div class="container">
 
-      {/* ── 野手 / 二刀流 ── */}
-      <div class="sec">
-        <h2 class="sec-title"><span class="lg-badge">野手</span>打者・二刀流</h2>
+      <!-- ── 野手・二刀流 ── -->
+      <section class="sec" id="hitters">
+        <div class="sec-header">
+          <span class="sec-icon">🏏</span>
+          <div>
+            <p class="sec-title-text">野手・二刀流</p>
+            <p class="sec-subtitle">{hitters.length}名</p>
+          </div>
+          <span class="sec-badge">{hitters.length}名</span>
+        </div>
         <div class="cards">
           {hitters.map((p: any) => {
             const hit = p.season?.hitting ?? {};
@@ -110,7 +205,7 @@ function lastGameSummary(p: any): string {
             const lg  = p.lastGame;
             const isTWP = p.posType === 'TWP';
             return (
-              <div class="card">
+              <div class="card" id={slug(p)}>
                 <div class="card-head">
                   <div>
                     <div class="card-name">{p.ja}</div>
@@ -124,62 +219,67 @@ function lastGameSummary(p: any): string {
                     {p.team} ({p.teamAbbr})
                   </div>
 
-                  {/* Hitting stats */}
-                  {Object.keys(hit).length > 0 ? (
+                  {Object.keys(hit).length > 0 && (
                     <>
-                      <p style="font-size:.68rem;font-weight:700;color:var(--gray-400);text-transform:uppercase;margin:0 0 .4rem;letter-spacing:.05em">打撃成績 ({hit.gamesPlayed ?? '-'}試合)</p>
+                      <p class="stats-label">打撃 — {hit.gamesPlayed ?? '-'}試合</p>
                       <div class="stats-row">
                         <div class="stat-box"><span class="stat-val">{pctFmt(hit.avg)}</span><span class="stat-lbl">打率</span></div>
                         <div class={`stat-box${(hit.homeRuns ?? 0) >= 15 ? ' hi' : ''}`}><span class="stat-val">{hit.homeRuns ?? 0}</span><span class="stat-lbl">HR</span></div>
                         <div class="stat-box"><span class="stat-val">{hit.rbi ?? 0}</span><span class="stat-lbl">打点</span></div>
                         <div class="stat-box"><span class="stat-val">{hit.runs ?? 0}</span><span class="stat-lbl">得点</span></div>
-                        <div class={`stat-box${parseFloat(hit.ops ?? '0') >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{hit.ops ?? '---'}</span><span class="stat-lbl">OPS</span></div>
-                        {hit.stolenBases !== undefined && <div class="stat-box"><span class="stat-val">{hit.stolenBases}</span><span class="stat-lbl">SB</span></div>}
+                        <div class={`stat-box${parseFloat(String(hit.ops ?? '0')) >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{hit.ops ?? '---'}</span><span class="stat-lbl">OPS</span></div>
+                        {hit.stolenBases != null && <div class="stat-box"><span class="stat-val">{hit.stolenBases}</span><span class="stat-lbl">SB</span></div>}
                       </div>
                     </>
-                  ) : null}
+                  )}
 
-                  {/* Pitching stats (TWP) */}
-                  {isTWP && Object.keys(pit).length > 0 ? (
+                  {isTWP && Object.keys(pit).length > 0 && (
                     <>
-                      <p style="font-size:.68rem;font-weight:700;color:var(--gray-400);text-transform:uppercase;margin:.6rem 0 .4rem;letter-spacing:.05em">投球成績</p>
+                      <p class="stats-label" style="margin-top:.5rem">投球 — {pit.gamesPlayed ?? '-'}登板</p>
                       <div class="stats-row">
-                        <div class="stat-box"><span class="stat-val">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
-                        <div class={`stat-box${parseFloat(pit.era ?? '99') < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
-                        <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">奪三振</span></div>
-                        {pit.whip !== undefined && <div class="stat-box"><span class="stat-val">{pit.whip}</span><span class="stat-lbl">WHIP</span></div>}
+                        <div class="stat-box"><span class="stat-val wide">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
+                        <div class={`stat-box${parseFloat(String(pit.era ?? '99')) < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
+                        <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">K</span></div>
+                        {pit.whip != null && <div class="stat-box"><span class="stat-val">{pit.whip}</span><span class="stat-lbl">WHIP</span></div>}
                       </div>
                     </>
-                  ) : null}
+                  )}
 
-                  {lg ? (
+                  {lg && (
                     <>
                       <div class="divider"></div>
                       <div class="last-game">
-                        <span>直近</span>
+                        <span class="last-label">直近</span>
                         <span class="last-date">{fmtDate(lg.date)}</span>
                         <span class="last-perf">{lastGameSummary(p)}</span>
                         <span class="last-opp">vs {lg.opponent}</span>
                       </div>
                     </>
-                  ) : null}
+                  )}
                 </div>
               </div>
             );
           })}
         </div>
-      </div>
+      </section>
 
-      {/* ── 投手 ── */}
-      <div class="sec">
-        <h2 class="sec-title"><span class="lg-badge" style="background:#9b2335">投手</span>先発・リリーフ</h2>
+      <!-- ── 投手 ── -->
+      <section class="sec" id="pitchers">
+        <div class="sec-header">
+          <span class="sec-icon">⚾</span>
+          <div>
+            <p class="sec-title-text">投手</p>
+            <p class="sec-subtitle">先発・リリーフ {pitchers.length}名</p>
+          </div>
+          <span class="sec-badge red">{pitchers.length}名</span>
+        </div>
         <div class="cards">
           {pitchers.map((p: any) => {
             const pit = p.season?.pitching ?? {};
             const lg  = p.lastGame;
             const noStats = Object.keys(pit).length === 0;
             return (
-              <div class="card">
+              <div class="card" id={slug(p)}>
                 <div class="card-head">
                   <div>
                     <div class="card-name">{p.ja}</div>
@@ -194,40 +294,127 @@ function lastGameSummary(p: any): string {
                   </div>
 
                   {noStats ? (
-                    <p class="no-stats">成績データなし（登録前・IL中の可能性）</p>
+                    <p class="no-stats">成績データなし（IL中等）</p>
                   ) : (
                     <>
-                      <p style="font-size:.68rem;font-weight:700;color:var(--gray-400);text-transform:uppercase;margin:0 0 .4rem;letter-spacing:.05em">投球成績 ({pit.gamesPlayed ?? '-'}登板)</p>
+                      <p class="stats-label">{pit.gamesPlayed ?? '-'}登板</p>
                       <div class="stats-row">
-                        <div class="stat-box"><span class="stat-val">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
-                        <div class={`stat-box${parseFloat(pit.era ?? '99') < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
-                        <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">奪三振</span></div>
-                        {pit.whip !== undefined && <div class="stat-box"><span class="stat-val">{pit.whip}</span><span class="stat-lbl">WHIP</span></div>}
-                        {pit.saves !== undefined && <div class="stat-box"><span class="stat-val">{pit.saves}</span><span class="stat-lbl">S</span></div>}
-                        {pit.holds !== undefined && pit.holds > 0 && <div class="stat-box"><span class="stat-val">{pit.holds}</span><span class="stat-lbl">H</span></div>}
-                        {pit.inningsPitched !== undefined && <div class="stat-box"><span class="stat-val">{pit.inningsPitched}</span><span class="stat-lbl">IP</span></div>}
+                        <div class="stat-box"><span class="stat-val wide">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
+                        <div class={`stat-box${parseFloat(String(pit.era ?? '99')) < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
+                        <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">K</span></div>
+                        {pit.whip != null && <div class="stat-box"><span class="stat-val">{pit.whip}</span><span class="stat-lbl">WHIP</span></div>}
+                        {pit.saves != null && <div class="stat-box"><span class="stat-val">{pit.saves}</span><span class="stat-lbl">S</span></div>}
+                        {(pit.holds ?? 0) > 0 && <div class="stat-box"><span class="stat-val">{pit.holds}</span><span class="stat-lbl">H</span></div>}
+                        {pit.inningsPitched != null && <div class="stat-box"><span class="stat-val">{pit.inningsPitched}</span><span class="stat-lbl">IP</span></div>}
                       </div>
                     </>
                   )}
 
-                  {lg ? (
+                  {lg && (
                     <>
                       <div class="divider"></div>
                       <div class="last-game">
-                        <span>直近</span>
+                        <span class="last-label">直近</span>
                         <span class="last-date">{fmtDate(lg.date)}</span>
                         <span class="last-perf">{lastGameSummary(p)}</span>
                         <span class="last-opp">vs {lg.opponent}</span>
                       </div>
                     </>
-                  ) : null}
+                  )}
                 </div>
               </div>
             );
           })}
         </div>
-      </div>
+      </section>
+
+      <!-- ── チーム別 ── -->
+      <section class="sec" id="by-team">
+        <div class="sec-header">
+          <span class="sec-icon">🏟</span>
+          <div>
+            <p class="sec-title-text">チーム別</p>
+            <p class="sec-subtitle">2名以上在籍の球団</p>
+          </div>
+          <span class="sec-badge teal">{bigTeams.length}球団</span>
+        </div>
+
+        {bigTeams.map(([abbr, tps]) => (
+          <div class="team-sec" id={`team-${abbr.toLowerCase()}`}>
+            <p class="team-sec-head">
+              {abbr} — {tps[0].team}
+              <span style="font-weight:400;opacity:.65;font-size:.8rem">（{tps.length}名）</span>
+            </p>
+            <div class="cards">
+              {tps.map((p: any) => {
+                const hit = p.season?.hitting ?? {};
+                const pit = p.season?.pitching ?? {};
+                const lg  = p.lastGame;
+                const isP = p.posType === 'P';
+                const isTWP = p.posType === 'TWP';
+                const stats = isP ? pit : hit;
+                const noStats = Object.keys(stats).length === 0;
+                return (
+                  <a class="card" href={`#${slug(p)}`} style="text-decoration:none;display:block">
+                    <div class="card-head">
+                      <div>
+                        <div class="card-name">{p.ja}</div>
+                        <div class="card-en">{p.en}</div>
+                      </div>
+                      <span class="card-tag">{isTWP ? '二刀流' : isP ? p.position : p.position}</span>
+                    </div>
+                    <div class="card-body">
+                      {noStats ? (
+                        <p class="no-stats">成績データなし</p>
+                      ) : isP ? (
+                        <div class="stats-row">
+                          <div class="stat-box"><span class="stat-val wide">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
+                          <div class={`stat-box${parseFloat(String(pit.era ?? '99')) < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
+                          <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">K</span></div>
+                        </div>
+                      ) : (
+                        <div class="stats-row">
+                          <div class="stat-box"><span class="stat-val">{pctFmt(hit.avg)}</span><span class="stat-lbl">打率</span></div>
+                          <div class={`stat-box${(hit.homeRuns ?? 0) >= 15 ? ' hi' : ''}`}><span class="stat-val">{hit.homeRuns ?? 0}</span><span class="stat-lbl">HR</span></div>
+                          <div class="stat-box"><span class="stat-val">{hit.rbi ?? 0}</span><span class="stat-lbl">打点</span></div>
+                          <div class={`stat-box${parseFloat(String(hit.ops ?? '0')) >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{hit.ops ?? '---'}</span><span class="stat-lbl">OPS</span></div>
+                        </div>
+                      )}
+                      {lg && (
+                        <div class="last-game" style="margin-top:.5rem">
+                          <span class="last-label">直近</span>
+                          <span class="last-date">{fmtDate(lg.date)}</span>
+                          <span class="last-perf">{lastGameSummary(p)}</span>
+                        </div>
+                      )}
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </section>
 
     </div>
   </div>
+
+  <script>
+    // Highlight active jump nav item on scroll
+    const sections = document.querySelectorAll('section[id], div.sec[id]');
+    const navItems = document.querySelectorAll('.jnav-item');
+    const observer = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            navItems.forEach(a => {
+              a.classList.toggle('active', (a as HTMLAnchorElement).hash === `#${entry.target.id}`);
+            });
+          }
+        }
+      },
+      { rootMargin: '-10% 0px -80% 0px' }
+    );
+    sections.forEach(s => observer.observe(s));
+  </script>
 </Layout>
