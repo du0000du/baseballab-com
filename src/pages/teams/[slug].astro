@@ -5,6 +5,8 @@ import GlossaryLinks from '../../components/GlossaryLinks.astro';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
+const standingsAll = JSON.parse(readFileSync(join(process.cwd(), 'data/mlb/standings.json'), 'utf-8'));
+
 export async function getStaticPaths() {
   const dir = join(process.cwd(), 'data/mlb/teams');
   const files = readdirSync(dir).filter(f => f.endsWith('.json'));
@@ -28,7 +30,22 @@ const league = info.league?.name ?? '';
 const division = info.division?.name ?? '';
 const venue = info.venue?.name ?? '';
 
-const atomicText = `${name}（${abbr}）はMLBの${league}所属チーム。${division}地区。本拠地は${venue}。創設${founded}年。最新成績はBaseballabで確認できます。`;
+const rec = (standingsAll.teams as any[]).find(t => t.name === name || t.abbreviation === abbr) ?? null;
+const season = standingsAll.season ?? '2026';
+
+let teamVerdict = '';
+if (rec) {
+  const pct = (rec.winPct * 1000 / 10).toFixed(1);
+  const pyth = (rec.pythWinPct * 1000 / 10).toFixed(1);
+  const diff = rec.runDiff > 0 ? `+${rec.runDiff}` : String(rec.runDiff);
+  const leader = rec.gamesBack === '-';
+  if (leader) teamVerdict = `${rec.divisionShort}首位。${season}年は${rec.wins}勝${rec.losses}敗（勝率.${pct.replace('.', '')}）、得失点差${diff}。ピタゴラス勝率.${pyth.replace('.', '')}と実力値でも安定。`;
+  else teamVerdict = `${rec.divisionShort} ${rec.gamesBack}ゲーム差。${season}年は${rec.wins}勝${rec.losses}敗（勝率.${pct.replace('.', '')}）、得失点差${diff}。ピタゴラス勝率.${pyth.replace('.', '')}。`;
+}
+
+const atomicText = rec
+  ? `${name}（${abbr}）はMLBの${league}所属チーム。${division}地区。本拠地は${venue}。${season}年は${rec.wins}勝${rec.losses}敗。最新成績はBaseballabで確認できます。`
+  : `${name}（${abbr}）はMLBの${league}所属チーム。${division}地区。本拠地は${venue}。創設${founded}年。最新成績はBaseballabで確認できます。`;
 
 const pageTitle = `${name} チーム成績・情報`;
 const description = `${name}（${abbr}）のMLBチーム成績・情報。${division}。本拠地${venue}。Baseballabで詳細データを確認。`;
@@ -120,8 +137,20 @@ const jsonLd: Record<string, any> = {
   }
   .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
   .breadcrumb a:hover { color: #fff; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 1rem; margin: 1.5rem 0 1rem; }
+  .stat-card { background: #fff; border: 1px solid #e4e2dc; border-radius: 10px; padding: 1.1rem 1rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+  .stat-label { font-size: .7rem; font-weight: 700; color: #8a8680; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .35rem; }
+  .stat-value { font-size: 1.7rem; font-weight: 800; color: var(--navy, #1a3a5c); font-variant-numeric: tabular-nums; line-height: 1; }
+  .stat-value.highlight { color: var(--accent, #9b2335); }
+  .stat-value.pos { color: #1b5e20; }
+  .stat-value.neg { color: #b71c1c; }
+  .stat-sub { font-size: .72rem; color: #a8a49a; margin-top: .3rem; }
+  .verdict { margin: 0 0 1.5rem; padding: .75rem 1rem; background: #f2f0ec; border-left: 3px solid var(--accent, #9b2335); border-radius: 0 6px 6px 0; font-size: .88rem; color: #4a4640; line-height: 1.65; }
+  .sl { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+  .sl:hover { color: var(--accent, #9b2335); }
   @media (max-width: 600px) {
     .info-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); }
   }
   </style>
 
@@ -180,11 +209,26 @@ const jsonLd: Record<string, any> = {
         )}
       </div>
 
-      <h2>2024年チーム成績</h2>
-      <div class="stats-placeholder">
-        <p>📊 成績データは近日更新予定です。</p>
-        <p style="font-size: 0.85rem; margin-top: 0.5rem;">MLB Stats API からの取得・整形を実施中。</p>
-      </div>
+      <h2>{season}年チーム成績</h2>
+      {rec ? (
+        <>
+          <div class="stats-grid">
+            <div class="stat-card"><p class="stat-label">勝</p><p class="stat-value highlight">{rec.wins}</p><p class="stat-sub">W</p></div>
+            <div class="stat-card"><p class="stat-label">敗</p><p class="stat-value">{rec.losses}</p><p class="stat-sub">L</p></div>
+            <div class="stat-card"><p class="stat-label">勝率</p><p class="stat-value">{rec.winPct.toFixed(3)}</p><p class="stat-sub">W%</p></div>
+            <div class="stat-card"><p class="stat-label">得点</p><p class="stat-value">{rec.runsScored}</p><p class="stat-sub">RS</p></div>
+            <div class="stat-card"><p class="stat-label">失点</p><p class="stat-value">{rec.runsAllowed}</p><p class="stat-sub">RA</p></div>
+            <div class="stat-card"><p class="stat-label">得失点差</p><p class={`stat-value ${rec.runDiff >= 0 ? 'pos' : 'neg'}`}>{rec.runDiff > 0 ? '+' : ''}{rec.runDiff}</p><p class="stat-sub">DIFF</p></div>
+            <div class="stat-card"><p class="stat-label"><a href="/glossary/war/" class="sl">ピタゴラス勝率</a></p><p class="stat-value">{rec.pythWinPct.toFixed(3)}</p><p class="stat-sub">pyth</p></div>
+            <div class="stat-card"><p class="stat-label">ゲーム差</p><p class="stat-value">{rec.gamesBack === '-' ? '首位' : rec.gamesBack}</p><p class="stat-sub">GB</p></div>
+          </div>
+          {teamVerdict && <p class="verdict">{teamVerdict}</p>}
+        </>
+      ) : (
+        <div class="stats-placeholder">
+          <p>📊 成績データは準備中です。</p>
+        </div>
+      )}
       <GlossaryLinks type="both" />
     </div>
   </div>

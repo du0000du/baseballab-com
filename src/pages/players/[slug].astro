@@ -42,7 +42,6 @@ const statGroup = statsEntry?.group?.displayName ?? '';
 const splitStat = statsEntry?.splits?.[0]?.stat ?? null;
 const teamName = statsEntry?.splits?.[0]?.team?.name ?? '';
 
-// 打撃成績
 const isBatter = statGroup === 'hitting';
 const isPitcher = statGroup === 'pitching';
 
@@ -83,6 +82,22 @@ if (isBatter && avg) {
 
 const teamSnippet = teamName ? `所属チーム: ${teamName}。` : '';
 const atomicText = `${name}（${posAbbr}）はMLBの現役選手。${birthCountry ? birthCountry + '出身。' : ''}${statsSnippet}${teamSnippet}最新成績はBaseballabで確認できます。`;
+
+// 断言テキスト（MLB平均: OPS.720, ERA 4.00 基準）
+let verdict = '';
+if (isBatter && ops) {
+  const o = Number(ops);
+  if (o >= 0.950) verdict = `OPS ${ops} はMLBトップクラス。リーグ平均（.720前後）を大幅に上回る最高水準の打者。`;
+  else if (o >= 0.850) verdict = `OPS ${ops} はMLBリーグ平均（.720前後）を大きく上回る。スター打者として申し分ない数値。`;
+  else if (o >= 0.720) verdict = `OPS ${ops} はMLBリーグ平均水準。安定したレギュラーとして計算できる打者。`;
+  else if (o > 0) verdict = `OPS ${ops} はMLBリーグ平均（.720前後）をやや下回る。出塁率か長打率の向上が課題。`;
+} else if (isPitcher && era) {
+  const e = Number(era);
+  if (e <= 2.50) verdict = `防御率 ${era} はMLBトップクラス。ローテーションの絶対的エース水準。`;
+  else if (e <= 3.50) verdict = `防御率 ${era} はMLBリーグ平均（4.00前後）を大きく上回る好成績。信頼できる先発投手。`;
+  else if (e <= 4.00) verdict = `防御率 ${era} はMLBリーグ平均水準。安定したローテーション投手。`;
+  else if (e > 0) verdict = `防御率 ${era} はMLBリーグ平均（4.00前後）を上回る。安定感の改善が求められる。`;
+}
 
 const pageTitle = `${name} 成績・プロフィール`;
 const description = `${name}（${posAbbr}）のMLB成績・プロフィール・最新情報。${birthCountry ? birthCountry + '出身。' : ''}${statsSnippet}Baseballabで詳細データを確認。`;
@@ -237,6 +252,9 @@ const affiliateLinks = [
   }
   .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
   .breadcrumb a:hover { color: #fff; }
+  .verdict { margin: 0 0 1.5rem; padding: .75rem 1rem; background: var(--gray-100, #f2f0ec); border-left: 3px solid var(--accent, #9b2335); border-radius: 0 6px 6px 0; font-size: .88rem; color: var(--gray-700, #4a4640); line-height: 1.65; }
+  .sl { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+  .sl:hover { color: var(--accent, #9b2335); border-color: var(--accent, #9b2335); }
   @media (max-width: 600px) {
     .info-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
@@ -327,114 +345,24 @@ const affiliateLinks = [
 
       {isBatter && splitStat ? (
         <div class="stats-grid">
-          {avg && (
-              <div class="stat-card">
-              <p class="stat-label">打率</p>
-              <p class="stat-value">{avg}</p>
-              <p class="stat-sub">AVG</p>
-            </div>
-          )}
-          {hr !== null && (
-            <div class="stat-card">
-              <p class="stat-label">本塁打</p>
-              <p class="stat-value highlight">{hr}</p>
-              <p class="stat-sub">HR</p>
-            </div>
-          )}
-          {rbi !== null && (
-            <div class="stat-card">
-              <p class="stat-label">打点</p>
-              <p class="stat-value">{rbi}</p>
-              <p class="stat-sub">RBI</p>
-            </div>
-          )}
-          {ops && (
-            <div class="stat-card">
-              <p class="stat-label">OPS</p>
-              <p class="stat-value">{ops}</p>
-              <p class="stat-sub">出塁+長打</p>
-            </div>
-          )}
-          {runs !== null && (
-            <div class="stat-card">
-              <p class="stat-label">得点 </p>
-              <p class="stat-value">{runs}</p>
-              <p class="stat-sub">R</p>
-            </div>
-          )}
-          {hits !== null && (
-            <div class="stat-card">
-              <p class="stat-label">安打</p>
-              <p class="stat-value">{hits}</p>
-              <p class="stat-sub">H</p>
-            </div>
-          )}
-          {sb !== null && sb > 0 && (
-            <div class="stat-card">
-              <p class="stat-label">盗塁</p>
-              <p class="stat-value">{sb}</p>
-              <p class="stat-sub">SB</p>
-            </div>
-          )}
-          {gamesPlayed !== null && (
-            <div class="stat-card">
-              <p class="stat-label">試合</p>
-              <p class="stat-value">{gamesPlayed}</p>
-              <p class="stat-sub">G</p>
-            </div>
-          )}
+          {avg && <div class="stat-card"><p class="stat-label"><a href="/glossary/avg/" class="sl">打率</a></p><p class="stat-value">{avg}</p><p class="stat-sub">AVG</p></div>}
+          {hr !== null && <div class="stat-card"><p class="stat-label">本塁打</p><p class="stat-value highlight">{hr}</p><p class="stat-sub">HR</p></div>}
+          {rbi !== null && <div class="stat-card"><p class="stat-label"><a href="/glossary/rbi/" class="sl">打点</a></p><p class="stat-value">{rbi}</p><p class="stat-sub">RBI</p></div>}
+          {ops && <div class="stat-card"><p class="stat-label"><a href="/glossary/ops/" class="sl">OPS</a></p><p class="stat-value">{ops}</p><p class="stat-sub">出塁+長打</p></div>}
+          {runs !== null && <div class="stat-card"><p class="stat-label">得点</p><p class="stat-value">{runs}</p><p class="stat-sub">R</p></div>}
+          {hits !== null && <div class="stat-card"><p class="stat-label">安打</p><p class="stat-value">{hits}</p><p class="stat-sub">H</p></div>}
+          {sb !== null && sb > 0 && <div class="stat-card"><p class="stat-label">盗塁</p><p class="stat-value">{sb}</p><p class="stat-sub">SB</p></div>}
+          {gamesPlayed !== null && <div class="stat-card"><p class="stat-label">試合</p><p class="stat-value">{gamesPlayed}</p><p class="stat-sub">G</p></div>}
         </div>
       ) : isPitcher && splitStat ? (
         <div class="stats-grid">
-          {era && (
-            <div class="stat-card">
-              <p class="stat-label">防御率</p>
-              <p class="stat-value highlight">{era}</p>
-              <p class="stat-sub">ERA</p>
-            </div>
-          )}
-          {wins !== null && losses !== null && (
-            <div class="stat-card">
-              <p class="stat-label">勝敗</p>
-              <p class="stat-value">{wins}-{losses}</p>
-              <p class="stat-sub">W-L</p>
-            </div>
-          )}
-          {strikeOuts !== null && (
-            <div class="stat-card">
-              <p class="stat-label">奪三振</p>
-              <p class="stat-value">{strikeOuts}</p>
-              <p class="stat-sub">K</p>
-            </div>
-          )}
-          {whip && (
-            <div class="stat-card">
-              <p class="stat-label">WHIP</p>
-              <p class="stat-value">{whip}</p>
-              <p class="stat-sub">BB+H/IP</p>
-            </div>
-          )}
-          {ip && (
-            <div class="stat-card">
-              <p class="stat-label">投球回</p>
-              <p class="stat-value">{ip}</p>
-              <p class="stat-sub">IP</p>
-            </div>
-          )}
-          {saves !== null && saves > 0 && (
-            <div class="stat-card">
-              <p class="stat-label">セーブ</p>
-              <p class="stat-value">{saves}</p>
-              <p class="stat-sub">SV</p>
-            </div>
-          )}
-          {gamesPlayed !== null && (
-            <div class="stat-card">
-              <p class="stat-label">登板</p>
-              <p class="stat-value">{gamesPlayed}</p>
-              <p class="stat-sub">G</p>
-            </div>
-          )}
+          {era && <div class="stat-card"><p class="stat-label"><a href="/glossary/era/" class="sl">防御率</a></p><p class="stat-value highlight">{era}</p><p class="stat-sub">ERA</p></div>}
+          {wins !== null && losses !== null && <div class="stat-card"><p class="stat-label">勝敗</p><p class="stat-value">{wins}-{losses}</p><p class="stat-sub">W-L</p></div>}
+          {strikeOuts !== null && <div class="stat-card"><p class="stat-label">奪三振</p><p class="stat-value">{strikeOuts}</p><p class="stat-sub">K</p></div>}
+          {whip && <div class="stat-card"><p class="stat-label"><a href="/glossary/whip/" class="sl">WHIP</a></p><p class="stat-value">{whip}</p><p class="stat-sub">BB+H/IP</p></div>}
+          {ip && <div class="stat-card"><p class="stat-label">投球回</p><p class="stat-value">{ip}</p><p class="stat-sub">IP</p></div>}
+          {saves !== null && saves > 0 && <div class="stat-card"><p class="stat-label"><a href="/glossary/sv/" class="sl">セーブ</a></p><p class="stat-value">{saves}</p><p class="stat-sub">SV</p></div>}
+          {gamesPlayed !== null && <div class="stat-card"><p class="stat-label">登板</p><p class="stat-value">{gamesPlayed}</p><p class="stat-sub">G</p></div>}
         </div>
       ) : (
         <div class="stats-placeholder">
@@ -442,6 +370,7 @@ const affiliateLinks = [
           <p style="font-size: 0.85rem; margin-top: 0.5rem;">MLB Stats API からの取得・整形を実施中。</p>
         </div>
       )}
+      {verdict && <p class="verdict">{verdict}</p>}
       <GlossaryLinks type={isBatter ? 'batting' : 'pitching'} />
       <AffiliateBlock links={affiliateLinks} heading="この選手をさらに知るためのおすすめ" />
 </div>
