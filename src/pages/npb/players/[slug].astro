@@ -13,17 +13,34 @@ const s = p.stats || {};
 const isBat = p.group === 'batting';
 const leagueJa = p.league === 'central' ? 'セントラル・リーグ' : 'パシフィック・リーグ';
 
-const batCards = [
-  ['打率', s.avg, 'AVG', true], ['本塁打', s.hr, 'HR', false], ['打点', s.rbi, 'RBI', false],
-  ['OPS', s.ops, '出塁+長打', false], ['安打', s.hits, 'H', false], ['得点', s.runs, 'R', false],
-  ['盗塁', s.sb, 'SB', false], ['出塁率', s.obp, 'OBP', false], ['長打率', s.slg, 'SLG', false], ['試合', s.games, 'G', false],
+// [label, value, sub, highlight, glossarySlug]
+const batCards: [string, any, string, boolean, string|null][] = [
+  ['打率', s.avg, 'AVG', true, 'avg'], ['本塁打', s.hr, 'HR', false, null], ['打点', s.rbi, 'RBI', false, 'rbi'],
+  ['OPS', s.ops, '出塁+長打', false, 'ops'], ['安打', s.hits, 'H', false, null], ['得点', s.runs, 'R', false, null],
+  ['盗塁', s.sb, 'SB', false, null], ['出塁率', s.obp, 'OBP', false, 'obp'], ['長打率', s.slg, 'SLG', false, 'slg'], ['試合', s.games, 'G', false, null],
 ];
-const pitCards = [
-  ['防御率', s.era, 'ERA', true], ['勝-敗', (s.wins != null ? `${s.wins}-${s.losses ?? 0}` : null), 'W-L', false],
-  ['奪三振', s.so, 'SO', false], ['セーブ', s.saves, 'SV', false], ['ホールド', s.holds, 'H', false],
-  ['WHIP', s.whip, 'WHIP', false], ['投球回', s.ip, 'IP', false], ['登板', s.games, 'G', false], ['勝率', s.winpct, 'PCT', false],
+const pitCards: [string, any, string, boolean, string|null][] = [
+  ['防御率', s.era, 'ERA', true, 'era'], ['勝-敗', (s.wins != null ? `${s.wins}-${s.losses ?? 0}` : null), 'W-L', false, null],
+  ['奪三振', s.so, 'SO', false, null], ['セーブ', s.saves, 'SV', false, 'sv'], ['ホールド', s.holds, 'H', false, 'hld'],
+  ['WHIP', s.whip, 'WHIP', false, 'whip'], ['投球回', s.ip, 'IP', false, null], ['登板', s.games, 'G', false, null], ['勝率', s.winpct, 'PCT', false, null],
 ];
 const cards = (isBat ? batCards : pitCards).filter(c => c[1] != null && c[1] !== '');
+
+// 断言テキスト
+let verdict = '';
+if (isBat && s.ops != null) {
+  const ops = Number(s.ops);
+  if (ops >= 0.900) verdict = `OPS ${s.ops} は${NPB_SEASON}年NPBトップクラスの数値。得点貢献度が際立って高い。`;
+  else if (ops >= 0.800) verdict = `OPS ${s.ops} はリーグ平均（.720前後）を大きく上回る。主軸として申し分ない攻撃力。`;
+  else if (ops >= 0.720) verdict = `OPS ${s.ops} はリーグ平均水準。安定したスターターとして計算できる打者。`;
+  else if (ops > 0) verdict = `OPS ${s.ops} はリーグ平均（.720前後）をやや下回る。出塁率か長打率の向上が課題。`;
+} else if (!isBat && s.era != null) {
+  const era = Number(s.era);
+  if (era <= 2.50) verdict = `防御率 ${s.era} は${NPB_SEASON}年NPB最上位クラス。ローテーションの絶対的エース。`;
+  else if (era <= 3.50) verdict = `防御率 ${s.era} はNPB先発上位の安定感。信頼できるローテーション投手。`;
+  else if (era <= 4.50) verdict = `防御率 ${s.era} はリーグ平均（3.80前後）付近。安定感の波が課題。`;
+  else if (era > 0) verdict = `防御率 ${s.era} はリーグ平均（3.80前後）を上回る。改善が求められるシーズン。`;
+}
 
 let snip = '';
 if (isBat) {
@@ -87,6 +104,9 @@ const jsonLd = {
     h2.sec { font-size:1.2rem; color:var(--navy); margin:1.5rem 0 .25rem; }
     .src-box { margin-top:2rem; padding:1rem 1.25rem; background:var(--gray-100); border-left:4px solid var(--navy); border-radius:0 6px 6px 0; font-size:.8rem; color:var(--gray-600); line-height:1.7; }
     .src-box a { color:var(--navy); font-weight:600; }
+    .stat-label-link { color:inherit; text-decoration:none; border-bottom:1px dotted currentColor; }
+    .stat-label-link:hover { color:var(--accent); border-color:var(--accent); }
+    .verdict { margin:0 0 1.5rem; padding:.75rem 1rem; background:var(--gray-100); border-left:3px solid var(--accent); border-radius:0 6px 6px 0; font-size:.88rem; color:var(--gray-700); line-height:1.65; }
     @media(max-width:600px){ .stats-grid{grid-template-columns:repeat(2,1fr);} }
   </style>
 
@@ -121,12 +141,15 @@ const jsonLd = {
       <div class="stats-grid">
         {cards.map(c => (
           <div class="stat-card">
-            <p class="stat-label">{c[0]}</p>
+            <p class="stat-label">
+              {c[4] ? <a href={`/glossary/${c[4]}/`} class="stat-label-link">{c[0]}</a> : c[0]}
+            </p>
             <p class={c[3] ? 'stat-value hl' : 'stat-value'}>{c[1]}</p>
             <p class="stat-sub">{c[2]}</p>
           </div>
         ))}
       </div>
+      {verdict && <p class="verdict">{verdict}</p>}
 
       <GlossaryLinks type={isBat ? 'batting' : 'pitching'} />
       <AffiliateBlock links={links} heading="この選手をもっと楽しむためのおすすめ" />

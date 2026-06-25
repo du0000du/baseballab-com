@@ -111,6 +111,18 @@ const affiliateLinks = linksData.links.map((item: any) => ({
 
     <AffiliateBlock links={affiliateLinks} heading={affHeading} />
 
+    <aside class="see-also">
+      <p class="see-also-heading">この指標の成績をランキングで見る</p>
+      <ul class="see-also-links">
+        <li><a href="/npb/leaders/">NPB 打撃・投球リーダーボード</a></li>
+        {category === 'batting' || category === 'general' ? (
+          <li><a href="/npb/standings/">NPB 順位表</a></li>
+        ) : null}
+        <li><a href="/npb/">NPB トップ</a></li>
+        <li><a href="/players/">MLB 選手一覧</a></li>
+      </ul>
+    </aside>
+
     {relatedTerms && relatedTerms.length > 0 && (
       <aside class="related-terms">
         <h2>関連指標</h2>
@@ -159,6 +171,11 @@ const affiliateLinks = linksData.links.map((item: any) => ({
   .entry-content :global(th) { background: var(--navy, #1a2744); color: #fff; padding: 0.5rem 0.75rem; text-align: left; }
   .entry-content :global(td) { padding: 0.45rem 0.75rem; border-bottom: 1px solid #ddd; }
   .entry-content :global(tr:nth-child(even) td) { background: #f5f7fa; }
+  .see-also { margin-top: 2.5rem; padding: 1rem 1.25rem; background: #f0f4f8; border-radius: 8px; }
+  .see-also-heading { font-size: .78rem; font-weight: 700; color: var(--gray-500, #6b6760); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 .6rem; }
+  .see-also-links { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0; }
+  .see-also-links a { display: inline-block; background: #fff; border: 1px solid var(--border, #ddd); border-radius: 20px; padding: .2rem .75rem; font-size: .82rem; font-weight: 600; color: var(--navy, #1a2744); text-decoration: none; }
+  .see-also-links a:hover { border-color: var(--navy, #1a2744); background: var(--navy, #1a2744); color: #fff; }
   .related-terms { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #ddd; }
   .related-terms h2 { font-size: 1rem; margin-bottom: 0.75rem; }
   .related-terms ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
