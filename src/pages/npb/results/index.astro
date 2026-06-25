@@ -117,7 +117,7 @@ function fmtDate(d: string) {
                         <span class={`result-badge ${g.result}`}>{g.result}</span>
                         <div class="game-info">
                           <div class="game-opp">{g.home ? 'vs ' : '@ '}{SHORT[g.opponent] ?? g.opponent}</div>
-                          <div class="game-meta">{fmtDate(g.date)}{g.home ? ' 主場' : ' 客場'}</div>
+                          <div class="game-meta">{fmtDate(g.date)} · {g.stadium || (g.home ? '主場' : '客場')}</div>
                         </div>
                         <span class="game-score">{g.score}–{g.opponentScore}</span>
                       </div>
@@ -152,7 +152,7 @@ function fmtDate(d: string) {
                         <span class={`result-badge ${g.result}`}>{g.result}</span>
                         <div class="game-info">
                           <div class="game-opp">{g.home ? 'vs ' : '@ '}{SHORT[g.opponent] ?? g.opponent}</div>
-                          <div class="game-meta">{fmtDate(g.date)}{g.home ? ' 主場' : ' 客場'}</div>
+                          <div class="game-meta">{fmtDate(g.date)} · {g.stadium || (g.home ? '主場' : '客場')}</div>
                         </div>
                         <span class="game-score">{g.score}–{g.opponentScore}</span>
                       </div>

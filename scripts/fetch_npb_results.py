@@ -37,6 +37,21 @@ TEAMS_BY_NAME = {
 # Reverse slug → name
 SLUG_TO_NAME = {v["slug"]: k for k, v in TEAMS_BY_NAME.items()}
 
+STADIUMS: dict[str, str] = {
+    "hanshin-tigers":     "阪神甲子園球場",
+    "yokohama-dena":      "横浜スタジアム",
+    "yomiuri-giants":     "東京ドーム",
+    "chunichi-dragons":   "バンテリンドームナゴヤ",
+    "hiroshima-carp":     "MAZDA Zoom-Zoomスタジアム広島",
+    "yakult-swallows":    "明治神宮野球場",
+    "orix-buffaloes":     "京セラドームOSAKA",
+    "softbank-hawks":     "みずほPayPayドーム福岡",
+    "nipponham-fighters": "エスコンフィールドHOKKAIDO",
+    "rakuten-eagles":     "楽天モバイルパーク宮城",
+    "seibu-lions":        "ベルーナドーム",
+    "lotte-marines":      "ZOZOマリンスタジアム",
+}
+
 RE_GAME = re.compile(
     r'href="/scores/(\d{4})/(\d{2})(\d{2})/[^/"]+/"[^>]*class="link_block"'
     r'|class="link_block"[^>]*href="/scores/(\d{4})/(\d{2})(\d{2})/[^/"]+/"',
@@ -88,13 +103,16 @@ def parse_games(html: str) -> list[dict]:
 
         r1, r2 = ("W", "L") if s1 > s2 else (("L", "W") if s1 < s2 else ("T", "T"))
         t1, t2 = TEAMS_BY_NAME[t1_name], TEAMS_BY_NAME[t2_name]
+        stadium = STADIUMS.get(t2["slug"], "")  # t2 is always the home team
 
         games.append({"date": date, "slug": t1["slug"], "name": t1_name,
                        "opp": t2_name, "oppSlug": t2["slug"],
-                       "home": False, "score": s1, "oppScore": s2, "result": r1})
+                       "home": False, "score": s1, "oppScore": s2, "result": r1,
+                       "stadium": stadium})
         games.append({"date": date, "slug": t2["slug"], "name": t2_name,
                        "opp": t1_name, "oppSlug": t1["slug"],
-                       "home": True, "score": s2, "oppScore": s1, "result": r2})
+                       "home": True, "score": s2, "oppScore": s1, "result": r2,
+                       "stadium": stadium})
     return games
 
 
@@ -135,6 +153,7 @@ def main() -> None:
                 "score": g["score"],
                 "opponentScore": g["oppScore"],
                 "result": g["result"],
+                "stadium": g.get("stadium", ""),
             })
 
     teams = []

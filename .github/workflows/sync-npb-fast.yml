@@ -1,0 +1,87 @@
+name: NPB Fast Sync (8h)
+
+on:
+  schedule:
+    - cron: '0 9 * * *'    # 09:00 UTC = 18:00 JST（夕方・デーゲーム後）
+    - cron: '0 17 * * *'   # 17:00 UTC = 02:00 JST（ナイター終了後）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-sync-npb-fast
+  cancel-in-progress: false
+
+jobs:
+  sync-npb:
+    name: "NPB Data Sync"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pykakasi --quiet
+
+      - name: Fetch NPB stats (retry x3)
+        run: |
+          for i in 1 2 3; do
+            echo "Attempt $i/3"
+            python3 scripts/fetch_npb.py --mode all && break
+            echo "Attempt $i failed."
+            [ $i -lt 3 ] && sleep 30
+          done
+
+      - name: Commit NPB data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add data/npb/
+          if git diff --cached --quiet; then
+            echo "No NPB changes — skipping commit."
+          else
+            git commit -m "data: NPB fast sync $(date -u '+%Y-%m-%dT%H:%M')"
+            git push
+          fi
+
+  sync-npb-results:
+    name: "NPB Game Results"
+    needs: sync-npb
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch NPB results (retry x3)
+        run: |
+          for i in 1 2 3; do
+            echo "Attempt $i/3"
+            python3 scripts/fetch_npb_results.py && break
+            echo "Attempt $i failed."
+            [ $i -lt 3 ] && sleep 30
+          done
+
+      - name: Commit NPB results data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add data/npb/results.json
+          if git diff --cached --quiet; then
+            echo "No NPB results changes — skipping commit."
+          else
+            git commit -m "data: NPB results fast sync $(date -u '+%Y-%m-%dT%H:%M')"
+            git push
+          fi
