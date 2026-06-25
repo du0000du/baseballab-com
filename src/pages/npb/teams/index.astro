@@ -1,0 +1,136 @@
+---
+// /npb/teams/ — NPB 全球団 チーム一覧
+import Layout from '../../../layouts/Layout.astro';
+import { NPB_TEAMS, loadStandings, NPB_SEASON } from '../../../lib/npb';
+
+const standings = loadStandings();
+const centralRecs: any[] = standings.central ?? [];
+const pacificRecs: any[] = standings.pacific ?? [];
+
+function recBySlug(list: any[], slug: string) {
+  return list.find((r: any) => r.teamSlug === slug) ?? null;
+}
+
+const central = NPB_TEAMS.filter(t => t.league === 'central');
+const pacific = NPB_TEAMS.filter(t => t.league === 'pacific');
+
+const title = `NPB ${NPB_SEASON} 全球団 チーム一覧 セ・パ12球団 | Baseballab`;
+const description = `NPB ${NPB_SEASON}年 セントラル・パシフィック全12球団の順位・成績一覧。各球団の詳細データページへのリンク付き。`;
+const ogUrl = 'https://baseballab.com/npb/teams/';
+---
+<Layout title={title} description={description} ogUrl={ogUrl}>
+  <style slot="head">
+    .hero { background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 100%); color:#fff; padding:2.5rem 0 2rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:.75rem; } .breadcrumb a { color:inherit; }
+    .hero h1 { font-size:clamp(1.3rem,3.5vw,2rem); font-weight:800; margin:0; }
+    .hero-sub { font-size:.88rem; opacity:.75; margin:.35rem 0 0; }
+    .body { padding:2rem 0 4rem; }
+    .lg-sec { margin-bottom:3rem; }
+    .lg-title { font-size:1.1rem; font-weight:800; color:#fff; padding:.45rem 1rem; border-radius:6px; display:inline-flex; align-items:center; gap:.5rem; margin-bottom:1.1rem; }
+    .lg-title.cl { background:#9b2335; }
+    .lg-title.pl { background:#1a5276; }
+    .teams-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .team-card { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); transition:box-shadow .15s; }
+    .team-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.12); }
+    .team-bar { height:5px; }
+    .team-inner { padding:.85rem 1rem; }
+    .team-rank { font-size:.7rem; font-weight:700; color:var(--gray-500); margin:0 0 .2rem; }
+    .team-name { font-size:1rem; font-weight:800; margin:0 0 .6rem; }
+    .team-name a { color:var(--navy-dark,#1a3a5c); text-decoration:none; }
+    .team-name a:hover { color:var(--accent,#9b2335); }
+    .team-stats { display:flex; gap:.75rem; font-size:.78rem; font-variant-numeric:tabular-nums; color:var(--gray-600); flex-wrap:wrap; }
+    .stat-pair { display:flex; flex-direction:column; }
+    .stat-label { font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--gray-400); }
+    .stat-val { font-weight:700; color:var(--text); }
+    .stat-val.leader { color:#1b5e20; }
+    .no-rec { font-size:.78rem; color:var(--gray-400); }
+    @media(max-width:900px) { .teams-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:560px) { .teams-grid { grid-template-columns:1fr; } }
+  </style>
+
+  <section class="hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/npb/">NPB</a> &rsaquo; 球団一覧</p>
+      <h1>NPB {NPB_SEASON} セ・パ12球団 一覧</h1>
+      <p class="hero-sub">各球団の成績・選手データページ</p>
+    </div>
+  </section>
+
+  <div class="body">
+    <div class="container">
+
+      <div class="lg-sec">
+        <p class="lg-title cl">CL セントラル・リーグ</p>
+        <div class="teams-grid">
+          {central.map(t => {
+            const rec = recBySlug(centralRecs, t.slug);
+            return (
+              <div class="team-card">
+                <div class="team-bar" style={`background:${t.color}`}></div>
+                <div class="team-inner">
+                  <p class="team-rank">{rec ? `${rec.rank}位` : 'セ・リーグ'}</p>
+                  <p class="team-name"><a href={`/npb/teams/${t.slug}/`}>{t.name}</a></p>
+                  {rec ? (
+                    <div class="team-stats">
+                      <div class="stat-pair">
+                        <span class="stat-label">W-L</span>
+                        <span class="stat-val">{rec.wins}-{rec.losses}</span>
+                      </div>
+                      <div class="stat-pair">
+                        <span class="stat-label">勝率</span>
+                        <span class="stat-val">{rec.pct}</span>
+                      </div>
+                      <div class="stat-pair">
+                        <span class="stat-label">GB</span>
+                        <span class={`stat-val ${rec.gb === '--' ? 'leader' : ''}`}>{rec.gb === '--' ? '首位' : rec.gb}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <p class="no-rec">成績データ準備中</p>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div class="lg-sec">
+        <p class="lg-title pl">PL パシフィック・リーグ</p>
+        <div class="teams-grid">
+          {pacific.map(t => {
+            const rec = recBySlug(pacificRecs, t.slug);
+            return (
+              <div class="team-card">
+                <div class="team-bar" style={`background:${t.color}`}></div>
+                <div class="team-inner">
+                  <p class="team-rank">{rec ? `${rec.rank}位` : 'パ・リーグ'}</p>
+                  <p class="team-name"><a href={`/npb/teams/${t.slug}/`}>{t.name}</a></p>
+                  {rec ? (
+                    <div class="team-stats">
+                      <div class="stat-pair">
+                        <span class="stat-label">W-L</span>
+                        <span class="stat-val">{rec.wins}-{rec.losses}</span>
+                      </div>
+                      <div class="stat-pair">
+                        <span class="stat-label">勝率</span>
+                        <span class="stat-val">{rec.pct}</span>
+                      </div>
+                      <div class="stat-pair">
+                        <span class="stat-label">GB</span>
+                        <span class={`stat-val ${rec.gb === '--' ? 'leader' : ''}`}>{rec.gb === '--' ? '首位' : rec.gb}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <p class="no-rec">成績データ準備中</p>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</Layout>

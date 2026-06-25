@@ -65,7 +65,7 @@ const asOf = meta.asOf || '';
     table.std tr:first-child td { font-weight:700; }
     .leaders-banner { display:flex; align-items:center; gap:1rem; background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; border-radius:12px; padding:1.25rem 1.5rem; box-shadow:var(--shadow-md); }
     .leaders-banner:hover { transform:translateY(-2px); }
-    .qlink-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:.75rem; }
+    .qlink-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.75rem; }
     .qlink { display:flex; flex-direction:column; align-items:center; gap:.25rem; background:#fff; border:1px solid var(--gray-200); border-radius:10px; padding:.9rem .75rem; text-align:center; transition:border-color .15s,box-shadow .15s; box-shadow:var(--shadow-sm); }
     .qlink:hover { border-color:var(--navy); box-shadow:0 2px 8px rgba(15,37,64,.12); }
     .ql-icon { font-size:1.5rem; } .ql-label { font-size:.85rem; font-weight:700; color:var(--navy); } .ql-sub { font-size:.72rem; color:var(--gray-500); }
@@ -162,9 +162,11 @@ const asOf = meta.asOf || '';
     <div class="container">
       <div class="qlink-grid">
         <a href="/npb/standings/" class="qlink"><span class="ql-icon">🏆</span><span class="ql-label">順位表</span><span class="ql-sub">セ・パ全12球団</span></a>
-        <a href="/npb/trends/" class="qlink"><span class="ql-icon">📈</span><span class="ql-label">トレンド</span><span class="ql-sub">ホット/コールド</span></a>
-        <a href="/npb/results/" class="qlink"><span class="ql-icon">⚾</span><span class="ql-label">試合結果</span><span class="ql-sub">直近3試合</span></a>
         <a href="/npb/leaders/" class="qlink"><span class="ql-icon">📊</span><span class="ql-label">リーダー</span><span class="ql-sub">各部門ランキング</span></a>
+        <a href="/npb/results/" class="qlink"><span class="ql-icon">⚾</span><span class="ql-label">試合結果</span><span class="ql-sub">直近3試合</span></a>
+        <a href="/npb/players/" class="qlink"><span class="ql-icon">👤</span><span class="ql-label">選手一覧</span><span class="ql-sub">打者・投手データ</span></a>
+        <a href="/npb/teams/" class="qlink"><span class="ql-icon">🏟</span><span class="ql-label">球団一覧</span><span class="ql-sub">セ・パ12球団</span></a>
+        <a href="/npb/trends/" class="qlink"><span class="ql-icon">📈</span><span class="ql-label">トレンド</span><span class="ql-sub">ホット/コールド</span></a>
       </div>
     </div>
   </section>

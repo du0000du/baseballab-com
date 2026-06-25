@@ -1,0 +1,162 @@
+---
+// /npb/players/ — NPB 全選手 打撃・投球成績 一覧
+import Layout from '../../../layouts/Layout.astro';
+import { loadPlayers, loadMeta, NPB_SEASON } from '../../../lib/npb';
+
+const players = loadPlayers();
+const meta = loadMeta();
+const asOf = meta.asOf || NPB_SEASON;
+
+const batters = players
+  .filter(p => p.group === 'batting')
+  .sort((a, b) => (Number(b.stats.ops) || 0) - (Number(a.stats.ops) || 0));
+
+const pitchers = players
+  .filter(p => p.group === 'pitching')
+  .sort((a, b) => {
+    const ea = Number(a.stats.era) ?? 99;
+    const eb = Number(b.stats.era) ?? 99;
+    if (ea === 99 && eb === 99) return 0;
+    if (ea === 99) return 1;
+    if (eb === 99) return -1;
+    return ea - eb;
+  });
+
+function fmt(v: number | null | undefined, dec: number): string {
+  if (v == null || isNaN(Number(v))) return '—';
+  return Number(v).toFixed(dec);
+}
+
+const title = `NPB ${NPB_SEASON} 選手成績一覧 打者・投手データ | Baseballab`;
+const description = `NPB ${NPB_SEASON}年 全選手の打撃・投球成績一覧。打率・OPS・本塁打・防御率・奪三振などを確認。セ・パ全球団の登録選手データを網羅。`;
+const ogUrl = 'https://baseballab.com/npb/players/';
+---
+<Layout title={title} description={description} ogUrl={ogUrl}>
+  <style slot="head">
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, #0d2a40 100%); color:#fff; padding:2.5rem 0 2rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:.75rem; } .breadcrumb a { color:inherit; }
+    .hero h1 { font-size:clamp(1.3rem,3.5vw,2rem); font-weight:800; margin:0 0 .4rem; }
+    .hero-sub { font-size:.88rem; opacity:.75; margin:0; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.2rem .8rem; font-size:.75rem; margin-top:.75rem; }
+    .body { padding:2rem 0 4rem; }
+    .sec-title { font-size:1.15rem; font-weight:800; color:var(--navy); margin:2.5rem 0 1rem; padding-bottom:.35rem; border-bottom:2px solid var(--navy); display:flex; align-items:center; gap:.5rem; }
+    .sec-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .6rem; border-radius:9999px; }
+    .sec-badge.bat { background:#9b2335; } .sec-badge.pit { background:#1a5276; }
+    .sec-count { font-size:.78rem; font-weight:400; color:var(--gray-500); margin-left:.25rem; }
+    .tbl-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    table { width:100%; border-collapse:collapse; font-size:.84rem; background:#fff; border:1px solid var(--gray-200); border-radius:8px; overflow:hidden; }
+    thead th { background:#f0f4f8; font-size:.68rem; font-weight:700; color:var(--gray-600); text-transform:uppercase; letter-spacing:.05em; padding:.55rem .6rem; text-align:right; white-space:nowrap; border-bottom:1px solid var(--gray-200); }
+    thead th.left { text-align:left; }
+    tbody td { padding:.48rem .6rem; border-top:1px solid var(--gray-100); text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; vertical-align:middle; }
+    tbody td.nm { text-align:left; font-weight:600; white-space:nowrap; }
+    tbody td.nm a { color:var(--navy-dark,#1a3a5c); text-decoration:none; }
+    tbody td.nm a:hover { color:var(--accent,#9b2335); text-decoration:underline; }
+    tbody td.team { text-align:left; color:var(--gray-600); font-size:.78rem; }
+    .qual { font-size:.65rem; color:var(--accent,#9b2335); font-weight:700; margin-left:.2rem; }
+    .rank-num { color:var(--gray-400); font-size:.78rem; }
+    tbody tr:nth-child(even) td { background:#fafaf9; }
+    tbody tr:hover td { background:#f0f4f8; }
+    .hi { color:#9b2335; font-weight:700; }
+    .note { font-size:.75rem; color:var(--gray-500); margin:.75rem 0 0; }
+    @media(max-width:640px) { .hide-sp { display:none; } }
+  </style>
+
+  <section class="hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/npb/">NPB</a> &rsaquo; 選手一覧</p>
+      <h1>NPB {NPB_SEASON} 選手成績一覧</h1>
+      <p class="hero-sub">打者・投手のシーズン成績データ — セ・パ全球団</p>
+      {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
+    </div>
+  </section>
+
+  <div class="body">
+    <div class="container">
+
+      <h2 class="sec-title">
+        <span class="sec-badge bat">打者</span>
+        打撃成績一覧
+        <span class="sec-count">（{batters.length}名、OPS順）</span>
+      </h2>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="left" style="width:2rem">#</th>
+              <th class="left">選手</th>
+              <th class="left hide-sp">球団</th>
+              <th><a href="/glossary/avg/" style="color:inherit;text-decoration:none;border-bottom:1px dotted">打率</a></th>
+              <th class="hide-sp"><a href="/glossary/ops/" style="color:inherit;text-decoration:none;border-bottom:1px dotted">OPS</a></th>
+              <th>HR</th>
+              <th><a href="/glossary/rbi/" style="color:inherit;text-decoration:none;border-bottom:1px dotted">打点</a></th>
+              <th class="hide-sp">安打</th>
+              <th class="hide-sp">試合</th>
+            </tr>
+          </thead>
+          <tbody>
+            {batters.map((p, i) => (
+              <tr>
+                <td class="rank-num">{i + 1}</td>
+                <td class="nm">
+                  <a href={`/npb/players/${p.slug}/`}>{p.name}</a>
+                  {p.qualified && <span class="qual">規</span>}
+                </td>
+                <td class="team hide-sp">{p.teamName}</td>
+                <td class={i < 3 ? 'hi' : ''}>{fmt(p.stats.avg, 3)}</td>
+                <td class={`hide-sp ${i < 3 ? 'hi' : ''}`}>{fmt(p.stats.ops, 3)}</td>
+                <td>{p.stats.hr ?? '—'}</td>
+                <td>{p.stats.rbi ?? '—'}</td>
+                <td class="hide-sp">{p.stats.hits ?? '—'}</td>
+                <td class="hide-sp">{p.stats.games ?? '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="note">「規」= 規定打席到達選手</p>
+
+      <h2 class="sec-title">
+        <span class="sec-badge pit">投手</span>
+        投球成績一覧
+        <span class="sec-count">（{pitchers.length}名、防御率順）</span>
+      </h2>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="left" style="width:2rem">#</th>
+              <th class="left">選手</th>
+              <th class="left hide-sp">球団</th>
+              <th><a href="/glossary/era/" style="color:inherit;text-decoration:none;border-bottom:1px dotted">防御率</a></th>
+              <th class="hide-sp">勝-敗</th>
+              <th>奪三振</th>
+              <th class="hide-sp"><a href="/glossary/whip/" style="color:inherit;text-decoration:none;border-bottom:1px dotted">WHIP</a></th>
+              <th class="hide-sp"><a href="/glossary/sv/" style="color:inherit;text-decoration:none;border-bottom:1px dotted">SV</a></th>
+              <th class="hide-sp">投球回</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pitchers.map((p, i) => (
+              <tr>
+                <td class="rank-num">{i + 1}</td>
+                <td class="nm">
+                  <a href={`/npb/players/${p.slug}/`}>{p.name}</a>
+                  {p.qualified && <span class="qual">規</span>}
+                </td>
+                <td class="team hide-sp">{p.teamName}</td>
+                <td class={i < 3 ? 'hi' : ''}>{fmt(p.stats.era, 2)}</td>
+                <td class="hide-sp">{p.stats.wins ?? '—'}-{p.stats.losses ?? '—'}</td>
+                <td>{p.stats.so ?? '—'}</td>
+                <td class="hide-sp">{fmt(p.stats.whip, 2)}</td>
+                <td class="hide-sp">{p.stats.saves ?? '—'}</td>
+                <td class="hide-sp">{fmt(p.stats.ip, 1)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="note">「規」= 規定投球回到達選手</p>
+
+    </div>
+  </div>
+</Layout>
