@@ -285,6 +285,34 @@ def main() -> None:
         print(f"  {len(games) // 2} completed games")
         all_games.extend(games)
 
+    # ── Main games page: merge speed-report games not yet in monthly pages ────
+    latest_games = fetch_latest_from_main_page()
+
+    existing_keys: set[tuple] = {
+        (g["date"], min(g["slug"], g["oppSlug"]), max(g["slug"], g["oppSlug"]))
+        for g in all_games
+    }
+    new_from_main = 0
+    for g in latest_games:
+        key = (g["date"], min(g["t1"], g["t2"]), max(g["t1"], g["t2"]))
+        if key in existing_keys:
+            continue
+        t1_name = SLUG_TO_NAME.get(g["t1"], "")
+        t2_name = SLUG_TO_NAME.get(g["t2"], "")
+        if not t1_name or not t2_name:
+            continue
+        r1, r2 = ("W", "L") if g["s1"] > g["s2"] else (("L", "W") if g["s1"] < g["s2"] else ("T", "T"))
+        # URL convention: t1=visitor, t2=home → stadium is t2's
+        stadium = STADIUMS.get(g["t2"], "")
+        all_games.append({"date": g["date"], "slug": g["t1"], "opp": t2_name, "oppSlug": g["t2"],
+                           "home": False, "score": g["s1"], "oppScore": g["s2"], "result": r1, "stadium": stadium})
+        all_games.append({"date": g["date"], "slug": g["t2"], "opp": t1_name, "oppSlug": g["t1"],
+                           "home": True,  "score": g["s2"], "oppScore": g["s1"], "result": r2, "stadium": stadium})
+        existing_keys.add(key)
+        new_from_main += 1
+    if new_from_main:
+        print(f"  +{new_from_main} new games from main page added to results")
+
     # ── Build results.json: last 3 per team ──────────────────────────────────
     all_games.sort(key=lambda g: g["date"], reverse=True)
     team_games: dict[str, list] = {}
@@ -294,14 +322,14 @@ def main() -> None:
             team_games[sl] = []
         if len(team_games[sl]) < 3:
             team_games[sl].append({
-                "date":         g["date"],
-                "opponent":     g["opp"],
-                "opponentSlug": g["oppSlug"],
-                "home":         g["home"],
-                "score":        g["score"],
+                "date":          g["date"],
+                "opponent":      g["opp"],
+                "opponentSlug":  g["oppSlug"],
+                "home":          g["home"],
+                "score":         g["score"],
                 "opponentScore": g["oppScore"],
-                "result":       g["result"],
-                "stadium":      g.get("stadium", ""),
+                "result":        g["result"],
+                "stadium":       g.get("stadium", ""),
             })
 
     teams = []
@@ -325,7 +353,6 @@ def main() -> None:
     print(f"Saved {OUTPUT.name} -- {with_games}/12 teams have recent game data")
 
     # ── Estimated standings: apply games newer than official asOf ─────────────
-    latest_games = fetch_latest_from_main_page()
     update_standings_estimate(all_games, latest_games)
 
 

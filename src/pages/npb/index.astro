@@ -25,7 +25,10 @@ const centralTeams = NPB_TEAMS.filter(t => t.league === 'central');
 const pacificTeams = NPB_TEAMS.filter(t => t.league === 'pacific');
 const allBySlug = [...players].sort((a, b) => a.teamSlug.localeCompare(b.teamSlug) || a.name.localeCompare(b.name, 'ja'));
 
-const asOf = meta.asOf || '';
+const isEstimated = !!standings.estimatedAsOf;
+const dispCentral: any[] = (isEstimated ? standings.estimatedCentral : null) ?? standings.central ?? [];
+const dispPacific: any[] = (isEstimated ? standings.estimatedPacific : null) ?? standings.pacific ?? [];
+const asOf = isEstimated ? (standings.estimatedAsOf as string) : (meta.asOf || '');
 ---
 <Layout
   title={`NPB データ分析 | プロ野球12球団・選手成績 ${NPB_SEASON} | Baseballab`}
@@ -125,15 +128,17 @@ const asOf = meta.asOf || '';
 
   <section class="section">
     <div class="container">
-      <div class="section-header"><p class="section-label">🏆 順位表</p><h2 class="section-title">{NPB_SEASON} シーズン順位表</h2>{asOf && <p class="section-lead">{asOf} 時点</p>}</div>
+      <div class="section-header"><p class="section-label">🏆 順位表</p><h2 class="section-title">{NPB_SEASON} シーズン順位表</h2>{asOf && <p class="section-lead">{asOf} 時点{isEstimated ? '（速報推定）' : ''}</p>}</div>
       <div class="std-grid">
-        {[['central','セントラル・リーグ','cl'],['pacific','パシフィック・リーグ','pl']].map(([key,label,cls]) => (
+        {[['central','セントラル・リーグ','cl'],['pacific','パシフィック・リーグ','pl']].map(([key,label,cls]) => {
+          const rows = key === 'central' ? dispCentral : dispPacific;
+          return (
           <div class="std-card">
             <div class={`std-head ${cls}`}>{label}</div>
             <table class="std">
               <thead><tr><th>順</th><th>球団</th><th>勝</th><th>敗</th><th>分</th><th>勝率</th><th>差</th></tr></thead>
               <tbody>
-                {(standings[key] || []).map((r:any) => (
+                {rows.map((r:any) => (
                   <tr>
                     <td>{r.rank}</td>
                     <td class="tm"><a href={`/npb/teams/${r.teamSlug}/`}>{r.teamName}</a></td>
@@ -143,7 +148,8 @@ const asOf = meta.asOf || '';
               </tbody>
             </table>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   </section>
