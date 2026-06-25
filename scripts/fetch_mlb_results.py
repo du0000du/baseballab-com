@@ -54,7 +54,7 @@ def main() -> None:
 
     sched = fetch(
         f"/schedule?sportId=1&startDate={start_date}&endDate={end_date}"
-        f"&gameType=R&hydrate=team,linescore"
+        f"&gameType=R&hydrate=team,linescore,venue"
     )
 
     # Build per-team game list (sorted newest first)
@@ -87,6 +87,7 @@ def main() -> None:
                         "score": my_score,
                         "opponentScore": opp_score,
                         "result": "W" if won else ("T" if my_score == opp_score else "L"),
+                        "venue": game.get("venue", {}).get("name", ""),
                     })
 
     # Fetch team metadata

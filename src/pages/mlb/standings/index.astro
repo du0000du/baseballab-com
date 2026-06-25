@@ -27,7 +27,8 @@ for (const div of Object.values(byDiv)) {
   div.sort((a, b) => b.winPct - a.winPct);
 }
 
-const asOf = data?.fetchedAt?.slice(0, 10) ?? '';
+const asOf = data?.asOfDate ?? data?.fetchedAt?.slice(0, 10) ?? '';
+const fetchedTime = data?.fetchedAt ? data.fetchedAt.replace('T', ' ').slice(0, 16) + ' UTC' : '';
 const season = data?.season ?? '';
 
 function pct(n: number) { return n.toFixed(3).replace(/^0/, ''); }
@@ -79,6 +80,7 @@ function luckTag(delta: number) {
       <h1>MLB {season} 順位表</h1>
       <p class="hero-sub">AL・NL 全6地区 最新スタンディング</p>
       {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
+      {fetchedTime && <p style="font-size:.72rem;opacity:.6;margin:.3rem 0 0;">取得: {fetchedTime}</p>}
     </div>
   </section>
 

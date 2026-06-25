@@ -1,0 +1,233 @@
+---
+// /mlb/japanese/ — MLB 2026 日本人選手 速報成績
+import Layout from '../../../layouts/Layout.astro';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
+let data: any = null;
+try {
+  data = JSON.parse(readFileSync(join(process.cwd(), 'data/mlb/japanese.json'), 'utf-8'));
+} catch {}
+
+const players: any[] = data?.players ?? [];
+const season = data?.season ?? '';
+const asOf = data?.asOfDate ?? data?.fetchedAt?.slice(0, 10) ?? '';
+const fetchedTime = data?.fetchedAt ? data.fetchedAt.replace('T', ' ').slice(0, 16) + ' UTC' : '';
+
+const pitchers = players.filter(p => p.posType === 'P');
+const hitters  = players.filter(p => p.posType !== 'P');
+
+function fmtDate(d: string) {
+  if (!d) return '';
+  const [, m, day] = d.split('-');
+  return `${parseInt(m)}/${parseInt(day)}`;
+}
+
+function pctFmt(v: any) {
+  if (!v) return '.---';
+  const s = String(v);
+  return s.startsWith('.') ? s : `.${s}`;
+}
+
+function eraFmt(v: any) {
+  if (!v || v === '-.--') return '-.--';
+  return String(v);
+}
+
+function lastGameSummary(p: any): string {
+  const lg = p.lastGame;
+  if (!lg) return '';
+  const st = lg.stat;
+  if ('inningsPitched' in st) {
+    return `${st.inningsPitched}回 ${st.strikeOuts ?? 0}K ${st.earnedRuns ?? 0}失点`;
+  }
+  return `${st.hits ?? 0}/${st.atBats ?? 0}` +
+    (st.homeRuns ? ` ${st.homeRuns}HR` : '') +
+    (st.rbi ? ` ${st.rbi}打点` : '');
+}
+---
+<Layout
+  title={`MLB ${season} 日本人選手 速報成績 15名 | Baseballab`}
+  description={`MLB ${season}シーズン・日本人選手15名の最新成績一覧。大谷翔平・山本由伸・佐々木朗希ら打撃・投手成績を毎日更新。`}
+  ogUrl="https://baseballab.com/mlb/japanese/"
+>
+  <style slot="head">
+    .hero { background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,#1a5276 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:.75rem; } .breadcrumb a { color:inherit; }
+    .hero h1 { font-size:clamp(1.4rem,4vw,2.1rem); font-weight:800; margin-bottom:.4rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+    .fetch-time { font-size:.7rem; opacity:.55; margin:.3rem 0 0; }
+    .body { padding:2rem 0 4rem; }
+    .sec { margin-bottom:3rem; }
+    .sec-title { font-size:1.1rem; font-weight:800; color:var(--navy); border-left:4px solid var(--navy); padding-left:.7rem; margin-bottom:1.25rem; display:flex; align-items:center; gap:.5rem; }
+    .lg-badge { font-size:.65rem; font-weight:700; color:#fff; padding:.15rem .55rem; border-radius:9999px; background:var(--navy); }
+    /* Player cards */
+    .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1rem; }
+    .card { background:#fff; border:1px solid var(--gray-200); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm); transition:box-shadow .15s,transform .15s; }
+    .card:hover { box-shadow:0 4px 16px rgba(0,0,0,.1); transform:translateY(-2px); }
+    .card-head { padding:.75rem 1rem .6rem; background:var(--navy-dark); color:#fff; display:flex; justify-content:space-between; align-items:flex-start; }
+    .card-name { font-weight:800; font-size:1.05rem; line-height:1.2; }
+    .card-en { font-size:.72rem; opacity:.7; margin-top:.15rem; }
+    .card-tag { font-size:.65rem; font-weight:700; background:rgba(255,255,255,.15); border-radius:4px; padding:.15rem .45rem; white-space:nowrap; }
+    .card-body { padding:.85rem 1rem; }
+    .team-line { font-size:.78rem; color:var(--gray-500); margin-bottom:.75rem; display:flex; align-items:center; gap:.4rem; }
+    .team-dot { width:8px; height:8px; border-radius:50%; background:var(--navy); display:inline-block; }
+    .stats-row { display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:.65rem; }
+    .stat-box { display:flex; flex-direction:column; align-items:center; min-width:3.5rem; background:var(--gray-100); border-radius:6px; padding:.35rem .5rem; }
+    .stat-val { font-size:1.05rem; font-weight:800; color:var(--navy-dark); font-variant-numeric:tabular-nums; line-height:1; }
+    .stat-lbl { font-size:.6rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--gray-500); margin-top:.2rem; }
+    .stat-box.hi .stat-val { color:#166534; }
+    .divider { height:1px; background:var(--gray-100); margin:.65rem 0; }
+    .last-game { font-size:.78rem; color:var(--gray-600); display:flex; gap:.4rem; align-items:baseline; flex-wrap:wrap; }
+    .last-date { font-weight:700; color:var(--navy); }
+    .last-perf { background:#f0f4ff; color:var(--navy); border-radius:4px; padding:.1rem .45rem; font-weight:600; }
+    .last-opp { color:var(--gray-400); }
+    .no-stats { font-size:.8rem; color:var(--gray-400); padding:.5rem 0; }
+    @media(max-width:640px) { .cards { grid-template-columns:1fr; } }
+  </style>
+
+  <section class="hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Baseballab</a> &rsaquo; <a href="/mlb/">MLB</a> &rsaquo; 日本人選手</p>
+      <h1>MLB {season} 日本人選手 速報成績</h1>
+      <p class="hero-sub">2026シーズン活躍中の日本人選手 {players.length}名 — 成績は毎日自動更新</p>
+      {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
+      {fetchedTime && <p class="fetch-time">取得: {fetchedTime}</p>}
+    </div>
+  </section>
+
+  <div class="body">
+    <div class="container">
+
+      {/* ── 野手 / 二刀流 ── */}
+      <div class="sec">
+        <h2 class="sec-title"><span class="lg-badge">野手</span>打者・二刀流</h2>
+        <div class="cards">
+          {hitters.map((p: any) => {
+            const hit = p.season?.hitting ?? {};
+            const pit = p.season?.pitching ?? {};
+            const lg  = p.lastGame;
+            const isTWP = p.posType === 'TWP';
+            return (
+              <div class="card">
+                <div class="card-head">
+                  <div>
+                    <div class="card-name">{p.ja}</div>
+                    <div class="card-en">{p.en}</div>
+                  </div>
+                  <span class="card-tag">{isTWP ? '二刀流' : p.position}</span>
+                </div>
+                <div class="card-body">
+                  <div class="team-line">
+                    <span class="team-dot"></span>
+                    {p.team} ({p.teamAbbr})
+                  </div>
+
+                  {/* Hitting stats */}
+                  {Object.keys(hit).length > 0 ? (
+                    <>
+                      <p style="font-size:.68rem;font-weight:700;color:var(--gray-400);text-transform:uppercase;margin:0 0 .4rem;letter-spacing:.05em">打撃成績 ({hit.gamesPlayed ?? '-'}試合)</p>
+                      <div class="stats-row">
+                        <div class="stat-box"><span class="stat-val">{pctFmt(hit.avg)}</span><span class="stat-lbl">打率</span></div>
+                        <div class={`stat-box${(hit.homeRuns ?? 0) >= 15 ? ' hi' : ''}`}><span class="stat-val">{hit.homeRuns ?? 0}</span><span class="stat-lbl">HR</span></div>
+                        <div class="stat-box"><span class="stat-val">{hit.rbi ?? 0}</span><span class="stat-lbl">打点</span></div>
+                        <div class="stat-box"><span class="stat-val">{hit.runs ?? 0}</span><span class="stat-lbl">得点</span></div>
+                        <div class={`stat-box${parseFloat(hit.ops ?? '0') >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{hit.ops ?? '---'}</span><span class="stat-lbl">OPS</span></div>
+                        {hit.stolenBases !== undefined && <div class="stat-box"><span class="stat-val">{hit.stolenBases}</span><span class="stat-lbl">SB</span></div>}
+                      </div>
+                    </>
+                  ) : null}
+
+                  {/* Pitching stats (TWP) */}
+                  {isTWP && Object.keys(pit).length > 0 ? (
+                    <>
+                      <p style="font-size:.68rem;font-weight:700;color:var(--gray-400);text-transform:uppercase;margin:.6rem 0 .4rem;letter-spacing:.05em">投球成績</p>
+                      <div class="stats-row">
+                        <div class="stat-box"><span class="stat-val">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
+                        <div class={`stat-box${parseFloat(pit.era ?? '99') < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
+                        <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">奪三振</span></div>
+                        {pit.whip !== undefined && <div class="stat-box"><span class="stat-val">{pit.whip}</span><span class="stat-lbl">WHIP</span></div>}
+                      </div>
+                    </>
+                  ) : null}
+
+                  {lg ? (
+                    <>
+                      <div class="divider"></div>
+                      <div class="last-game">
+                        <span>直近</span>
+                        <span class="last-date">{fmtDate(lg.date)}</span>
+                        <span class="last-perf">{lastGameSummary(p)}</span>
+                        <span class="last-opp">vs {lg.opponent}</span>
+                      </div>
+                    </>
+                  ) : null}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* ── 投手 ── */}
+      <div class="sec">
+        <h2 class="sec-title"><span class="lg-badge" style="background:#9b2335">投手</span>先発・リリーフ</h2>
+        <div class="cards">
+          {pitchers.map((p: any) => {
+            const pit = p.season?.pitching ?? {};
+            const lg  = p.lastGame;
+            const noStats = Object.keys(pit).length === 0;
+            return (
+              <div class="card">
+                <div class="card-head">
+                  <div>
+                    <div class="card-name">{p.ja}</div>
+                    <div class="card-en">{p.en}</div>
+                  </div>
+                  <span class="card-tag">{p.position}</span>
+                </div>
+                <div class="card-body">
+                  <div class="team-line">
+                    <span class="team-dot"></span>
+                    {p.team} ({p.teamAbbr})
+                  </div>
+
+                  {noStats ? (
+                    <p class="no-stats">成績データなし（登録前・IL中の可能性）</p>
+                  ) : (
+                    <>
+                      <p style="font-size:.68rem;font-weight:700;color:var(--gray-400);text-transform:uppercase;margin:0 0 .4rem;letter-spacing:.05em">投球成績 ({pit.gamesPlayed ?? '-'}登板)</p>
+                      <div class="stats-row">
+                        <div class="stat-box"><span class="stat-val">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
+                        <div class={`stat-box${parseFloat(pit.era ?? '99') < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
+                        <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">奪三振</span></div>
+                        {pit.whip !== undefined && <div class="stat-box"><span class="stat-val">{pit.whip}</span><span class="stat-lbl">WHIP</span></div>}
+                        {pit.saves !== undefined && <div class="stat-box"><span class="stat-val">{pit.saves}</span><span class="stat-lbl">S</span></div>}
+                        {pit.holds !== undefined && pit.holds > 0 && <div class="stat-box"><span class="stat-val">{pit.holds}</span><span class="stat-lbl">H</span></div>}
+                        {pit.inningsPitched !== undefined && <div class="stat-box"><span class="stat-val">{pit.inningsPitched}</span><span class="stat-lbl">IP</span></div>}
+                      </div>
+                    </>
+                  )}
+
+                  {lg ? (
+                    <>
+                      <div class="divider"></div>
+                      <div class="last-game">
+                        <span>直近</span>
+                        <span class="last-date">{fmtDate(lg.date)}</span>
+                        <span class="last-perf">{lastGameSummary(p)}</span>
+                        <span class="last-opp">vs {lg.opponent}</span>
+                      </div>
+                    </>
+                  ) : null}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</Layout>

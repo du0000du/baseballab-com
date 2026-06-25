@@ -109,6 +109,7 @@ def main() -> None:
     result = {
         "fetchedAt": NOW.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "season": SEASON,
+        "asOfDate": str(NOW.date()),
         "teams": teams,
     }
 
