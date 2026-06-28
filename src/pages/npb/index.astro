@@ -68,10 +68,17 @@ const asOf = isEstimated ? (standings.estimatedAsOf as string) : (meta.asOf || '
     table.std tr:first-child td { font-weight:700; }
     .leaders-banner { display:flex; align-items:center; gap:1rem; background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; border-radius:12px; padding:1.25rem 1.5rem; box-shadow:var(--shadow-md); }
     .leaders-banner:hover { transform:translateY(-2px); }
-    .qlink-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.75rem; }
-    .qlink { display:flex; flex-direction:column; align-items:center; gap:.25rem; background:#fff; border:1px solid var(--gray-200); border-radius:10px; padding:.9rem .75rem; text-align:center; transition:border-color .15s,box-shadow .15s; box-shadow:var(--shadow-sm); }
-    .qlink:hover { border-color:var(--navy); box-shadow:0 2px 8px rgba(15,37,64,.12); }
-    .ql-icon { font-size:1.5rem; } .ql-label { font-size:.85rem; font-weight:700; color:var(--navy); } .ql-sub { font-size:.72rem; color:var(--gray-500); }
+    .qlink-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .qlink { display:flex; flex-direction:column; background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(15,37,64,.08); border:1px solid rgba(15,37,64,.06); transition:transform .22s cubic-bezier(.2,.8,.3,1),box-shadow .22s; text-decoration:none; }
+    .qlink:hover { transform:translateY(-6px); box-shadow:0 14px 32px rgba(15,37,64,.16); }
+    .ql-top { padding:1.4rem .75rem 1.1rem; display:flex; flex-direction:column; align-items:center; gap:.5rem; }
+    .ql-icon { font-size:2.2rem; line-height:1; filter:drop-shadow(0 2px 4px rgba(0,0,0,.18)); }
+    .ql-body { padding:.8rem 1rem 1.1rem; display:flex; flex-direction:column; align-items:center; text-align:center; gap:.15rem; }
+    .ql-label { font-size:.92rem; font-weight:800; color:var(--navy); letter-spacing:-.01em; }
+    .ql-sub { font-size:.71rem; color:var(--gray-500); }
+    .ql-arr { font-size:.72rem; font-weight:700; margin-top:.4rem; opacity:0; transition:opacity .15s; }
+    .qlink:hover .ql-arr { opacity:1; }
+    @media(max-width:480px){ .qlink-grid{grid-template-columns:repeat(2,1fr);} }
     .lb-icon { font-size:2rem; } .lb-body { flex:1; } .lb-title { font-size:1.1rem; font-weight:700; margin-bottom:.25rem; } .lb-sub { font-size:.85rem; opacity:.8; } .lb-arrow { font-size:1.4rem; opacity:.7; }
     .player-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1.1rem; }
     .pcard { background:#fff; border:1px solid var(--gray-200); border-radius:12px; padding:1.3rem; display:flex; flex-direction:column; gap:.5rem; color:inherit; transition:box-shadow .2s,transform .2s; }
@@ -167,12 +174,25 @@ const asOf = isEstimated ? (standings.estimatedAsOf as string) : (meta.asOf || '
   <section class="section" style="padding-top:0">
     <div class="container">
       <div class="qlink-grid">
-        <a href="/npb/standings/" class="qlink"><span class="ql-icon">🏆</span><span class="ql-label">順位表</span><span class="ql-sub">セ・パ全12球団</span></a>
-        <a href="/npb/leaders/" class="qlink"><span class="ql-icon">📊</span><span class="ql-label">リーダー</span><span class="ql-sub">各部門ランキング</span></a>
-        <a href="/npb/results/" class="qlink"><span class="ql-icon">⚾</span><span class="ql-label">試合結果</span><span class="ql-sub">直近3試合</span></a>
-        <a href="/npb/players/" class="qlink"><span class="ql-icon">👤</span><span class="ql-label">選手一覧</span><span class="ql-sub">打者・投手データ</span></a>
-        <a href="/npb/teams/" class="qlink"><span class="ql-icon">🏟</span><span class="ql-label">球団一覧</span><span class="ql-sub">セ・パ12球団</span></a>
-        <a href="/npb/trends/" class="qlink"><span class="ql-icon">📈</span><span class="ql-label">トレンド</span><span class="ql-sub">ホット/コールド</span></a>
+        {([
+          { href:'/npb/standings/', icon:'🏆', label:'順位表',   sub:'セ・パ全12球団',   bg:'linear-gradient(135deg,#9b2335 0%,#c0392b 100%)', arr:'#c0392b' },
+          { href:'/npb/leaders/',  icon:'📊', label:'リーダー', sub:'各部門ランキング', bg:'linear-gradient(135deg,#1a3a5c 0%,#2471a3 100%)', arr:'#2471a3' },
+          { href:'/npb/results/',  icon:'⚾', label:'試合結果', sub:'直近3試合',         bg:'linear-gradient(135deg,#1e6b3c 0%,#27ae60 100%)', arr:'#27ae60' },
+          { href:'/npb/players/',  icon:'👤', label:'選手一覧', sub:'打者・投手データ', bg:'linear-gradient(135deg,#4a235a 0%,#7d3c98 100%)', arr:'#7d3c98' },
+          { href:'/npb/teams/',    icon:'🏟', label:'球団一覧', sub:'セ・パ12球団',     bg:'linear-gradient(135deg,#0e5f6b 0%,#17a589 100%)', arr:'#17a589' },
+          { href:'/npb/trends/',   icon:'📈', label:'トレンド', sub:'ホット/コールド',  bg:'linear-gradient(135deg,#935116 0%,#d68910 100%)', arr:'#d68910' },
+        ] as const).map(q => (
+          <a href={q.href} class="qlink">
+            <div class="ql-top" style={`background:${q.bg}`}>
+              <span class="ql-icon">{q.icon}</span>
+            </div>
+            <div class="ql-body">
+              <span class="ql-label">{q.label}</span>
+              <span class="ql-sub">{q.sub}</span>
+              <span class="ql-arr" style={`color:${q.arr}`}>→ 詳細を見る</span>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </section>
