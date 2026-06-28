@@ -1,0 +1,86 @@
+name: Data Sync
+
+# NPB・MLB データを定期取得して main にコミット→ Cloudflare Pages 自動デプロイ
+# 旧ワークフロー (sync-all / sync-npb-fast / sync-mlb-fast / npb-data-sync 等) を統合。
+# 単一ジョブで全スクリプトを順番実行し、最後に 1 回だけ push することで
+# 複数ワークフローの並走による push 競合を根本解消する。
+
+on:
+  schedule:
+    - cron: '0 1 * * *'   # 10:00 JST — NPB 公式成績更新直後
+    - cron: '0 9 * * *'   # 18:00 JST — デーゲーム終了後
+    - cron: '0 14 * * *'  # 23:00 JST — NPB ナイター終了後 / MLB 夜間
+    - cron: '0 17 * * *'  # 02:00 JST — MLB 深夜更新後
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 同一グループは 1 つだけ実行。後発ジョブがキューに来たら先発を中断して最新を優先。
+concurrency:
+  group: data-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    name: Sync All Data
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install pykakasi --quiet
+
+      # ── NPB ────────────────────────────────────────────────────────────────
+      - name: Fetch NPB stats
+        continue-on-error: true
+        run: python3 scripts/fetch_npb.py --mode all
+
+      - name: Fetch NPB results & estimated standings
+        continue-on-error: true
+        run: python3 scripts/fetch_npb_results.py
+
+      # ── MLB ────────────────────────────────────────────────────────────────
+      - name: Fetch MLB players & teams
+        continue-on-error: true
+        run: python3 scripts/fetch_mlb.py --mode all
+
+      - name: Fetch MLB leaders
+        continue-on-error: true
+        run: python3 scripts/fetch_mlb_leaders.py
+
+      - name: Fetch MLB standings (Pythagorean)
+        continue-on-error: true
+        run: python3 scripts/fetch_mlb_standings.py
+
+      - name: Fetch MLB results
+        continue-on-error: true
+        run: python3 scripts/fetch_mlb_results.py
+
+      - name: Fetch MLB Japanese players
+        continue-on-error: true
+        run: python3 scripts/fetch_mlb_japanese.py
+
+      # ── 単一コミット & プッシュ ────────────────────────────────────────────
+      - name: Commit & push all data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes — skipping commit."
+          else
+            git commit -m "data: sync $(date -u '+%Y-%m-%dT%H:%M')"
+            git push
+          fi
+
+      # ── データ検証 ──────────────────────────────────────────────────────────
+      - name: Validate data freshness & completeness
+        run: python3 scripts/validate_data.py
