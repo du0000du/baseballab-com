@@ -1,0 +1,35 @@
+[
+  {
+    "id": "361738",
+    "name": "野球ギア.JP",
+    "category": "gear",
+    "description": "野球専門通販サイト。バット・グローブ・スパイク・ユニフォームなど充実ラインナップ。",
+    "clickUrl": "https://h.accesstrade.net/sp/cc?rk=01007pvz00our9",
+    "imgUrl": null,
+    "icon": "⚾",
+    "cta": "野球ギアを見る",
+    "bgColor": "#1c3f6e"
+  },
+  {
+    "id": "523226",
+    "name": "スーパースポーツゼビオ",
+    "category": "gear",
+    "description": "国内最大級スポーツ用品チェーン。野球用品からシューズ・ウェアまで幅広く取り扱い。",
+    "clickUrl": "https://h.accesstrade.net/sp/cc?rk=0100o1br00our9",
+    "imgUrl": "https://a.image.accesstrade.net/m/m_img/523226/baseball_300-250.png",
+    "icon": "🏪",
+    "cta": "ゼビオで探す",
+    "bgColor": "#c0392b"
+  },
+  {
+    "id": "1088821",
+    "name": "DAZN for BUSINESS",
+    "category": "streaming",
+    "description": "プロ野球・Jリーグなどスポーツを法人向けに一挙配信。飲食店・スポーツバー向けビジネスプラン。",
+    "clickUrl": "https://h.accesstrade.net/sp/cc?rk=0100ph5m00our9",
+    "imgUrl": "https://a.image.accesstrade.net/m/m_img/1088821/20230720/bn_300_250.png",
+    "icon": "📺",
+    "cta": "DAZNビジネスを見る",
+    "bgColor": "#00b3e3"
+  }
+]

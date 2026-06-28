@@ -2,6 +2,8 @@
 // /npb/ — NPB データ分析ハブ
 import Layout from '../../layouts/Layout.astro';
 import { NPB_TEAMS, loadPlayers, loadStandings, loadMeta, NPB_SEASON } from '../../lib/npb';
+import AffiliateBannerAT from '../../components/AffiliateBannerAT.astro';
+import { gearAffiliates, streamingAffiliates } from '../../lib/affiliates';
 
 const players = loadPlayers();
 const standings = loadStandings();
@@ -197,6 +199,12 @@ const asOf = isEstimated ? (standings.estimatedAsOf as string) : (meta.asOf || '
     </div>
   </section>
 
+  <section class="section" style="padding-top:0;padding-bottom:.5rem">
+    <div class="container">
+      <AffiliateBannerAT items={streamingAffiliates} heading="プロ野球をライブ配信で観よう" />
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="section-header"><p class="section-label">⭐ 注目選手</p><h2 class="section-title">フィーチャード・プレイヤー</h2><p class="section-lead">{NPB_SEASON}シーズンの成績上位選手</p></div>
@@ -227,6 +235,12 @@ const asOf = isEstimated ? (standings.estimatedAsOf as string) : (meta.asOf || '
           </a>
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;padding-bottom:.5rem">
+    <div class="container">
+      <AffiliateBannerAT items={gearAffiliates} heading="野球ギア・用品を探す" />
     </div>
   </section>
 

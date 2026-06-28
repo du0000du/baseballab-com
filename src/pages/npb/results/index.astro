@@ -3,6 +3,8 @@
 import Layout from '../../../layouts/Layout.astro';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import AffiliateBannerAT from '../../../components/AffiliateBannerAT.astro';
+import { streamingAffiliates } from '../../../lib/affiliates';
 
 let data: any = null;
 try {
@@ -166,4 +168,10 @@ function fmtDate(d: string) {
       </section>
     </>
   )}
+
+  <section class="lg-section" style="padding-bottom:3rem">
+    <div class="container">
+      <AffiliateBannerAT items={streamingAffiliates} heading="次の試合をライブで観よう" />
+    </div>
+  </section>
 </Layout>

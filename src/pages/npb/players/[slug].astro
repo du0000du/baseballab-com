@@ -2,8 +2,10 @@
 import Layout from '../../../layouts/Layout.astro';
 import AtomicAnswer from '../../../components/AtomicAnswer.astro';
 import AffiliateBlock from '../../../components/AffiliateBlock.astro';
+import AffiliateBannerAT from '../../../components/AffiliateBannerAT.astro';
 import GlossaryLinks from '../../../components/GlossaryLinks.astro';
 import { loadPlayers, NPB_SEASON } from '../../../lib/npb';
+import { gearAffiliates } from '../../../lib/affiliates';
 
 export async function getStaticPaths() {
   return loadPlayers().map(p => ({ params: { slug: p.slug }, props: { p } }));
@@ -153,6 +155,7 @@ const jsonLd = {
 
       <GlossaryLinks type={isBat ? 'batting' : 'pitching'} />
       <AffiliateBlock links={links} heading="この選手をもっと楽しむためのおすすめ" />
+      <AffiliateBannerAT items={gearAffiliates} heading="野球ギア・用品を探す" />
 
       <div class="src-box">
         成績データ出典: <a href={p.sourceUrl} rel="nofollow noopener" target="_blank">NPB.jp 日本野球機構</a>（公式記録）{p.asOf && `／${p.asOf} 時点`}。
