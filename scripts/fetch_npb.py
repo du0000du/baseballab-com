@@ -444,6 +444,59 @@ def dedupe_slugs(all_players):
         seen[p["slug"]] = p
 
 
+def sync_leader_players(all_players: list, players_dir: Path, leaders: dict):
+    """
+    リーダーボード掲載選手のJSONを自動補完（安全網）。
+    通常は run_all() の全スクレイプで全員カバーされるが、
+    ページ取得失敗・slug衝突・外国人選手名のフォールバックで漏れた場合に対応。
+    """
+    player_map = {p["slug"]: p for p in all_players}
+    existing = {f.stem for f in players_dir.glob("*.json")}
+
+    missing: "list[tuple[str, str, str]]" = []  # (slug, player_name_ja, league/group/cat)
+    for lg in ("central", "pacific"):
+        for grp in ("batting", "pitching"):
+            for cat, entries in leaders.get(lg, {}).get(grp, {}).items():
+                for e in entries:
+                    slug = e.get("slug")
+                    if slug and slug not in existing:
+                        missing.append((slug, e.get("player", "?"), f"{lg}/{grp}/{cat}"))
+
+    if not missing:
+        return  # 全員登録済み
+
+    print(f"=== リーダーボード選手ファイル補完: {len(missing)}名 ===")
+    fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    retried: "set[str]" = set()  # 再取得済みURL（二重取得防止）
+    for slug, name_ja, location in missing:
+        if slug in player_map:
+            write_json(players_dir / f"{slug}.json", player_map[slug])
+            existing.add(slug)
+            print(f"  ✅ {name_ja} ({location}) → {slug}.json")
+        else:
+            # all_players にも存在しない（スクレイプ失敗）→ 該当ページを再取得
+            league, group = location.split("/")[:2]
+            code = LEAGUE_CODE[league]
+            prefix = "bat" if group == "batting" else "pit"
+            url = f"{BASE}/{SEASON}/stats/{prefix}_{code}.html"
+            if url not in retried:
+                print(f"  再取得: {url}")
+                html = fetch_html(url)
+                retried.add(url)
+                if html:
+                    recs, _ = parse_stat_page(html, group, league, fetched_at)
+                    for p in recs:
+                        if p["slug"] not in existing:
+                            write_json(players_dir / f"{p['slug']}.json", p)
+                            player_map[p["slug"]] = p
+                            existing.add(p["slug"])
+                time.sleep(0.5)
+            if slug in player_map:
+                print(f"  ✅ {name_ja} 再取得成功 → {slug}.json")
+            else:
+                print(f"  ⚠ {name_ja} ({slug}) 見つからず", file=sys.stderr)
+
+
 def run_all():
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     players_dir = DATA_DIR / "players"
@@ -498,6 +551,9 @@ def run_all():
     hr_c = len(leaders.get("central", {}).get("batting", {}).get("hr", []))
     hr_p = len(leaders.get("pacific", {}).get("batting", {}).get("hr", []))
     print(f"  leaders: HR central={hr_c}件, pacific={hr_p}件")
+
+    # リーダーボード掲載選手の補完チェック（安全網）
+    sync_leader_players(all_players, players_dir, leaders)
 
     as_of = max(as_of_dates) if as_of_dates else ""
     write_json(DATA_DIR / "meta.json", {
