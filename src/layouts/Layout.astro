@@ -91,9 +91,14 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
       }
 
       img { max-width: 100%; height: auto; display: block; }
-      a { color: #2563eb; text-decoration: none; }
+      a { color: var(--navy); text-decoration: none; }
       .site-header a, .site-footer a { color: inherit; }
       ul { list-style: none; }
+      table { font-variant-numeric: tabular-nums; }
+      table th { font-size: .78rem; }
+      table tbody tr:hover { background: rgba(0,0,0,.06); }
+      .entry-content a { text-decoration: underline; }
+      .entry-content table { display: block; overflow-x: auto; }
 
       .container {
         max-width: 1100px;

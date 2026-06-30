@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://baseballab.com',
+  trailingSlash: 'always',
   integrations: [
     sitemap({
       changefreq: 'daily',
