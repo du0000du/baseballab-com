@@ -1,250 +1,155 @@
 ---
 // src/pages/mlb/leaders.astro
-// MLB シーズン成績リーダーボード
-// SEASON シーズン判定: 3月以降は当年、1〜2月は前年（オフシーズン）。env MLB_SEASON で上書き可
-// データはビルド時にMLB Stats APIから直接取得
+// MLB シーズン成績リーダーボード — AL / NL タブ切り替え
+// データはビルド時に MLB Stats API から直接取得（leagueId=103 AL, 104 NL）
 
 import Layout from '../../layouts/Layout.astro';
 
-// シーズン判定: 3月以降は当年、1〜2月はオフシーズン扱いで前年。MLB_SEASON envで上書き可
 const SEASON = String(process.env.MLB_SEASON || (new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1));
 const BASE = 'https://statsapi.mlb.com/api/v1';
 
-async function getLeaders(group, sortStat, limit = 10) {
+async function getLeaders(group: string, sortStat: string, limit = 10, leagueId?: number) {
   try {
-    const url = `${BASE}/stats?stats=season&season=${SEASON}&group=${group}&sortStat=${sortStat}&limit=${limit}&gameType=R&hydrate=person,team`;
+    let url = `${BASE}/stats?stats=season&season=${SEASON}&group=${group}&sortStat=${sortStat}&limit=${limit}&gameType=R&hydrate=person,team`;
+    if (leagueId) url += `&leagueId=${leagueId}`;
     const res = await fetch(url);
     if (!res.ok) return [];
     const json = await res.json();
-    const splits = json?.stats?.[0]?.splits ?? [];
-    return splits.map((item, i) => ({
+    const splits = (json?.stats?.[0]?.splits ?? []) as any[];
+    return splits.map((item: any, i: number) => ({
       rank: item.rank ?? (i + 1),
       player: item.player?.fullName ?? '—',
       team: item.team?.abbreviation ?? item.team?.teamName ?? '—',
       value: item.stat?.[sortStat] ?? '—',
     }));
-  } catch (e) {
+  } catch {
     return [];
   }
 }
 
-const [hrLeaders, avgLeaders, rbiLeaders, sbLeaders] = await Promise.all([
-  getLeaders('hitting', 'homeRuns'),
-  getLeaders('hitting', 'avg'),
-  getLeaders('hitting', 'rbi'),
-  getLeaders('hitting', 'stolenBases'),
+// AL (103) + NL (104) — 20 calls in parallel
+const [
+  alHr, alAvg, alRbi, alSb, alObp,
+  alEra, alW, alSo, alSv, alWhip,
+  nlHr, nlAvg, nlRbi, nlSb, nlObp,
+  nlEra, nlW, nlSo, nlSv, nlWhip,
+] = await Promise.all([
+  getLeaders('hitting', 'homeRuns', 10, 103),
+  getLeaders('hitting', 'avg', 10, 103),
+  getLeaders('hitting', 'rbi', 10, 103),
+  getLeaders('hitting', 'stolenBases', 10, 103),
+  getLeaders('hitting', 'obp', 10, 103),
+  getLeaders('pitching', 'era', 10, 103),
+  getLeaders('pitching', 'wins', 10, 103),
+  getLeaders('pitching', 'strikeOuts', 10, 103),
+  getLeaders('pitching', 'saves', 10, 103),
+  getLeaders('pitching', 'whip', 10, 103),
+  getLeaders('hitting', 'homeRuns', 10, 104),
+  getLeaders('hitting', 'avg', 10, 104),
+  getLeaders('hitting', 'rbi', 10, 104),
+  getLeaders('hitting', 'stolenBases', 10, 104),
+  getLeaders('hitting', 'obp', 10, 104),
+  getLeaders('pitching', 'era', 10, 104),
+  getLeaders('pitching', 'wins', 10, 104),
+  getLeaders('pitching', 'strikeOuts', 10, 104),
+  getLeaders('pitching', 'saves', 10, 104),
+  getLeaders('pitching', 'whip', 10, 104),
 ]);
 
-const [eraLeaders, wLeaders, soLeaders, svLeaders] = await Promise.all([
-  getLeaders('pitching', 'era'),
-  getLeaders('pitching', 'wins'),
-  getLeaders('pitching', 'strikeOuts'),
-  getLeaders('pitching', 'saves'),
-]);
-
-const battingCategories = [
-  { label: 'ホームラン（HR）', leaders: hrLeaders },
-  { label: '打率（AVG）',      leaders: avgLeaders },
-  { label: '打点（RBI）',      leaders: rbiLeaders },
-  { label: '盗塁（SB）',       leaders: sbLeaders },
+const BAT_CATS = [
+  { label: 'ホームラン（HR）', al: alHr,  nl: nlHr },
+  { label: '打率（AVG）',      al: alAvg, nl: nlAvg },
+  { label: '打点（RBI）',      al: alRbi, nl: nlRbi },
+  { label: '盗塁（SB）',       al: alSb,  nl: nlSb },
+  { label: '出塁率（OBP）',    al: alObp, nl: nlObp },
 ];
-
-const pitchingCategories = [
-  { label: '防御率（ERA）',  leaders: eraLeaders },
-  { label: '勝利（W）',      leaders: wLeaders },
-  { label: '奪三振（SO）',   leaders: soLeaders },
-  { label: 'セーブ（SV）',   leaders: svLeaders },
+const PIT_CATS = [
+  { label: '防御率（ERA）',  al: alEra,  nl: nlEra },
+  { label: '勝利（W）',      al: alW,    nl: nlW },
+  { label: '奪三振（SO）',   al: alSo,   nl: nlSo },
+  { label: 'セーブ（SV）',   al: alSv,   nl: nlSv },
+  { label: 'WHIP',           al: alWhip, nl: nlWhip },
 ];
 
 const MEDALS = ['🥇', '🥈', '🥉'];
+const LEAGUES = [
+  { id: 'al', label: 'American League', badge: 'AL' },
+  { id: 'nl', label: 'National League', badge: 'NL' },
+] as const;
 
 const buildDate = new Date().toLocaleDateString('ja-JP', {
-  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Tokyo'
+  year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Tokyo',
 });
-const hasData = hrLeaders.length > 0 || eraLeaders.length > 0;
+const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
 ---
 
 <Layout
-  title={`MLB ${SEASON} 成績ランキング | Baseballab`}
-  description={`MLB ${SEASON}シーズン最新成績ランキング。ホームラン・打率・打点・防御率・奪三振など全部門のリーダーボード。毎日自動更新。`}
+  title={`MLB ${SEASON} 成績ランキング AL/NL | Baseballab`}
+  description={`MLB ${SEASON}シーズン最新成績ランキング。ア・リーグ／ナ・リーグ別にホームラン・打率・打点・防御率・奪三振など全部門のリーダーボード。毎日自動更新。`}
   ogUrl="https://baseballab.com/mlb/leaders/"
-  ogType="website"
 >
   <style slot="head">
-    /* ===== LEADERS PAGE ===== */
-    .leaders-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-      color: var(--white);
-      padding: 3rem 0 2.5rem;
-    }
-    .breadcrumb {
-      font-size: 0.8rem;
-      opacity: 0.65;
-      margin-bottom: 1rem;
-    }
-    .breadcrumb a { color: inherit; }
-    .breadcrumb a:hover { text-decoration: underline; opacity: 0.9; }
+    .lh-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); color: #fff; padding: 3rem 0 2.5rem; }
+    .breadcrumb { font-size: .8rem; opacity: .65; margin-bottom: 1rem; } .breadcrumb a { color: inherit; }
+    .lh-hero h1 { font-size: clamp(1.5rem,4vw,2.2rem); font-weight: 800; margin-bottom: .5rem; line-height: 1.2; }
+    .hero-sub { font-size: 1rem; opacity: .8; margin-bottom: .75rem; }
+    .updated-badge { display: inline-flex; align-items: center; gap: .3rem; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); border-radius: 20px; padding: .25rem .9rem; font-size: .78rem; }
 
-    .leaders-hero h1 {
-      font-size: clamp(1.5rem, 4vw, 2.2rem);
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-    .hero-sub {
-      font-size: 1rem;
-      opacity: 0.8;
-      margin-bottom: 0.75rem;
-    }
-    .updated-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 20px;
-      padding: 0.25rem 0.9rem;
-      font-size: 0.78rem;
-    }
+    /* ── タブバー ── */
+    .tab-bar-wrap { border-bottom: 2px solid var(--gray-200); background: #fff; }
+    .tab-bar { display: flex; gap: .25rem; padding: .75rem 0 0; }
+    .tab-btn { background: none; border: none; cursor: pointer; font-size: 1rem; font-weight: 700;
+      color: var(--gray-500,#6b7280); padding: .6rem 1.5rem; border-radius: 6px 6px 0 0;
+      border-bottom: 3px solid transparent; margin-bottom: -2px; transition: color .15s, border-color .15s; }
+    .tab-btn.active { color: var(--navy); border-bottom-color: var(--navy); }
+    .tab-btn:hover:not(.active) { color: var(--navy); background: var(--gray-100,#f5f5f3); }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
 
-    /* ===== SECTIONS ===== */
-    .leaders-section {
-      padding: 3rem 0;
-      background: var(--gray-100, #f5f5f3);
-    }
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--navy);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
+    /* ── リーグラベル ── */
+    .lg-title { font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: .3rem; display: flex; align-items: center; gap: .5rem; }
+    .lg-badge { font-size: .72rem; font-weight: 700; color: #fff; padding: .2rem .65rem; border-radius: 9999px; }
+    .lg-badge.al { background: #003087; }
+    .lg-badge.nl { background: #cc0000; }
 
-    /* ===== GRID ===== */
-    .leaders-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
+    /* ── セクション ── */
+    .lg-section { padding: 2.75rem 0; }
+    .sub-title { font-size: 1rem; font-weight: 700; color: var(--gray-600,#6b7280); margin: 1.75rem 0 1rem; border-bottom: 2px solid var(--navy); padding-bottom: .35rem; }
 
-    /* ===== CARD ===== */
-    .leaders-card {
-      background: var(--white, #fff);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-      border: 1px solid rgba(22,45,71,0.1);
-    }
-    .card-title {
-      background: var(--navy);
-      color: var(--white);
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 0.6rem 1rem;
-      letter-spacing: 0.01em;
-    }
+    /* ── グリッド / カード ── */
+    .leaders-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+    .lcard { background: #fff; border: 1px solid var(--gray-200,#e9ecef); border-radius: 10px; overflow-x: auto; box-shadow: var(--shadow-sm); }
+    .card-title { background: var(--navy); color: #fff; font-size: .85rem; font-weight: 600; padding: .55rem 1rem; }
 
-    /* ===== TABLE ===== */
-    .leaders-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.87rem;
-    }
-    .leaders-table thead {
-      background: rgba(22,45,71,0.04);
-    }
-    .leaders-table th {
-      padding: 0.4rem 0.75rem;
-      text-align: left;
-      font-weight: 600;
-      color: var(--gray-600, #6b7280);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .leaders-table th:last-child { text-align: right; padding-right: 1rem; }
-    .leaders-table tbody tr {
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      transition: background 0.1s;
-    }
-    .leaders-table tbody tr:hover { background: rgba(22,45,71,0.03); }
-    .leaders-table tbody tr:last-child { border-bottom: none; }
-    .leaders-table td {
-      padding: 0.5rem 0.75rem;
-      vertical-align: middle;
-    }
+    /* ── テーブル ── */
+    table.lt { width: 100%; border-collapse: collapse; font-size: .85rem; font-variant-numeric: tabular-nums; min-width: 240px; }
+    table.lt th { font-size: .7rem; color: var(--gray-600,#6b7280); text-transform: uppercase; padding: .38rem .65rem; text-align: left; font-weight: 600; letter-spacing: .05em; }
+    table.lt th:last-child { text-align: right; padding-right: 1rem; }
+    table.lt td { padding: .52rem .65rem; border-top: 1px solid rgba(0,0,0,.05); vertical-align: middle; }
+    table.lt tr:hover { background: rgba(22,45,71,.05); }
+    td.rk { width: 2.2rem; text-align: center; font-size: 1rem; line-height: 1; }
+    td.rk.n { font-size: .75rem; font-weight: 600; color: var(--gray-400,#9ca3af); }
+    td.pn { font-weight: 600; color: var(--text,#1a1a2e); }
+    td.tm { font-size: .72rem; color: var(--gray-600,#6b7280); white-space: nowrap; }
+    td.sv { font-weight: 700; color: var(--navy); text-align: right; padding-right: 1rem; white-space: nowrap; }
+    td.nd { text-align: center; color: var(--gray-400,#9ca3af); padding: 1.5rem; font-style: italic; font-size: .82rem; }
 
-    /* rank — medal emoji for top 3, plain number otherwise */
-    td.rank {
-      width: 2.4rem;
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1;
-    }
-    td.rank.rank-num {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--gray-400, #9ca3af);
-    }
+    /* ── フッター ── */
+    .data-note { padding: 1.75rem 0; background: var(--gray-100,#f5f5f3); border-top: 1px solid rgba(0,0,0,.08); }
+    .data-note p { font-size: .8rem; color: var(--gray-600,#6b7280); text-align: center; line-height: 1.8; }
 
-    td.player-name {
-      font-weight: 600;
-      color: var(--text, #1a1a2e);
-    }
-    td.team {
-      font-size: 0.73rem;
-      color: var(--gray-600, #6b7280);
-      white-space: nowrap;
-    }
-    td.stat-val {
-      font-weight: 700;
-      color: var(--navy);
-      text-align: right;
-      padding-right: 1rem;
-      font-size: 0.92rem;
-      white-space: nowrap;
-      font-variant-numeric: tabular-nums;
-    }
-    td.no-data {
-      text-align: center;
-      color: var(--gray-400, #9ca3af);
-      padding: 2rem;
-      font-style: italic;
-      font-size: 0.85rem;
-    }
-
-    /* ===== DATA NOTE ===== */
-    .data-note {
-      padding: 1.75rem 0;
-      background: var(--gray-100, #f5f5f3);
-      border-top: 1px solid rgba(0,0,0,0.08);
-    }
-    .data-note p {
-      font-size: 0.8rem;
-      color: var(--gray-600, #6b7280);
-      text-align: center;
-      line-height: 1.8;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) { .leaders-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) {
       .leaders-grid { grid-template-columns: 1fr; }
+      .tab-btn { font-size: .88rem; padding: .5rem 1rem; }
     }
-    @media (max-width: 480px) {
-      .leaders-hero { padding: 2rem 0 1.75rem; }
-      .leaders-section { padding: 2rem 0; }
-      .section-title { font-size: 1.05rem; }
-    }
+    @media (max-width: 480px) { .lh-hero { padding: 2rem 0 1.75rem; } .lg-section { padding: 2rem 0; } }
   </style>
 
   <main>
 
     <!-- HERO -->
-    <section class="leaders-hero">
+    <section class="lh-hero">
       <div class="container">
         <nav class="breadcrumb" aria-label="パンくずリスト">
           <a href="/">Home</a> &rsaquo;
@@ -256,105 +161,139 @@ const hasData = hrLeaders.length > 0 || eraLeaders.length > 0;
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Baseballab", "item": "https://baseballab.com/" },
-            { "@type": "ListItem", "position": 2, "name": "MLB", "item": "https://baseballab.com/mlb/" },
+            { "@type": "ListItem", "position": 2, "name": "MLB",        "item": "https://baseballab.com/mlb/" },
             { "@type": "ListItem", "position": 3, "name": "成績ランキング" }
           ]
         })} />
         <h1>📊 MLB {SEASON} 成績ランキング</h1>
-        <p class="hero-sub">{SEASON}シーズン最終成績リーダーボード</p>
+        <p class="hero-sub">ア・リーグ / ナ・リーグ 各部門リーダーボード</p>
         <span class="updated-badge">🔄 {buildDate} 更新</span>
       </div>
     </section>
 
-    <!-- BATTING SECTION -->
-    <section class="leaders-section">
-      <div class="container">
-        <h2 class="section-title">🏏 打撃部門</h2>
-        {!hasData && (
+    {!hasData ? (
+      <section class="lg-section">
+        <div class="container">
           <p style="color:var(--gray-600);padding:2rem 0;">データを取得中です。しばらくお待ちください。</p>
-        )}
-        <div class="leaders-grid">
-          {battingCategories.map(cat => (
-            <div class="leaders-card">
-              <h3 class="card-title">{cat.label}</h3>
-              <table class="leaders-table">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>選手名</th>
-                    <th>チーム</th>
-                    <th>記録</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cat.leaders.length > 0 ? cat.leaders.map(p => (
-                    <tr>
-                      <td class={p.rank <= 3 ? 'rank' : 'rank rank-num'}>
-                        {p.rank <= 3 ? MEDALS[p.rank - 1] : p.rank}
-                      </td>
-                      <td class="player-name">{p.player}</td>
-                      <td class="team">{p.team}</td>
-                      <td class="stat-val">{p.value}</td>
-                    </tr>
-                  )) : (
-                    <tr>
-                      <td colspan="4" class="no-data">データ取得中...</td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
-          ))}
         </div>
-      </div>
-    </section>
+      </section>
+    ) : (
+      <>
+        {/* タブバー */}
+        <div class="tab-bar-wrap">
+          <div class="container">
+            <div class="tab-bar" role="tablist">
+              {LEAGUES.map(({ id, label }, idx) => (
+                <button
+                  class={`tab-btn${idx === 0 ? ' active' : ''}`}
+                  data-tab={id}
+                  role="tab"
+                  aria-selected={idx === 0 ? 'true' : 'false'}
+                  aria-controls={`tab-${id}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
 
-    <!-- PITCHING SECTION -->
-    <section class="leaders-section" style="background:var(--white,#fff);">
-      <div class="container">
-        <h2 class="section-title">⚾ 投球部門</h2>
-        <div class="leaders-grid">
-          {pitchingCategories.map(cat => (
-            <div class="leaders-card">
-              <h3 class="card-title">{cat.label}</h3>
-              <table class="leaders-table">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>選手名</th>
-                    <th>チーム</th>
-                    <th>記録</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cat.leaders.length > 0 ? cat.leaders.map(p => (
-                    <tr>
-                      <td class={p.rank <= 3 ? 'rank' : 'rank rank-num'}>
-                        {p.rank <= 3 ? MEDALS[p.rank - 1] : p.rank}
-                      </td>
-                      <td class="player-name">{p.player}</td>
-                      <td class="team">{p.team}</td>
-                      <td class="stat-val">{p.value}</td>
-                    </tr>
-                  )) : (
-                    <tr>
-                      <td colspan="4" class="no-data">データ取得中...</td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+        {/* リーグ別コンテンツ */}
+        {LEAGUES.map(({ id, label, badge }, idx) => (
+          <div id={`tab-${id}`} class={`tab-pane${idx === 0 ? ' active' : ''}`} role="tabpanel">
+            <section class="lg-section" style={idx === 1 ? 'background:var(--gray-100,#f5f5f3)' : ''}>
+              <div class="container">
+                <h2 class="lg-title">
+                  <span class={`lg-badge ${id}`}>{badge}</span>
+                  {label}
+                </h2>
+
+                <h3 class="sub-title">🏏 打撃部門</h3>
+                <div class="leaders-grid">
+                  {BAT_CATS.map(cat => {
+                    const rows = id === 'al' ? cat.al : cat.nl;
+                    return (
+                      <div class="lcard">
+                        <div class="card-title">{cat.label}</div>
+                        <table class="lt">
+                          <thead><tr><th></th><th>選手名</th><th>チーム</th><th>記録</th></tr></thead>
+                          <tbody>
+                            {rows.length > 0 ? rows.map((p: any) => (
+                              <tr>
+                                <td class={p.rank <= 3 ? 'rk' : 'rk n'}>{p.rank <= 3 ? MEDALS[p.rank - 1] : p.rank}</td>
+                                <td class="pn">{p.player}</td>
+                                <td class="tm">{p.team}</td>
+                                <td class="sv">{p.value}</td>
+                              </tr>
+                            )) : (
+                              <tr><td colspan="4" class="nd">データ取得中...</td></tr>
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <h3 class="sub-title">⚾ 投球部門</h3>
+                <div class="leaders-grid">
+                  {PIT_CATS.map(cat => {
+                    const rows = id === 'al' ? cat.al : cat.nl;
+                    return (
+                      <div class="lcard">
+                        <div class="card-title">{cat.label}</div>
+                        <table class="lt">
+                          <thead><tr><th></th><th>選手名</th><th>チーム</th><th>記録</th></tr></thead>
+                          <tbody>
+                            {rows.length > 0 ? rows.map((p: any) => (
+                              <tr>
+                                <td class={p.rank <= 3 ? 'rk' : 'rk n'}>{p.rank <= 3 ? MEDALS[p.rank - 1] : p.rank}</td>
+                                <td class="pn">{p.player}</td>
+                                <td class="tm">{p.team}</td>
+                                <td class="sv">{p.value}</td>
+                              </tr>
+                            )) : (
+                              <tr><td colspan="4" class="nd">データ取得中...</td></tr>
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
+                    );
+                  })}
+                </div>
+
+              </div>
+            </section>
+          </div>
+        ))}
+
+        <script is:inline>
+          (function () {
+            var btns = document.querySelectorAll('.tab-btn');
+            var panes = document.querySelectorAll('.tab-pane');
+            btns.forEach(function (btn) {
+              btn.addEventListener('click', function () {
+                var tab = btn.dataset.tab;
+                btns.forEach(function (b) {
+                  b.classList.toggle('active', b === btn);
+                  b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+                });
+                panes.forEach(function (p) {
+                  p.classList.toggle('active', p.id === 'tab-' + tab);
+                });
+              });
+            });
+          })();
+        </script>
+      </>
+    )}
 
     <!-- DATA NOTE -->
     <div class="data-note">
       <div class="container">
         <p>
           データ出典: <a href="https://statsapi.mlb.com" style="color:var(--navy);">MLB Stats API</a>（公式）&nbsp;／&nbsp;
-          レギュラーシーズン成績（{SEASON}年）のみ対象&nbsp;／&nbsp;
+          レギュラーシーズン成績（{SEASON}年）&nbsp;／&nbsp;
           毎日 JST 06:00 頃に自動更新
         </p>
       </div>
