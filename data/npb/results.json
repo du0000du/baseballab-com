@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-30T11:44:29Z",
+  "fetchedAt": "2026-06-30T16:21:00Z",
   "season": "2026",
   "asOfDate": "2026-06-30",
   "teams": [
@@ -15,9 +15,9 @@
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
           "home": false,
-          "score": 2,
+          "score": 3,
           "opponentScore": 2,
-          "result": "T",
+          "result": "W",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -54,9 +54,9 @@
           "opponent": "広島東洋カープ",
           "opponentSlug": "hiroshima-carp",
           "home": false,
-          "score": 3,
-          "opponentScore": 2,
-          "result": "W",
+          "score": 4,
+          "opponentScore": 7,
+          "result": "L",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
         {
@@ -94,8 +94,8 @@
           "opponentSlug": "yakult-swallows",
           "home": false,
           "score": 3,
-          "opponentScore": 2,
-          "result": "W",
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "明治神宮野球場"
         },
         {
@@ -133,8 +133,8 @@
           "opponentSlug": "hanshin-tigers",
           "home": true,
           "score": 2,
-          "opponentScore": 2,
-          "result": "T",
+          "opponentScore": 3,
+          "result": "L",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -171,9 +171,9 @@
           "opponent": "横浜DeNAベイスターズ",
           "opponentSlug": "yokohama-dena",
           "home": true,
-          "score": 2,
-          "opponentScore": 3,
-          "result": "L",
+          "score": 7,
+          "opponentScore": 4,
+          "result": "W",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
         {
@@ -210,9 +210,9 @@
           "opponent": "読売ジャイアンツ",
           "opponentSlug": "yomiuri-giants",
           "home": true,
-          "score": 2,
+          "score": 4,
           "opponentScore": 3,
-          "result": "L",
+          "result": "W",
           "stadium": "明治神宮野球場"
         },
         {
@@ -250,7 +250,7 @@
           "opponentSlug": "nipponham-fighters",
           "home": true,
           "score": 2,
-          "opponentScore": 7,
+          "opponentScore": 9,
           "result": "L",
           "stadium": "京セラドームOSAKA"
         },
@@ -327,7 +327,7 @@
           "opponent": "オリックス・バファローズ",
           "opponentSlug": "orix-buffaloes",
           "home": false,
-          "score": 7,
+          "score": 9,
           "opponentScore": 2,
           "result": "W",
           "stadium": "京セラドームOSAKA"
