@@ -5,6 +5,18 @@
 
 import Layout from '../../layouts/Layout.astro';
 import GlossaryLinks from '../../components/GlossaryLinks.astro';
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
+
+// ビルド時に name → slug 対応表を構築（選手ページリンク用）
+const nameToSlug = new Map<string, string>();
+try {
+  const dir = join(process.cwd(), 'data/mlb/players');
+  for (const file of readdirSync(dir).filter((f: string) => f.endsWith('.json'))) {
+    const { info } = JSON.parse(readFileSync(join(dir, file), 'utf-8'));
+    if (info?.fullName) nameToSlug.set(info.fullName, file.replace('.json', ''));
+  }
+} catch {}
 
 const SEASON = String(process.env.MLB_SEASON || (new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1));
 const BASE = 'https://statsapi.mlb.com/api/v1';
@@ -17,12 +29,16 @@ async function getLeaders(group: string, sortStat: string, limit = 10, leagueId?
     if (!res.ok) return [];
     const json = await res.json();
     const splits = (json?.stats?.[0]?.splits ?? []) as any[];
-    return splits.map((item: any, i: number) => ({
-      rank: item.rank ?? (i + 1),
-      player: item.player?.fullName ?? '—',
-      team: item.team?.abbreviation ?? item.team?.teamName ?? '—',
-      value: item.stat?.[sortStat] ?? '—',
-    }));
+    return splits.map((item: any, i: number) => {
+      const fullName = item.player?.fullName ?? '—';
+      return {
+        rank: item.rank ?? (i + 1),
+        player: fullName,
+        team: item.team?.abbreviation ?? item.team?.teamName ?? '—',
+        value: item.stat?.[sortStat] ?? '—',
+        slug: nameToSlug.get(fullName) ?? null,
+      };
+    });
   } catch {
     return [];
   }
@@ -144,6 +160,8 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
     td.rk { width: 2.2rem; text-align: center; font-size: 1rem; line-height: 1; }
     td.rk.n { font-size: .75rem; font-weight: 600; color: var(--gray-400,#9ca3af); }
     td.pn { font-weight: 600; color: var(--text,#1a1a2e); }
+    td.pn a { color: inherit; text-decoration: none; }
+    td.pn a:hover { color: var(--red, #c0392b); }
     td.tm { font-size: .72rem; color: var(--gray-600,#6b7280); white-space: nowrap; }
     td.sv { font-weight: 700; color: var(--navy); text-align: right; padding-right: 1rem; white-space: nowrap; }
     td.nd { text-align: center; color: var(--gray-400,#9ca3af); padding: 1.5rem; font-style: italic; font-size: .82rem; }
@@ -235,7 +253,7 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
                             {rows.length > 0 ? rows.map((p: any) => (
                               <tr>
                                 <td class={p.rank <= 3 ? 'rk' : 'rk n'}>{p.rank <= 3 ? MEDALS[p.rank - 1] : p.rank}</td>
-                                <td class="pn">{p.player}</td>
+                                <td class="pn">{p.slug ? <a href={`/players/${p.slug}/`}>{p.player}</a> : p.player}</td>
                                 <td class="tm">{p.team}</td>
                                 <td class="sv">{fmtVal(cat.sortStat, p.value)}</td>
                               </tr>
@@ -262,7 +280,7 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
                             {rows.length > 0 ? rows.map((p: any) => (
                               <tr>
                                 <td class={p.rank <= 3 ? 'rk' : 'rk n'}>{p.rank <= 3 ? MEDALS[p.rank - 1] : p.rank}</td>
-                                <td class="pn">{p.player}</td>
+                                <td class="pn">{p.slug ? <a href={`/players/${p.slug}/`}>{p.player}</a> : p.player}</td>
                                 <td class="tm">{p.team}</td>
                                 <td class="sv">{fmtVal(cat.sortStat, p.value)}</td>
                               </tr>
