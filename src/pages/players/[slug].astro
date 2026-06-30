@@ -349,7 +349,7 @@ const affiliateLinks = [
       {isBatter && splitStat ? (
         <div class="stats-grid">
           {avg != null && <div class="stat-card"><p class="stat-label"><a href="/glossary/avg/" class="sl">打率</a></p><p class="stat-value">{f3(avg)}</p><p class="stat-sub">AVG</p></div>}
-          {hr !== null && <div class="stat-card"><p class="stat-label">本塁打</p><p class="stat-value highlight">{hr}</p><p class="stat-sub">HR</p></div>}
+          {hr !== null && <div class="stat-card"><p class="stat-label"><a href="/glossary/hr/" class="sl">本塁打</a></p><p class="stat-value highlight">{hr}</p><p class="stat-sub">HR</p></div>}
           {rbi !== null && <div class="stat-card"><p class="stat-label"><a href="/glossary/rbi/" class="sl">打点</a></p><p class="stat-value">{rbi}</p><p class="stat-sub">RBI</p></div>}
           {ops != null && <div class="stat-card"><p class="stat-label"><a href="/glossary/ops/" class="sl">OPS</a></p><p class="stat-value">{f3(ops)}</p><p class="stat-sub">出塁+長打</p></div>}
           {runs !== null && <div class="stat-card"><p class="stat-label">得点</p><p class="stat-value">{runs}</p><p class="stat-sub">R</p></div>}
@@ -361,7 +361,7 @@ const affiliateLinks = [
         <div class="stats-grid">
           {era != null && <div class="stat-card"><p class="stat-label"><a href="/glossary/era/" class="sl">防御率</a></p><p class="stat-value highlight">{f2(era)}</p><p class="stat-sub">ERA</p></div>}
           {wins !== null && losses !== null && <div class="stat-card"><p class="stat-label">勝敗</p><p class="stat-value">{wins}-{losses}</p><p class="stat-sub">W-L</p></div>}
-          {strikeOuts !== null && <div class="stat-card"><p class="stat-label">奪三振</p><p class="stat-value">{strikeOuts}</p><p class="stat-sub">K</p></div>}
+          {strikeOuts !== null && <div class="stat-card"><p class="stat-label"><a href="/glossary/strikeout/" class="sl">奪三振</a></p><p class="stat-value">{strikeOuts}</p><p class="stat-sub">K</p></div>}
           {whip != null && <div class="stat-card"><p class="stat-label"><a href="/glossary/whip/" class="sl">WHIP</a></p><p class="stat-value">{f2(whip)}</p><p class="stat-sub">BB+H/IP</p></div>}
           {ip && <div class="stat-card"><p class="stat-label">投球回</p><p class="stat-value">{ip}</p><p class="stat-sub">IP</p></div>}
           {saves !== null && saves > 0 && <div class="stat-card"><p class="stat-label"><a href="/glossary/sv/" class="sl">セーブ</a></p><p class="stat-value">{saves}</p><p class="stat-sub">SV</p></div>}

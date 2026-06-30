@@ -4,6 +4,7 @@
 // データはビルド時に MLB Stats API から直接取得（leagueId=103 AL, 104 NL）
 
 import Layout from '../../layouts/Layout.astro';
+import GlossaryLinks from '../../components/GlossaryLinks.astro';
 
 const SEASON = String(process.env.MLB_SEASON || (new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1));
 const BASE = 'https://statsapi.mlb.com/api/v1';
@@ -57,18 +58,18 @@ const [
 ]);
 
 const BAT_CATS = [
-  { label: 'ホームラン（HR）', sortStat: 'homeRuns',   al: alHr,  nl: nlHr },
-  { label: '打率（AVG）',      sortStat: 'avg',         al: alAvg, nl: nlAvg },
-  { label: '打点（RBI）',      sortStat: 'rbi',         al: alRbi, nl: nlRbi },
-  { label: '盗塁（SB）',       sortStat: 'stolenBases', al: alSb,  nl: nlSb },
-  { label: '出塁率（OBP）',    sortStat: 'obp',         al: alObp, nl: nlObp },
+  { label: 'ホームラン（HR）', sortStat: 'homeRuns',   al: alHr,  nl: nlHr,  glossarySlug: 'hr' },
+  { label: '打率（AVG）',      sortStat: 'avg',         al: alAvg, nl: nlAvg, glossarySlug: 'avg' },
+  { label: '打点（RBI）',      sortStat: 'rbi',         al: alRbi, nl: nlRbi, glossarySlug: 'rbi' },
+  { label: '盗塁（SB）',       sortStat: 'stolenBases', al: alSb,  nl: nlSb,  glossarySlug: null },
+  { label: '出塁率（OBP）',    sortStat: 'obp',         al: alObp, nl: nlObp, glossarySlug: 'obp' },
 ];
 const PIT_CATS = [
-  { label: '防御率（ERA）',    sortStat: 'era',         al: alEra,  nl: nlEra },
-  { label: '勝利（W）',        sortStat: 'wins',        al: alW,    nl: nlW },
-  { label: '奪三振（SO）',     sortStat: 'strikeOuts',  al: alSo,   nl: nlSo },
-  { label: 'セーブ（SV）',     sortStat: 'saves',       al: alSv,   nl: nlSv },
-  { label: 'WHIP',             sortStat: 'whip',        al: alWhip, nl: nlWhip },
+  { label: '防御率（ERA）',    sortStat: 'era',         al: alEra,  nl: nlEra,  glossarySlug: 'era' },
+  { label: '勝利（W）',        sortStat: 'wins',        al: alW,    nl: nlW,    glossarySlug: null },
+  { label: '奪三振（SO）',     sortStat: 'strikeOuts',  al: alSo,   nl: nlSo,   glossarySlug: 'strikeout' },
+  { label: 'セーブ（SV）',     sortStat: 'saves',       al: alSv,   nl: nlSv,   glossarySlug: 'sv' },
+  { label: 'WHIP',             sortStat: 'whip',        al: alWhip, nl: nlWhip, glossarySlug: 'whip' },
 ];
 
 const _M3 = new Set(['avg', 'obp', 'slg', 'ops']);
@@ -131,6 +132,8 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
     .leaders-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
     .lcard { background: #fff; border: 1px solid var(--gray-200,#e9ecef); border-radius: 10px; overflow-x: auto; box-shadow: var(--shadow-sm); }
     .card-title { background: var(--navy); color: #fff; font-size: .85rem; font-weight: 600; padding: .55rem 1rem; }
+    .lcard-gl-link { color: #fff; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,.45); }
+    .lcard-gl-link:hover { border-bottom-color: #fff; }
 
     /* ── テーブル ── */
     table.lt { width: 100%; border-collapse: collapse; font-size: .85rem; font-variant-numeric: tabular-nums; min-width: 240px; }
@@ -225,7 +228,7 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
                     const rows = id === 'al' ? cat.al : cat.nl;
                     return (
                       <div class="lcard">
-                        <div class="card-title">{cat.label}</div>
+                        <div class="card-title">{cat.glossarySlug ? <a href={`/glossary/${cat.glossarySlug}/`} class="lcard-gl-link">{cat.label}</a> : cat.label}</div>
                         <table class="lt">
                           <thead><tr><th></th><th>選手名</th><th>チーム</th><th>記録</th></tr></thead>
                           <tbody>
@@ -252,7 +255,7 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
                     const rows = id === 'al' ? cat.al : cat.nl;
                     return (
                       <div class="lcard">
-                        <div class="card-title">{cat.label}</div>
+                        <div class="card-title">{cat.glossarySlug ? <a href={`/glossary/${cat.glossarySlug}/`} class="lcard-gl-link">{cat.label}</a> : cat.label}</div>
                         <table class="lt">
                           <thead><tr><th></th><th>選手名</th><th>チーム</th><th>記録</th></tr></thead>
                           <tbody>
@@ -297,6 +300,12 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
           })();
         </script>
       </>
+    )}
+
+    {hasData && (
+      <div class="container" style="padding-bottom:1.5rem">
+        <GlossaryLinks type="both" />
+      </div>
     )}
 
     <!-- DATA NOTE -->
