@@ -252,6 +252,54 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
       .lang-btn.active { background: rgba(255,255,255,0.18); color: var(--white); }
       .lang-divider { color: rgba(255,255,255,0.2); padding: 0 1px; font-size: 0.65rem; }
       @media (max-width: 768px) { .lang-switcher { margin-left: 0; } }
+
+      /* ===== SPEED BAR ===== */
+      .speed-bar {
+        background: #0a1d35;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        padding: .3rem 0;
+      }
+      .speed-bar-inner {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+      .speed-label {
+        font-size: .65rem;
+        font-weight: 800;
+        letter-spacing: .12em;
+        color: rgba(255,255,255,.35);
+        text-transform: uppercase;
+        padding-right: .85rem;
+        margin-right: .5rem;
+        border-right: 1px solid rgba(255,255,255,.12);
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+      .speed-link {
+        display: inline-flex;
+        align-items: center;
+        gap: .35rem;
+        padding: .28rem .75rem;
+        font-size: .78rem;
+        font-weight: 700;
+        color: rgba(255,255,255,.7);
+        border-radius: 5px;
+        transition: background .12s, color .12s;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+      .speed-link:hover { background: rgba(255,255,255,.1); color: #fff; }
+      .speed-link .sl-icon { font-size: .9rem; line-height: 1; }
+      .speed-sep { color: rgba(255,255,255,.12); margin: 0 .1rem; font-size: .6rem; }
+      @media (max-width: 600px) {
+        .speed-label { display: none; }
+        .speed-link { padding: .25rem .5rem; font-size: .72rem; }
+        .speed-link .sl-text { display: none; }
+      }
     </style>
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -330,6 +378,24 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
         });
       })();
     </script>
+
+    <!-- ===== 速報クイックアクセスバー ===== -->
+    <div class="speed-bar" role="navigation" aria-label="速報ページへのクイックアクセス">
+      <div class="speed-bar-inner">
+        <span class="speed-label">⚡ 速報</span>
+        <a href="/npb/" class="speed-link">
+          <span class="sl-icon">📊</span><span class="sl-text">順位表</span>
+        </a>
+        <span class="speed-sep">|</span>
+        <a href="/npb/leaders/" class="speed-link">
+          <span class="sl-icon">🏆</span><span class="sl-text">成績ランキング</span>
+        </a>
+        <span class="speed-sep">|</span>
+        <a href="/npb/results/" class="speed-link">
+          <span class="sl-icon">⚾</span><span class="sl-text">試合結果</span>
+        </a>
+      </div>
+    </div>
 
     <!-- ===== ページコンテンツ ===== -->
     <slot />
