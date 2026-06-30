@@ -1,64 +1,132 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { loadLeaders, loadMeta, NPB_SEASON } from '../../../lib/npb';
+import GlossaryLinks from '../../../components/GlossaryLinks.astro';
+import { loadLeaders, loadMeta, loadPlayers, NPB_SEASON, NPB_TEAMS } from '../../../lib/npb';
 
 const leaders = loadLeaders(NPB_SEASON);
-const meta = loadMeta();
-const asOf = meta.asOf || '';
+const meta    = loadMeta();
+const asOf    = meta.asOf || '';
 
-const BAT_CATS: [string, string][] = [
-  ['avg','Batting Average (AVG)'],['hr','Home Runs (HR)'],['rbi','RBI'],
-  ['ops','OPS'],['hits','Hits (H)'],['sb','Stolen Bases (SB)'],
-];
-const PIT_CATS: [string, string][] = [
-  ['era','ERA'],['wins','Wins (W)'],['so','Strikeouts (SO)'],
-  ['saves','Saves (SV)'],['holds','Holds (H)'],['whip','WHIP'],
-];
-const MEDALS = ['🥇','🥈','🥉'];
-const LEAGUES: [string, string, string][] = [['central','Central League','cl'],['pacific','Pacific League','pl']];
+// Build slug → romanized name map from player files at build time
+const slugToRomaji = new Map<string, string>();
+for (const p of loadPlayers()) {
+  if (p.nameRomaji) slugToRomaji.set(p.slug, p.nameRomaji);
+}
 
-function rows(lg: string, group: string, key: string) {
+// Build team slug → English abbreviation map
+const teamSlugToAbbr = new Map<string, string>(NPB_TEAMS.map(t => [t.slug, t.abbr]));
+
+const BAT_CATS: [string, string, string|null][] = [
+  ['avg',  'Batting Average (AVG)', 'avg'],
+  ['hr',   'Home Runs (HR)',        'hr'],
+  ['rbi',  'RBI',                   'rbi'],
+  ['ops',  'OPS',                   'ops'],
+  ['hits', 'Hits (H)',              null],
+  ['sb',   'Stolen Bases (SB)',     null],
+];
+const PIT_CATS: [string, string, string|null][] = [
+  ['era',   'ERA',             'era'],
+  ['wins',  'Wins (W)',        null],
+  ['so',    'Strikeouts (SO)', 'strikeout'],
+  ['saves', 'Saves (SV)',      'sv'],
+  ['holds', 'Holds',          'hld'],
+  ['whip',  'WHIP',           'whip'],
+];
+const MEDALS = ['🥇', '🥈', '🥉'];
+const LEAGUES = [
+  { id: 'cl', label: 'Central League', key: 'central' },
+  { id: 'pl', label: 'Pacific League', key: 'pacific' },
+] as const;
+
+// Number formatting rules (CLAUDE.md hard rules)
+const FMT3 = new Set(['avg', 'ops', 'obp', 'slg']);
+const FMT2 = new Set(['era', 'whip']);
+
+function fmtVal(key: string, val: any): string {
+  if (val == null || val === '') return '—';
+  const n = Number(val);
+  if (isNaN(n)) return String(val);
+  if (FMT3.has(key)) return n.toFixed(3);
+  if (FMT2.has(key)) return n.toFixed(2);
+  return String(val);
+}
+
+function getRows(lg: string, group: string, key: string) {
   return leaders?.[lg]?.[group]?.[key] ?? [];
 }
 const hasData = !!leaders;
 ---
+
 <Layout
   title={`NPB ${NPB_SEASON} Season Leaders | Baseballab`}
-  description={`NPB ${NPB_SEASON} season leaderboard. AVG, HR, RBI, ERA, SO for Central and Pacific leagues. Updated daily.`}
+  description={`NPB ${NPB_SEASON} season statistical leaders. Batting average, home runs, RBI, ERA, strikeouts for Central and Pacific leagues. Updated daily.`}
   ogUrl="https://baseballab.com/en/npb/leaders/"
 >
   <style slot="head">
-    .lh-hero { background:linear-gradient(135deg,#7b1a2a 0%,#9b2335 60%); color:var(--white); padding:3rem 1.25rem 2.5rem; }
-    .breadcrumb { font-size:.82rem; opacity:.85; margin-bottom:.75rem; } .breadcrumb a { color:rgba(255,255,255,.8); }
-    .lh-hero h1 { font-size:clamp(1.6rem,4vw,2.3rem); font-weight:900; margin:.4rem 0; }
-    .hero-sub { color:rgba(255,255,255,.75); font-size:.95rem; }
-    .updated-badge { display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:9999px; padding:.2rem .75rem; font-size:.75rem; margin-top:.5rem; }
-    .lg-section { padding:2.5rem 0; } .lg-section.alt { background:var(--gray-100); }
-    .lg-title { font-size:1.2rem; font-weight:800; color:var(--navy); margin-bottom:1.25rem; display:flex; align-items:center; gap:.6rem; }
-    .lg-badge { font-size:.7rem; font-weight:700; padding:.18rem .55rem; border-radius:4px; color:var(--white); }
+    .lh-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%); color:#fff; padding:3rem 0 2.5rem; }
+    .breadcrumb { font-size:.8rem; opacity:.65; margin-bottom:1rem; } .breadcrumb a { color:inherit; }
+    .lh-hero h1 { font-size:clamp(1.5rem,4vw,2.2rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub { opacity:.8; margin-bottom:.75rem; }
+    .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+
+    /* Tab bar */
+    .tab-bar-wrap { border-bottom:2px solid var(--gray-200); background:#fff; }
+    .tab-bar { display:flex; gap:.25rem; padding:.75rem 0 0; }
+    .tab-btn { background:none; border:none; cursor:pointer; font-size:1rem; font-weight:700;
+      color:var(--gray-500); padding:.6rem 1.5rem; border-radius:6px 6px 0 0;
+      border-bottom:3px solid transparent; margin-bottom:-2px; transition:color .15s,border-color .15s; }
+    .tab-btn.active { color:var(--navy); border-bottom-color:var(--navy); }
+    .tab-btn:hover:not(.active) { color:var(--navy); background:var(--gray-100); }
+    .tab-pane { display:none; }
+    .tab-pane.active { display:block; }
+
+    /* Content */
+    .lg-section { padding:2.75rem 0; }
+    .lg-section.alt { background:var(--gray-100); }
+    .lg-badge { font-size:.7rem; font-weight:700; color:#fff; padding:.18rem .6rem; border-radius:9999px; }
     .lg-badge.cl { background:#1a3a5c; } .lg-badge.pl { background:#9b2335; }
-    .bat-section { margin-bottom:2.5rem; }
-    .bat-title { font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:1rem; padding-bottom:.3rem; border-bottom:2px solid var(--navy); }
-    .leaders-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem; }
-    .leaders-card { background:var(--white); border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; }
-    .lc-head { background:var(--navy); color:var(--white); padding:.55rem .9rem; font-size:.82rem; font-weight:700; }
-    .lc-row { display:flex; align-items:center; gap:.6rem; padding:.45rem .9rem; border-top:1px solid var(--gray-100); font-size:.82rem; }
-    .lc-rank { flex-shrink:0; width:1.4rem; text-align:center; font-weight:800; color:var(--gray-600); }
-    .lc-player { flex:1; font-weight:600; color:var(--navy-dark); }
-    .lc-value { font-weight:800; color:var(--navy); font-variant-numeric:tabular-nums; }
-    .no-data { color:var(--gray-600); padding:2rem 0; }
-    @media(max-width:560px){ .leaders-grid{grid-template-columns:1fr;} }
+    .sub-title { font-size:1rem; font-weight:700; color:var(--gray-600); margin:1.75rem 0 1rem; border-bottom:2px solid var(--navy); padding-bottom:.35rem; }
+
+    /* Grid / Cards */
+    .leaders-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
+    .lcard { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow-x:auto; box-shadow:var(--shadow-sm); }
+    .card-title { background:var(--navy); color:#fff; font-size:.85rem; font-weight:600; padding:.55rem 1rem; }
+    .lcard-gl-link { color:#fff; text-decoration:none; border-bottom:1px dotted rgba(255,255,255,.45); }
+    .lcard-gl-link:hover { border-bottom-color:#fff; }
+
+    /* Table */
+    table.lt { width:100%; border-collapse:collapse; font-size:.85rem; font-variant-numeric:tabular-nums; min-width:260px; }
+    table.lt th { font-size:.7rem; color:var(--gray-500); text-transform:uppercase; padding:.35rem .65rem; text-align:left; font-weight:600; letter-spacing:.05em; }
+    table.lt th:last-child { text-align:right; }
+    table.lt td { padding:.55rem .65rem; border-top:1px solid rgba(0,0,0,.05); vertical-align:middle; }
+    table.lt tr:hover { background:rgba(22,45,71,.08); }
+    td.rk { width:2.2rem; text-align:center; }
+    td.rk.n { font-size:.75rem; font-weight:600; color:var(--gray-400); }
+    td.pn { font-weight:600; color:var(--text); }
+    td.pn a { color:inherit; text-decoration:none; }
+    td.pn a:hover { color:var(--red,#c0392b); }
+    td.tm { font-size:.72rem; color:var(--gray-500); white-space:nowrap; }
+    td.val { font-weight:700; color:var(--navy); text-align:right; }
+
+    .data-note { padding:1.75rem 0; background:var(--gray-100); border-top:1px solid var(--gray-200); }
+    .data-note p { font-size:.78rem; color:var(--gray-600); text-align:center; line-height:1.8; }
+
+    @media(max-width:900px){ .leaders-grid{grid-template-columns:1fr 1fr;} }
+    @media(max-width:560px){ .leaders-grid{grid-template-columns:1fr;} .tab-btn{font-size:.88rem;padding:.5rem 1rem;} }
   </style>
 
   <section class="lh-hero">
     <div class="container">
-      <nav class="breadcrumb"><a href="/en/">Home</a> › <a href="/en/npb/">NPB</a> › <span>Season Leaders</span></nav>
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="/en/">Home</a> › <a href="/en/npb/">NPB</a> › <span>Season Leaders</span>
+      </nav>
       <script type="application/ld+json" set:html={JSON.stringify({
-        "@context":"https://schema.org","@type":"BreadcrumbList",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Baseballab","item":"https://baseballab.com/"},
-          {"@type":"ListItem","position":2,"name":"NPB","item":"https://baseballab.com/en/npb/"},
-          {"@type":"ListItem","position":3,"name":"Season Leaders"}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Baseballab", "item": "https://baseballab.com/" },
+          { "@type": "ListItem", "position": 2, "name": "NPB", "item": "https://baseballab.com/en/npb/" },
+          { "@type": "ListItem", "position": 3, "name": "Season Leaders" }
         ]
       })} />
       <h1>📊 NPB {NPB_SEASON} Season Leaders</h1>
@@ -67,53 +135,143 @@ const hasData = !!leaders;
     </div>
   </section>
 
-  {!hasData && <section class="lg-section"><div class="container"><p class="no-data">Data loading. Please wait.</p></div></section>}
+  {!hasData && (
+    <section class="lg-section">
+      <div class="container"><p style="color:var(--gray-600);padding:2rem 0;">Data loading. Please wait.</p></div>
+    </section>
+  )}
 
-  {hasData && LEAGUES.map(([lg, label, cls], idx) => (
-    <section class={`lg-section ${idx % 2 ? 'alt' : ''}`}>
-      <div class="container">
-        <h2 class="lg-title"><span class={`lg-badge ${cls}`}>{cls.toUpperCase()}</span>{label}</h2>
-        <div class="bat-section">
-          <p class="bat-title">🏏 Batting</p>
-          <div class="leaders-grid">
-            {BAT_CATS.map(([key, label]) => {
-              const data = rows(lg, 'batting', key);
-              return data.length > 0 ? (
-                <div class="leaders-card">
-                  <div class="lc-head">{label}</div>
-                  {data.slice(0,5).map((r: any, i: number) => (
-                    <div class="lc-row">
-                      <span class="lc-rank">{i < 3 ? MEDALS[i] : r.rank}</span>
-                      <span class="lc-player">{r.name}</span>
-                      <span class="lc-value">{r.value}</span>
-                    </div>
-                  ))}
-                </div>
-              ) : null;
-            })}
-          </div>
-        </div>
-        <div>
-          <p class="bat-title">⚾ Pitching</p>
-          <div class="leaders-grid">
-            {PIT_CATS.map(([key, label]) => {
-              const data = rows(lg, 'pitching', key);
-              return data.length > 0 ? (
-                <div class="leaders-card">
-                  <div class="lc-head">{label}</div>
-                  {data.slice(0,5).map((r: any, i: number) => (
-                    <div class="lc-row">
-                      <span class="lc-rank">{i < 3 ? MEDALS[i] : r.rank}</span>
-                      <span class="lc-player">{r.name}</span>
-                      <span class="lc-value">{r.value}</span>
-                    </div>
-                  ))}
-                </div>
-              ) : null;
-            })}
+  {hasData && (
+    <>
+      <div class="tab-bar-wrap">
+        <div class="container">
+          <div class="tab-bar" role="tablist">
+            {LEAGUES.map(({ id, label }, idx) => (
+              <button
+                class={`tab-btn${idx === 0 ? ' active' : ''}`}
+                data-tab={id}
+                role="tab"
+                aria-selected={idx === 0 ? 'true' : 'false'}
+                aria-controls={`tab-${id}`}
+              >
+                {label}
+              </button>
+            ))}
           </div>
         </div>
       </div>
-    </section>
-  ))}
+
+      {LEAGUES.map(({ id, label, key }, idx) => (
+        <div id={`tab-${id}`} class={`tab-pane${idx === 0 ? ' active' : ''}`} role="tabpanel">
+          <section class={`lg-section${idx % 2 ? ' alt' : ''}`}>
+            <div class="container">
+              <h2 style="font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:.3rem;display:flex;align-items:center;gap:.5rem;">
+                <span class={`lg-badge ${id}`}>{id.toUpperCase()}</span>{label}
+              </h2>
+
+              <h3 class="sub-title">🏏 Batting</h3>
+              <div class="leaders-grid">
+                {BAT_CATS.map(([statKey, catLabel, gslug]) => {
+                  const data = getRows(key, 'batting', statKey);
+                  return data.length > 0 ? (
+                    <div class="lcard">
+                      <div class="card-title">
+                        {gslug
+                          ? <a href={`/glossary/${gslug}/`} class="lcard-gl-link">{catLabel}</a>
+                          : catLabel}
+                      </div>
+                      <table class="lt">
+                        <thead><tr><th></th><th>Player</th><th>Tm</th><th>Stat</th></tr></thead>
+                        <tbody>
+                          {data.slice(0, 5).map((r: any) => (
+                            <tr>
+                              <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
+                              <td class="pn">
+                                {r.slug
+                                  ? <a href={`/en/npb/players/${r.slug}/`}>{slugToRomaji.get(r.slug) ?? r.player}</a>
+                                  : (slugToRomaji.get(r.slug ?? '') ?? r.player)}
+                              </td>
+                              <td class="tm">{teamSlugToAbbr.get(r.teamSlug) ?? r.team}</td>
+                              <td class="val">{fmtVal(statKey, r.value)}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : null;
+                })}
+              </div>
+
+              <h3 class="sub-title">⚾ Pitching</h3>
+              <div class="leaders-grid">
+                {PIT_CATS.map(([statKey, catLabel, gslug]) => {
+                  const data = getRows(key, 'pitching', statKey);
+                  return data.length > 0 ? (
+                    <div class="lcard">
+                      <div class="card-title">
+                        {gslug
+                          ? <a href={`/glossary/${gslug}/`} class="lcard-gl-link">{catLabel}</a>
+                          : catLabel}
+                      </div>
+                      <table class="lt">
+                        <thead><tr><th></th><th>Player</th><th>Tm</th><th>Stat</th></tr></thead>
+                        <tbody>
+                          {data.slice(0, 5).map((r: any) => (
+                            <tr>
+                              <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
+                              <td class="pn">
+                                {r.slug
+                                  ? <a href={`/en/npb/players/${r.slug}/`}>{slugToRomaji.get(r.slug) ?? r.player}</a>
+                                  : (slugToRomaji.get(r.slug ?? '') ?? r.player)}
+                              </td>
+                              <td class="tm">{teamSlugToAbbr.get(r.teamSlug) ?? r.team}</td>
+                              <td class="val">{fmtVal(statKey, r.value)}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : null;
+                })}
+              </div>
+            </div>
+          </section>
+        </div>
+      ))}
+
+      <script is:inline>
+        (function () {
+          var btns = document.querySelectorAll('.tab-btn');
+          var panes = document.querySelectorAll('.tab-pane');
+          btns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              var tab = btn.dataset.tab;
+              btns.forEach(function (b) {
+                b.classList.toggle('active', b === btn);
+                b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+              });
+              panes.forEach(function (p) {
+                p.classList.toggle('active', p.id === 'tab-' + tab);
+              });
+            });
+          });
+        })();
+      </script>
+    </>
+  )}
+
+  {hasData && (
+    <div class="container" style="padding-bottom:1.5rem">
+      <GlossaryLinks type="both" />
+    </div>
+  )}
+
+  <div class="data-note">
+    <div class="container">
+      <p>
+        Source: <a href="https://npb.jp/" rel="nofollow noopener" target="_blank" style="color:var(--navy)">NPB.jp (Official)</a>
+        &nbsp;/&nbsp; AVG & ERA: qualified players only &nbsp;/&nbsp; Updated daily JST
+      </p>
+    </div>
+  </div>
 </Layout>
