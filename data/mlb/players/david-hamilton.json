@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 666152,
+    "fullName": "David Hamilton",
+    "link": "/api/v1/people/666152",
+    "firstName": "David",
+    "lastName": "Hamilton",
+    "primaryNumber": "6",
+    "birthDate": "1997-09-29",
+    "currentAge": 28,
+    "birthCity": "San Marcos",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 192,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "David",
+    "useLastName": "Hamilton",
+    "middleName": "Lewis",
+    "boxscoreName": "Hamilton, D",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2023-06-21",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "David Hamilton",
+    "nameSlug": "david-hamilton-666152",
+    "firstLastName": "David Hamilton",
+    "lastFirstName": "Hamilton, David",
+    "lastInitName": "Hamilton, D",
+    "initLastName": "D Hamilton",
+    "fullFMLName": "David Lewis Hamilton",
+    "fullLFMName": "Hamilton, David Lewis",
+    "strikeZoneTop": 3.14,
+    "strikeZoneBottom": 1.58
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 69,
+            "groundOuts": 53,
+            "airOuts": 52,
+            "runs": 31,
+            "doubles": 5,
+            "triples": 2,
+            "homeRuns": 3,
+            "strikeOuts": 50,
+            "baseOnBalls": 21,
+            "intentionalWalks": 0,
+            "hits": 45,
+            "hitByPitch": 1,
+            "avg": ".236",
+            "atBats": 191,
+            "obp": ".315",
+            "slg": ".330",
+            "ops": ".645",
+            "caughtStealing": 5,
+            "stolenBases": 17,
+            "stolenBasePercentage": ".773",
+            "caughtStealingPercentage": ".227",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 876,
+            "plateAppearances": 223,
+            "totalBases": 63,
+            "rbi": 13,
+            "leftOnBase": 71,
+            "sacBunts": 9,
+            "sacFlies": 0,
+            "babip": ".304",
+            "groundOutsToAirouts": "1.02",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "63.67"
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 666152,
+            "fullName": "David Hamilton",
+            "link": "/api/v1/people/666152"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 657746,
+    "fullName": "Joe Ryan",
+    "link": "/api/v1/people/657746",
+    "firstName": "Joseph",
+    "lastName": "Ryan",
+    "primaryNumber": "41",
+    "birthDate": "1996-06-05",
+    "currentAge": 30,
+    "birthCity": "San Francisco",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Joe",
+    "useLastName": "Ryan",
+    "middleName": "Philip",
+    "boxscoreName": "Ryan",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "mlbDebutDate": "2021-09-01",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Joe Ryan",
+    "nameSlug": "joe-ryan-657746",
+    "firstLastName": "Joe Ryan",
+    "lastFirstName": "Ryan, Joe",
+    "lastInitName": "Ryan, J",
+    "initLastName": "J Ryan",
+    "fullFMLName": "Joseph Philip Ryan",
+    "fullLFMName": "Ryan, Joseph Philip",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 67,
+            "airOuts": 103,
+            "runs": 38,
+            "doubles": 18,
+            "triples": 0,
+            "homeRuns": 9,
+            "strikeOuts": 108,
+            "baseOnBalls": 19,
+            "intentionalWalks": 0,
+            "hits": 77,
+            "hitByPitch": 5,
+            "avg": ".219",
+            "atBats": 352,
+            "obp": ".266",
+            "slg": ".347",
+            "ops": ".613",
+            "caughtStealing": 3,
+            "stolenBases": 14,
+            "stolenBasePercentage": ".824",
+            "caughtStealingPercentage": ".176",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1528,
+            "era": "3.18",
+            "inningsPitched": "93.1",
+            "wins": 5,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 33,
+            "whip": "1.03",
+            "battersFaced": 379,
+            "outs": 280,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1034,
+            "strikePercentage": ".680",
+            "hitBatsmen": 5,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 1,
+            "totalBases": 122,
+            "groundOutsToAirouts": "0.65",
+            "winPercentage": ".556",
+            "pitchesPerInning": "16.37",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "5.68",
+            "strikeoutsPer9Inn": "10.41",
+            "walksPer9Inn": "1.83",
+            "hitsPer9Inn": "7.43",
+            "runsScoredPer9": "3.66",
+            "homeRunsPer9": "0.87",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 142,
+            "name": "Minnesota Twins",
+            "link": "/api/v1/teams/142"
+          },
+          "player": {
+            "id": 657746,
+            "fullName": "Joe Ryan",
+            "link": "/api/v1/people/657746"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 661388,
+    "fullName": "William Contreras",
+    "link": "/api/v1/people/661388",
+    "firstName": "William",
+    "lastName": "Contreras",
+    "primaryNumber": "24",
+    "birthDate": "1997-12-24",
+    "currentAge": 28,
+    "birthCity": "Puerto Cabello",
+    "birthCountry": "Venezuela",
+    "height": "5' 10\"",
+    "weight": 217,
+    "active": true,
+    "primaryPosition": {
+      "code": "2",
+      "name": "Catcher",
+      "type": "Catcher",
+      "abbreviation": "C"
+    },
+    "useName": "William",
+    "useLastName": "Contreras",
+    "middleName": "Jesus",
+    "boxscoreName": "Contreras, Wm",
+    "gender": "M",
+    "nameMatrilineal": "Castillo",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2020-07-24",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "William Contreras",
+    "nameSlug": "william-contreras-661388",
+    "firstLastName": "William Contreras",
+    "lastFirstName": "Contreras, William",
+    "lastInitName": "Contreras, W",
+    "initLastName": "W Contreras",
+    "fullFMLName": "William Jesus Contreras",
+    "fullLFMName": "Contreras, William Jesus",
+    "strikeZoneTop": 3.13,
+    "strikeZoneBottom": 1.58
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 78,
+            "groundOuts": 74,
+            "airOuts": 95,
+            "runs": 46,
+            "doubles": 12,
+            "triples": 0,
+            "homeRuns": 9,
+            "strikeOuts": 45,
+            "baseOnBalls": 31,
+            "intentionalWalks": 3,
+            "hits": 89,
+            "hitByPitch": 2,
+            "avg": ".298",
+            "atBats": 299,
+            "obp": ".363",
+            "slg": ".428",
+            "ops": ".791",
+            "caughtStealing": 2,
+            "stolenBases": 1,
+            "stolenBasePercentage": ".333",
+            "caughtStealingPercentage": ".667",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1167,
+            "plateAppearances": 336,
+            "totalBases": 128,
+            "rbi": 50,
+            "leftOnBase": 127,
+            "sacBunts": 0,
+            "sacFlies": 4,
+            "babip": ".321",
+            "groundOutsToAirouts": "0.78",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "33.22"
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 661388,
+            "fullName": "William Contreras",
+            "link": "/api/v1/people/661388"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

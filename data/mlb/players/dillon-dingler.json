@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 693307,
+    "fullName": "Dillon Dingler",
+    "link": "/api/v1/people/693307",
+    "firstName": "Francis",
+    "lastName": "Dingler",
+    "primaryNumber": "13",
+    "birthDate": "1998-09-17",
+    "currentAge": 27,
+    "birthCity": "Massillon",
+    "birthStateProvince": "OH",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "2",
+      "name": "Catcher",
+      "type": "Catcher",
+      "abbreviation": "C"
+    },
+    "useName": "Dillon",
+    "useLastName": "Dingler",
+    "middleName": "Dillon",
+    "boxscoreName": "Dingler",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2024-07-29",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Dillon Dingler",
+    "nameSlug": "dillon-dingler-693307",
+    "firstLastName": "Dillon Dingler",
+    "lastFirstName": "Dingler, Dillon",
+    "lastInitName": "Dingler, D",
+    "initLastName": "D Dingler",
+    "fullFMLName": "Francis Dillon Dingler",
+    "fullLFMName": "Dingler, Francis Dillon",
+    "strikeZoneTop": 3.272,
+    "strikeZoneBottom": 1.651
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 78,
+            "groundOuts": 64,
+            "airOuts": 83,
+            "runs": 44,
+            "doubles": 16,
+            "triples": 2,
+            "homeRuns": 19,
+            "strikeOuts": 70,
+            "baseOnBalls": 23,
+            "intentionalWalks": 0,
+            "hits": 76,
+            "hitByPitch": 6,
+            "avg": ".262",
+            "atBats": 290,
+            "obp": ".326",
+            "slg": ".528",
+            "ops": ".854",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1260,
+            "plateAppearances": 324,
+            "totalBases": 153,
+            "rbi": 59,
+            "leftOnBase": 133,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".279",
+            "groundOutsToAirouts": "0.77",
+            "catchersInterference": 2,
+            "atBatsPerHomeRun": "15.26"
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 693307,
+            "fullName": "Dillon Dingler",
+            "link": "/api/v1/people/693307"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

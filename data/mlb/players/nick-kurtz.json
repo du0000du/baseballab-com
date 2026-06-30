@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 701762,
+    "fullName": "Nick Kurtz",
+    "link": "/api/v1/people/701762",
+    "firstName": "Nicholas",
+    "lastName": "Kurtz",
+    "primaryNumber": "16",
+    "birthDate": "2003-03-12",
+    "currentAge": 23,
+    "birthCity": "Lancaster",
+    "birthStateProvince": "PA",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 240,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Nick",
+    "useLastName": "Kurtz",
+    "middleName": "Jeffrey",
+    "boxscoreName": "Kurtz",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2024,
+    "mlbDebutDate": "2025-04-23",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Nick Kurtz",
+    "nameSlug": "nick-kurtz-701762",
+    "firstLastName": "Nick Kurtz",
+    "lastFirstName": "Kurtz, Nick",
+    "lastInitName": "Kurtz, N",
+    "initLastName": "N Kurtz",
+    "fullFMLName": "Nicholas Jeffrey Kurtz",
+    "fullLFMName": "Kurtz, Nicholas Jeffrey",
+    "strikeZoneTop": 3.413,
+    "strikeZoneBottom": 1.722
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 84,
+            "groundOuts": 51,
+            "airOuts": 54,
+            "runs": 59,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 19,
+            "strikeOuts": 115,
+            "baseOnBalls": 74,
+            "intentionalWalks": 9,
+            "hits": 85,
+            "hitByPitch": 2,
+            "avg": ".279",
+            "atBats": 305,
+            "obp": ".423",
+            "slg": ".521",
+            "ops": ".944",
+            "caughtStealing": 1,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".875",
+            "caughtStealingPercentage": ".125",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1627,
+            "plateAppearances": 381,
+            "totalBases": 159,
+            "rbi": 64,
+            "leftOnBase": 98,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".386",
+            "groundOutsToAirouts": "0.94",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "16.05"
+          },
+          "team": {
+            "id": 133,
+            "name": "Athletics",
+            "link": "/api/v1/teams/133"
+          },
+          "player": {
+            "id": 701762,
+            "fullName": "Nick Kurtz",
+            "link": "/api/v1/people/701762"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

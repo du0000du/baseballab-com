@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 687859,
+    "fullName": "Troy Johnston",
+    "link": "/api/v1/people/687859",
+    "firstName": "Troy",
+    "lastName": "Johnston",
+    "primaryNumber": "20",
+    "birthDate": "1997-06-22",
+    "currentAge": 29,
+    "birthCity": "Tacoma",
+    "birthStateProvince": "WA",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 206,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Troy",
+    "useLastName": "Johnston",
+    "middleName": "Michael",
+    "boxscoreName": "Johnston, T",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2025-07-29",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Troy Johnston",
+    "nameSlug": "troy-johnston-687859",
+    "firstLastName": "Troy Johnston",
+    "lastFirstName": "Johnston, Troy",
+    "lastInitName": "Johnston, T",
+    "initLastName": "T Johnston",
+    "fullFMLName": "Troy Michael Johnston",
+    "fullLFMName": "Johnston, Troy Michael",
+    "strikeZoneTop": 3.16,
+    "strikeZoneBottom": 1.59
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 77,
+            "groundOuts": 59,
+            "airOuts": 69,
+            "runs": 31,
+            "doubles": 22,
+            "triples": 0,
+            "homeRuns": 3,
+            "strikeOuts": 49,
+            "baseOnBalls": 24,
+            "intentionalWalks": 0,
+            "hits": 79,
+            "hitByPitch": 4,
+            "avg": ".312",
+            "atBats": 253,
+            "obp": ".378",
+            "slg": ".435",
+            "ops": ".813",
+            "caughtStealing": 4,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".500",
+            "caughtStealingPercentage": ".500",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1010,
+            "plateAppearances": 284,
+            "totalBases": 110,
+            "rbi": 36,
+            "leftOnBase": 105,
+            "sacBunts": 1,
+            "sacFlies": 2,
+            "babip": ".374",
+            "groundOutsToAirouts": "0.86",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "84.33"
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 687859,
+            "fullName": "Troy Johnston",
+            "link": "/api/v1/people/687859"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

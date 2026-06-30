@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 676609,
+    "fullName": "José Caballero",
+    "link": "/api/v1/people/676609",
+    "firstName": "José",
+    "lastName": "Caballero",
+    "primaryNumber": "72",
+    "birthDate": "1996-08-30",
+    "currentAge": 29,
+    "birthCity": "Las Tablas",
+    "birthCountry": "Panama",
+    "height": "5' 9\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "José",
+    "useLastName": "Caballero",
+    "boxscoreName": "Caballero",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2017,
+    "pronunciation": "kah-bah-YERO",
+    "mlbDebutDate": "2023-04-15",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "José Caballero",
+    "nameSlug": "jose-caballero-676609",
+    "firstLastName": "José Caballero",
+    "lastFirstName": "Caballero, José",
+    "lastInitName": "Caballero, J",
+    "initLastName": "J Caballero",
+    "fullFMLName": "José Caballero",
+    "fullLFMName": "Caballero, José ",
+    "strikeZoneTop": 3.083,
+    "strikeZoneBottom": 1.556
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 72,
+            "groundOuts": 69,
+            "airOuts": 55,
+            "runs": 32,
+            "doubles": 10,
+            "triples": 0,
+            "homeRuns": 8,
+            "strikeOuts": 56,
+            "baseOnBalls": 16,
+            "intentionalWalks": 0,
+            "hits": 59,
+            "hitByPitch": 5,
+            "avg": ".249",
+            "atBats": 237,
+            "obp": ".308",
+            "slg": ".392",
+            "ops": ".700",
+            "caughtStealing": 7,
+            "stolenBases": 19,
+            "stolenBasePercentage": ".731",
+            "caughtStealingPercentage": ".269",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1028,
+            "plateAppearances": 260,
+            "totalBases": 93,
+            "rbi": 28,
+            "leftOnBase": 94,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".291",
+            "groundOutsToAirouts": "1.25",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "29.62"
+          },
+          "team": {
+            "id": 147,
+            "name": "New York Yankees",
+            "link": "/api/v1/teams/147"
+          },
+          "player": {
+            "id": 676609,
+            "fullName": "José Caballero",
+            "link": "/api/v1/people/676609"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

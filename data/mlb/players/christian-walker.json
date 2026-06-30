@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 572233,
+    "fullName": "Christian Walker",
+    "link": "/api/v1/people/572233",
+    "firstName": "Christian",
+    "lastName": "Walker",
+    "primaryNumber": "8",
+    "birthDate": "1991-03-28",
+    "currentAge": 35,
+    "birthCity": "Norristown",
+    "birthStateProvince": "PA",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 208,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Christian",
+    "useLastName": "Walker",
+    "middleName": "Dickson",
+    "boxscoreName": "Walker, C",
+    "nickName": "C. Walk",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2012,
+    "mlbDebutDate": "2014-09-17",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Christian Walker",
+    "nameSlug": "christian-walker-572233",
+    "firstLastName": "Christian Walker",
+    "lastFirstName": "Walker, Christian",
+    "lastInitName": "Walker, C",
+    "initLastName": "C Walker",
+    "fullFMLName": "Christian Dickson Walker",
+    "fullLFMName": "Walker, Christian Dickson",
+    "strikeZoneTop": 3.179,
+    "strikeZoneBottom": 1.604
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 35,
+            "gamesPlayed": 85,
+            "groundOuts": 81,
+            "airOuts": 87,
+            "runs": 45,
+            "doubles": 16,
+            "triples": 1,
+            "homeRuns": 19,
+            "strikeOuts": 78,
+            "baseOnBalls": 29,
+            "intentionalWalks": 2,
+            "hits": 76,
+            "hitByPitch": 4,
+            "avg": ".237",
+            "atBats": 321,
+            "obp": ".307",
+            "slg": ".470",
+            "ops": ".777",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1370,
+            "plateAppearances": 355,
+            "totalBases": 151,
+            "rbi": 56,
+            "leftOnBase": 170,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".253",
+            "groundOutsToAirouts": "0.93",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "16.90"
+          },
+          "team": {
+            "id": 117,
+            "name": "Houston Astros",
+            "link": "/api/v1/teams/117"
+          },
+          "player": {
+            "id": 572233,
+            "fullName": "Christian Walker",
+            "link": "/api/v1/people/572233"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

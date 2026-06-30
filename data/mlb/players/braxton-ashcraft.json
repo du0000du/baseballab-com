@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 677952,
+    "fullName": "Braxton Ashcraft",
+    "link": "/api/v1/people/677952",
+    "firstName": "Braxton",
+    "lastName": "Ashcraft",
+    "primaryNumber": "35",
+    "birthDate": "1999-10-05",
+    "currentAge": 26,
+    "birthCity": "Waco",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 218,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Braxton",
+    "useLastName": "Ashcraft",
+    "boxscoreName": "Ashcraft, B",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "mlbDebutDate": "2025-05-26",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Braxton Ashcraft",
+    "nameSlug": "braxton-ashcraft-677952",
+    "firstLastName": "Braxton Ashcraft",
+    "lastFirstName": "Ashcraft, Braxton",
+    "lastInitName": "Ashcraft, B",
+    "initLastName": "B Ashcraft",
+    "fullFMLName": "Braxton  Ashcraft",
+    "fullLFMName": "Ashcraft, Braxton",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 96,
+            "airOuts": 88,
+            "runs": 42,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 11,
+            "strikeOuts": 115,
+            "baseOnBalls": 23,
+            "intentionalWalks": 0,
+            "hits": 88,
+            "hitByPitch": 6,
+            "avg": ".232",
+            "atBats": 380,
+            "obp": ".282",
+            "slg": ".363",
+            "ops": ".645",
+            "caughtStealing": 3,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 11,
+            "numberOfPitches": 1509,
+            "era": "3.33",
+            "inningsPitched": "102.2",
+            "wins": 8,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 38,
+            "whip": "1.08",
+            "battersFaced": 416,
+            "outs": 308,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1047,
+            "strikePercentage": ".690",
+            "hitBatsmen": 6,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 138,
+            "groundOutsToAirouts": "1.09",
+            "winPercentage": ".727",
+            "pitchesPerInning": "14.70",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "5.00",
+            "strikeoutsPer9Inn": "10.08",
+            "walksPer9Inn": "2.02",
+            "hitsPer9Inn": "7.71",
+            "runsScoredPer9": "3.68",
+            "homeRunsPer9": "0.96",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 134,
+            "name": "Pittsburgh Pirates",
+            "link": "/api/v1/teams/134"
+          },
+          "player": {
+            "id": 677952,
+            "fullName": "Braxton Ashcraft",
+            "link": "/api/v1/people/677952"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

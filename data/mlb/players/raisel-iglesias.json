@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 628452,
+    "fullName": "Raisel Iglesias",
+    "link": "/api/v1/people/628452",
+    "firstName": "Raisel",
+    "lastName": "Iglesias",
+    "primaryNumber": "26",
+    "birthDate": "1990-01-04",
+    "currentAge": 36,
+    "birthCity": "Isla de la Juventud",
+    "birthCountry": "Cuba",
+    "height": "6' 2\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Raisel",
+    "useLastName": "Iglesias",
+    "boxscoreName": "Iglesias, R",
+    "nickName": "Oliver",
+    "gender": "M",
+    "nameMatrilineal": "Travieso",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "RYE-sell EE-gley-see-ahs",
+    "mlbDebutDate": "2015-04-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Raisel Iglesias",
+    "nameSlug": "raisel-iglesias-628452",
+    "firstLastName": "Raisel Iglesias",
+    "lastFirstName": "Iglesias, Raisel",
+    "lastInitName": "Iglesias, R",
+    "initLastName": "R Iglesias",
+    "fullFMLName": "Raisel Iglesias",
+    "fullLFMName": "Iglesias, Raisel",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 25,
+            "gamesStarted": 0,
+            "groundOuts": 20,
+            "airOuts": 25,
+            "runs": 6,
+            "doubles": 5,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 29,
+            "baseOnBalls": 6,
+            "intentionalWalks": 0,
+            "hits": 22,
+            "hitByPitch": 0,
+            "avg": ".229",
+            "atBats": 96,
+            "obp": ".275",
+            "slg": ".313",
+            "ops": ".588",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 392,
+            "era": "1.37",
+            "inningsPitched": "26.1",
+            "wins": 0,
+            "losses": 2,
+            "saves": 16,
+            "saveOpportunities": 16,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 4,
+            "whip": "1.06",
+            "battersFaced": 102,
+            "outs": 79,
+            "gamesPitched": 25,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 276,
+            "strikePercentage": ".700",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 30,
+            "groundOutsToAirouts": "0.80",
+            "winPercentage": ".000",
+            "pitchesPerInning": "14.89",
+            "gamesFinished": 22,
+            "strikeoutWalkRatio": "4.83",
+            "strikeoutsPer9Inn": "9.91",
+            "walksPer9Inn": "2.05",
+            "hitsPer9Inn": "7.52",
+            "runsScoredPer9": "2.05",
+            "homeRunsPer9": "0.34",
+            "inheritedRunners": 2,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 628452,
+            "fullName": "Raisel Iglesias",
+            "link": "/api/v1/people/628452"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

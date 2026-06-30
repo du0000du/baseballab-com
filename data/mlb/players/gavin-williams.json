@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 668909,
+    "fullName": "Gavin Williams",
+    "link": "/api/v1/people/668909",
+    "firstName": "Gavin",
+    "lastName": "Williams",
+    "primaryNumber": "32",
+    "birthDate": "1999-07-26",
+    "currentAge": 26,
+    "birthCity": "Fayetteville",
+    "birthStateProvince": "NC",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 250,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Gavin",
+    "useLastName": "Williams",
+    "middleName": "Scott",
+    "boxscoreName": "Williams, G",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2023-06-21",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Gavin Williams",
+    "nameSlug": "gavin-williams-668909",
+    "firstLastName": "Gavin Williams",
+    "lastFirstName": "Williams, Gavin",
+    "lastInitName": "Williams, G",
+    "initLastName": "G Williams",
+    "fullFMLName": "Gavin Scott Williams",
+    "fullLFMName": "Williams, Gavin Scott",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 95,
+            "airOuts": 81,
+            "runs": 46,
+            "doubles": 20,
+            "triples": 1,
+            "homeRuns": 15,
+            "strikeOuts": 117,
+            "baseOnBalls": 34,
+            "intentionalWalks": 0,
+            "hits": 85,
+            "hitByPitch": 2,
+            "avg": ".225",
+            "atBats": 377,
+            "obp": ".293",
+            "slg": ".403",
+            "ops": ".696",
+            "caughtStealing": 4,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".692",
+            "caughtStealingPercentage": ".308",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1615,
+            "era": "3.81",
+            "inningsPitched": "101.2",
+            "wins": 9,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 43,
+            "whip": "1.17",
+            "battersFaced": 414,
+            "outs": 305,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1068,
+            "strikePercentage": ".660",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 3,
+            "totalBases": 152,
+            "groundOutsToAirouts": "1.17",
+            "winPercentage": ".692",
+            "pitchesPerInning": "15.89",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.44",
+            "strikeoutsPer9Inn": "10.36",
+            "walksPer9Inn": "3.01",
+            "hitsPer9Inn": "7.52",
+            "runsScoredPer9": "4.07",
+            "homeRunsPer9": "1.33",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 668909,
+            "fullName": "Gavin Williams",
+            "link": "/api/v1/people/668909"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

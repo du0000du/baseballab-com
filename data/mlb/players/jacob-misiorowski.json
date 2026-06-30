@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 694819,
+    "fullName": "Jacob Misiorowski",
+    "link": "/api/v1/people/694819",
+    "firstName": "Jacob",
+    "lastName": "Misiorowski",
+    "primaryNumber": "32",
+    "birthDate": "2002-04-03",
+    "currentAge": 24,
+    "birthCity": "Blue Springs",
+    "birthStateProvince": "MO",
+    "birthCountry": "USA",
+    "height": "6' 7\"",
+    "weight": 201,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jacob",
+    "useLastName": "Misiorowski",
+    "middleName": "Walter",
+    "boxscoreName": "Misiorowski",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "pronunciation": "miz-uh-RŎW-skee",
+    "mlbDebutDate": "2025-06-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jacob Misiorowski",
+    "nameSlug": "jacob-misiorowski-694819",
+    "firstLastName": "Jacob Misiorowski",
+    "lastFirstName": "Misiorowski, Jacob",
+    "lastInitName": "Misiorowski, J",
+    "initLastName": "J Misiorowski",
+    "fullFMLName": "Jacob Walter Misiorowski",
+    "fullLFMName": "Misiorowski, Jacob Walter",
+    "strikeZoneTop": 3.522,
+    "strikeZoneBottom": 1.778
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 24,
+            "gamesPlayed": 16,
+            "gamesStarted": 16,
+            "groundOuts": 73,
+            "airOuts": 74,
+            "runs": 19,
+            "doubles": 4,
+            "triples": 0,
+            "homeRuns": 5,
+            "strikeOuts": 146,
+            "baseOnBalls": 27,
+            "intentionalWalks": 0,
+            "hits": 49,
+            "hitByPitch": 7,
+            "avg": ".144",
+            "atBats": 341,
+            "obp": ".221",
+            "slg": ".199",
+            "ops": ".420",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1475,
+            "era": "1.45",
+            "inningsPitched": "99.0",
+            "wins": 9,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 16,
+            "whip": "0.77",
+            "battersFaced": 376,
+            "outs": 297,
+            "gamesPitched": 16,
+            "completeGames": 1,
+            "shutouts": 1,
+            "strikes": 995,
+            "strikePercentage": ".670",
+            "hitBatsmen": 7,
+            "balks": 1,
+            "wildPitches": 5,
+            "pickoffs": 0,
+            "totalBases": 68,
+            "groundOutsToAirouts": "0.99",
+            "winPercentage": ".750",
+            "pitchesPerInning": "14.90",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "5.41",
+            "strikeoutsPer9Inn": "13.27",
+            "walksPer9Inn": "2.45",
+            "hitsPer9Inn": "4.45",
+            "runsScoredPer9": "1.73",
+            "homeRunsPer9": "0.45",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 694819,
+            "fullName": "Jacob Misiorowski",
+            "link": "/api/v1/people/694819"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

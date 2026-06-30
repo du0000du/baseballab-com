@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 661395,
+    "fullName": "Jhoan Duran",
+    "link": "/api/v1/people/661395",
+    "firstName": "Jhoan",
+    "lastName": "Duran",
+    "primaryNumber": "59",
+    "birthDate": "1998-01-08",
+    "currentAge": 28,
+    "birthCity": "Esperanza",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 5\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jhoan",
+    "useLastName": "Duran",
+    "middleName": "Manuel",
+    "boxscoreName": "Duran, J",
+    "gender": "M",
+    "nameMatrilineal": "Sanchez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "YO-ahn DOO-rahn",
+    "mlbDebutDate": "2022-04-08",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jhoan Duran",
+    "nameSlug": "jhoan-duran-661395",
+    "firstLastName": "Jhoan Duran",
+    "lastFirstName": "Duran, Jhoan",
+    "lastInitName": "Duran, J",
+    "initLastName": "J Duran",
+    "fullFMLName": "Jhoan Manuel Duran",
+    "fullLFMName": "Duran, Jhoan Manuel",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 30,
+            "gamesStarted": 0,
+            "groundOuts": 26,
+            "airOuts": 13,
+            "runs": 6,
+            "doubles": 3,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 44,
+            "baseOnBalls": 6,
+            "intentionalWalks": 0,
+            "hits": 21,
+            "hitByPitch": 0,
+            "avg": ".202",
+            "atBats": 104,
+            "obp": ".245",
+            "slg": ".260",
+            "ops": ".505",
+            "caughtStealing": 0,
+            "stolenBases": 4,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 452,
+            "era": "1.57",
+            "inningsPitched": "28.2",
+            "wins": 1,
+            "losses": 3,
+            "saves": 21,
+            "saveOpportunities": 22,
+            "holds": 0,
+            "blownSaves": 1,
+            "earnedRuns": 5,
+            "whip": "0.94",
+            "battersFaced": 110,
+            "outs": 86,
+            "gamesPitched": 30,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 290,
+            "strikePercentage": ".640",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 27,
+            "groundOutsToAirouts": "2.00",
+            "winPercentage": ".250",
+            "pitchesPerInning": "15.77",
+            "gamesFinished": 29,
+            "strikeoutWalkRatio": "7.33",
+            "strikeoutsPer9Inn": "13.81",
+            "walksPer9Inn": "1.88",
+            "hitsPer9Inn": "6.59",
+            "runsScoredPer9": "1.88",
+            "homeRunsPer9": "0.31",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 661395,
+            "fullName": "Jhoan Duran",
+            "link": "/api/v1/people/661395"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

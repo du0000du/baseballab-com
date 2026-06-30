@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 650911,
+    "fullName": "Cristopher Sánchez",
+    "link": "/api/v1/people/650911",
+    "firstName": "Cristopher",
+    "lastName": "Sánchez",
+    "primaryNumber": "61",
+    "birthDate": "1996-12-12",
+    "currentAge": 29,
+    "birthCity": "La Romana",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 6\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Cristopher",
+    "useLastName": "Sánchez",
+    "middleName": "Alexis",
+    "boxscoreName": "Sánchez, C",
+    "gender": "M",
+    "nameMatrilineal": "Valera",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "KRISS-tuh-furr",
+    "mlbDebutDate": "2021-06-06",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Cristopher Sánchez",
+    "nameSlug": "cristopher-sanchez-650911",
+    "firstLastName": "Cristopher Sánchez",
+    "lastFirstName": "Sánchez, Cristopher",
+    "lastInitName": "Sánchez, C",
+    "initLastName": "C Sánchez",
+    "fullFMLName": "Cristopher Alexis Sánchez",
+    "fullLFMName": "Sánchez, Cristopher Alexis",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 124,
+            "airOuts": 74,
+            "runs": 31,
+            "doubles": 20,
+            "triples": 0,
+            "homeRuns": 8,
+            "strikeOuts": 127,
+            "baseOnBalls": 21,
+            "intentionalWalks": 0,
+            "hits": 101,
+            "hitByPitch": 2,
+            "avg": ".238",
+            "atBats": 424,
+            "obp": ".277",
+            "slg": ".342",
+            "ops": ".619",
+            "caughtStealing": 2,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1625,
+            "era": "2.13",
+            "inningsPitched": "110.0",
+            "wins": 9,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 26,
+            "whip": "1.11",
+            "battersFaced": 449,
+            "outs": 330,
+            "gamesPitched": 17,
+            "completeGames": 1,
+            "shutouts": 1,
+            "strikes": 1098,
+            "strikePercentage": ".680",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 145,
+            "groundOutsToAirouts": "1.68",
+            "winPercentage": ".750",
+            "pitchesPerInning": "14.77",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "6.05",
+            "strikeoutsPer9Inn": "10.39",
+            "walksPer9Inn": "1.72",
+            "hitsPer9Inn": "8.26",
+            "runsScoredPer9": "2.54",
+            "homeRunsPer9": "0.65",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 650911,
+            "fullName": "Cristopher Sánchez",
+            "link": "/api/v1/people/650911"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

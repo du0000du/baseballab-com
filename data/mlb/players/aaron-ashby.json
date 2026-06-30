@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 676879,
+    "fullName": "Aaron Ashby",
+    "link": "/api/v1/people/676879",
+    "firstName": "Aaron",
+    "lastName": "Ashby",
+    "primaryNumber": "26",
+    "birthDate": "1998-05-24",
+    "currentAge": 28,
+    "birthCity": "Kansas City",
+    "birthStateProvince": "MO",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 194,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Aaron",
+    "useLastName": "Ashby",
+    "boxscoreName": "Ashby",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "mlbDebutDate": "2021-06-30",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Aaron Ashby",
+    "nameSlug": "aaron-ashby-676879",
+    "firstLastName": "Aaron Ashby",
+    "lastFirstName": "Ashby, Aaron",
+    "lastInitName": "Ashby, A",
+    "initLastName": "A Ashby",
+    "fullFMLName": "Aaron  Ashby",
+    "fullLFMName": "Ashby, Aaron",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 39,
+            "gamesStarted": 1,
+            "groundOuts": 46,
+            "airOuts": 32,
+            "runs": 22,
+            "doubles": 7,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 68,
+            "baseOnBalls": 26,
+            "intentionalWalks": 1,
+            "hits": 42,
+            "hitByPitch": 2,
+            "avg": ".226",
+            "atBats": 186,
+            "obp": ".324",
+            "slg": ".328",
+            "ops": ".652",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 866,
+            "era": "3.24",
+            "inningsPitched": "50.0",
+            "wins": 11,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 4,
+            "holds": 4,
+            "blownSaves": 4,
+            "earnedRuns": 18,
+            "whip": "1.36",
+            "battersFaced": 216,
+            "outs": 150,
+            "gamesPitched": 39,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 534,
+            "strikePercentage": ".620",
+            "hitBatsmen": 2,
+            "balks": 1,
+            "wildPitches": 6,
+            "pickoffs": 0,
+            "totalBases": 61,
+            "groundOutsToAirouts": "1.44",
+            "winPercentage": ".917",
+            "pitchesPerInning": "17.32",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "2.62",
+            "strikeoutsPer9Inn": "12.24",
+            "walksPer9Inn": "4.68",
+            "hitsPer9Inn": "7.56",
+            "runsScoredPer9": "3.96",
+            "homeRunsPer9": "0.72",
+            "inheritedRunners": 10,
+            "inheritedRunnersScored": 5,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 676879,
+            "fullName": "Aaron Ashby",
+            "link": "/api/v1/people/676879"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

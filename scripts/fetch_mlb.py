@@ -26,6 +26,19 @@ BASE_URL = "https://statsapi.mlb.com/api/v1"
 DATA_DIR = Path(__file__).parent.parent / "data" / "mlb"
 # シーズン判定: 3月以降は当年、1〜2月はオフシーズン扱いで前年。MLB_SEASON env varで明示上書き可
 SEASON = int(__import__("os").environ.get("MLB_SEASON") or (datetime.now().year if datetime.now().month >= 3 else datetime.now().year - 1))
+# リーダーボード自動補完対象カテゴリ（leaders.astro と同一構成）
+LEADER_CATEGORIES = [
+    ("hitting",  "homeRuns"),
+    ("hitting",  "avg"),
+    ("hitting",  "rbi"),
+    ("hitting",  "stolenBases"),
+    ("hitting",  "obp"),
+    ("pitching", "era"),
+    ("pitching", "wins"),
+    ("pitching", "strikeOuts"),
+    ("pitching", "saves"),
+    ("pitching", "whip"),
+]
 # 取得対象選手ID（MLB主要選手）
 PLAYER_IDS = [
     660271,  # 大谷翔平
@@ -173,6 +186,59 @@ def fetch_players():
         time.sleep(0.3)  # レートリミット対策
 
     print(f"\n保存先: {out_dir}")
+    sync_leader_players()
+
+
+def sync_leader_players():
+    """リーダーボード掲載選手のJSONを自動補完（選手ページリンク用）"""
+    out_dir = DATA_DIR / "players"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    existing = {f.stem for f in out_dir.glob("*.json")}
+
+    # 全カテゴリ・両リーグのリーダーボードを走査して未登録選手IDを収集
+    new_pids: "dict[int, tuple[str, str]]" = {}  # pid → (fullName, group)
+    for group, stat in LEADER_CATEGORIES:
+        for league in [103, 104]:
+            data = fetch(f"/stats?stats=season&season={SEASON}&group={group}&sortStat={stat}&limit=10&gameType=R&hydrate=person,team&leagueId={league}")
+            splits = (data.get("stats") or [{}])[0].get("splits", [])
+            for item in splits:
+                player = item.get("player", {})
+                pid = player.get("id")
+                name = player.get("fullName", "")
+                if not pid or not name:
+                    continue
+                slug = name.lower().replace(" ", "-").replace(".", "")
+                if slug not in existing and pid not in new_pids:
+                    new_pids[pid] = (name, group)
+            time.sleep(0.15)
+
+    if not new_pids:
+        print("  (リーダーボード選手は全員登録済み)")
+        return
+
+    print(f"=== リーダーボード新規選手取得 ({len(new_pids)}名) ===")
+    for pid, (name, group_hint) in new_pids.items():
+        info_data = fetch(f"/people/{pid}")
+        if not info_data.get("people"):
+            print(f"  skip: {pid} ({name})")
+            continue
+        p_info = info_data["people"][0]
+        pos = p_info.get("primaryPosition", {}).get("abbreviation", "")
+        # 投手はpitching優先、二刀流は両方、野手はhitting
+        if pos == "P":
+            stats = fetch_player_stats(pid, "P")
+        elif pos == "TWP":
+            stats = fetch_player_stats(pid, "TWP")
+        else:
+            stats = fetch_player_stats(pid, pos)
+        slug = p_info["fullName"].lower().replace(" ", "-").replace(".", "")
+        result = {"info": p_info, "stats": stats, "season": SEASON}
+        (out_dir / f"{slug}.json").write_text(
+            json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        existing.add(slug)
+        print(f"  ✅ {p_info['fullName']} → {slug}.json")
+        time.sleep(0.3)
 
 
 def fetch_teams():

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 645261,
+    "fullName": "Sandy Alcantara",
+    "link": "/api/v1/people/645261",
+    "firstName": "Sandy",
+    "lastName": "Alcantara",
+    "primaryNumber": "22",
+    "birthDate": "1995-09-07",
+    "currentAge": 30,
+    "birthCity": "Azua",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 5\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Sandy",
+    "useLastName": "Alcantara",
+    "boxscoreName": "Alcantara, S",
+    "nickName": "Sandman",
+    "gender": "M",
+    "nameMatrilineal": "Montero",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "al-CON-ta-RA",
+    "mlbDebutDate": "2017-09-03",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Sandy Alcantara",
+    "nameSlug": "sandy-alcantara-645261",
+    "firstLastName": "Sandy Alcantara",
+    "lastFirstName": "Alcantara, Sandy",
+    "lastInitName": "Alcantara, S",
+    "initLastName": "S Alcantara",
+    "fullFMLName": "Sandy Alcantara",
+    "fullLFMName": "Alcantara, Sandy",
+    "strikeZoneTop": 3.59,
+    "strikeZoneBottom": 1.68
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 18,
+            "gamesStarted": 18,
+            "groundOuts": 125,
+            "airOuts": 123,
+            "runs": 59,
+            "doubles": 19,
+            "triples": 2,
+            "homeRuns": 12,
+            "strikeOuts": 84,
+            "baseOnBalls": 32,
+            "intentionalWalks": 0,
+            "hits": 116,
+            "hitByPitch": 6,
+            "avg": ".260",
+            "atBats": 446,
+            "obp": ".318",
+            "slg": ".392",
+            "ops": ".710",
+            "caughtStealing": 5,
+            "stolenBases": 12,
+            "stolenBasePercentage": ".706",
+            "caughtStealingPercentage": ".294",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1749,
+            "era": "4.20",
+            "inningsPitched": "115.2",
+            "wins": 9,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 54,
+            "whip": "1.28",
+            "battersFaced": 486,
+            "outs": 347,
+            "gamesPitched": 18,
+            "completeGames": 1,
+            "shutouts": 1,
+            "strikes": 1179,
+            "strikePercentage": ".670",
+            "hitBatsmen": 6,
+            "balks": 1,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 175,
+            "groundOutsToAirouts": "1.02",
+            "winPercentage": ".692",
+            "pitchesPerInning": "15.12",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.63",
+            "strikeoutsPer9Inn": "6.54",
+            "walksPer9Inn": "2.49",
+            "hitsPer9Inn": "9.03",
+            "runsScoredPer9": "4.59",
+            "homeRunsPer9": "0.93",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 645261,
+            "fullName": "Sandy Alcantara",
+            "link": "/api/v1/people/645261"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

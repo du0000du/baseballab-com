@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 671056,
+    "fullName": "Iván Herrera",
+    "link": "/api/v1/people/671056",
+    "firstName": "Ivan",
+    "lastName": "Herrera",
+    "primaryNumber": "48",
+    "birthDate": "2000-06-01",
+    "currentAge": 26,
+    "birthCity": "Panama City",
+    "birthCountry": "Panama",
+    "height": "5' 11\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "10",
+      "name": "Designated Hitter",
+      "type": "Hitter",
+      "abbreviation": "DH"
+    },
+    "useName": "Iván",
+    "useLastName": "Herrera",
+    "middleName": "Aaron",
+    "boxscoreName": "Herrera",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "pronunciation": "ee-VAHN",
+    "mlbDebutDate": "2022-05-24",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Iván Herrera",
+    "nameSlug": "ivan-herrera-671056",
+    "firstLastName": "Iván Herrera",
+    "lastFirstName": "Herrera, Iván",
+    "lastInitName": "Herrera, I",
+    "initLastName": "I Herrera",
+    "fullFMLName": "Ivan Aaron Herrera",
+    "fullLFMName": "Herrera, Ivan Aaron",
+    "strikeZoneTop": 3.173,
+    "strikeZoneBottom": 1.602
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 81,
+            "groundOuts": 95,
+            "airOuts": 68,
+            "runs": 53,
+            "doubles": 13,
+            "triples": 1,
+            "homeRuns": 10,
+            "strikeOuts": 57,
+            "baseOnBalls": 48,
+            "intentionalWalks": 4,
+            "hits": 75,
+            "hitByPitch": 22,
+            "avg": ".256",
+            "atBats": 293,
+            "obp": ".397",
+            "slg": ".410",
+            "ops": ".807",
+            "caughtStealing": 0,
+            "stolenBases": 5,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1406,
+            "plateAppearances": 365,
+            "totalBases": 120,
+            "rbi": 35,
+            "leftOnBase": 125,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".285",
+            "groundOutsToAirouts": "1.40",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "29.30"
+          },
+          "team": {
+            "id": 138,
+            "name": "St. Louis Cardinals",
+            "link": "/api/v1/teams/138"
+          },
+          "player": {
+            "id": 671056,
+            "fullName": "Iván Herrera",
+            "link": "/api/v1/people/671056"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

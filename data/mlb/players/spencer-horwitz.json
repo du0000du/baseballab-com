@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 687462,
+    "fullName": "Spencer Horwitz",
+    "link": "/api/v1/people/687462",
+    "firstName": "Spencer",
+    "lastName": "Horwitz",
+    "primaryNumber": "2",
+    "birthDate": "1997-11-14",
+    "currentAge": 28,
+    "birthCity": "Timonium",
+    "birthStateProvince": "MD",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 204,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Spencer",
+    "useLastName": "Horwitz",
+    "middleName": "Elliott",
+    "boxscoreName": "Horwitz",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2023-06-18",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Spencer Horwitz",
+    "nameSlug": "spencer-horwitz-687462",
+    "firstLastName": "Spencer Horwitz",
+    "lastFirstName": "Horwitz, Spencer",
+    "lastInitName": "Horwitz, S",
+    "initLastName": "S Horwitz",
+    "fullFMLName": "Spencer Elliott Horwitz",
+    "fullLFMName": "Horwitz, Spencer Elliott",
+    "strikeZoneTop": 3.133,
+    "strikeZoneBottom": 1.581
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 74,
+            "groundOuts": 63,
+            "airOuts": 78,
+            "runs": 36,
+            "doubles": 11,
+            "triples": 1,
+            "homeRuns": 10,
+            "strikeOuts": 40,
+            "baseOnBalls": 40,
+            "intentionalWalks": 0,
+            "hits": 69,
+            "hitByPitch": 5,
+            "avg": ".280",
+            "atBats": 246,
+            "obp": ".386",
+            "slg": ".455",
+            "ops": ".841",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 1189,
+            "plateAppearances": 295,
+            "totalBases": 112,
+            "rbi": 33,
+            "leftOnBase": 109,
+            "sacBunts": 0,
+            "sacFlies": 4,
+            "babip": ".295",
+            "groundOutsToAirouts": "0.81",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "24.60"
+          },
+          "team": {
+            "id": 134,
+            "name": "Pittsburgh Pirates",
+            "link": "/api/v1/teams/134"
+          },
+          "player": {
+            "id": 687462,
+            "fullName": "Spencer Horwitz",
+            "link": "/api/v1/people/687462"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

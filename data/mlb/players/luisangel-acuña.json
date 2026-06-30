@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 682668,
+    "fullName": "Luisangel Acuña",
+    "link": "/api/v1/people/682668",
+    "firstName": "Luisangel",
+    "lastName": "Acuña",
+    "primaryNumber": "0",
+    "birthDate": "2002-03-12",
+    "currentAge": 24,
+    "birthCity": "Caracas",
+    "birthCountry": "Venezuela",
+    "height": "5' 7\"",
+    "weight": 181,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Luisangel",
+    "useLastName": "Acuña",
+    "middleName": "Jose",
+    "boxscoreName": "Acuña",
+    "nickName": "Jose",
+    "gender": "M",
+    "nameMatrilineal": "Cartaya",
+    "isPlayer": true,
+    "isVerified": false,
+    "pronunciation": "Loo-EESE-ahn-hel",
+    "mlbDebutDate": "2024-09-14",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Luisangel Acuña",
+    "nameSlug": "luisangel-acuna-682668",
+    "firstLastName": "Luisangel Acuña",
+    "lastFirstName": "Acuña, Luisangel",
+    "lastInitName": "Acuña, L",
+    "initLastName": "L Acuña",
+    "fullFMLName": "Luisangel Jose Acuña",
+    "fullLFMName": "Acuña, Luisangel Jose",
+    "strikeZoneTop": 3.008,
+    "strikeZoneBottom": 1.518
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 24,
+            "gamesPlayed": 59,
+            "groundOuts": 51,
+            "airOuts": 32,
+            "runs": 16,
+            "doubles": 2,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 26,
+            "baseOnBalls": 7,
+            "intentionalWalks": 0,
+            "hits": 30,
+            "hitByPitch": 1,
+            "avg": ".222",
+            "atBats": 135,
+            "obp": ".262",
+            "slg": ".259",
+            "ops": ".521",
+            "caughtStealing": 2,
+            "stolenBases": 14,
+            "stolenBasePercentage": ".875",
+            "caughtStealingPercentage": ".125",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 511,
+            "plateAppearances": 147,
+            "totalBases": 35,
+            "rbi": 10,
+            "leftOnBase": 59,
+            "sacBunts": 2,
+            "sacFlies": 2,
+            "babip": ".264",
+            "groundOutsToAirouts": "1.59",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "135.00"
+          },
+          "team": {
+            "id": 145,
+            "name": "Chicago White Sox",
+            "link": "/api/v1/teams/145"
+          },
+          "player": {
+            "id": 682668,
+            "fullName": "Luisangel Acuña",
+            "link": "/api/v1/people/682668"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

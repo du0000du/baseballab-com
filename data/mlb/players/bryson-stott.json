@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 681082,
+    "fullName": "Bryson Stott",
+    "link": "/api/v1/people/681082",
+    "firstName": "Bryson",
+    "lastName": "Stott",
+    "primaryNumber": "5",
+    "birthDate": "1997-10-06",
+    "currentAge": 28,
+    "birthCity": "Las Vegas",
+    "birthStateProvince": "NV",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Bryson",
+    "useLastName": "Stott",
+    "middleName": "Jeremy",
+    "boxscoreName": "Stott",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "pronunciation": "BRY-sun",
+    "mlbDebutDate": "2022-04-08",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Bryson Stott",
+    "nameSlug": "bryson-stott-681082",
+    "firstLastName": "Bryson Stott",
+    "lastFirstName": "Stott, Bryson",
+    "lastInitName": "Stott, B",
+    "initLastName": "B Stott",
+    "fullFMLName": "Bryson Jeremy Stott",
+    "fullLFMName": "Stott, Bryson Jeremy",
+    "strikeZoneTop": 3.225,
+    "strikeZoneBottom": 1.628
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 79,
+            "groundOuts": 74,
+            "airOuts": 86,
+            "runs": 31,
+            "doubles": 15,
+            "triples": 3,
+            "homeRuns": 7,
+            "strikeOuts": 53,
+            "baseOnBalls": 22,
+            "intentionalWalks": 0,
+            "hits": 65,
+            "hitByPitch": 2,
+            "avg": ".236",
+            "atBats": 275,
+            "obp": ".297",
+            "slg": ".389",
+            "ops": ".686",
+            "caughtStealing": 0,
+            "stolenBases": 16,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1221,
+            "plateAppearances": 302,
+            "totalBases": 107,
+            "rbi": 40,
+            "leftOnBase": 116,
+            "sacBunts": 2,
+            "sacFlies": 1,
+            "babip": ".269",
+            "groundOutsToAirouts": "0.86",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "39.29"
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 681082,
+            "fullName": "Bryson Stott",
+            "link": "/api/v1/people/681082"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

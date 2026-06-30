@@ -1,0 +1,151 @@
+{
+  "info": {
+    "id": 642397,
+    "fullName": "Gregory Soto",
+    "link": "/api/v1/people/642397",
+    "firstName": "Gregory",
+    "lastName": "Soto",
+    "primaryNumber": "31",
+    "birthDate": "1995-02-11",
+    "currentAge": 31,
+    "birthCity": "Haina",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 1\"",
+    "weight": 247,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Gregory",
+    "useLastName": "Soto",
+    "boxscoreName": "Soto, G",
+    "nickName": "Capiro",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "mlbDebutDate": "2019-05-11",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Gregory Soto",
+    "nameSlug": "gregory-soto-642397",
+    "firstLastName": "Gregory Soto",
+    "lastFirstName": "Soto, Gregory",
+    "lastInitName": "Soto, G",
+    "initLastName": "G Soto",
+    "fullFMLName": "Gregory Soto",
+    "fullLFMName": "Soto, Gregory",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 36,
+            "gamesStarted": 0,
+            "groundOuts": 31,
+            "airOuts": 30,
+            "runs": 19,
+            "doubles": 4,
+            "triples": 1,
+            "homeRuns": 4,
+            "strikeOuts": 41,
+            "baseOnBalls": 15,
+            "intentionalWalks": 0,
+            "hits": 24,
+            "hitByPitch": 2,
+            "avg": ".190",
+            "atBats": 126,
+            "obp": ".287",
+            "slg": ".333",
+            "ops": ".620",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 596,
+            "era": "4.37",
+            "inningsPitched": "35.0",
+            "wins": 4,
+            "losses": 2,
+            "saves": 11,
+            "saveOpportunities": 15,
+            "holds": 7,
+            "blownSaves": 4,
+            "earnedRuns": 17,
+            "whip": "1.11",
+            "battersFaced": 144,
+            "outs": 105,
+            "gamesPitched": 36,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 370,
+            "strikePercentage": ".620",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 0,
+            "totalBases": 42,
+            "groundOutsToAirouts": "1.03",
+            "winPercentage": ".667",
+            "pitchesPerInning": "17.03",
+            "gamesFinished": 20,
+            "strikeoutWalkRatio": "2.73",
+            "strikeoutsPer9Inn": "10.54",
+            "walksPer9Inn": "3.86",
+            "hitsPer9Inn": "6.17",
+            "runsScoredPer9": "4.89",
+            "homeRunsPer9": "1.03",
+            "inheritedRunners": 13,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 1,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 134,
+            "name": "Pittsburgh Pirates",
+            "link": "/api/v1/teams/134"
+          },
+          "player": {
+            "id": 642397,
+            "fullName": "Gregory Soto",
+            "link": "/api/v1/people/642397"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

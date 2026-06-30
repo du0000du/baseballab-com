@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 693645,
+    "fullName": "Cam Schlittler",
+    "link": "/api/v1/people/693645",
+    "firstName": "Cameron",
+    "lastName": "Schlittler",
+    "primaryNumber": "31",
+    "birthDate": "2001-02-05",
+    "currentAge": 25,
+    "birthCity": "Weymouth",
+    "birthStateProvince": "MA",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Cam",
+    "useLastName": "Schlittler",
+    "middleName": "John",
+    "boxscoreName": "Schlittler",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "mlbDebutDate": "2025-07-09",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Cam Schlittler",
+    "nameSlug": "cam-schlittler-693645",
+    "firstLastName": "Cam Schlittler",
+    "lastFirstName": "Schlittler, Cam",
+    "lastInitName": "Schlittler, C",
+    "initLastName": "C Schlittler",
+    "fullFMLName": "Cameron John Schlittler",
+    "fullLFMName": "Schlittler, Cameron John",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 88,
+            "airOuts": 92,
+            "runs": 25,
+            "doubles": 15,
+            "triples": 2,
+            "homeRuns": 6,
+            "strikeOuts": 118,
+            "baseOnBalls": 20,
+            "intentionalWalks": 0,
+            "hits": 72,
+            "hitByPitch": 3,
+            "avg": ".197",
+            "atBats": 365,
+            "obp": ".243",
+            "slg": ".299",
+            "ops": ".542",
+            "caughtStealing": 2,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1535,
+            "era": "1.62",
+            "inningsPitched": "100.0",
+            "wins": 8,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 18,
+            "whip": "0.92",
+            "battersFaced": 394,
+            "outs": 300,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1043,
+            "strikePercentage": ".680",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 109,
+            "groundOutsToAirouts": "0.96",
+            "winPercentage": ".667",
+            "pitchesPerInning": "15.35",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "5.90",
+            "strikeoutsPer9Inn": "10.62",
+            "walksPer9Inn": "1.80",
+            "hitsPer9Inn": "6.48",
+            "runsScoredPer9": "2.25",
+            "homeRunsPer9": "0.54",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 1,
+            "sacBunts": 2,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 147,
+            "name": "New York Yankees",
+            "link": "/api/v1/teams/147"
+          },
+          "player": {
+            "id": 693645,
+            "fullName": "Cam Schlittler",
+            "link": "/api/v1/people/693645"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

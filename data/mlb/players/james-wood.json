@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 695578,
+    "fullName": "James Wood",
+    "link": "/api/v1/people/695578",
+    "firstName": "James",
+    "lastName": "Wood",
+    "primaryNumber": "29",
+    "birthDate": "2002-09-17",
+    "currentAge": 23,
+    "birthCity": "Rockville",
+    "birthStateProvince": "MD",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 234,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "James",
+    "useLastName": "Wood",
+    "middleName": "Irvin",
+    "boxscoreName": "Wood",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2024-07-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "James Wood",
+    "nameSlug": "james-wood-695578",
+    "firstLastName": "James Wood",
+    "lastFirstName": "Wood, James",
+    "lastInitName": "Wood, J",
+    "initLastName": "J Wood",
+    "fullFMLName": "James Irvin Wood",
+    "fullLFMName": "Wood, James Irvin",
+    "strikeZoneTop": 3.489,
+    "strikeZoneBottom": 1.761
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 86,
+            "groundOuts": 61,
+            "airOuts": 63,
+            "runs": 73,
+            "doubles": 20,
+            "triples": 0,
+            "homeRuns": 21,
+            "strikeOuts": 123,
+            "baseOnBalls": 64,
+            "intentionalWalks": 8,
+            "hits": 85,
+            "hitByPitch": 4,
+            "avg": ".258",
+            "atBats": 330,
+            "obp": ".383",
+            "slg": ".509",
+            "ops": ".892",
+            "caughtStealing": 2,
+            "stolenBases": 13,
+            "stolenBasePercentage": ".867",
+            "caughtStealingPercentage": ".133",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1682,
+            "plateAppearances": 400,
+            "totalBases": 168,
+            "rbi": 50,
+            "leftOnBase": 117,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".340",
+            "groundOutsToAirouts": "0.97",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "15.71"
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 695578,
+            "fullName": "James Wood",
+            "link": "/api/v1/people/695578"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

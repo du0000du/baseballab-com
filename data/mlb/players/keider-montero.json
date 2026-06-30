@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 672456,
+    "fullName": "Keider Montero",
+    "link": "/api/v1/people/672456",
+    "firstName": "Keider",
+    "lastName": "Montero",
+    "primaryNumber": "54",
+    "birthDate": "2000-07-06",
+    "currentAge": 25,
+    "birthCity": "Santa Teresa del Tuy",
+    "birthCountry": "Venezuela",
+    "height": "6' 1\"",
+    "weight": 145,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Keider",
+    "useLastName": "Montero",
+    "middleName": "Eduardo",
+    "boxscoreName": "Montero, K",
+    "gender": "M",
+    "nameMatrilineal": "Martinez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "KAY-der",
+    "mlbDebutDate": "2024-05-29",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Keider Montero",
+    "nameSlug": "keider-montero-672456",
+    "firstLastName": "Keider Montero",
+    "lastFirstName": "Montero, Keider",
+    "lastInitName": "Montero, K",
+    "initLastName": "K Montero",
+    "fullFMLName": "Keider Eduardo Montero",
+    "fullLFMName": "Montero, Keider Eduardo",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 16,
+            "gamesStarted": 15,
+            "groundOuts": 79,
+            "airOuts": 124,
+            "runs": 35,
+            "doubles": 15,
+            "triples": 2,
+            "homeRuns": 9,
+            "strikeOuts": 56,
+            "baseOnBalls": 18,
+            "intentionalWalks": 0,
+            "hits": 69,
+            "hitByPitch": 2,
+            "avg": ".212",
+            "atBats": 325,
+            "obp": ".256",
+            "slg": ".354",
+            "ops": ".610",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1242,
+            "era": "3.39",
+            "inningsPitched": "87.2",
+            "wins": 4,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 33,
+            "whip": "0.99",
+            "battersFaced": 348,
+            "outs": 263,
+            "gamesPitched": 16,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 828,
+            "strikePercentage": ".670",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 115,
+            "groundOutsToAirouts": "0.64",
+            "winPercentage": ".444",
+            "pitchesPerInning": "14.17",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.11",
+            "strikeoutsPer9Inn": "5.75",
+            "walksPer9Inn": "1.85",
+            "hitsPer9Inn": "7.08",
+            "runsScoredPer9": "3.59",
+            "homeRunsPer9": "0.92",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 672456,
+            "fullName": "Keider Montero",
+            "link": "/api/v1/people/672456"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

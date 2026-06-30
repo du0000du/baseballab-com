@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 800048,
+    "fullName": "Parker Messick",
+    "link": "/api/v1/people/800048",
+    "firstName": "Parker",
+    "lastName": "Messick",
+    "primaryNumber": "77",
+    "birthDate": "2000-10-26",
+    "currentAge": 25,
+    "birthCity": "Plant City",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Parker",
+    "useLastName": "Messick",
+    "middleName": "Chase",
+    "boxscoreName": "Messick",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "mlbDebutDate": "2025-08-20",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Parker Messick",
+    "nameSlug": "parker-messick-800048",
+    "firstLastName": "Parker Messick",
+    "lastFirstName": "Messick, Parker",
+    "lastInitName": "Messick, P",
+    "initLastName": "P Messick",
+    "fullFMLName": "Parker Chase Messick",
+    "fullLFMName": "Messick, Parker Chase",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 93,
+            "airOuts": 93,
+            "runs": 34,
+            "doubles": 15,
+            "triples": 4,
+            "homeRuns": 9,
+            "strikeOuts": 106,
+            "baseOnBalls": 29,
+            "intentionalWalks": 2,
+            "hits": 78,
+            "hitByPitch": 1,
+            "avg": ".214",
+            "atBats": 365,
+            "obp": ".271",
+            "slg": ".351",
+            "ops": ".622",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1544,
+            "era": "2.85",
+            "inningsPitched": "101.0",
+            "wins": 7,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 32,
+            "whip": "1.06",
+            "battersFaced": 400,
+            "outs": 303,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 989,
+            "strikePercentage": ".640",
+            "hitBatsmen": 1,
+            "balks": 1,
+            "wildPitches": 3,
+            "pickoffs": 2,
+            "totalBases": 128,
+            "groundOutsToAirouts": "1.00",
+            "winPercentage": ".583",
+            "pitchesPerInning": "15.29",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.66",
+            "strikeoutsPer9Inn": "9.45",
+            "walksPer9Inn": "2.58",
+            "hitsPer9Inn": "6.95",
+            "runsScoredPer9": "3.03",
+            "homeRunsPer9": "0.80",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 800048,
+            "fullName": "Parker Messick",
+            "link": "/api/v1/people/800048"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

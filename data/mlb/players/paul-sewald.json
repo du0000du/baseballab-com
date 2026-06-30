@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 623149,
+    "fullName": "Paul Sewald",
+    "link": "/api/v1/people/623149",
+    "firstName": "Paul",
+    "lastName": "Sewald",
+    "primaryNumber": "38",
+    "birthDate": "1990-05-26",
+    "currentAge": 36,
+    "birthCity": "Las Vegas",
+    "birthStateProvince": "NV",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 219,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Paul",
+    "useLastName": "Sewald",
+    "middleName": "Stanton",
+    "boxscoreName": "Sewald",
+    "nickName": "Paulie",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2012,
+    "pronunciation": "SEE-walld",
+    "mlbDebutDate": "2017-04-08",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Paul Sewald",
+    "nameSlug": "paul-sewald-623149",
+    "firstLastName": "Paul Sewald",
+    "lastFirstName": "Sewald, Paul",
+    "lastInitName": "Sewald, P",
+    "initLastName": "P Sewald",
+    "fullFMLName": "Paul Stanton Sewald",
+    "fullLFMName": "Sewald, Paul Stanton",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 33,
+            "gamesStarted": 0,
+            "groundOuts": 8,
+            "airOuts": 49,
+            "runs": 16,
+            "doubles": 4,
+            "triples": 1,
+            "homeRuns": 6,
+            "strikeOuts": 33,
+            "baseOnBalls": 8,
+            "intentionalWalks": 0,
+            "hits": 20,
+            "hitByPitch": 1,
+            "avg": ".185",
+            "atBats": 108,
+            "obp": ".246",
+            "slg": ".407",
+            "ops": ".653",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 467,
+            "era": "4.50",
+            "inningsPitched": "30.0",
+            "wins": 2,
+            "losses": 4,
+            "saves": 19,
+            "saveOpportunities": 20,
+            "holds": 0,
+            "blownSaves": 1,
+            "earnedRuns": 15,
+            "whip": "0.93",
+            "battersFaced": 119,
+            "outs": 90,
+            "gamesPitched": 33,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 311,
+            "strikePercentage": ".670",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 44,
+            "groundOutsToAirouts": "0.16",
+            "winPercentage": ".333",
+            "pitchesPerInning": "15.57",
+            "gamesFinished": 29,
+            "strikeoutWalkRatio": "4.13",
+            "strikeoutsPer9Inn": "9.90",
+            "walksPer9Inn": "2.40",
+            "hitsPer9Inn": "6.00",
+            "runsScoredPer9": "4.80",
+            "homeRunsPer9": "1.80",
+            "inheritedRunners": 3,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 623149,
+            "fullName": "Paul Sewald",
+            "link": "/api/v1/people/623149"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

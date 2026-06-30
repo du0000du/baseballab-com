@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 672282,
+    "fullName": "Reid Detmers",
+    "link": "/api/v1/people/672282",
+    "firstName": "Reid",
+    "lastName": "Detmers",
+    "primaryNumber": "48",
+    "birthDate": "1999-07-08",
+    "currentAge": 26,
+    "birthCity": "Nokomis",
+    "birthStateProvince": "IL",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Reid",
+    "useLastName": "Detmers",
+    "middleName": "Kristien",
+    "boxscoreName": "Detmers",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2020,
+    "mlbDebutDate": "2021-08-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Reid Detmers",
+    "nameSlug": "reid-detmers-672282",
+    "firstLastName": "Reid Detmers",
+    "lastFirstName": "Detmers, Reid",
+    "lastInitName": "Detmers, R",
+    "initLastName": "R Detmers",
+    "fullFMLName": "Reid Kristien Detmers",
+    "fullLFMName": "Detmers, Reid Kristien",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 72,
+            "airOuts": 111,
+            "runs": 46,
+            "doubles": 16,
+            "triples": 1,
+            "homeRuns": 8,
+            "strikeOuts": 112,
+            "baseOnBalls": 31,
+            "intentionalWalks": 0,
+            "hits": 75,
+            "hitByPitch": 4,
+            "avg": ".206",
+            "atBats": 364,
+            "obp": ".272",
+            "slg": ".321",
+            "ops": ".593",
+            "caughtStealing": 2,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".818",
+            "caughtStealingPercentage": ".182",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1608,
+            "era": "3.88",
+            "inningsPitched": "99.2",
+            "wins": 3,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 43,
+            "whip": "1.06",
+            "battersFaced": 406,
+            "outs": 299,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1055,
+            "strikePercentage": ".660",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 1,
+            "totalBases": 117,
+            "groundOutsToAirouts": "0.65",
+            "winPercentage": ".375",
+            "pitchesPerInning": "16.13",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.61",
+            "strikeoutsPer9Inn": "10.11",
+            "walksPer9Inn": "2.80",
+            "hitsPer9Inn": "6.77",
+            "runsScoredPer9": "4.15",
+            "homeRunsPer9": "0.72",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 1,
+            "sacBunts": 0,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 672282,
+            "fullName": "Reid Detmers",
+            "link": "/api/v1/people/672282"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

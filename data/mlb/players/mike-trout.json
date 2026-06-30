@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 545361,
+    "fullName": "Mike Trout",
+    "link": "/api/v1/people/545361",
+    "firstName": "Michael",
+    "lastName": "Trout",
+    "primaryNumber": "27",
+    "birthDate": "1991-08-07",
+    "currentAge": 34,
+    "birthCity": "Vineland",
+    "birthStateProvince": "NJ",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Mike",
+    "useLastName": "Trout",
+    "middleName": "Nelson",
+    "boxscoreName": "Trout",
+    "nickName": "Kiiiiid",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2009,
+    "mlbDebutDate": "2011-07-08",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Mike Trout",
+    "nameSlug": "mike-trout-545361",
+    "firstLastName": "Mike Trout",
+    "lastFirstName": "Trout, Mike",
+    "lastInitName": "Trout, M",
+    "initLastName": "M Trout",
+    "fullFMLName": "Michael Nelson Trout",
+    "fullLFMName": "Trout, Michael Nelson",
+    "strikeZoneTop": 3.244,
+    "strikeZoneBottom": 1.637
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 74,
+            "groundOuts": 47,
+            "airOuts": 73,
+            "runs": 54,
+            "doubles": 12,
+            "triples": 0,
+            "homeRuns": 17,
+            "strikeOuts": 83,
+            "baseOnBalls": 66,
+            "intentionalWalks": 8,
+            "hits": 62,
+            "hitByPitch": 4,
+            "avg": ".234",
+            "atBats": 265,
+            "obp": ".394",
+            "slg": ".472",
+            "ops": ".866",
+            "caughtStealing": 0,
+            "stolenBases": 7,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1408,
+            "plateAppearances": 335,
+            "totalBases": 125,
+            "rbi": 36,
+            "leftOnBase": 100,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".273",
+            "groundOutsToAirouts": "0.64",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "15.59"
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 545361,
+            "fullName": "Mike Trout",
+            "link": "/api/v1/people/545361"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

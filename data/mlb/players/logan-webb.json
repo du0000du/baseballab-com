@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 657277,
+    "fullName": "Logan Webb",
+    "link": "/api/v1/people/657277",
+    "firstName": "Logan",
+    "lastName": "Webb",
+    "primaryNumber": "62",
+    "birthDate": "1996-11-18",
+    "currentAge": 29,
+    "birthCity": "Rocklin",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 221,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Logan",
+    "useLastName": "Webb",
+    "middleName": "T.",
+    "boxscoreName": "Webb, L",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2019-08-17",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Logan Webb",
+    "nameSlug": "logan-webb-657277",
+    "firstLastName": "Logan Webb",
+    "lastFirstName": "Webb, Logan",
+    "lastInitName": "Webb, L",
+    "initLastName": "L Webb",
+    "fullFMLName": "Logan T. Webb",
+    "fullLFMName": "Webb, Logan T.",
+    "strikeZoneTop": 3.41,
+    "strikeZoneBottom": 1.58
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 14,
+            "gamesStarted": 14,
+            "groundOuts": 112,
+            "airOuts": 72,
+            "runs": 34,
+            "doubles": 13,
+            "triples": 2,
+            "homeRuns": 5,
+            "strikeOuts": 76,
+            "baseOnBalls": 22,
+            "intentionalWalks": 0,
+            "hits": 74,
+            "hitByPitch": 4,
+            "avg": ".222",
+            "atBats": 333,
+            "obp": ".279",
+            "slg": ".318",
+            "ops": ".597",
+            "caughtStealing": 3,
+            "stolenBases": 10,
+            "stolenBasePercentage": ".769",
+            "caughtStealingPercentage": ".231",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1312,
+            "era": "3.09",
+            "inningsPitched": "90.1",
+            "wins": 5,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 31,
+            "whip": "1.06",
+            "battersFaced": 361,
+            "outs": 271,
+            "gamesPitched": 14,
+            "completeGames": 1,
+            "shutouts": 0,
+            "strikes": 860,
+            "strikePercentage": ".660",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 106,
+            "groundOutsToAirouts": "1.56",
+            "winPercentage": ".500",
+            "pitchesPerInning": "14.52",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.45",
+            "strikeoutsPer9Inn": "7.57",
+            "walksPer9Inn": "2.19",
+            "hitsPer9Inn": "7.37",
+            "runsScoredPer9": "3.39",
+            "homeRunsPer9": "0.50",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 1,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 137,
+            "name": "San Francisco Giants",
+            "link": "/api/v1/teams/137"
+          },
+          "player": {
+            "id": 657277,
+            "fullName": "Logan Webb",
+            "link": "/api/v1/people/657277"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

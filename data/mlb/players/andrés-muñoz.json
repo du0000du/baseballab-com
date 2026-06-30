@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 662253,
+    "fullName": "Andrés Muñoz",
+    "link": "/api/v1/people/662253",
+    "firstName": "Andrés",
+    "lastName": "Muñoz",
+    "primaryNumber": "75",
+    "birthDate": "1999-01-16",
+    "currentAge": 27,
+    "birthCity": "Los Mochis",
+    "birthStateProvince": "SI",
+    "birthCountry": "Mexico",
+    "height": "6' 2\"",
+    "weight": 222,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Andrés",
+    "useLastName": "Muñoz",
+    "middleName": "Clemente",
+    "boxscoreName": "Muñoz, A",
+    "nickName": "El Plebe",
+    "gender": "M",
+    "nameMatrilineal": "Apodaca",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "on-DRACE moon-yoce",
+    "mlbDebutDate": "2019-07-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Andrés Muñoz",
+    "nameSlug": "andres-munoz-662253",
+    "firstLastName": "Andrés Muñoz",
+    "lastFirstName": "Muñoz, Andrés",
+    "lastInitName": "Muñoz, A",
+    "initLastName": "A Muñoz",
+    "fullFMLName": "Andrés Clemente Muñoz",
+    "fullLFMName": "Muñoz, Andrés Clemente",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 32,
+            "gamesStarted": 0,
+            "groundOuts": 22,
+            "airOuts": 21,
+            "runs": 17,
+            "doubles": 3,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 46,
+            "baseOnBalls": 13,
+            "intentionalWalks": 0,
+            "hits": 26,
+            "hitByPitch": 1,
+            "avg": ".228",
+            "atBats": 114,
+            "obp": ".310",
+            "slg": ".360",
+            "ops": ".670",
+            "caughtStealing": 0,
+            "stolenBases": 5,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 525,
+            "era": "4.91",
+            "inningsPitched": "29.1",
+            "wins": 3,
+            "losses": 4,
+            "saves": 15,
+            "saveOpportunities": 20,
+            "holds": 0,
+            "blownSaves": 5,
+            "earnedRuns": 16,
+            "whip": "1.33",
+            "battersFaced": 129,
+            "outs": 88,
+            "gamesPitched": 32,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 332,
+            "strikePercentage": ".630",
+            "hitBatsmen": 1,
+            "balks": 1,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 41,
+            "groundOutsToAirouts": "1.05",
+            "winPercentage": ".429",
+            "pitchesPerInning": "17.90",
+            "gamesFinished": 24,
+            "strikeoutWalkRatio": "3.54",
+            "strikeoutsPer9Inn": "14.11",
+            "walksPer9Inn": "3.99",
+            "hitsPer9Inn": "7.98",
+            "runsScoredPer9": "5.22",
+            "homeRunsPer9": "1.23",
+            "inheritedRunners": 5,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 136,
+            "name": "Seattle Mariners",
+            "link": "/api/v1/teams/136"
+          },
+          "player": {
+            "id": 662253,
+            "fullName": "Andrés Muñoz",
+            "link": "/api/v1/people/662253"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 669372,
+    "fullName": "J.T. Ginn",
+    "link": "/api/v1/people/669372",
+    "firstName": "John",
+    "lastName": "Ginn",
+    "primaryNumber": "35",
+    "birthDate": "1999-05-20",
+    "currentAge": 27,
+    "birthCity": "Flowood",
+    "birthStateProvince": "MS",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "J.T.",
+    "useLastName": "Ginn",
+    "middleName": "Thomas",
+    "boxscoreName": "Ginn",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2024-08-21",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "J.T. Ginn",
+    "nameSlug": "j-t-ginn-669372",
+    "firstLastName": "J.T. Ginn",
+    "lastFirstName": "Ginn, J.T.",
+    "lastInitName": "Ginn, J",
+    "initLastName": "J Ginn",
+    "fullFMLName": "John Thomas Ginn",
+    "fullLFMName": "Ginn, John Thomas",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 18,
+            "gamesStarted": 15,
+            "groundOuts": 96,
+            "airOuts": 82,
+            "runs": 35,
+            "doubles": 13,
+            "triples": 0,
+            "homeRuns": 9,
+            "strikeOuts": 78,
+            "baseOnBalls": 36,
+            "intentionalWalks": 0,
+            "hits": 72,
+            "hitByPitch": 4,
+            "avg": ".222",
+            "atBats": 325,
+            "obp": ".305",
+            "slg": ".345",
+            "ops": ".650",
+            "caughtStealing": 2,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".778",
+            "caughtStealingPercentage": ".222",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1395,
+            "era": "3.15",
+            "inningsPitched": "88.2",
+            "wins": 6,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 1,
+            "holds": 0,
+            "blownSaves": 1,
+            "earnedRuns": 31,
+            "whip": "1.22",
+            "battersFaced": 368,
+            "outs": 266,
+            "gamesPitched": 18,
+            "completeGames": 1,
+            "shutouts": 0,
+            "strikes": 856,
+            "strikePercentage": ".610",
+            "hitBatsmen": 4,
+            "balks": 1,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 112,
+            "groundOutsToAirouts": "1.17",
+            "winPercentage": ".600",
+            "pitchesPerInning": "15.73",
+            "gamesFinished": 2,
+            "strikeoutWalkRatio": "2.17",
+            "strikeoutsPer9Inn": "7.92",
+            "walksPer9Inn": "3.65",
+            "hitsPer9Inn": "7.31",
+            "runsScoredPer9": "3.55",
+            "homeRunsPer9": "0.91",
+            "inheritedRunners": 4,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 133,
+            "name": "Athletics",
+            "link": "/api/v1/teams/133"
+          },
+          "player": {
+            "id": 669372,
+            "fullName": "J.T. Ginn",
+            "link": "/api/v1/people/669372"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

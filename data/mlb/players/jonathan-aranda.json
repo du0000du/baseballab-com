@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 666018,
+    "fullName": "Jonathan Aranda",
+    "link": "/api/v1/people/666018",
+    "firstName": "Jonathan",
+    "lastName": "Aranda",
+    "primaryNumber": "8",
+    "birthDate": "1998-05-23",
+    "currentAge": 28,
+    "birthCity": "Tijuana",
+    "birthStateProvince": "BC",
+    "birthCountry": "Mexico",
+    "height": "6' 0\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Jonathan",
+    "useLastName": "Aranda",
+    "middleName": "Alexander",
+    "boxscoreName": "Aranda",
+    "gender": "M",
+    "nameMatrilineal": "Ventura",
+    "isPlayer": true,
+    "isVerified": false,
+    "pronunciation": "ah-RAHN-duh",
+    "mlbDebutDate": "2022-06-24",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jonathan Aranda",
+    "nameSlug": "jonathan-aranda-666018",
+    "firstLastName": "Jonathan Aranda",
+    "lastFirstName": "Aranda, Jonathan",
+    "lastInitName": "Aranda, J",
+    "initLastName": "J Aranda",
+    "fullFMLName": "Jonathan Alexander Aranda",
+    "fullLFMName": "Aranda, Jonathan Alexander",
+    "strikeZoneTop": 3.189,
+    "strikeZoneBottom": 1.61
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 80,
+            "groundOuts": 62,
+            "airOuts": 73,
+            "runs": 42,
+            "doubles": 13,
+            "triples": 0,
+            "homeRuns": 13,
+            "strikeOuts": 78,
+            "baseOnBalls": 47,
+            "intentionalWalks": 3,
+            "hits": 83,
+            "hitByPitch": 6,
+            "avg": ".286",
+            "atBats": 290,
+            "obp": ".390",
+            "slg": ".466",
+            "ops": ".856",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1377,
+            "plateAppearances": 349,
+            "totalBases": 135,
+            "rbi": 57,
+            "leftOnBase": 124,
+            "sacBunts": 0,
+            "sacFlies": 6,
+            "babip": ".341",
+            "groundOutsToAirouts": "0.85",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "22.31"
+          },
+          "team": {
+            "id": 139,
+            "name": "Tampa Bay Rays",
+            "link": "/api/v1/teams/139"
+          },
+          "player": {
+            "id": 666018,
+            "fullName": "Jonathan Aranda",
+            "link": "/api/v1/people/666018"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

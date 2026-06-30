@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 676106,
+    "fullName": "Emerson Hancock",
+    "link": "/api/v1/people/676106",
+    "firstName": "Emerson",
+    "lastName": "Hancock",
+    "primaryNumber": "26",
+    "birthDate": "1999-05-31",
+    "currentAge": 27,
+    "birthCity": "Cairo",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 213,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Emerson",
+    "useLastName": "Hancock",
+    "middleName": "Christian",
+    "boxscoreName": "Hancock",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2023-08-09",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Emerson Hancock",
+    "nameSlug": "emerson-hancock-676106",
+    "firstLastName": "Emerson Hancock",
+    "lastFirstName": "Hancock, Emerson",
+    "lastInitName": "Hancock, E",
+    "initLastName": "E Hancock",
+    "fullFMLName": "Emerson Christian Hancock",
+    "fullLFMName": "Hancock, Emerson Christian",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 16,
+            "gamesStarted": 16,
+            "groundOuts": 76,
+            "airOuts": 98,
+            "runs": 35,
+            "doubles": 12,
+            "triples": 0,
+            "homeRuns": 12,
+            "strikeOuts": 87,
+            "baseOnBalls": 22,
+            "intentionalWalks": 0,
+            "hits": 73,
+            "hitByPitch": 4,
+            "avg": ".220",
+            "atBats": 332,
+            "obp": ".275",
+            "slg": ".364",
+            "ops": ".639",
+            "caughtStealing": 1,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 1421,
+            "era": "3.47",
+            "inningsPitched": "90.2",
+            "wins": 5,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 35,
+            "whip": "1.05",
+            "battersFaced": 360,
+            "outs": 272,
+            "gamesPitched": 16,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 908,
+            "strikePercentage": ".640",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 1,
+            "totalBases": 121,
+            "groundOutsToAirouts": "0.78",
+            "winPercentage": ".556",
+            "pitchesPerInning": "15.67",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.95",
+            "strikeoutsPer9Inn": "8.64",
+            "walksPer9Inn": "2.18",
+            "hitsPer9Inn": "7.25",
+            "runsScoredPer9": "3.47",
+            "homeRunsPer9": "1.19",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 136,
+            "name": "Seattle Mariners",
+            "link": "/api/v1/teams/136"
+          },
+          "player": {
+            "id": 676106,
+            "fullName": "Emerson Hancock",
+            "link": "/api/v1/people/676106"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

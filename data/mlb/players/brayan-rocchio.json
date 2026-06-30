@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 677587,
+    "fullName": "Brayan Rocchio",
+    "link": "/api/v1/people/677587",
+    "firstName": "Brayan",
+    "lastName": "Rocchio",
+    "primaryNumber": "4",
+    "birthDate": "2001-01-13",
+    "currentAge": 25,
+    "birthCity": "Caracas",
+    "birthCountry": "Venezuela",
+    "height": "5' 9\"",
+    "weight": 170,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Brayan",
+    "useLastName": "Rocchio",
+    "middleName": "Hommy",
+    "boxscoreName": "Rocchio",
+    "gender": "M",
+    "nameMatrilineal": "Zambrano",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "Brian roak-E-O",
+    "mlbDebutDate": "2023-05-16",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brayan Rocchio",
+    "nameSlug": "brayan-rocchio-677587",
+    "firstLastName": "Brayan Rocchio",
+    "lastFirstName": "Rocchio, Brayan",
+    "lastInitName": "Rocchio, B",
+    "initLastName": "B Rocchio",
+    "fullFMLName": "Brayan Hommy Rocchio",
+    "fullLFMName": "Rocchio, Brayan Hommy",
+    "strikeZoneTop": 3.068,
+    "strikeZoneBottom": 1.548
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 82,
+            "groundOuts": 74,
+            "airOuts": 91,
+            "runs": 33,
+            "doubles": 13,
+            "triples": 2,
+            "homeRuns": 5,
+            "strikeOuts": 42,
+            "baseOnBalls": 25,
+            "intentionalWalks": 0,
+            "hits": 75,
+            "hitByPitch": 7,
+            "avg": ".271",
+            "atBats": 277,
+            "obp": ".343",
+            "slg": ".386",
+            "ops": ".729",
+            "caughtStealing": 4,
+            "stolenBases": 14,
+            "stolenBasePercentage": ".778",
+            "caughtStealingPercentage": ".222",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1229,
+            "plateAppearances": 314,
+            "totalBases": 107,
+            "rbi": 34,
+            "leftOnBase": 115,
+            "sacBunts": 2,
+            "sacFlies": 3,
+            "babip": ".300",
+            "groundOutsToAirouts": "0.81",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "55.40"
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 677587,
+            "fullName": "Brayan Rocchio",
+            "link": "/api/v1/people/677587"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

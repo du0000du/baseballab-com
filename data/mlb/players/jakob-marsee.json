@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 805300,
+    "fullName": "Jakob Marsee",
+    "link": "/api/v1/people/805300",
+    "firstName": "Jakob",
+    "lastName": "Marsee",
+    "primaryNumber": "87",
+    "birthDate": "2001-06-28",
+    "currentAge": 25,
+    "birthCity": "Dearborn",
+    "birthStateProvince": "MI",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Jakob",
+    "useLastName": "Marsee",
+    "middleName": "Joseph",
+    "boxscoreName": "Marsee",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "mlbDebutDate": "2025-08-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Jakob Marsee",
+    "nameSlug": "jakob-marsee-805300",
+    "firstLastName": "Jakob Marsee",
+    "lastFirstName": "Marsee, Jakob",
+    "lastInitName": "Marsee, J",
+    "initLastName": "J Marsee",
+    "fullFMLName": "Jakob Joseph Marsee",
+    "fullLFMName": "Marsee, Jakob Joseph",
+    "strikeZoneTop": 3.212,
+    "strikeZoneBottom": 1.621
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 83,
+            "groundOuts": 65,
+            "airOuts": 91,
+            "runs": 41,
+            "doubles": 11,
+            "triples": 3,
+            "homeRuns": 4,
+            "strikeOuts": 82,
+            "baseOnBalls": 44,
+            "intentionalWalks": 0,
+            "hits": 56,
+            "hitByPitch": 7,
+            "avg": ".193",
+            "atBats": 290,
+            "obp": ".313",
+            "slg": ".293",
+            "ops": ".606",
+            "caughtStealing": 9,
+            "stolenBases": 18,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 1374,
+            "plateAppearances": 345,
+            "totalBases": 85,
+            "rbi": 21,
+            "leftOnBase": 98,
+            "sacBunts": 3,
+            "sacFlies": 1,
+            "babip": ".254",
+            "groundOutsToAirouts": "0.71",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "72.50"
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 805300,
+            "fullName": "Jakob Marsee",
+            "link": "/api/v1/people/805300"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

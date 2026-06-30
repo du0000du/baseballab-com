@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 519242,
+    "fullName": "Chris Sale",
+    "link": "/api/v1/people/519242",
+    "firstName": "Christopher",
+    "lastName": "Sale",
+    "primaryNumber": "51",
+    "birthDate": "1989-03-30",
+    "currentAge": 37,
+    "birthCity": "Lakeland",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Chris",
+    "useLastName": "Sale",
+    "middleName": "Allen",
+    "boxscoreName": "Sale",
+    "nickName": "The Conductor",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2010,
+    "mlbDebutDate": "2010-08-06",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Chris Sale",
+    "nameSlug": "chris-sale-519242",
+    "firstLastName": "Chris Sale",
+    "lastFirstName": "Sale, Chris",
+    "lastInitName": "Sale, C",
+    "initLastName": "C Sale",
+    "fullFMLName": "Christopher Allen Sale",
+    "fullLFMName": "Sale, Christopher Allen",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 37,
+            "gamesPlayed": 15,
+            "gamesStarted": 15,
+            "groundOuts": 76,
+            "airOuts": 78,
+            "runs": 26,
+            "doubles": 10,
+            "triples": 0,
+            "homeRuns": 6,
+            "strikeOuts": 109,
+            "baseOnBalls": 22,
+            "intentionalWalks": 0,
+            "hits": 75,
+            "hitByPitch": 8,
+            "avg": ".224",
+            "atBats": 335,
+            "obp": ".286",
+            "slg": ".307",
+            "ops": ".593",
+            "caughtStealing": 2,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1444,
+            "era": "2.10",
+            "inningsPitched": "90.0",
+            "wins": 8,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 21,
+            "whip": "1.08",
+            "battersFaced": 368,
+            "outs": 270,
+            "gamesPitched": 15,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 973,
+            "strikePercentage": ".670",
+            "hitBatsmen": 8,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 103,
+            "groundOutsToAirouts": "0.97",
+            "winPercentage": ".571",
+            "pitchesPerInning": "16.04",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "4.95",
+            "strikeoutsPer9Inn": "10.90",
+            "walksPer9Inn": "2.20",
+            "hitsPer9Inn": "7.50",
+            "runsScoredPer9": "2.60",
+            "homeRunsPer9": "0.60",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 519242,
+            "fullName": "Chris Sale",
+            "link": "/api/v1/people/519242"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

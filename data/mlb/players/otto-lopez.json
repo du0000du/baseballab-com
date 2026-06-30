@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 672640,
+    "fullName": "Otto Lopez",
+    "link": "/api/v1/people/672640",
+    "firstName": "Otto",
+    "lastName": "Lopez",
+    "primaryNumber": "6",
+    "birthDate": "1998-10-01",
+    "currentAge": 27,
+    "birthCity": "Santo Domingo",
+    "birthCountry": "Dominican Republic",
+    "height": "5' 10\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Otto",
+    "useLastName": "Lopez",
+    "middleName": "Ariel",
+    "boxscoreName": "Lopez, O",
+    "gender": "M",
+    "nameMatrilineal": "Bello",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2021-08-17",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Otto Lopez",
+    "nameSlug": "otto-lopez-672640",
+    "firstLastName": "Otto Lopez",
+    "lastFirstName": "Lopez, Otto",
+    "lastInitName": "Lopez, O",
+    "initLastName": "O Lopez",
+    "fullFMLName": "Otto Ariel Lopez",
+    "fullLFMName": "Lopez, Otto Ariel",
+    "strikeZoneTop": 3.14,
+    "strikeZoneBottom": 1.58
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 84,
+            "groundOuts": 96,
+            "airOuts": 81,
+            "runs": 53,
+            "doubles": 22,
+            "triples": 4,
+            "homeRuns": 7,
+            "strikeOuts": 50,
+            "baseOnBalls": 16,
+            "intentionalWalks": 0,
+            "hits": 111,
+            "hitByPitch": 4,
+            "avg": ".333",
+            "atBats": 333,
+            "obp": ".366",
+            "slg": ".486",
+            "ops": ".852",
+            "caughtStealing": 3,
+            "stolenBases": 16,
+            "stolenBasePercentage": ".842",
+            "caughtStealingPercentage": ".158",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1292,
+            "plateAppearances": 358,
+            "totalBases": 162,
+            "rbi": 37,
+            "leftOnBase": 122,
+            "sacBunts": 0,
+            "sacFlies": 5,
+            "babip": ".370",
+            "groundOutsToAirouts": "1.19",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "47.57"
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 672640,
+            "fullName": "Otto Lopez",
+            "link": "/api/v1/people/672640"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

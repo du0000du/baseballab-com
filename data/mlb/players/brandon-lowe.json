@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 664040,
+    "fullName": "Brandon Lowe",
+    "link": "/api/v1/people/664040",
+    "firstName": "Brandon",
+    "lastName": "Lowe",
+    "primaryNumber": "5",
+    "birthDate": "1994-07-06",
+    "currentAge": 31,
+    "birthCity": "Suffolk",
+    "birthStateProvince": "VA",
+    "birthCountry": "USA",
+    "height": "5' 9\"",
+    "weight": 181,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Brandon",
+    "useLastName": "Lowe",
+    "middleName": "Norman",
+    "boxscoreName": "Lowe, B",
+    "nickName": "Bamm-Bamm",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "pronunciation": "rhymes with \"now\"",
+    "mlbDebutDate": "2018-08-05",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brandon Lowe",
+    "nameSlug": "brandon-lowe-664040",
+    "firstLastName": "Brandon Lowe",
+    "lastFirstName": "Lowe, Brandon",
+    "lastInitName": "Lowe, B",
+    "initLastName": "B Lowe",
+    "fullFMLName": "Brandon Norman Lowe",
+    "fullLFMName": "Lowe, Brandon Norman",
+    "strikeZoneTop": 3.088,
+    "strikeZoneBottom": 1.559
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 79,
+            "groundOuts": 62,
+            "airOuts": 87,
+            "runs": 51,
+            "doubles": 19,
+            "triples": 1,
+            "homeRuns": 20,
+            "strikeOuts": 92,
+            "baseOnBalls": 34,
+            "intentionalWalks": 0,
+            "hits": 74,
+            "hitByPitch": 2,
+            "avg": ".239",
+            "atBats": 309,
+            "obp": ".313",
+            "slg": ".502",
+            "ops": ".815",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1408,
+            "plateAppearances": 351,
+            "totalBases": 155,
+            "rbi": 57,
+            "leftOnBase": 137,
+            "sacBunts": 0,
+            "sacFlies": 6,
+            "babip": ".266",
+            "groundOutsToAirouts": "0.71",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "15.45"
+          },
+          "team": {
+            "id": 134,
+            "name": "Pittsburgh Pirates",
+            "link": "/api/v1/teams/134"
+          },
+          "player": {
+            "id": 664040,
+            "fullName": "Brandon Lowe",
+            "link": "/api/v1/people/664040"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

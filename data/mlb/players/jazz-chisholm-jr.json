@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 665862,
+    "fullName": "Jazz Chisholm Jr.",
+    "link": "/api/v1/people/665862",
+    "firstName": "Jasrado",
+    "lastName": "Chisholm",
+    "primaryNumber": "13",
+    "birthDate": "1998-02-01",
+    "currentAge": 28,
+    "birthCity": "Nassau",
+    "birthCountry": "Bahamas",
+    "height": "5' 11\"",
+    "weight": 184,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Jazz",
+    "useLastName": "Chisholm Jr.",
+    "middleName": "Hermis Arrington",
+    "boxscoreName": "Chisholm Jr.",
+    "gender": "M",
+    "nameMatrilineal": "Coakley",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2020-09-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jazz Chisholm Jr.",
+    "nameTitle": "Jr.",
+    "nameSuffix": "Jr.",
+    "nameSlug": "jazz-chisholm-jr-665862",
+    "firstLastName": "Jazz Chisholm Jr.",
+    "lastFirstName": "Chisholm Jr., Jazz",
+    "lastInitName": "Chisholm Jr., J",
+    "initLastName": "J Chisholm Jr.",
+    "fullFMLName": "Jasrado Hermis Arrington Chisholm Jr.",
+    "fullLFMName": "Chisholm Jr., Jasrado Hermis Arrington",
+    "strikeZoneTop": 3.156,
+    "strikeZoneBottom": 1.593
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 81,
+            "groundOuts": 60,
+            "airOuts": 71,
+            "runs": 42,
+            "doubles": 10,
+            "triples": 2,
+            "homeRuns": 12,
+            "strikeOuts": 92,
+            "baseOnBalls": 34,
+            "intentionalWalks": 0,
+            "hits": 63,
+            "hitByPitch": 1,
+            "avg": ".222",
+            "atBats": 284,
+            "obp": ".305",
+            "slg": ".398",
+            "ops": ".703",
+            "caughtStealing": 4,
+            "stolenBases": 24,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1321,
+            "plateAppearances": 321,
+            "totalBases": 113,
+            "rbi": 33,
+            "leftOnBase": 132,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".280",
+            "groundOutsToAirouts": "0.85",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "23.67"
+          },
+          "team": {
+            "id": 147,
+            "name": "New York Yankees",
+            "link": "/api/v1/teams/147"
+          },
+          "player": {
+            "id": 665862,
+            "fullName": "Jazz Chisholm Jr.",
+            "link": "/api/v1/people/665862"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

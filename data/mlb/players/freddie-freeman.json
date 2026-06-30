@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 518692,
+    "fullName": "Freddie Freeman",
+    "link": "/api/v1/people/518692",
+    "firstName": "Frederick",
+    "lastName": "Freeman",
+    "primaryNumber": "5",
+    "birthDate": "1989-09-12",
+    "currentAge": 36,
+    "birthCity": "Villa Park",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Freddie",
+    "useLastName": "Freeman",
+    "middleName": "Charles",
+    "boxscoreName": "Freeman, F",
+    "nickName": "Phillip",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2007,
+    "mlbDebutDate": "2010-09-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Freddie Freeman",
+    "nameSlug": "freddie-freeman-518692",
+    "firstLastName": "Freddie Freeman",
+    "lastFirstName": "Freeman, Freddie",
+    "lastInitName": "Freeman, F",
+    "initLastName": "F Freeman",
+    "fullFMLName": "Frederick Charles Freeman",
+    "fullLFMName": "Freeman, Frederick Charles",
+    "strikeZoneTop": 3.382,
+    "strikeZoneBottom": 1.707
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 82,
+            "groundOuts": 83,
+            "airOuts": 81,
+            "runs": 47,
+            "doubles": 21,
+            "triples": 1,
+            "homeRuns": 13,
+            "strikeOuts": 59,
+            "baseOnBalls": 43,
+            "intentionalWalks": 1,
+            "hits": 90,
+            "hitByPitch": 3,
+            "avg": ".290",
+            "atBats": 310,
+            "obp": ".379",
+            "slg": ".490",
+            "ops": ".869",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 11,
+            "numberOfPitches": 1495,
+            "plateAppearances": 359,
+            "totalBases": 152,
+            "rbi": 46,
+            "leftOnBase": 133,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".320",
+            "groundOutsToAirouts": "1.02",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "23.85"
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 518692,
+            "fullName": "Freddie Freeman",
+            "link": "/api/v1/people/518692"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

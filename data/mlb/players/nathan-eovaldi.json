@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 543135,
+    "fullName": "Nathan Eovaldi",
+    "link": "/api/v1/people/543135",
+    "firstName": "Nathan",
+    "lastName": "Eovaldi",
+    "primaryNumber": "17",
+    "birthDate": "1990-02-13",
+    "currentAge": 36,
+    "birthCity": "Houston",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 217,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Nathan",
+    "useLastName": "Eovaldi",
+    "middleName": "Edward",
+    "boxscoreName": "Eovaldi",
+    "nickName": "Nitro",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2008,
+    "pronunciation": "ee-VAHL-dee",
+    "mlbDebutDate": "2011-08-06",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Nathan Eovaldi",
+    "nameSlug": "nathan-eovaldi-543135",
+    "firstLastName": "Nathan Eovaldi",
+    "lastFirstName": "Eovaldi, Nathan",
+    "lastInitName": "Eovaldi, N",
+    "initLastName": "N Eovaldi",
+    "fullFMLName": "Nathan Edward Eovaldi",
+    "fullLFMName": "Eovaldi, Nathan Edward",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 16,
+            "gamesStarted": 16,
+            "groundOuts": 106,
+            "airOuts": 85,
+            "runs": 46,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 17,
+            "strikeOuts": 101,
+            "baseOnBalls": 23,
+            "intentionalWalks": 0,
+            "hits": 93,
+            "hitByPitch": 6,
+            "avg": ".243",
+            "atBats": 383,
+            "obp": ".295",
+            "slg": ".420",
+            "ops": ".715",
+            "caughtStealing": 3,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".400",
+            "caughtStealingPercentage": ".600",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1471,
+            "era": "3.95",
+            "inningsPitched": "100.1",
+            "wins": 8,
+            "losses": 7,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 44,
+            "whip": "1.16",
+            "battersFaced": 414,
+            "outs": 301,
+            "gamesPitched": 16,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 990,
+            "strikePercentage": ".670",
+            "hitBatsmen": 6,
+            "balks": 0,
+            "wildPitches": 5,
+            "pickoffs": 0,
+            "totalBases": 161,
+            "groundOutsToAirouts": "1.25",
+            "winPercentage": ".533",
+            "pitchesPerInning": "14.66",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "4.39",
+            "strikeoutsPer9Inn": "9.06",
+            "walksPer9Inn": "2.06",
+            "hitsPer9Inn": "8.34",
+            "runsScoredPer9": "4.13",
+            "homeRunsPer9": "1.52",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 543135,
+            "fullName": "Nathan Eovaldi",
+            "link": "/api/v1/people/543135"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

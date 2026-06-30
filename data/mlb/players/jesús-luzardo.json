@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 666200,
+    "fullName": "Jesús Luzardo",
+    "link": "/api/v1/people/666200",
+    "firstName": "Jesús",
+    "lastName": "Luzardo",
+    "primaryNumber": "44",
+    "birthDate": "1997-09-30",
+    "currentAge": 28,
+    "birthCity": "Lima",
+    "birthCountry": "Peru",
+    "height": "6' 0\"",
+    "weight": 218,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jesús",
+    "useLastName": "Luzardo",
+    "middleName": "G.",
+    "boxscoreName": "Luzardo",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2016,
+    "mlbDebutDate": "2019-09-11",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Jesús Luzardo",
+    "nameSlug": "jesus-luzardo-666200",
+    "firstLastName": "Jesús Luzardo",
+    "lastFirstName": "Luzardo, Jesús",
+    "lastInitName": "Luzardo, J",
+    "initLastName": "J Luzardo",
+    "fullFMLName": "Jesús G. Luzardo",
+    "fullLFMName": "Luzardo, Jesús G.",
+    "strikeZoneTop": 3.47,
+    "strikeZoneBottom": 1.61
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 100,
+            "airOuts": 66,
+            "runs": 48,
+            "doubles": 17,
+            "triples": 1,
+            "homeRuns": 9,
+            "strikeOuts": 116,
+            "baseOnBalls": 33,
+            "intentionalWalks": 0,
+            "hits": 94,
+            "hitByPitch": 5,
+            "avg": ".253",
+            "atBats": 372,
+            "obp": ".320",
+            "slg": ".376",
+            "ops": ".696",
+            "caughtStealing": 4,
+            "stolenBases": 8,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1645,
+            "era": "3.88",
+            "inningsPitched": "97.1",
+            "wins": 6,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 42,
+            "whip": "1.30",
+            "battersFaced": 414,
+            "outs": 292,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1055,
+            "strikePercentage": ".640",
+            "hitBatsmen": 5,
+            "balks": 1,
+            "wildPitches": 5,
+            "pickoffs": 1,
+            "totalBases": 140,
+            "groundOutsToAirouts": "1.52",
+            "winPercentage": ".600",
+            "pitchesPerInning": "16.90",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.52",
+            "strikeoutsPer9Inn": "10.73",
+            "walksPer9Inn": "3.05",
+            "hitsPer9Inn": "8.69",
+            "runsScoredPer9": "4.44",
+            "homeRunsPer9": "0.83",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 666200,
+            "fullName": "Jesús Luzardo",
+            "link": "/api/v1/people/666200"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

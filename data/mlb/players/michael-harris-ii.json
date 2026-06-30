@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 671739,
+    "fullName": "Michael Harris II",
+    "link": "/api/v1/people/671739",
+    "firstName": "Michael",
+    "lastName": "Harris",
+    "primaryNumber": "23",
+    "birthDate": "2001-03-07",
+    "currentAge": 25,
+    "birthCity": "DeKalb",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Michael",
+    "useLastName": "Harris II",
+    "middleName": "Machion",
+    "boxscoreName": "Harris II",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2022-05-28",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Michael Harris II",
+    "nameTitle": "II",
+    "nameSuffix": "II",
+    "nameSlug": "michael-harris-ii-671739",
+    "firstLastName": "Michael Harris II",
+    "lastFirstName": "Harris II, Michael",
+    "lastInitName": "Harris II, M",
+    "initLastName": "M Harris II",
+    "fullFMLName": "Michael Machion Harris II",
+    "fullLFMName": "Harris II, Michael Machion",
+    "strikeZoneTop": 3.181,
+    "strikeZoneBottom": 1.606
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 76,
+            "groundOuts": 71,
+            "airOuts": 66,
+            "runs": 37,
+            "doubles": 13,
+            "triples": 0,
+            "homeRuns": 14,
+            "strikeOuts": 59,
+            "baseOnBalls": 13,
+            "intentionalWalks": 0,
+            "hits": 82,
+            "hitByPitch": 1,
+            "avg": ".297",
+            "atBats": 276,
+            "obp": ".329",
+            "slg": ".496",
+            "ops": ".825",
+            "caughtStealing": 1,
+            "stolenBases": 5,
+            "stolenBasePercentage": ".833",
+            "caughtStealingPercentage": ".167",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1063,
+            "plateAppearances": 292,
+            "totalBases": 137,
+            "rbi": 43,
+            "leftOnBase": 99,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".332",
+            "groundOutsToAirouts": "1.08",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "19.71"
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 671739,
+            "fullName": "Michael Harris II",
+            "link": "/api/v1/people/671739"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

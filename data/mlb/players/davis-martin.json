@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 663436,
+    "fullName": "Davis Martin",
+    "link": "/api/v1/people/663436",
+    "firstName": "Davis",
+    "lastName": "Martin",
+    "primaryNumber": "65",
+    "birthDate": "1997-01-04",
+    "currentAge": 29,
+    "birthCity": "Abilene",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Davis",
+    "useLastName": "Martin",
+    "middleName": "Alan",
+    "boxscoreName": "Martin",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "mlbDebutDate": "2022-05-17",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Davis Martin",
+    "nameSlug": "davis-martin-663436",
+    "firstLastName": "Davis Martin",
+    "lastFirstName": "Martin, Davis",
+    "lastInitName": "Martin, D",
+    "initLastName": "D Martin",
+    "fullFMLName": "Davis Alan Martin",
+    "fullLFMName": "Martin, Davis Alan",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 16,
+            "gamesStarted": 16,
+            "groundOuts": 86,
+            "airOuts": 88,
+            "runs": 31,
+            "doubles": 23,
+            "triples": 0,
+            "homeRuns": 6,
+            "strikeOuts": 90,
+            "baseOnBalls": 24,
+            "intentionalWalks": 0,
+            "hits": 86,
+            "hitByPitch": 4,
+            "avg": ".247",
+            "atBats": 348,
+            "obp": ".302",
+            "slg": ".365",
+            "ops": ".667",
+            "caughtStealing": 2,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 11,
+            "numberOfPitches": 1450,
+            "era": "3.00",
+            "inningsPitched": "93.0",
+            "wins": 9,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 31,
+            "whip": "1.18",
+            "battersFaced": 378,
+            "outs": 279,
+            "gamesPitched": 16,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 942,
+            "strikePercentage": ".650",
+            "hitBatsmen": 4,
+            "balks": 1,
+            "wildPitches": 5,
+            "pickoffs": 0,
+            "totalBases": 127,
+            "groundOutsToAirouts": "0.98",
+            "winPercentage": ".750",
+            "pitchesPerInning": "15.59",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.75",
+            "strikeoutsPer9Inn": "8.71",
+            "walksPer9Inn": "2.32",
+            "hitsPer9Inn": "8.32",
+            "runsScoredPer9": "3.00",
+            "homeRunsPer9": "0.58",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 145,
+            "name": "Chicago White Sox",
+            "link": "/api/v1/teams/145"
+          },
+          "player": {
+            "id": 663436,
+            "fullName": "Davis Martin",
+            "link": "/api/v1/people/663436"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

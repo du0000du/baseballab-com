@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 656492,
+    "fullName": "Foster Griffin",
+    "link": "/api/v1/people/656492",
+    "firstName": "Fred",
+    "lastName": "Griffin",
+    "primaryNumber": "22",
+    "birthDate": "1995-07-27",
+    "currentAge": 30,
+    "birthCity": "Orlando",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Foster",
+    "useLastName": "Griffin",
+    "middleName": "Foster",
+    "boxscoreName": "Griffin",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2020-07-27",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Foster Griffin",
+    "nameSlug": "foster-griffin-656492",
+    "firstLastName": "Foster Griffin",
+    "lastFirstName": "Griffin, Foster",
+    "lastInitName": "Griffin, F",
+    "initLastName": "F Griffin",
+    "fullFMLName": "Fred Foster Griffin",
+    "fullLFMName": "Griffin, Fred Foster",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 97,
+            "airOuts": 96,
+            "runs": 37,
+            "doubles": 11,
+            "triples": 0,
+            "homeRuns": 16,
+            "strikeOuts": 98,
+            "baseOnBalls": 25,
+            "intentionalWalks": 0,
+            "hits": 77,
+            "hitByPitch": 7,
+            "avg": ".210",
+            "atBats": 366,
+            "obp": ".273",
+            "slg": ".372",
+            "ops": ".645",
+            "caughtStealing": 0,
+            "stolenBases": 4,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1589,
+            "era": "2.93",
+            "inningsPitched": "98.1",
+            "wins": 8,
+            "losses": 2,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 32,
+            "whip": "1.04",
+            "battersFaced": 400,
+            "outs": 295,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1055,
+            "strikePercentage": ".660",
+            "hitBatsmen": 7,
+            "balks": 1,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 136,
+            "groundOutsToAirouts": "1.01",
+            "winPercentage": ".800",
+            "pitchesPerInning": "16.16",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.92",
+            "strikeoutsPer9Inn": "8.97",
+            "walksPer9Inn": "2.29",
+            "hitsPer9Inn": "7.05",
+            "runsScoredPer9": "3.39",
+            "homeRunsPer9": "1.46",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 656492,
+            "fullName": "Foster Griffin",
+            "link": "/api/v1/people/656492"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 682928,
+    "fullName": "CJ Abrams",
+    "link": "/api/v1/people/682928",
+    "firstName": "Paul",
+    "lastName": "Abrams",
+    "primaryNumber": "5",
+    "birthDate": "2000-10-03",
+    "currentAge": 25,
+    "birthCity": "Alpharetta",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 191,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "CJ",
+    "useLastName": "Abrams",
+    "middleName": "Christopher",
+    "boxscoreName": "Abrams",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2022-04-08",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "CJ Abrams",
+    "nameSlug": "cj-abrams-682928",
+    "firstLastName": "CJ Abrams",
+    "lastFirstName": "Abrams, CJ",
+    "lastInitName": "Abrams, C",
+    "initLastName": "C Abrams",
+    "fullFMLName": "Paul Christopher Abrams",
+    "fullLFMName": "Abrams, Paul Christopher",
+    "strikeZoneTop": 3.223,
+    "strikeZoneBottom": 1.626
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 83,
+            "groundOuts": 59,
+            "airOuts": 90,
+            "runs": 51,
+            "doubles": 16,
+            "triples": 2,
+            "homeRuns": 17,
+            "strikeOuts": 76,
+            "baseOnBalls": 31,
+            "intentionalWalks": 2,
+            "hits": 84,
+            "hitByPitch": 10,
+            "avg": ".275",
+            "atBats": 306,
+            "obp": ".357",
+            "slg": ".507",
+            "ops": ".864",
+            "caughtStealing": 4,
+            "stolenBases": 13,
+            "stolenBasePercentage": ".765",
+            "caughtStealingPercentage": ".235",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1328,
+            "plateAppearances": 350,
+            "totalBases": 155,
+            "rbi": 59,
+            "leftOnBase": 119,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".310",
+            "groundOutsToAirouts": "0.66",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "18.00"
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 682928,
+            "fullName": "CJ Abrams",
+            "link": "/api/v1/people/682928"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

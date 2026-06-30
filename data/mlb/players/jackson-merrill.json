@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 701538,
+    "fullName": "Jackson Merrill",
+    "link": "/api/v1/people/701538",
+    "firstName": "Jackson",
+    "lastName": "Merrill",
+    "primaryNumber": "3",
+    "birthDate": "2003-04-19",
+    "currentAge": 23,
+    "birthCity": "Baltimore",
+    "birthStateProvince": "MD",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Jackson",
+    "useLastName": "Merrill",
+    "middleName": "Peter",
+    "boxscoreName": "Merrill",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2024-03-20",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jackson Merrill",
+    "nameSlug": "jackson-merrill-701538",
+    "firstLastName": "Jackson Merrill",
+    "lastFirstName": "Merrill, Jackson",
+    "lastInitName": "Merrill, J",
+    "initLastName": "J Merrill",
+    "fullFMLName": "Jackson Peter Merrill",
+    "fullLFMName": "Merrill, Jackson Peter",
+    "strikeZoneTop": 3.32,
+    "strikeZoneBottom": 1.676
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 80,
+            "groundOuts": 73,
+            "airOuts": 89,
+            "runs": 35,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 8,
+            "strikeOuts": 85,
+            "baseOnBalls": 24,
+            "intentionalWalks": 2,
+            "hits": 66,
+            "hitByPitch": 1,
+            "avg": ".213",
+            "atBats": 310,
+            "obp": ".272",
+            "slg": ".345",
+            "ops": ".617",
+            "caughtStealing": 1,
+            "stolenBases": 18,
+            "stolenBasePercentage": ".947",
+            "caughtStealingPercentage": ".053",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1342,
+            "plateAppearances": 338,
+            "totalBases": 107,
+            "rbi": 31,
+            "leftOnBase": 127,
+            "sacBunts": 3,
+            "sacFlies": 0,
+            "babip": ".267",
+            "groundOutsToAirouts": "0.82",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "38.75"
+          },
+          "team": {
+            "id": 135,
+            "name": "San Diego Padres",
+            "link": "/api/v1/teams/135"
+          },
+          "player": {
+            "id": 701538,
+            "fullName": "Jackson Merrill",
+            "link": "/api/v1/people/701538"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

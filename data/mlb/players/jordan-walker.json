@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 691023,
+    "fullName": "Jordan Walker",
+    "link": "/api/v1/people/691023",
+    "firstName": "Jordan",
+    "lastName": "Walker",
+    "primaryNumber": "18",
+    "birthDate": "2002-05-22",
+    "currentAge": 24,
+    "birthCity": "Stone Mountain",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 250,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Jordan",
+    "useLastName": "Walker",
+    "middleName": "Alexander",
+    "boxscoreName": "Walker, J",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2023-03-30",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jordan Walker",
+    "nameSlug": "jordan-walker-691023",
+    "firstLastName": "Jordan Walker",
+    "lastFirstName": "Walker, Jordan",
+    "lastInitName": "Walker, J",
+    "initLastName": "J Walker",
+    "fullFMLName": "Jordan Alexander Walker",
+    "fullLFMName": "Walker, Jordan Alexander",
+    "strikeZoneTop": 3.461,
+    "strikeZoneBottom": 1.747
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 24,
+            "gamesPlayed": 79,
+            "groundOuts": 69,
+            "airOuts": 66,
+            "runs": 47,
+            "doubles": 16,
+            "triples": 0,
+            "homeRuns": 18,
+            "strikeOuts": 87,
+            "baseOnBalls": 24,
+            "intentionalWalks": 1,
+            "hits": 90,
+            "hitByPitch": 2,
+            "avg": ".290",
+            "atBats": 310,
+            "obp": ".343",
+            "slg": ".516",
+            "ops": ".859",
+            "caughtStealing": 4,
+            "stolenBases": 10,
+            "stolenBasePercentage": ".714",
+            "caughtStealingPercentage": ".286",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1221,
+            "plateAppearances": 338,
+            "totalBases": 160,
+            "rbi": 58,
+            "leftOnBase": 151,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".348",
+            "groundOutsToAirouts": "1.05",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "17.22"
+          },
+          "team": {
+            "id": 138,
+            "name": "St. Louis Cardinals",
+            "link": "/api/v1/teams/138"
+          },
+          "player": {
+            "id": 691023,
+            "fullName": "Jordan Walker",
+            "link": "/api/v1/people/691023"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

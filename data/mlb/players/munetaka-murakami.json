@@ -1,0 +1,122 @@
+{
+  "info": {
+    "id": 808959,
+    "fullName": "Munetaka Murakami",
+    "link": "/api/v1/people/808959",
+    "firstName": "Munetaka",
+    "lastName": "Murakami",
+    "primaryNumber": "5",
+    "birthDate": "2000-02-02",
+    "currentAge": 26,
+    "birthCity": "Kumamoto",
+    "birthCountry": "Japan",
+    "height": "6' 2\"",
+    "weight": 213,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Munetaka",
+    "useLastName": "Murakami",
+    "boxscoreName": "Murakami",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "mlbDebutDate": "2026-03-26",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Munetaka Murakami",
+    "nameSlug": "munetaka-murakami-808959",
+    "firstLastName": "Munetaka Murakami",
+    "lastFirstName": "Murakami, Munetaka",
+    "lastInitName": "Murakami, M",
+    "initLastName": "M Murakami",
+    "fullFMLName": "Munetaka Murakami",
+    "fullLFMName": "Murakami, Munetaka ",
+    "strikeZoneTop": 3.3,
+    "strikeZoneBottom": 1.66
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 57,
+            "groundOuts": 36,
+            "airOuts": 37,
+            "runs": 43,
+            "doubles": 4,
+            "triples": 0,
+            "homeRuns": 20,
+            "strikeOuts": 80,
+            "baseOnBalls": 44,
+            "intentionalWalks": 4,
+            "hits": 48,
+            "hitByPitch": 1,
+            "avg": ".240",
+            "atBats": 200,
+            "obp": ".378",
+            "slg": ".560",
+            "ops": ".938",
+            "caughtStealing": 3,
+            "stolenBases": 1,
+            "stolenBasePercentage": ".250",
+            "caughtStealingPercentage": ".750",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1088,
+            "plateAppearances": 246,
+            "totalBases": 112,
+            "rbi": 41,
+            "leftOnBase": 77,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".277",
+            "groundOutsToAirouts": "0.97",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "10.00"
+          },
+          "team": {
+            "id": 145,
+            "name": "Chicago White Sox",
+            "link": "/api/v1/teams/145"
+          },
+          "player": {
+            "id": 808959,
+            "fullName": "Munetaka Murakami",
+            "link": "/api/v1/people/808959"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

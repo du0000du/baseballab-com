@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 669016,
+    "fullName": "Brandon Marsh",
+    "link": "/api/v1/people/669016",
+    "firstName": "Brandon",
+    "lastName": "Marsh",
+    "primaryNumber": "16",
+    "birthDate": "1997-12-18",
+    "currentAge": 28,
+    "birthCity": "Buford",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "7",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "LF"
+    },
+    "useName": "Brandon",
+    "useLastName": "Marsh",
+    "middleName": "Chase",
+    "boxscoreName": "Marsh",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2016,
+    "mlbDebutDate": "2021-07-18",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brandon Marsh",
+    "nameSlug": "brandon-marsh-669016",
+    "firstLastName": "Brandon Marsh",
+    "lastFirstName": "Marsh, Brandon",
+    "lastInitName": "Marsh, B",
+    "initLastName": "B Marsh",
+    "fullFMLName": "Brandon Chase Marsh",
+    "fullLFMName": "Marsh, Brandon Chase",
+    "strikeZoneTop": 3.312,
+    "strikeZoneBottom": 1.672
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 80,
+            "groundOuts": 53,
+            "airOuts": 68,
+            "runs": 48,
+            "doubles": 15,
+            "triples": 2,
+            "homeRuns": 14,
+            "strikeOuts": 82,
+            "baseOnBalls": 14,
+            "intentionalWalks": 1,
+            "hits": 95,
+            "hitByPitch": 2,
+            "avg": ".322",
+            "atBats": 295,
+            "obp": ".354",
+            "slg": ".529",
+            "ops": ".883",
+            "caughtStealing": 3,
+            "stolenBases": 8,
+            "stolenBasePercentage": ".727",
+            "caughtStealingPercentage": ".273",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1147,
+            "plateAppearances": 314,
+            "totalBases": 156,
+            "rbi": 44,
+            "leftOnBase": 109,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".401",
+            "groundOutsToAirouts": "0.78",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "21.07"
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 669016,
+            "fullName": "Brandon Marsh",
+            "link": "/api/v1/people/669016"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

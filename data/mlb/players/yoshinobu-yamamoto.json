@@ -1,0 +1,151 @@
+{
+  "info": {
+    "id": 808967,
+    "fullName": "Yoshinobu Yamamoto",
+    "link": "/api/v1/people/808967",
+    "firstName": "Yoshinobu",
+    "lastName": "Yamamoto",
+    "primaryNumber": "18",
+    "birthDate": "1998-08-17",
+    "currentAge": 27,
+    "birthCity": "Bizen",
+    "birthCountry": "Japan",
+    "height": "5' 10\"",
+    "weight": 176,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Yoshinobu",
+    "useLastName": "Yamamoto",
+    "boxscoreName": "Yamamoto",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "pronunciation": "yo-SHE-no-boo ya-mah-moh-to",
+    "mlbDebutDate": "2024-03-21",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Yoshinobu Yamamoto",
+    "nameSlug": "yoshinobu-yamamoto-808967",
+    "firstLastName": "Yoshinobu Yamamoto",
+    "lastFirstName": "Yamamoto, Yoshinobu",
+    "lastInitName": "Yamamoto, Y",
+    "initLastName": "Y Yamamoto",
+    "fullFMLName": "Yoshinobu Yamamoto",
+    "fullLFMName": "Yamamoto, Yoshinobu ",
+    "strikeZoneTop": 3.121,
+    "strikeZoneBottom": 1.575
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 15,
+            "gamesStarted": 15,
+            "groundOuts": 107,
+            "airOuts": 86,
+            "runs": 30,
+            "doubles": 11,
+            "triples": 1,
+            "homeRuns": 11,
+            "strikeOuts": 90,
+            "baseOnBalls": 19,
+            "intentionalWalks": 0,
+            "hits": 68,
+            "hitByPitch": 3,
+            "avg": ".194",
+            "atBats": 350,
+            "obp": ".241",
+            "slg": ".326",
+            "ops": ".567",
+            "caughtStealing": 2,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".500",
+            "caughtStealingPercentage": ".500",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1455,
+            "era": "2.67",
+            "inningsPitched": "97.2",
+            "wins": 8,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 29,
+            "whip": "0.89",
+            "battersFaced": 373,
+            "outs": 293,
+            "gamesPitched": 15,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 959,
+            "strikePercentage": ".660",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 114,
+            "groundOutsToAirouts": "1.24",
+            "winPercentage": ".615",
+            "pitchesPerInning": "14.90",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "4.74",
+            "strikeoutsPer9Inn": "8.29",
+            "walksPer9Inn": "1.75",
+            "hitsPer9Inn": "6.27",
+            "runsScoredPer9": "2.76",
+            "homeRunsPer9": "1.01",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 808967,
+            "fullName": "Yoshinobu Yamamoto",
+            "link": "/api/v1/people/808967"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

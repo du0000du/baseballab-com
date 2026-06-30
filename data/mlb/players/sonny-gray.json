@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 543243,
+    "fullName": "Sonny Gray",
+    "link": "/api/v1/people/543243",
+    "firstName": "Sonny",
+    "lastName": "Gray",
+    "primaryNumber": "54",
+    "birthDate": "1989-11-07",
+    "currentAge": 36,
+    "birthCity": "Smyrna",
+    "birthStateProvince": "TN",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Sonny",
+    "useLastName": "Gray",
+    "middleName": "Douglas",
+    "boxscoreName": "Gray, S",
+    "nickName": "Pickles",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2011,
+    "mlbDebutDate": "2013-07-10",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Sonny Gray",
+    "nameSlug": "sonny-gray-543243",
+    "firstLastName": "Sonny Gray",
+    "lastFirstName": "Gray, Sonny",
+    "lastInitName": "Gray, S",
+    "initLastName": "S Gray",
+    "fullFMLName": "Sonny Douglas Gray",
+    "fullLFMName": "Gray, Sonny Douglas",
+    "strikeZoneTop": 3.38,
+    "strikeZoneBottom": 1.57
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 15,
+            "gamesStarted": 15,
+            "groundOuts": 87,
+            "airOuts": 79,
+            "runs": 26,
+            "doubles": 17,
+            "triples": 1,
+            "homeRuns": 9,
+            "strikeOuts": 75,
+            "baseOnBalls": 21,
+            "intentionalWalks": 0,
+            "hits": 72,
+            "hitByPitch": 3,
+            "avg": ".231",
+            "atBats": 312,
+            "obp": ".285",
+            "slg": ".378",
+            "ops": ".663",
+            "caughtStealing": 3,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".700",
+            "caughtStealingPercentage": ".300",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1231,
+            "era": "2.69",
+            "inningsPitched": "83.2",
+            "wins": 9,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 25,
+            "whip": "1.11",
+            "battersFaced": 337,
+            "outs": 251,
+            "gamesPitched": 15,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 801,
+            "strikePercentage": ".650",
+            "hitBatsmen": 3,
+            "balks": 1,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 118,
+            "groundOutsToAirouts": "1.10",
+            "winPercentage": ".900",
+            "pitchesPerInning": "14.71",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.57",
+            "strikeoutsPer9Inn": "8.07",
+            "walksPer9Inn": "2.26",
+            "hitsPer9Inn": "7.75",
+            "runsScoredPer9": "2.80",
+            "homeRunsPer9": "0.97",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 111,
+            "name": "Boston Red Sox",
+            "link": "/api/v1/teams/111"
+          },
+          "player": {
+            "id": 543243,
+            "fullName": "Sonny Gray",
+            "link": "/api/v1/people/543243"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

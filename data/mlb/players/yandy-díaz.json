@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 650490,
+    "fullName": "Yandy Díaz",
+    "link": "/api/v1/people/650490",
+    "firstName": "Yandy",
+    "lastName": "Díaz",
+    "primaryNumber": "2",
+    "birthDate": "1991-08-08",
+    "currentAge": 34,
+    "birthCity": "Sagua la Grande",
+    "birthCountry": "Cuba",
+    "height": "6' 0\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "10",
+      "name": "Designated Hitter",
+      "type": "Hitter",
+      "abbreviation": "DH"
+    },
+    "useName": "Yandy",
+    "useLastName": "Díaz",
+    "boxscoreName": "Díaz, Y",
+    "nickName": "Aranita Diaz",
+    "gender": "M",
+    "nameMatrilineal": "Fernandez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "YAHN-dee",
+    "mlbDebutDate": "2017-04-03",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Yandy Díaz",
+    "nameSlug": "yandy-diaz-650490",
+    "firstLastName": "Yandy Díaz",
+    "lastFirstName": "Díaz, Yandy",
+    "lastInitName": "Díaz, Y",
+    "initLastName": "Y Díaz",
+    "fullFMLName": "Yandy Díaz",
+    "fullLFMName": "Díaz, Yandy",
+    "strikeZoneTop": 3.228,
+    "strikeZoneBottom": 1.629
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 78,
+            "groundOuts": 87,
+            "airOuts": 67,
+            "runs": 45,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 12,
+            "strikeOuts": 45,
+            "baseOnBalls": 34,
+            "intentionalWalks": 4,
+            "hits": 99,
+            "hitByPitch": 9,
+            "avg": ".336",
+            "atBats": 295,
+            "obp": ".416",
+            "slg": ".515",
+            "ops": ".931",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1258,
+            "plateAppearances": 341,
+            "totalBases": 152,
+            "rbi": 53,
+            "leftOnBase": 96,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".361",
+            "groundOutsToAirouts": "1.30",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "24.58"
+          },
+          "team": {
+            "id": 139,
+            "name": "Tampa Bay Rays",
+            "link": "/api/v1/teams/139"
+          },
+          "player": {
+            "id": 650490,
+            "fullName": "Yandy Díaz",
+            "link": "/api/v1/people/650490"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

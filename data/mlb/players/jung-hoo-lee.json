@@ -1,0 +1,123 @@
+{
+  "info": {
+    "id": 808982,
+    "fullName": "Jung Hoo Lee",
+    "link": "/api/v1/people/808982",
+    "firstName": "Jung Hoo",
+    "lastName": "Lee",
+    "primaryNumber": "51",
+    "birthDate": "1998-08-20",
+    "currentAge": 27,
+    "birthCity": "Seoul",
+    "birthCountry": "Republic of Korea",
+    "height": "6' 0\"",
+    "weight": 196,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Jung Hoo",
+    "useLastName": "Lee",
+    "boxscoreName": "Lee, J",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "jung who",
+    "mlbDebutDate": "2024-03-28",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jung Hoo Lee",
+    "nameSlug": "jung-hoo-lee-808982",
+    "firstLastName": "Jung Hoo Lee",
+    "lastFirstName": "Lee, Jung Hoo",
+    "lastInitName": "Lee, J",
+    "initLastName": "J Lee",
+    "fullFMLName": "J.H. Lee",
+    "fullLFMName": "J.H. Lee",
+    "strikeZoneTop": 3.22,
+    "strikeZoneBottom": 1.63
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 76,
+            "groundOuts": 81,
+            "airOuts": 88,
+            "runs": 41,
+            "doubles": 19,
+            "triples": 3,
+            "homeRuns": 5,
+            "strikeOuts": 29,
+            "baseOnBalls": 13,
+            "intentionalWalks": 0,
+            "hits": 92,
+            "hitByPitch": 3,
+            "avg": ".321",
+            "atBats": 287,
+            "obp": ".353",
+            "slg": ".460",
+            "ops": ".813",
+            "caughtStealing": 0,
+            "stolenBases": 5,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1133,
+            "plateAppearances": 306,
+            "totalBases": 132,
+            "rbi": 31,
+            "leftOnBase": 79,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".340",
+            "groundOutsToAirouts": "0.92",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "57.40"
+          },
+          "team": {
+            "id": 137,
+            "name": "San Francisco Giants",
+            "link": "/api/v1/teams/137"
+          },
+          "player": {
+            "id": 808982,
+            "fullName": "Jung Hoo Lee",
+            "link": "/api/v1/people/808982"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

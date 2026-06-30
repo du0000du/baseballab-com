@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 695505,
+    "fullName": "Chase Burns",
+    "link": "/api/v1/people/695505",
+    "firstName": "Chase",
+    "lastName": "Burns",
+    "primaryNumber": "26",
+    "birthDate": "2003-01-16",
+    "currentAge": 23,
+    "birthCity": "Naples",
+    "birthCountry": "Italy",
+    "height": "6' 3\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Chase",
+    "useLastName": "Burns",
+    "middleName": "David",
+    "boxscoreName": "Burns, Ch",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2024,
+    "mlbDebutDate": "2025-06-24",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Chase Burns",
+    "nameSlug": "chase-burns-695505",
+    "firstLastName": "Chase Burns",
+    "lastFirstName": "Burns, Chase",
+    "lastInitName": "Burns, C",
+    "initLastName": "C Burns",
+    "fullFMLName": "Chase David Burns",
+    "fullLFMName": "Burns, Chase David",
+    "strikeZoneTop": 3.55,
+    "strikeZoneBottom": 1.63
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 16,
+            "gamesStarted": 16,
+            "groundOuts": 65,
+            "airOuts": 90,
+            "runs": 24,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 11,
+            "strikeOuts": 112,
+            "baseOnBalls": 29,
+            "intentionalWalks": 0,
+            "hits": 70,
+            "hitByPitch": 0,
+            "avg": ".208",
+            "atBats": 337,
+            "obp": ".270",
+            "slg": ".356",
+            "ops": ".626",
+            "caughtStealing": 3,
+            "stolenBases": 13,
+            "stolenBasePercentage": ".813",
+            "caughtStealingPercentage": ".188",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1482,
+            "era": "2.36",
+            "inningsPitched": "91.2",
+            "wins": 9,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 24,
+            "whip": "1.08",
+            "battersFaced": 367,
+            "outs": 275,
+            "gamesPitched": 16,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 939,
+            "strikePercentage": ".630",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 2,
+            "totalBases": 120,
+            "groundOutsToAirouts": "0.72",
+            "winPercentage": ".900",
+            "pitchesPerInning": "16.17",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.86",
+            "strikeoutsPer9Inn": "11.00",
+            "walksPer9Inn": "2.85",
+            "hitsPer9Inn": "6.87",
+            "runsScoredPer9": "2.36",
+            "homeRunsPer9": "1.08",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 1,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 113,
+            "name": "Cincinnati Reds",
+            "link": "/api/v1/teams/113"
+          },
+          "player": {
+            "id": 695505,
+            "fullName": "Chase Burns",
+            "link": "/api/v1/people/695505"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

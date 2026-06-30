@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 656641,
+    "fullName": "Jacob Latz",
+    "link": "/api/v1/people/656641",
+    "firstName": "Jacob",
+    "lastName": "Latz",
+    "primaryNumber": "67",
+    "birthDate": "1996-04-08",
+    "currentAge": 30,
+    "birthCity": "Lemont",
+    "birthStateProvince": "IL",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jacob",
+    "useLastName": "Latz",
+    "middleName": "Eugene",
+    "boxscoreName": "Latz",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2017,
+    "mlbDebutDate": "2021-08-25",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Jacob Latz",
+    "nameSlug": "jacob-latz-656641",
+    "firstLastName": "Jacob Latz",
+    "lastFirstName": "Latz, Jacob",
+    "lastInitName": "Latz, J",
+    "initLastName": "J Latz",
+    "fullFMLName": "Jacob Eugene Latz",
+    "fullLFMName": "Latz, Jacob Eugene",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 32,
+            "gamesStarted": 1,
+            "groundOuts": 37,
+            "airOuts": 45,
+            "runs": 8,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 3,
+            "strikeOuts": 41,
+            "baseOnBalls": 9,
+            "intentionalWalks": 1,
+            "hits": 17,
+            "hitByPitch": 0,
+            "avg": ".122",
+            "atBats": 139,
+            "obp": ".174",
+            "slg": ".230",
+            "ops": ".404",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 620,
+            "era": "1.76",
+            "inningsPitched": "41.0",
+            "wins": 1,
+            "losses": 1,
+            "saves": 17,
+            "saveOpportunities": 19,
+            "holds": 2,
+            "blownSaves": 2,
+            "earnedRuns": 8,
+            "whip": "0.63",
+            "battersFaced": 149,
+            "outs": 123,
+            "gamesPitched": 32,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 415,
+            "strikePercentage": ".670",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 32,
+            "groundOutsToAirouts": "0.82",
+            "winPercentage": ".500",
+            "pitchesPerInning": "15.12",
+            "gamesFinished": 23,
+            "strikeoutWalkRatio": "4.56",
+            "strikeoutsPer9Inn": "9.00",
+            "walksPer9Inn": "1.98",
+            "hitsPer9Inn": "3.73",
+            "runsScoredPer9": "1.76",
+            "homeRunsPer9": "0.66",
+            "inheritedRunners": 12,
+            "inheritedRunnersScored": 6,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 656641,
+            "fullName": "Jacob Latz",
+            "link": "/api/v1/people/656641"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

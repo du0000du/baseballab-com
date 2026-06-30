@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 683083,
+    "fullName": "Nasim Nuñez",
+    "link": "/api/v1/people/683083",
+    "firstName": "Nasim",
+    "lastName": "Nuñez",
+    "primaryNumber": "26",
+    "birthDate": "2000-08-18",
+    "currentAge": 25,
+    "birthCity": "Bronx",
+    "birthStateProvince": "NY",
+    "birthCountry": "USA",
+    "height": "5' 8\"",
+    "weight": 165,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Nasim",
+    "useLastName": "Nuñez",
+    "middleName": "Emmanuel",
+    "boxscoreName": "Nuñez, N",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "pronunciation": "NAH-seem NOON-yez",
+    "mlbDebutDate": "2024-03-30",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Nasim Nuñez",
+    "nameSlug": "nasim-nunez-683083",
+    "firstLastName": "Nasim Nuñez",
+    "lastFirstName": "Nuñez, Nasim",
+    "lastInitName": "Nuñez, N",
+    "initLastName": "N Nuñez",
+    "fullFMLName": "Nasim Emmanuel Nuñez",
+    "fullLFMName": "Nuñez, Nasim Emmanuel",
+    "strikeZoneTop": 3.05,
+    "strikeZoneBottom": 1.54
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 80,
+            "groundOuts": 68,
+            "airOuts": 57,
+            "runs": 31,
+            "doubles": 4,
+            "triples": 3,
+            "homeRuns": 0,
+            "strikeOuts": 65,
+            "baseOnBalls": 28,
+            "intentionalWalks": 0,
+            "hits": 56,
+            "hitByPitch": 1,
+            "avg": ".234",
+            "atBats": 239,
+            "obp": ".316",
+            "slg": ".276",
+            "ops": ".592",
+            "caughtStealing": 3,
+            "stolenBases": 32,
+            "stolenBasePercentage": ".914",
+            "caughtStealingPercentage": ".086",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1122,
+            "plateAppearances": 275,
+            "totalBases": 66,
+            "rbi": 27,
+            "leftOnBase": 106,
+            "sacBunts": 6,
+            "sacFlies": 1,
+            "babip": ".320",
+            "groundOutsToAirouts": "1.19",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "-.--"
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 683083,
+            "fullName": "Nasim Nuñez",
+            "link": "/api/v1/people/683083"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

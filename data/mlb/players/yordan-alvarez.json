@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 670541,
+    "fullName": "Yordan Alvarez",
+    "link": "/api/v1/people/670541",
+    "firstName": "Yordan",
+    "lastName": "Alvarez",
+    "primaryNumber": "44",
+    "birthDate": "1997-06-27",
+    "currentAge": 29,
+    "birthCity": "Las Tunas",
+    "birthCountry": "Cuba",
+    "height": "6' 4\"",
+    "weight": 237,
+    "active": true,
+    "primaryPosition": {
+      "code": "10",
+      "name": "Designated Hitter",
+      "type": "Hitter",
+      "abbreviation": "DH"
+    },
+    "useName": "Yordan",
+    "useLastName": "Alvarez",
+    "middleName": "Ruben",
+    "boxscoreName": "Alvarez, Y",
+    "nickName": "Yordan",
+    "gender": "M",
+    "nameMatrilineal": "Cadogan",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "YOR-dahn",
+    "mlbDebutDate": "2019-06-09",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Yordan Alvarez",
+    "nameSlug": "yordan-alvarez-670541",
+    "firstLastName": "Yordan Alvarez",
+    "lastFirstName": "Alvarez, Yordan",
+    "lastInitName": "Alvarez, Y",
+    "initLastName": "Y Alvarez",
+    "fullFMLName": "Yordan Ruben Alvarez",
+    "fullLFMName": "Alvarez, Yordan Ruben",
+    "strikeZoneTop": 3.392,
+    "strikeZoneBottom": 1.712
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 85,
+            "groundOuts": 52,
+            "airOuts": 97,
+            "runs": 58,
+            "doubles": 16,
+            "triples": 0,
+            "homeRuns": 25,
+            "strikeOuts": 64,
+            "baseOnBalls": 58,
+            "intentionalWalks": 13,
+            "hits": 94,
+            "hitByPitch": 5,
+            "avg": ".308",
+            "atBats": 305,
+            "obp": ".424",
+            "slg": ".607",
+            "ops": "1.031",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1434,
+            "plateAppearances": 370,
+            "totalBases": 185,
+            "rbi": 56,
+            "leftOnBase": 107,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".317",
+            "groundOutsToAirouts": "0.54",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "12.20"
+          },
+          "team": {
+            "id": 117,
+            "name": "Houston Astros",
+            "link": "/api/v1/teams/117"
+          },
+          "player": {
+            "id": 670541,
+            "fullName": "Yordan Alvarez",
+            "link": "/api/v1/people/670541"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

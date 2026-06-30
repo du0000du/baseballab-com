@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 647304,
+    "fullName": "Josh Naylor",
+    "link": "/api/v1/people/647304",
+    "firstName": "Joshua-Douglas",
+    "lastName": "Naylor",
+    "primaryNumber": "12",
+    "birthDate": "1997-06-22",
+    "currentAge": 29,
+    "birthCity": "Mississauga",
+    "birthStateProvince": "ON",
+    "birthCountry": "Canada",
+    "height": "5' 10\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Josh",
+    "useLastName": "Naylor",
+    "middleName": "James",
+    "boxscoreName": "Naylor, J",
+    "nickName": "Naylz",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "mlbDebutDate": "2019-05-24",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Josh Naylor",
+    "nameSlug": "josh-naylor-647304",
+    "firstLastName": "Josh Naylor",
+    "lastFirstName": "Naylor, Josh",
+    "lastInitName": "Naylor, J",
+    "initLastName": "J Naylor",
+    "fullFMLName": "Joshua-Douglas James Naylor",
+    "fullLFMName": "Naylor, Joshua-Douglas James",
+    "strikeZoneTop": 3.11,
+    "strikeZoneBottom": 1.57
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 79,
+            "groundOuts": 90,
+            "airOuts": 99,
+            "runs": 31,
+            "doubles": 11,
+            "triples": 0,
+            "homeRuns": 8,
+            "strikeOuts": 44,
+            "baseOnBalls": 26,
+            "intentionalWalks": 2,
+            "hits": 79,
+            "hitByPitch": 3,
+            "avg": ".254",
+            "atBats": 311,
+            "obp": ".317",
+            "slg": ".367",
+            "ops": ".684",
+            "caughtStealing": 3,
+            "stolenBases": 15,
+            "stolenBasePercentage": ".833",
+            "caughtStealingPercentage": ".167",
+            "groundIntoDoublePlay": 12,
+            "numberOfPitches": 1116,
+            "plateAppearances": 342,
+            "totalBases": 114,
+            "rbi": 34,
+            "leftOnBase": 145,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".273",
+            "groundOutsToAirouts": "0.91",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "38.88"
+          },
+          "team": {
+            "id": 136,
+            "name": "Seattle Mariners",
+            "link": "/api/v1/teams/136"
+          },
+          "player": {
+            "id": 647304,
+            "fullName": "Josh Naylor",
+            "link": "/api/v1/people/647304"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

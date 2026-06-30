@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 641329,
+    "fullName": "Bryan Baker",
+    "link": "/api/v1/people/641329",
+    "firstName": "Bryan",
+    "lastName": "Baker",
+    "primaryNumber": "47",
+    "birthDate": "1994-12-02",
+    "currentAge": 31,
+    "birthCity": "Fort Walton Beach",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Bryan",
+    "useLastName": "Baker",
+    "middleName": "Scott",
+    "boxscoreName": "Baker",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2016,
+    "mlbDebutDate": "2021-09-05",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Bryan Baker",
+    "nameSlug": "bryan-baker-641329",
+    "firstLastName": "Bryan Baker",
+    "lastFirstName": "Baker, Bryan",
+    "lastInitName": "Baker, B",
+    "initLastName": "B Baker",
+    "fullFMLName": "Bryan Scott Baker",
+    "fullLFMName": "Baker, Bryan Scott",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 34,
+            "gamesStarted": 0,
+            "groundOuts": 30,
+            "airOuts": 32,
+            "runs": 7,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 35,
+            "baseOnBalls": 11,
+            "intentionalWalks": 0,
+            "hits": 17,
+            "hitByPitch": 1,
+            "avg": ".150",
+            "atBats": 113,
+            "obp": ".230",
+            "slg": ".257",
+            "ops": ".487",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 519,
+            "era": "1.95",
+            "inningsPitched": "32.1",
+            "wins": 1,
+            "losses": 0,
+            "saves": 21,
+            "saveOpportunities": 24,
+            "holds": 2,
+            "blownSaves": 3,
+            "earnedRuns": 7,
+            "whip": "0.87",
+            "battersFaced": 126,
+            "outs": 97,
+            "gamesPitched": 34,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 350,
+            "strikePercentage": ".670",
+            "hitBatsmen": 1,
+            "balks": 1,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 29,
+            "groundOutsToAirouts": "0.94",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "16.05",
+            "gamesFinished": 23,
+            "strikeoutWalkRatio": "3.18",
+            "strikeoutsPer9Inn": "9.74",
+            "walksPer9Inn": "3.06",
+            "hitsPer9Inn": "4.73",
+            "runsScoredPer9": "1.95",
+            "homeRunsPer9": "0.56",
+            "inheritedRunners": 5,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 139,
+            "name": "Tampa Bay Rays",
+            "link": "/api/v1/teams/139"
+          },
+          "player": {
+            "id": 641329,
+            "fullName": "Bryan Baker",
+            "link": "/api/v1/people/641329"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

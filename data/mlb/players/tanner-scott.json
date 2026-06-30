@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 656945,
+    "fullName": "Tanner Scott",
+    "link": "/api/v1/people/656945",
+    "firstName": "Tanner",
+    "lastName": "Scott",
+    "primaryNumber": "66",
+    "birthDate": "1994-07-22",
+    "currentAge": 31,
+    "birthCity": "Warren",
+    "birthStateProvince": "OH",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Tanner",
+    "useLastName": "Scott",
+    "middleName": "Alexander",
+    "boxscoreName": "Scott",
+    "nickName": "Scottie",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2017-09-20",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Tanner Scott",
+    "nameSlug": "tanner-scott-656945",
+    "firstLastName": "Tanner Scott",
+    "lastFirstName": "Scott, Tanner",
+    "lastInitName": "Scott, T",
+    "initLastName": "T Scott",
+    "fullFMLName": "Tanner Alexander Scott",
+    "fullLFMName": "Scott, Tanner Alexander",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 36,
+            "gamesStarted": 0,
+            "groundOuts": 25,
+            "airOuts": 34,
+            "runs": 8,
+            "doubles": 2,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 42,
+            "baseOnBalls": 3,
+            "intentionalWalks": 0,
+            "hits": 21,
+            "hitByPitch": 1,
+            "avg": ".175",
+            "atBats": 120,
+            "obp": ".202",
+            "slg": ".292",
+            "ops": ".494",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 487,
+            "era": "2.10",
+            "inningsPitched": "34.1",
+            "wins": 1,
+            "losses": 3,
+            "saves": 11,
+            "saveOpportunities": 12,
+            "holds": 6,
+            "blownSaves": 1,
+            "earnedRuns": 8,
+            "whip": "0.70",
+            "battersFaced": 126,
+            "outs": 103,
+            "gamesPitched": 36,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 350,
+            "strikePercentage": ".720",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 35,
+            "groundOutsToAirouts": "0.74",
+            "winPercentage": ".250",
+            "pitchesPerInning": "14.18",
+            "gamesFinished": 17,
+            "strikeoutWalkRatio": "14.00",
+            "strikeoutsPer9Inn": "11.01",
+            "walksPer9Inn": "0.79",
+            "hitsPer9Inn": "5.50",
+            "runsScoredPer9": "2.10",
+            "homeRunsPer9": "1.05",
+            "inheritedRunners": 8,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 656945,
+            "fullName": "Tanner Scott",
+            "link": "/api/v1/people/656945"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

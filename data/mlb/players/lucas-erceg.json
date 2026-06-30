@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 668674,
+    "fullName": "Lucas Erceg",
+    "link": "/api/v1/people/668674",
+    "firstName": "Lucas",
+    "lastName": "Erceg",
+    "primaryNumber": "60",
+    "birthDate": "1995-05-01",
+    "currentAge": 31,
+    "birthCity": "San Jose",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 214,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Lucas",
+    "useLastName": "Erceg",
+    "middleName": "Stijepan",
+    "boxscoreName": "Erceg",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2016,
+    "pronunciation": "urr-seg",
+    "mlbDebutDate": "2023-05-19",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Lucas Erceg",
+    "nameSlug": "lucas-erceg-668674",
+    "firstLastName": "Lucas Erceg",
+    "lastFirstName": "Erceg, Lucas",
+    "lastInitName": "Erceg, L",
+    "initLastName": "L Erceg",
+    "fullFMLName": "Lucas Stijepan Erceg",
+    "fullLFMName": "Erceg, Lucas Stijepan",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 33,
+            "gamesStarted": 0,
+            "groundOuts": 34,
+            "airOuts": 27,
+            "runs": 21,
+            "doubles": 9,
+            "triples": 0,
+            "homeRuns": 3,
+            "strikeOuts": 25,
+            "baseOnBalls": 20,
+            "intentionalWalks": 0,
+            "hits": 36,
+            "hitByPitch": 2,
+            "avg": ".295",
+            "atBats": 122,
+            "obp": ".403",
+            "slg": ".443",
+            "ops": ".846",
+            "caughtStealing": 2,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 582,
+            "era": "5.40",
+            "inningsPitched": "31.2",
+            "wins": 3,
+            "losses": 3,
+            "saves": 12,
+            "saveOpportunities": 18,
+            "holds": 3,
+            "blownSaves": 6,
+            "earnedRuns": 19,
+            "whip": "1.77",
+            "battersFaced": 144,
+            "outs": 95,
+            "gamesPitched": 33,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 355,
+            "strikePercentage": ".610",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 2,
+            "totalBases": 54,
+            "groundOutsToAirouts": "1.26",
+            "winPercentage": ".500",
+            "pitchesPerInning": "18.38",
+            "gamesFinished": 21,
+            "strikeoutWalkRatio": "1.25",
+            "strikeoutsPer9Inn": "7.11",
+            "walksPer9Inn": "5.68",
+            "hitsPer9Inn": "10.23",
+            "runsScoredPer9": "5.97",
+            "homeRunsPer9": "0.85",
+            "inheritedRunners": 4,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 668674,
+            "fullName": "Lucas Erceg",
+            "link": "/api/v1/people/668674"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

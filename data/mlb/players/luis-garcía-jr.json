@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 671277,
+    "fullName": "Luis García Jr.",
+    "link": "/api/v1/people/671277",
+    "firstName": "Luis",
+    "lastName": "García",
+    "primaryNumber": "2",
+    "birthDate": "2000-05-16",
+    "currentAge": 26,
+    "birthCity": "New York",
+    "birthStateProvince": "NY",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 216,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Luis",
+    "useLastName": "García Jr.",
+    "middleName": "Victoriano",
+    "boxscoreName": "García Jr., L",
+    "gender": "M",
+    "nameMatrilineal": "Mendoza",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2020-08-14",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Luis García Jr.",
+    "nameSlug": "luis-garcia-jr-671277",
+    "firstLastName": "Luis García Jr.",
+    "lastFirstName": "García Jr., Luis",
+    "lastInitName": "García Jr., L",
+    "initLastName": "L García Jr.",
+    "fullFMLName": "Luis Victoriano García Jr.",
+    "fullLFMName": "García Jr., Luis Victoriano",
+    "strikeZoneTop": 3.248,
+    "strikeZoneBottom": 1.639
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 79,
+            "groundOuts": 79,
+            "airOuts": 69,
+            "runs": 38,
+            "doubles": 14,
+            "triples": 3,
+            "homeRuns": 16,
+            "strikeOuts": 41,
+            "baseOnBalls": 12,
+            "intentionalWalks": 0,
+            "hits": 73,
+            "hitByPitch": 0,
+            "avg": ".280",
+            "atBats": 261,
+            "obp": ".310",
+            "slg": ".540",
+            "ops": ".850",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 981,
+            "plateAppearances": 274,
+            "totalBases": 141,
+            "rbi": 55,
+            "leftOnBase": 103,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".278",
+            "groundOutsToAirouts": "1.14",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "16.31"
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 671277,
+            "fullName": "Luis García Jr.",
+            "link": "/api/v1/people/671277"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

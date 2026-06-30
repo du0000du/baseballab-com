@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 656941,
+    "fullName": "Kyle Schwarber",
+    "link": "/api/v1/people/656941",
+    "firstName": "Kyle",
+    "lastName": "Schwarber",
+    "primaryNumber": "12",
+    "birthDate": "1993-03-05",
+    "currentAge": 33,
+    "birthCity": "Middletown",
+    "birthStateProvince": "OH",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 229,
+    "active": true,
+    "primaryPosition": {
+      "code": "10",
+      "name": "Designated Hitter",
+      "type": "Hitter",
+      "abbreviation": "DH"
+    },
+    "useName": "Kyle",
+    "useLastName": "Schwarber",
+    "middleName": "Joseph",
+    "boxscoreName": "Schwarber",
+    "nickName": "Schwarbs",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "pronunciation": "SHWAR-burr",
+    "mlbDebutDate": "2015-06-16",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Kyle Schwarber",
+    "nameSlug": "kyle-schwarber-656941",
+    "firstLastName": "Kyle Schwarber",
+    "lastFirstName": "Schwarber, Kyle",
+    "lastInitName": "Schwarber, K",
+    "initLastName": "K Schwarber",
+    "fullFMLName": "Kyle Joseph Schwarber",
+    "fullLFMName": "Schwarber, Kyle Joseph",
+    "strikeZoneTop": 3.181,
+    "strikeZoneBottom": 1.605
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 33,
+            "gamesPlayed": 81,
+            "groundOuts": 40,
+            "airOuts": 66,
+            "runs": 54,
+            "doubles": 9,
+            "triples": 1,
+            "homeRuns": 30,
+            "strikeOuts": 122,
+            "baseOnBalls": 52,
+            "intentionalWalks": 3,
+            "hits": 77,
+            "hitByPitch": 4,
+            "avg": ".253",
+            "atBats": 304,
+            "obp": ".368",
+            "slg": ".586",
+            "ops": ".954",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 1538,
+            "plateAppearances": 361,
+            "totalBases": 178,
+            "rbi": 55,
+            "leftOnBase": 92,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".307",
+            "groundOutsToAirouts": "0.61",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "10.13"
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 656941,
+            "fullName": "Kyle Schwarber",
+            "link": "/api/v1/people/656941"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

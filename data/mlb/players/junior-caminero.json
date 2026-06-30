@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 691406,
+    "fullName": "Junior Caminero",
+    "link": "/api/v1/people/691406",
+    "firstName": "Junior",
+    "lastName": "Caminero",
+    "primaryNumber": "13",
+    "birthDate": "2003-07-05",
+    "currentAge": 22,
+    "birthCity": "Santo Domingo",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 1\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Junior",
+    "useLastName": "Caminero",
+    "middleName": "Alberto",
+    "boxscoreName": "Caminero",
+    "gender": "M",
+    "nameMatrilineal": "Sanchez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "cah-min-AIR-oh",
+    "mlbDebutDate": "2023-09-23",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Junior Caminero",
+    "nameSlug": "junior-caminero-691406",
+    "firstLastName": "Junior Caminero",
+    "lastFirstName": "Caminero, Junior",
+    "lastInitName": "Caminero, J",
+    "initLastName": "J Caminero",
+    "fullFMLName": "Junior Alberto Caminero",
+    "fullLFMName": "Caminero, Junior Alberto",
+    "strikeZoneTop": 3.244,
+    "strikeZoneBottom": 1.637
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 22,
+            "gamesPlayed": 81,
+            "groundOuts": 96,
+            "airOuts": 60,
+            "runs": 52,
+            "doubles": 12,
+            "triples": 0,
+            "homeRuns": 22,
+            "strikeOuts": 62,
+            "baseOnBalls": 47,
+            "intentionalWalks": 6,
+            "hits": 89,
+            "hitByPitch": 0,
+            "avg": ".292",
+            "atBats": 305,
+            "obp": ".384",
+            "slg": ".548",
+            "ops": ".932",
+            "caughtStealing": 2,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 14,
+            "numberOfPitches": 1374,
+            "plateAppearances": 354,
+            "totalBases": 167,
+            "rbi": 49,
+            "leftOnBase": 134,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".300",
+            "groundOutsToAirouts": "1.60",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "13.86"
+          },
+          "team": {
+            "id": 139,
+            "name": "Tampa Bay Rays",
+            "link": "/api/v1/teams/139"
+          },
+          "player": {
+            "id": 691406,
+            "fullName": "Junior Caminero",
+            "link": "/api/v1/people/691406"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 676617,
+    "fullName": "Riley O'Brien",
+    "link": "/api/v1/people/676617",
+    "firstName": "Riley",
+    "lastName": "O'Brien",
+    "primaryNumber": "61",
+    "birthDate": "1995-02-06",
+    "currentAge": 31,
+    "birthCity": "Seattle",
+    "birthStateProvince": "WA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Riley",
+    "useLastName": "O'Brien",
+    "middleName": "Chun-Young",
+    "boxscoreName": "O'Brien",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2017,
+    "mlbDebutDate": "2021-09-28",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Riley O'Brien",
+    "nameSlug": "riley-o-brien-676617",
+    "firstLastName": "Riley O'Brien",
+    "lastFirstName": "O'Brien, Riley",
+    "lastInitName": "O'Brien, R",
+    "initLastName": "R O'Brien",
+    "fullFMLName": "Riley Chun-Young O'Brien",
+    "fullLFMName": "O'Brien, Riley Chun-Young",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 34,
+            "gamesStarted": 0,
+            "groundOuts": 42,
+            "airOuts": 24,
+            "runs": 17,
+            "doubles": 3,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 34,
+            "baseOnBalls": 11,
+            "intentionalWalks": 0,
+            "hits": 29,
+            "hitByPitch": 6,
+            "avg": ".230",
+            "atBats": 126,
+            "obp": ".319",
+            "slg": ".302",
+            "ops": ".621",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 564,
+            "era": "3.93",
+            "inningsPitched": "34.1",
+            "wins": 3,
+            "losses": 3,
+            "saves": 20,
+            "saveOpportunities": 24,
+            "holds": 1,
+            "blownSaves": 4,
+            "earnedRuns": 15,
+            "whip": "1.17",
+            "battersFaced": 146,
+            "outs": 103,
+            "gamesPitched": 34,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 351,
+            "strikePercentage": ".620",
+            "hitBatsmen": 6,
+            "balks": 0,
+            "wildPitches": 5,
+            "pickoffs": 1,
+            "totalBases": 38,
+            "groundOutsToAirouts": "1.75",
+            "winPercentage": ".500",
+            "pitchesPerInning": "16.43",
+            "gamesFinished": 26,
+            "strikeoutWalkRatio": "3.09",
+            "strikeoutsPer9Inn": "8.91",
+            "walksPer9Inn": "2.88",
+            "hitsPer9Inn": "7.60",
+            "runsScoredPer9": "4.46",
+            "homeRunsPer9": "0.52",
+            "inheritedRunners": 9,
+            "inheritedRunnersScored": 4,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 138,
+            "name": "St. Louis Cardinals",
+            "link": "/api/v1/teams/138"
+          },
+          "player": {
+            "id": 676617,
+            "fullName": "Riley O'Brien",
+            "link": "/api/v1/people/676617"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
