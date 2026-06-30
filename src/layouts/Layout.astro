@@ -266,39 +266,51 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
         max-width: 1100px;
         margin: 0 auto;
         padding: 0 1.25rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
       }
-      .speed-label {
-        font-size: .65rem;
+      .sb-section { display: flex; align-items: center; gap: 0; flex-shrink: 0; }
+      .sb-label {
+        font-size: .62rem;
         font-weight: 800;
-        letter-spacing: .12em;
-        color: rgba(255,255,255,.35);
-        text-transform: uppercase;
-        padding-right: .85rem;
-        margin-right: .5rem;
-        border-right: 1px solid rgba(255,255,255,.12);
+        letter-spacing: .08em;
+        color: #fff;
+        padding: .18rem .55rem;
+        border-radius: 4px;
+        margin-right: .45rem;
         flex-shrink: 0;
         white-space: nowrap;
+      }
+      .sb-label.npb { background: #9b2335; }
+      .sb-label.mlb { background: #003087; }
+      .sb-divider {
+        width: 1px;
+        height: 1.1rem;
+        background: rgba(255,255,255,.18);
+        margin: 0 .7rem;
+        flex-shrink: 0;
       }
       .speed-link {
         display: inline-flex;
         align-items: center;
-        gap: .35rem;
-        padding: .28rem .75rem;
-        font-size: .78rem;
+        gap: .3rem;
+        padding: .25rem .65rem;
+        font-size: .76rem;
         font-weight: 700;
-        color: rgba(255,255,255,.7);
+        color: rgba(255,255,255,.72);
         border-radius: 5px;
         transition: background .12s, color .12s;
         white-space: nowrap;
         text-decoration: none;
       }
       .speed-link:hover { background: rgba(255,255,255,.1); color: #fff; }
-      .speed-link .sl-icon { font-size: .9rem; line-height: 1; }
-      .speed-sep { color: rgba(255,255,255,.12); margin: 0 .1rem; font-size: .6rem; }
-      @media (max-width: 600px) {
-        .speed-label { display: none; }
-        .speed-link { padding: .25rem .5rem; font-size: .72rem; }
+      .speed-link .sl-icon { font-size: .88rem; line-height: 1; }
+      .speed-sep { color: rgba(255,255,255,.15); margin: 0 .05rem; font-size: .55rem; }
+      @media (max-width: 640px) {
+        .sb-label { font-size: .58rem; padding: .15rem .42rem; }
+        .speed-link { padding: .22rem .45rem; font-size: .7rem; }
         .speed-link .sl-text { display: none; }
+        .sb-divider { margin: 0 .45rem; }
       }
     </style>
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -382,18 +394,23 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
     <!-- ===== 速報クイックアクセスバー ===== -->
     <div class="speed-bar" role="navigation" aria-label="速報ページへのクイックアクセス">
       <div class="speed-bar-inner">
-        <span class="speed-label">⚡ 速報</span>
-        <a href="/npb/" class="speed-link">
-          <span class="sl-icon">📊</span><span class="sl-text">順位表</span>
-        </a>
-        <span class="speed-sep">|</span>
-        <a href="/npb/leaders/" class="speed-link">
-          <span class="sl-icon">🏆</span><span class="sl-text">成績ランキング</span>
-        </a>
-        <span class="speed-sep">|</span>
-        <a href="/npb/results/" class="speed-link">
-          <span class="sl-icon">⚾</span><span class="sl-text">試合結果</span>
-        </a>
+        <div class="sb-section">
+          <span class="sb-label npb">⚾ NPB</span>
+          <a href="/npb/" class="speed-link"><span class="sl-icon">📊</span><span class="sl-text">順位表</span></a>
+          <span class="speed-sep">|</span>
+          <a href="/npb/leaders/" class="speed-link"><span class="sl-icon">🏆</span><span class="sl-text">ランキング</span></a>
+          <span class="speed-sep">|</span>
+          <a href="/npb/results/" class="speed-link"><span class="sl-icon">📋</span><span class="sl-text">試合結果</span></a>
+        </div>
+        <span class="sb-divider"></span>
+        <div class="sb-section">
+          <span class="sb-label mlb">🇺🇸 MLB</span>
+          <a href="/mlb/standings/" class="speed-link"><span class="sl-icon">📊</span><span class="sl-text">Standings</span></a>
+          <span class="speed-sep">|</span>
+          <a href="/mlb/leaders/" class="speed-link"><span class="sl-icon">🏆</span><span class="sl-text">Leaders</span></a>
+          <span class="speed-sep">|</span>
+          <a href="/mlb/results/" class="speed-link"><span class="sl-icon">📋</span><span class="sl-text">Results</span></a>
+        </div>
       </div>
     </div>
 
