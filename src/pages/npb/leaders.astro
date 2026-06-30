@@ -1,19 +1,20 @@
 ---
 // /npb/leaders/ — NPB セ・パ 成績リーダーボード
 import Layout from '../../layouts/Layout.astro';
+import GlossaryLinks from '../../components/GlossaryLinks.astro';
 import { loadLeaders, loadMeta, NPB_SEASON } from '../../lib/npb';
 
 const leaders = loadLeaders(NPB_SEASON);
 const meta = loadMeta();
 const asOf = meta.asOf || '';
 
-const BAT_CATS = [
-  ['avg', '打率（AVG）'], ['hr', '本塁打（HR）'], ['rbi', '打点（RBI）'],
-  ['ops', 'OPS'], ['hits', '安打（H）'], ['sb', '盗塁（SB）'],
+const BAT_CATS: [string, string, string|null][] = [
+  ['avg', '打率（AVG）', 'avg'], ['hr', '本塁打（HR）', 'hr'], ['rbi', '打点（RBI）', 'rbi'],
+  ['ops', 'OPS', 'ops'], ['hits', '安打（H）', null], ['sb', '盗塁（SB）', null],
 ];
-const PIT_CATS = [
-  ['era', '防御率（ERA）'], ['wins', '勝利（W）'], ['so', '奪三振（SO）'],
-  ['saves', 'セーブ（SV）'], ['holds', 'ホールド（H）'], ['whip', 'WHIP'],
+const PIT_CATS: [string, string, string|null][] = [
+  ['era', '防御率（ERA）', 'era'], ['wins', '勝利（W）', null], ['so', '奪三振（SO）', 'strikeout'],
+  ['saves', 'セーブ（SV）', 'sv'], ['holds', 'ホールド（H）', 'hld'], ['whip', 'WHIP', 'whip'],
 ];
 const MEDALS = ['🥇', '🥈', '🥉'];
 const LEAGUES = [['central', 'セントラル・リーグ', 'cl'], ['pacific', 'パシフィック・リーグ', 'pl']];
@@ -67,6 +68,8 @@ function fmtL(key: string, val: any): string {
     .leaders-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
     .lcard { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow-x:auto; box-shadow:var(--shadow-sm); }
     .card-title { background:var(--navy); color:#fff; font-size:.85rem; font-weight:600; padding:.55rem 1rem; }
+    .lcard-gl-link { color:#fff; text-decoration:none; border-bottom:1px dotted rgba(255,255,255,.45); }
+    .lcard-gl-link:hover { border-bottom-color:#fff; }
     table.lt { width:100%; border-collapse:collapse; font-size:.85rem; font-variant-numeric:tabular-nums; min-width:280px; }
     table.lt th { font-size:.78rem; color:var(--gray-500); text-transform:uppercase; padding:.35rem .6rem; text-align:left; }
     table.lt th:last-child { text-align:right; }
@@ -128,9 +131,9 @@ function fmtL(key: string, val: any): string {
               <h2 class="lg-title"><span class={`lg-badge ${cls}`}>{cls.toUpperCase()}</span>{label}</h2>
               <h3 class="sub-title">🏏 打撃部門</h3>
               <div class="leaders-grid">
-                {BAT_CATS.map(([key, clabel]) => (
+                {BAT_CATS.map(([key, clabel, gslug]) => (
                   <div class="lcard">
-                    <div class="card-title">{clabel}</div>
+                    <div class="card-title">{gslug ? <a href={`/glossary/${gslug}/`} class="lcard-gl-link">{clabel}</a> : clabel}</div>
                     <table class="lt">
                       <thead><tr><th></th><th>選手</th><th>球団</th><th>記録</th></tr></thead>
                       <tbody>
@@ -149,9 +152,9 @@ function fmtL(key: string, val: any): string {
               </div>
               <h3 class="sub-title">⚾ 投球部門</h3>
               <div class="leaders-grid">
-                {PIT_CATS.map(([key, clabel]) => (
+                {PIT_CATS.map(([key, clabel, gslug]) => (
                   <div class="lcard">
-                    <div class="card-title">{clabel}</div>
+                    <div class="card-title">{gslug ? <a href={`/glossary/${gslug}/`} class="lcard-gl-link">{clabel}</a> : clabel}</div>
                     <table class="lt">
                       <thead><tr><th></th><th>選手</th><th>球団</th><th>記録</th></tr></thead>
                       <tbody>
@@ -192,6 +195,12 @@ function fmtL(key: string, val: any): string {
         })();
       </script>
     </>
+  )}
+
+  {hasData && (
+    <div class="container" style="padding-bottom:1.5rem">
+      <GlossaryLinks type="both" />
+    </div>
   )}
 
   <div class="data-note">

@@ -80,13 +80,16 @@ const affiliateLinks = linksData.links.map((item: any) => ({
 
 // glossary slug → leaders data key
 const STAT_TO_LEADER: Record<string, {group: 'batting'|'pitching', key: string}> = {
-  'avg':  {group: 'batting',  key: 'avg'},
-  'ops':  {group: 'batting',  key: 'ops'},
-  'rbi':  {group: 'batting',  key: 'rbi'},
-  'era':  {group: 'pitching', key: 'era'},
-  'whip': {group: 'pitching', key: 'whip'},
-  'sv':   {group: 'pitching', key: 'saves'},
-  'hld':  {group: 'pitching', key: 'holds'},
+  'avg':       {group: 'batting',  key: 'avg'},
+  'ops':       {group: 'batting',  key: 'ops'},
+  'rbi':       {group: 'batting',  key: 'rbi'},
+  'hr':        {group: 'batting',  key: 'hr'},
+  'era':       {group: 'pitching', key: 'era'},
+  'whip':      {group: 'pitching', key: 'whip'},
+  'sv':        {group: 'pitching', key: 'saves'},
+  'hld':       {group: 'pitching', key: 'holds'},
+  'strikeout': {group: 'pitching', key: 'so'},
+  'k9':        {group: 'pitching', key: 'so'},
 };
 const leaderDef = STAT_TO_LEADER[entry.slug];
 const leadersData = leaderDef ? loadLeaders(NPB_SEASON) : null;
