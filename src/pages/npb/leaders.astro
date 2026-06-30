@@ -22,6 +22,17 @@ function rows(lg: string, group: string, key: string) {
   return leaders?.[lg]?.[group]?.[key] ?? [];
 }
 const hasData = !!leaders;
+
+const _STAT3 = new Set(['avg', 'ops', 'obp', 'slg']);
+const _STAT2 = new Set(['era', 'whip']);
+function fmtL(key: string, val: any): string {
+  if (val == null || val === '' || val === '—') return '—';
+  const n = Number(val);
+  if (isNaN(n)) return String(val);
+  if (_STAT3.has(key)) return n.toFixed(3);
+  if (_STAT2.has(key)) return n.toFixed(2);
+  return String(val);
+}
 ---
 <Layout
   title={`NPB ${NPB_SEASON} 成績ランキング | セ・パ両リーグ リーダーボード | Baseballab`}
@@ -128,7 +139,7 @@ const hasData = !!leaders;
                             <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
                             <td class="pl-name"><a href={`/npb/players/${r.slug}/`}>{r.player}</a></td>
                             <td class="tm">{r.team}</td>
-                            <td class="val">{r.value}</td>
+                            <td class="val">{fmtL(key, r.value)}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -149,7 +160,7 @@ const hasData = !!leaders;
                             <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
                             <td class="pl-name"><a href={`/npb/players/${r.slug}/`}>{r.player}</a></td>
                             <td class="tm">{r.team}</td>
-                            <td class="val">{r.value}</td>
+                            <td class="val">{fmtL(key, r.value)}</td>
                           </tr>
                         ))}
                       </tbody>

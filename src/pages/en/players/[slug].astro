@@ -57,6 +57,9 @@ const whip   = splitStat?.whip ?? null;
 const ip     = splitStat?.inningsPitched ?? null;
 const saves  = splitStat?.saves ?? null;
 
+function f3(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(3); }
+function f2(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(2); }
+
 let statsSnippet = '';
 if (isBatter && avg) {
   const parts: string[] = [];
@@ -166,10 +169,10 @@ const affiliateLinks = [
 
       {isBatter && splitStat ? (
         <div class="stats-grid">
-          {avg && <div class="stat-card"><p class="stat-label">Batting Avg</p><p class="stat-value">{avg}</p><p class="stat-sub">AVG</p></div>}
+          {avg != null && <div class="stat-card"><p class="stat-label">Batting Avg</p><p class="stat-value">{f3(avg)}</p><p class="stat-sub">AVG</p></div>}
           {hr !== null && <div class="stat-card"><p class="stat-label">Home Runs</p><p class="stat-value highlight">{hr}</p><p class="stat-sub">HR</p></div>}
           {rbi !== null && <div class="stat-card"><p class="stat-label">RBI</p><p class="stat-value">{rbi}</p><p class="stat-sub">RBI</p></div>}
-          {ops && <div class="stat-card"><p class="stat-label">OPS</p><p class="stat-value">{ops}</p><p class="stat-sub">OBP+SLG</p></div>}
+          {ops != null && <div class="stat-card"><p class="stat-label">OPS</p><p class="stat-value">{f3(ops)}</p><p class="stat-sub">OBP+SLG</p></div>}
           {runs !== null && <div class="stat-card"><p class="stat-label">Runs</p><p class="stat-value">{runs}</p><p class="stat-sub">R</p></div>}
           {hits !== null && <div class="stat-card"><p class="stat-label">Hits</p><p class="stat-value">{hits}</p><p class="stat-sub">H</p></div>}
           {sb !== null && <div class="stat-card"><p class="stat-label">Stolen Bases</p><p class="stat-value">{sb}</p><p class="stat-sub">SB</p></div>}
@@ -177,10 +180,10 @@ const affiliateLinks = [
         </div>
       ) : isPitcher && splitStat ? (
         <div class="stats-grid">
-          {era && <div class="stat-card"><p class="stat-label">ERA</p><p class="stat-value highlight">{era}</p><p class="stat-sub">ERA</p></div>}
+          {era != null && <div class="stat-card"><p class="stat-label">ERA</p><p class="stat-value highlight">{f2(era)}</p><p class="stat-sub">ERA</p></div>}
           {wins !== null && losses !== null && <div class="stat-card"><p class="stat-label">Record</p><p class="stat-value">{wins}-{losses}</p><p class="stat-sub">W-L</p></div>}
           {strikeOuts !== null && <div class="stat-card"><p class="stat-label">Strikeouts</p><p class="stat-value">{strikeOuts}</p><p class="stat-sub">SO</p></div>}
-          {whip && <div class="stat-card"><p class="stat-label">WHIP</p><p class="stat-value">{whip}</p><p class="stat-sub">WHIP</p></div>}
+          {whip != null && <div class="stat-card"><p class="stat-label">WHIP</p><p class="stat-value">{f2(whip)}</p><p class="stat-sub">WHIP</p></div>}
           {ip && <div class="stat-card"><p class="stat-label">Innings</p><p class="stat-value">{ip}</p><p class="stat-sub">IP</p></div>}
           {saves !== null && <div class="stat-card"><p class="stat-label">Saves</p><p class="stat-value">{saves}</p><p class="stat-sub">SV</p></div>}
           {gamesPlayed !== null && <div class="stat-card"><p class="stat-label">Games</p><p class="stat-value">{gamesPlayed}</p><p class="stat-sub">G</p></div>}

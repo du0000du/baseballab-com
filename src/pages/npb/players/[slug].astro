@@ -15,6 +15,17 @@ const { p } = Astro.props;
 const teamMates = loadPlayers()
   .filter(pl => pl.teamSlug === p.teamSlug && pl.slug !== p.slug)
   .slice(0, 5);
+
+const _S3 = new Set(['avg', 'obp', 'slg', 'ops']);
+const _S2 = new Set(['era', 'whip']);
+function fmtCard(val: any, slug: string | null): string {
+  if (val == null || val === '') return '—';
+  const n = Number(val);
+  if (isNaN(n)) return String(val);
+  if (_S3.has(slug ?? '')) return n.toFixed(3);
+  if (_S2.has(slug ?? '')) return n.toFixed(2);
+  return String(val);
+}
 const s = p.stats || {};
 const isBat = p.group === 'batting';
 const leagueJa = p.league === 'central' ? 'セントラル・リーグ' : 'パシフィック・リーグ';
@@ -157,7 +168,7 @@ const jsonLd = {
             <p class="stat-label">
               {c[4] ? <a href={`/glossary/${c[4]}/`} class="stat-label-link">{c[0]}</a> : c[0]}
             </p>
-            <p class={c[3] ? 'stat-value hl' : 'stat-value'}>{c[1]}</p>
+            <p class={c[3] ? 'stat-value hl' : 'stat-value'}>{fmtCard(c[1], c[4])}</p>
             <p class="stat-sub">{c[2]}</p>
           </div>
         ))}

@@ -63,6 +63,9 @@ const whip = splitStat?.whip ?? null;
 const ip = splitStat?.inningsPitched ?? null;
 const saves = splitStat?.saves ?? null;
 
+function f3(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(3); }
+function f2(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(2); }
+
 // atomicText — 成績ベースの紹介文
 let statsSnippet = '';
 if (isBatter && avg) {
@@ -345,10 +348,10 @@ const affiliateLinks = [
 
       {isBatter && splitStat ? (
         <div class="stats-grid">
-          {avg && <div class="stat-card"><p class="stat-label"><a href="/glossary/avg/" class="sl">打率</a></p><p class="stat-value">{avg}</p><p class="stat-sub">AVG</p></div>}
+          {avg != null && <div class="stat-card"><p class="stat-label"><a href="/glossary/avg/" class="sl">打率</a></p><p class="stat-value">{f3(avg)}</p><p class="stat-sub">AVG</p></div>}
           {hr !== null && <div class="stat-card"><p class="stat-label">本塁打</p><p class="stat-value highlight">{hr}</p><p class="stat-sub">HR</p></div>}
           {rbi !== null && <div class="stat-card"><p class="stat-label"><a href="/glossary/rbi/" class="sl">打点</a></p><p class="stat-value">{rbi}</p><p class="stat-sub">RBI</p></div>}
-          {ops && <div class="stat-card"><p class="stat-label"><a href="/glossary/ops/" class="sl">OPS</a></p><p class="stat-value">{ops}</p><p class="stat-sub">出塁+長打</p></div>}
+          {ops != null && <div class="stat-card"><p class="stat-label"><a href="/glossary/ops/" class="sl">OPS</a></p><p class="stat-value">{f3(ops)}</p><p class="stat-sub">出塁+長打</p></div>}
           {runs !== null && <div class="stat-card"><p class="stat-label">得点</p><p class="stat-value">{runs}</p><p class="stat-sub">R</p></div>}
           {hits !== null && <div class="stat-card"><p class="stat-label">安打</p><p class="stat-value">{hits}</p><p class="stat-sub">H</p></div>}
           {sb !== null && sb > 0 && <div class="stat-card"><p class="stat-label">盗塁</p><p class="stat-value">{sb}</p><p class="stat-sub">SB</p></div>}
@@ -356,10 +359,10 @@ const affiliateLinks = [
         </div>
       ) : isPitcher && splitStat ? (
         <div class="stats-grid">
-          {era && <div class="stat-card"><p class="stat-label"><a href="/glossary/era/" class="sl">防御率</a></p><p class="stat-value highlight">{era}</p><p class="stat-sub">ERA</p></div>}
+          {era != null && <div class="stat-card"><p class="stat-label"><a href="/glossary/era/" class="sl">防御率</a></p><p class="stat-value highlight">{f2(era)}</p><p class="stat-sub">ERA</p></div>}
           {wins !== null && losses !== null && <div class="stat-card"><p class="stat-label">勝敗</p><p class="stat-value">{wins}-{losses}</p><p class="stat-sub">W-L</p></div>}
           {strikeOuts !== null && <div class="stat-card"><p class="stat-label">奪三振</p><p class="stat-value">{strikeOuts}</p><p class="stat-sub">K</p></div>}
-          {whip && <div class="stat-card"><p class="stat-label"><a href="/glossary/whip/" class="sl">WHIP</a></p><p class="stat-value">{whip}</p><p class="stat-sub">BB+H/IP</p></div>}
+          {whip != null && <div class="stat-card"><p class="stat-label"><a href="/glossary/whip/" class="sl">WHIP</a></p><p class="stat-value">{f2(whip)}</p><p class="stat-sub">BB+H/IP</p></div>}
           {ip && <div class="stat-card"><p class="stat-label">投球回</p><p class="stat-value">{ip}</p><p class="stat-sub">IP</p></div>}
           {saves !== null && saves > 0 && <div class="stat-card"><p class="stat-label"><a href="/glossary/sv/" class="sl">セーブ</a></p><p class="stat-value">{saves}</p><p class="stat-sub">SV</p></div>}
           {gamesPlayed !== null && <div class="stat-card"><p class="stat-label">登板</p><p class="stat-value">{gamesPlayed}</p><p class="stat-sub">G</p></div>}

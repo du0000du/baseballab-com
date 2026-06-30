@@ -35,13 +35,14 @@ function fmtDate(d: string) {
   return `${parseInt(m)}/${parseInt(day)}`;
 }
 function pctFmt(v: any) {
-  if (!v) return '.---';
-  const s = String(v);
-  return s.startsWith('.') ? s : `.${s}`;
+  if (v == null || !v) return '—';
+  const n = Number(v);
+  return isNaN(n) ? '—' : n.toFixed(3);
 }
 function eraFmt(v: any) {
-  if (!v || v === '-.--') return '-.--';
-  return String(v);
+  if (v == null || !v || v === '-.--') return '—';
+  const n = Number(v);
+  return isNaN(n) ? '—' : n.toFixed(2);
 }
 function hitSummary(lg: any): string {
   if (!lg) return '';
@@ -239,7 +240,7 @@ function lastGameSummary(p: any): string {
                         <div class={`stat-box${(hit.homeRuns ?? 0) >= 15 ? ' hi' : ''}`}><span class="stat-val">{hit.homeRuns ?? 0}</span><span class="stat-lbl">HR</span></div>
                         <div class="stat-box"><span class="stat-val">{hit.rbi ?? 0}</span><span class="stat-lbl">打点</span></div>
                         <div class="stat-box"><span class="stat-val">{hit.runs ?? 0}</span><span class="stat-lbl">得点</span></div>
-                        <div class={`stat-box${parseFloat(String(hit.ops ?? '0')) >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{hit.ops ?? '---'}</span><span class="stat-lbl">OPS</span></div>
+                        <div class={`stat-box${parseFloat(String(hit.ops ?? '0')) >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{pctFmt(hit.ops)}</span><span class="stat-lbl">OPS</span></div>
                         {hit.stolenBases != null && <div class="stat-box"><span class="stat-val">{hit.stolenBases}</span><span class="stat-lbl">SB</span></div>}
                       </div>
                     </>
@@ -252,7 +253,7 @@ function lastGameSummary(p: any): string {
                         <div class="stat-box"><span class="stat-val wide">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
                         <div class={`stat-box${parseFloat(String(pit.era ?? '99')) < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
                         <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">K</span></div>
-                        {pit.whip != null && <div class="stat-box"><span class="stat-val">{pit.whip}</span><span class="stat-lbl">WHIP</span></div>}
+                        {pit.whip != null && <div class="stat-box"><span class="stat-val">{eraFmt(pit.whip)}</span><span class="stat-lbl">WHIP</span></div>}
                       </div>
                     </>
                   )}
@@ -338,7 +339,7 @@ function lastGameSummary(p: any): string {
                         <div class="stat-box"><span class="stat-val wide">{pit.wins ?? 0}勝{pit.losses ?? 0}敗</span><span class="stat-lbl">W-L</span></div>
                         <div class={`stat-box${parseFloat(String(pit.era ?? '99')) < 3.0 ? ' hi' : ''}`}><span class="stat-val">{eraFmt(pit.era)}</span><span class="stat-lbl">ERA</span></div>
                         <div class="stat-box"><span class="stat-val">{pit.strikeOuts ?? 0}</span><span class="stat-lbl">K</span></div>
-                        {pit.whip != null && <div class="stat-box"><span class="stat-val">{pit.whip}</span><span class="stat-lbl">WHIP</span></div>}
+                        {pit.whip != null && <div class="stat-box"><span class="stat-val">{eraFmt(pit.whip)}</span><span class="stat-lbl">WHIP</span></div>}
                         {pit.saves != null && <div class="stat-box"><span class="stat-val">{pit.saves}</span><span class="stat-lbl">S</span></div>}
                         {(pit.holds ?? 0) > 0 && <div class="stat-box"><span class="stat-val">{pit.holds}</span><span class="stat-lbl">H</span></div>}
                         {pit.inningsPitched != null && <div class="stat-box"><span class="stat-val">{pit.inningsPitched}</span><span class="stat-lbl">IP</span></div>}
@@ -413,7 +414,7 @@ function lastGameSummary(p: any): string {
                           <div class="stat-box"><span class="stat-val">{pctFmt(hit.avg)}</span><span class="stat-lbl">打率</span></div>
                           <div class={`stat-box${(hit.homeRuns ?? 0) >= 15 ? ' hi' : ''}`}><span class="stat-val">{hit.homeRuns ?? 0}</span><span class="stat-lbl">HR</span></div>
                           <div class="stat-box"><span class="stat-val">{hit.rbi ?? 0}</span><span class="stat-lbl">打点</span></div>
-                          <div class={`stat-box${parseFloat(String(hit.ops ?? '0')) >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{hit.ops ?? '---'}</span><span class="stat-lbl">OPS</span></div>
+                          <div class={`stat-box${parseFloat(String(hit.ops ?? '0')) >= 0.900 ? ' hi' : ''}`}><span class="stat-val">{pctFmt(hit.ops)}</span><span class="stat-lbl">OPS</span></div>
                         </div>
                       )}
                       {isTWP ? (

@@ -12,6 +12,8 @@ const pitchers  = players.filter(p => p.group === 'pitching').sort((a,b) => (Num
 const standings = loadStandings();
 const rec       = (standings[t.league] || []).find((r: any) => r.teamSlug === t.slug);
 const leagueEn  = t.league === 'central' ? 'Central League' : 'Pacific League';
+function f3(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(3); }
+function f2(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(2); }
 const descEn = `${t.name} (NPB ${leagueEn}) ${NPB_SEASON} season standings and player stats.`;
 const ogUrl = `https://baseballab.com/en/npb/teams/${t.slug}/`;
 const jsonLd = {
@@ -92,8 +94,8 @@ const jsonLd = {
             {batters.map(p => (
               <tr>
                 <td class="nm"><a href={`/en/npb/players/${p.slug}/`}>{p.name}</a></td>
-                <td>{p.stats.avg??'-'}</td><td>{p.stats.hr??'-'}</td><td>{p.stats.rbi??'-'}</td>
-                <td class="hide-sp">{p.stats.ops??'-'}</td><td class="hide-sp">{p.stats.hits??'-'}</td><td class="hide-sp">{p.stats.sb??'-'}</td>
+                <td>{f3(p.stats.avg)}</td><td>{p.stats.hr??'—'}</td><td>{p.stats.rbi??'—'}</td>
+                <td class="hide-sp">{f3(p.stats.ops)}</td><td class="hide-sp">{p.stats.hits??'—'}</td><td class="hide-sp">{p.stats.sb??'—'}</td>
               </tr>
             ))}
           </tbody>
@@ -108,8 +110,8 @@ const jsonLd = {
             {pitchers.map(p => (
               <tr>
                 <td class="nm"><a href={`/en/npb/players/${p.slug}/`}>{p.name}</a></td>
-                <td>{p.stats.era??'-'}</td><td>{p.stats.wins??'-'}</td><td>{p.stats.losses??'-'}</td>
-                <td class="hide-sp">{p.stats.saves??'-'}</td><td class="hide-sp">{p.stats.so??'-'}</td><td class="hide-sp">{p.stats.ip??'-'}</td>
+                <td>{f2(p.stats.era)}</td><td>{p.stats.wins??'—'}</td><td>{p.stats.losses??'—'}</td>
+                <td class="hide-sp">{p.stats.saves??'—'}</td><td class="hide-sp">{p.stats.so??'—'}</td><td class="hide-sp">{p.stats.ip??'—'}</td>
               </tr>
             ))}
           </tbody>

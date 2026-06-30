@@ -57,19 +57,30 @@ const [
 ]);
 
 const BAT_CATS = [
-  { label: 'ホームラン（HR）', al: alHr,  nl: nlHr },
-  { label: '打率（AVG）',      al: alAvg, nl: nlAvg },
-  { label: '打点（RBI）',      al: alRbi, nl: nlRbi },
-  { label: '盗塁（SB）',       al: alSb,  nl: nlSb },
-  { label: '出塁率（OBP）',    al: alObp, nl: nlObp },
+  { label: 'ホームラン（HR）', sortStat: 'homeRuns',   al: alHr,  nl: nlHr },
+  { label: '打率（AVG）',      sortStat: 'avg',         al: alAvg, nl: nlAvg },
+  { label: '打点（RBI）',      sortStat: 'rbi',         al: alRbi, nl: nlRbi },
+  { label: '盗塁（SB）',       sortStat: 'stolenBases', al: alSb,  nl: nlSb },
+  { label: '出塁率（OBP）',    sortStat: 'obp',         al: alObp, nl: nlObp },
 ];
 const PIT_CATS = [
-  { label: '防御率（ERA）',  al: alEra,  nl: nlEra },
-  { label: '勝利（W）',      al: alW,    nl: nlW },
-  { label: '奪三振（SO）',   al: alSo,   nl: nlSo },
-  { label: 'セーブ（SV）',   al: alSv,   nl: nlSv },
-  { label: 'WHIP',           al: alWhip, nl: nlWhip },
+  { label: '防御率（ERA）',    sortStat: 'era',         al: alEra,  nl: nlEra },
+  { label: '勝利（W）',        sortStat: 'wins',        al: alW,    nl: nlW },
+  { label: '奪三振（SO）',     sortStat: 'strikeOuts',  al: alSo,   nl: nlSo },
+  { label: 'セーブ（SV）',     sortStat: 'saves',       al: alSv,   nl: nlSv },
+  { label: 'WHIP',             sortStat: 'whip',        al: alWhip, nl: nlWhip },
 ];
+
+const _M3 = new Set(['avg', 'obp', 'slg', 'ops']);
+const _M2 = new Set(['era', 'whip']);
+function fmtVal(stat: string, val: any): string {
+  if (val == null || val === '—') return '—';
+  const n = Number(val);
+  if (isNaN(n)) return String(val);
+  if (_M3.has(stat)) return n.toFixed(3);
+  if (_M2.has(stat)) return n.toFixed(2);
+  return String(val);
+}
 
 const MEDALS = ['🥇', '🥈', '🥉'];
 const LEAGUES = [
@@ -223,7 +234,7 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
                                 <td class={p.rank <= 3 ? 'rk' : 'rk n'}>{p.rank <= 3 ? MEDALS[p.rank - 1] : p.rank}</td>
                                 <td class="pn">{p.player}</td>
                                 <td class="tm">{p.team}</td>
-                                <td class="sv">{p.value}</td>
+                                <td class="sv">{fmtVal(cat.sortStat, p.value)}</td>
                               </tr>
                             )) : (
                               <tr><td colspan="4" class="nd">データ取得中...</td></tr>
@@ -250,7 +261,7 @@ const hasData = alHr.length > 0 || alEra.length > 0 || nlHr.length > 0;
                                 <td class={p.rank <= 3 ? 'rk' : 'rk n'}>{p.rank <= 3 ? MEDALS[p.rank - 1] : p.rank}</td>
                                 <td class="pn">{p.player}</td>
                                 <td class="tm">{p.team}</td>
-                                <td class="sv">{p.value}</td>
+                                <td class="sv">{fmtVal(cat.sortStat, p.value)}</td>
                               </tr>
                             )) : (
                               <tr><td colspan="4" class="nd">データ取得中...</td></tr>
