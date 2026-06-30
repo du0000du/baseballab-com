@@ -4,13 +4,17 @@ import AtomicAnswer from '../../../components/AtomicAnswer.astro';
 import AffiliateBlock from '../../../components/AffiliateBlock.astro';
 import AffiliateBannerAT from '../../../components/AffiliateBannerAT.astro';
 import GlossaryLinks from '../../../components/GlossaryLinks.astro';
-import { loadPlayers, NPB_SEASON } from '../../../lib/npb';
+import { loadPlayers, NPB_SEASON, teamBySlug } from '../../../lib/npb';
 import { gearAffiliates } from '../../../lib/affiliates';
 
 export async function getStaticPaths() {
   return loadPlayers().map(p => ({ params: { slug: p.slug }, props: { p } }));
 }
 const { p } = Astro.props;
+
+const teamMates = loadPlayers()
+  .filter(pl => pl.teamSlug === p.teamSlug && pl.slug !== p.slug)
+  .slice(0, 5);
 const s = p.stats || {};
 const isBat = p.group === 'batting';
 const leagueJa = p.league === 'central' ? 'セントラル・リーグ' : 'パシフィック・リーグ';
@@ -109,6 +113,13 @@ const jsonLd = {
     .stat-label-link { color:inherit; text-decoration:none; border-bottom:1px dotted currentColor; }
     .stat-label-link:hover { color:var(--accent); border-color:var(--accent); }
     .verdict { margin:0 0 1.5rem; padding:.75rem 1rem; background:var(--gray-100); border-left:3px solid var(--accent); border-radius:0 6px 6px 0; font-size:.88rem; color:var(--gray-700); line-height:1.65; }
+    .teammates { margin-top:2rem; padding:1.25rem 1.5rem; background:var(--gray-100); border-radius:10px; }
+    .teammates-title { font-size:.78rem; font-weight:700; color:var(--gray-500); text-transform:uppercase; letter-spacing:.06em; margin-bottom:.75rem; }
+    .teammates-list { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .teammate-link { display:inline-flex; align-items:center; gap:.4rem; background:#fff; border:1px solid var(--gray-200);
+      border-radius:20px; padding:.3rem .9rem; font-size:.82rem; font-weight:600; color:var(--navy); transition:all .15s; text-decoration:none; }
+    .teammate-link:hover { background:var(--navy); color:#fff; border-color:var(--navy); }
+    .teammate-pos { font-size:.7rem; color:var(--gray-400); font-weight:400; }
     @media(max-width:600px){ .stats-grid{grid-template-columns:repeat(2,1fr);} }
   </style>
 
@@ -156,6 +167,23 @@ const jsonLd = {
       <GlossaryLinks type={isBat ? 'batting' : 'pitching'} />
       <AffiliateBlock links={links} heading="この選手をもっと楽しむためのおすすめ" />
       <AffiliateBannerAT items={gearAffiliates} heading="野球ギア・用品を探す" />
+
+      {teamMates.length > 0 && (
+        <div class="teammates">
+          <p class="teammates-title">同じ {p.teamName} の選手</p>
+          <div class="teammates-list">
+            {teamMates.map(tm => (
+              <a href={`/npb/players/${tm.slug}/`} class="teammate-link">
+                {tm.name}
+                <span class="teammate-pos">{tm.group === 'batting' ? '野手' : '投手'}</span>
+              </a>
+            ))}
+            <a href={`/npb/teams/${p.teamSlug}/`} class="teammate-link" style="border-style:dashed">
+              {p.teamName} 一覧 →
+            </a>
+          </div>
+        </div>
+      )}
 
       <div class="src-box">
         成績データ出典: <a href={p.sourceUrl} rel="nofollow noopener" target="_blank">NPB.jp 日本野球機構</a>（公式記録）{p.asOf && `／${p.asOf} 時点`}。

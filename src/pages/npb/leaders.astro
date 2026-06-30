@@ -34,6 +34,19 @@ const hasData = !!leaders;
     .lh-hero h1 { font-size:clamp(1.5rem,4vw,2.2rem); font-weight:800; margin-bottom:.5rem; }
     .hero-sub { opacity:.8; margin-bottom:.75rem; }
     .updated-badge { display:inline-flex; gap:.3rem; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); border-radius:20px; padding:.25rem .9rem; font-size:.78rem; }
+
+    /* ── タブバー ── */
+    .tab-bar-wrap { border-bottom:2px solid var(--gray-200); background:#fff; }
+    .tab-bar { display:flex; gap:.25rem; padding:.75rem 0 0; }
+    .tab-btn { background:none; border:none; cursor:pointer; font-size:1rem; font-weight:700;
+      color:var(--gray-500); padding:.6rem 1.5rem; border-radius:6px 6px 0 0;
+      border-bottom:3px solid transparent; margin-bottom:-2px; transition:color .15s,border-color .15s; }
+    .tab-btn.active { color:var(--navy); border-bottom-color:var(--navy); }
+    .tab-btn:hover:not(.active) { color:var(--navy); background:var(--gray-100); }
+    .tab-pane { display:none; }
+    .tab-pane.active { display:block; }
+
+    /* ── コンテンツ ── */
     .lg-section { padding:2.75rem 0; }
     .lg-section.alt { background:var(--gray-100); }
     .lg-title { font-size:1.25rem; font-weight:800; color:var(--navy); margin-bottom:.3rem; display:flex; align-items:center; gap:.5rem; }
@@ -41,21 +54,21 @@ const hasData = !!leaders;
     .lg-badge.cl { background:#9b2335; } .lg-badge.pl { background:#1a5276; }
     .sub-title { font-size:1rem; font-weight:700; color:var(--gray-600); margin:1.75rem 0 1rem; border-bottom:2px solid var(--navy); padding-bottom:.35rem; }
     .leaders-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
-    .lcard { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+    .lcard { background:#fff; border:1px solid var(--gray-200); border-radius:10px; overflow-x:auto; box-shadow:var(--shadow-sm); }
     .card-title { background:var(--navy); color:#fff; font-size:.85rem; font-weight:600; padding:.55rem 1rem; }
-    table.lt { width:100%; border-collapse:collapse; font-size:.85rem; }
-    table.lt th { font-size:.66rem; color:var(--gray-500); text-transform:uppercase; padding:.35rem .6rem; text-align:left; }
+    table.lt { width:100%; border-collapse:collapse; font-size:.85rem; font-variant-numeric:tabular-nums; min-width:280px; }
+    table.lt th { font-size:.78rem; color:var(--gray-500); text-transform:uppercase; padding:.35rem .6rem; text-align:left; }
     table.lt th:last-child { text-align:right; }
-    table.lt td { padding:.42rem .6rem; border-top:1px solid var(--gray-100); }
-    table.lt tr:hover { background:rgba(22,45,71,.03); }
+    table.lt td { padding:.6rem .8rem; border-top:1px solid var(--gray-100); }
+    table.lt tr:hover { background:rgba(22,45,71,.08); }
     td.rk { width:2.2rem; text-align:center; } td.rk.n { font-size:.75rem; color:var(--gray-400); font-weight:600; }
     td.pl-name { font-weight:600; color:var(--text); } td.pl-name a { color:inherit; } td.pl-name a:hover { color:var(--red); }
     td.tm { font-size:.72rem; color:var(--gray-500); }
-    td.val { font-weight:700; color:var(--navy); text-align:right; font-variant-numeric:tabular-nums; }
+    td.val { font-weight:700; color:var(--navy); text-align:right; }
     .data-note { padding:1.75rem 0; background:var(--gray-100); border-top:1px solid var(--gray-200); }
     .data-note p { font-size:.78rem; color:var(--gray-600); text-align:center; line-height:1.8; }
     @media(max-width:900px){ .leaders-grid{grid-template-columns:1fr 1fr;} }
-    @media(max-width:560px){ .leaders-grid{grid-template-columns:1fr;} }
+    @media(max-width:560px){ .leaders-grid{grid-template-columns:1fr;} .tab-btn{font-size:.88rem;padding:.5rem 1rem;} }
   </style>
 
   <section class="lh-hero">
@@ -80,55 +93,95 @@ const hasData = !!leaders;
     <section class="lg-section"><div class="container"><p style="color:var(--gray-600);padding:2rem 0;">データを準備中です。しばらくお待ちください。</p></div></section>
   )}
 
-  {hasData && LEAGUES.map(([lg, label, cls], idx) => (
-    <section class={`lg-section ${idx % 2 ? 'alt' : ''}`}>
-      <div class="container">
-        <h2 class="lg-title"><span class={`lg-badge ${cls}`}>{cls.toUpperCase()}</span>{label}</h2>
-        <h3 class="sub-title">🏏 打撃部門</h3>
-        <div class="leaders-grid">
-          {BAT_CATS.map(([key, clabel]) => (
-            <div class="lcard">
-              <div class="card-title">{clabel}</div>
-              <table class="lt">
-                <thead><tr><th></th><th>選手</th><th>球団</th><th>記録</th></tr></thead>
-                <tbody>
-                  {rows(lg, 'batting', key).slice(0, 5).map((r:any) => (
-                    <tr>
-                      <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
-                      <td class="pl-name"><a href={`/npb/players/${r.slug}/`}>{r.player}</a></td>
-                      <td class="tm">{r.team}</td>
-                      <td class="val">{r.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ))}
-        </div>
-        <h3 class="sub-title">⚾ 投球部門</h3>
-        <div class="leaders-grid">
-          {PIT_CATS.map(([key, clabel]) => (
-            <div class="lcard">
-              <div class="card-title">{clabel}</div>
-              <table class="lt">
-                <thead><tr><th></th><th>選手</th><th>球団</th><th>記録</th></tr></thead>
-                <tbody>
-                  {rows(lg, 'pitching', key).slice(0, 5).map((r:any) => (
-                    <tr>
-                      <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
-                      <td class="pl-name"><a href={`/npb/players/${r.slug}/`}>{r.player}</a></td>
-                      <td class="tm">{r.team}</td>
-                      <td class="val">{r.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ))}
+  {hasData && (
+    <>
+      {/* タブバー */}
+      <div class="tab-bar-wrap">
+        <div class="container">
+          <div class="tab-bar" role="tablist">
+            {LEAGUES.map(([, label, cls], idx) => (
+              <button class={`tab-btn${idx === 0 ? ' active' : ''}`} data-tab={cls} role="tab"
+                aria-selected={idx === 0 ? 'true' : 'false'} aria-controls={`tab-${cls}`}>
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-    </section>
-  ))}
+
+      {/* 各リーグコンテンツ */}
+      {LEAGUES.map(([lg, label, cls], idx) => (
+        <div id={`tab-${cls}`} class={`tab-pane${idx === 0 ? ' active' : ''}`} role="tabpanel">
+          <section class={`lg-section${idx % 2 ? ' alt' : ''}`}>
+            <div class="container">
+              <h2 class="lg-title"><span class={`lg-badge ${cls}`}>{cls.toUpperCase()}</span>{label}</h2>
+              <h3 class="sub-title">🏏 打撃部門</h3>
+              <div class="leaders-grid">
+                {BAT_CATS.map(([key, clabel]) => (
+                  <div class="lcard">
+                    <div class="card-title">{clabel}</div>
+                    <table class="lt">
+                      <thead><tr><th></th><th>選手</th><th>球団</th><th>記録</th></tr></thead>
+                      <tbody>
+                        {rows(lg, 'batting', key).slice(0, 5).map((r:any) => (
+                          <tr>
+                            <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
+                            <td class="pl-name"><a href={`/npb/players/${r.slug}/`}>{r.player}</a></td>
+                            <td class="tm">{r.team}</td>
+                            <td class="val">{r.value}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ))}
+              </div>
+              <h3 class="sub-title">⚾ 投球部門</h3>
+              <div class="leaders-grid">
+                {PIT_CATS.map(([key, clabel]) => (
+                  <div class="lcard">
+                    <div class="card-title">{clabel}</div>
+                    <table class="lt">
+                      <thead><tr><th></th><th>選手</th><th>球団</th><th>記録</th></tr></thead>
+                      <tbody>
+                        {rows(lg, 'pitching', key).slice(0, 5).map((r:any) => (
+                          <tr>
+                            <td class={r.rank <= 3 ? 'rk' : 'rk n'}>{r.rank <= 3 ? MEDALS[r.rank - 1] : r.rank}</td>
+                            <td class="pl-name"><a href={`/npb/players/${r.slug}/`}>{r.player}</a></td>
+                            <td class="tm">{r.team}</td>
+                            <td class="val">{r.value}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </div>
+      ))}
+
+      <script is:inline>
+        (function () {
+          var btns = document.querySelectorAll('.tab-btn');
+          var panes = document.querySelectorAll('.tab-pane');
+          btns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              var tab = btn.dataset.tab;
+              btns.forEach(function (b) {
+                b.classList.toggle('active', b === btn);
+                b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+              });
+              panes.forEach(function (p) {
+                p.classList.toggle('active', p.id === 'tab-' + tab);
+              });
+            });
+          });
+        })();
+      </script>
+    </>
+  )}
 
   <div class="data-note">
     <div class="container">

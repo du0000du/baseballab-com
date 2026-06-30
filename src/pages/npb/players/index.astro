@@ -1,7 +1,7 @@
 ---
 // /npb/players/ — NPB 全選手 打撃・投球成績 一覧
 import Layout from '../../../layouts/Layout.astro';
-import { loadPlayers, loadMeta, NPB_SEASON } from '../../../lib/npb';
+import { loadPlayers, loadMeta, NPB_TEAMS, NPB_SEASON } from '../../../lib/npb';
 
 const players = loadPlayers();
 const meta = loadMeta();
@@ -59,6 +59,18 @@ const ogUrl = 'https://baseballab.com/npb/players/';
     .hi { color:#9b2335; font-weight:700; }
     .note { font-size:.75rem; color:var(--gray-500); margin:.75rem 0 0; }
     @media(max-width:640px) { .hide-sp { display:none; } }
+
+    /* ── チームフィルター ── */
+    .filter-wrap { padding:1.25rem 0 0; border-bottom:1px solid var(--gray-200); }
+    .filter-label { font-size:.72rem; font-weight:700; color:var(--gray-500); text-transform:uppercase; letter-spacing:.06em; margin-bottom:.6rem; }
+    .filter-league { margin-bottom:.75rem; }
+    .filter-league-name { font-size:.72rem; color:var(--gray-400); margin-bottom:.35rem; }
+    .filter-btns { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .filter-btn { background:#fff; border:1px solid var(--gray-200); border-radius:20px; padding:.28rem .85rem;
+      font-size:.8rem; font-weight:600; color:var(--gray-600); cursor:pointer; transition:all .15s; }
+    .filter-btn:hover { border-color:var(--navy); color:var(--navy); }
+    .filter-btn.active { background:var(--navy); border-color:var(--navy); color:#fff; }
+    .filter-btn.all.active { background:var(--gray-800); border-color:var(--gray-800); }
   </style>
 
   <section class="hero">
@@ -69,6 +81,24 @@ const ogUrl = 'https://baseballab.com/npb/players/';
       {asOf && <span class="updated-badge">📅 {asOf} 時点</span>}
     </div>
   </section>
+
+  {/* チームフィルター */}
+  <div class="filter-wrap">
+    <div class="container">
+      <p class="filter-label">球団で絞り込む</p>
+      <div class="filter-btns">
+        <button class="filter-btn all active" data-filter="all">すべて</button>
+        <span style="width:1px;background:var(--gray-200);margin:0 .25rem;display:inline-block;"></span>
+        {NPB_TEAMS.filter(t => t.league === 'central').map(t => (
+          <button class="filter-btn" data-filter={t.slug}>{t.abbr}（{t.name.slice(0,3)}）</button>
+        ))}
+        <span style="width:1px;background:var(--gray-200);margin:0 .25rem;display:inline-block;"></span>
+        {NPB_TEAMS.filter(t => t.league === 'pacific').map(t => (
+          <button class="filter-btn" data-filter={t.slug}>{t.abbr}（{t.name.slice(0,3)}）</button>
+        ))}
+      </div>
+    </div>
+  </div>
 
   <div class="body">
     <div class="container">
@@ -95,7 +125,7 @@ const ogUrl = 'https://baseballab.com/npb/players/';
           </thead>
           <tbody>
             {batters.map((p, i) => (
-              <tr>
+              <tr data-team={p.teamSlug}>
                 <td class="rank-num">{i + 1}</td>
                 <td class="nm">
                   <a href={`/npb/players/${p.slug}/`}>{p.name}</a>
@@ -137,7 +167,7 @@ const ogUrl = 'https://baseballab.com/npb/players/';
           </thead>
           <tbody>
             {pitchers.map((p, i) => (
-              <tr>
+              <tr data-team={p.teamSlug}>
                 <td class="rank-num">{i + 1}</td>
                 <td class="nm">
                   <a href={`/npb/players/${p.slug}/`}>{p.name}</a>
@@ -159,4 +189,19 @@ const ogUrl = 'https://baseballab.com/npb/players/';
 
     </div>
   </div>
+
+  <script is:inline>
+    (function () {
+      var btns = document.querySelectorAll('.filter-btn');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var filter = btn.dataset.filter;
+          btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+          document.querySelectorAll('tr[data-team]').forEach(function (row) {
+            row.style.display = (filter === 'all' || row.dataset.team === filter) ? '' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
 </Layout>
