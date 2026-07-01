@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 669022,
+    "fullName": "MacKenzie Gore",
+    "link": "/api/v1/people/669022",
+    "firstName": "MacKenzie",
+    "lastName": "Gore",
+    "primaryNumber": "1",
+    "birthDate": "1999-02-24",
+    "currentAge": 27,
+    "birthCity": "Wilmington",
+    "birthStateProvince": "NC",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 193,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "MacKenzie",
+    "useLastName": "Gore",
+    "middleName": "Evan",
+    "boxscoreName": "Gore",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2017,
+    "mlbDebutDate": "2022-04-15",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "MacKenzie Gore",
+    "nameSlug": "mackenzie-gore-669022",
+    "firstLastName": "MacKenzie Gore",
+    "lastFirstName": "Gore, MacKenzie",
+    "lastInitName": "Gore, M",
+    "initLastName": "M Gore",
+    "fullFMLName": "MacKenzie Evan Gore",
+    "fullLFMName": "Gore, MacKenzie Evan",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 18,
+            "gamesStarted": 18,
+            "groundOuts": 78,
+            "airOuts": 102,
+            "runs": 46,
+            "doubles": 20,
+            "triples": 3,
+            "homeRuns": 9,
+            "strikeOuts": 104,
+            "baseOnBalls": 39,
+            "intentionalWalks": 0,
+            "hits": 83,
+            "hitByPitch": 2,
+            "avg": ".229",
+            "atBats": 363,
+            "obp": ".305",
+            "slg": ".375",
+            "ops": ".680",
+            "caughtStealing": 0,
+            "stolenBases": 5,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1635,
+            "era": "4.31",
+            "inningsPitched": "96.0",
+            "wins": 5,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 46,
+            "whip": "1.27",
+            "battersFaced": 408,
+            "outs": 288,
+            "gamesPitched": 18,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1040,
+            "strikePercentage": ".640",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 1,
+            "totalBases": 136,
+            "groundOutsToAirouts": "0.76",
+            "winPercentage": ".455",
+            "pitchesPerInning": "17.03",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.67",
+            "strikeoutsPer9Inn": "9.75",
+            "walksPer9Inn": "3.66",
+            "hitsPer9Inn": "7.78",
+            "runsScoredPer9": "4.31",
+            "homeRunsPer9": "0.84",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 669022,
+            "fullName": "MacKenzie Gore",
+            "link": "/api/v1/people/669022"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
