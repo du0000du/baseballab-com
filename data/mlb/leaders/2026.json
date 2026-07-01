@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-01T16:17:50Z",
+  "fetched_at": "2026-07-01T18:57:07Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -140,9 +140,9 @@
       },
       {
         "rank": 10,
-        "playerId": 673962,
-        "player": "Josh Jung",
-        "team": "TEX",
+        "playerId": 661388,
+        "player": "William Contreras",
+        "team": "MIL",
         "value": ".297"
       }
     ],
@@ -191,31 +191,31 @@
       },
       {
         "rank": 5,
+        "playerId": 671277,
+        "player": "Luis García Jr.",
+        "team": "WSH",
+        "value": 59
+      },
+      {
+        "rank": 5,
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
         "value": 59
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 666018,
         "player": "Jonathan Aranda",
         "team": "TB",
         "value": 58
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
         "value": 58
-      },
-      {
-        "rank": 10,
-        "playerId": 676475,
-        "player": "Alec Burleson",
-        "team": "STL",
-        "value": 57
       }
     ],
     "stolenBases": [
@@ -249,17 +249,17 @@
       },
       {
         "rank": 5,
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
+        "value": 21
+      },
+      {
+        "rank": 5,
         "playerId": 665833,
         "player": "Oneil Cruz",
         "team": "PIT",
         "value": 21
-      },
-      {
-        "rank": 6,
-        "playerId": 691718,
-        "player": "Pete Crow-Armstrong",
-        "team": "CHC",
-        "value": 20
       },
       {
         "rank": 7,
