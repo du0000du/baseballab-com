@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="サイト内検索 | Baseballab"
+  description="選手名・指標・チーム名でBaseballabのコンテンツを検索できます。"
+>
+  <Fragment slot="head">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  </Fragment>
+
+  <div class="container">
+    <div class="search-page">
+      <h1 class="search-title">サイト内検索</h1>
+      <p class="search-desc">選手名・指標・チーム名などで検索できます</p>
+      <div id="search"></div>
+    </div>
+  </div>
+</Layout>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', function () {
+    var script = document.createElement('script');
+    script.src = '/pagefind/pagefind-ui.js';
+    script.onload = function () {
+      new PagefindUI({
+        element: '#search',
+        showImages: false,
+        excerptLength: 30,
+        translations: {
+          placeholder: '選手名・指標・チーム名を入力…',
+          zero_results: '"[SEARCH_TERM]" の検索結果はありません',
+        },
+      });
+    };
+    document.head.appendChild(script);
+  });
+</script>
+
+<style>
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 4rem;
+  }
+  .search-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+  .search-desc {
+    color: var(--gray-600);
+    margin-bottom: 1.75rem;
+    font-size: 0.9rem;
+  }
+
+  /* Pagefind デフォルト UI の上書き */
+  :global(.pagefind-ui__search-input) {
+    border: 2px solid var(--border) !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    padding: 0.7rem 1rem !important;
+  }
+  :global(.pagefind-ui__search-input:focus) {
+    border-color: var(--navy) !important;
+    outline: none !important;
+  }
+  :global(.pagefind-ui__result-link) {
+    color: var(--navy) !important;
+    font-weight: 600 !important;
+  }
+  :global(.pagefind-ui__result-excerpt) {
+    font-size: 0.875rem !important;
+    color: var(--gray-600) !important;
+  }
+  :global(.pagefind-ui__button) {
+    background: var(--navy) !important;
+    color: #fff !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+  }
+</style>
