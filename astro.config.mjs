@@ -4,6 +4,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://baseballab.com',
   trailingSlash: 'always',
+  redirects: {
+    '/rankings/': '/mlb/leaders/',
+  },
   integrations: [
     sitemap({
       changefreq: 'daily',
