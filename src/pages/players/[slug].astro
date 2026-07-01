@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import AtomicAnswer from '../../components/AtomicAnswer.astro';
 import AffiliateBlock from '../../components/AffiliateBlock.astro';
 import GlossaryLinks from '../../components/GlossaryLinks.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 const SEASON_YEAR = new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1; // 3月以降は当年、1〜2月は前年
@@ -388,6 +389,7 @@ const affiliateLinks = [
           <li><a href="/players/">MLB 選手一覧</a></li>
         </ul>
       </div>
+      <ShareButtons title={pageTitle} url={ogUrl} />
       <AffiliateBlock links={affiliateLinks} heading="この選手をさらに知るためのおすすめ" />
 </div>
   </div>

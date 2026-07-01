@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import AffiliateBlock from '../../components/AffiliateBlock.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
 import linksData from '../../../data/affiliates/links.json';
 import { loadLeaders, NPB_SEASON } from '../../lib/npb';
 
@@ -161,6 +162,7 @@ const npbLeaders: any[] = leaderDef && leadersData
       </aside>
     )}
 
+    <ShareButtons title={`${abbr ?? title}とは | Baseballab 指標解説`} url={ogUrl} />
     <AffiliateBlock links={affiliateLinks} heading={affHeading} />
 
     <aside class="see-also">

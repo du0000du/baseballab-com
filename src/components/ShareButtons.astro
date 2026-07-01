@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+const { title, url } = Astro.props;
+const xUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`;
+---
+
+<div class="share-buttons">
+  <span class="share-label">シェア</span>
+  <a href={xUrl} target="_blank" rel="noopener noreferrer" class="share-btn share-x" aria-label="Xでシェア">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+    <span>ポスト</span>
+  </a>
+  <a href={lineUrl} target="_blank" rel="noopener noreferrer" class="share-btn share-line" aria-label="LINEでシェア">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19.952 12.476C19.952 8.343 15.837 5 10.833 5 5.83 5 1.714 8.343 1.714 12.476c0 3.706 3.287 6.81 7.727 7.394.301.065.711.198.815.455.093.233.061.598.03.834l-.132.793c-.04.233-.186.912.8.497s5.324-3.134 7.27-5.366c1.34-1.47 1.728-2.96 1.728-4.607Z"/>
+    </svg>
+    <span>LINE</span>
+  </a>
+</div>
+
+<style>
+  .share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  .share-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--gray-600);
+    letter-spacing: 0.05em;
+    margin-right: 0.25rem;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.15s;
+    color: #fff;
+  }
+  .share-btn:hover { opacity: 0.85; }
+  .share-x    { background: #000; }
+  .share-line { background: #06c755; }
+</style>
