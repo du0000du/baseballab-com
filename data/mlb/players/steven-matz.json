@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 571927,
+    "fullName": "Steven Matz",
+    "link": "/api/v1/people/571927",
+    "firstName": "Steven",
+    "lastName": "Matz",
+    "primaryNumber": "32",
+    "birthDate": "1991-05-29",
+    "currentAge": 35,
+    "birthCity": "Stony Brook",
+    "birthStateProvince": "NY",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Steven",
+    "useLastName": "Matz",
+    "middleName": "Jakob",
+    "boxscoreName": "Matz",
+    "nickName": "Matzy",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2009,
+    "pronunciation": "Mats",
+    "mlbDebutDate": "2015-06-28",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Steven Matz",
+    "nameSlug": "steven-matz-571927",
+    "firstLastName": "Steven Matz",
+    "lastFirstName": "Matz, Steven",
+    "lastInitName": "Matz, S",
+    "initLastName": "S Matz",
+    "fullFMLName": "Steven Jakob Matz",
+    "fullLFMName": "Matz, Steven Jakob",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 35,
+            "gamesPlayed": 15,
+            "gamesStarted": 10,
+            "groundOuts": 47,
+            "airOuts": 67,
+            "runs": 38,
+            "doubles": 10,
+            "triples": 2,
+            "homeRuns": 11,
+            "strikeOuts": 41,
+            "baseOnBalls": 19,
+            "intentionalWalks": 0,
+            "hits": 55,
+            "hitByPitch": 1,
+            "avg": ".266",
+            "atBats": 207,
+            "obp": ".326",
+            "slg": ".493",
+            "ops": ".819",
+            "caughtStealing": 0,
+            "stolenBases": 6,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 918,
+            "era": "6.28",
+            "inningsPitched": "53.0",
+            "wins": 4,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 1,
+            "blownSaves": 0,
+            "earnedRuns": 37,
+            "whip": "1.40",
+            "battersFaced": 230,
+            "outs": 159,
+            "gamesPitched": 15,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 588,
+            "strikePercentage": ".640",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 102,
+            "groundOutsToAirouts": "0.70",
+            "winPercentage": ".500",
+            "pitchesPerInning": "17.32",
+            "gamesFinished": 1,
+            "strikeoutWalkRatio": "2.16",
+            "strikeoutsPer9Inn": "6.96",
+            "walksPer9Inn": "3.23",
+            "hitsPer9Inn": "9.34",
+            "runsScoredPer9": "6.45",
+            "homeRunsPer9": "1.87",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 139,
+            "name": "Tampa Bay Rays",
+            "link": "/api/v1/teams/139"
+          },
+          "player": {
+            "id": 571927,
+            "fullName": "Steven Matz",
+            "link": "/api/v1/people/571927"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

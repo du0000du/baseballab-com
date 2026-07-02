@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 678606,
+    "fullName": "José A. Ferrer",
+    "link": "/api/v1/people/678606",
+    "firstName": "José",
+    "lastName": "Ferrer",
+    "primaryNumber": "45",
+    "birthDate": "2000-03-03",
+    "currentAge": 26,
+    "birthCity": "Maimon",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 1\"",
+    "weight": 233,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "José A.",
+    "useLastName": "Ferrer",
+    "middleName": "Alexander",
+    "boxscoreName": "Ferrer",
+    "gender": "M",
+    "nameMatrilineal": "Vizcaino",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "fur-AIR",
+    "mlbDebutDate": "2023-07-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "José A. Ferrer",
+    "nameSlug": "jose-a-ferrer-678606",
+    "firstLastName": "José A. Ferrer",
+    "lastFirstName": "Ferrer, José A.",
+    "lastInitName": "Ferrer, J",
+    "initLastName": "J Ferrer",
+    "fullFMLName": "José Alexander Ferrer",
+    "fullLFMName": "Ferrer, José Alexander",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 40,
+            "gamesStarted": 0,
+            "groundOuts": 43,
+            "airOuts": 32,
+            "runs": 11,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 30,
+            "baseOnBalls": 9,
+            "intentionalWalks": 0,
+            "hits": 39,
+            "hitByPitch": 3,
+            "avg": ".275",
+            "atBats": 142,
+            "obp": ".331",
+            "slg": ".359",
+            "ops": ".690",
+            "caughtStealing": 2,
+            "stolenBases": 1,
+            "stolenBasePercentage": ".333",
+            "caughtStealingPercentage": ".667",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 587,
+            "era": "2.50",
+            "inningsPitched": "36.0",
+            "wins": 1,
+            "losses": 1,
+            "saves": 3,
+            "saveOpportunities": 5,
+            "holds": 10,
+            "blownSaves": 2,
+            "earnedRuns": 10,
+            "whip": "1.33",
+            "battersFaced": 156,
+            "outs": 108,
+            "gamesPitched": 40,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 396,
+            "strikePercentage": ".670",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 0,
+            "totalBases": 51,
+            "groundOutsToAirouts": "1.34",
+            "winPercentage": ".500",
+            "pitchesPerInning": "16.31",
+            "gamesFinished": 6,
+            "strikeoutWalkRatio": "3.33",
+            "strikeoutsPer9Inn": "7.50",
+            "walksPer9Inn": "2.25",
+            "hitsPer9Inn": "9.75",
+            "runsScoredPer9": "2.75",
+            "homeRunsPer9": "0.50",
+            "inheritedRunners": 14,
+            "inheritedRunnersScored": 6,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 136,
+            "name": "Seattle Mariners",
+            "link": "/api/v1/teams/136"
+          },
+          "player": {
+            "id": 678606,
+            "fullName": "José A. Ferrer",
+            "link": "/api/v1/people/678606"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

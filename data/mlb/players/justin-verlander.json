@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 434378,
+    "fullName": "Justin Verlander",
+    "link": "/api/v1/people/434378",
+    "firstName": "Justin",
+    "lastName": "Verlander",
+    "primaryNumber": "35",
+    "birthDate": "1983-02-20",
+    "currentAge": 43,
+    "birthCity": "Manakin-Sabot",
+    "birthStateProvince": "VA",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 240,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Justin",
+    "useLastName": "Verlander",
+    "middleName": "Brooks",
+    "boxscoreName": "Verlander",
+    "nickName": "J V",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2004,
+    "mlbDebutDate": "2005-07-04",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Justin Verlander",
+    "nameSlug": "justin-verlander-434378",
+    "firstLastName": "Justin Verlander",
+    "lastFirstName": "Verlander, Justin",
+    "lastInitName": "Verlander, J",
+    "initLastName": "J Verlander",
+    "fullFMLName": "Justin Brooks Verlander",
+    "fullLFMName": "Verlander, Justin Brooks",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 43,
+            "gamesPlayed": 1,
+            "gamesStarted": 1,
+            "groundOuts": 2,
+            "airOuts": 8,
+            "runs": 5,
+            "doubles": 1,
+            "triples": 1,
+            "homeRuns": 1,
+            "strikeOuts": 1,
+            "baseOnBalls": 2,
+            "intentionalWalks": 0,
+            "hits": 6,
+            "hitByPitch": 0,
+            "avg": ".353",
+            "atBats": 17,
+            "obp": ".421",
+            "slg": ".706",
+            "ops": "1.127",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 80,
+            "era": "12.27",
+            "inningsPitched": "3.2",
+            "wins": 0,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 5,
+            "whip": "2.18",
+            "battersFaced": 19,
+            "outs": 11,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 53,
+            "strikePercentage": ".660",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 12,
+            "groundOutsToAirouts": "0.25",
+            "winPercentage": ".000",
+            "pitchesPerInning": "21.82",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "0.50",
+            "strikeoutsPer9Inn": "2.45",
+            "walksPer9Inn": "4.91",
+            "hitsPer9Inn": "14.73",
+            "runsScoredPer9": "12.27",
+            "homeRunsPer9": "2.45",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 434378,
+            "fullName": "Justin Verlander",
+            "link": "/api/v1/people/434378"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

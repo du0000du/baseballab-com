@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 689254,
+    "fullName": "Mason Fluharty",
+    "link": "/api/v1/people/689254",
+    "firstName": "Mason",
+    "lastName": "Fluharty",
+    "primaryNumber": "68",
+    "birthDate": "2001-08-13",
+    "currentAge": 24,
+    "birthCity": "Lewes",
+    "birthStateProvince": "DE",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Mason",
+    "useLastName": "Fluharty",
+    "middleName": "Lynn",
+    "boxscoreName": "Fluharty",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "pronunciation": "FLEW-hardy",
+    "mlbDebutDate": "2025-04-01",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Mason Fluharty",
+    "nameSlug": "mason-fluharty-689254",
+    "firstLastName": "Mason Fluharty",
+    "lastFirstName": "Fluharty, Mason",
+    "lastInitName": "Fluharty, M",
+    "initLastName": "M Fluharty",
+    "fullFMLName": "Mason Lynn Fluharty",
+    "fullLFMName": "Fluharty, Mason Lynn",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 24,
+            "gamesPlayed": 46,
+            "gamesStarted": 3,
+            "groundOuts": 23,
+            "airOuts": 34,
+            "runs": 17,
+            "doubles": 5,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 40,
+            "baseOnBalls": 16,
+            "intentionalWalks": 1,
+            "hits": 35,
+            "hitByPitch": 1,
+            "avg": ".271",
+            "atBats": 129,
+            "obp": ".354",
+            "slg": ".403",
+            "ops": ".757",
+            "caughtStealing": 3,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 591,
+            "era": "4.59",
+            "inningsPitched": "33.1",
+            "wins": 3,
+            "losses": 0,
+            "saves": 1,
+            "saveOpportunities": 1,
+            "holds": 11,
+            "blownSaves": 0,
+            "earnedRuns": 17,
+            "whip": "1.53",
+            "battersFaced": 149,
+            "outs": 100,
+            "gamesPitched": 46,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 378,
+            "strikePercentage": ".640",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 52,
+            "groundOutsToAirouts": "0.68",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "17.73",
+            "gamesFinished": 4,
+            "strikeoutWalkRatio": "2.50",
+            "strikeoutsPer9Inn": "10.80",
+            "walksPer9Inn": "4.32",
+            "hitsPer9Inn": "9.45",
+            "runsScoredPer9": "4.59",
+            "homeRunsPer9": "1.08",
+            "inheritedRunners": 24,
+            "inheritedRunnersScored": 7,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 689254,
+            "fullName": "Mason Fluharty",
+            "link": "/api/v1/people/689254"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

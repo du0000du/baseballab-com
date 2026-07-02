@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 669062,
+    "fullName": "Erik Miller",
+    "link": "/api/v1/people/669062",
+    "firstName": "Erik",
+    "lastName": "Miller",
+    "primaryNumber": "68",
+    "birthDate": "1998-02-13",
+    "currentAge": 28,
+    "birthCity": "St. Louis",
+    "birthStateProvince": "MO",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 269,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Erik",
+    "useLastName": "Miller",
+    "middleName": "Christopher",
+    "boxscoreName": "Miller, E",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "pronunciation": "MILL-urr",
+    "mlbDebutDate": "2024-03-28",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Erik Miller",
+    "nameSlug": "erik-miller-669062",
+    "firstLastName": "Erik Miller",
+    "lastFirstName": "Miller, Erik",
+    "lastInitName": "Miller, E",
+    "initLastName": "E Miller",
+    "fullFMLName": "Erik Christopher Miller",
+    "fullLFMName": "Miller, Erik Christopher",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 27,
+            "gamesStarted": 0,
+            "groundOuts": 18,
+            "airOuts": 15,
+            "runs": 10,
+            "doubles": 4,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 29,
+            "baseOnBalls": 19,
+            "intentionalWalks": 1,
+            "hits": 18,
+            "hitByPitch": 1,
+            "avg": ".225",
+            "atBats": 80,
+            "obp": ".380",
+            "slg": ".350",
+            "ops": ".730",
+            "caughtStealing": 0,
+            "stolenBases": 6,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 466,
+            "era": "4.22",
+            "inningsPitched": "21.1",
+            "wins": 1,
+            "losses": 0,
+            "saves": 2,
+            "saveOpportunities": 3,
+            "holds": 9,
+            "blownSaves": 1,
+            "earnedRuns": 10,
+            "whip": "1.73",
+            "battersFaced": 100,
+            "outs": 64,
+            "gamesPitched": 27,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 246,
+            "strikePercentage": ".530",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 28,
+            "groundOutsToAirouts": "1.20",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "21.84",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "1.53",
+            "strikeoutsPer9Inn": "12.23",
+            "walksPer9Inn": "8.02",
+            "hitsPer9Inn": "7.59",
+            "runsScoredPer9": "4.22",
+            "homeRunsPer9": "0.84",
+            "inheritedRunners": 17,
+            "inheritedRunnersScored": 8,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 137,
+            "name": "San Francisco Giants",
+            "link": "/api/v1/teams/137"
+          },
+          "player": {
+            "id": 669062,
+            "fullName": "Erik Miller",
+            "link": "/api/v1/people/669062"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

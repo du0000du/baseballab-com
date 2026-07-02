@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 677800,
+    "fullName": "Wilyer Abreu",
+    "link": "/api/v1/people/677800",
+    "firstName": "Wilyer",
+    "lastName": "Abreu",
+    "primaryNumber": "52",
+    "birthDate": "1999-06-24",
+    "currentAge": 27,
+    "birthCity": "Maracaibo",
+    "birthCountry": "Venezuela",
+    "height": "5' 10\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Wilyer",
+    "useLastName": "Abreu",
+    "middleName": "David",
+    "boxscoreName": "Abreu, W",
+    "gender": "M",
+    "nameMatrilineal": "Villalobos",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "WHEEL-yurr",
+    "mlbDebutDate": "2023-08-22",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Wilyer Abreu",
+    "nameSlug": "wilyer-abreu-677800",
+    "firstLastName": "Wilyer Abreu",
+    "lastFirstName": "Abreu, Wilyer",
+    "lastInitName": "Abreu, W",
+    "initLastName": "W Abreu",
+    "fullFMLName": "Wilyer David Abreu",
+    "fullLFMName": "Abreu, Wilyer David",
+    "strikeZoneTop": 3.117,
+    "strikeZoneBottom": 1.573
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 83,
+            "groundOuts": 59,
+            "airOuts": 108,
+            "runs": 38,
+            "doubles": 16,
+            "triples": 3,
+            "homeRuns": 10,
+            "strikeOuts": 72,
+            "baseOnBalls": 33,
+            "intentionalWalks": 1,
+            "hits": 85,
+            "hitByPitch": 0,
+            "avg": ".266",
+            "atBats": 319,
+            "obp": ".331",
+            "slg": ".429",
+            "ops": ".760",
+            "caughtStealing": 2,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1404,
+            "plateAppearances": 358,
+            "totalBases": 137,
+            "rbi": 39,
+            "leftOnBase": 155,
+            "sacBunts": 1,
+            "sacFlies": 4,
+            "babip": ".311",
+            "groundOutsToAirouts": "0.55",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "31.90"
+          },
+          "team": {
+            "id": 111,
+            "name": "Boston Red Sox",
+            "link": "/api/v1/teams/111"
+          },
+          "player": {
+            "id": 677800,
+            "fullName": "Wilyer Abreu",
+            "link": "/api/v1/people/677800"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

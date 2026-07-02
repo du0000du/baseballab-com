@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 668930,
+    "fullName": "Brice Turang",
+    "link": "/api/v1/people/668930",
+    "firstName": "Brice",
+    "lastName": "Turang",
+    "primaryNumber": "2",
+    "birthDate": "1999-11-21",
+    "currentAge": 26,
+    "birthCity": "Corona",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Brice",
+    "useLastName": "Turang",
+    "middleName": "Craig",
+    "boxscoreName": "Turang",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "mlbDebutDate": "2023-03-30",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brice Turang",
+    "nameSlug": "brice-turang-668930",
+    "firstLastName": "Brice Turang",
+    "lastFirstName": "Turang, Brice",
+    "lastInitName": "Turang, B",
+    "initLastName": "B Turang",
+    "fullFMLName": "Brice Craig Turang",
+    "fullLFMName": "Turang, Brice Craig",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 80,
+            "groundOuts": 81,
+            "airOuts": 55,
+            "runs": 60,
+            "doubles": 17,
+            "triples": 3,
+            "homeRuns": 12,
+            "strikeOuts": 95,
+            "baseOnBalls": 49,
+            "intentionalWalks": 3,
+            "hits": 80,
+            "hitByPitch": 0,
+            "avg": ".261",
+            "atBats": 306,
+            "obp": ".361",
+            "slg": ".454",
+            "ops": ".815",
+            "caughtStealing": 2,
+            "stolenBases": 13,
+            "stolenBasePercentage": ".867",
+            "caughtStealingPercentage": ".133",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1497,
+            "plateAppearances": 360,
+            "totalBases": 139,
+            "rbi": 48,
+            "leftOnBase": 123,
+            "sacBunts": 3,
+            "sacFlies": 2,
+            "babip": ".338",
+            "groundOutsToAirouts": "1.47",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "25.50"
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 668930,
+            "fullName": "Brice Turang",
+            "link": "/api/v1/people/668930"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

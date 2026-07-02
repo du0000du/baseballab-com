@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 643511,
+    "fullName": "Tyler Rogers",
+    "link": "/api/v1/people/643511",
+    "firstName": "Tyler",
+    "lastName": "Rogers",
+    "primaryNumber": "71",
+    "birthDate": "1990-12-17",
+    "currentAge": 35,
+    "birthCity": "Denver",
+    "birthStateProvince": "CO",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Tyler",
+    "useLastName": "Rogers",
+    "middleName": "Scott",
+    "boxscoreName": "Rogers, Ty",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2013,
+    "mlbDebutDate": "2019-08-27",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Tyler Rogers",
+    "nameSlug": "tyler-rogers-643511",
+    "firstLastName": "Tyler Rogers",
+    "lastFirstName": "Rogers, Tyler",
+    "lastInitName": "Rogers, T",
+    "initLastName": "T Rogers",
+    "fullFMLName": "Tyler Scott Rogers",
+    "fullLFMName": "Rogers, Tyler Scott",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 35,
+            "gamesPlayed": 41,
+            "gamesStarted": 0,
+            "groundOuts": 70,
+            "airOuts": 27,
+            "runs": 15,
+            "doubles": 5,
+            "triples": 1,
+            "homeRuns": 0,
+            "strikeOuts": 20,
+            "baseOnBalls": 13,
+            "intentionalWalks": 4,
+            "hits": 36,
+            "hitByPitch": 0,
+            "avg": ".238",
+            "atBats": 151,
+            "obp": ".297",
+            "slg": ".285",
+            "ops": ".582",
+            "caughtStealing": 1,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 583,
+            "era": "1.82",
+            "inningsPitched": "39.2",
+            "wins": 1,
+            "losses": 2,
+            "saves": 2,
+            "saveOpportunities": 5,
+            "holds": 18,
+            "blownSaves": 3,
+            "earnedRuns": 8,
+            "whip": "1.24",
+            "battersFaced": 167,
+            "outs": 119,
+            "gamesPitched": 41,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 402,
+            "strikePercentage": ".690",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 43,
+            "groundOutsToAirouts": "2.59",
+            "winPercentage": ".333",
+            "pitchesPerInning": "14.70",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "1.54",
+            "strikeoutsPer9Inn": "4.54",
+            "walksPer9Inn": "2.95",
+            "hitsPer9Inn": "8.17",
+            "runsScoredPer9": "3.40",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 5,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 1,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 643511,
+            "fullName": "Tyler Rogers",
+            "link": "/api/v1/people/643511"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

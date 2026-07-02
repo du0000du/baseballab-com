@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 641302,
+    "fullName": "Tyler Alexander",
+    "link": "/api/v1/people/641302",
+    "firstName": "Tyler",
+    "lastName": "Alexander",
+    "primaryNumber": "13",
+    "birthDate": "1994-07-14",
+    "currentAge": 31,
+    "birthCity": "Chicago",
+    "birthStateProvince": "IL",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 214,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Tyler",
+    "useLastName": "Alexander",
+    "middleName": "John",
+    "boxscoreName": "Alexander, T",
+    "nickName": "Todd The Painter",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "mlbDebutDate": "2019-07-03",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Tyler Alexander",
+    "nameSlug": "tyler-alexander-641302",
+    "firstLastName": "Tyler Alexander",
+    "lastFirstName": "Alexander, Tyler",
+    "lastInitName": "Alexander, T",
+    "initLastName": "T Alexander",
+    "fullFMLName": "Tyler John Alexander",
+    "fullLFMName": "Alexander, Tyler John",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 36,
+            "gamesStarted": 3,
+            "groundOuts": 41,
+            "airOuts": 32,
+            "runs": 12,
+            "doubles": 4,
+            "triples": 1,
+            "homeRuns": 2,
+            "strikeOuts": 29,
+            "baseOnBalls": 10,
+            "intentionalWalks": 0,
+            "hits": 36,
+            "hitByPitch": 2,
+            "avg": ".267",
+            "atBats": 135,
+            "obp": ".324",
+            "slg": ".356",
+            "ops": ".680",
+            "caughtStealing": 2,
+            "stolenBases": 5,
+            "stolenBasePercentage": ".714",
+            "caughtStealingPercentage": ".286",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 561,
+            "era": "2.55",
+            "inningsPitched": "35.1",
+            "wins": 1,
+            "losses": 1,
+            "saves": 4,
+            "saveOpportunities": 5,
+            "holds": 6,
+            "blownSaves": 1,
+            "earnedRuns": 10,
+            "whip": "1.30",
+            "battersFaced": 150,
+            "outs": 106,
+            "gamesPitched": 36,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 367,
+            "strikePercentage": ".650",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 48,
+            "groundOutsToAirouts": "1.28",
+            "winPercentage": ".500",
+            "pitchesPerInning": "15.88",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "2.90",
+            "strikeoutsPer9Inn": "7.39",
+            "walksPer9Inn": "2.55",
+            "hitsPer9Inn": "9.17",
+            "runsScoredPer9": "3.06",
+            "homeRunsPer9": "0.51",
+            "inheritedRunners": 14,
+            "inheritedRunnersScored": 5,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 641302,
+            "fullName": "Tyler Alexander",
+            "link": "/api/v1/people/641302"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

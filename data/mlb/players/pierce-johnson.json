@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 572955,
+    "fullName": "Pierce Johnson",
+    "link": "/api/v1/people/572955",
+    "firstName": "Pierce",
+    "lastName": "Johnson",
+    "primaryNumber": "52",
+    "birthDate": "1991-05-10",
+    "currentAge": 35,
+    "birthCity": "Denver",
+    "birthStateProvince": "CO",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 202,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Pierce",
+    "useLastName": "Johnson",
+    "middleName": "William",
+    "boxscoreName": "Johnson",
+    "nickName": "P.J.",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2012,
+    "mlbDebutDate": "2017-05-19",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Pierce Johnson",
+    "nameSlug": "pierce-johnson-572955",
+    "firstLastName": "Pierce Johnson",
+    "lastFirstName": "Johnson, Pierce",
+    "lastInitName": "Johnson, P",
+    "initLastName": "P Johnson",
+    "fullFMLName": "Pierce William Johnson",
+    "fullLFMName": "Johnson, Pierce William",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 35,
+            "gamesPlayed": 27,
+            "gamesStarted": 0,
+            "groundOuts": 19,
+            "airOuts": 27,
+            "runs": 12,
+            "doubles": 5,
+            "triples": 1,
+            "homeRuns": 5,
+            "strikeOuts": 25,
+            "baseOnBalls": 10,
+            "intentionalWalks": 0,
+            "hits": 22,
+            "hitByPitch": 0,
+            "avg": ".242",
+            "atBats": 91,
+            "obp": ".314",
+            "slg": ".484",
+            "ops": ".798",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 414,
+            "era": "4.50",
+            "inningsPitched": "24.0",
+            "wins": 2,
+            "losses": 1,
+            "saves": 1,
+            "saveOpportunities": 1,
+            "holds": 5,
+            "blownSaves": 0,
+            "earnedRuns": 12,
+            "whip": "1.33",
+            "battersFaced": 103,
+            "outs": 72,
+            "gamesPitched": 27,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 266,
+            "strikePercentage": ".640",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 44,
+            "groundOutsToAirouts": "0.70",
+            "winPercentage": ".667",
+            "pitchesPerInning": "17.25",
+            "gamesFinished": 7,
+            "strikeoutWalkRatio": "2.50",
+            "strikeoutsPer9Inn": "9.38",
+            "walksPer9Inn": "3.75",
+            "hitsPer9Inn": "8.25",
+            "runsScoredPer9": "4.50",
+            "homeRunsPer9": "1.88",
+            "inheritedRunners": 13,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 113,
+            "name": "Cincinnati Reds",
+            "link": "/api/v1/teams/113"
+          },
+          "player": {
+            "id": 572955,
+            "fullName": "Pierce Johnson",
+            "link": "/api/v1/people/572955"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

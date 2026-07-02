@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 675848,
+    "fullName": "Juan Mejia",
+    "link": "/api/v1/people/675848",
+    "firstName": "Juan",
+    "lastName": "Mejia",
+    "primaryNumber": "47",
+    "birthDate": "2000-07-04",
+    "currentAge": 25,
+    "birthCity": "Santo Domingo",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 3\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Juan",
+    "useLastName": "Mejia",
+    "middleName": "Manuel",
+    "boxscoreName": "Mejia, J",
+    "gender": "M",
+    "nameMatrilineal": "Adames",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "meh-HEE-uh",
+    "mlbDebutDate": "2025-04-24",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Juan Mejia",
+    "nameSlug": "juan-mejia-675848",
+    "firstLastName": "Juan Mejia",
+    "lastFirstName": "Mejia, Juan",
+    "lastInitName": "Mejia, J",
+    "initLastName": "J Mejia",
+    "fullFMLName": "Juan Manuel Mejia",
+    "fullLFMName": "Mejia, Juan Manuel",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 34,
+            "gamesStarted": 1,
+            "groundOuts": 31,
+            "airOuts": 37,
+            "runs": 28,
+            "doubles": 3,
+            "triples": 1,
+            "homeRuns": 3,
+            "strikeOuts": 38,
+            "baseOnBalls": 20,
+            "intentionalWalks": 2,
+            "hits": 42,
+            "hitByPitch": 2,
+            "avg": ".288",
+            "atBats": 146,
+            "obp": ".379",
+            "slg": ".384",
+            "ops": ".763",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 710,
+            "era": "6.38",
+            "inningsPitched": "36.2",
+            "wins": 1,
+            "losses": 6,
+            "saves": 3,
+            "saveOpportunities": 4,
+            "holds": 5,
+            "blownSaves": 1,
+            "earnedRuns": 26,
+            "whip": "1.69",
+            "battersFaced": 170,
+            "outs": 110,
+            "gamesPitched": 34,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 462,
+            "strikePercentage": ".650",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 1,
+            "totalBases": 56,
+            "groundOutsToAirouts": "0.84",
+            "winPercentage": ".143",
+            "pitchesPerInning": "19.36",
+            "gamesFinished": 15,
+            "strikeoutWalkRatio": "1.90",
+            "strikeoutsPer9Inn": "9.33",
+            "walksPer9Inn": "4.91",
+            "hitsPer9Inn": "10.31",
+            "runsScoredPer9": "6.87",
+            "homeRunsPer9": "0.74",
+            "inheritedRunners": 12,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 675848,
+            "fullName": "Juan Mejia",
+            "link": "/api/v1/people/675848"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

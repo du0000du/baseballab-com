@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 682829,
+    "fullName": "Elly De La Cruz",
+    "link": "/api/v1/people/682829",
+    "firstName": "Elly",
+    "lastName": "De La Cruz",
+    "primaryNumber": "44",
+    "birthDate": "2002-01-11",
+    "currentAge": 24,
+    "birthCity": "Sabana Grande de Boya",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 6\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Elly",
+    "useLastName": "De La Cruz",
+    "middleName": "Antonio",
+    "boxscoreName": "De La Cruz, E",
+    "gender": "M",
+    "nameMatrilineal": "Sanchez",
+    "isPlayer": true,
+    "isVerified": false,
+    "mlbDebutDate": "2023-06-06",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Elly De La Cruz",
+    "nameSlug": "elly-de-la-cruz-682829",
+    "firstLastName": "Elly De La Cruz",
+    "lastFirstName": "De La Cruz, Elly",
+    "lastInitName": "De La Cruz, E",
+    "initLastName": "E De La Cruz",
+    "fullFMLName": "Elly Antonio De La Cruz",
+    "fullLFMName": "De La Cruz, Elly Antonio",
+    "strikeZoneTop": 3.46,
+    "strikeZoneBottom": 1.746
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 24,
+            "gamesPlayed": 66,
+            "groundOuts": 61,
+            "airOuts": 47,
+            "runs": 44,
+            "doubles": 14,
+            "triples": 2,
+            "homeRuns": 13,
+            "strikeOuts": 84,
+            "baseOnBalls": 26,
+            "intentionalWalks": 0,
+            "hits": 70,
+            "hitByPitch": 2,
+            "avg": ".269",
+            "atBats": 260,
+            "obp": ".338",
+            "slg": ".488",
+            "ops": ".826",
+            "caughtStealing": 5,
+            "stolenBases": 10,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1181,
+            "plateAppearances": 290,
+            "totalBases": 127,
+            "rbi": 40,
+            "leftOnBase": 107,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".345",
+            "groundOutsToAirouts": "1.30",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "20.00"
+          },
+          "team": {
+            "id": 113,
+            "name": "Cincinnati Reds",
+            "link": "/api/v1/teams/113"
+          },
+          "player": {
+            "id": 682829,
+            "fullName": "Elly De La Cruz",
+            "link": "/api/v1/people/682829"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

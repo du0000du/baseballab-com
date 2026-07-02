@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 544150,
+    "fullName": "Albert Suárez",
+    "link": "/api/v1/people/544150",
+    "firstName": "Albert",
+    "lastName": "Suárez",
+    "primaryNumber": "49",
+    "birthDate": "1989-10-08",
+    "currentAge": 36,
+    "birthCity": "San Felix",
+    "birthCountry": "Venezuela",
+    "height": "6' 3\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Albert",
+    "useLastName": "Suárez ",
+    "middleName": "Joe",
+    "boxscoreName": "Suárez, A",
+    "nickName": "Chiguire",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2016-05-08",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Albert Suárez",
+    "nameSlug": "albert-suarez-544150",
+    "firstLastName": "Albert Suárez",
+    "lastFirstName": "Suárez, Albert",
+    "lastInitName": "Suárez, A",
+    "initLastName": "A Suárez",
+    "fullFMLName": "Albert Joe Suárez",
+    "fullLFMName": "Suárez, Albert Joe",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 15,
+            "gamesStarted": 0,
+            "groundOuts": 34,
+            "airOuts": 52,
+            "runs": 21,
+            "doubles": 10,
+            "triples": 1,
+            "homeRuns": 7,
+            "strikeOuts": 28,
+            "baseOnBalls": 13,
+            "intentionalWalks": 0,
+            "hits": 36,
+            "hitByPitch": 0,
+            "avg": ".242",
+            "atBats": 149,
+            "obp": ".301",
+            "slg": ".463",
+            "ops": ".764",
+            "caughtStealing": 3,
+            "stolenBases": 1,
+            "stolenBasePercentage": ".250",
+            "caughtStealingPercentage": ".750",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 586,
+            "era": "3.63",
+            "inningsPitched": "39.2",
+            "wins": 2,
+            "losses": 0,
+            "saves": 1,
+            "saveOpportunities": 1,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 16,
+            "whip": "1.24",
+            "battersFaced": 163,
+            "outs": 119,
+            "gamesPitched": 15,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 363,
+            "strikePercentage": ".620",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 69,
+            "groundOutsToAirouts": "0.65",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "14.77",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "2.15",
+            "strikeoutsPer9Inn": "6.35",
+            "walksPer9Inn": "2.95",
+            "hitsPer9Inn": "8.17",
+            "runsScoredPer9": "4.76",
+            "homeRunsPer9": "1.59",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          },
+          "player": {
+            "id": 544150,
+            "fullName": "Albert Suárez",
+            "link": "/api/v1/people/544150"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 670970,
+    "fullName": "Adrian Morejon",
+    "link": "/api/v1/people/670970",
+    "firstName": "Adrian",
+    "lastName": "Morejon",
+    "primaryNumber": "50",
+    "birthDate": "1999-02-27",
+    "currentAge": 27,
+    "birthCity": "Havana",
+    "birthCountry": "Cuba",
+    "height": "5' 11\"",
+    "weight": 224,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Adrian",
+    "useLastName": "Morejon",
+    "boxscoreName": "Morejon",
+    "nickName": "More",
+    "gender": "M",
+    "nameMatrilineal": "Garcia",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "more-eh-HONE",
+    "mlbDebutDate": "2019-07-21",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Adrian Morejon",
+    "nameSlug": "adrian-morejon-670970",
+    "firstLastName": "Adrian Morejon",
+    "lastFirstName": "Morejon, Adrian",
+    "lastInitName": "Morejon, A",
+    "initLastName": "A Morejon",
+    "fullFMLName": "Adrian Morejon",
+    "fullLFMName": "Morejon, Adrian",
+    "strikeZoneTop": 3.165,
+    "strikeZoneBottom": 1.598
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 39,
+            "gamesStarted": 0,
+            "groundOuts": 55,
+            "airOuts": 22,
+            "runs": 17,
+            "doubles": 5,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 51,
+            "baseOnBalls": 8,
+            "intentionalWalks": 0,
+            "hits": 35,
+            "hitByPitch": 2,
+            "avg": ".216",
+            "atBats": 162,
+            "obp": ".260",
+            "slg": ".284",
+            "ops": ".544",
+            "caughtStealing": 1,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".875",
+            "caughtStealingPercentage": ".125",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 677,
+            "era": "3.32",
+            "inningsPitched": "43.1",
+            "wins": 6,
+            "losses": 1,
+            "saves": 1,
+            "saveOpportunities": 5,
+            "holds": 14,
+            "blownSaves": 4,
+            "earnedRuns": 16,
+            "whip": "0.99",
+            "battersFaced": 173,
+            "outs": 130,
+            "gamesPitched": 39,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 466,
+            "strikePercentage": ".690",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 46,
+            "groundOutsToAirouts": "2.50",
+            "winPercentage": ".857",
+            "pitchesPerInning": "15.62",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "6.38",
+            "strikeoutsPer9Inn": "10.59",
+            "walksPer9Inn": "1.66",
+            "hitsPer9Inn": "7.27",
+            "runsScoredPer9": "3.53",
+            "homeRunsPer9": "0.42",
+            "inheritedRunners": 24,
+            "inheritedRunnersScored": 6,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 135,
+            "name": "San Diego Padres",
+            "link": "/api/v1/teams/135"
+          },
+          "player": {
+            "id": 670970,
+            "fullName": "Adrian Morejon",
+            "link": "/api/v1/people/670970"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

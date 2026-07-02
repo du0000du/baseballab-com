@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 694477,
+    "fullName": "Chad Patrick",
+    "link": "/api/v1/people/694477",
+    "firstName": "Chandler",
+    "lastName": "Patrick",
+    "primaryNumber": "39",
+    "birthDate": "1998-08-14",
+    "currentAge": 27,
+    "birthCity": "Crown Point",
+    "birthStateProvince": "IN",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 217,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Chad",
+    "useLastName": "Patrick",
+    "middleName": "Allen",
+    "boxscoreName": "Patrick",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2025-03-29",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Chad Patrick",
+    "nameSlug": "chad-patrick-694477",
+    "firstLastName": "Chad Patrick",
+    "lastFirstName": "Patrick, Chad",
+    "lastInitName": "Patrick, C",
+    "initLastName": "C Patrick",
+    "fullFMLName": "Chandler Allen Patrick",
+    "fullLFMName": "Patrick, Chandler Allen",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 25,
+            "gamesStarted": 6,
+            "groundOuts": 58,
+            "airOuts": 73,
+            "runs": 27,
+            "doubles": 13,
+            "triples": 2,
+            "homeRuns": 7,
+            "strikeOuts": 55,
+            "baseOnBalls": 27,
+            "intentionalWalks": 2,
+            "hits": 57,
+            "hitByPitch": 0,
+            "avg": ".239",
+            "atBats": 238,
+            "obp": ".315",
+            "slg": ".399",
+            "ops": ".714",
+            "caughtStealing": 3,
+            "stolenBases": 1,
+            "stolenBasePercentage": ".250",
+            "caughtStealingPercentage": ".750",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1065,
+            "era": "3.72",
+            "inningsPitched": "65.1",
+            "wins": 5,
+            "losses": 4,
+            "saves": 4,
+            "saveOpportunities": 5,
+            "holds": 2,
+            "blownSaves": 1,
+            "earnedRuns": 27,
+            "whip": "1.29",
+            "battersFaced": 270,
+            "outs": 196,
+            "gamesPitched": 25,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 682,
+            "strikePercentage": ".640",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 95,
+            "groundOutsToAirouts": "0.79",
+            "winPercentage": ".556",
+            "pitchesPerInning": "16.30",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "2.04",
+            "strikeoutsPer9Inn": "7.58",
+            "walksPer9Inn": "3.72",
+            "hitsPer9Inn": "7.85",
+            "runsScoredPer9": "3.72",
+            "homeRunsPer9": "0.96",
+            "inheritedRunners": 10,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 3,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 694477,
+            "fullName": "Chad Patrick",
+            "link": "/api/v1/people/694477"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

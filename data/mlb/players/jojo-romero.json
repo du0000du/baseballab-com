@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 668941,
+    "fullName": "JoJo Romero",
+    "link": "/api/v1/people/668941",
+    "firstName": "Joseph",
+    "lastName": "Romero",
+    "primaryNumber": "59",
+    "birthDate": "1996-09-09",
+    "currentAge": 29,
+    "birthCity": "Camarillo",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "JoJo",
+    "useLastName": "Romero",
+    "middleName": "Abel",
+    "boxscoreName": "Romero, J",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2016,
+    "mlbDebutDate": "2020-08-21",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "JoJo Romero",
+    "nameSlug": "jojo-romero-668941",
+    "firstLastName": "JoJo Romero",
+    "lastFirstName": "Romero, JoJo",
+    "lastInitName": "Romero, J",
+    "initLastName": "J Romero",
+    "fullFMLName": "Joseph Abel Romero",
+    "fullLFMName": "Romero, Joseph Abel",
+    "strikeZoneTop": 3.165,
+    "strikeZoneBottom": 1.598
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 38,
+            "gamesStarted": 0,
+            "groundOuts": 37,
+            "airOuts": 34,
+            "runs": 16,
+            "doubles": 4,
+            "triples": 1,
+            "homeRuns": 5,
+            "strikeOuts": 36,
+            "baseOnBalls": 12,
+            "intentionalWalks": 1,
+            "hits": 36,
+            "hitByPitch": 3,
+            "avg": ".255",
+            "atBats": 141,
+            "obp": ".327",
+            "slg": ".404",
+            "ops": ".731",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 621,
+            "era": "3.89",
+            "inningsPitched": "37.0",
+            "wins": 0,
+            "losses": 2,
+            "saves": 0,
+            "saveOpportunities": 2,
+            "holds": 19,
+            "blownSaves": 2,
+            "earnedRuns": 16,
+            "whip": "1.30",
+            "battersFaced": 158,
+            "outs": 111,
+            "gamesPitched": 38,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 390,
+            "strikePercentage": ".630",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 57,
+            "groundOutsToAirouts": "1.09",
+            "winPercentage": ".000",
+            "pitchesPerInning": "16.78",
+            "gamesFinished": 3,
+            "strikeoutWalkRatio": "3.00",
+            "strikeoutsPer9Inn": "8.76",
+            "walksPer9Inn": "2.92",
+            "hitsPer9Inn": "8.76",
+            "runsScoredPer9": "3.89",
+            "homeRunsPer9": "1.22",
+            "inheritedRunners": 26,
+            "inheritedRunnersScored": 7,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 138,
+            "name": "St. Louis Cardinals",
+            "link": "/api/v1/teams/138"
+          },
+          "player": {
+            "id": 668941,
+            "fullName": "JoJo Romero",
+            "link": "/api/v1/people/668941"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

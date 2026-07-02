@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 656638,
+    "fullName": "Alex Lange",
+    "link": "/api/v1/people/656638",
+    "firstName": "Alexander",
+    "lastName": "Lange",
+    "primaryNumber": "56",
+    "birthDate": "1995-10-02",
+    "currentAge": 30,
+    "birthCity": "Riverside",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 202,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Alex",
+    "useLastName": "Lange",
+    "middleName": "Craig",
+    "boxscoreName": "Lange",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2017,
+    "mlbDebutDate": "2021-04-10",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Alex Lange",
+    "nameSlug": "alex-lange-656638",
+    "firstLastName": "Alex Lange",
+    "lastFirstName": "Lange, Alex",
+    "lastInitName": "Lange, A",
+    "initLastName": "A Lange",
+    "fullFMLName": "Alex Craig Lange",
+    "fullLFMName": "Lange, Alex Craig",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 35,
+            "gamesStarted": 0,
+            "groundOuts": 35,
+            "airOuts": 31,
+            "runs": 22,
+            "doubles": 9,
+            "triples": 1,
+            "homeRuns": 2,
+            "strikeOuts": 37,
+            "baseOnBalls": 21,
+            "intentionalWalks": 0,
+            "hits": 33,
+            "hitByPitch": 4,
+            "avg": ".244",
+            "atBats": 135,
+            "obp": ".360",
+            "slg": ".370",
+            "ops": ".730",
+            "caughtStealing": 2,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".778",
+            "caughtStealingPercentage": ".222",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 684,
+            "era": "4.95",
+            "inningsPitched": "36.1",
+            "wins": 0,
+            "losses": 4,
+            "saves": 7,
+            "saveOpportunities": 7,
+            "holds": 1,
+            "blownSaves": 0,
+            "earnedRuns": 20,
+            "whip": "1.49",
+            "battersFaced": 161,
+            "outs": 109,
+            "gamesPitched": 35,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 414,
+            "strikePercentage": ".610",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 5,
+            "pickoffs": 1,
+            "totalBases": 50,
+            "groundOutsToAirouts": "1.13",
+            "winPercentage": ".000",
+            "pitchesPerInning": "18.83",
+            "gamesFinished": 18,
+            "strikeoutWalkRatio": "1.76",
+            "strikeoutsPer9Inn": "9.17",
+            "walksPer9Inn": "5.20",
+            "hitsPer9Inn": "8.17",
+            "runsScoredPer9": "5.45",
+            "homeRunsPer9": "0.50",
+            "inheritedRunners": 9,
+            "inheritedRunnersScored": 4,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 656638,
+            "fullName": "Alex Lange",
+            "link": "/api/v1/people/656638"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

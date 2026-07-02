@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 595345,
+    "fullName": "Steven Okert",
+    "link": "/api/v1/people/595345",
+    "firstName": "Steven",
+    "lastName": "Okert",
+    "primaryNumber": "48",
+    "birthDate": "1991-07-09",
+    "currentAge": 34,
+    "birthCity": "Riverside",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 202,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Steven",
+    "useLastName": "Okert",
+    "middleName": "Chandler",
+    "boxscoreName": "Okert",
+    "nickName": "O",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2012,
+    "pronunciation": "OH-kert",
+    "mlbDebutDate": "2016-04-19",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Steven Okert",
+    "nameSlug": "steven-okert-595345",
+    "firstLastName": "Steven Okert",
+    "lastFirstName": "Okert, Steven",
+    "lastInitName": "Okert, S",
+    "initLastName": "S Okert",
+    "fullFMLName": "Steven Chandler Okert",
+    "fullLFMName": "Okert, Steven Chandler",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 41,
+            "gamesStarted": 1,
+            "groundOuts": 23,
+            "airOuts": 58,
+            "runs": 11,
+            "doubles": 3,
+            "triples": 1,
+            "homeRuns": 4,
+            "strikeOuts": 38,
+            "baseOnBalls": 12,
+            "intentionalWalks": 0,
+            "hits": 25,
+            "hitByPitch": 2,
+            "avg": ".176",
+            "atBats": 142,
+            "obp": ".248",
+            "slg": ".296",
+            "ops": ".544",
+            "caughtStealing": 2,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 613,
+            "era": "2.41",
+            "inningsPitched": "41.0",
+            "wins": 1,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 10,
+            "blownSaves": 0,
+            "earnedRuns": 11,
+            "whip": "0.90",
+            "battersFaced": 158,
+            "outs": 123,
+            "gamesPitched": 41,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 404,
+            "strikePercentage": ".660",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 2,
+            "totalBases": 42,
+            "groundOutsToAirouts": "0.40",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "14.95",
+            "gamesFinished": 1,
+            "strikeoutWalkRatio": "3.17",
+            "strikeoutsPer9Inn": "8.34",
+            "walksPer9Inn": "2.63",
+            "hitsPer9Inn": "5.49",
+            "runsScoredPer9": "2.41",
+            "homeRunsPer9": "0.88",
+            "inheritedRunners": 26,
+            "inheritedRunnersScored": 9,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 117,
+            "name": "Houston Astros",
+            "link": "/api/v1/teams/117"
+          },
+          "player": {
+            "id": 595345,
+            "fullName": "Steven Okert",
+            "link": "/api/v1/people/595345"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

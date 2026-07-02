@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 543510,
+    "fullName": "James McCann",
+    "link": "/api/v1/people/543510",
+    "firstName": "James",
+    "lastName": "McCann",
+    "primaryNumber": "8",
+    "birthDate": "1990-06-13",
+    "currentAge": 36,
+    "birthCity": "Santa Barbara",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "2",
+      "name": "Catcher",
+      "type": "Catcher",
+      "abbreviation": "C"
+    },
+    "useName": "James",
+    "useLastName": "McCann",
+    "middleName": "Thomas",
+    "boxscoreName": "McCann",
+    "nickName": "McCannon",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2011,
+    "mlbDebutDate": "2014-09-01",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "James McCann",
+    "nameSlug": "james-mccann-543510",
+    "firstLastName": "James McCann",
+    "lastFirstName": "McCann, James",
+    "lastInitName": "McCann, J",
+    "initLastName": "J McCann",
+    "fullFMLName": "James Thomas McCann",
+    "fullLFMName": "McCann, James Thomas",
+    "strikeZoneTop": 3.281,
+    "strikeZoneBottom": 1.656
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 22,
+            "groundOuts": 20,
+            "airOuts": 12,
+            "runs": 3,
+            "doubles": 3,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 17,
+            "baseOnBalls": 1,
+            "intentionalWalks": 0,
+            "hits": 12,
+            "hitByPitch": 0,
+            "avg": ".203",
+            "atBats": 59,
+            "obp": ".217",
+            "slg": ".254",
+            "ops": ".471",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 238,
+            "plateAppearances": 62,
+            "totalBases": 15,
+            "rbi": 6,
+            "leftOnBase": 23,
+            "sacBunts": 2,
+            "sacFlies": 0,
+            "babip": ".286",
+            "groundOutsToAirouts": "1.67",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "-.--"
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 543510,
+            "fullName": "James McCann",
+            "link": "/api/v1/people/543510"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

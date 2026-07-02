@@ -26,19 +26,29 @@ BASE_URL = "https://statsapi.mlb.com/api/v1"
 DATA_DIR = Path(__file__).parent.parent / "data" / "mlb"
 # シーズン判定: 3月以降は当年、1〜2月はオフシーズン扱いで前年。MLB_SEASON env varで明示上書き可
 SEASON = int(__import__("os").environ.get("MLB_SEASON") or (datetime.now().year if datetime.now().month >= 3 else datetime.now().year - 1))
-# リーダーボード自動補完対象カテゴリ（leaders.astro と同一構成）
+# リーダーボード自動補完対象カテゴリ（leaders.astro と同一構成 + 拡張分）
 LEADER_CATEGORIES = [
     ("hitting",  "homeRuns"),
     ("hitting",  "avg"),
     ("hitting",  "rbi"),
     ("hitting",  "stolenBases"),
     ("hitting",  "obp"),
+    ("hitting",  "slugging"),
+    ("hitting",  "onBasePlusSlugging"),
+    ("hitting",  "hits"),
+    ("hitting",  "runs"),
+    ("hitting",  "doubles"),
     ("pitching", "era"),
     ("pitching", "wins"),
     ("pitching", "strikeOuts"),
     ("pitching", "saves"),
     ("pitching", "whip"),
+    ("pitching", "inningsPitched"),
+    ("pitching", "qualityStarts"),
+    ("pitching", "holds"),
 ]
+# 1カテゴリあたり取得上位数（×2リーグ × 18カテゴリ = 最大900, 重複除去後 ~500）
+LEADER_LIMIT = 25
 # 取得対象選手ID（MLB主要選手）
 PLAYER_IDS = [
     660271,  # 大谷翔平
@@ -199,7 +209,7 @@ def sync_leader_players():
     new_pids: "dict[int, tuple[str, str]]" = {}  # pid → (fullName, group)
     for group, stat in LEADER_CATEGORIES:
         for league in [103, 104]:
-            data = fetch(f"/stats?stats=season&season={SEASON}&group={group}&sortStat={stat}&limit=10&gameType=R&hydrate=person,team&leagueId={league}")
+            data = fetch(f"/stats?stats=season&season={SEASON}&group={group}&sortStat={stat}&limit={LEADER_LIMIT}&gameType=R&hydrate=person,team&leagueId={league}")
             splits = (data.get("stats") or [{}])[0].get("splits", [])
             for item in splits:
                 player = item.get("player", {})

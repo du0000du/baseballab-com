@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 669622,
+    "fullName": "Anthony Bender",
+    "link": "/api/v1/people/669622",
+    "firstName": "Anthony",
+    "lastName": "Bender",
+    "primaryNumber": "37",
+    "birthDate": "1995-02-03",
+    "currentAge": 31,
+    "birthCity": "Petaluma",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Anthony",
+    "useLastName": "Bender",
+    "middleName": "Wayne",
+    "boxscoreName": "Bender",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2016,
+    "mlbDebutDate": "2021-05-05",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Anthony Bender",
+    "nameSlug": "anthony-bender-669622",
+    "firstLastName": "Anthony Bender",
+    "lastFirstName": "Bender, Anthony",
+    "lastInitName": "Bender, A",
+    "initLastName": "A Bender",
+    "fullFMLName": "Anthony Wayne Bender",
+    "fullLFMName": "Bender, Anthony Wayne",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 35,
+            "gamesStarted": 0,
+            "groundOuts": 28,
+            "airOuts": 35,
+            "runs": 10,
+            "doubles": 4,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 41,
+            "baseOnBalls": 12,
+            "intentionalWalks": 1,
+            "hits": 21,
+            "hitByPitch": 3,
+            "avg": ".169",
+            "atBats": 124,
+            "obp": ".257",
+            "slg": ".226",
+            "ops": ".483",
+            "caughtStealing": 0,
+            "stolenBases": 9,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 539,
+            "era": "2.62",
+            "inningsPitched": "34.1",
+            "wins": 1,
+            "losses": 1,
+            "saves": 2,
+            "saveOpportunities": 4,
+            "holds": 8,
+            "blownSaves": 2,
+            "earnedRuns": 10,
+            "whip": "0.96",
+            "battersFaced": 140,
+            "outs": 103,
+            "gamesPitched": 35,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 363,
+            "strikePercentage": ".670",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 28,
+            "groundOutsToAirouts": "0.80",
+            "winPercentage": ".500",
+            "pitchesPerInning": "15.70",
+            "gamesFinished": 6,
+            "strikeoutWalkRatio": "3.42",
+            "strikeoutsPer9Inn": "10.75",
+            "walksPer9Inn": "3.15",
+            "hitsPer9Inn": "5.50",
+            "runsScoredPer9": "2.62",
+            "homeRunsPer9": "0.26",
+            "inheritedRunners": 18,
+            "inheritedRunnersScored": 6,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 669622,
+            "fullName": "Anthony Bender",
+            "link": "/api/v1/people/669622"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

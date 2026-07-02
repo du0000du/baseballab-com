@@ -1,0 +1,128 @@
+{
+  "info": {
+    "id": 660670,
+    "fullName": "Ronald Acuña Jr.",
+    "link": "/api/v1/people/660670",
+    "firstName": "Ronald",
+    "lastName": "Acuña",
+    "primaryNumber": "13",
+    "birthDate": "1997-12-18",
+    "currentAge": 28,
+    "birthCity": "La Guaira",
+    "birthCountry": "Venezuela",
+    "height": "6' 0\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Ronald",
+    "useLastName": "Acuña Jr.",
+    "middleName": "Jose",
+    "boxscoreName": "Acuña Jr.",
+    "nickName": "El De La Sabana",
+    "gender": "M",
+    "nameMatrilineal": "Blanco",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "ah-cuhn-YA",
+    "mlbDebutDate": "2018-04-25",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Ronald Acuña Jr.",
+    "nameTitle": "Jr.",
+    "nameSuffix": "Jr.",
+    "nameSlug": "ronald-acuna-jr-660670",
+    "firstLastName": "Ronald Acuña Jr.",
+    "lastFirstName": "Acuña Jr., Ronald",
+    "lastInitName": "Acuña Jr., R",
+    "initLastName": "R Acuña Jr.",
+    "fullFMLName": "Ronald Jose Acuña Jr.",
+    "fullLFMName": "Acuña Jr., Ronald Jose",
+    "strikeZoneTop": 3.201,
+    "strikeZoneBottom": 1.615
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 53,
+            "groundOuts": 42,
+            "airOuts": 54,
+            "runs": 31,
+            "doubles": 10,
+            "triples": 1,
+            "homeRuns": 7,
+            "strikeOuts": 52,
+            "baseOnBalls": 35,
+            "intentionalWalks": 2,
+            "hits": 49,
+            "hitByPitch": 4,
+            "avg": ".251",
+            "atBats": 195,
+            "obp": ".373",
+            "slg": ".421",
+            "ops": ".794",
+            "caughtStealing": 7,
+            "stolenBases": 15,
+            "stolenBasePercentage": ".682",
+            "caughtStealingPercentage": ".318",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 957,
+            "plateAppearances": 236,
+            "totalBases": 82,
+            "rbi": 22,
+            "leftOnBase": 47,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".304",
+            "groundOutsToAirouts": "0.78",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "27.86"
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 660670,
+            "fullName": "Ronald Acuña Jr.",
+            "link": "/api/v1/people/660670"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

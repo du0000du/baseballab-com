@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 672580,
+    "fullName": "Maikel Garcia",
+    "link": "/api/v1/people/672580",
+    "firstName": "Maikel",
+    "lastName": "Garcia",
+    "primaryNumber": "11",
+    "birthDate": "2000-03-03",
+    "currentAge": 26,
+    "birthCity": "La Sabana",
+    "birthCountry": "Venezuela",
+    "height": "6' 1\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Maikel",
+    "useLastName": "Garcia",
+    "middleName": "Jose",
+    "boxscoreName": "Garcia, M",
+    "gender": "M",
+    "nameMatrilineal": "Escobar",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "my-KELL",
+    "mlbDebutDate": "2022-07-15",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Maikel Garcia",
+    "nameSlug": "maikel-garcia-672580",
+    "firstLastName": "Maikel Garcia",
+    "lastFirstName": "Garcia, Maikel",
+    "lastInitName": "Garcia, M",
+    "initLastName": "M Garcia",
+    "fullFMLName": "Maikel Jose Garcia",
+    "fullLFMName": "Garcia, Maikel Jose",
+    "strikeZoneTop": 3.262,
+    "strikeZoneBottom": 1.646
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 69,
+            "groundOuts": 70,
+            "airOuts": 85,
+            "runs": 32,
+            "doubles": 17,
+            "triples": 2,
+            "homeRuns": 3,
+            "strikeOuts": 45,
+            "baseOnBalls": 24,
+            "intentionalWalks": 0,
+            "hits": 70,
+            "hitByPitch": 0,
+            "avg": ".261",
+            "atBats": 268,
+            "obp": ".320",
+            "slg": ".373",
+            "ops": ".693",
+            "caughtStealing": 3,
+            "stolenBases": 5,
+            "stolenBasePercentage": ".625",
+            "caughtStealingPercentage": ".375",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1130,
+            "plateAppearances": 294,
+            "totalBases": 100,
+            "rbi": 30,
+            "leftOnBase": 100,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".302",
+            "groundOutsToAirouts": "0.82",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "89.33"
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 672580,
+            "fullName": "Maikel Garcia",
+            "link": "/api/v1/people/672580"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

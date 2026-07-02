@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 702193,
+    "fullName": "Andrew Morris",
+    "link": "/api/v1/people/702193",
+    "firstName": "Andrew",
+    "lastName": "Morris",
+    "primaryNumber": "78",
+    "birthDate": "2001-09-01",
+    "currentAge": 24,
+    "birthCity": "New York",
+    "birthStateProvince": "NY",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Andrew",
+    "useLastName": "Morris",
+    "middleName": "Burke",
+    "boxscoreName": "Morris",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "mlbDebutDate": "2026-04-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Andrew Morris",
+    "nameSlug": "andrew-morris-702193",
+    "firstLastName": "Andrew Morris",
+    "lastFirstName": "Morris, Andrew",
+    "lastInitName": "Morris, A",
+    "initLastName": "A Morris",
+    "fullFMLName": "Andrew Burke Morris",
+    "fullLFMName": "Morris, Andrew Burke",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 24,
+            "gamesPlayed": 29,
+            "gamesStarted": 2,
+            "groundOuts": 34,
+            "airOuts": 37,
+            "runs": 20,
+            "doubles": 5,
+            "triples": 1,
+            "homeRuns": 2,
+            "strikeOuts": 40,
+            "baseOnBalls": 13,
+            "intentionalWalks": 1,
+            "hits": 41,
+            "hitByPitch": 1,
+            "avg": ".275",
+            "atBats": 149,
+            "obp": ".333",
+            "slg": ".362",
+            "ops": ".695",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 678,
+            "era": "4.03",
+            "inningsPitched": "38.0",
+            "wins": 4,
+            "losses": 2,
+            "saves": 2,
+            "saveOpportunities": 4,
+            "holds": 10,
+            "blownSaves": 2,
+            "earnedRuns": 17,
+            "whip": "1.42",
+            "battersFaced": 166,
+            "outs": 114,
+            "gamesPitched": 29,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 443,
+            "strikePercentage": ".650",
+            "hitBatsmen": 1,
+            "balks": 1,
+            "wildPitches": 5,
+            "pickoffs": 0,
+            "totalBases": 54,
+            "groundOutsToAirouts": "0.92",
+            "winPercentage": ".667",
+            "pitchesPerInning": "17.84",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "3.08",
+            "strikeoutsPer9Inn": "9.47",
+            "walksPer9Inn": "3.08",
+            "hitsPer9Inn": "9.71",
+            "runsScoredPer9": "4.74",
+            "homeRunsPer9": "0.47",
+            "inheritedRunners": 12,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 142,
+            "name": "Minnesota Twins",
+            "link": "/api/v1/teams/142"
+          },
+          "player": {
+            "id": 702193,
+            "fullName": "Andrew Morris",
+            "link": "/api/v1/people/702193"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

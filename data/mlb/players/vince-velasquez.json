@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 592826,
+    "fullName": "Vince Velasquez",
+    "link": "/api/v1/people/592826",
+    "firstName": "Vincent",
+    "lastName": "Velasquez",
+    "primaryNumber": "56",
+    "birthDate": "1992-06-07",
+    "currentAge": 34,
+    "birthCity": "Montclair",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Vince",
+    "useLastName": "Velasquez",
+    "middleName": "John",
+    "boxscoreName": "Velasquez",
+    "nickName": "V2",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2010,
+    "pronunciation": "veh-LAS-kehz",
+    "mlbDebutDate": "2015-06-10",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Vince Velasquez",
+    "nameSlug": "vince-velasquez-592826",
+    "firstLastName": "Vince Velasquez",
+    "lastFirstName": "Velasquez, Vince",
+    "lastInitName": "Velasquez, V",
+    "initLastName": "V Velasquez",
+    "fullFMLName": "Vincent John Velasquez",
+    "fullLFMName": "Velasquez, Vincent John",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 2,
+            "gamesStarted": 0,
+            "groundOuts": 3,
+            "airOuts": 6,
+            "runs": 0,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 1,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 1,
+            "hitByPitch": 0,
+            "avg": ".091",
+            "atBats": 11,
+            "obp": ".091",
+            "slg": ".182",
+            "ops": ".273",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 43,
+            "era": "0.00",
+            "inningsPitched": "3.1",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "whip": "0.30",
+            "battersFaced": 11,
+            "outs": 10,
+            "gamesPitched": 2,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 29,
+            "strikePercentage": ".670",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 2,
+            "groundOutsToAirouts": "0.50",
+            "winPercentage": ".---",
+            "pitchesPerInning": "12.90",
+            "gamesFinished": 2,
+            "strikeoutWalkRatio": "-.--",
+            "strikeoutsPer9Inn": "2.70",
+            "walksPer9Inn": "0.00",
+            "hitsPer9Inn": "2.70",
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 592826,
+            "fullName": "Vince Velasquez",
+            "link": "/api/v1/people/592826"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

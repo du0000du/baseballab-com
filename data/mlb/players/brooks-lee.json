@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 686797,
+    "fullName": "Brooks Lee",
+    "link": "/api/v1/people/686797",
+    "firstName": "Brooks",
+    "lastName": "Lee",
+    "primaryNumber": "22",
+    "birthDate": "2001-02-14",
+    "currentAge": 25,
+    "birthCity": "San Luis Obispo",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Brooks",
+    "useLastName": "Lee",
+    "middleName": "Thomas",
+    "boxscoreName": "Lee, B",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "mlbDebutDate": "2024-07-03",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brooks Lee",
+    "nameSlug": "brooks-lee-686797",
+    "firstLastName": "Brooks Lee",
+    "lastFirstName": "Lee, Brooks",
+    "lastInitName": "Lee, B",
+    "initLastName": "B Lee",
+    "fullFMLName": "Brooks Thomas Lee",
+    "fullLFMName": "Lee, Brooks Thomas",
+    "strikeZoneTop": 3.209,
+    "strikeZoneBottom": 1.619
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 84,
+            "groundOuts": 79,
+            "airOuts": 100,
+            "runs": 41,
+            "doubles": 12,
+            "triples": 2,
+            "homeRuns": 14,
+            "strikeOuts": 51,
+            "baseOnBalls": 22,
+            "intentionalWalks": 0,
+            "hits": 76,
+            "hitByPitch": 2,
+            "avg": ".250",
+            "atBats": 304,
+            "obp": ".304",
+            "slg": ".441",
+            "ops": ".745",
+            "caughtStealing": 3,
+            "stolenBases": 5,
+            "stolenBasePercentage": ".625",
+            "caughtStealingPercentage": ".375",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1225,
+            "plateAppearances": 330,
+            "totalBases": 134,
+            "rbi": 47,
+            "leftOnBase": 117,
+            "sacBunts": 1,
+            "sacFlies": 1,
+            "babip": ".258",
+            "groundOutsToAirouts": "0.79",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "21.71"
+          },
+          "team": {
+            "id": 142,
+            "name": "Minnesota Twins",
+            "link": "/api/v1/teams/142"
+          },
+          "player": {
+            "id": 686797,
+            "fullName": "Brooks Lee",
+            "link": "/api/v1/people/686797"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

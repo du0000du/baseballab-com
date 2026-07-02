@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 678246,
+    "fullName": "Miguel Vargas",
+    "link": "/api/v1/people/678246",
+    "firstName": "Miguel",
+    "lastName": "Vargas",
+    "primaryNumber": "20",
+    "birthDate": "1999-11-17",
+    "currentAge": 26,
+    "birthCity": "Havana",
+    "birthCountry": "Cuba",
+    "height": "6' 2\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Miguel",
+    "useLastName": "Vargas",
+    "middleName": "Antonio",
+    "boxscoreName": "Vargas, M",
+    "gender": "M",
+    "nameMatrilineal": "Echarry",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2022-08-03",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Miguel Vargas",
+    "nameSlug": "miguel-vargas-678246",
+    "firstLastName": "Miguel Vargas",
+    "lastFirstName": "Vargas, Miguel",
+    "lastInitName": "Vargas, M",
+    "initLastName": "M Vargas",
+    "fullFMLName": "Miguel Antonio Vargas",
+    "fullLFMName": "Vargas, Miguel Antonio",
+    "strikeZoneTop": 3.29,
+    "strikeZoneBottom": 1.66
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 84,
+            "groundOuts": 63,
+            "airOuts": 111,
+            "runs": 56,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 19,
+            "strikeOuts": 60,
+            "baseOnBalls": 50,
+            "intentionalWalks": 1,
+            "hits": 75,
+            "hitByPitch": 5,
+            "avg": ".244",
+            "atBats": 307,
+            "obp": ".357",
+            "slg": ".485",
+            "ops": ".842",
+            "caughtStealing": 2,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".846",
+            "caughtStealingPercentage": ".154",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1454,
+            "plateAppearances": 365,
+            "totalBases": 149,
+            "rbi": 52,
+            "leftOnBase": 115,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".243",
+            "groundOutsToAirouts": "0.57",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "16.16"
+          },
+          "team": {
+            "id": 145,
+            "name": "Chicago White Sox",
+            "link": "/api/v1/teams/145"
+          },
+          "player": {
+            "id": 678246,
+            "fullName": "Miguel Vargas",
+            "link": "/api/v1/people/678246"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

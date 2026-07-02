@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 682120,
+    "fullName": "Tim Herrin",
+    "link": "/api/v1/people/682120",
+    "firstName": "Tim",
+    "lastName": "Herrin",
+    "primaryNumber": "29",
+    "birthDate": "1996-10-08",
+    "currentAge": 29,
+    "birthCity": "Terre Haute",
+    "birthStateProvince": "IN",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Tim",
+    "useLastName": "Herrin",
+    "middleName": "Edward",
+    "boxscoreName": "Herrin",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "mlbDebutDate": "2023-04-02",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Tim Herrin",
+    "nameSlug": "tim-herrin-682120",
+    "firstLastName": "Tim Herrin",
+    "lastFirstName": "Herrin, Tim",
+    "lastInitName": "Herrin, T",
+    "initLastName": "T Herrin",
+    "fullFMLName": "Tim Edward Herrin",
+    "fullLFMName": "Herrin, Tim Edward",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 37,
+            "gamesStarted": 0,
+            "groundOuts": 26,
+            "airOuts": 34,
+            "runs": 11,
+            "doubles": 2,
+            "triples": 2,
+            "homeRuns": 3,
+            "strikeOuts": 24,
+            "baseOnBalls": 19,
+            "intentionalWalks": 3,
+            "hits": 22,
+            "hitByPitch": 4,
+            "avg": ".222",
+            "atBats": 99,
+            "obp": ".352",
+            "slg": ".374",
+            "ops": ".726",
+            "caughtStealing": 0,
+            "stolenBases": 7,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 506,
+            "era": "3.07",
+            "inningsPitched": "29.1",
+            "wins": 0,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 1,
+            "holds": 14,
+            "blownSaves": 1,
+            "earnedRuns": 10,
+            "whip": "1.40",
+            "battersFaced": 129,
+            "outs": 88,
+            "gamesPitched": 37,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 310,
+            "strikePercentage": ".610",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 37,
+            "groundOutsToAirouts": "0.76",
+            "winPercentage": ".000",
+            "pitchesPerInning": "17.25",
+            "gamesFinished": 4,
+            "strikeoutWalkRatio": "1.26",
+            "strikeoutsPer9Inn": "7.36",
+            "walksPer9Inn": "5.83",
+            "hitsPer9Inn": "6.75",
+            "runsScoredPer9": "3.38",
+            "homeRunsPer9": "0.92",
+            "inheritedRunners": 18,
+            "inheritedRunnersScored": 8,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 682120,
+            "fullName": "Tim Herrin",
+            "link": "/api/v1/people/682120"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 592626,
+    "fullName": "Joc Pederson",
+    "link": "/api/v1/people/592626",
+    "firstName": "Joc",
+    "lastName": "Pederson",
+    "primaryNumber": "3",
+    "birthDate": "1992-04-21",
+    "currentAge": 34,
+    "birthCity": "Palo Alto",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "10",
+      "name": "Designated Hitter",
+      "type": "Hitter",
+      "abbreviation": "DH"
+    },
+    "useName": "Joc",
+    "useLastName": "Pederson",
+    "middleName": "R.",
+    "boxscoreName": "Pederson",
+    "nickName": "King",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2010,
+    "pronunciation": "PEE-der-sin",
+    "mlbDebutDate": "2014-09-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Joc Pederson",
+    "nameSlug": "joc-pederson-592626",
+    "firstLastName": "Joc Pederson",
+    "lastFirstName": "Pederson, Joc",
+    "lastInitName": "Pederson, J",
+    "initLastName": "J Pederson",
+    "fullFMLName": "Joc R. Pederson",
+    "fullLFMName": "Pederson, Joc R.",
+    "strikeZoneTop": 3.237,
+    "strikeZoneBottom": 1.633
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 80,
+            "groundOuts": 55,
+            "airOuts": 62,
+            "runs": 34,
+            "doubles": 7,
+            "triples": 2,
+            "homeRuns": 14,
+            "strikeOuts": 60,
+            "baseOnBalls": 32,
+            "intentionalWalks": 1,
+            "hits": 55,
+            "hitByPitch": 3,
+            "avg": ".240",
+            "atBats": 229,
+            "obp": ".337",
+            "slg": ".472",
+            "ops": ".809",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1094,
+            "plateAppearances": 268,
+            "totalBases": 108,
+            "rbi": 31,
+            "leftOnBase": 82,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".259",
+            "groundOutsToAirouts": "0.89",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "16.36"
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 592626,
+            "fullName": "Joc Pederson",
+            "link": "/api/v1/people/592626"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

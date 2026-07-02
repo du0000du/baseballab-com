@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 676534,
+    "fullName": "Calvin Faucher",
+    "link": "/api/v1/people/676534",
+    "firstName": "Calvin",
+    "lastName": "Faucher",
+    "primaryNumber": "53",
+    "birthDate": "1995-09-22",
+    "currentAge": 30,
+    "birthCity": "Chula Vista",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Calvin",
+    "useLastName": "Faucher",
+    "middleName": "Louis",
+    "boxscoreName": "Faucher",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2017,
+    "mlbDebutDate": "2022-05-09",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Calvin Faucher",
+    "nameSlug": "calvin-faucher-676534",
+    "firstLastName": "Calvin Faucher",
+    "lastFirstName": "Faucher, Calvin",
+    "lastInitName": "Faucher, C",
+    "initLastName": "C Faucher",
+    "fullFMLName": "Calvin Louis Faucher",
+    "fullLFMName": "Faucher, Calvin Louis",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 35,
+            "gamesStarted": 0,
+            "groundOuts": 38,
+            "airOuts": 28,
+            "runs": 18,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 35,
+            "baseOnBalls": 24,
+            "intentionalWalks": 1,
+            "hits": 27,
+            "hitByPitch": 2,
+            "avg": ".216",
+            "atBats": 125,
+            "obp": ".346",
+            "slg": ".264",
+            "ops": ".610",
+            "caughtStealing": 1,
+            "stolenBases": 3,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 589,
+            "era": "3.38",
+            "inningsPitched": "34.2",
+            "wins": 4,
+            "losses": 4,
+            "saves": 1,
+            "saveOpportunities": 4,
+            "holds": 9,
+            "blownSaves": 3,
+            "earnedRuns": 13,
+            "whip": "1.47",
+            "battersFaced": 154,
+            "outs": 104,
+            "gamesPitched": 35,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 355,
+            "strikePercentage": ".600",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 0,
+            "totalBases": 33,
+            "groundOutsToAirouts": "1.36",
+            "winPercentage": ".500",
+            "pitchesPerInning": "16.99",
+            "gamesFinished": 7,
+            "strikeoutWalkRatio": "1.46",
+            "strikeoutsPer9Inn": "9.09",
+            "walksPer9Inn": "6.23",
+            "hitsPer9Inn": "7.01",
+            "runsScoredPer9": "4.67",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 14,
+            "inheritedRunnersScored": 6,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 676534,
+            "fullName": "Calvin Faucher",
+            "link": "/api/v1/people/676534"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

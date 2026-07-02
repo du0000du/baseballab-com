@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 669394,
+    "fullName": "Jake Burger",
+    "link": "/api/v1/people/669394",
+    "firstName": "Jacob",
+    "lastName": "Burger",
+    "primaryNumber": "21",
+    "birthDate": "1996-04-10",
+    "currentAge": 30,
+    "birthCity": "St. Louis",
+    "birthStateProvince": "MO",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Jake",
+    "useLastName": "Burger",
+    "middleName": "Michael",
+    "boxscoreName": "Burger",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2017,
+    "mlbDebutDate": "2021-07-02",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jake Burger",
+    "nameSlug": "jake-burger-669394",
+    "firstLastName": "Jake Burger",
+    "lastFirstName": "Burger, Jake",
+    "lastInitName": "Burger, J",
+    "initLastName": "J Burger",
+    "fullFMLName": "Jacob Michael Burger",
+    "fullLFMName": "Burger, Jacob Michael",
+    "strikeZoneTop": 3.23,
+    "strikeZoneBottom": 1.63
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 84,
+            "groundOuts": 75,
+            "airOuts": 70,
+            "runs": 38,
+            "doubles": 14,
+            "triples": 0,
+            "homeRuns": 14,
+            "strikeOuts": 88,
+            "baseOnBalls": 28,
+            "intentionalWalks": 0,
+            "hits": 77,
+            "hitByPitch": 2,
+            "avg": ".250",
+            "atBats": 308,
+            "obp": ".315",
+            "slg": ".432",
+            "ops": ".747",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1256,
+            "plateAppearances": 340,
+            "totalBases": 133,
+            "rbi": 52,
+            "leftOnBase": 145,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".303",
+            "groundOutsToAirouts": "1.07",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "22.00"
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 669394,
+            "fullName": "Jake Burger",
+            "link": "/api/v1/people/669394"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

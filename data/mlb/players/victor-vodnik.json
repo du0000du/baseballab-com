@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 680767,
+    "fullName": "Victor Vodnik",
+    "link": "/api/v1/people/680767",
+    "firstName": "Victor",
+    "lastName": "Vodnik",
+    "primaryNumber": "38",
+    "birthDate": "1999-10-09",
+    "currentAge": 26,
+    "birthCity": "Whittier",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 216,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Victor",
+    "useLastName": "Vodnik",
+    "middleName": "Francisco",
+    "boxscoreName": "Vodnik",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "pronunciation": "VOD-nik",
+    "mlbDebutDate": "2023-09-09",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Victor Vodnik",
+    "nameSlug": "victor-vodnik-680767",
+    "firstLastName": "Victor Vodnik",
+    "lastFirstName": "Vodnik, Victor",
+    "lastInitName": "Vodnik, V",
+    "initLastName": "V Vodnik",
+    "fullFMLName": "Victor Francisco Vodnik",
+    "fullLFMName": "Vodnik, Victor Francisco",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 23,
+            "gamesStarted": 0,
+            "groundOuts": 27,
+            "airOuts": 25,
+            "runs": 19,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 3,
+            "strikeOuts": 17,
+            "baseOnBalls": 17,
+            "intentionalWalks": 1,
+            "hits": 28,
+            "hitByPitch": 1,
+            "avg": ".295",
+            "atBats": 95,
+            "obp": ".400",
+            "slg": ".453",
+            "ops": ".853",
+            "caughtStealing": 1,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 428,
+            "era": "6.66",
+            "inningsPitched": "24.1",
+            "wins": 2,
+            "losses": 3,
+            "saves": 4,
+            "saveOpportunities": 6,
+            "holds": 3,
+            "blownSaves": 2,
+            "earnedRuns": 18,
+            "whip": "1.85",
+            "battersFaced": 115,
+            "outs": 73,
+            "gamesPitched": 23,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 254,
+            "strikePercentage": ".590",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 0,
+            "totalBases": 43,
+            "groundOutsToAirouts": "1.08",
+            "winPercentage": ".400",
+            "pitchesPerInning": "17.59",
+            "gamesFinished": 11,
+            "strikeoutWalkRatio": "1.00",
+            "strikeoutsPer9Inn": "6.29",
+            "walksPer9Inn": "6.29",
+            "hitsPer9Inn": "10.36",
+            "runsScoredPer9": "7.03",
+            "homeRunsPer9": "1.11",
+            "inheritedRunners": 9,
+            "inheritedRunnersScored": 4,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 680767,
+            "fullName": "Victor Vodnik",
+            "link": "/api/v1/people/680767"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

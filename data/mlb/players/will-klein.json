@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 694361,
+    "fullName": "Will Klein",
+    "link": "/api/v1/people/694361",
+    "firstName": "William",
+    "lastName": "Klein",
+    "primaryNumber": "61",
+    "birthDate": "1999-11-28",
+    "currentAge": 26,
+    "birthCity": "Bloomington",
+    "birthStateProvince": "IN",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Will",
+    "useLastName": "Klein",
+    "middleName": "Boone",
+    "boxscoreName": "Klein",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2024-04-28",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Will Klein",
+    "nameSlug": "will-klein-694361",
+    "firstLastName": "Will Klein",
+    "lastFirstName": "Klein, Will",
+    "lastInitName": "Klein, W",
+    "initLastName": "W Klein",
+    "fullFMLName": "William Boone Klein",
+    "fullLFMName": "Klein, William Boone",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 28,
+            "gamesStarted": 2,
+            "groundOuts": 32,
+            "airOuts": 24,
+            "runs": 9,
+            "doubles": 3,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 36,
+            "baseOnBalls": 13,
+            "intentionalWalks": 2,
+            "hits": 33,
+            "hitByPitch": 2,
+            "avg": ".264",
+            "atBats": 125,
+            "obp": ".343",
+            "slg": ".336",
+            "ops": ".679",
+            "caughtStealing": 2,
+            "stolenBases": 1,
+            "stolenBasePercentage": ".333",
+            "caughtStealingPercentage": ".667",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 552,
+            "era": "2.51",
+            "inningsPitched": "32.1",
+            "wins": 2,
+            "losses": 2,
+            "saves": 1,
+            "saveOpportunities": 2,
+            "holds": 11,
+            "blownSaves": 1,
+            "earnedRuns": 9,
+            "whip": "1.42",
+            "battersFaced": 140,
+            "outs": 97,
+            "gamesPitched": 28,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 356,
+            "strikePercentage": ".640",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 42,
+            "groundOutsToAirouts": "1.33",
+            "winPercentage": ".500",
+            "pitchesPerInning": "17.07",
+            "gamesFinished": 3,
+            "strikeoutWalkRatio": "2.77",
+            "strikeoutsPer9Inn": "10.02",
+            "walksPer9Inn": "3.62",
+            "hitsPer9Inn": "9.19",
+            "runsScoredPer9": "2.51",
+            "homeRunsPer9": "0.56",
+            "inheritedRunners": 14,
+            "inheritedRunnersScored": 8,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 694361,
+            "fullName": "Will Klein",
+            "link": "/api/v1/people/694361"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

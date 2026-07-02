@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 642547,
+    "fullName": "Freddy Peralta",
+    "link": "/api/v1/people/642547",
+    "firstName": "Freddy",
+    "lastName": "Peralta",
+    "primaryNumber": "51",
+    "birthDate": "1996-06-04",
+    "currentAge": 30,
+    "birthCity": "Moca",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 0\"",
+    "weight": 198,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Freddy",
+    "useLastName": "Peralta",
+    "boxscoreName": "Peralta, F",
+    "nickName": "Kacike",
+    "gender": "M",
+    "nameMatrilineal": "Diaz",
+    "isPlayer": true,
+    "isVerified": false,
+    "mlbDebutDate": "2018-05-13",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Freddy Peralta",
+    "nameSlug": "freddy-peralta-642547",
+    "firstLastName": "Freddy Peralta",
+    "lastFirstName": "Peralta, Freddy",
+    "lastInitName": "Peralta, F",
+    "initLastName": "F Peralta",
+    "fullFMLName": "Freddy Peralta",
+    "fullLFMName": "Peralta, Freddy",
+    "strikeZoneTop": 3.28,
+    "strikeZoneBottom": 1.55
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 18,
+            "gamesStarted": 18,
+            "groundOuts": 89,
+            "airOuts": 102,
+            "runs": 56,
+            "doubles": 23,
+            "triples": 1,
+            "homeRuns": 13,
+            "strikeOuts": 92,
+            "baseOnBalls": 38,
+            "intentionalWalks": 0,
+            "hits": 97,
+            "hitByPitch": 4,
+            "avg": ".257",
+            "atBats": 377,
+            "obp": ".330",
+            "slg": ".427",
+            "ops": ".757",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1698,
+            "era": "4.81",
+            "inningsPitched": "95.1",
+            "wins": 5,
+            "losses": 7,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 51,
+            "whip": "1.42",
+            "battersFaced": 422,
+            "outs": 286,
+            "gamesPitched": 18,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1033,
+            "strikePercentage": ".610",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 0,
+            "totalBases": 161,
+            "groundOutsToAirouts": "0.87",
+            "winPercentage": ".417",
+            "pitchesPerInning": "17.81",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.42",
+            "strikeoutsPer9Inn": "8.69",
+            "walksPer9Inn": "3.59",
+            "hitsPer9Inn": "9.16",
+            "runsScoredPer9": "5.29",
+            "homeRunsPer9": "1.23",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121"
+          },
+          "player": {
+            "id": 642547,
+            "fullName": "Freddy Peralta",
+            "link": "/api/v1/people/642547"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

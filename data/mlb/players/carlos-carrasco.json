@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 471911,
+    "fullName": "Carlos Carrasco",
+    "link": "/api/v1/people/471911",
+    "firstName": "Carlos",
+    "lastName": "Carrasco",
+    "primaryNumber": "59",
+    "birthDate": "1987-03-21",
+    "currentAge": 39,
+    "birthCity": "Barquisimeto",
+    "birthCountry": "Venezuela",
+    "height": "6' 4\"",
+    "weight": 224,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Carlos",
+    "useLastName": "Carrasco",
+    "middleName": "Luis",
+    "boxscoreName": "Carrasco",
+    "nickName": "Cookie",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "cuh-RAZZ-coh",
+    "mlbDebutDate": "2009-09-01",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Carlos Carrasco",
+    "nameSlug": "carlos-carrasco-471911",
+    "firstLastName": "Carlos Carrasco",
+    "lastFirstName": "Carrasco, Carlos",
+    "lastInitName": "Carrasco, C",
+    "initLastName": "C Carrasco",
+    "fullFMLName": "Carlos Luis Carrasco",
+    "fullLFMName": "Carrasco, Carlos Luis",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 39,
+            "gamesPlayed": 7,
+            "gamesStarted": 0,
+            "groundOuts": 18,
+            "airOuts": 18,
+            "runs": 6,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 6,
+            "baseOnBalls": 1,
+            "intentionalWalks": 0,
+            "hits": 16,
+            "hitByPitch": 2,
+            "avg": ".286",
+            "atBats": 56,
+            "obp": ".322",
+            "slg": ".411",
+            "ops": ".733",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 202,
+            "era": "3.68",
+            "inningsPitched": "14.2",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 2,
+            "holds": 0,
+            "blownSaves": 2,
+            "earnedRuns": 6,
+            "whip": "1.16",
+            "battersFaced": 61,
+            "outs": 44,
+            "gamesPitched": 7,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 141,
+            "strikePercentage": ".700",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 23,
+            "groundOutsToAirouts": "1.00",
+            "winPercentage": ".---",
+            "pitchesPerInning": "13.77",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "6.00",
+            "strikeoutsPer9Inn": "3.68",
+            "walksPer9Inn": "0.61",
+            "hitsPer9Inn": "9.82",
+            "runsScoredPer9": "3.68",
+            "homeRunsPer9": "1.23",
+            "inheritedRunners": 4,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 471911,
+            "fullName": "Carlos Carrasco",
+            "link": "/api/v1/people/471911"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 545121,
+    "fullName": "Ildemaro Vargas",
+    "link": "/api/v1/people/545121",
+    "firstName": "Ildemaro",
+    "lastName": "Vargas",
+    "primaryNumber": "6",
+    "birthDate": "1991-07-16",
+    "currentAge": 34,
+    "birthCity": "Caripito",
+    "birthCountry": "Venezuela",
+    "height": "5' 11\"",
+    "weight": 202,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Ildemaro",
+    "useLastName": "Vargas",
+    "middleName": "Jose",
+    "boxscoreName": "Vargas, I",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "Eel-de-maroh",
+    "mlbDebutDate": "2017-06-29",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Ildemaro Vargas",
+    "nameSlug": "ildemaro-vargas-545121",
+    "firstLastName": "Ildemaro Vargas",
+    "lastFirstName": "Vargas, Ildemaro",
+    "lastInitName": "Vargas, I",
+    "initLastName": "I Vargas",
+    "fullFMLName": "Ildemaro Jose Vargas",
+    "fullLFMName": "Vargas, Ildemaro Jose",
+    "strikeZoneTop": 3.161,
+    "strikeZoneBottom": 1.595
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 74,
+            "groundOuts": 81,
+            "airOuts": 82,
+            "runs": 38,
+            "doubles": 11,
+            "triples": 2,
+            "homeRuns": 7,
+            "strikeOuts": 25,
+            "baseOnBalls": 14,
+            "intentionalWalks": 2,
+            "hits": 64,
+            "hitByPitch": 2,
+            "avg": ".256",
+            "atBats": 250,
+            "obp": ".300",
+            "slg": ".400",
+            "ops": ".700",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 934,
+            "plateAppearances": 269,
+            "totalBases": 100,
+            "rbi": 44,
+            "leftOnBase": 106,
+            "sacBunts": 1,
+            "sacFlies": 1,
+            "babip": ".260",
+            "groundOutsToAirouts": "0.99",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "35.71"
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 545121,
+            "fullName": "Ildemaro Vargas",
+            "link": "/api/v1/people/545121"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

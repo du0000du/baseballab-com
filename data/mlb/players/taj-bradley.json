@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 671737,
+    "fullName": "Taj Bradley",
+    "link": "/api/v1/people/671737",
+    "firstName": "Taj",
+    "lastName": "Bradley",
+    "primaryNumber": "26",
+    "birthDate": "2001-03-20",
+    "currentAge": 25,
+    "birthCity": "Los Angeles",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Taj",
+    "useLastName": "Bradley",
+    "middleName": "Ali",
+    "boxscoreName": "Bradley, T",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "mlbDebutDate": "2023-04-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Taj Bradley",
+    "nameSlug": "taj-bradley-671737",
+    "firstLastName": "Taj Bradley",
+    "lastFirstName": "Bradley, Taj",
+    "lastInitName": "Bradley, T",
+    "initLastName": "T Bradley",
+    "fullFMLName": "Taj Ali Bradley",
+    "fullLFMName": "Bradley, Taj Ali",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 16,
+            "gamesStarted": 16,
+            "groundOuts": 58,
+            "airOuts": 100,
+            "runs": 37,
+            "doubles": 17,
+            "triples": 0,
+            "homeRuns": 12,
+            "strikeOuts": 91,
+            "baseOnBalls": 36,
+            "intentionalWalks": 0,
+            "hits": 73,
+            "hitByPitch": 2,
+            "avg": ".229",
+            "atBats": 319,
+            "obp": ".309",
+            "slg": ".395",
+            "ops": ".704",
+            "caughtStealing": 0,
+            "stolenBases": 5,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1456,
+            "era": "3.98",
+            "inningsPitched": "83.2",
+            "wins": 6,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 37,
+            "whip": "1.30",
+            "battersFaced": 360,
+            "outs": 251,
+            "gamesPitched": 16,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 908,
+            "strikePercentage": ".620",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 0,
+            "totalBases": 126,
+            "groundOutsToAirouts": "0.58",
+            "winPercentage": ".667",
+            "pitchesPerInning": "17.40",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.53",
+            "strikeoutsPer9Inn": "9.79",
+            "walksPer9Inn": "3.87",
+            "hitsPer9Inn": "7.85",
+            "runsScoredPer9": "3.98",
+            "homeRunsPer9": "1.29",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 142,
+            "name": "Minnesota Twins",
+            "link": "/api/v1/teams/142"
+          },
+          "player": {
+            "id": 671737,
+            "fullName": "Taj Bradley",
+            "link": "/api/v1/people/671737"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 679529,
+    "fullName": "Spencer Torkelson",
+    "link": "/api/v1/people/679529",
+    "firstName": "Spencer",
+    "lastName": "Torkelson",
+    "primaryNumber": "20",
+    "birthDate": "1999-08-26",
+    "currentAge": 26,
+    "birthCity": "Petaluma",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Spencer",
+    "useLastName": "Torkelson",
+    "middleName": "Enochs",
+    "boxscoreName": "Torkelson",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2022-04-08",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Spencer Torkelson",
+    "nameSlug": "spencer-torkelson-679529",
+    "firstLastName": "Spencer Torkelson",
+    "lastFirstName": "Torkelson, Spencer",
+    "lastInitName": "Torkelson, S",
+    "initLastName": "S Torkelson",
+    "fullFMLName": "Spencer Enochs Torkelson",
+    "fullLFMName": "Torkelson, Spencer Enochs",
+    "strikeZoneTop": 3.232,
+    "strikeZoneBottom": 1.631
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 86,
+            "groundOuts": 42,
+            "airOuts": 78,
+            "runs": 35,
+            "doubles": 18,
+            "triples": 0,
+            "homeRuns": 14,
+            "strikeOuts": 108,
+            "baseOnBalls": 39,
+            "intentionalWalks": 0,
+            "hits": 62,
+            "hitByPitch": 5,
+            "avg": ".215",
+            "atBats": 288,
+            "obp": ".317",
+            "slg": ".424",
+            "ops": ".741",
+            "caughtStealing": 1,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1444,
+            "plateAppearances": 335,
+            "totalBases": 122,
+            "rbi": 38,
+            "leftOnBase": 129,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".286",
+            "groundOutsToAirouts": "0.54",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "20.57"
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 679529,
+            "fullName": "Spencer Torkelson",
+            "link": "/api/v1/people/679529"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

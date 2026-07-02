@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 500743,
+    "fullName": "Miguel Rojas",
+    "link": "/api/v1/people/500743",
+    "firstName": "Miguel",
+    "lastName": "Rojas",
+    "primaryNumber": "72",
+    "birthDate": "1989-02-24",
+    "currentAge": 37,
+    "birthCity": "Los Teques",
+    "birthCountry": "Venezuela",
+    "height": "5' 10\"",
+    "weight": 188,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Miguel",
+    "useLastName": "Rojas",
+    "middleName": "Elias",
+    "boxscoreName": "Rojas, M",
+    "nickName": "Miggy Ro",
+    "gender": "M",
+    "nameMatrilineal": "Naidernoff",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2014-06-06",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Miguel Rojas",
+    "nameSlug": "miguel-rojas-500743",
+    "firstLastName": "Miguel Rojas",
+    "lastFirstName": "Rojas, Miguel",
+    "lastInitName": "Rojas, M",
+    "initLastName": "M Rojas",
+    "fullFMLName": "Miguel Elias Rojas",
+    "fullLFMName": "Rojas, Miguel Elias",
+    "strikeZoneTop": 3.141,
+    "strikeZoneBottom": 1.585
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 37,
+            "gamesPlayed": 58,
+            "groundOuts": 41,
+            "airOuts": 39,
+            "runs": 15,
+            "doubles": 7,
+            "triples": 0,
+            "homeRuns": 3,
+            "strikeOuts": 14,
+            "baseOnBalls": 10,
+            "intentionalWalks": 0,
+            "hits": 34,
+            "hitByPitch": 2,
+            "avg": ".279",
+            "atBats": 122,
+            "obp": ".333",
+            "slg": ".410",
+            "ops": ".743",
+            "caughtStealing": 1,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 498,
+            "plateAppearances": 140,
+            "totalBases": 50,
+            "rbi": 15,
+            "leftOnBase": 53,
+            "sacBunts": 2,
+            "sacFlies": 4,
+            "babip": ".284",
+            "groundOutsToAirouts": "1.05",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "40.67"
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 500743,
+            "fullName": "Miguel Rojas",
+            "link": "/api/v1/people/500743"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

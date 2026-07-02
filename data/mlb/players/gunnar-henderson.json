@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 683002,
+    "fullName": "Gunnar Henderson",
+    "link": "/api/v1/people/683002",
+    "firstName": "Gunnar",
+    "lastName": "Henderson",
+    "primaryNumber": "2",
+    "birthDate": "2001-06-29",
+    "currentAge": 25,
+    "birthCity": "Montgomery",
+    "birthStateProvince": "AL",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Gunnar",
+    "useLastName": "Henderson",
+    "middleName": "Randal",
+    "boxscoreName": "Henderson",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2022-08-31",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Gunnar Henderson",
+    "nameSlug": "gunnar-henderson-683002",
+    "firstLastName": "Gunnar Henderson",
+    "lastFirstName": "Henderson, Gunnar",
+    "lastInitName": "Henderson, G",
+    "initLastName": "G Henderson",
+    "fullFMLName": "Gunnar Randal Henderson",
+    "fullLFMName": "Henderson, Gunnar Randal",
+    "strikeZoneTop": 3.33,
+    "strikeZoneBottom": 1.68
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 87,
+            "groundOuts": 91,
+            "airOuts": 98,
+            "runs": 49,
+            "doubles": 16,
+            "triples": 2,
+            "homeRuns": 16,
+            "strikeOuts": 91,
+            "baseOnBalls": 32,
+            "intentionalWalks": 1,
+            "hits": 82,
+            "hitByPitch": 5,
+            "avg": ".227",
+            "atBats": 361,
+            "obp": ".298",
+            "slg": ".416",
+            "ops": ".714",
+            "caughtStealing": 4,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".600",
+            "caughtStealingPercentage": ".400",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1565,
+            "plateAppearances": 399,
+            "totalBases": 150,
+            "rbi": 39,
+            "leftOnBase": 134,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".259",
+            "groundOutsToAirouts": "0.93",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "22.56"
+          },
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          },
+          "player": {
+            "id": 683002,
+            "fullName": "Gunnar Henderson",
+            "link": "/api/v1/people/683002"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

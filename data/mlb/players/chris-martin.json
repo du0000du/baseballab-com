@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 455119,
+    "fullName": "Chris Martin",
+    "link": "/api/v1/people/455119",
+    "firstName": "Christopher",
+    "lastName": "Martin",
+    "primaryNumber": "31",
+    "birthDate": "1986-06-02",
+    "currentAge": 40,
+    "birthCity": "Arlington",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 8\"",
+    "weight": 224,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Chris",
+    "useLastName": "Martin",
+    "middleName": "Riley",
+    "boxscoreName": "Martin, C",
+    "nickName": "C-Mart",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2005,
+    "mlbDebutDate": "2014-04-26",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Chris Martin",
+    "nameSlug": "chris-martin-455119",
+    "firstLastName": "Chris Martin",
+    "lastFirstName": "Martin, Chris",
+    "lastInitName": "Martin, C",
+    "initLastName": "C Martin",
+    "fullFMLName": "Christopher Riley Martin",
+    "fullLFMName": "Martin, Christopher Riley",
+    "strikeZoneTop": 3.567,
+    "strikeZoneBottom": 1.8
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 40,
+            "gamesPlayed": 12,
+            "gamesStarted": 0,
+            "groundOuts": 7,
+            "airOuts": 14,
+            "runs": 10,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 3,
+            "strikeOuts": 7,
+            "baseOnBalls": 2,
+            "intentionalWalks": 0,
+            "hits": 18,
+            "hitByPitch": 1,
+            "avg": ".391",
+            "atBats": 46,
+            "obp": ".429",
+            "slg": ".717",
+            "ops": "1.146",
+            "caughtStealing": 1,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 169,
+            "era": "7.84",
+            "inningsPitched": "10.1",
+            "wins": 1,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 1,
+            "holds": 1,
+            "blownSaves": 1,
+            "earnedRuns": 9,
+            "whip": "1.94",
+            "battersFaced": 49,
+            "outs": 31,
+            "gamesPitched": 12,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 121,
+            "strikePercentage": ".720",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 33,
+            "groundOutsToAirouts": "0.50",
+            "winPercentage": ".500",
+            "pitchesPerInning": "16.35",
+            "gamesFinished": 4,
+            "strikeoutWalkRatio": "3.50",
+            "strikeoutsPer9Inn": "6.10",
+            "walksPer9Inn": "1.74",
+            "hitsPer9Inn": "15.68",
+            "runsScoredPer9": "8.71",
+            "homeRunsPer9": "2.61",
+            "inheritedRunners": 8,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 455119,
+            "fullName": "Chris Martin",
+            "link": "/api/v1/people/455119"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

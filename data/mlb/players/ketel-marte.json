@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 606466,
+    "fullName": "Ketel Marte",
+    "link": "/api/v1/people/606466",
+    "firstName": "Ketel",
+    "lastName": "Marte",
+    "primaryNumber": "4",
+    "birthDate": "1993-10-12",
+    "currentAge": 32,
+    "birthCity": "Nizao",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 0\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Ketel",
+    "useLastName": "Marte",
+    "middleName": "Ricardo",
+    "boxscoreName": "Marte, K",
+    "nickName": "El Nino",
+    "gender": "M",
+    "nameMatrilineal": "Valdez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "keh-TELL mar-TAY",
+    "mlbDebutDate": "2015-07-31",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Ketel Marte",
+    "nameSlug": "ketel-marte-606466",
+    "firstLastName": "Ketel Marte",
+    "lastFirstName": "Marte, Ketel",
+    "lastInitName": "Marte, K",
+    "initLastName": "K Marte",
+    "fullFMLName": "Ketel Ricardo Marte",
+    "fullLFMName": "Marte, Ketel Ricardo",
+    "strikeZoneTop": 3.218,
+    "strikeZoneBottom": 1.624
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 81,
+            "groundOuts": 96,
+            "airOuts": 98,
+            "runs": 47,
+            "doubles": 17,
+            "triples": 2,
+            "homeRuns": 17,
+            "strikeOuts": 48,
+            "baseOnBalls": 26,
+            "intentionalWalks": 0,
+            "hits": 86,
+            "hitByPitch": 2,
+            "avg": ".265",
+            "atBats": 325,
+            "obp": ".320",
+            "slg": ".486",
+            "ops": ".806",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1281,
+            "plateAppearances": 356,
+            "totalBases": 158,
+            "rbi": 53,
+            "leftOnBase": 104,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".262",
+            "groundOutsToAirouts": "0.98",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "19.12"
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 606466,
+            "fullName": "Ketel Marte",
+            "link": "/api/v1/people/606466"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

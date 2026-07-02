@@ -1,0 +1,123 @@
+{
+  "info": {
+    "id": 673548,
+    "fullName": "Seiya Suzuki",
+    "link": "/api/v1/people/673548",
+    "firstName": "Seiya",
+    "lastName": "Suzuki",
+    "primaryNumber": "27",
+    "birthDate": "1994-08-18",
+    "currentAge": 31,
+    "birthCity": "Arakawa",
+    "birthCountry": "Japan",
+    "height": "5' 11\"",
+    "weight": 182,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Seiya",
+    "useLastName": "Suzuki",
+    "boxscoreName": "Suzuki",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "SAY-ya",
+    "mlbDebutDate": "2022-04-07",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Seiya Suzuki",
+    "nameSlug": "seiya-suzuki-673548",
+    "firstLastName": "Seiya Suzuki",
+    "lastFirstName": "Suzuki, Seiya",
+    "lastInitName": "Suzuki, S",
+    "initLastName": "S Suzuki",
+    "fullFMLName": "Seiya Suzuki",
+    "fullLFMName": "Suzuki, Seiya ",
+    "strikeZoneTop": 3.178,
+    "strikeZoneBottom": 1.604
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 71,
+            "groundOuts": 52,
+            "airOuts": 65,
+            "runs": 43,
+            "doubles": 12,
+            "triples": 0,
+            "homeRuns": 13,
+            "strikeOuts": 79,
+            "baseOnBalls": 33,
+            "intentionalWalks": 3,
+            "hits": 73,
+            "hitByPitch": 3,
+            "avg": ".274",
+            "atBats": 266,
+            "obp": ".357",
+            "slg": ".466",
+            "ops": ".823",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1299,
+            "plateAppearances": 305,
+            "totalBases": 124,
+            "rbi": 42,
+            "leftOnBase": 157,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".339",
+            "groundOutsToAirouts": "0.80",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "20.46"
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 673548,
+            "fullName": "Seiya Suzuki",
+            "link": "/api/v1/people/673548"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

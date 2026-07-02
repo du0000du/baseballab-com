@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 607625,
+    "fullName": "Seth Lugo",
+    "link": "/api/v1/people/607625",
+    "firstName": "Jacob",
+    "lastName": "Lugo",
+    "primaryNumber": "67",
+    "birthDate": "1989-11-17",
+    "currentAge": 36,
+    "birthCity": "Shreveport",
+    "birthStateProvince": "LA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Seth",
+    "useLastName": "Lugo",
+    "middleName": "Seth",
+    "boxscoreName": "Lugo, S",
+    "nickName": "Quarterrican",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2011,
+    "mlbDebutDate": "2016-07-01",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Seth Lugo",
+    "nameSlug": "seth-lugo-607625",
+    "firstLastName": "Seth Lugo",
+    "lastFirstName": "Lugo, Seth",
+    "lastInitName": "Lugo, S",
+    "initLastName": "S Lugo",
+    "fullFMLName": "Jacob Seth Lugo",
+    "fullLFMName": "Lugo, Jacob Seth",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 86,
+            "airOuts": 108,
+            "runs": 48,
+            "doubles": 24,
+            "triples": 4,
+            "homeRuns": 11,
+            "strikeOuts": 75,
+            "baseOnBalls": 30,
+            "intentionalWalks": 0,
+            "hits": 100,
+            "hitByPitch": 2,
+            "avg": ".275",
+            "atBats": 364,
+            "obp": ".331",
+            "slg": ".453",
+            "ops": ".784",
+            "caughtStealing": 4,
+            "stolenBases": 3,
+            "stolenBasePercentage": ".429",
+            "caughtStealingPercentage": ".571",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 1496,
+            "era": "4.15",
+            "inningsPitched": "95.1",
+            "wins": 3,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 44,
+            "whip": "1.36",
+            "battersFaced": 401,
+            "outs": 286,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 972,
+            "strikePercentage": ".650",
+            "hitBatsmen": 2,
+            "balks": 1,
+            "wildPitches": 1,
+            "pickoffs": 2,
+            "totalBases": 165,
+            "groundOutsToAirouts": "0.80",
+            "winPercentage": ".375",
+            "pitchesPerInning": "15.69",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.50",
+            "strikeoutsPer9Inn": "7.08",
+            "walksPer9Inn": "2.83",
+            "hitsPer9Inn": "9.44",
+            "runsScoredPer9": "4.53",
+            "homeRunsPer9": "1.04",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 607625,
+            "fullName": "Seth Lugo",
+            "link": "/api/v1/people/607625"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

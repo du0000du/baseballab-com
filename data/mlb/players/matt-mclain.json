@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 680574,
+    "fullName": "Matt McLain",
+    "link": "/api/v1/people/680574",
+    "firstName": "Matthew",
+    "lastName": "McLain",
+    "primaryNumber": "9",
+    "birthDate": "1999-08-06",
+    "currentAge": 26,
+    "birthCity": "Orange",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "5' 8\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Matt",
+    "useLastName": "McLain",
+    "middleName": "Michael",
+    "boxscoreName": "McLain, M",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2023-05-15",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Matt McLain",
+    "nameSlug": "matt-mclain-680574",
+    "firstLastName": "Matt McLain",
+    "lastFirstName": "McLain, Matt",
+    "lastInitName": "McLain, M",
+    "initLastName": "M McLain",
+    "fullFMLName": "Matthew Michael McLain",
+    "fullLFMName": "McLain, Matthew Michael",
+    "strikeZoneTop": 3.047,
+    "strikeZoneBottom": 1.538
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 79,
+            "groundOuts": 51,
+            "airOuts": 80,
+            "runs": 31,
+            "doubles": 13,
+            "triples": 0,
+            "homeRuns": 8,
+            "strikeOuts": 77,
+            "baseOnBalls": 35,
+            "intentionalWalks": 0,
+            "hits": 51,
+            "hitByPitch": 3,
+            "avg": ".198",
+            "atBats": 257,
+            "obp": ".302",
+            "slg": ".342",
+            "ops": ".644",
+            "caughtStealing": 2,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".846",
+            "caughtStealingPercentage": ".154",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1184,
+            "plateAppearances": 297,
+            "totalBases": 88,
+            "rbi": 25,
+            "leftOnBase": 119,
+            "sacBunts": 2,
+            "sacFlies": 0,
+            "babip": ".250",
+            "groundOutsToAirouts": "0.64",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "32.12"
+          },
+          "team": {
+            "id": 113,
+            "name": "Cincinnati Reds",
+            "link": "/api/v1/teams/113"
+          },
+          "player": {
+            "id": 680574,
+            "fullName": "Matt McLain",
+            "link": "/api/v1/people/680574"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

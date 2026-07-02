@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 663538,
+    "fullName": "Nico Hoerner",
+    "link": "/api/v1/people/663538",
+    "firstName": "Nicholas",
+    "lastName": "Hoerner",
+    "primaryNumber": "2",
+    "birthDate": "1997-05-13",
+    "currentAge": 29,
+    "birthCity": "Oakland",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Nico",
+    "useLastName": "Hoerner",
+    "middleName": "Mackie",
+    "boxscoreName": "Hoerner",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "mlbDebutDate": "2019-09-09",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Nico Hoerner",
+    "nameSlug": "nico-hoerner-663538",
+    "firstLastName": "Nico Hoerner",
+    "lastFirstName": "Hoerner, Nico",
+    "lastInitName": "Hoerner, N",
+    "initLastName": "N Hoerner",
+    "fullFMLName": "Nicholas Mackie Hoerner",
+    "fullLFMName": "Hoerner, Nicholas Mackie",
+    "strikeZoneTop": 3.186,
+    "strikeZoneBottom": 1.608
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 85,
+            "groundOuts": 103,
+            "airOuts": 131,
+            "runs": 35,
+            "doubles": 21,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 29,
+            "baseOnBalls": 35,
+            "intentionalWalks": 0,
+            "hits": 82,
+            "hitByPitch": 5,
+            "avg": ".240",
+            "atBats": 341,
+            "obp": ".317",
+            "slg": ".337",
+            "ops": ".654",
+            "caughtStealing": 2,
+            "stolenBases": 12,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1405,
+            "plateAppearances": 385,
+            "totalBases": 115,
+            "rbi": 36,
+            "leftOnBase": 150,
+            "sacBunts": 0,
+            "sacFlies": 4,
+            "babip": ".250",
+            "groundOutsToAirouts": "0.79",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "85.25"
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 663538,
+            "fullName": "Nico Hoerner",
+            "link": "/api/v1/people/663538"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

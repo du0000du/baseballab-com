@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 670623,
+    "fullName": "Isaac Paredes",
+    "link": "/api/v1/people/670623",
+    "firstName": "Isaac",
+    "lastName": "Paredes",
+    "primaryNumber": "15",
+    "birthDate": "1999-02-18",
+    "currentAge": 27,
+    "birthCity": "Hermosillo",
+    "birthStateProvince": "SO",
+    "birthCountry": "Mexico",
+    "height": "5' 11\"",
+    "weight": 213,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Isaac",
+    "useLastName": "Paredes",
+    "middleName": "Edgardo",
+    "boxscoreName": "Paredes",
+    "gender": "M",
+    "nameMatrilineal": "Calderon",
+    "isPlayer": true,
+    "isVerified": false,
+    "pronunciation": "eez-AHK puh-RAY-dehs",
+    "mlbDebutDate": "2020-08-17",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Isaac Paredes",
+    "nameSlug": "isaac-paredes-670623",
+    "firstLastName": "Isaac Paredes",
+    "lastFirstName": "Paredes, Isaac",
+    "lastInitName": "Paredes, I",
+    "initLastName": "I Paredes",
+    "fullFMLName": "Isaac Edgardo Paredes",
+    "fullLFMName": "Paredes, Isaac Edgardo",
+    "strikeZoneTop": 3.181,
+    "strikeZoneBottom": 1.605
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 82,
+            "groundOuts": 49,
+            "airOuts": 119,
+            "runs": 35,
+            "doubles": 16,
+            "triples": 0,
+            "homeRuns": 11,
+            "strikeOuts": 54,
+            "baseOnBalls": 33,
+            "intentionalWalks": 0,
+            "hits": 73,
+            "hitByPitch": 11,
+            "avg": ".250",
+            "atBats": 292,
+            "obp": ".345",
+            "slg": ".418",
+            "ops": ".763",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1497,
+            "plateAppearances": 339,
+            "totalBases": 122,
+            "rbi": 45,
+            "leftOnBase": 146,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".270",
+            "groundOutsToAirouts": "0.41",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "26.54"
+          },
+          "team": {
+            "id": 117,
+            "name": "Houston Astros",
+            "link": "/api/v1/teams/117"
+          },
+          "player": {
+            "id": 670623,
+            "fullName": "Isaac Paredes",
+            "link": "/api/v1/people/670623"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

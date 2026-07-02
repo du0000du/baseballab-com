@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 700241,
+    "fullName": "Michael McGreevy",
+    "link": "/api/v1/people/700241",
+    "firstName": "Michael",
+    "lastName": "McGreevy",
+    "primaryNumber": "36",
+    "birthDate": "2000-07-08",
+    "currentAge": 25,
+    "birthCity": "San Clemente",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Michael",
+    "useLastName": "McGreevy",
+    "middleName": "Stephen",
+    "boxscoreName": "McGreevy",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2024-07-31",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Michael McGreevy",
+    "nameSlug": "michael-mcgreevy-700241",
+    "firstLastName": "Michael McGreevy",
+    "lastFirstName": "McGreevy, Michael",
+    "lastInitName": "McGreevy, M",
+    "initLastName": "M McGreevy",
+    "fullFMLName": "Michael Stephen McGreevy",
+    "fullLFMName": "McGreevy, Michael Stephen",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 110,
+            "airOuts": 99,
+            "runs": 33,
+            "doubles": 17,
+            "triples": 0,
+            "homeRuns": 13,
+            "strikeOuts": 59,
+            "baseOnBalls": 22,
+            "intentionalWalks": 0,
+            "hits": 84,
+            "hitByPitch": 0,
+            "avg": ".239",
+            "atBats": 352,
+            "obp": ".283",
+            "slg": ".398",
+            "ops": ".681",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 1489,
+            "era": "3.15",
+            "inningsPitched": "94.1",
+            "wins": 3,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 33,
+            "whip": "1.12",
+            "battersFaced": 374,
+            "outs": 283,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 923,
+            "strikePercentage": ".620",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 1,
+            "totalBases": 140,
+            "groundOutsToAirouts": "1.11",
+            "winPercentage": ".333",
+            "pitchesPerInning": "15.78",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.68",
+            "strikeoutsPer9Inn": "5.63",
+            "walksPer9Inn": "2.10",
+            "hitsPer9Inn": "8.01",
+            "runsScoredPer9": "3.15",
+            "homeRunsPer9": "1.24",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 138,
+            "name": "St. Louis Cardinals",
+            "link": "/api/v1/teams/138"
+          },
+          "player": {
+            "id": 700241,
+            "fullName": "Michael McGreevy",
+            "link": "/api/v1/people/700241"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

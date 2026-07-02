@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 676440,
+    "fullName": "Tanner Bibee",
+    "link": "/api/v1/people/676440",
+    "firstName": "Tanner",
+    "lastName": "Bibee",
+    "primaryNumber": "28",
+    "birthDate": "1999-03-05",
+    "currentAge": 27,
+    "birthCity": "Mission Viejo",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Tanner",
+    "useLastName": "Bibee",
+    "middleName": "Hayes",
+    "boxscoreName": "Bibee",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "pronunciation": "BUY-bee",
+    "mlbDebutDate": "2023-04-26",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Tanner Bibee",
+    "nameSlug": "tanner-bibee-676440",
+    "firstLastName": "Tanner Bibee",
+    "lastFirstName": "Bibee, Tanner",
+    "lastInitName": "Bibee, T",
+    "initLastName": "T Bibee",
+    "fullFMLName": "Tanner Hayes Bibee",
+    "fullLFMName": "Bibee, Tanner Hayes",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 18,
+            "gamesStarted": 18,
+            "groundOuts": 91,
+            "airOuts": 121,
+            "runs": 44,
+            "doubles": 12,
+            "triples": 0,
+            "homeRuns": 17,
+            "strikeOuts": 83,
+            "baseOnBalls": 29,
+            "intentionalWalks": 0,
+            "hits": 85,
+            "hitByPitch": 2,
+            "avg": ".225",
+            "atBats": 377,
+            "obp": ".282",
+            "slg": ".393",
+            "ops": ".675",
+            "caughtStealing": 1,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".800",
+            "caughtStealingPercentage": ".200",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1595,
+            "era": "3.69",
+            "inningsPitched": "102.1",
+            "wins": 2,
+            "losses": 9,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 42,
+            "whip": "1.11",
+            "battersFaced": 411,
+            "outs": 307,
+            "gamesPitched": 18,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1019,
+            "strikePercentage": ".640",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 3,
+            "totalBases": 148,
+            "groundOutsToAirouts": "0.75",
+            "winPercentage": ".182",
+            "pitchesPerInning": "15.59",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.86",
+            "strikeoutsPer9Inn": "7.30",
+            "walksPer9Inn": "2.55",
+            "hitsPer9Inn": "7.48",
+            "runsScoredPer9": "3.87",
+            "homeRunsPer9": "1.50",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 676440,
+            "fullName": "Tanner Bibee",
+            "link": "/api/v1/people/676440"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

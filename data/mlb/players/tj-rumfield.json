@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 681198,
+    "fullName": "TJ Rumfield",
+    "link": "/api/v1/people/681198",
+    "firstName": "Toby",
+    "lastName": "Rumfield",
+    "primaryNumber": "7",
+    "birthDate": "2000-05-17",
+    "currentAge": 26,
+    "birthCity": "Richmond",
+    "birthStateProvince": "VA",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 238,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "TJ",
+    "useLastName": "Rumfield",
+    "middleName": "Joseph",
+    "boxscoreName": "Rumfield",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2026-03-27",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "TJ Rumfield",
+    "nameTitle": "Jr.",
+    "nameSuffix": "Jr.",
+    "nameSlug": "tj-rumfield-681198",
+    "firstLastName": "TJ Rumfield",
+    "lastFirstName": "Rumfield, TJ",
+    "lastInitName": "Rumfield, T",
+    "initLastName": "T Rumfield",
+    "fullFMLName": "Toby Joseph Rumfield",
+    "fullLFMName": "Rumfield, Toby Joseph",
+    "strikeZoneTop": 3.42,
+    "strikeZoneBottom": 1.73
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 83,
+            "groundOuts": 83,
+            "airOuts": 80,
+            "runs": 37,
+            "doubles": 18,
+            "triples": 2,
+            "homeRuns": 12,
+            "strikeOuts": 48,
+            "baseOnBalls": 33,
+            "intentionalWalks": 0,
+            "hits": 87,
+            "hitByPitch": 6,
+            "avg": ".294",
+            "atBats": 296,
+            "obp": ".374",
+            "slg": ".490",
+            "ops": ".864",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1258,
+            "plateAppearances": 337,
+            "totalBases": 145,
+            "rbi": 45,
+            "leftOnBase": 113,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".315",
+            "groundOutsToAirouts": "1.04",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "24.67"
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 681198,
+            "fullName": "TJ Rumfield",
+            "link": "/api/v1/people/681198"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 681870,
+    "fullName": "Erik Sabrowski",
+    "link": "/api/v1/people/681870",
+    "firstName": "Erik",
+    "lastName": "Sabrowski",
+    "primaryNumber": "62",
+    "birthDate": "1997-10-31",
+    "currentAge": 28,
+    "birthCity": "Edmonton",
+    "birthStateProvince": "AB",
+    "birthCountry": "Canada",
+    "height": "6' 4\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Erik",
+    "useLastName": "Sabrowski",
+    "middleName": "Wayne Thomas",
+    "boxscoreName": "Sabrowski",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "mlbDebutDate": "2024-09-04",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Erik Sabrowski",
+    "nameSlug": "erik-sabrowski-681870",
+    "firstLastName": "Erik Sabrowski",
+    "lastFirstName": "Sabrowski, Erik",
+    "lastInitName": "Sabrowski, E",
+    "initLastName": "E Sabrowski",
+    "fullFMLName": "Erik Wayne Thomas Sabrowski",
+    "fullLFMName": "Sabrowski, Erik Wayne Thomas",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 30,
+            "gamesStarted": 0,
+            "groundOuts": 3,
+            "airOuts": 23,
+            "runs": 10,
+            "doubles": 5,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 45,
+            "baseOnBalls": 15,
+            "intentionalWalks": 0,
+            "hits": 14,
+            "hitByPitch": 0,
+            "avg": ".169",
+            "atBats": 83,
+            "obp": ".290",
+            "slg": ".301",
+            "ops": ".591",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 440,
+            "era": "3.38",
+            "inningsPitched": "24.0",
+            "wins": 2,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 19,
+            "blownSaves": 0,
+            "earnedRuns": 9,
+            "whip": "1.21",
+            "battersFaced": 100,
+            "outs": 72,
+            "gamesPitched": 30,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 280,
+            "strikePercentage": ".640",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 0,
+            "totalBases": 25,
+            "groundOutsToAirouts": "0.13",
+            "winPercentage": ".667",
+            "pitchesPerInning": "18.33",
+            "gamesFinished": 1,
+            "strikeoutWalkRatio": "3.00",
+            "strikeoutsPer9Inn": "16.88",
+            "walksPer9Inn": "5.63",
+            "hitsPer9Inn": "5.25",
+            "runsScoredPer9": "3.75",
+            "homeRunsPer9": "0.75",
+            "inheritedRunners": 16,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 681870,
+            "fullName": "Erik Sabrowski",
+            "link": "/api/v1/people/681870"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

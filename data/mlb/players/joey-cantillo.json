@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 676282,
+    "fullName": "Joey Cantillo",
+    "link": "/api/v1/people/676282",
+    "firstName": "Joseph",
+    "lastName": "Cantillo",
+    "primaryNumber": "54",
+    "birthDate": "1999-12-18",
+    "currentAge": 26,
+    "birthCity": "Honolulu",
+    "birthStateProvince": "HI",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Joey",
+    "useLastName": "Cantillo",
+    "middleName": "Lopaka",
+    "boxscoreName": "Cantillo",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2017,
+    "pronunciation": "can-TIL-oh",
+    "mlbDebutDate": "2024-07-28",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Joey Cantillo",
+    "nameSlug": "joey-cantillo-676282",
+    "firstLastName": "Joey Cantillo",
+    "lastFirstName": "Cantillo, Joey",
+    "lastInitName": "Cantillo, J",
+    "initLastName": "J Cantillo",
+    "fullFMLName": "Joseph Lopaka Cantillo",
+    "fullLFMName": "Cantillo, Joseph Lopaka",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 18,
+            "gamesStarted": 18,
+            "groundOuts": 76,
+            "airOuts": 92,
+            "runs": 43,
+            "doubles": 17,
+            "triples": 0,
+            "homeRuns": 12,
+            "strikeOuts": 89,
+            "baseOnBalls": 44,
+            "intentionalWalks": 0,
+            "hits": 80,
+            "hitByPitch": 2,
+            "avg": ".240",
+            "atBats": 334,
+            "obp": ".331",
+            "slg": ".398",
+            "ops": ".729",
+            "caughtStealing": 4,
+            "stolenBases": 12,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1555,
+            "era": "3.86",
+            "inningsPitched": "91.0",
+            "wins": 7,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 39,
+            "whip": "1.36",
+            "battersFaced": 383,
+            "outs": 273,
+            "gamesPitched": 18,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 970,
+            "strikePercentage": ".620",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 5,
+            "pickoffs": 0,
+            "totalBases": 133,
+            "groundOutsToAirouts": "0.83",
+            "winPercentage": ".700",
+            "pitchesPerInning": "17.09",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.02",
+            "strikeoutsPer9Inn": "8.80",
+            "walksPer9Inn": "4.35",
+            "hitsPer9Inn": "7.91",
+            "runsScoredPer9": "4.25",
+            "homeRunsPer9": "1.19",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 676282,
+            "fullName": "Joey Cantillo",
+            "link": "/api/v1/people/676282"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

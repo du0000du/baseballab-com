@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 445276,
+    "fullName": "Kenley Jansen",
+    "link": "/api/v1/people/445276",
+    "firstName": "Kenley",
+    "lastName": "Jansen",
+    "primaryNumber": "74",
+    "birthDate": "1987-09-30",
+    "currentAge": 38,
+    "birthCity": "Willemstad",
+    "birthCountry": "Curacao",
+    "height": "6' 5\"",
+    "weight": 265,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Kenley",
+    "useLastName": "Jansen",
+    "middleName": "Geronimo",
+    "boxscoreName": "Jansen, K",
+    "nickName": "Kenleyfornia",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "KEHN-lee JAN-sin",
+    "mlbDebutDate": "2010-07-24",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Kenley Jansen",
+    "nameSlug": "kenley-jansen-445276",
+    "firstLastName": "Kenley Jansen",
+    "lastFirstName": "Jansen, Kenley",
+    "lastInitName": "Jansen, K",
+    "initLastName": "K Jansen",
+    "fullFMLName": "Kenley Geronimo Jansen",
+    "fullLFMName": "Jansen, Kenley Geronimo",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 38,
+            "gamesPlayed": 23,
+            "gamesStarted": 0,
+            "groundOuts": 11,
+            "airOuts": 26,
+            "runs": 13,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 5,
+            "strikeOuts": 23,
+            "baseOnBalls": 11,
+            "intentionalWalks": 0,
+            "hits": 14,
+            "hitByPitch": 0,
+            "avg": ".192",
+            "atBats": 73,
+            "obp": ".294",
+            "slg": ".397",
+            "ops": ".691",
+            "caughtStealing": 0,
+            "stolenBases": 7,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 336,
+            "era": "5.31",
+            "inningsPitched": "20.1",
+            "wins": 1,
+            "losses": 4,
+            "saves": 9,
+            "saveOpportunities": 13,
+            "holds": 1,
+            "blownSaves": 4,
+            "earnedRuns": 12,
+            "whip": "1.23",
+            "battersFaced": 85,
+            "outs": 61,
+            "gamesPitched": 23,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 217,
+            "strikePercentage": ".650",
+            "hitBatsmen": 0,
+            "balks": 1,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 29,
+            "groundOutsToAirouts": "0.42",
+            "winPercentage": ".200",
+            "pitchesPerInning": "16.52",
+            "gamesFinished": 18,
+            "strikeoutWalkRatio": "2.09",
+            "strikeoutsPer9Inn": "10.18",
+            "walksPer9Inn": "4.87",
+            "hitsPer9Inn": "6.20",
+            "runsScoredPer9": "5.75",
+            "homeRunsPer9": "2.21",
+            "inheritedRunners": 4,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 445276,
+            "fullName": "Kenley Jansen",
+            "link": "/api/v1/people/445276"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

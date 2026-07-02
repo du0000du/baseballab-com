@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 596001,
+    "fullName": "Jakob Junis",
+    "link": "/api/v1/people/596001",
+    "firstName": "Jakob",
+    "lastName": "Junis",
+    "primaryNumber": "16",
+    "birthDate": "1992-09-16",
+    "currentAge": 33,
+    "birthCity": "Jacksonville",
+    "birthStateProvince": "AR",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 238,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jakob",
+    "useLastName": "Junis",
+    "middleName": "Benjamin Lee",
+    "boxscoreName": "Junis",
+    "nickName": "June Bug",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2011,
+    "pronunciation": "JOO-nis",
+    "mlbDebutDate": "2017-04-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jakob Junis",
+    "nameSlug": "jakob-junis-596001",
+    "firstLastName": "Jakob Junis",
+    "lastFirstName": "Junis, Jakob",
+    "lastInitName": "Junis, J",
+    "initLastName": "J Junis",
+    "fullFMLName": "Jakob Benjamin Lee Junis",
+    "fullLFMName": "Junis, Jakob Benjamin Lee",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 33,
+            "gamesPlayed": 31,
+            "gamesStarted": 1,
+            "groundOuts": 35,
+            "airOuts": 42,
+            "runs": 11,
+            "doubles": 5,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 27,
+            "baseOnBalls": 6,
+            "intentionalWalks": 1,
+            "hits": 30,
+            "hitByPitch": 3,
+            "avg": ".224",
+            "atBats": 134,
+            "obp": ".273",
+            "slg": ".306",
+            "ops": ".579",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 517,
+            "era": "2.80",
+            "inningsPitched": "35.1",
+            "wins": 1,
+            "losses": 1,
+            "saves": 5,
+            "saveOpportunities": 6,
+            "holds": 11,
+            "blownSaves": 1,
+            "earnedRuns": 11,
+            "whip": "1.02",
+            "battersFaced": 143,
+            "outs": 106,
+            "gamesPitched": 31,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 351,
+            "strikePercentage": ".680",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 41,
+            "groundOutsToAirouts": "0.83",
+            "winPercentage": ".500",
+            "pitchesPerInning": "14.63",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "4.50",
+            "strikeoutsPer9Inn": "6.88",
+            "walksPer9Inn": "1.53",
+            "hitsPer9Inn": "7.64",
+            "runsScoredPer9": "2.80",
+            "homeRunsPer9": "0.51",
+            "inheritedRunners": 7,
+            "inheritedRunnersScored": 4,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 596001,
+            "fullName": "Jakob Junis",
+            "link": "/api/v1/people/596001"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

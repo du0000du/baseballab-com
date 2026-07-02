@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 681517,
+    "fullName": "Kyle Leahy",
+    "link": "/api/v1/people/681517",
+    "firstName": "Kyle",
+    "lastName": "Leahy",
+    "primaryNumber": "62",
+    "birthDate": "1997-06-04",
+    "currentAge": 29,
+    "birthCity": "Boulder",
+    "birthStateProvince": "CO",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Kyle",
+    "useLastName": "Leahy",
+    "middleName": "Yandow",
+    "boxscoreName": "Leahy",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "pronunciation": "LAY-hee",
+    "mlbDebutDate": "2023-07-07",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Kyle Leahy",
+    "nameSlug": "kyle-leahy-681517",
+    "firstLastName": "Kyle Leahy",
+    "lastFirstName": "Leahy, Kyle",
+    "lastInitName": "Leahy, K",
+    "initLastName": "K Leahy",
+    "fullFMLName": "Kyle Yandow Leahy",
+    "fullLFMName": "Leahy, Kyle Yandow",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 16,
+            "gamesStarted": 16,
+            "groundOuts": 86,
+            "airOuts": 80,
+            "runs": 37,
+            "doubles": 22,
+            "triples": 1,
+            "homeRuns": 9,
+            "strikeOuts": 67,
+            "baseOnBalls": 31,
+            "intentionalWalks": 0,
+            "hits": 89,
+            "hitByPitch": 4,
+            "avg": ".279",
+            "atBats": 319,
+            "obp": ".349",
+            "slg": ".439",
+            "ops": ".788",
+            "caughtStealing": 3,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".700",
+            "caughtStealingPercentage": ".300",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1354,
+            "era": "4.09",
+            "inningsPitched": "81.1",
+            "wins": 6,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 37,
+            "whip": "1.48",
+            "battersFaced": 358,
+            "outs": 244,
+            "gamesPitched": 16,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 843,
+            "strikePercentage": ".620",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 140,
+            "groundOutsToAirouts": "1.08",
+            "winPercentage": ".600",
+            "pitchesPerInning": "16.65",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.16",
+            "strikeoutsPer9Inn": "7.41",
+            "walksPer9Inn": "3.43",
+            "hitsPer9Inn": "9.85",
+            "runsScoredPer9": "4.09",
+            "homeRunsPer9": "1.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 1,
+            "sacBunts": 2,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 138,
+            "name": "St. Louis Cardinals",
+            "link": "/api/v1/teams/138"
+          },
+          "player": {
+            "id": 681517,
+            "fullName": "Kyle Leahy",
+            "link": "/api/v1/people/681517"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

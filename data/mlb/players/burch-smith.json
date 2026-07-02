@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 572143,
+    "fullName": "Burch Smith",
+    "link": "/api/v1/people/572143",
+    "firstName": "Burch",
+    "lastName": "Smith",
+    "primaryNumber": "65",
+    "birthDate": "1990-04-12",
+    "currentAge": 36,
+    "birthCity": "San Antonio",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Burch",
+    "useLastName": "Smith",
+    "middleName": "Taylor",
+    "boxscoreName": "Smith, B",
+    "nickName": "Smitty",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2011,
+    "mlbDebutDate": "2013-05-11",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Burch Smith",
+    "nameSlug": "burch-smith-572143",
+    "firstLastName": "Burch Smith",
+    "lastFirstName": "Smith, Burch",
+    "lastInitName": "Smith, B",
+    "initLastName": "B Smith",
+    "fullFMLName": "Burch Taylor Smith",
+    "fullLFMName": "Smith, Burch Taylor",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 13,
+            "gamesStarted": 1,
+            "groundOuts": 16,
+            "airOuts": 12,
+            "runs": 8,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 20,
+            "baseOnBalls": 7,
+            "intentionalWalks": 0,
+            "hits": 18,
+            "hitByPitch": 0,
+            "avg": ".277",
+            "atBats": 65,
+            "obp": ".347",
+            "slg": ".462",
+            "ops": ".809",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 287,
+            "era": "3.18",
+            "inningsPitched": "17.0",
+            "wins": 0,
+            "losses": 2,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 6,
+            "whip": "1.47",
+            "battersFaced": 73,
+            "outs": 51,
+            "gamesPitched": 13,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 185,
+            "strikePercentage": ".640",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 30,
+            "groundOutsToAirouts": "1.33",
+            "winPercentage": ".000",
+            "pitchesPerInning": "16.88",
+            "gamesFinished": 4,
+            "strikeoutWalkRatio": "2.86",
+            "strikeoutsPer9Inn": "10.59",
+            "walksPer9Inn": "3.71",
+            "hitsPer9Inn": "9.53",
+            "runsScoredPer9": "4.24",
+            "homeRunsPer9": "1.06",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 572143,
+            "fullName": "Burch Smith",
+            "link": "/api/v1/people/572143"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

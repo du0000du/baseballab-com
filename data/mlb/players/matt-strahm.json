@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 621381,
+    "fullName": "Matt Strahm",
+    "link": "/api/v1/people/621381",
+    "firstName": "Matthew",
+    "lastName": "Strahm",
+    "primaryNumber": "25",
+    "birthDate": "1991-11-12",
+    "currentAge": 34,
+    "birthCity": "West Fargo",
+    "birthStateProvince": "ND",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Matt",
+    "useLastName": "Strahm",
+    "middleName": "Scott",
+    "boxscoreName": "Strahm",
+    "nickName": "Strahmy",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2012,
+    "pronunciation": "rhymes with prom",
+    "mlbDebutDate": "2016-07-31",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Matt Strahm",
+    "nameSlug": "matt-strahm-621381",
+    "firstLastName": "Matt Strahm",
+    "lastFirstName": "Strahm, Matt",
+    "lastInitName": "Strahm, M",
+    "initLastName": "M Strahm",
+    "fullFMLName": "Matthew Scott Strahm",
+    "fullLFMName": "Strahm, Matthew Scott",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 29,
+            "gamesStarted": 0,
+            "groundOuts": 17,
+            "airOuts": 42,
+            "runs": 17,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 8,
+            "strikeOuts": 20,
+            "baseOnBalls": 10,
+            "intentionalWalks": 1,
+            "hits": 25,
+            "hitByPitch": 2,
+            "avg": ".240",
+            "atBats": 104,
+            "obp": ".319",
+            "slg": ".529",
+            "ops": ".848",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 447,
+            "era": "5.74",
+            "inningsPitched": "26.2",
+            "wins": 3,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 3,
+            "holds": 10,
+            "blownSaves": 3,
+            "earnedRuns": 17,
+            "whip": "1.31",
+            "battersFaced": 116,
+            "outs": 80,
+            "gamesPitched": 29,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 298,
+            "strikePercentage": ".670",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 55,
+            "groundOutsToAirouts": "0.40",
+            "winPercentage": ".750",
+            "pitchesPerInning": "16.76",
+            "gamesFinished": 2,
+            "strikeoutWalkRatio": "2.00",
+            "strikeoutsPer9Inn": "6.75",
+            "walksPer9Inn": "3.38",
+            "hitsPer9Inn": "8.44",
+            "runsScoredPer9": "5.74",
+            "homeRunsPer9": "2.70",
+            "inheritedRunners": 2,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 621381,
+            "fullName": "Matt Strahm",
+            "link": "/api/v1/people/621381"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 676477,
+    "fullName": "Garrett Whitlock",
+    "link": "/api/v1/people/676477",
+    "firstName": "Garrett",
+    "lastName": "Whitlock",
+    "primaryNumber": "22",
+    "birthDate": "1996-06-11",
+    "currentAge": 30,
+    "birthCity": "Snellville",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 222,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Garrett",
+    "useLastName": "Whitlock",
+    "middleName": "Getts",
+    "boxscoreName": "Whitlock",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2017,
+    "mlbDebutDate": "2021-04-04",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Garrett Whitlock",
+    "nameSlug": "garrett-whitlock-676477",
+    "firstLastName": "Garrett Whitlock",
+    "lastFirstName": "Whitlock, Garrett",
+    "lastInitName": "Whitlock, G",
+    "initLastName": "G Whitlock",
+    "fullFMLName": "Garrett Getts Whitlock",
+    "fullLFMName": "Whitlock, Garrett Getts",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 28,
+            "gamesStarted": 0,
+            "groundOuts": 22,
+            "airOuts": 27,
+            "runs": 9,
+            "doubles": 4,
+            "triples": 0,
+            "homeRuns": 3,
+            "strikeOuts": 32,
+            "baseOnBalls": 6,
+            "intentionalWalks": 0,
+            "hits": 23,
+            "hitByPitch": 0,
+            "avg": ".223",
+            "atBats": 103,
+            "obp": ".266",
+            "slg": ".350",
+            "ops": ".616",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 415,
+            "era": "2.60",
+            "inningsPitched": "27.2",
+            "wins": 4,
+            "losses": 1,
+            "saves": 1,
+            "saveOpportunities": 2,
+            "holds": 12,
+            "blownSaves": 1,
+            "earnedRuns": 8,
+            "whip": "1.05",
+            "battersFaced": 110,
+            "outs": 83,
+            "gamesPitched": 28,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 290,
+            "strikePercentage": ".700",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 36,
+            "groundOutsToAirouts": "0.81",
+            "winPercentage": ".800",
+            "pitchesPerInning": "15.00",
+            "gamesFinished": 6,
+            "strikeoutWalkRatio": "5.33",
+            "strikeoutsPer9Inn": "10.41",
+            "walksPer9Inn": "1.95",
+            "hitsPer9Inn": "7.48",
+            "runsScoredPer9": "2.93",
+            "homeRunsPer9": "0.98",
+            "inheritedRunners": 3,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 111,
+            "name": "Boston Red Sox",
+            "link": "/api/v1/teams/111"
+          },
+          "player": {
+            "id": 676477,
+            "fullName": "Garrett Whitlock",
+            "link": "/api/v1/people/676477"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

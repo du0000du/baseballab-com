@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 621237,
+    "fullName": "José Alvarado",
+    "link": "/api/v1/people/621237",
+    "firstName": "José",
+    "lastName": "Alvarado",
+    "primaryNumber": "46",
+    "birthDate": "1995-05-21",
+    "currentAge": 31,
+    "birthCity": "Maracaibo",
+    "birthCountry": "Venezuela",
+    "height": "6' 2\"",
+    "weight": 245,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "José",
+    "useLastName": "Alvarado",
+    "middleName": "Antonio",
+    "boxscoreName": "Alvarado",
+    "nickName": "El Pocho",
+    "gender": "M",
+    "nameMatrilineal": "Lizarzabal",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "all-vuh-RAH-doh",
+    "mlbDebutDate": "2017-05-03",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "José Alvarado",
+    "nameSlug": "jose-alvarado-621237",
+    "firstLastName": "José Alvarado",
+    "lastFirstName": "Alvarado, José",
+    "lastInitName": "Alvarado, J",
+    "initLastName": "J Alvarado",
+    "fullFMLName": "José Antonio Alvarado",
+    "fullLFMName": "Alvarado, José Antonio",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 36,
+            "gamesStarted": 0,
+            "groundOuts": 18,
+            "airOuts": 30,
+            "runs": 20,
+            "doubles": 6,
+            "triples": 2,
+            "homeRuns": 3,
+            "strikeOuts": 41,
+            "baseOnBalls": 11,
+            "intentionalWalks": 2,
+            "hits": 38,
+            "hitByPitch": 6,
+            "avg": ".302",
+            "atBats": 126,
+            "obp": ".385",
+            "slg": ".452",
+            "ops": ".837",
+            "caughtStealing": 2,
+            "stolenBases": 10,
+            "stolenBasePercentage": ".833",
+            "caughtStealingPercentage": ".167",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 613,
+            "era": "5.70",
+            "inningsPitched": "30.0",
+            "wins": 3,
+            "losses": 2,
+            "saves": 1,
+            "saveOpportunities": 2,
+            "holds": 9,
+            "blownSaves": 1,
+            "earnedRuns": 19,
+            "whip": "1.63",
+            "battersFaced": 144,
+            "outs": 90,
+            "gamesPitched": 36,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 386,
+            "strikePercentage": ".630",
+            "hitBatsmen": 6,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 1,
+            "totalBases": 57,
+            "groundOutsToAirouts": "0.60",
+            "winPercentage": ".600",
+            "pitchesPerInning": "20.43",
+            "gamesFinished": 3,
+            "strikeoutWalkRatio": "3.73",
+            "strikeoutsPer9Inn": "12.30",
+            "walksPer9Inn": "3.30",
+            "hitsPer9Inn": "11.40",
+            "runsScoredPer9": "6.00",
+            "homeRunsPer9": "0.90",
+            "inheritedRunners": 6,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 621237,
+            "fullName": "José Alvarado",
+            "link": "/api/v1/people/621237"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

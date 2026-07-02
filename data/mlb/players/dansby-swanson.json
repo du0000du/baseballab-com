@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 621020,
+    "fullName": "Dansby Swanson",
+    "link": "/api/v1/people/621020",
+    "firstName": "James",
+    "lastName": "Swanson",
+    "primaryNumber": "7",
+    "birthDate": "1994-02-11",
+    "currentAge": 32,
+    "birthCity": "Kennesaw",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Dansby",
+    "useLastName": "Swanson",
+    "middleName": "Dansby",
+    "boxscoreName": "Swanson",
+    "nickName": "Dans",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "mlbDebutDate": "2016-08-17",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Dansby Swanson",
+    "nameSlug": "dansby-swanson-621020",
+    "firstLastName": "Dansby Swanson",
+    "lastFirstName": "Swanson, Dansby",
+    "lastInitName": "Swanson, D",
+    "initLastName": "D Swanson",
+    "fullFMLName": "James Dansby Swanson",
+    "fullLFMName": "Swanson, James Dansby",
+    "strikeZoneTop": 3.218,
+    "strikeZoneBottom": 1.624
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 83,
+            "groundOuts": 69,
+            "airOuts": 82,
+            "runs": 55,
+            "doubles": 10,
+            "triples": 2,
+            "homeRuns": 16,
+            "strikeOuts": 76,
+            "baseOnBalls": 37,
+            "intentionalWalks": 0,
+            "hits": 59,
+            "hitByPitch": 1,
+            "avg": ".210",
+            "atBats": 281,
+            "obp": ".300",
+            "slg": ".431",
+            "ops": ".731",
+            "caughtStealing": 0,
+            "stolenBases": 10,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1284,
+            "plateAppearances": 324,
+            "totalBases": 121,
+            "rbi": 57,
+            "leftOnBase": 141,
+            "sacBunts": 1,
+            "sacFlies": 4,
+            "babip": ".223",
+            "groundOutsToAirouts": "0.84",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "17.56"
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 621020,
+            "fullName": "Dansby Swanson",
+            "link": "/api/v1/people/621020"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

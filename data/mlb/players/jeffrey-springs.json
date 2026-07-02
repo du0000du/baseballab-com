@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 605488,
+    "fullName": "Jeffrey Springs",
+    "link": "/api/v1/people/605488",
+    "firstName": "Jeffrey",
+    "lastName": "Springs",
+    "primaryNumber": "59",
+    "birthDate": "1992-09-20",
+    "currentAge": 33,
+    "birthCity": "Belmont",
+    "birthStateProvince": "NC",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 218,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jeffrey",
+    "useLastName": "Springs",
+    "middleName": "Scott",
+    "boxscoreName": "Springs",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "mlbDebutDate": "2018-07-31",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Jeffrey Springs",
+    "nameSlug": "jeffrey-springs-605488",
+    "firstLastName": "Jeffrey Springs",
+    "lastFirstName": "Springs, Jeffrey",
+    "lastInitName": "Springs, J",
+    "initLastName": "J Springs",
+    "fullFMLName": "Jeffrey Scott Springs",
+    "fullLFMName": "Springs, Jeffrey Scott",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 33,
+            "gamesPlayed": 18,
+            "gamesStarted": 18,
+            "groundOuts": 79,
+            "airOuts": 117,
+            "runs": 66,
+            "doubles": 16,
+            "triples": 3,
+            "homeRuns": 24,
+            "strikeOuts": 80,
+            "baseOnBalls": 33,
+            "intentionalWalks": 0,
+            "hits": 96,
+            "hitByPitch": 2,
+            "avg": ".262",
+            "atBats": 367,
+            "obp": ".322",
+            "slg": ".518",
+            "ops": ".840",
+            "caughtStealing": 2,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1583,
+            "era": "5.79",
+            "inningsPitched": "93.1",
+            "wins": 3,
+            "losses": 8,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 60,
+            "whip": "1.38",
+            "battersFaced": 407,
+            "outs": 280,
+            "gamesPitched": 18,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1009,
+            "strikePercentage": ".640",
+            "hitBatsmen": 2,
+            "balks": 1,
+            "wildPitches": 0,
+            "pickoffs": 4,
+            "totalBases": 190,
+            "groundOutsToAirouts": "0.68",
+            "winPercentage": ".273",
+            "pitchesPerInning": "16.96",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.42",
+            "strikeoutsPer9Inn": "7.71",
+            "walksPer9Inn": "3.18",
+            "hitsPer9Inn": "9.26",
+            "runsScoredPer9": "6.36",
+            "homeRunsPer9": "2.31",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 5
+          },
+          "team": {
+            "id": 133,
+            "name": "Athletics",
+            "link": "/api/v1/teams/133"
+          },
+          "player": {
+            "id": 605488,
+            "fullName": "Jeffrey Springs",
+            "link": "/api/v1/people/605488"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

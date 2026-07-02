@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 672695,
+    "fullName": "Geraldo Perdomo",
+    "link": "/api/v1/people/672695",
+    "firstName": "Geraldo",
+    "lastName": "Perdomo",
+    "primaryNumber": "2",
+    "birthDate": "1999-10-22",
+    "currentAge": 26,
+    "birthCity": "Santo Domingo",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 2\"",
+    "weight": 203,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Geraldo",
+    "useLastName": "Perdomo",
+    "middleName": "Rafael",
+    "boxscoreName": "Perdomo",
+    "gender": "M",
+    "nameMatrilineal": "Fonnieur",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "HER-all-doh per-DOH-mo",
+    "mlbDebutDate": "2021-04-03",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Geraldo Perdomo",
+    "nameSlug": "geraldo-perdomo-672695",
+    "firstLastName": "Geraldo Perdomo",
+    "lastFirstName": "Perdomo, Geraldo",
+    "lastInitName": "Perdomo, G",
+    "initLastName": "G Perdomo",
+    "fullFMLName": "Geraldo Rafael Perdomo",
+    "fullLFMName": "Perdomo, Geraldo Rafael",
+    "strikeZoneTop": 3.317,
+    "strikeZoneBottom": 1.674
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 82,
+            "groundOuts": 95,
+            "airOuts": 85,
+            "runs": 38,
+            "doubles": 12,
+            "triples": 3,
+            "homeRuns": 5,
+            "strikeOuts": 43,
+            "baseOnBalls": 52,
+            "intentionalWalks": 0,
+            "hits": 69,
+            "hitByPitch": 2,
+            "avg": ".244",
+            "atBats": 283,
+            "obp": ".360",
+            "slg": ".360",
+            "ops": ".720",
+            "caughtStealing": 8,
+            "stolenBases": 12,
+            "stolenBasePercentage": ".600",
+            "caughtStealingPercentage": ".400",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1455,
+            "plateAppearances": 346,
+            "totalBases": 102,
+            "rbi": 31,
+            "leftOnBase": 125,
+            "sacBunts": 4,
+            "sacFlies": 5,
+            "babip": ".267",
+            "groundOutsToAirouts": "1.12",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "56.60"
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 672695,
+            "fullName": "Geraldo Perdomo",
+            "link": "/api/v1/people/672695"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

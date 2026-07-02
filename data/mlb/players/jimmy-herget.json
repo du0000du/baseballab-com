@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 623474,
+    "fullName": "Jimmy Herget",
+    "link": "/api/v1/people/623474",
+    "firstName": "Jimmy",
+    "lastName": "Herget",
+    "primaryNumber": "44",
+    "birthDate": "1993-09-09",
+    "currentAge": 32,
+    "birthCity": "Tampa",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 183,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jimmy",
+    "useLastName": "Herget",
+    "middleName": "Matthew",
+    "boxscoreName": "Herget, J",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "pronunciation": "HER-geht",
+    "mlbDebutDate": "2019-07-07",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jimmy Herget",
+    "nameSlug": "jimmy-herget-623474",
+    "firstLastName": "Jimmy Herget",
+    "lastFirstName": "Herget, Jimmy",
+    "lastInitName": "Herget, J",
+    "initLastName": "J Herget",
+    "fullFMLName": "Jimmy Matthew Herget",
+    "fullLFMName": "Herget, Jimmy Matthew",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 20,
+            "gamesStarted": 3,
+            "groundOuts": 9,
+            "airOuts": 26,
+            "runs": 10,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 23,
+            "baseOnBalls": 6,
+            "intentionalWalks": 1,
+            "hits": 21,
+            "hitByPitch": 1,
+            "avg": ".276",
+            "atBats": 76,
+            "obp": ".329",
+            "slg": ".434",
+            "ops": ".763",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 349,
+            "era": "4.05",
+            "inningsPitched": "20.0",
+            "wins": 0,
+            "losses": 2,
+            "saves": 3,
+            "saveOpportunities": 4,
+            "holds": 4,
+            "blownSaves": 1,
+            "earnedRuns": 9,
+            "whip": "1.35",
+            "battersFaced": 86,
+            "outs": 60,
+            "gamesPitched": 20,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 233,
+            "strikePercentage": ".670",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 33,
+            "groundOutsToAirouts": "0.35",
+            "winPercentage": ".000",
+            "pitchesPerInning": "17.45",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "3.83",
+            "strikeoutsPer9Inn": "10.35",
+            "walksPer9Inn": "2.70",
+            "hitsPer9Inn": "9.45",
+            "runsScoredPer9": "4.50",
+            "homeRunsPer9": "0.90",
+            "inheritedRunners": 9,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 623474,
+            "fullName": "Jimmy Herget",
+            "link": "/api/v1/people/623474"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

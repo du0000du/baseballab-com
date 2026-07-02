@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 642100,
+    "fullName": "Gabe Speier",
+    "link": "/api/v1/people/642100",
+    "firstName": "Gabriel",
+    "lastName": "Speier",
+    "primaryNumber": "55",
+    "birthDate": "1995-04-12",
+    "currentAge": 31,
+    "birthCity": "Santa Barbara",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Gabe",
+    "useLastName": "Speier",
+    "middleName": "James",
+    "boxscoreName": "Speier",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2013,
+    "pronunciation": "spy-urr",
+    "mlbDebutDate": "2019-09-05",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Gabe Speier",
+    "nameSlug": "gabe-speier-642100",
+    "firstLastName": "Gabe Speier",
+    "lastFirstName": "Speier, Gabe",
+    "lastInitName": "Speier, G",
+    "initLastName": "G Speier",
+    "fullFMLName": "Gabriel James Speier",
+    "fullLFMName": "Speier, Gabriel James",
+    "strikeZoneTop": 3.165,
+    "strikeZoneBottom": 1.598
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 26,
+            "gamesStarted": 0,
+            "groundOuts": 20,
+            "airOuts": 22,
+            "runs": 6,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 19,
+            "baseOnBalls": 6,
+            "intentionalWalks": 1,
+            "hits": 18,
+            "hitByPitch": 3,
+            "avg": ".237",
+            "atBats": 76,
+            "obp": ".310",
+            "slg": ".355",
+            "ops": ".665",
+            "caughtStealing": 0,
+            "stolenBases": 4,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 326,
+            "era": "1.71",
+            "inningsPitched": "21.0",
+            "wins": 1,
+            "losses": 2,
+            "saves": 1,
+            "saveOpportunities": 1,
+            "holds": 11,
+            "blownSaves": 0,
+            "earnedRuns": 4,
+            "whip": "1.14",
+            "battersFaced": 88,
+            "outs": 63,
+            "gamesPitched": 26,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 222,
+            "strikePercentage": ".680",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 27,
+            "groundOutsToAirouts": "0.91",
+            "winPercentage": ".333",
+            "pitchesPerInning": "15.52",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "3.17",
+            "strikeoutsPer9Inn": "8.14",
+            "walksPer9Inn": "2.57",
+            "hitsPer9Inn": "7.71",
+            "runsScoredPer9": "2.57",
+            "homeRunsPer9": "0.43",
+            "inheritedRunners": 9,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 136,
+            "name": "Seattle Mariners",
+            "link": "/api/v1/teams/136"
+          },
+          "player": {
+            "id": 642100,
+            "fullName": "Gabe Speier",
+            "link": "/api/v1/people/642100"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

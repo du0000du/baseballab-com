@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 571510,
+    "fullName": "Matthew Boyd",
+    "link": "/api/v1/people/571510",
+    "firstName": "Matthew",
+    "lastName": "Boyd",
+    "primaryNumber": "16",
+    "birthDate": "1991-02-02",
+    "currentAge": 35,
+    "birthCity": "Mercer Island",
+    "birthStateProvince": "WA",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 223,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Matthew",
+    "useLastName": "Boyd",
+    "middleName": "Robert",
+    "boxscoreName": "Boyd",
+    "nickName": "Matty B",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2013,
+    "mlbDebutDate": "2015-06-27",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Matthew Boyd",
+    "nameSlug": "matthew-boyd-571510",
+    "firstLastName": "Matthew Boyd",
+    "lastFirstName": "Boyd, Matthew",
+    "lastInitName": "Boyd, M",
+    "initLastName": "M Boyd",
+    "fullFMLName": "Matthew Robert Boyd",
+    "fullLFMName": "Boyd, Matthew Robert",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 35,
+            "gamesPlayed": 7,
+            "gamesStarted": 7,
+            "groundOuts": 30,
+            "airOuts": 30,
+            "runs": 20,
+            "doubles": 9,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 37,
+            "baseOnBalls": 10,
+            "intentionalWalks": 0,
+            "hits": 37,
+            "hitByPitch": 1,
+            "avg": ".276",
+            "atBats": 134,
+            "obp": ".331",
+            "slg": ".433",
+            "ops": ".764",
+            "caughtStealing": 1,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 582,
+            "era": "5.08",
+            "inningsPitched": "33.2",
+            "wins": 3,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 19,
+            "whip": "1.40",
+            "battersFaced": 145,
+            "outs": 101,
+            "gamesPitched": 7,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 381,
+            "strikePercentage": ".650",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 58,
+            "groundOutsToAirouts": "1.00",
+            "winPercentage": ".750",
+            "pitchesPerInning": "17.29",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.70",
+            "strikeoutsPer9Inn": "9.89",
+            "walksPer9Inn": "2.67",
+            "hitsPer9Inn": "9.89",
+            "runsScoredPer9": "5.35",
+            "homeRunsPer9": "1.07",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 571510,
+            "fullName": "Matthew Boyd",
+            "link": "/api/v1/people/571510"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

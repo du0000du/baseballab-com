@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 677649,
+    "fullName": "Ezequiel Duran",
+    "link": "/api/v1/people/677649",
+    "firstName": "Ezequiel",
+    "lastName": "Duran",
+    "primaryNumber": "20",
+    "birthDate": "1999-05-22",
+    "currentAge": 27,
+    "birthCity": "San Juan de la Maguana",
+    "birthCountry": "Dominican Republic",
+    "height": "5' 10\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Ezequiel",
+    "useLastName": "Duran",
+    "middleName": "Alberto",
+    "boxscoreName": "Duran, E",
+    "gender": "M",
+    "nameMatrilineal": "Zabala",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2022-06-04",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Ezequiel Duran",
+    "nameSlug": "ezequiel-duran-677649",
+    "firstLastName": "Ezequiel Duran",
+    "lastFirstName": "Duran, Ezequiel",
+    "lastInitName": "Duran, E",
+    "initLastName": "E Duran",
+    "fullFMLName": "Ezequiel Alberto Duran",
+    "fullLFMName": "Duran, Ezequiel Alberto",
+    "strikeZoneTop": 3.126,
+    "strikeZoneBottom": 1.578
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 78,
+            "groundOuts": 70,
+            "airOuts": 58,
+            "runs": 34,
+            "doubles": 15,
+            "triples": 2,
+            "homeRuns": 6,
+            "strikeOuts": 67,
+            "baseOnBalls": 21,
+            "intentionalWalks": 0,
+            "hits": 72,
+            "hitByPitch": 1,
+            "avg": ".273",
+            "atBats": 264,
+            "obp": ".326",
+            "slg": ".413",
+            "ops": ".739",
+            "caughtStealing": 1,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1119,
+            "plateAppearances": 289,
+            "totalBases": 109,
+            "rbi": 41,
+            "leftOnBase": 111,
+            "sacBunts": 1,
+            "sacFlies": 2,
+            "babip": ".342",
+            "groundOutsToAirouts": "1.21",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "44.00"
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 677649,
+            "fullName": "Ezequiel Duran",
+            "link": "/api/v1/people/677649"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 605447,
+    "fullName": "Jordan Romano",
+    "link": "/api/v1/people/605447",
+    "firstName": "Jordan",
+    "lastName": "Romano",
+    "birthDate": "1993-04-21",
+    "currentAge": 33,
+    "birthCity": "Markham",
+    "birthStateProvince": "ON",
+    "birthCountry": "Canada",
+    "height": "6' 5\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jordan",
+    "useLastName": "Romano",
+    "middleName": "Robert",
+    "boxscoreName": "Romano",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2014,
+    "pronunciation": "row-MAN-oh",
+    "mlbDebutDate": "2019-06-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jordan Romano",
+    "nameSlug": "jordan-romano-605447",
+    "firstLastName": "Jordan Romano",
+    "lastFirstName": "Romano, Jordan",
+    "lastInitName": "Romano, J",
+    "initLastName": "J Romano",
+    "fullFMLName": "Jordan Robert Romano",
+    "fullLFMName": "Romano, Jordan Robert",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 33,
+            "gamesPlayed": 11,
+            "gamesStarted": 0,
+            "groundOuts": 3,
+            "airOuts": 9,
+            "runs": 9,
+            "doubles": 4,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 12,
+            "baseOnBalls": 6,
+            "intentionalWalks": 0,
+            "hits": 11,
+            "hitByPitch": 1,
+            "avg": ".314",
+            "atBats": 35,
+            "obp": ".429",
+            "slg": ".514",
+            "ops": ".943",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 192,
+            "era": "10.13",
+            "inningsPitched": "8.0",
+            "wins": 0,
+            "losses": 2,
+            "saves": 4,
+            "saveOpportunities": 6,
+            "holds": 0,
+            "blownSaves": 2,
+            "earnedRuns": 9,
+            "whip": "2.13",
+            "battersFaced": 42,
+            "outs": 24,
+            "gamesPitched": 11,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 117,
+            "strikePercentage": ".610",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 18,
+            "groundOutsToAirouts": "0.33",
+            "winPercentage": ".000",
+            "pitchesPerInning": "24.00",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "2.00",
+            "strikeoutsPer9Inn": "13.50",
+            "walksPer9Inn": "6.75",
+            "hitsPer9Inn": "12.38",
+            "runsScoredPer9": "10.13",
+            "homeRunsPer9": "1.13",
+            "inheritedRunners": 2,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 605447,
+            "fullName": "Jordan Romano",
+            "link": "/api/v1/people/605447"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

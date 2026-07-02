@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 489446,
+    "fullName": "Kirby Yates",
+    "link": "/api/v1/people/489446",
+    "firstName": "Kirby",
+    "lastName": "Yates",
+    "primaryNumber": "39",
+    "birthDate": "1987-03-25",
+    "currentAge": 39,
+    "birthCity": "Lihue",
+    "birthStateProvince": "HI",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Kirby",
+    "useLastName": "Yates",
+    "middleName": "Kali",
+    "boxscoreName": "Yates",
+    "nickName": "Chubbs Senior",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2005,
+    "mlbDebutDate": "2014-06-07",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Kirby Yates",
+    "nameSlug": "kirby-yates-489446",
+    "firstLastName": "Kirby Yates",
+    "lastFirstName": "Yates, Kirby",
+    "lastInitName": "Yates, K",
+    "initLastName": "K Yates",
+    "fullFMLName": "Kirby Kali Yates",
+    "fullLFMName": "Yates, Kirby Kali",
+    "strikeZoneTop": 3.301,
+    "strikeZoneBottom": 1.504
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 39,
+            "gamesPlayed": 20,
+            "gamesStarted": 0,
+            "groundOuts": 11,
+            "airOuts": 18,
+            "runs": 7,
+            "doubles": 3,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 25,
+            "baseOnBalls": 7,
+            "intentionalWalks": 0,
+            "hits": 10,
+            "hitByPitch": 2,
+            "avg": ".159",
+            "atBats": 63,
+            "obp": ".260",
+            "slg": ".302",
+            "ops": ".562",
+            "caughtStealing": 0,
+            "stolenBases": 5,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 289,
+            "era": "3.06",
+            "inningsPitched": "17.2",
+            "wins": 0,
+            "losses": 3,
+            "saves": 2,
+            "saveOpportunities": 4,
+            "holds": 0,
+            "blownSaves": 2,
+            "earnedRuns": 6,
+            "whip": "0.96",
+            "battersFaced": 73,
+            "outs": 53,
+            "gamesPitched": 20,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 191,
+            "strikePercentage": ".660",
+            "hitBatsmen": 2,
+            "balks": 1,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 19,
+            "groundOutsToAirouts": "0.61",
+            "winPercentage": ".000",
+            "pitchesPerInning": "16.36",
+            "gamesFinished": 11,
+            "strikeoutWalkRatio": "3.57",
+            "strikeoutsPer9Inn": "12.74",
+            "walksPer9Inn": "3.57",
+            "hitsPer9Inn": "5.09",
+            "runsScoredPer9": "3.57",
+            "homeRunsPer9": "1.02",
+            "inheritedRunners": 3,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 489446,
+            "fullName": "Kirby Yates",
+            "link": "/api/v1/people/489446"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

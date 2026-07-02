@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 691587,
+    "fullName": "Eury Pérez",
+    "link": "/api/v1/people/691587",
+    "firstName": "Eury",
+    "lastName": "Pérez",
+    "primaryNumber": "39",
+    "birthDate": "2003-04-15",
+    "currentAge": 23,
+    "birthCity": "Santiago",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 8\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Eury",
+    "useLastName": "Pérez",
+    "middleName": "Rafael",
+    "boxscoreName": "Pérez, Eu",
+    "gender": "M",
+    "nameMatrilineal": "Polanco",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "ee-YOUR-ee",
+    "mlbDebutDate": "2023-05-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Eury Pérez",
+    "nameSlug": "eury-perez-691587",
+    "firstLastName": "Eury Pérez",
+    "lastFirstName": "Pérez, Eury",
+    "lastInitName": "Pérez, E",
+    "initLastName": "E Pérez",
+    "fullFMLName": "Eury Rafael Pérez",
+    "fullLFMName": "Pérez, Eury Rafael",
+    "strikeZoneTop": 3.58,
+    "strikeZoneBottom": 1.68
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 14,
+            "gamesStarted": 14,
+            "groundOuts": 51,
+            "airOuts": 76,
+            "runs": 38,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 13,
+            "strikeOuts": 81,
+            "baseOnBalls": 32,
+            "intentionalWalks": 0,
+            "hits": 56,
+            "hitByPitch": 6,
+            "avg": ".213",
+            "atBats": 263,
+            "obp": ".311",
+            "slg": ".426",
+            "ops": ".737",
+            "caughtStealing": 3,
+            "stolenBases": 18,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1217,
+            "era": "4.21",
+            "inningsPitched": "72.2",
+            "wins": 4,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 34,
+            "whip": "1.21",
+            "battersFaced": 302,
+            "outs": 218,
+            "gamesPitched": 14,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 769,
+            "strikePercentage": ".630",
+            "hitBatsmen": 6,
+            "balks": 1,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 112,
+            "groundOutsToAirouts": "0.67",
+            "winPercentage": ".400",
+            "pitchesPerInning": "16.75",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.53",
+            "strikeoutsPer9Inn": "10.03",
+            "walksPer9Inn": "3.96",
+            "hitsPer9Inn": "6.94",
+            "runsScoredPer9": "4.71",
+            "homeRunsPer9": "1.61",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 691587,
+            "fullName": "Eury Pérez",
+            "link": "/api/v1/people/691587"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

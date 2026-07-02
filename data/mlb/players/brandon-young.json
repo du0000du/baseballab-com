@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 687064,
+    "fullName": "Brandon Young",
+    "link": "/api/v1/people/687064",
+    "firstName": "Brandon",
+    "lastName": "Young",
+    "primaryNumber": "63",
+    "birthDate": "1998-08-19",
+    "currentAge": 27,
+    "birthCity": "Lumberton",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Brandon",
+    "useLastName": "Young",
+    "middleName": "Wayne",
+    "boxscoreName": "Young",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2025-04-19",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brandon Young",
+    "nameSlug": "brandon-young-687064",
+    "firstLastName": "Brandon Young",
+    "lastFirstName": "Young, Brandon",
+    "lastInitName": "Young, B",
+    "initLastName": "B Young",
+    "fullFMLName": "Brandon Wayne Young",
+    "fullLFMName": "Young, Brandon Wayne",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 13,
+            "gamesStarted": 13,
+            "groundOuts": 73,
+            "airOuts": 85,
+            "runs": 33,
+            "doubles": 12,
+            "triples": 0,
+            "homeRuns": 7,
+            "strikeOuts": 57,
+            "baseOnBalls": 27,
+            "intentionalWalks": 0,
+            "hits": 67,
+            "hitByPitch": 1,
+            "avg": ".242",
+            "atBats": 277,
+            "obp": ".307",
+            "slg": ".361",
+            "ops": ".668",
+            "caughtStealing": 2,
+            "stolenBases": 3,
+            "stolenBasePercentage": ".600",
+            "caughtStealingPercentage": ".400",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 1145,
+            "era": "3.11",
+            "inningsPitched": "72.1",
+            "wins": 6,
+            "losses": 2,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 25,
+            "whip": "1.30",
+            "battersFaced": 311,
+            "outs": 217,
+            "gamesPitched": 13,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 737,
+            "strikePercentage": ".640",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 100,
+            "groundOutsToAirouts": "0.86",
+            "winPercentage": ".750",
+            "pitchesPerInning": "15.83",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.11",
+            "strikeoutsPer9Inn": "7.09",
+            "walksPer9Inn": "3.36",
+            "hitsPer9Inn": "8.34",
+            "runsScoredPer9": "4.11",
+            "homeRunsPer9": "0.87",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 1,
+            "sacBunts": 1,
+            "sacFlies": 4
+          },
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          },
+          "player": {
+            "id": 687064,
+            "fullName": "Brandon Young",
+            "link": "/api/v1/people/687064"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

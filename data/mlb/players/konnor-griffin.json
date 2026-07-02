@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 804606,
+    "fullName": "Konnor Griffin",
+    "link": "/api/v1/people/804606",
+    "firstName": "Konnor",
+    "lastName": "Griffin",
+    "primaryNumber": "6",
+    "birthDate": "2006-04-24",
+    "currentAge": 20,
+    "birthCity": "Jackson",
+    "birthStateProvince": "MS",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 222,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Konnor",
+    "useLastName": "Griffin",
+    "middleName": "Thomas",
+    "boxscoreName": "Griffin",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2024,
+    "mlbDebutDate": "2026-04-03",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Konnor Griffin",
+    "nameSlug": "konnor-griffin-804606",
+    "firstLastName": "Konnor Griffin",
+    "lastFirstName": "Griffin, Konnor",
+    "lastInitName": "Griffin, K",
+    "initLastName": "K Griffin",
+    "fullFMLName": "Konnor Griffin",
+    "fullLFMName": "Griffin, Konnor",
+    "strikeZoneTop": 3.335,
+    "strikeZoneBottom": 1.683
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 20,
+            "gamesPlayed": 56,
+            "groundOuts": 59,
+            "airOuts": 34,
+            "runs": 33,
+            "doubles": 10,
+            "triples": 2,
+            "homeRuns": 5,
+            "strikeOuts": 62,
+            "baseOnBalls": 14,
+            "intentionalWalks": 0,
+            "hits": 57,
+            "hitByPitch": 4,
+            "avg": ".271",
+            "atBats": 210,
+            "obp": ".326",
+            "slg": ".410",
+            "ops": ".736",
+            "caughtStealing": 1,
+            "stolenBases": 16,
+            "stolenBasePercentage": ".941",
+            "caughtStealingPercentage": ".059",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 869,
+            "plateAppearances": 230,
+            "totalBases": 86,
+            "rbi": 23,
+            "leftOnBase": 101,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".359",
+            "groundOutsToAirouts": "1.74",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "42.00"
+          },
+          "team": {
+            "id": 134,
+            "name": "Pittsburgh Pirates",
+            "link": "/api/v1/teams/134"
+          },
+          "player": {
+            "id": 804606,
+            "fullName": "Konnor Griffin",
+            "link": "/api/v1/people/804606"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

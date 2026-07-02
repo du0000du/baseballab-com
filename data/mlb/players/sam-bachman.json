@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 696147,
+    "fullName": "Sam Bachman",
+    "link": "/api/v1/people/696147",
+    "firstName": "Samuel",
+    "lastName": "Bachman",
+    "primaryNumber": "40",
+    "birthDate": "1999-09-30",
+    "currentAge": 26,
+    "birthCity": "Indianapolis",
+    "birthStateProvince": "IN",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Sam",
+    "useLastName": "Bachman",
+    "middleName": "Duane",
+    "boxscoreName": "Bachman",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "pronunciation": "BOCK-min",
+    "mlbDebutDate": "2023-05-26",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Sam Bachman",
+    "nameSlug": "sam-bachman-696147",
+    "firstLastName": "Sam Bachman",
+    "lastFirstName": "Bachman, Sam",
+    "lastInitName": "Bachman, S",
+    "initLastName": "S Bachman",
+    "fullFMLName": "Samuel Duane Bachman",
+    "fullLFMName": "Bachman, Samuel Duane",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 31,
+            "gamesStarted": 0,
+            "groundOuts": 36,
+            "airOuts": 35,
+            "runs": 14,
+            "doubles": 7,
+            "triples": 0,
+            "homeRuns": 5,
+            "strikeOuts": 38,
+            "baseOnBalls": 19,
+            "intentionalWalks": 0,
+            "hits": 26,
+            "hitByPitch": 2,
+            "avg": ".193",
+            "atBats": 135,
+            "obp": ".301",
+            "slg": ".356",
+            "ops": ".657",
+            "caughtStealing": 1,
+            "stolenBases": 3,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 592,
+            "era": "3.35",
+            "inningsPitched": "37.2",
+            "wins": 1,
+            "losses": 1,
+            "saves": 1,
+            "saveOpportunities": 3,
+            "holds": 12,
+            "blownSaves": 2,
+            "earnedRuns": 14,
+            "whip": "1.19",
+            "battersFaced": 156,
+            "outs": 113,
+            "gamesPitched": 31,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 368,
+            "strikePercentage": ".620",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 1,
+            "totalBases": 48,
+            "groundOutsToAirouts": "1.03",
+            "winPercentage": ".500",
+            "pitchesPerInning": "15.72",
+            "gamesFinished": 3,
+            "strikeoutWalkRatio": "2.00",
+            "strikeoutsPer9Inn": "9.08",
+            "walksPer9Inn": "4.54",
+            "hitsPer9Inn": "6.21",
+            "runsScoredPer9": "3.35",
+            "homeRunsPer9": "1.19",
+            "inheritedRunners": 20,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 696147,
+            "fullName": "Sam Bachman",
+            "link": "/api/v1/people/696147"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

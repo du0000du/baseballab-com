@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 681911,
+    "fullName": "Alex Vesia",
+    "link": "/api/v1/people/681911",
+    "firstName": "Alexander",
+    "lastName": "Vesia",
+    "primaryNumber": "51",
+    "birthDate": "1996-04-11",
+    "currentAge": 30,
+    "birthCity": "Alpine",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 209,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Alex",
+    "useLastName": "Vesia",
+    "middleName": "Victor",
+    "boxscoreName": "Vesia",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "pronunciation": "VES-ee-uh",
+    "mlbDebutDate": "2020-07-25",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Alex Vesia",
+    "nameSlug": "alex-vesia-681911",
+    "firstLastName": "Alex Vesia",
+    "lastFirstName": "Vesia, Alex",
+    "lastInitName": "Vesia, A",
+    "initLastName": "A Vesia",
+    "fullFMLName": "Alexander Victor Vesia",
+    "fullLFMName": "Vesia, Alexander Victor",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 37,
+            "gamesStarted": 0,
+            "groundOuts": 13,
+            "airOuts": 32,
+            "runs": 8,
+            "doubles": 0,
+            "triples": 1,
+            "homeRuns": 0,
+            "strikeOuts": 39,
+            "baseOnBalls": 16,
+            "intentionalWalks": 1,
+            "hits": 14,
+            "hitByPitch": 0,
+            "avg": ".143",
+            "atBats": 98,
+            "obp": ".263",
+            "slg": ".163",
+            "ops": ".426",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 513,
+            "era": "2.60",
+            "inningsPitched": "27.2",
+            "wins": 1,
+            "losses": 1,
+            "saves": 3,
+            "saveOpportunities": 4,
+            "holds": 13,
+            "blownSaves": 1,
+            "earnedRuns": 8,
+            "whip": "1.08",
+            "battersFaced": 114,
+            "outs": 83,
+            "gamesPitched": 37,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 318,
+            "strikePercentage": ".620",
+            "hitBatsmen": 0,
+            "balks": 1,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 16,
+            "groundOutsToAirouts": "0.41",
+            "winPercentage": ".500",
+            "pitchesPerInning": "18.54",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "2.44",
+            "strikeoutsPer9Inn": "12.69",
+            "walksPer9Inn": "5.20",
+            "hitsPer9Inn": "4.55",
+            "runsScoredPer9": "2.60",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 22,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 681911,
+            "fullName": "Alex Vesia",
+            "link": "/api/v1/people/681911"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

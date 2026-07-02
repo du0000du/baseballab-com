@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 703607,
+    "fullName": "Henry Bolte",
+    "link": "/api/v1/people/703607",
+    "firstName": "Henry",
+    "lastName": "Bolte",
+    "primaryNumber": "33",
+    "birthDate": "2003-08-04",
+    "currentAge": 22,
+    "birthCity": "San Francisco",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Henry",
+    "useLastName": "Bolte",
+    "boxscoreName": "Bolte",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "pronunciation": "BOL-tay",
+    "mlbDebutDate": "2026-05-13",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Henry Bolte",
+    "nameSlug": "henry-bolte-703607",
+    "firstLastName": "Henry Bolte",
+    "lastFirstName": "Bolte, Henry",
+    "lastInitName": "Bolte, H",
+    "initLastName": "H Bolte",
+    "fullFMLName": "Henry Bolte",
+    "fullLFMName": "Bolte, Henry",
+    "strikeZoneTop": 3.33,
+    "strikeZoneBottom": 1.68
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 22,
+            "gamesPlayed": 44,
+            "groundOuts": 38,
+            "airOuts": 18,
+            "runs": 14,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 48,
+            "baseOnBalls": 14,
+            "intentionalWalks": 0,
+            "hits": 41,
+            "hitByPitch": 6,
+            "avg": ".287",
+            "atBats": 143,
+            "obp": ".370",
+            "slg": ".371",
+            "ops": ".741",
+            "caughtStealing": 3,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".786",
+            "caughtStealingPercentage": ".214",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 591,
+            "plateAppearances": 166,
+            "totalBases": 53,
+            "rbi": 13,
+            "leftOnBase": 45,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".411",
+            "groundOutsToAirouts": "2.11",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "71.50"
+          },
+          "team": {
+            "id": 133,
+            "name": "Athletics",
+            "link": "/api/v1/teams/133"
+          },
+          "player": {
+            "id": 703607,
+            "fullName": "Henry Bolte",
+            "link": "/api/v1/people/703607"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

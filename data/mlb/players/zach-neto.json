@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 687263,
+    "fullName": "Zach Neto",
+    "link": "/api/v1/people/687263",
+    "firstName": "Zachary",
+    "lastName": "Neto",
+    "primaryNumber": "9",
+    "birthDate": "2001-01-31",
+    "currentAge": 25,
+    "birthCity": "Miami",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Zach",
+    "useLastName": "Neto",
+    "middleName": "Adam",
+    "boxscoreName": "Neto",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "pronunciation": "NET-oh",
+    "mlbDebutDate": "2023-04-15",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Zach Neto",
+    "nameSlug": "zach-neto-687263",
+    "firstLastName": "Zach Neto",
+    "lastFirstName": "Neto, Zach",
+    "lastInitName": "Neto, Z",
+    "initLastName": "Z Neto",
+    "fullFMLName": "Zachary Adam Neto",
+    "fullLFMName": "Neto, Zachary Adam",
+    "strikeZoneTop": 3.17,
+    "strikeZoneBottom": 1.6
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 84,
+            "groundOuts": 50,
+            "airOuts": 85,
+            "runs": 59,
+            "doubles": 17,
+            "triples": 2,
+            "homeRuns": 18,
+            "strikeOuts": 122,
+            "baseOnBalls": 40,
+            "intentionalWalks": 1,
+            "hits": 75,
+            "hitByPitch": 7,
+            "avg": ".227",
+            "atBats": 331,
+            "obp": ".322",
+            "slg": ".453",
+            "ops": ".775",
+            "caughtStealing": 7,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".611",
+            "caughtStealingPercentage": ".389",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1499,
+            "plateAppearances": 379,
+            "totalBases": 150,
+            "rbi": 42,
+            "leftOnBase": 121,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".297",
+            "groundOutsToAirouts": "0.59",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "18.39"
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 687263,
+            "fullName": "Zach Neto",
+            "link": "/api/v1/people/687263"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

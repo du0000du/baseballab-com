@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 596133,
+    "fullName": "Luke Weaver",
+    "link": "/api/v1/people/596133",
+    "firstName": "Luke",
+    "lastName": "Weaver",
+    "primaryNumber": "30",
+    "birthDate": "1993-08-21",
+    "currentAge": 32,
+    "birthCity": "DeLand",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Luke",
+    "useLastName": "Weaver",
+    "middleName": "Allen",
+    "boxscoreName": "Weaver",
+    "nickName": "Dream",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2014,
+    "mlbDebutDate": "2016-08-13",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Luke Weaver",
+    "nameSlug": "luke-weaver-596133",
+    "firstLastName": "Luke Weaver",
+    "lastFirstName": "Weaver, Luke",
+    "lastInitName": "Weaver, L",
+    "initLastName": "L Weaver",
+    "fullFMLName": "Luke Allen Weaver",
+    "fullLFMName": "Weaver, Luke Allen",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 34,
+            "gamesStarted": 0,
+            "groundOuts": 30,
+            "airOuts": 39,
+            "runs": 8,
+            "doubles": 1,
+            "triples": 1,
+            "homeRuns": 2,
+            "strikeOuts": 39,
+            "baseOnBalls": 9,
+            "intentionalWalks": 0,
+            "hits": 20,
+            "hitByPitch": 1,
+            "avg": ".159",
+            "atBats": 126,
+            "obp": ".219",
+            "slg": ".230",
+            "ops": ".449",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 524,
+            "era": "2.00",
+            "inningsPitched": "36.0",
+            "wins": 2,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 2,
+            "holds": 10,
+            "blownSaves": 2,
+            "earnedRuns": 8,
+            "whip": "0.81",
+            "battersFaced": 138,
+            "outs": 108,
+            "gamesPitched": 34,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 359,
+            "strikePercentage": ".690",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 29,
+            "groundOutsToAirouts": "0.77",
+            "winPercentage": ".667",
+            "pitchesPerInning": "14.56",
+            "gamesFinished": 3,
+            "strikeoutWalkRatio": "4.33",
+            "strikeoutsPer9Inn": "9.75",
+            "walksPer9Inn": "2.25",
+            "hitsPer9Inn": "5.00",
+            "runsScoredPer9": "2.00",
+            "homeRunsPer9": "0.50",
+            "inheritedRunners": 11,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121"
+          },
+          "player": {
+            "id": 596133,
+            "fullName": "Luke Weaver",
+            "link": "/api/v1/people/596133"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

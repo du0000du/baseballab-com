@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 592094,
+    "fullName": "Jason Adam",
+    "link": "/api/v1/people/592094",
+    "firstName": "Jason",
+    "lastName": "Adam",
+    "primaryNumber": "40",
+    "birthDate": "1991-08-04",
+    "currentAge": 34,
+    "birthCity": "Omaha",
+    "birthStateProvince": "NE",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 229,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jason",
+    "useLastName": "Adam",
+    "middleName": "Kendall",
+    "boxscoreName": "Adam",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2010,
+    "mlbDebutDate": "2018-05-05",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jason Adam",
+    "nameSlug": "jason-adam-592094",
+    "firstLastName": "Jason Adam",
+    "lastFirstName": "Adam, Jason",
+    "lastInitName": "Adam, J",
+    "initLastName": "J Adam",
+    "fullFMLName": "Jason Kendall Adam",
+    "fullLFMName": "Adam, Jason Kendall",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 36,
+            "gamesStarted": 0,
+            "groundOuts": 34,
+            "airOuts": 38,
+            "runs": 9,
+            "doubles": 5,
+            "triples": 0,
+            "homeRuns": 5,
+            "strikeOuts": 22,
+            "baseOnBalls": 8,
+            "intentionalWalks": 0,
+            "hits": 30,
+            "hitByPitch": 2,
+            "avg": ".242",
+            "atBats": 124,
+            "obp": ".299",
+            "slg": ".403",
+            "ops": ".702",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 551,
+            "era": "2.51",
+            "inningsPitched": "32.1",
+            "wins": 2,
+            "losses": 2,
+            "saves": 2,
+            "saveOpportunities": 2,
+            "holds": 17,
+            "blownSaves": 0,
+            "earnedRuns": 9,
+            "whip": "1.18",
+            "battersFaced": 134,
+            "outs": 97,
+            "gamesPitched": 36,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 363,
+            "strikePercentage": ".660",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 50,
+            "groundOutsToAirouts": "0.89",
+            "winPercentage": ".500",
+            "pitchesPerInning": "17.04",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "2.75",
+            "strikeoutsPer9Inn": "6.12",
+            "walksPer9Inn": "2.23",
+            "hitsPer9Inn": "8.35",
+            "runsScoredPer9": "2.51",
+            "homeRunsPer9": "1.39",
+            "inheritedRunners": 8,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 135,
+            "name": "San Diego Padres",
+            "link": "/api/v1/teams/135"
+          },
+          "player": {
+            "id": 592094,
+            "fullName": "Jason Adam",
+            "link": "/api/v1/people/592094"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 667463,
+    "fullName": "John King",
+    "link": "/api/v1/people/667463",
+    "firstName": "John",
+    "lastName": "King",
+    "primaryNumber": "47",
+    "birthDate": "1994-09-14",
+    "currentAge": 31,
+    "birthCity": "Laredo",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "John",
+    "useLastName": "King",
+    "middleName": "Edward",
+    "boxscoreName": "King, Jo",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2017,
+    "mlbDebutDate": "2020-09-04",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "John King",
+    "nameSlug": "john-king-667463",
+    "firstLastName": "John King",
+    "lastFirstName": "King, John",
+    "lastInitName": "King, J",
+    "initLastName": "J King",
+    "fullFMLName": "John Edward King",
+    "fullLFMName": "King, John Edward",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 37,
+            "gamesStarted": 1,
+            "groundOuts": 39,
+            "airOuts": 37,
+            "runs": 8,
+            "doubles": 3,
+            "triples": 0,
+            "homeRuns": 3,
+            "strikeOuts": 28,
+            "baseOnBalls": 8,
+            "intentionalWalks": 1,
+            "hits": 18,
+            "hitByPitch": 4,
+            "avg": ".149",
+            "atBats": 121,
+            "obp": ".224",
+            "slg": ".248",
+            "ops": ".472",
+            "caughtStealing": 0,
+            "stolenBases": 4,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 477,
+            "era": "2.00",
+            "inningsPitched": "36.0",
+            "wins": 6,
+            "losses": 1,
+            "saves": 1,
+            "saveOpportunities": 1,
+            "holds": 3,
+            "blownSaves": 0,
+            "earnedRuns": 8,
+            "whip": "0.72",
+            "battersFaced": 134,
+            "outs": 108,
+            "gamesPitched": 37,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 311,
+            "strikePercentage": ".650",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 30,
+            "groundOutsToAirouts": "1.05",
+            "winPercentage": ".857",
+            "pitchesPerInning": "13.25",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "3.50",
+            "strikeoutsPer9Inn": "7.00",
+            "walksPer9Inn": "2.00",
+            "hitsPer9Inn": "4.50",
+            "runsScoredPer9": "2.00",
+            "homeRunsPer9": "0.75",
+            "inheritedRunners": 24,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 667463,
+            "fullName": "John King",
+            "link": "/api/v1/people/667463"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 527048,
+    "fullName": "Martín Pérez",
+    "link": "/api/v1/people/527048",
+    "firstName": "Martín",
+    "lastName": "Pérez",
+    "primaryNumber": "33",
+    "birthDate": "1991-04-04",
+    "currentAge": 35,
+    "birthCity": "Guanare",
+    "birthCountry": "Venezuela",
+    "height": "6' 0\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Martín",
+    "useLastName": "Pérez",
+    "boxscoreName": "Pérez, M",
+    "nickName": "El De Las Matas",
+    "gender": "M",
+    "nameMatrilineal": "Jimenez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "mar-TEEN",
+    "mlbDebutDate": "2012-06-27",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Martín Pérez",
+    "nameSlug": "martin-perez-527048",
+    "firstLastName": "Martín Pérez",
+    "lastFirstName": "Pérez, Martín",
+    "lastInitName": "Pérez, M",
+    "initLastName": "M Pérez",
+    "fullFMLName": "Martín Pérez",
+    "fullLFMName": "Pérez, Martín",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 35,
+            "gamesPlayed": 17,
+            "gamesStarted": 13,
+            "groundOuts": 86,
+            "airOuts": 75,
+            "runs": 28,
+            "doubles": 12,
+            "triples": 3,
+            "homeRuns": 9,
+            "strikeOuts": 61,
+            "baseOnBalls": 30,
+            "intentionalWalks": 1,
+            "hits": 59,
+            "hitByPitch": 2,
+            "avg": ".214",
+            "atBats": 276,
+            "obp": ".292",
+            "slg": ".377",
+            "ops": ".669",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1205,
+            "era": "3.27",
+            "inningsPitched": "77.0",
+            "wins": 6,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 28,
+            "whip": "1.16",
+            "battersFaced": 313,
+            "outs": 231,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 738,
+            "strikePercentage": ".610",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 104,
+            "groundOutsToAirouts": "1.15",
+            "winPercentage": ".545",
+            "pitchesPerInning": "15.65",
+            "gamesFinished": 2,
+            "strikeoutWalkRatio": "2.03",
+            "strikeoutsPer9Inn": "7.13",
+            "walksPer9Inn": "3.51",
+            "hitsPer9Inn": "6.90",
+            "runsScoredPer9": "3.27",
+            "homeRunsPer9": "1.05",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 4
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 527048,
+            "fullName": "Martín Pérez",
+            "link": "/api/v1/people/527048"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

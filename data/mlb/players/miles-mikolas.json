@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 571945,
+    "fullName": "Miles Mikolas",
+    "link": "/api/v1/people/571945",
+    "firstName": "Miles",
+    "lastName": "Mikolas",
+    "primaryNumber": "36",
+    "birthDate": "1988-08-23",
+    "currentAge": 37,
+    "birthCity": "Jupiter",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Miles",
+    "useLastName": "Mikolas",
+    "middleName": "Tice",
+    "boxscoreName": "Mikolas",
+    "nickName": "5280's",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2009,
+    "pronunciation": "MY-koh-lahs",
+    "mlbDebutDate": "2012-05-05",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Miles Mikolas",
+    "nameSlug": "miles-mikolas-571945",
+    "firstLastName": "Miles Mikolas",
+    "lastFirstName": "Mikolas, Miles",
+    "lastInitName": "Mikolas, M",
+    "initLastName": "M Mikolas",
+    "fullFMLName": "Miles Tice Mikolas",
+    "fullLFMName": "Mikolas, Miles Tice",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 37,
+            "gamesPlayed": 18,
+            "gamesStarted": 7,
+            "groundOuts": 102,
+            "airOuts": 99,
+            "runs": 56,
+            "doubles": 15,
+            "triples": 0,
+            "homeRuns": 18,
+            "strikeOuts": 47,
+            "baseOnBalls": 17,
+            "intentionalWalks": 0,
+            "hits": 92,
+            "hitByPitch": 0,
+            "avg": ".275",
+            "atBats": 334,
+            "obp": ".305",
+            "slg": ".482",
+            "ops": ".787",
+            "caughtStealing": 1,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1314,
+            "era": "5.44",
+            "inningsPitched": "84.1",
+            "wins": 2,
+            "losses": 7,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 51,
+            "whip": "1.29",
+            "battersFaced": 357,
+            "outs": 253,
+            "gamesPitched": 18,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 865,
+            "strikePercentage": ".660",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 161,
+            "groundOutsToAirouts": "1.03",
+            "winPercentage": ".222",
+            "pitchesPerInning": "15.58",
+            "gamesFinished": 1,
+            "strikeoutWalkRatio": "2.76",
+            "strikeoutsPer9Inn": "5.02",
+            "walksPer9Inn": "1.81",
+            "hitsPer9Inn": "9.82",
+            "runsScoredPer9": "5.98",
+            "homeRunsPer9": "1.92",
+            "inheritedRunners": 5,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 571945,
+            "fullName": "Miles Mikolas",
+            "link": "/api/v1/people/571945"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 621242,
+    "fullName": "Edwin Díaz",
+    "link": "/api/v1/people/621242",
+    "firstName": "Edwin",
+    "lastName": "Díaz",
+    "primaryNumber": "3",
+    "birthDate": "1994-03-22",
+    "currentAge": 32,
+    "birthCity": "Naguabo",
+    "birthCountry": "Puerto Rico",
+    "height": "6' 3\"",
+    "weight": 165,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Edwin",
+    "useLastName": "Díaz",
+    "middleName": "Orlando",
+    "boxscoreName": "Díaz",
+    "nickName": "Sugar",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2012,
+    "mlbDebutDate": "2016-06-06",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Edwin Díaz",
+    "nameSlug": "edwin-diaz-621242",
+    "firstLastName": "Edwin Díaz",
+    "lastFirstName": "Díaz, Edwin",
+    "lastInitName": "Díaz, E",
+    "initLastName": "E Díaz",
+    "fullFMLName": "Edwin Orlando Díaz",
+    "fullLFMName": "Díaz, Edwin Orlando",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 7,
+            "gamesStarted": 0,
+            "groundOuts": 2,
+            "airOuts": 6,
+            "runs": 7,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 10,
+            "baseOnBalls": 5,
+            "intentionalWalks": 1,
+            "hits": 9,
+            "hitByPitch": 1,
+            "avg": ".333",
+            "atBats": 27,
+            "obp": ".455",
+            "slg": ".444",
+            "ops": ".899",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 132,
+            "era": "10.50",
+            "inningsPitched": "6.0",
+            "wins": 1,
+            "losses": 0,
+            "saves": 4,
+            "saveOpportunities": 5,
+            "holds": 0,
+            "blownSaves": 1,
+            "earnedRuns": 7,
+            "whip": "2.33",
+            "battersFaced": 33,
+            "outs": 18,
+            "gamesPitched": 7,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 84,
+            "strikePercentage": ".640",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 12,
+            "groundOutsToAirouts": "0.33",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "22.00",
+            "gamesFinished": 6,
+            "strikeoutWalkRatio": "2.00",
+            "strikeoutsPer9Inn": "15.00",
+            "walksPer9Inn": "7.50",
+            "hitsPer9Inn": "13.50",
+            "runsScoredPer9": "10.50",
+            "homeRunsPer9": "1.50",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 621242,
+            "fullName": "Edwin Díaz",
+            "link": "/api/v1/people/621242"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

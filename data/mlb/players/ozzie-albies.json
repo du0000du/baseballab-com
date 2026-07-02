@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 645277,
+    "fullName": "Ozzie Albies",
+    "link": "/api/v1/people/645277",
+    "firstName": "Ozhaino",
+    "lastName": "Albies",
+    "primaryNumber": "1",
+    "birthDate": "1997-01-07",
+    "currentAge": 29,
+    "birthCity": "Willemstad",
+    "birthCountry": "Curacao",
+    "height": "5' 7\"",
+    "weight": 165,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Ozzie",
+    "useLastName": "Albies",
+    "middleName": "Jurdy Jiandro",
+    "boxscoreName": "Albies",
+    "nickName": "Bolly",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "ALL-bees",
+    "mlbDebutDate": "2017-08-01",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Ozzie Albies",
+    "nameSlug": "ozzie-albies-645277",
+    "firstLastName": "Ozzie Albies",
+    "lastFirstName": "Albies, Ozzie",
+    "lastInitName": "Albies, O",
+    "initLastName": "O Albies",
+    "fullFMLName": "Ozhaino Jurdy Jiandro Albies",
+    "fullLFMName": "Albies, Ozhaino Jurdy Jiandro",
+    "strikeZoneTop": 2.985,
+    "strikeZoneBottom": 1.506
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 84,
+            "groundOuts": 80,
+            "airOuts": 121,
+            "runs": 52,
+            "doubles": 15,
+            "triples": 0,
+            "homeRuns": 13,
+            "strikeOuts": 40,
+            "baseOnBalls": 24,
+            "intentionalWalks": 1,
+            "hits": 89,
+            "hitByPitch": 4,
+            "avg": ".278",
+            "atBats": 320,
+            "obp": ".327",
+            "slg": ".447",
+            "ops": ".774",
+            "caughtStealing": 3,
+            "stolenBases": 1,
+            "stolenBasePercentage": ".250",
+            "caughtStealingPercentage": ".750",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1250,
+            "plateAppearances": 358,
+            "totalBases": 143,
+            "rbi": 48,
+            "leftOnBase": 124,
+            "sacBunts": 0,
+            "sacFlies": 10,
+            "babip": ".274",
+            "groundOutsToAirouts": "0.66",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "24.62"
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 645277,
+            "fullName": "Ozzie Albies",
+            "link": "/api/v1/people/645277"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

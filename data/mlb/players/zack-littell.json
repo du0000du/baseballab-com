@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 641793,
+    "fullName": "Zack Littell",
+    "link": "/api/v1/people/641793",
+    "firstName": "Zack",
+    "lastName": "Littell",
+    "primaryNumber": "18",
+    "birthDate": "1995-10-05",
+    "currentAge": 30,
+    "birthCity": "Burlington",
+    "birthStateProvince": "NC",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 250,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Zack",
+    "useLastName": "Littell",
+    "middleName": "Stuart",
+    "boxscoreName": "Littell",
+    "nickName": "Lit",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2013,
+    "pronunciation": "lih-TELL",
+    "mlbDebutDate": "2018-06-05",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Zack Littell",
+    "nameSlug": "zack-littell-641793",
+    "firstLastName": "Zack Littell",
+    "lastFirstName": "Littell, Zack",
+    "lastInitName": "Littell, Z",
+    "initLastName": "Z Littell",
+    "fullFMLName": "Zack Stuart Littell",
+    "fullLFMName": "Littell, Zack Stuart",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 17,
+            "gamesStarted": 12,
+            "groundOuts": 72,
+            "airOuts": 117,
+            "runs": 54,
+            "doubles": 11,
+            "triples": 1,
+            "homeRuns": 22,
+            "strikeOuts": 49,
+            "baseOnBalls": 25,
+            "intentionalWalks": 0,
+            "hits": 83,
+            "hitByPitch": 2,
+            "avg": ".263",
+            "atBats": 315,
+            "obp": ".317",
+            "slg": ".514",
+            "ops": ".831",
+            "caughtStealing": 3,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".700",
+            "caughtStealingPercentage": ".300",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1280,
+            "era": "5.29",
+            "inningsPitched": "80.0",
+            "wins": 7,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 47,
+            "whip": "1.35",
+            "battersFaced": 348,
+            "outs": 240,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 827,
+            "strikePercentage": ".650",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 162,
+            "groundOutsToAirouts": "0.62",
+            "winPercentage": ".538",
+            "pitchesPerInning": "16.00",
+            "gamesFinished": 1,
+            "strikeoutWalkRatio": "1.96",
+            "strikeoutsPer9Inn": "5.51",
+            "walksPer9Inn": "2.81",
+            "hitsPer9Inn": "9.34",
+            "runsScoredPer9": "6.08",
+            "homeRunsPer9": "2.48",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 5
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 641793,
+            "fullName": "Zack Littell",
+            "link": "/api/v1/people/641793"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

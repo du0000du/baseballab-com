@@ -1,0 +1,150 @@
+{
+  "info": {
+    "id": 666277,
+    "fullName": "George Soriano",
+    "link": "/api/v1/people/666277",
+    "firstName": "George",
+    "lastName": "Soriano",
+    "primaryNumber": "65",
+    "birthDate": "1999-03-24",
+    "currentAge": 27,
+    "birthCity": "San Pedro de Macoris",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 2\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "George",
+    "useLastName": "Soriano",
+    "boxscoreName": "Soriano, G",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2023-04-16",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "George Soriano",
+    "nameSlug": "george-soriano-666277",
+    "firstLastName": "George Soriano",
+    "lastFirstName": "Soriano, George",
+    "lastInitName": "Soriano, G",
+    "initLastName": "G Soriano",
+    "fullFMLName": "George Soriano",
+    "fullLFMName": "Soriano, George",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 37,
+            "gamesStarted": 0,
+            "groundOuts": 33,
+            "airOuts": 45,
+            "runs": 15,
+            "doubles": 8,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 30,
+            "baseOnBalls": 15,
+            "intentionalWalks": 1,
+            "hits": 27,
+            "hitByPitch": 1,
+            "avg": ".205",
+            "atBats": 132,
+            "obp": ".285",
+            "slg": ".356",
+            "ops": ".641",
+            "caughtStealing": 1,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 572,
+            "era": "3.47",
+            "inningsPitched": "36.1",
+            "wins": 3,
+            "losses": 2,
+            "saves": 2,
+            "saveOpportunities": 5,
+            "holds": 11,
+            "blownSaves": 3,
+            "earnedRuns": 14,
+            "whip": "1.16",
+            "battersFaced": 151,
+            "outs": 109,
+            "gamesPitched": 37,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 378,
+            "strikePercentage": ".660",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 47,
+            "groundOutsToAirouts": "0.73",
+            "winPercentage": ".600",
+            "pitchesPerInning": "15.74",
+            "gamesFinished": 7,
+            "strikeoutWalkRatio": "2.00",
+            "strikeoutsPer9Inn": "7.43",
+            "walksPer9Inn": "3.72",
+            "hitsPer9Inn": "6.69",
+            "runsScoredPer9": "3.72",
+            "homeRunsPer9": "0.99",
+            "inheritedRunners": 14,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 138,
+            "name": "St. Louis Cardinals",
+            "link": "/api/v1/teams/138"
+          },
+          "player": {
+            "id": 666277,
+            "fullName": "George Soriano",
+            "link": "/api/v1/people/666277"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 807712,
+    "fullName": "Luke Keaschall",
+    "link": "/api/v1/people/807712",
+    "firstName": "Luke",
+    "lastName": "Keaschall",
+    "primaryNumber": "15",
+    "birthDate": "2002-08-15",
+    "currentAge": 23,
+    "birthCity": "Watsonville",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Luke",
+    "useLastName": "Keaschall",
+    "middleName": "T.",
+    "boxscoreName": "Keaschall",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2023,
+    "pronunciation": "KEY-shull",
+    "mlbDebutDate": "2025-04-18",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Luke Keaschall",
+    "nameSlug": "luke-keaschall-807712",
+    "firstLastName": "Luke Keaschall",
+    "lastFirstName": "Keaschall, Luke",
+    "lastInitName": "Keaschall, L",
+    "initLastName": "L Keaschall",
+    "fullFMLName": "Luke T. Keaschall",
+    "fullLFMName": "Keaschall, Luke T.",
+    "strikeZoneTop": 3.214,
+    "strikeZoneBottom": 1.622
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 82,
+            "groundOuts": 61,
+            "airOuts": 103,
+            "runs": 40,
+            "doubles": 12,
+            "triples": 1,
+            "homeRuns": 2,
+            "strikeOuts": 49,
+            "baseOnBalls": 31,
+            "intentionalWalks": 1,
+            "hits": 68,
+            "hitByPitch": 5,
+            "avg": ".245",
+            "atBats": 278,
+            "obp": ".328",
+            "slg": ".317",
+            "ops": ".645",
+            "caughtStealing": 3,
+            "stolenBases": 12,
+            "stolenBasePercentage": ".800",
+            "caughtStealingPercentage": ".200",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1192,
+            "plateAppearances": 317,
+            "totalBases": 88,
+            "rbi": 24,
+            "leftOnBase": 123,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".287",
+            "groundOutsToAirouts": "0.59",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "139.00"
+          },
+          "team": {
+            "id": 142,
+            "name": "Minnesota Twins",
+            "link": "/api/v1/teams/142"
+          },
+          "player": {
+            "id": 807712,
+            "fullName": "Luke Keaschall",
+            "link": "/api/v1/people/807712"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

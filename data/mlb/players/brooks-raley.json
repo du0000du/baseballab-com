@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 548384,
+    "fullName": "Brooks Raley",
+    "link": "/api/v1/people/548384",
+    "firstName": "Brooks",
+    "lastName": "Raley",
+    "primaryNumber": "25",
+    "birthDate": "1988-06-29",
+    "currentAge": 38,
+    "birthCity": "San Antonio",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Brooks",
+    "useLastName": "Raley",
+    "middleName": "Lee",
+    "boxscoreName": "Raley, B",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2009,
+    "mlbDebutDate": "2012-08-07",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Brooks Raley",
+    "nameSlug": "brooks-raley-548384",
+    "firstLastName": "Brooks Raley",
+    "lastFirstName": "Raley, Brooks",
+    "lastInitName": "Raley, B",
+    "initLastName": "B Raley",
+    "fullFMLName": "Brooks Lee Raley",
+    "fullLFMName": "Raley, Brooks Lee",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 38,
+            "gamesPlayed": 34,
+            "gamesStarted": 0,
+            "groundOuts": 25,
+            "airOuts": 33,
+            "runs": 10,
+            "doubles": 7,
+            "triples": 1,
+            "homeRuns": 2,
+            "strikeOuts": 34,
+            "baseOnBalls": 13,
+            "intentionalWalks": 1,
+            "hits": 26,
+            "hitByPitch": 3,
+            "avg": ".224",
+            "atBats": 116,
+            "obp": ".316",
+            "slg": ".353",
+            "ops": ".669",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 516,
+            "era": "2.32",
+            "inningsPitched": "31.0",
+            "wins": 2,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 1,
+            "holds": 11,
+            "blownSaves": 1,
+            "earnedRuns": 8,
+            "whip": "1.26",
+            "battersFaced": 134,
+            "outs": 93,
+            "gamesPitched": 34,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 334,
+            "strikePercentage": ".650",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 41,
+            "groundOutsToAirouts": "0.76",
+            "winPercentage": ".400",
+            "pitchesPerInning": "16.65",
+            "gamesFinished": 4,
+            "strikeoutWalkRatio": "2.62",
+            "strikeoutsPer9Inn": "9.87",
+            "walksPer9Inn": "3.77",
+            "hitsPer9Inn": "7.55",
+            "runsScoredPer9": "2.90",
+            "homeRunsPer9": "0.58",
+            "inheritedRunners": 11,
+            "inheritedRunnersScored": 4,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121"
+          },
+          "player": {
+            "id": 548384,
+            "fullName": "Brooks Raley",
+            "link": "/api/v1/people/548384"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

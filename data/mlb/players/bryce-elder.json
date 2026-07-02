@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 693821,
+    "fullName": "Bryce Elder",
+    "link": "/api/v1/people/693821",
+    "firstName": "Bryce",
+    "lastName": "Elder",
+    "primaryNumber": "55",
+    "birthDate": "1999-05-19",
+    "currentAge": 27,
+    "birthCity": "Decatur",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Bryce",
+    "useLastName": "Elder",
+    "middleName": "Cason",
+    "boxscoreName": "Elder",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2022-04-12",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Bryce Elder",
+    "nameSlug": "bryce-elder-693821",
+    "firstLastName": "Bryce Elder",
+    "lastFirstName": "Elder, Bryce",
+    "lastInitName": "Elder, B",
+    "initLastName": "B Elder",
+    "fullFMLName": "Bryce Cason Elder",
+    "fullLFMName": "Elder, Bryce Cason",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 99,
+            "airOuts": 110,
+            "runs": 48,
+            "doubles": 11,
+            "triples": 2,
+            "homeRuns": 12,
+            "strikeOuts": 83,
+            "baseOnBalls": 30,
+            "intentionalWalks": 0,
+            "hits": 91,
+            "hitByPitch": 2,
+            "avg": ".241",
+            "atBats": 378,
+            "obp": ".298",
+            "slg": ".376",
+            "ops": ".674",
+            "caughtStealing": 1,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".875",
+            "caughtStealingPercentage": ".125",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1462,
+            "era": "4.01",
+            "inningsPitched": "98.2",
+            "wins": 5,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 44,
+            "whip": "1.23",
+            "battersFaced": 415,
+            "outs": 296,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 928,
+            "strikePercentage": ".630",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 2,
+            "totalBases": 142,
+            "groundOutsToAirouts": "0.90",
+            "winPercentage": ".455",
+            "pitchesPerInning": "14.82",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.77",
+            "strikeoutsPer9Inn": "7.57",
+            "walksPer9Inn": "2.74",
+            "hitsPer9Inn": "8.30",
+            "runsScoredPer9": "4.38",
+            "homeRunsPer9": "1.09",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 693821,
+            "fullName": "Bryce Elder",
+            "link": "/api/v1/people/693821"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

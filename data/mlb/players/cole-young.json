@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 702284,
+    "fullName": "Cole Young",
+    "link": "/api/v1/people/702284",
+    "firstName": "Cole",
+    "lastName": "Young",
+    "primaryNumber": "2",
+    "birthDate": "2003-07-29",
+    "currentAge": 22,
+    "birthCity": "Pittsburgh",
+    "birthStateProvince": "PA",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 180,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Cole",
+    "useLastName": "Young",
+    "middleName": "Douglas",
+    "boxscoreName": "Young",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "mlbDebutDate": "2025-05-31",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Cole Young",
+    "nameSlug": "cole-young-702284",
+    "firstLastName": "Cole Young",
+    "lastFirstName": "Young, Cole",
+    "lastInitName": "Young, C",
+    "initLastName": "C Young",
+    "fullFMLName": "Cole Douglas Young",
+    "fullLFMName": "Young, Cole Douglas",
+    "strikeZoneTop": 3.133,
+    "strikeZoneBottom": 1.581
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 22,
+            "gamesPlayed": 87,
+            "groundOuts": 76,
+            "airOuts": 100,
+            "runs": 39,
+            "doubles": 12,
+            "triples": 1,
+            "homeRuns": 9,
+            "strikeOuts": 60,
+            "baseOnBalls": 23,
+            "intentionalWalks": 0,
+            "hits": 82,
+            "hitByPitch": 7,
+            "avg": ".261",
+            "atBats": 314,
+            "obp": ".323",
+            "slg": ".392",
+            "ops": ".715",
+            "caughtStealing": 3,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".400",
+            "caughtStealingPercentage": ".600",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1328,
+            "plateAppearances": 348,
+            "totalBases": 123,
+            "rbi": 41,
+            "leftOnBase": 124,
+            "sacBunts": 1,
+            "sacFlies": 3,
+            "babip": ".294",
+            "groundOutsToAirouts": "0.76",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "34.89"
+          },
+          "team": {
+            "id": 136,
+            "name": "Seattle Mariners",
+            "link": "/api/v1/teams/136"
+          },
+          "player": {
+            "id": 702284,
+            "fullName": "Cole Young",
+            "link": "/api/v1/people/702284"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

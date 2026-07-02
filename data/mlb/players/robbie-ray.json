@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 592662,
+    "fullName": "Robbie Ray",
+    "link": "/api/v1/people/592662",
+    "firstName": "Robert",
+    "lastName": "Ray",
+    "primaryNumber": "38",
+    "birthDate": "1991-10-01",
+    "currentAge": 34,
+    "birthCity": "Brentwood",
+    "birthStateProvince": "TN",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Robbie",
+    "useLastName": "Ray",
+    "middleName": "Glenn",
+    "boxscoreName": "Ray",
+    "nickName": "Bob",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2010,
+    "mlbDebutDate": "2014-05-06",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Robbie Ray",
+    "nameSlug": "robbie-ray-592662",
+    "firstLastName": "Robbie Ray",
+    "lastFirstName": "Ray, Robbie",
+    "lastInitName": "Ray, R",
+    "initLastName": "R Ray",
+    "fullFMLName": "Robert Glenn Ray",
+    "fullLFMName": "Ray, Robert Glenn",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 17,
+            "gamesStarted": 16,
+            "groundOuts": 77,
+            "airOuts": 120,
+            "runs": 42,
+            "doubles": 13,
+            "triples": 1,
+            "homeRuns": 14,
+            "strikeOuts": 82,
+            "baseOnBalls": 43,
+            "intentionalWalks": 0,
+            "hits": 74,
+            "hitByPitch": 0,
+            "avg": ".214",
+            "atBats": 345,
+            "obp": ".297",
+            "slg": ".380",
+            "ops": ".677",
+            "caughtStealing": 5,
+            "stolenBases": 16,
+            "stolenBasePercentage": ".762",
+            "caughtStealingPercentage": ".238",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1621,
+            "era": "3.39",
+            "inningsPitched": "95.2",
+            "wins": 7,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 36,
+            "whip": "1.22",
+            "battersFaced": 396,
+            "outs": 287,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 983,
+            "strikePercentage": ".610",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 4,
+            "totalBases": 131,
+            "groundOutsToAirouts": "0.64",
+            "winPercentage": ".538",
+            "pitchesPerInning": "16.94",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "1.91",
+            "strikeoutsPer9Inn": "7.71",
+            "walksPer9Inn": "4.05",
+            "hitsPer9Inn": "6.96",
+            "runsScoredPer9": "3.95",
+            "homeRunsPer9": "1.32",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 137,
+            "name": "San Francisco Giants",
+            "link": "/api/v1/teams/137"
+          },
+          "player": {
+            "id": 592662,
+            "fullName": "Robbie Ray",
+            "link": "/api/v1/people/592662"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

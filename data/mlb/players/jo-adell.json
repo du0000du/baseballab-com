@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 666176,
+    "fullName": "Jo Adell",
+    "link": "/api/v1/people/666176",
+    "firstName": "Jordon",
+    "lastName": "Adell",
+    "primaryNumber": "7",
+    "birthDate": "1999-04-08",
+    "currentAge": 27,
+    "birthCity": "Shelby",
+    "birthStateProvince": "NC",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Jo",
+    "useLastName": "Adell",
+    "middleName": "Scott",
+    "boxscoreName": "Adell",
+    "nickName": "Jo",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2017,
+    "pronunciation": "Uh-DEL",
+    "mlbDebutDate": "2020-08-04",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jo Adell",
+    "nameSlug": "jo-adell-666176",
+    "firstLastName": "Jo Adell",
+    "lastFirstName": "Adell, Jo",
+    "lastInitName": "Adell, J",
+    "initLastName": "J Adell",
+    "fullFMLName": "Jo Adell",
+    "fullLFMName": "Adell, J",
+    "strikeZoneTop": 3.305,
+    "strikeZoneBottom": 1.668
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 86,
+            "groundOuts": 77,
+            "airOuts": 98,
+            "runs": 39,
+            "doubles": 15,
+            "triples": 1,
+            "homeRuns": 11,
+            "strikeOuts": 82,
+            "baseOnBalls": 10,
+            "intentionalWalks": 0,
+            "hits": 83,
+            "hitByPitch": 12,
+            "avg": ".246",
+            "atBats": 338,
+            "obp": ".290",
+            "slg": ".393",
+            "ops": ".683",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1386,
+            "plateAppearances": 362,
+            "totalBases": 133,
+            "rbi": 45,
+            "leftOnBase": 143,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".291",
+            "groundOutsToAirouts": "0.79",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "30.73"
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 666176,
+            "fullName": "Jo Adell",
+            "link": "/api/v1/people/666176"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

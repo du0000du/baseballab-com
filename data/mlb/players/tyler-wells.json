@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 669330,
+    "fullName": "Tyler Wells",
+    "link": "/api/v1/people/669330",
+    "firstName": "Tyler",
+    "lastName": "Wells",
+    "primaryNumber": "68",
+    "birthDate": "1994-08-26",
+    "currentAge": 31,
+    "birthCity": "Tulsa",
+    "birthStateProvince": "OK",
+    "birthCountry": "USA",
+    "height": "6' 8\"",
+    "weight": 270,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Tyler",
+    "useLastName": "Wells",
+    "middleName": "Austin",
+    "boxscoreName": "Wells, T",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2016,
+    "mlbDebutDate": "2021-04-04",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Tyler Wells",
+    "nameSlug": "tyler-wells-669330",
+    "firstLastName": "Tyler Wells",
+    "lastFirstName": "Wells, Tyler",
+    "lastInitName": "Wells, T",
+    "initLastName": "T Wells",
+    "fullFMLName": "Tyler Austin Wells",
+    "fullLFMName": "Wells, Tyler Austin",
+    "strikeZoneTop": 3.567,
+    "strikeZoneBottom": 1.8
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 30,
+            "gamesStarted": 0,
+            "groundOuts": 21,
+            "airOuts": 52,
+            "runs": 17,
+            "doubles": 7,
+            "triples": 1,
+            "homeRuns": 5,
+            "strikeOuts": 42,
+            "baseOnBalls": 9,
+            "intentionalWalks": 0,
+            "hits": 33,
+            "hitByPitch": 1,
+            "avg": ".228",
+            "atBats": 145,
+            "obp": ".274",
+            "slg": ".393",
+            "ops": ".667",
+            "caughtStealing": 2,
+            "stolenBases": 1,
+            "stolenBasePercentage": ".333",
+            "caughtStealingPercentage": ".667",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 610,
+            "era": "3.18",
+            "inningsPitched": "39.2",
+            "wins": 1,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 11,
+            "blownSaves": 0,
+            "earnedRuns": 14,
+            "whip": "1.06",
+            "battersFaced": 158,
+            "outs": 119,
+            "gamesPitched": 30,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 418,
+            "strikePercentage": ".690",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 1,
+            "totalBases": 57,
+            "groundOutsToAirouts": "0.40",
+            "winPercentage": ".500",
+            "pitchesPerInning": "15.38",
+            "gamesFinished": 7,
+            "strikeoutWalkRatio": "4.67",
+            "strikeoutsPer9Inn": "9.53",
+            "walksPer9Inn": "2.04",
+            "hitsPer9Inn": "7.49",
+            "runsScoredPer9": "3.86",
+            "homeRunsPer9": "1.13",
+            "inheritedRunners": 10,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          },
+          "player": {
+            "id": 669330,
+            "fullName": "Tyler Wells",
+            "link": "/api/v1/people/669330"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

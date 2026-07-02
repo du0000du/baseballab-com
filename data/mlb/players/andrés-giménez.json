@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 665926,
+    "fullName": "Andrés Giménez",
+    "link": "/api/v1/people/665926",
+    "firstName": "Andrés",
+    "lastName": "Giménez",
+    "primaryNumber": "0",
+    "birthDate": "1998-09-04",
+    "currentAge": 27,
+    "birthCity": "Barquisimeto",
+    "birthCountry": "Venezuela",
+    "height": "5' 11\"",
+    "weight": 161,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Andrés",
+    "useLastName": "Giménez",
+    "middleName": "Alfonso",
+    "boxscoreName": "Giménez",
+    "gender": "M",
+    "nameMatrilineal": "Osorio",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "ahn-DRAYS hee-MEH-nehz",
+    "mlbDebutDate": "2020-07-24",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Andrés Giménez",
+    "nameSlug": "andres-gimenez-665926",
+    "firstLastName": "Andrés Giménez",
+    "lastFirstName": "Giménez, Andrés",
+    "lastInitName": "Giménez, A",
+    "initLastName": "A Giménez",
+    "fullFMLName": "Andrés Alfonso Giménez",
+    "fullLFMName": "Giménez, Andrés Alfonso",
+    "strikeZoneTop": 3.165,
+    "strikeZoneBottom": 1.597
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 83,
+            "groundOuts": 82,
+            "airOuts": 69,
+            "runs": 23,
+            "doubles": 13,
+            "triples": 1,
+            "homeRuns": 7,
+            "strikeOuts": 57,
+            "baseOnBalls": 10,
+            "intentionalWalks": 0,
+            "hits": 63,
+            "hitByPitch": 8,
+            "avg": ".237",
+            "atBats": 266,
+            "obp": ".282",
+            "slg": ".372",
+            "ops": ".654",
+            "caughtStealing": 2,
+            "stolenBases": 10,
+            "stolenBasePercentage": ".833",
+            "caughtStealingPercentage": ".167",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1058,
+            "plateAppearances": 289,
+            "totalBases": 99,
+            "rbi": 34,
+            "leftOnBase": 123,
+            "sacBunts": 2,
+            "sacFlies": 3,
+            "babip": ".273",
+            "groundOutsToAirouts": "1.19",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "38.00"
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 665926,
+            "fullName": "Andrés Giménez",
+            "link": "/api/v1/people/665926"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

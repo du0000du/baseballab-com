@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 650556,
+    "fullName": "Bryan Abreu",
+    "link": "/api/v1/people/650556",
+    "firstName": "Bryan",
+    "lastName": "Abreu",
+    "primaryNumber": "52",
+    "birthDate": "1997-04-22",
+    "currentAge": 29,
+    "birthCity": "Santo Domingo Centro",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 1\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Bryan",
+    "useLastName": "Abreu",
+    "middleName": "Enrique",
+    "boxscoreName": "Abreu, B",
+    "gender": "M",
+    "nameMatrilineal": "Jimenez",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2019-07-31",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Bryan Abreu",
+    "nameSlug": "bryan-abreu-650556",
+    "firstLastName": "Bryan Abreu",
+    "lastFirstName": "Abreu, Bryan",
+    "lastInitName": "Abreu, B",
+    "initLastName": "B Abreu",
+    "fullFMLName": "Bryan Enrique Abreu",
+    "fullLFMName": "Abreu, Bryan Enrique",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 31,
+            "gamesStarted": 0,
+            "groundOuts": 20,
+            "airOuts": 22,
+            "runs": 20,
+            "doubles": 4,
+            "triples": 0,
+            "homeRuns": 6,
+            "strikeOuts": 34,
+            "baseOnBalls": 25,
+            "intentionalWalks": 0,
+            "hits": 23,
+            "hitByPitch": 3,
+            "avg": ".237",
+            "atBats": 97,
+            "obp": ".408",
+            "slg": ".464",
+            "ops": ".872",
+            "caughtStealing": 0,
+            "stolenBases": 5,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 511,
+            "era": "6.00",
+            "inningsPitched": "27.0",
+            "wins": 2,
+            "losses": 3,
+            "saves": 5,
+            "saveOpportunities": 5,
+            "holds": 5,
+            "blownSaves": 0,
+            "earnedRuns": 18,
+            "whip": "1.78",
+            "battersFaced": 127,
+            "outs": 81,
+            "gamesPitched": 31,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 286,
+            "strikePercentage": ".560",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 0,
+            "totalBases": 45,
+            "groundOutsToAirouts": "0.91",
+            "winPercentage": ".400",
+            "pitchesPerInning": "18.93",
+            "gamesFinished": 20,
+            "strikeoutWalkRatio": "1.36",
+            "strikeoutsPer9Inn": "11.33",
+            "walksPer9Inn": "8.33",
+            "hitsPer9Inn": "7.67",
+            "runsScoredPer9": "6.67",
+            "homeRunsPer9": "2.00",
+            "inheritedRunners": 6,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 117,
+            "name": "Houston Astros",
+            "link": "/api/v1/teams/117"
+          },
+          "player": {
+            "id": 650556,
+            "fullName": "Bryan Abreu",
+            "link": "/api/v1/people/650556"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 607043,
+    "fullName": "Brandon Nimmo",
+    "link": "/api/v1/people/607043",
+    "firstName": "Brandon",
+    "lastName": "Nimmo",
+    "primaryNumber": "24",
+    "birthDate": "1993-03-27",
+    "currentAge": 33,
+    "birthCity": "Cheyenne",
+    "birthStateProvince": "WY",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 206,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Brandon",
+    "useLastName": "Nimmo",
+    "middleName": "Tate",
+    "boxscoreName": "Nimmo",
+    "nickName": "Tater",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2011,
+    "pronunciation": "NIH-mo",
+    "mlbDebutDate": "2016-06-26",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brandon Nimmo",
+    "nameSlug": "brandon-nimmo-607043",
+    "firstLastName": "Brandon Nimmo",
+    "lastFirstName": "Nimmo, Brandon",
+    "lastInitName": "Nimmo, B",
+    "initLastName": "B Nimmo",
+    "fullFMLName": "Brandon Tate Nimmo",
+    "fullLFMName": "Nimmo, Brandon Tate",
+    "strikeZoneTop": 3.27,
+    "strikeZoneBottom": 1.65
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 33,
+            "gamesPlayed": 82,
+            "groundOuts": 73,
+            "airOuts": 90,
+            "runs": 35,
+            "doubles": 20,
+            "triples": 3,
+            "homeRuns": 8,
+            "strikeOuts": 73,
+            "baseOnBalls": 29,
+            "intentionalWalks": 1,
+            "hits": 83,
+            "hitByPitch": 6,
+            "avg": ".262",
+            "atBats": 317,
+            "obp": ".333",
+            "slg": ".420",
+            "ops": ".753",
+            "caughtStealing": 1,
+            "stolenBases": 3,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1345,
+            "plateAppearances": 354,
+            "totalBases": 133,
+            "rbi": 29,
+            "leftOnBase": 118,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".315",
+            "groundOutsToAirouts": "0.81",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "39.62"
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 607043,
+            "fullName": "Brandon Nimmo",
+            "link": "/api/v1/people/607043"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

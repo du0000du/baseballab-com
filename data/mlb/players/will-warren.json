@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 701542,
+    "fullName": "Will Warren",
+    "link": "/api/v1/people/701542",
+    "firstName": "William",
+    "lastName": "Warren",
+    "primaryNumber": "29",
+    "birthDate": "1999-06-16",
+    "currentAge": 27,
+    "birthCity": "Brandon",
+    "birthStateProvince": "MS",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Will",
+    "useLastName": "Warren",
+    "middleName": "Harper",
+    "boxscoreName": "Warren, W",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2024-07-30",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Will Warren",
+    "nameSlug": "will-warren-701542",
+    "firstLastName": "Will Warren",
+    "lastFirstName": "Warren, Will",
+    "lastInitName": "Warren, W",
+    "initLastName": "W Warren",
+    "fullFMLName": "William Harper Warren",
+    "fullLFMName": "Warren, William Harper",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 88,
+            "airOuts": 87,
+            "runs": 49,
+            "doubles": 21,
+            "triples": 1,
+            "homeRuns": 10,
+            "strikeOuts": 91,
+            "baseOnBalls": 29,
+            "intentionalWalks": 0,
+            "hits": 90,
+            "hitByPitch": 2,
+            "avg": ".257",
+            "atBats": 350,
+            "obp": ".313",
+            "slg": ".409",
+            "ops": ".722",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1503,
+            "era": "3.73",
+            "inningsPitched": "89.1",
+            "wins": 7,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 37,
+            "whip": "1.33",
+            "battersFaced": 389,
+            "outs": 268,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 953,
+            "strikePercentage": ".630",
+            "hitBatsmen": 2,
+            "balks": 1,
+            "wildPitches": 3,
+            "pickoffs": 2,
+            "totalBases": 143,
+            "groundOutsToAirouts": "1.01",
+            "winPercentage": ".700",
+            "pitchesPerInning": "16.82",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.14",
+            "strikeoutsPer9Inn": "9.17",
+            "walksPer9Inn": "2.92",
+            "hitsPer9Inn": "9.07",
+            "runsScoredPer9": "4.94",
+            "homeRunsPer9": "1.01",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 2,
+            "sacBunts": 1,
+            "sacFlies": 5
+          },
+          "team": {
+            "id": 147,
+            "name": "New York Yankees",
+            "link": "/api/v1/teams/147"
+          },
+          "player": {
+            "id": 701542,
+            "fullName": "Will Warren",
+            "link": "/api/v1/people/701542"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

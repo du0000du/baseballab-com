@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 694497,
+    "fullName": "Evan Carter",
+    "link": "/api/v1/people/694497",
+    "firstName": "Evan",
+    "lastName": "Carter",
+    "primaryNumber": "32",
+    "birthDate": "2002-08-29",
+    "currentAge": 23,
+    "birthCity": "Elizabethton",
+    "birthStateProvince": "TN",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Evan",
+    "useLastName": "Carter",
+    "middleName": "Jason",
+    "boxscoreName": "Carter",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "mlbDebutDate": "2023-09-08",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Evan Carter",
+    "nameSlug": "evan-carter-694497",
+    "firstLastName": "Evan Carter",
+    "lastFirstName": "Carter, Evan",
+    "lastInitName": "Carter, E",
+    "initLastName": "E Carter",
+    "fullFMLName": "Evan Jason Carter",
+    "fullLFMName": "Carter, Evan Jason",
+    "strikeZoneTop": 3.316,
+    "strikeZoneBottom": 1.673
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 69,
+            "groundOuts": 43,
+            "airOuts": 70,
+            "runs": 28,
+            "doubles": 6,
+            "triples": 2,
+            "homeRuns": 6,
+            "strikeOuts": 58,
+            "baseOnBalls": 29,
+            "intentionalWalks": 0,
+            "hits": 36,
+            "hitByPitch": 3,
+            "avg": ".178",
+            "atBats": 202,
+            "obp": ".289",
+            "slg": ".317",
+            "ops": ".606",
+            "caughtStealing": 0,
+            "stolenBases": 10,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 1005,
+            "plateAppearances": 239,
+            "totalBases": 64,
+            "rbi": 21,
+            "leftOnBase": 103,
+            "sacBunts": 4,
+            "sacFlies": 1,
+            "babip": ".216",
+            "groundOutsToAirouts": "0.61",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "33.67"
+          },
+          "team": {
+            "id": 140,
+            "name": "Texas Rangers",
+            "link": "/api/v1/teams/140"
+          },
+          "player": {
+            "id": 694497,
+            "fullName": "Evan Carter",
+            "link": "/api/v1/people/694497"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

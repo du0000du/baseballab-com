@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 702332,
+    "fullName": "Caleb Durbin",
+    "link": "/api/v1/people/702332",
+    "firstName": "Caleb",
+    "lastName": "Durbin",
+    "primaryNumber": "5",
+    "birthDate": "2000-02-22",
+    "currentAge": 26,
+    "birthCity": "Lake Forest",
+    "birthStateProvince": "IL",
+    "birthCountry": "USA",
+    "height": "5' 6\"",
+    "weight": 183,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Caleb",
+    "useLastName": "Durbin",
+    "boxscoreName": "Durbin",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2025-04-18",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Caleb Durbin",
+    "nameSlug": "caleb-durbin-702332",
+    "firstLastName": "Caleb Durbin",
+    "lastFirstName": "Durbin, Caleb",
+    "lastInitName": "Durbin, C",
+    "initLastName": "C Durbin",
+    "fullFMLName": "Caleb  Durbin",
+    "fullLFMName": "Durbin, Caleb",
+    "strikeZoneTop": 2.947,
+    "strikeZoneBottom": 1.487
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 78,
+            "groundOuts": 90,
+            "airOuts": 68,
+            "runs": 31,
+            "doubles": 17,
+            "triples": 1,
+            "homeRuns": 7,
+            "strikeOuts": 41,
+            "baseOnBalls": 17,
+            "intentionalWalks": 0,
+            "hits": 58,
+            "hitByPitch": 4,
+            "avg": ".229",
+            "atBats": 253,
+            "obp": ".286",
+            "slg": ".387",
+            "ops": ".673",
+            "caughtStealing": 3,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1005,
+            "plateAppearances": 278,
+            "totalBases": 98,
+            "rbi": 36,
+            "leftOnBase": 102,
+            "sacBunts": 2,
+            "sacFlies": 2,
+            "babip": ".246",
+            "groundOutsToAirouts": "1.32",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "36.14"
+          },
+          "team": {
+            "id": 111,
+            "name": "Boston Red Sox",
+            "link": "/api/v1/teams/111"
+          },
+          "player": {
+            "id": 702332,
+            "fullName": "Caleb Durbin",
+            "link": "/api/v1/people/702332"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 691720,
+    "fullName": "Kyle Karros",
+    "link": "/api/v1/people/691720",
+    "firstName": "Kyle",
+    "lastName": "Karros",
+    "primaryNumber": "12",
+    "birthDate": "2002-07-26",
+    "currentAge": 23,
+    "birthCity": "Los Angeles",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Kyle",
+    "useLastName": "Karros",
+    "middleName": "Garret",
+    "boxscoreName": "Karros, K",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2023,
+    "pronunciation": "KARE-ohs",
+    "mlbDebutDate": "2025-08-08",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Kyle Karros",
+    "nameSlug": "kyle-karros-691720",
+    "firstLastName": "Kyle Karros",
+    "lastFirstName": "Karros, Kyle",
+    "lastInitName": "Karros, K",
+    "initLastName": "K Karros",
+    "fullFMLName": "Kyle Garret Karros",
+    "fullLFMName": "Karros, Kyle Garret",
+    "strikeZoneTop": 3.43,
+    "strikeZoneBottom": 1.73
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 81,
+            "groundOuts": 59,
+            "airOuts": 58,
+            "runs": 38,
+            "doubles": 16,
+            "triples": 1,
+            "homeRuns": 5,
+            "strikeOuts": 58,
+            "baseOnBalls": 34,
+            "intentionalWalks": 2,
+            "hits": 60,
+            "hitByPitch": 2,
+            "avg": ".258",
+            "atBats": 233,
+            "obp": ".354",
+            "slg": ".399",
+            "ops": ".753",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1136,
+            "plateAppearances": 271,
+            "totalBases": 93,
+            "rbi": 25,
+            "leftOnBase": 107,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".320",
+            "groundOutsToAirouts": "1.02",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "46.60"
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 691720,
+            "fullName": "Kyle Karros",
+            "link": "/api/v1/people/691720"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

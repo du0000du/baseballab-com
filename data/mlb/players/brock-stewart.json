@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 592779,
+    "fullName": "Brock Stewart",
+    "link": "/api/v1/people/592779",
+    "firstName": "Brock",
+    "lastName": "Stewart",
+    "primaryNumber": "41",
+    "birthDate": "1991-10-03",
+    "currentAge": 34,
+    "birthCity": "Normal",
+    "birthStateProvince": "IL",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Brock",
+    "useLastName": "Stewart",
+    "middleName": "Allen",
+    "boxscoreName": "Stewart, B",
+    "nickName": "Beef Stew",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2016-06-29",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brock Stewart",
+    "nameSlug": "brock-stewart-592779",
+    "firstLastName": "Brock Stewart",
+    "lastFirstName": "Stewart, Brock",
+    "lastInitName": "Stewart, B",
+    "initLastName": "B Stewart",
+    "fullFMLName": "Brock Allen Stewart",
+    "fullLFMName": "Stewart, Brock Allen",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 5,
+            "gamesStarted": 0,
+            "groundOuts": 5,
+            "airOuts": 5,
+            "runs": 1,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 5,
+            "baseOnBalls": 3,
+            "intentionalWalks": 0,
+            "hits": 2,
+            "hitByPitch": 0,
+            "avg": ".118",
+            "atBats": 17,
+            "obp": ".250",
+            "slg": ".294",
+            "ops": ".544",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 74,
+            "era": "1.80",
+            "inningsPitched": "5.0",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 1,
+            "blownSaves": 0,
+            "earnedRuns": 1,
+            "whip": "1.00",
+            "battersFaced": 20,
+            "outs": 15,
+            "gamesPitched": 5,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 46,
+            "strikePercentage": ".620",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 5,
+            "groundOutsToAirouts": "1.00",
+            "winPercentage": ".---",
+            "pitchesPerInning": "14.80",
+            "gamesFinished": 2,
+            "strikeoutWalkRatio": "1.67",
+            "strikeoutsPer9Inn": "9.00",
+            "walksPer9Inn": "5.40",
+            "hitsPer9Inn": "3.60",
+            "runsScoredPer9": "1.80",
+            "homeRunsPer9": "1.80",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 592779,
+            "fullName": "Brock Stewart",
+            "link": "/api/v1/people/592779"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 695734,
+    "fullName": "Daylen Lile",
+    "link": "/api/v1/people/695734",
+    "firstName": "Daylen",
+    "lastName": "Lile",
+    "primaryNumber": "4",
+    "birthDate": "2002-11-30",
+    "currentAge": 23,
+    "birthCity": "Louisville",
+    "birthStateProvince": "KY",
+    "birthCountry": "USA",
+    "height": "5' 11\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "7",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "LF"
+    },
+    "useName": "Daylen",
+    "useLastName": "Lile",
+    "middleName": "Anthony",
+    "boxscoreName": "Lile",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2025-05-23",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Daylen Lile",
+    "nameSlug": "daylen-lile-695734",
+    "firstLastName": "Daylen Lile",
+    "lastFirstName": "Lile, Daylen",
+    "lastInitName": "Lile, D",
+    "initLastName": "D Lile",
+    "fullFMLName": "Daylen Anthony Lile",
+    "fullLFMName": "Lile, Daylen Anthony",
+    "strikeZoneTop": 3.18,
+    "strikeZoneBottom": 1.61
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 86,
+            "groundOuts": 80,
+            "airOuts": 114,
+            "runs": 46,
+            "doubles": 19,
+            "triples": 3,
+            "homeRuns": 8,
+            "strikeOuts": 62,
+            "baseOnBalls": 24,
+            "intentionalWalks": 1,
+            "hits": 84,
+            "hitByPitch": 4,
+            "avg": ".250",
+            "atBats": 336,
+            "obp": ".304",
+            "slg": ".396",
+            "ops": ".700",
+            "caughtStealing": 5,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".583",
+            "caughtStealingPercentage": ".417",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1283,
+            "plateAppearances": 368,
+            "totalBases": 133,
+            "rbi": 39,
+            "leftOnBase": 153,
+            "sacBunts": 0,
+            "sacFlies": 4,
+            "babip": ".281",
+            "groundOutsToAirouts": "0.70",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "42.00"
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 695734,
+            "fullName": "Daylen Lile",
+            "link": "/api/v1/people/695734"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 670764,
+    "fullName": "Taylor Walls",
+    "link": "/api/v1/people/670764",
+    "firstName": "Taylor",
+    "lastName": "Walls",
+    "primaryNumber": "6",
+    "birthDate": "1996-07-10",
+    "currentAge": 29,
+    "birthCity": "Cordele",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "5' 9\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Taylor",
+    "useLastName": "Walls",
+    "boxscoreName": "Walls",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2017,
+    "mlbDebutDate": "2021-05-22",
+    "batSide": {
+      "code": "S",
+      "description": "Switch"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Taylor Walls",
+    "nameSlug": "taylor-walls-670764",
+    "firstLastName": "Taylor Walls",
+    "lastFirstName": "Walls, Taylor",
+    "lastInitName": "Walls, T",
+    "initLastName": "T Walls",
+    "fullFMLName": "Taylor Walls",
+    "fullLFMName": "Walls, Taylor",
+    "strikeZoneTop": 3.056,
+    "strikeZoneBottom": 1.542
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 66,
+            "groundOuts": 41,
+            "airOuts": 61,
+            "runs": 31,
+            "doubles": 10,
+            "triples": 2,
+            "homeRuns": 0,
+            "strikeOuts": 55,
+            "baseOnBalls": 28,
+            "intentionalWalks": 0,
+            "hits": 44,
+            "hitByPitch": 2,
+            "avg": ".228",
+            "atBats": 193,
+            "obp": ".329",
+            "slg": ".301",
+            "ops": ".630",
+            "caughtStealing": 3,
+            "stolenBases": 12,
+            "stolenBasePercentage": ".800",
+            "caughtStealingPercentage": ".200",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 935,
+            "plateAppearances": 231,
+            "totalBases": 58,
+            "rbi": 19,
+            "leftOnBase": 73,
+            "sacBunts": 6,
+            "sacFlies": 2,
+            "babip": ".314",
+            "groundOutsToAirouts": "0.67",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "-.--"
+          },
+          "team": {
+            "id": 139,
+            "name": "Tampa Bay Rays",
+            "link": "/api/v1/teams/139"
+          },
+          "player": {
+            "id": 670764,
+            "fullName": "Taylor Walls",
+            "link": "/api/v1/people/670764"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

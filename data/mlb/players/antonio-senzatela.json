@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 622608,
+    "fullName": "Antonio Senzatela",
+    "link": "/api/v1/people/622608",
+    "firstName": "Antonio",
+    "lastName": "Senzatela",
+    "primaryNumber": "49",
+    "birthDate": "1995-01-21",
+    "currentAge": 31,
+    "birthCity": "Valencia",
+    "birthCountry": "Venezuela",
+    "height": "6' 1\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Antonio",
+    "useLastName": "Senzatela",
+    "boxscoreName": "Senzatela",
+    "nickName": "Senze",
+    "gender": "M",
+    "nameMatrilineal": "Rondon",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "sehn-zuh-TEH-luh",
+    "mlbDebutDate": "2017-04-06",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Antonio Senzatela",
+    "nameSlug": "antonio-senzatela-622608",
+    "firstLastName": "Antonio Senzatela",
+    "lastFirstName": "Senzatela, Antonio",
+    "lastInitName": "Senzatela, A",
+    "initLastName": "A Senzatela",
+    "fullFMLName": "Antonio Senzatela",
+    "fullLFMName": "Senzatela, Antonio",
+    "strikeZoneTop": 3.38,
+    "strikeZoneBottom": 1.57
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 25,
+            "gamesStarted": 0,
+            "groundOuts": 41,
+            "airOuts": 49,
+            "runs": 17,
+            "doubles": 4,
+            "triples": 3,
+            "homeRuns": 3,
+            "strikeOuts": 36,
+            "baseOnBalls": 14,
+            "intentionalWalks": 1,
+            "hits": 37,
+            "hitByPitch": 1,
+            "avg": ".228",
+            "atBats": 162,
+            "obp": ".292",
+            "slg": ".346",
+            "ops": ".638",
+            "caughtStealing": 1,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 651,
+            "era": "3.07",
+            "inningsPitched": "44.0",
+            "wins": 8,
+            "losses": 0,
+            "saves": 3,
+            "saveOpportunities": 7,
+            "holds": 2,
+            "blownSaves": 4,
+            "earnedRuns": 15,
+            "whip": "1.16",
+            "battersFaced": 178,
+            "outs": 132,
+            "gamesPitched": 25,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 425,
+            "strikePercentage": ".650",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 56,
+            "groundOutsToAirouts": "0.84",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "14.80",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "2.57",
+            "strikeoutsPer9Inn": "7.36",
+            "walksPer9Inn": "2.86",
+            "hitsPer9Inn": "7.57",
+            "runsScoredPer9": "3.48",
+            "homeRunsPer9": "0.61",
+            "inheritedRunners": 12,
+            "inheritedRunnersScored": 4,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 622608,
+            "fullName": "Antonio Senzatela",
+            "link": "/api/v1/people/622608"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

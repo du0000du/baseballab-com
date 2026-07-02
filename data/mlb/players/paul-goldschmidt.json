@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 502671,
+    "fullName": "Paul Goldschmidt",
+    "link": "/api/v1/people/502671",
+    "firstName": "Paul",
+    "lastName": "Goldschmidt",
+    "primaryNumber": "48",
+    "birthDate": "1987-09-10",
+    "currentAge": 38,
+    "birthCity": "Wilmington",
+    "birthStateProvince": "DE",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Paul",
+    "useLastName": "Goldschmidt",
+    "middleName": "Edward",
+    "boxscoreName": "Goldschmidt",
+    "nickName": "Goldy",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2009,
+    "mlbDebutDate": "2011-08-01",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Paul Goldschmidt",
+    "nameSlug": "paul-goldschmidt-502671",
+    "firstLastName": "Paul Goldschmidt",
+    "lastFirstName": "Goldschmidt, Paul",
+    "lastInitName": "Goldschmidt, P",
+    "initLastName": "P Goldschmidt",
+    "fullFMLName": "Paul Edward Goldschmidt",
+    "fullLFMName": "Goldschmidt, Paul Edward",
+    "strikeZoneTop": 3.303,
+    "strikeZoneBottom": 1.667
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 38,
+            "gamesPlayed": 60,
+            "groundOuts": 59,
+            "airOuts": 47,
+            "runs": 31,
+            "doubles": 9,
+            "triples": 1,
+            "homeRuns": 14,
+            "strikeOuts": 48,
+            "baseOnBalls": 17,
+            "intentionalWalks": 0,
+            "hits": 59,
+            "hitByPitch": 3,
+            "avg": ".278",
+            "atBats": 212,
+            "obp": ".339",
+            "slg": ".528",
+            "ops": ".867",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 920,
+            "plateAppearances": 233,
+            "totalBases": 112,
+            "rbi": 41,
+            "leftOnBase": 69,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".298",
+            "groundOutsToAirouts": "1.26",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "15.14"
+          },
+          "team": {
+            "id": 147,
+            "name": "New York Yankees",
+            "link": "/api/v1/teams/147"
+          },
+          "player": {
+            "id": 502671,
+            "fullName": "Paul Goldschmidt",
+            "link": "/api/v1/people/502671"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

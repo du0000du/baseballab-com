@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 641743,
+    "fullName": "Anthony Kay",
+    "link": "/api/v1/people/641743",
+    "firstName": "Anthony",
+    "lastName": "Kay",
+    "primaryNumber": "18",
+    "birthDate": "1995-03-21",
+    "currentAge": 31,
+    "birthCity": "Stony Brook",
+    "birthStateProvince": "NY",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Anthony",
+    "useLastName": "Kay",
+    "middleName": "Benjamin",
+    "boxscoreName": "Kay",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2016,
+    "mlbDebutDate": "2019-09-07",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Anthony Kay",
+    "nameSlug": "anthony-kay-641743",
+    "firstLastName": "Anthony Kay",
+    "lastFirstName": "Kay, Anthony",
+    "lastInitName": "Kay, A",
+    "initLastName": "A Kay",
+    "fullFMLName": "Anthony Benjamin Kay",
+    "fullLFMName": "Kay, Anthony Benjamin",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 17,
+            "gamesStarted": 15,
+            "groundOuts": 81,
+            "airOuts": 92,
+            "runs": 43,
+            "doubles": 14,
+            "triples": 3,
+            "homeRuns": 11,
+            "strikeOuts": 65,
+            "baseOnBalls": 31,
+            "intentionalWalks": 0,
+            "hits": 83,
+            "hitByPitch": 15,
+            "avg": ".264",
+            "atBats": 314,
+            "obp": ".353",
+            "slg": ".433",
+            "ops": ".786",
+            "caughtStealing": 2,
+            "stolenBases": 8,
+            "stolenBasePercentage": ".800",
+            "caughtStealingPercentage": ".200",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1495,
+            "era": "4.50",
+            "inningsPitched": "80.0",
+            "wins": 6,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 40,
+            "whip": "1.43",
+            "battersFaced": 367,
+            "outs": 240,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 919,
+            "strikePercentage": ".610",
+            "hitBatsmen": 15,
+            "balks": 2,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 136,
+            "groundOutsToAirouts": "0.88",
+            "winPercentage": ".667",
+            "pitchesPerInning": "18.69",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.10",
+            "strikeoutsPer9Inn": "7.31",
+            "walksPer9Inn": "3.49",
+            "hitsPer9Inn": "9.34",
+            "runsScoredPer9": "4.84",
+            "homeRunsPer9": "1.24",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 5
+          },
+          "team": {
+            "id": 145,
+            "name": "Chicago White Sox",
+            "link": "/api/v1/teams/145"
+          },
+          "player": {
+            "id": 641743,
+            "fullName": "Anthony Kay",
+            "link": "/api/v1/people/641743"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

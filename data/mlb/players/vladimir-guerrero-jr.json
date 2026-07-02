@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 665489,
+    "fullName": "Vladimir Guerrero Jr.",
+    "link": "/api/v1/people/665489",
+    "firstName": "Vladimir",
+    "lastName": "Guerrero",
+    "primaryNumber": "27",
+    "birthDate": "1999-03-16",
+    "currentAge": 27,
+    "birthCity": "Montreal",
+    "birthStateProvince": "QC",
+    "birthCountry": "Canada",
+    "height": "6' 0\"",
+    "weight": 245,
+    "active": true,
+    "primaryPosition": {
+      "code": "3",
+      "name": "First Base",
+      "type": "Infielder",
+      "abbreviation": "1B"
+    },
+    "useName": "Vladimir",
+    "useLastName": "Guerrero Jr.",
+    "boxscoreName": "Guerrero Jr.",
+    "nickName": "El K",
+    "gender": "M",
+    "nameMatrilineal": "Ramos",
+    "isPlayer": true,
+    "isVerified": false,
+    "mlbDebutDate": "2019-04-26",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Vladimir Guerrero Jr.",
+    "nameTitle": "Jr.",
+    "nameSuffix": "Jr.",
+    "nameSlug": "vladimir-guerrero-jr-665489",
+    "firstLastName": "Vladimir Guerrero Jr.",
+    "lastFirstName": "Guerrero Jr., Vladimir",
+    "lastInitName": "Guerrero Jr., V",
+    "initLastName": "V Guerrero Jr.",
+    "fullFMLName": "Vladimir Guerrero Jr.",
+    "fullLFMName": "Guerrero Jr., Vladimir ",
+    "strikeZoneTop": 3.209,
+    "strikeZoneBottom": 1.619
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 82,
+            "groundOuts": 100,
+            "airOuts": 88,
+            "runs": 46,
+            "doubles": 13,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 39,
+            "baseOnBalls": 36,
+            "intentionalWalks": 5,
+            "hits": 81,
+            "hitByPitch": 4,
+            "avg": ".267",
+            "atBats": 303,
+            "obp": ".348",
+            "slg": ".350",
+            "ops": ".698",
+            "caughtStealing": 1,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 1244,
+            "plateAppearances": 348,
+            "totalBases": 106,
+            "rbi": 34,
+            "leftOnBase": 112,
+            "sacBunts": 0,
+            "sacFlies": 5,
+            "babip": ".291",
+            "groundOutsToAirouts": "1.14",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "75.75"
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 665489,
+            "fullName": "Vladimir Guerrero Jr.",
+            "link": "/api/v1/people/665489"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 656546,
+    "fullName": "Jeff Hoffman",
+    "link": "/api/v1/people/656546",
+    "firstName": "Jeffrey",
+    "lastName": "Hoffman",
+    "primaryNumber": "23",
+    "birthDate": "1993-01-08",
+    "currentAge": 33,
+    "birthCity": "Latham",
+    "birthStateProvince": "NY",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jeff",
+    "useLastName": "Hoffman",
+    "middleName": "Robert",
+    "boxscoreName": "Hoffman, J",
+    "nickName": "Hoff",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2016-08-20",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jeff Hoffman",
+    "nameSlug": "jeff-hoffman-656546",
+    "firstLastName": "Jeff Hoffman",
+    "lastFirstName": "Hoffman, Jeff",
+    "lastInitName": "Hoffman, J",
+    "initLastName": "J Hoffman",
+    "fullFMLName": "Jeffrey Robert Hoffman",
+    "fullLFMName": "Hoffman, Jeffrey Robert",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 33,
+            "gamesPlayed": 40,
+            "gamesStarted": 0,
+            "groundOuts": 29,
+            "airOuts": 21,
+            "runs": 23,
+            "doubles": 6,
+            "triples": 2,
+            "homeRuns": 4,
+            "strikeOuts": 60,
+            "baseOnBalls": 14,
+            "intentionalWalks": 4,
+            "hits": 41,
+            "hitByPitch": 4,
+            "avg": ".273",
+            "atBats": 150,
+            "obp": ".349",
+            "slg": ".420",
+            "ops": ".769",
+            "caughtStealing": 3,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".786",
+            "caughtStealingPercentage": ".214",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 691,
+            "era": "4.54",
+            "inningsPitched": "37.2",
+            "wins": 5,
+            "losses": 5,
+            "saves": 5,
+            "saveOpportunities": 8,
+            "holds": 8,
+            "blownSaves": 3,
+            "earnedRuns": 19,
+            "whip": "1.46",
+            "battersFaced": 169,
+            "outs": 113,
+            "gamesPitched": 40,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 464,
+            "strikePercentage": ".670",
+            "hitBatsmen": 4,
+            "balks": 1,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 63,
+            "groundOutsToAirouts": "1.38",
+            "winPercentage": ".500",
+            "pitchesPerInning": "18.35",
+            "gamesFinished": 15,
+            "strikeoutWalkRatio": "4.29",
+            "strikeoutsPer9Inn": "14.34",
+            "walksPer9Inn": "3.35",
+            "hitsPer9Inn": "9.80",
+            "runsScoredPer9": "5.50",
+            "homeRunsPer9": "0.96",
+            "inheritedRunners": 9,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          },
+          "player": {
+            "id": 656546,
+            "fullName": "Jeff Hoffman",
+            "link": "/api/v1/people/656546"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
