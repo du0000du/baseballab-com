@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 689147,
+    "fullName": "Orion Kerkering",
+    "link": "/api/v1/people/689147",
+    "firstName": "Richard",
+    "lastName": "Kerkering",
+    "primaryNumber": "50",
+    "birthDate": "2001-04-04",
+    "currentAge": 25,
+    "birthCity": "Huntington Beach",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 204,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Orion",
+    "useLastName": "Kerkering",
+    "middleName": "Orion",
+    "boxscoreName": "Kerkering",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "pronunciation": "OH-ryan kerr-kerr-ring",
+    "mlbDebutDate": "2023-09-24",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Orion Kerkering",
+    "nameSlug": "orion-kerkering-689147",
+    "firstLastName": "Orion Kerkering",
+    "lastFirstName": "Kerkering, Orion",
+    "lastInitName": "Kerkering, O",
+    "initLastName": "O Kerkering",
+    "fullFMLName": "Richard Orion Kerkering",
+    "fullLFMName": "Kerkering, Richard Orion",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 36,
+            "gamesStarted": 0,
+            "groundOuts": 23,
+            "airOuts": 43,
+            "runs": 11,
+            "doubles": 6,
+            "triples": 1,
+            "homeRuns": 3,
+            "strikeOuts": 38,
+            "baseOnBalls": 17,
+            "intentionalWalks": 0,
+            "hits": 23,
+            "hitByPitch": 3,
+            "avg": ".183",
+            "atBats": 126,
+            "obp": ".295",
+            "slg": ".317",
+            "ops": ".612",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 592,
+            "era": "2.62",
+            "inningsPitched": "34.1",
+            "wins": 6,
+            "losses": 0,
+            "saves": 1,
+            "saveOpportunities": 2,
+            "holds": 7,
+            "blownSaves": 1,
+            "earnedRuns": 10,
+            "whip": "1.17",
+            "battersFaced": 147,
+            "outs": 103,
+            "gamesPitched": 36,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 368,
+            "strikePercentage": ".620",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 40,
+            "groundOutsToAirouts": "0.53",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "17.24",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "2.24",
+            "strikeoutsPer9Inn": "9.96",
+            "walksPer9Inn": "4.46",
+            "hitsPer9Inn": "6.03",
+            "runsScoredPer9": "2.88",
+            "homeRunsPer9": "0.79",
+            "inheritedRunners": 13,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 689147,
+            "fullName": "Orion Kerkering",
+            "link": "/api/v1/people/689147"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 668678,
+    "fullName": "Zac Gallen",
+    "link": "/api/v1/people/668678",
+    "firstName": "Zachary",
+    "lastName": "Gallen",
+    "primaryNumber": "23",
+    "birthDate": "1995-08-03",
+    "currentAge": 30,
+    "birthCity": "Somerdale",
+    "birthStateProvince": "NJ",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 189,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Zac",
+    "useLastName": "Gallen",
+    "middleName": "Peter",
+    "boxscoreName": "Gallen",
+    "nickName": "Galls",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2016,
+    "mlbDebutDate": "2019-06-20",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Zac Gallen",
+    "nameSlug": "zac-gallen-668678",
+    "firstLastName": "Zac Gallen",
+    "lastFirstName": "Gallen, Zac",
+    "lastInitName": "Gallen, Z",
+    "initLastName": "Z Gallen",
+    "fullFMLName": "Zachary Peter Gallen",
+    "fullLFMName": "Gallen, Zachary Peter",
+    "strikeZoneTop": 3.41,
+    "strikeZoneBottom": 1.53
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 18,
+            "gamesStarted": 18,
+            "groundOuts": 105,
+            "airOuts": 105,
+            "runs": 70,
+            "doubles": 18,
+            "triples": 4,
+            "homeRuns": 17,
+            "strikeOuts": 56,
+            "baseOnBalls": 28,
+            "intentionalWalks": 1,
+            "hits": 116,
+            "hitByPitch": 4,
+            "avg": ".307",
+            "atBats": 378,
+            "obp": ".358",
+            "slg": ".511",
+            "ops": ".869",
+            "caughtStealing": 0,
+            "stolenBases": 5,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 1548,
+            "era": "6.36",
+            "inningsPitched": "92.0",
+            "wins": 3,
+            "losses": 8,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 65,
+            "whip": "1.57",
+            "battersFaced": 414,
+            "outs": 276,
+            "gamesPitched": 18,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 985,
+            "strikePercentage": ".640",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 193,
+            "groundOutsToAirouts": "1.00",
+            "winPercentage": ".273",
+            "pitchesPerInning": "16.83",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.00",
+            "strikeoutsPer9Inn": "5.48",
+            "walksPer9Inn": "2.74",
+            "hitsPer9Inn": "11.35",
+            "runsScoredPer9": "6.85",
+            "homeRunsPer9": "1.66",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 668678,
+            "fullName": "Zac Gallen",
+            "link": "/api/v1/people/668678"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
