@@ -5,7 +5,7 @@ abbr: "wOBA"
 category: "batting"
 difficulty: "intermediate"
 atomicAnswer: "wOBAとは、各打席結果（単打・二塁打・三塁打・本塁打・四球など）を実際の得点価値に応じて重み付けした出塁率です。MLB平均は約.320で、.370以上でオールスター級、.400超えは歴史的な打者水準です。OPSより得点との相関が高く、打者の正確な貢献度を測れます。"
-relatedTerms: ["ops", "wrc-plus", "war", "iso"]
+relatedTerms: ["ops", "wrc-plus", "war", "iso", "xwoba"]
 publishedAt: "2026-05-19"
 ---
 

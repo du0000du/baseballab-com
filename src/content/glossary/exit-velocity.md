@@ -5,7 +5,7 @@ abbr: "Exit Velocity"
 category: "batting"
 difficulty: "basic"
 atomicAnswer: "Exit Velocity（打球初速）とはバットにボールが当たった瞬間の打球速度で、単位はmph（マイル毎時）です。MLB平均は約87〜88mphで、95mph以上の打球を「Hard Hit」と分類します。打球初速が高い打者はBABIPが安定しやすく、長打を生みやすい傾向があります。"
-relatedTerms: ["launch-angle", "iso", "babip", "woba"]
+relatedTerms: ["launch-angle", "iso", "babip", "woba", "barrel", "xba"]
 publishedAt: "2026-05-19"
 ---
 

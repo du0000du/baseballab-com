@@ -5,7 +5,7 @@ abbr: "ERA+"
 category: "pitching"
 difficulty: "intermediate"
 atomicAnswer: "ERA+とはリーグ平均の防御率と球場の影響を補正した調整防御率で、平均が100となるよう設定されています。ERA+ 150は「同年のリーグ平均より50%優れた防御率」を意味します。数値が高いほど優秀で、130以上でオールスター級、150以上でMVP・サイヤング賞候補水準です。"
-relatedTerms: ["fip", "xfip", "park-factor", "war"]
+relatedTerms: ["fip", "xfip", "park-factor", "war", "ops-plus"]
 publishedAt: "2026-05-19"
 ---
 

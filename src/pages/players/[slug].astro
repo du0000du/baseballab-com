@@ -6,21 +6,36 @@ import GlossaryLinks from '../../components/GlossaryLinks.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { getTopPlayers, comparePairUrl, pickOpponents } from '../../lib/mlbTop';
 const SEASON_YEAR = new Date().getMonth() + 1 >= 3 ? new Date().getFullYear() : new Date().getFullYear() - 1; // 3月以降は当年、1〜2月は前年
 
 export async function getStaticPaths() {
   const dir = join(process.cwd(), 'data/mlb/players');
   const files = readdirSync(dir).filter(f => f.endsWith('.json'));
 
+  // 比較ページ（/compare/）は上位60名のペアのみ存在するため、対象選手にだけリンクを渡す
+  const top = getTopPlayers(60);
+  const indexBySlug = new Map(top.map((p, i) => [p.slug, i]));
+
   return files.map(file => {
     const slug = file.replace('.json', '');
     const raw = readFileSync(join(dir, file), 'utf-8');
     const data = JSON.parse(raw);
-    return { params: { slug }, props: { data } };
+
+    let compareLinks: { url: string; label: string }[] = [];
+    const i = indexBySlug.get(slug);
+    if (i !== undefined) {
+      compareLinks = pickOpponents(top, i, 6).map(k => ({
+        url: comparePairUrl(top, i, k),
+        label: `vs ${top[k].name}`,
+      }));
+    }
+
+    return { params: { slug }, props: { data, compareLinks } };
   });
 }
 
-const { data } = Astro.props;
+const { data, compareLinks } = Astro.props;
 const { info } = data;
 
 const name = info.fullName ?? 'Unknown Player';
@@ -381,6 +396,14 @@ const affiliateLinks = [
       )}
       {verdict && <p class="verdict">{verdict}</p>}
       <GlossaryLinks type={isBatter ? 'batting' : 'pitching'} />
+      {compareLinks && compareLinks.length > 0 && (
+        <div class="see-rankings">
+          <p class="see-rankings-heading">他の選手と比較する</p>
+          <ul class="see-rankings-list">
+            {compareLinks.map(l => <li><a href={l.url}>{l.label}</a></li>)}
+          </ul>
+        </div>
+      )}
       <div class="see-rankings">
         <p class="see-rankings-heading">成績ランキングで見る</p>
         <ul class="see-rankings-list">

@@ -5,7 +5,7 @@ abbr: "WAR"
 category: "general"
 difficulty: "intermediate"
 atomicAnswer: "WARとは、ある選手が「平均以下の代替可能な選手」と比べてチームに何勝もたらしたかを示す総合指標です。WAR 2〜3がMLB平均レギュラー、5以上でオールスター級、8以上でMVP候補、10超えは歴史的シーズンを意味します。打撃・守備・走塁・投球すべてを1つの数字にまとめた「選手の総合価値」です。"
-relatedTerms: ["woba", "wrc-plus", "fip", "uzr", "bsr"]
+relatedTerms: ["woba", "wrc-plus", "fip", "uzr", "bsr", "wpa"]
 publishedAt: "2026-05-19"
 ---
 

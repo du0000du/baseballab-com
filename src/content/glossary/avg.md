@@ -5,7 +5,7 @@ abbr: "AVG"
 category: "batting"
 difficulty: "basic"
 atomicAnswer: "打率（AVG）は「安打数÷打数」で算出される最も基本的な打撃指標。.300（3割）が優秀の目安だが、四球・長打・出塁能力を反映しないため、現代野球ではOPSやwOBAと組み合わせて評価するのが標準です。"
-relatedTerms: ["obp", "slg", "ops", "woba", "babip"]
+relatedTerms: ["obp", "slg", "ops", "woba", "babip", "xba"]
 publishedAt: "2026-05-30"
 ---
 

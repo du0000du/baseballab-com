@@ -5,7 +5,7 @@ abbr: "OPS"
 category: "batting"
 difficulty: "basic"
 atomicAnswer: "OPSとは出塁率（OBP）と長打率（SLG）を足し合わせた打撃指標です。打者が「どれだけ出塁できるか」と「どれだけ長打を打てるか」を一つの数字で表します。MLB平均は約.720〜.730で、.900以上でオールスター級、1.000超えは歴史的な打者のみが達成します。"
-relatedTerms: ["woba", "wrc-plus", "iso", "babip"]
+relatedTerms: ["woba", "wrc-plus", "iso", "babip", "ops-plus"]
 publishedAt: "2026-05-19"
 ---
 

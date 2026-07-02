@@ -5,7 +5,7 @@ abbr: "Launch Angle"
 category: "batting"
 difficulty: "basic"
 atomicAnswer: "Launch Angle（打球角度）とはバットを離れたボールが水平から何度上向きかを示す角度です。−10度以下はゴロ、10〜25度はラインドライブ（最も安打になりやすい）、25〜50度はフライボール、本塁打の最適角度は約25〜35度とされています。Statcastが計測を始めて以降、フライボール革命のデータ的根拠になりました。"
-relatedTerms: ["exit-velocity", "iso", "woba", "babip"]
+relatedTerms: ["exit-velocity", "iso", "woba", "babip", "barrel", "xba"]
 publishedAt: "2026-05-19"
 ---
 

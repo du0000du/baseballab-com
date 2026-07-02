@@ -5,7 +5,7 @@ abbr: "Statcast"
 category: "general"
 difficulty: "basic"
 atomicAnswer: "StatcastはMLBが2015年から全30球場に導入したカメラ・レーダー複合の計測システム。打球速度・発射角・回転数・スプリントスピードをリアルタイムで計測。Exit Velocity・Launch Angle・Spin Rateなどの指標を生み出し、野球分析に革命をもたらしました。"
-relatedTerms: ["exit-velocity", "launch-angle", "sprint-speed", "war", "sabermetrics"]
+relatedTerms: ["exit-velocity", "launch-angle", "sprint-speed", "war", "sabermetrics", "barrel", "xwoba"]
 publishedAt: "2026-05-30"
 ---
 

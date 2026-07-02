@@ -1,56 +1,34 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
-import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { getTopPlayers, comparePairUrl, pickOpponents } from '../../lib/mlbTop';
 
 export async function getStaticPaths() {
-  const dir = join(process.cwd(), 'data/mlb/players');
-  const files = readdirSync(dir).filter(f => f.endsWith('.json'));
-
-  const players: { slug: string; data: any; score: number }[] = [];
-  for (const file of files) {
-    const slug = file.replace('.json', '');
-    let data: any;
-    try {
-      data = JSON.parse(readFileSync(join(dir, file), 'utf-8'));
-    } catch { continue; }
-    const info = data.info ?? {};
-    const stat = data.stats?.[0]?.splits?.[0]?.stat ?? {};
-    const group = data.stats?.[0]?.group?.displayName ?? '';
-    let score = info.active ? 100 : 0;
-    if (group === 'hitting') {
-      score += Number(stat.gamesPlayed || 0) * 2;
-      score += Number(stat.homeRuns || 0) * 4;
-      score += Number(stat.rbi || 0);
-      score += Number(stat.hits || 0) * 0.5;
-    } else if (group === 'pitching') {
-      score += Number(stat.gamesPlayed || 0) * 2;
-      score += Number(stat.wins || 0) * 6;
-      score += Number(stat.strikeOuts || 0) * 0.5;
-      score += Number(stat.saves || 0) * 3;
-    }
-    players.push({ slug, data, score });
-  }
-
-  players.sort((a, b) => b.score - a.score);
-  const top = players.slice(0, 60);
+  const top = getTopPlayers(60);
 
   const paths = [];
   for (let i = 0; i < top.length; i++) {
     for (let j = i + 1; j < top.length; j++) {
       const a = top[i];
       const b = top[j];
+      // 関連する比較: A と B それぞれの近いランクの相手（同グループ優先）各2件
+      const related: { url: string; label: string }[] = [];
+      for (const k of pickOpponents(top, i, 2, [j])) {
+        related.push({ url: comparePairUrl(top, i, k), label: `${a.name} vs ${top[k].name}` });
+      }
+      for (const k of pickOpponents(top, j, 2, [i])) {
+        related.push({ url: comparePairUrl(top, j, k), label: `${b.name} vs ${top[k].name}` });
+      }
       paths.push({
         params: { compare: `${a.slug}-vs-${b.slug}` },
-        props: { dataA: a.data, dataB: b.data, slugA: a.slug, slugB: b.slug },
+        props: { dataA: a.data, dataB: b.data, slugA: a.slug, slugB: b.slug, related },
       });
     }
   }
   return paths;
 }
 
-const { dataA, dataB, slugA, slugB } = Astro.props;
+const { dataA, dataB, slugA, slugB, related } = Astro.props;
 
 function extract(d: any) {
   const info = d.info ?? {};
@@ -183,6 +161,15 @@ const ogUrl = `https://baseballab.com/compare/${slugA}-vs-${slugB}/`;
       <a href={`/players/${slugA}/`} class="btn-outline">→ {A.name} の詳細データ</a>
       <a href={`/players/${slugB}/`} class="btn-outline">→ {B.name} の詳細データ</a>
     </div>
+
+    {related && related.length > 0 && (
+      <div class="related-compares">
+        <p class="related-heading">関連する比較</p>
+        <ul class="related-list">
+          {related.map(r => <li><a href={r.url}>{r.label}</a></li>)}
+        </ul>
+      </div>
+    )}
   </div>
 </Layout>
 
@@ -286,6 +273,30 @@ const ogUrl = `https://baseballab.com/compare/${slugA}-vs-${slugB}/`;
     transition: background 0.15s, color 0.15s;
   }
   .btn-outline:hover { background: var(--navy); color: #fff; }
+
+  /* 関連する比較 */
+  .related-compares { margin-top: 2rem; }
+  .related-heading {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.6rem;
+  }
+  .related-list { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; margin: 0; }
+  .related-list a {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.18rem 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+  }
+  .related-list a:hover { border-color: var(--red); color: var(--red); }
 
   @media (max-width: 480px) {
     .player-name { font-size: 0.95rem; }
