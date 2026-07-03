@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-07-02T18:24:12Z",
+  "fetchedAt": "2026-07-03T01:31:29Z",
   "season": "2026",
-  "asOfDate": "2026-07-02",
+  "asOfDate": "2026-07-03",
   "teams": [
     {
       "id": 145,
@@ -669,6 +669,16 @@
       "divisionShort": "NL Central",
       "recentGames": [
         {
+          "date": "2026-07-02",
+          "opponent": "Milwaukee Brewers",
+          "opponentAbbr": "MIL",
+          "home": false,
+          "score": 7,
+          "opponentScore": 2,
+          "result": "W",
+          "venue": "American Family Field"
+        },
+        {
           "date": "2026-07-01",
           "opponent": "Milwaukee Brewers",
           "opponentAbbr": "MIL",
@@ -687,16 +697,6 @@
           "opponentScore": 7,
           "result": "L",
           "venue": "American Family Field"
-        },
-        {
-          "date": "2026-06-29",
-          "opponent": "Milwaukee Brewers",
-          "opponentAbbr": "MIL",
-          "home": false,
-          "score": 3,
-          "opponentScore": 5,
-          "result": "L",
-          "venue": "American Family Field"
         }
       ]
     },
@@ -709,6 +709,16 @@
       "division": "National League Central",
       "divisionShort": "NL Central",
       "recentGames": [
+        {
+          "date": "2026-07-02",
+          "opponent": "Cincinnati Reds",
+          "opponentAbbr": "CIN",
+          "home": true,
+          "score": 2,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "American Family Field"
+        },
         {
           "date": "2026-07-01",
           "opponent": "Cincinnati Reds",
@@ -728,16 +738,6 @@
           "opponentScore": 2,
           "result": "W",
           "venue": "American Family Field"
-        },
-        {
-          "date": "2026-06-29",
-          "opponent": "Cincinnati Reds",
-          "opponentAbbr": "CIN",
-          "home": true,
-          "score": 5,
-          "opponentScore": 3,
-          "result": "W",
-          "venue": "American Family Field"
         }
       ]
     },
@@ -750,6 +750,16 @@
       "division": "National League Central",
       "divisionShort": "NL Central",
       "recentGames": [
+        {
+          "date": "2026-07-02",
+          "opponent": "Philadelphia Phillies",
+          "opponentAbbr": "PHI",
+          "home": false,
+          "score": 6,
+          "opponentScore": 1,
+          "result": "W",
+          "venue": "Citizens Bank Park"
+        },
         {
           "date": "2026-07-01",
           "opponent": "Philadelphia Phillies",
@@ -768,16 +778,6 @@
           "score": 0,
           "opponentScore": 8,
           "result": "L",
-          "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-06-29",
-          "opponent": "Philadelphia Phillies",
-          "opponentAbbr": "PHI",
-          "home": false,
-          "score": 11,
-          "opponentScore": 7,
-          "result": "W",
           "venue": "Citizens Bank Park"
         }
       ]
@@ -874,6 +874,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-02",
+          "opponent": "Colorado Rockies",
+          "opponentAbbr": "COL",
+          "home": false,
+          "score": 4,
+          "opponentScore": 14,
+          "result": "L",
+          "venue": "Coors Field"
+        },
+        {
           "date": "2026-07-01",
           "opponent": "Colorado Rockies",
           "opponentAbbr": "COL",
@@ -890,16 +900,6 @@
           "home": false,
           "score": 14,
           "opponentScore": 3,
-          "result": "W",
-          "venue": "Coors Field"
-        },
-        {
-          "date": "2026-06-29",
-          "opponent": "Colorado Rockies",
-          "opponentAbbr": "COL",
-          "home": false,
-          "score": 10,
-          "opponentScore": 7,
           "result": "W",
           "venue": "Coors Field"
         }
@@ -956,6 +956,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-02",
+          "opponent": "Pittsburgh Pirates",
+          "opponentAbbr": "PIT",
+          "home": true,
+          "score": 1,
+          "opponentScore": 6,
+          "result": "L",
+          "venue": "Citizens Bank Park"
+        },
+        {
           "date": "2026-07-01",
           "opponent": "Pittsburgh Pirates",
           "opponentAbbr": "PIT",
@@ -973,16 +983,6 @@
           "score": 8,
           "opponentScore": 0,
           "result": "W",
-          "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-06-29",
-          "opponent": "Pittsburgh Pirates",
-          "opponentAbbr": "PIT",
-          "home": true,
-          "score": 7,
-          "opponentScore": 11,
-          "result": "L",
           "venue": "Citizens Bank Park"
         }
       ]
@@ -1079,6 +1079,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-07-02",
+          "opponent": "Miami Marlins",
+          "opponentAbbr": "MIA",
+          "home": true,
+          "score": 14,
+          "opponentScore": 4,
+          "result": "W",
+          "venue": "Coors Field"
+        },
+        {
           "date": "2026-07-01",
           "opponent": "Miami Marlins",
           "opponentAbbr": "MIA",
@@ -1095,16 +1105,6 @@
           "home": true,
           "score": 3,
           "opponentScore": 14,
-          "result": "L",
-          "venue": "Coors Field"
-        },
-        {
-          "date": "2026-06-29",
-          "opponent": "Miami Marlins",
-          "opponentAbbr": "MIA",
-          "home": true,
-          "score": 7,
-          "opponentScore": 10,
           "result": "L",
           "venue": "Coors Field"
         }

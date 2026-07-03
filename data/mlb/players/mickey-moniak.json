@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 666160,
+    "fullName": "Mickey Moniak",
+    "link": "/api/v1/people/666160",
+    "firstName": "McKenzie",
+    "lastName": "Moniak",
+    "primaryNumber": "22",
+    "birthDate": "1998-05-13",
+    "currentAge": 28,
+    "birthCity": "Encinitas",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 209,
+    "active": true,
+    "primaryPosition": {
+      "code": "7",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "LF"
+    },
+    "useName": "Mickey",
+    "useLastName": "Moniak",
+    "middleName": "Matthew",
+    "boxscoreName": "Moniak",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2016,
+    "pronunciation": "MO-nee-ak",
+    "mlbDebutDate": "2020-09-16",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Mickey Moniak",
+    "nameSlug": "mickey-moniak-666160",
+    "firstLastName": "Mickey Moniak",
+    "lastFirstName": "Moniak, Mickey",
+    "lastInitName": "Moniak, M",
+    "initLastName": "M Moniak",
+    "fullFMLName": "McKenzie Matthew Moniak",
+    "fullLFMName": "Moniak, McKenzie Matthew",
+    "strikeZoneTop": 3.25,
+    "strikeZoneBottom": 1.64
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 53,
+            "groundOuts": 28,
+            "airOuts": 56,
+            "runs": 28,
+            "doubles": 11,
+            "triples": 3,
+            "homeRuns": 15,
+            "strikeOuts": 48,
+            "baseOnBalls": 11,
+            "intentionalWalks": 0,
+            "hits": 51,
+            "hitByPitch": 3,
+            "avg": ".280",
+            "atBats": 182,
+            "obp": ".330",
+            "slg": ".621",
+            "ops": ".951",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 681,
+            "plateAppearances": 197,
+            "totalBases": 113,
+            "rbi": 37,
+            "leftOnBase": 70,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".300",
+            "groundOutsToAirouts": "0.50",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "12.13"
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 666160,
+            "fullName": "Mickey Moniak",
+            "link": "/api/v1/people/666160"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

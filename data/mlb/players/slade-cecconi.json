@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 677944,
+    "fullName": "Slade Cecconi",
+    "link": "/api/v1/people/677944",
+    "firstName": "Slade",
+    "lastName": "Cecconi",
+    "primaryNumber": "44",
+    "birthDate": "1999-06-24",
+    "currentAge": 27,
+    "birthCity": "Oviedo",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 219,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Slade",
+    "useLastName": "Cecconi",
+    "boxscoreName": "Cecconi",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2020,
+    "pronunciation": "seh-CONE-ee",
+    "mlbDebutDate": "2023-08-02",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Slade Cecconi",
+    "nameSlug": "slade-cecconi-677944",
+    "firstLastName": "Slade Cecconi",
+    "lastFirstName": "Cecconi, Slade",
+    "lastInitName": "Cecconi, S",
+    "initLastName": "S Cecconi",
+    "fullFMLName": "Slade  Cecconi",
+    "fullLFMName": "Cecconi, Slade",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 18,
+            "gamesStarted": 18,
+            "groundOuts": 107,
+            "airOuts": 96,
+            "runs": 49,
+            "doubles": 20,
+            "triples": 0,
+            "homeRuns": 13,
+            "strikeOuts": 73,
+            "baseOnBalls": 30,
+            "intentionalWalks": 1,
+            "hits": 103,
+            "hitByPitch": 3,
+            "avg": ".276",
+            "atBats": 373,
+            "obp": ".331",
+            "slg": ".434",
+            "ops": ".765",
+            "caughtStealing": 1,
+            "stolenBases": 8,
+            "stolenBasePercentage": ".889",
+            "caughtStealingPercentage": ".111",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1542,
+            "era": "4.44",
+            "inningsPitched": "95.1",
+            "wins": 4,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 47,
+            "whip": "1.40",
+            "battersFaced": 412,
+            "outs": 286,
+            "gamesPitched": 18,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 979,
+            "strikePercentage": ".630",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 162,
+            "groundOutsToAirouts": "1.11",
+            "winPercentage": ".400",
+            "pitchesPerInning": "16.17",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.43",
+            "strikeoutsPer9Inn": "6.89",
+            "walksPer9Inn": "2.83",
+            "hitsPer9Inn": "9.72",
+            "runsScoredPer9": "4.63",
+            "homeRunsPer9": "1.23",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 5
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 677944,
+            "fullName": "Slade Cecconi",
+            "link": "/api/v1/people/677944"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
