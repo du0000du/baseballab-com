@@ -1,6 +1,8 @@
 ---
 // /mlb/japanese/ — MLB 2026 日本人選手 速報成績
 import Layout from '../../../layouts/Layout.astro';
+import AffiliateBannerAT from '../../../components/AffiliateBannerAT.astro';
+import { streamingAffiliates, gearAffiliates } from '../../../lib/affiliates';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -365,6 +367,8 @@ function lastGameSummary(p: any): string {
         </div>
       </section>
 
+      <AffiliateBannerAT items={streamingAffiliates} heading="メジャーリーグをライブ配信で観よう" />
+
       <!-- ── チーム別 ── -->
       <section class="sec" id="by-team">
         <div class="sec-header">
@@ -453,6 +457,8 @@ function lastGameSummary(p: any): string {
           </div>
         ))}
       </section>
+
+      <AffiliateBannerAT items={gearAffiliates} heading="野球ギア・用品を探す" />
 
     </div>
   </div>

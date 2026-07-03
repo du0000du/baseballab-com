@@ -4,6 +4,8 @@ import AtomicAnswer from '../../components/AtomicAnswer.astro';
 import AffiliateBlock from '../../components/AffiliateBlock.astro';
 import GlossaryLinks from '../../components/GlossaryLinks.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
+import AffiliateBannerAT from '../../components/AffiliateBannerAT.astro';
+import { streamingAffiliates } from '../../lib/affiliates';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { getTopPlayers, comparePairUrl, pickOpponents } from '../../lib/mlbTop';
@@ -16,6 +18,13 @@ export async function getStaticPaths() {
   // 比較ページ（/compare/）は上位60名のペアのみ存在するため、対象選手にだけリンクを渡す
   const top = getTopPlayers(60);
   const indexBySlug = new Map(top.map((p, i) => [p.slug, i]));
+
+  // 日本人MLB選手（配信広告の対象）
+  let japaneseIds = new Set<number>();
+  try {
+    const jp = JSON.parse(readFileSync(join(process.cwd(), 'data/mlb/japanese.json'), 'utf-8'));
+    japaneseIds = new Set((jp.players ?? []).map((p: any) => p.id));
+  } catch { /* japanese.json が無くてもページ生成は続行 */ }
 
   return files.map(file => {
     const slug = file.replace('.json', '');
@@ -31,11 +40,13 @@ export async function getStaticPaths() {
       }));
     }
 
-    return { params: { slug }, props: { data, compareLinks } };
+    const isJapanese = japaneseIds.has(data.info?.id);
+
+    return { params: { slug }, props: { data, compareLinks, isJapanese } };
   });
 }
 
-const { data, compareLinks } = Astro.props;
+const { data, compareLinks, isJapanese } = Astro.props;
 const { info } = data;
 
 const name = info.fullName ?? 'Unknown Player';
@@ -103,14 +114,25 @@ const teamSnippet = teamName ? `所属チーム: ${teamName}。` : '';
 const atomicText = `${name}（${posAbbr}）はMLBの現役選手。${birthCountry ? birthCountry + '出身。' : ''}${statsSnippet}${teamSnippet}最新成績はBaseballabで確認できます。`;
 
 // 断言テキスト（MLB平均: OPS.720, ERA 4.00 基準）
+// 十分な出場機会（打者100打席・投手30回）がある場合のみ生成。小サンプルの誇張評価を防ぐ。
+function ipToNum(v: any): number {
+  const n = Number(v);
+  if (isNaN(n)) return 0;
+  const whole = Math.trunc(n);
+  const frac = Math.round((n - whole) * 10);
+  return whole + (frac === 1 || frac === 2 ? frac / 3 : 0);
+}
+const paNum = Number(splitStat?.plateAppearances ?? 0);
+const ipNum = ipToNum(ip);
+const hasEnoughSample = isBatter ? paNum >= 100 : isPitcher ? ipNum >= 30 : false;
 let verdict = '';
-if (isBatter && ops) {
+if (hasEnoughSample && isBatter && ops) {
   const o = Number(ops);
   if (o >= 0.950) verdict = `OPS ${ops} はMLBトップクラス。リーグ平均（.720前後）を大幅に上回る最高水準の打者。`;
   else if (o >= 0.850) verdict = `OPS ${ops} はMLBリーグ平均（.720前後）を大きく上回る。スター打者として申し分ない数値。`;
   else if (o >= 0.720) verdict = `OPS ${ops} はMLBリーグ平均水準。安定したレギュラーとして計算できる打者。`;
   else if (o > 0) verdict = `OPS ${ops} はMLBリーグ平均（.720前後）をやや下回る。出塁率か長打率の向上が課題。`;
-} else if (isPitcher && era) {
+} else if (hasEnoughSample && isPitcher && era) {
   const e = Number(era);
   if (e <= 2.50) verdict = `防御率 ${era} はMLBトップクラス。ローテーションの絶対的エース水準。`;
   else if (e <= 3.50) verdict = `防御率 ${era} はMLBリーグ平均（4.00前後）を大きく上回る好成績。信頼できる先発投手。`;
@@ -272,6 +294,7 @@ const affiliateLinks = [
   .breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
   .breadcrumb a:hover { color: #fff; }
   .verdict { margin: 0 0 1.5rem; padding: .75rem 1rem; background: var(--gray-100, #f2f0ec); border-left: 3px solid var(--accent, #9b2335); border-radius: 0 6px 6px 0; font-size: .88rem; color: var(--gray-700, #4a4640); line-height: 1.65; }
+  .ref-note { margin: 0 0 1.5rem; padding: .6rem 1rem; background: var(--gray-100, #f2f0ec); border-left: 3px solid var(--gray-400, #a8a49a); border-radius: 0 6px 6px 0; font-size: .8rem; color: var(--gray-600, #6b6760); line-height: 1.6; }
   .sl { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
   .sl:hover { color: var(--accent, #9b2335); border-color: var(--accent, #9b2335); }
   .see-rankings { margin: 1.5rem 0 0; }
@@ -395,6 +418,10 @@ const affiliateLinks = [
         </div>
       )}
       {verdict && <p class="verdict">{verdict}</p>}
+      {!hasEnoughSample && splitStat && (
+        <p class="ref-note">※ 出場機会が少ないため参考記録です。数値は今後大きく変動する可能性があります。</p>
+      )}
+      {isJapanese && <AffiliateBannerAT items={streamingAffiliates} heading="メジャーリーグをライブ配信で観よう" />}
       <GlossaryLinks type={isBatter ? 'batting' : 'pitching'} />
       {compareLinks && compareLinks.length > 0 && (
         <div class="see-rankings">

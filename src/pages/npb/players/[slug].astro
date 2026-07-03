@@ -43,20 +43,23 @@ const pitCards: [string, any, string, boolean, string|null][] = [
 ];
 const cards = (isBat ? batCards : pitCards).filter(c => c[1] != null && c[1] !== '');
 
-// 断言テキスト
+// 断言テキスト — 規定打席/規定投球回到達者のみ生成。
+// 小サンプル（例: 4試合・打率.500）に「トップクラス」等の評価を付けると信頼を毀損するため。
 let verdict = '';
-if (isBat && s.ops != null) {
-  const ops = Number(s.ops);
-  if (ops >= 0.900) verdict = `OPS ${s.ops} は${NPB_SEASON}年NPBトップクラスの数値。得点貢献度が際立って高い。`;
-  else if (ops >= 0.800) verdict = `OPS ${s.ops} はリーグ平均（.720前後）を大きく上回る。主軸として申し分ない攻撃力。`;
-  else if (ops >= 0.720) verdict = `OPS ${s.ops} はリーグ平均水準。安定したスターターとして計算できる打者。`;
-  else if (ops > 0) verdict = `OPS ${s.ops} はリーグ平均（.720前後）をやや下回る。出塁率か長打率の向上が課題。`;
-} else if (!isBat && s.era != null) {
-  const era = Number(s.era);
-  if (era <= 2.50) verdict = `防御率 ${s.era} は${NPB_SEASON}年NPB最上位クラス。ローテーションの絶対的エース。`;
-  else if (era <= 3.50) verdict = `防御率 ${s.era} はNPB先発上位の安定感。信頼できるローテーション投手。`;
-  else if (era <= 4.50) verdict = `防御率 ${s.era} はリーグ平均（3.80前後）付近。安定感の波が課題。`;
-  else if (era > 0) verdict = `防御率 ${s.era} はリーグ平均（3.80前後）を上回る。改善が求められるシーズン。`;
+if (p.qualified) {
+  if (isBat && s.ops != null) {
+    const ops = Number(s.ops);
+    if (ops >= 0.900) verdict = `OPS ${s.ops} は${NPB_SEASON}年NPBトップクラスの数値。得点貢献度が際立って高い。`;
+    else if (ops >= 0.800) verdict = `OPS ${s.ops} はリーグ平均（.720前後）を大きく上回る。主軸として申し分ない攻撃力。`;
+    else if (ops >= 0.720) verdict = `OPS ${s.ops} はリーグ平均水準。安定したスターターとして計算できる打者。`;
+    else if (ops > 0) verdict = `OPS ${s.ops} はリーグ平均（.720前後）をやや下回る。出塁率か長打率の向上が課題。`;
+  } else if (!isBat && s.era != null) {
+    const era = Number(s.era);
+    if (era <= 2.50) verdict = `防御率 ${s.era} は${NPB_SEASON}年NPB最上位クラス。ローテーションの絶対的エース。`;
+    else if (era <= 3.50) verdict = `防御率 ${s.era} はNPB先発上位の安定感。信頼できるローテーション投手。`;
+    else if (era <= 4.50) verdict = `防御率 ${s.era} はリーグ平均（3.80前後）付近。安定感の波が課題。`;
+    else if (era > 0) verdict = `防御率 ${s.era} はリーグ平均（3.80前後）を上回る。改善が求められるシーズン。`;
+  }
 }
 
 let snip = '';
@@ -124,6 +127,7 @@ const jsonLd = {
     .stat-label-link { color:inherit; text-decoration:none; border-bottom:1px dotted currentColor; }
     .stat-label-link:hover { color:var(--accent); border-color:var(--accent); }
     .verdict { margin:0 0 1.5rem; padding:.75rem 1rem; background:var(--gray-100); border-left:3px solid var(--accent); border-radius:0 6px 6px 0; font-size:.88rem; color:var(--gray-700); line-height:1.65; }
+    .ref-note { margin:0 0 1.5rem; padding:.6rem 1rem; background:var(--gray-100); border-left:3px solid var(--gray-400); border-radius:0 6px 6px 0; font-size:.8rem; color:var(--gray-600); line-height:1.6; }
     .teammates { margin-top:2rem; padding:1.25rem 1.5rem; background:var(--gray-100); border-radius:10px; }
     .teammates-title { font-size:.78rem; font-weight:700; color:var(--gray-500); text-transform:uppercase; letter-spacing:.06em; margin-bottom:.75rem; }
     .teammates-list { display:flex; flex-wrap:wrap; gap:.5rem; }
@@ -174,6 +178,9 @@ const jsonLd = {
         ))}
       </div>
       {verdict && <p class="verdict">{verdict}</p>}
+      {!p.qualified && cards.length > 0 && (
+        <p class="ref-note">※ 規定{isBat ? '打席' : '投球回'}未到達のため参考記録です。出場機会が少ない選手の成績は数値が大きく振れます。</p>
+      )}
 
       <GlossaryLinks type={isBat ? 'batting' : 'pitching'} />
       <AffiliateBlock links={links} heading="この選手をもっと楽しむためのおすすめ" />

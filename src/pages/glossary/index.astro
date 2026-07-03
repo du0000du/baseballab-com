@@ -154,7 +154,8 @@ const total = allTerms.length;
              placeholder="指標を検索（例: OPS, 防御率, WAR…）" autocomplete="off" />
       <span class="gl-search-icon">🔍</span>
     </div>
-    <p id="gl-no-result" class="gl-no-result" hidden>該当する指標が見つかりません。</p>
+    <!-- 文言はJSで注入（非JS環境・クローラのテキスト抽出で常時表示に見える誤検出を防ぐ） -->
+    <p id="gl-no-result" class="gl-no-result" hidden></p>
   </div>
 
   <script is:inline>
@@ -162,6 +163,7 @@ const total = allTerms.length;
       var input = document.getElementById('glossary-search');
       if (!input) return;
       var noResult = document.getElementById('gl-no-result');
+      if (noResult) noResult.textContent = '該当する指標が見つかりません。';
       var cards = Array.from(document.querySelectorAll('.term-card'));
       var sections = Array.from(document.querySelectorAll('section[id^="cat-"]'));
       input.addEventListener('input', function () {
