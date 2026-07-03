@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 663656,
+    "fullName": "Kyle Tucker",
+    "link": "/api/v1/people/663656",
+    "firstName": "Kyle",
+    "lastName": "Tucker",
+    "primaryNumber": "23",
+    "birthDate": "1997-01-17",
+    "currentAge": 29,
+    "birthCity": "Tampa",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 212,
+    "active": true,
+    "primaryPosition": {
+      "code": "9",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "RF"
+    },
+    "useName": "Kyle",
+    "useLastName": "Tucker",
+    "middleName": "Daniel",
+    "boxscoreName": "Tucker",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "mlbDebutDate": "2018-07-07",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Kyle Tucker",
+    "nameSlug": "kyle-tucker-663656",
+    "firstLastName": "Kyle Tucker",
+    "lastFirstName": "Tucker, Kyle",
+    "lastInitName": "Tucker, K",
+    "initLastName": "K Tucker",
+    "fullFMLName": "Kyle Daniel Tucker",
+    "fullLFMName": "Tucker, Kyle Daniel",
+    "strikeZoneTop": 3.351,
+    "strikeZoneBottom": 1.691
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 82,
+            "groundOuts": 66,
+            "airOuts": 88,
+            "runs": 49,
+            "doubles": 17,
+            "triples": 2,
+            "homeRuns": 7,
+            "strikeOuts": 72,
+            "baseOnBalls": 46,
+            "intentionalWalks": 0,
+            "hits": 74,
+            "hitByPitch": 2,
+            "avg": ".249",
+            "atBats": 297,
+            "obp": ".351",
+            "slg": ".391",
+            "ops": ".742",
+            "caughtStealing": 0,
+            "stolenBases": 6,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 1389,
+            "plateAppearances": 348,
+            "totalBases": 116,
+            "rbi": 45,
+            "leftOnBase": 148,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".303",
+            "groundOutsToAirouts": "0.75",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "42.43"
+          },
+          "team": {
+            "id": 119,
+            "name": "Los Angeles Dodgers",
+            "link": "/api/v1/teams/119"
+          },
+          "player": {
+            "id": 663656,
+            "fullName": "Kyle Tucker",
+            "link": "/api/v1/people/663656"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
