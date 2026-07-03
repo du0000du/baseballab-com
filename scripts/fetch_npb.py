@@ -68,6 +68,14 @@ TEAMS = {
 
 LEAGUE_CODE = {"central": "c", "pacific": "p"}
 
+# チーム別個人成績ページ（idb1/idp1_{code}.html）の URL コード
+# リーグ成績ページ（bat/pit）は規定到達者のみのため、
+# 規定未到達選手（例: 勝利数上位でも投球回不足の投手）はチーム別ページから補完する
+TEAM_PAGE_CODE = {
+    "神": "t", "デ": "db", "巨": "g", "中": "d", "広": "c", "ヤ": "s",
+    "オ": "b", "ソ": "h", "日": "f", "楽": "e", "西": "l", "ロ": "m",
+}
+
 # ---------------------------------------------------------------------------
 # ローマ字 slug 生成（pykakasi）
 # ---------------------------------------------------------------------------
@@ -343,6 +351,41 @@ def parse_stat_page(html: str, group: str, league: str, fetched_at: str):
     return [players[k] for k in order], as_of
 
 
+def parse_team_stat_page(html: str, group: str, league: str, abbr: str, fetched_at: str):
+    """
+    チーム別個人成績ページ（idb1/idp1_{code}.html）をパース。全所属選手が載る。
+    リーグページとの相違: 「順位」列なし / 選手名にチーム略号なし / 利き腕記号（*・＋）付き。
+    """
+    as_of = find_as_of(html)
+    marker = "打数" if group == "batting" else "投球回"
+    name_col = "選手" if group == "batting" else "投手"
+    out = []
+    for table in extract_tables(html):
+        header_idx = None
+        for i, row in enumerate(table):
+            if "選手" in row and marker in "".join(row):
+                header_idx = i
+                break
+        if header_idx is None:
+            continue
+        header = table[header_idx]
+        name_idx = header.index("選手")
+        for row in table[header_idx + 1:]:
+            if len(row) < len(header):
+                continue
+            name = re.sub(r"^[*+＊＋#]+", "", row[name_idx]).strip()
+            if not name or name in ("選手", "計", "合計", "チーム計"):
+                continue
+            rec = {h.strip(): v.strip() for h, v in zip(header, row)}
+            rec[name_col] = f"{name}({abbr})"
+            p = build_player_record(rec, group, league, fetched_at, as_of, qualified=False)
+            if p:
+                prefix = "idb1" if group == "batting" else "idp1"
+                p["sourceUrl"] = f"{BASE}/{SEASON}/stats/{prefix}_{TEAM_PAGE_CODE[abbr]}.html"
+                out.append(p)
+    return out, as_of
+
+
 # ---------------------------------------------------------------------------
 # 順位表
 # ---------------------------------------------------------------------------
@@ -440,7 +483,17 @@ def dedupe_slugs(all_players):
     for p in all_players:
         s = p["slug"]
         if s in seen and seen[s] is not p:
-            p["slug"] = f"{s}-{p['teamAbbr'].lower() or 'x'}"
+            # サフィックスは URL 安全な ASCII の球団略号（F/H/…）を使う（teamAbbr は「日」等の和文字）
+            team = TEAMS.get(p["teamAbbr"], {}).get("abbr", "x").lower()
+            cand = f"{s}-{team}"
+            if cand in seen:
+                cand = f"{cand}-{p['group']}"
+            n = 2
+            base = cand
+            while cand in seen:
+                cand = f"{base}-{n}"
+                n += 1
+            p["slug"] = cand
         seen[p["slug"]] = p
 
 
@@ -521,6 +574,51 @@ def run_all():
     if not all_players:
         print("❌ 選手データ取得ゼロ。既存データを保持して終了。", file=sys.stderr)
         sys.exit(1)
+
+    # チーム別ページから規定未到達選手を補完（リーグページ掲載者はスキップ）
+    seen = {(p["name"], p["teamAbbr"], p["group"]) for p in all_players}
+    for abbr, meta in TEAMS.items():
+        code = TEAM_PAGE_CODE[abbr]
+        team_recs = {"batting": [], "pitching": []}
+        for group, prefix in (("batting", "idb1"), ("pitching", "idp1")):
+            url = f"{BASE}/{SEASON}/stats/{prefix}_{code}.html"
+            print(f"取得: {url}")
+            html = fetch_html(url)
+            if not html:
+                print(f"  ⚠ 空応答: {url}", file=sys.stderr)
+                continue
+            recs, as_of = parse_team_stat_page(html, group, meta["league"], abbr, fetched_at)
+            if as_of:
+                as_of_dates.append(as_of)
+            team_recs[group] = recs
+            time.sleep(0.5)
+
+        # 同一選手が打撃・投手の両ページに載る場合（投手の打席・野手の緊急登板）、
+        # 主たる役割のレコードだけ残す。打席40以上かつ投球回10以上なら二刀流として両方残す。
+        def _num(v):
+            return float(v) if isinstance(v, (int, float)) else 0.0
+        pit_by_name = {p["name"]: p for p in team_recs["pitching"]}
+        merged = list(team_recs["pitching"])
+        for p in team_recs["batting"]:
+            q = pit_by_name.get(p["name"])
+            if q is not None:
+                pa = _num(p["stats"].get("pa"))
+                ip = _num(q["stats"].get("ip"))
+                if not (pa >= 40 and ip >= 10):
+                    if ip * 4 >= pa:
+                        continue  # 投手が主 → 打撃行を捨てる
+                    merged.remove(q)  # 野手が主 → 登板行を捨てる
+            merged.append(p)
+
+        added = 0
+        for p in merged:
+            key = (p["name"], p["teamAbbr"], p["group"])
+            if key in seen:
+                continue
+            seen.add(key)
+            all_players.append(p)
+            added += 1
+        print(f"  {meta['name']}: +{added}名")
 
     dedupe_slugs(all_players)
 
