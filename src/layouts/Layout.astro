@@ -230,11 +230,21 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
         transition: transform 0.2s, opacity 0.2s;
       }
 
-      /* ドロップダウン全体メニュー（アコーディオン式） */
+      /* ドロップダウン全体メニュー（アコーディオン式）
+         sticky ヘッダー直下に absolute 配置し、スクロール位置に関わらず画面上に展開する */
       .mobile-nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: var(--navy-dark);
         border-bottom: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+        max-height: calc(100vh - 60px);
+        max-height: calc(100dvh - 60px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
       .mobile-nav.open { display: block; }
       .mnav-inner {
@@ -447,7 +457,6 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
           <span></span><span></span><span></span>
         </button>
       </div>
-    </header>
     <nav id="mobile-nav" class="mobile-nav" aria-label={isEn ? 'Site menu' : 'サイト全体メニュー'}>
       <div class="mnav-inner">
       {isEn ? (
@@ -534,6 +543,7 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
       )}
       </div>
     </nav>
+    </header>
     <script is:inline>
       (function(){
         var btn = document.querySelector('.hamburger');
