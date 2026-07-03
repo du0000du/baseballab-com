@@ -1,0 +1,75 @@
+---
+// NPB セ・リーグ選手一覧（チームごとにグループ表示）
+import Layout from '../../../layouts/Layout.astro';
+import TeamGroupedPlayers from '../../../components/TeamGroupedPlayers.astro';
+import { loadPlayers, NPB_TEAMS, NPB_SEASON } from '../../../lib/npb';
+
+const players = loadPlayers();
+
+function num(v: any): number { return typeof v === 'number' ? v : 0; }
+function f3(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(3); }
+function f2(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(2); }
+
+const groups = NPB_TEAMS.filter(t => t.league === 'central').map(t => {
+  const roster = players.filter(p => p.teamSlug === t.slug);
+  const batters = roster.filter(p => p.group === 'batting').sort((a, b) => num(b.stats.pa) - num(a.stats.pa));
+  const pitchers = roster.filter(p => p.group === 'pitching').sort((a, b) => num(b.stats.ip) - num(a.stats.ip));
+  return {
+    heading: t.name,
+    anchor: t.slug,
+    href: `/npb/players/team/${t.slug}/`,
+    color: t.color,
+    players: [...batters, ...pitchers].map(p => ({
+      url: `/npb/players/${p.slug}/`,
+      pos: p.group === 'batting' ? '打' : '投',
+      name: p.name,
+      statline: p.group === 'batting'
+        ? `打率 ${f3(p.stats.avg)}${p.stats.hr != null ? `・${p.stats.hr}本` : ''}`
+        : `防御率 ${f2(p.stats.era)}${p.stats.wins != null ? `・${p.stats.wins}勝` : ''}`,
+    })),
+  };
+}).filter(g => g.players.length > 0);
+
+const total = groups.reduce((n, g) => n + g.players.length, 0);
+---
+
+<Layout
+  title="NPB セ・リーグ選手一覧 | Baseballab"
+  description={`セントラル・リーグ全6球団の${NPB_SEASON}年収録選手${total}名をチームごとに一覧表示。各選手の成績ページへ。`}
+  ogUrl="https://baseballab.com/npb/players/central-league/"
+>
+  <main class="page-container">
+    <nav class="breadcrumb">
+      <a href="/">TOP</a> › <a href="/npb/">NPB</a> › <a href="/npb/players/">選手一覧</a> › セ・リーグ
+    </nav>
+    <header class="page-header">
+      <h1>NPB セ・リーグ選手一覧</h1>
+      <p class="subtitle">{NPB_SEASON}年シーズン · 6球団・{total}名をチームごとに表示</p>
+      <div class="league-tabs">
+        <a class="tab active" href="/npb/players/central-league/">セ・リーグ</a>
+        <a class="tab" href="/npb/players/pacific-league/">パ・リーグ</a>
+        <a class="tab" href="/npb/players/">全選手</a>
+      </div>
+    </header>
+    <TeamGroupedPlayers groups={groups} />
+    <p class="src-note">データ出典: NPB.jp 日本野球機構（毎日自動更新）</p>
+  </main>
+</Layout>
+
+<style>
+  .page-container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.25rem 5rem; }
+  .breadcrumb { font-size: .8rem; color: var(--gray-600); margin-bottom: 1.25rem; }
+  .breadcrumb a { color: var(--gray-600); }
+  .page-header { margin-bottom: 2rem; }
+  .page-header h1 { font-size: 1.7rem; font-weight: 800; color: var(--navy); margin-bottom: .4rem; }
+  .subtitle { color: var(--gray-500); font-size: .9rem; margin-bottom: 1rem; }
+  .league-tabs { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .tab {
+    display: inline-block; border: 1px solid var(--border); border-radius: 20px;
+    padding: .3rem .9rem; font-size: .82rem; font-weight: 700;
+    color: var(--gray-600); text-decoration: none; background: var(--bg-card, #fff);
+  }
+  .tab:hover { border-color: var(--navy); color: var(--navy); }
+  .tab.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .src-note { font-size: .75rem; color: var(--gray-500); margin-top: 1rem; }
+</style>

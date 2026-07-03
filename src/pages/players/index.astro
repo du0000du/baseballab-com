@@ -27,6 +27,11 @@ const players = playerFiles.map(filename => {
     <header class="page-header">
       <h1>MLB 選手一覧</h1>
       <p class="subtitle">{players.length}選手を収録 · 随時拡充予定</p>
+      <div class="league-tabs">
+        <a class="tab active" href="/players/">全選手（50音順）</a>
+        <a class="tab" href="/players/american-league/">ア・リーグ（チーム別）</a>
+        <a class="tab" href="/players/national-league/">ナ・リーグ（チーム別）</a>
+      </div>
     </header>
 
     <div class="players-grid">
@@ -48,6 +53,14 @@ const players = playerFiles.map(filename => {
   .page-header { text-align: center; margin-bottom: 2.5rem; }
   .page-header h1 { font-size: 2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
   .subtitle { color: var(--gray-400); font-size: 0.95rem; }
+  .league-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-top: 1rem; }
+  .tab {
+    display: inline-block; border: 1px solid var(--border); border-radius: 20px;
+    padding: 0.3rem 0.9rem; font-size: 0.82rem; font-weight: 700;
+    color: var(--gray-600); text-decoration: none; background: var(--bg-card, #fff);
+  }
+  .tab:hover { border-color: var(--navy); color: var(--navy); }
+  .tab.active { background: var(--navy); border-color: var(--navy); color: #fff; }
   .players-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.5rem; }
   .player-card { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 7px; text-decoration: none; color: var(--navy); transition: border-color 0.12s, background 0.12s; }
   .player-card:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }

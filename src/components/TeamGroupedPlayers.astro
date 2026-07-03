@@ -1,0 +1,79 @@
+---
+// チームごとにグループ化した選手リンク一覧（リーグ別選手一覧ページ用）
+// groups: [{ heading, anchor, count, href?, color?, players: [{ url, pos, name, statline? }] }]
+interface PlayerItem { url: string; pos: string; name: string; statline?: string; }
+interface Group { heading: string; anchor: string; href?: string; color?: string; players: PlayerItem[]; }
+const { groups } = Astro.props as { groups: Group[] };
+---
+
+<nav class="tg-toc" aria-label="チームへジャンプ">
+  {groups.map(g => <a href={`#${g.anchor}`}>{g.heading}</a>)}
+</nav>
+
+{groups.map(g => (
+  <section class="tg-section" id={g.anchor}>
+    <div class="tg-head" style={g.color ? `border-left-color:${g.color}` : ''}>
+      <h2>{g.heading}</h2>
+      <span class="tg-count">{g.players.length}名</span>
+      {g.href && <a class="tg-more" href={g.href}>成績つき一覧 →</a>}
+    </div>
+    <div class="tg-grid">
+      {g.players.map(p => (
+        <a class="tg-card" href={p.url}>
+          <span class="tg-pos">{p.pos}</span>
+          <span class="tg-name">{p.name}</span>
+          {p.statline && <span class="tg-stat">{p.statline}</span>}
+        </a>
+      ))}
+    </div>
+  </section>
+))}
+
+<style>
+  .tg-toc {
+    display: flex; flex-wrap: wrap; gap: .4rem;
+    margin: 0 0 1.75rem;
+  }
+  .tg-toc a {
+    display: inline-block; background: var(--bg-card, #fff);
+    border: 1px solid var(--border, #e4e2dc); border-radius: 20px;
+    padding: .22rem .75rem; font-size: .8rem; font-weight: 600;
+    color: var(--navy); text-decoration: none;
+  }
+  .tg-toc a:hover { border-color: var(--accent, #9b2335); color: var(--accent, #9b2335); }
+
+  .tg-section { margin: 0 0 2.25rem; scroll-margin-top: 1rem; }
+  .tg-head {
+    display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap;
+    border-left: 4px solid var(--navy);
+    padding-left: .75rem; margin-bottom: .9rem;
+  }
+  .tg-head h2 { font-size: 1.15rem; font-weight: 800; color: var(--navy); margin: 0; }
+  .tg-count { font-size: .8rem; color: var(--gray-500, #8a8680); }
+  .tg-more { font-size: .8rem; font-weight: 600; color: var(--accent, #9b2335); text-decoration: none; margin-left: auto; }
+  .tg-more:hover { text-decoration: underline; }
+
+  .tg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: .4rem;
+  }
+  .tg-card {
+    display: flex; align-items: center; gap: .6rem;
+    background: var(--bg-card, #fff);
+    border: 1px solid var(--border, #e4e2dc); border-radius: 7px;
+    padding: .55rem .75rem; text-decoration: none; color: var(--navy);
+    transition: border-color .12s, background .12s;
+  }
+  .tg-card:hover { border-color: var(--accent, #9b2335); color: var(--accent, #9b2335); }
+  .tg-pos {
+    font-size: .7rem; font-weight: 700; font-family: var(--font-en, monospace);
+    color: var(--accent, #9b2335); width: 2rem; flex-shrink: 0; text-align: center;
+  }
+  .tg-name { font-size: .9rem; font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tg-stat { font-size: .72rem; color: var(--gray-500, #8a8680); flex-shrink: 0; font-variant-numeric: tabular-nums; }
+
+  @media (max-width: 480px) {
+    .tg-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+// MLB ア・リーグ選手一覧（チームごとにグループ表示）
+import Layout from '../../layouts/Layout.astro';
+import TeamGroupedPlayers from '../../components/TeamGroupedPlayers.astro';
+import { buildLeagueGroups } from '../../lib/mlbRoster';
+
+const groups = buildLeagueGroups('al');
+const total = groups.reduce((n, g) => n + g.players.length, 0);
+---
+
+<Layout
+  title="MLB ア・リーグ選手一覧 | Baseballab"
+  description={`アメリカン・リーグ全${groups.length}球団の収録選手${total}名をチームごとに一覧表示。各選手の成績・プロフィールページへ。`}
+  ogUrl="https://baseballab.com/players/american-league/"
+>
+  <main class="page-container">
+    <nav class="breadcrumb">
+      <a href="/">TOP</a> › <a href="/players/">MLB 選手</a> › ア・リーグ
+    </nav>
+    <header class="page-header">
+      <h1>MLB ア・リーグ選手一覧</h1>
+      <p class="subtitle">{groups.length}球団・{total}名をチームごとに表示</p>
+      <div class="league-tabs">
+        <a class="tab active" href="/players/american-league/">ア・リーグ</a>
+        <a class="tab" href="/players/national-league/">ナ・リーグ</a>
+        <a class="tab" href="/players/">全選手（50音順）</a>
+      </div>
+    </header>
+    <TeamGroupedPlayers groups={groups} />
+  </main>
+</Layout>
+
+<style>
+  .page-container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.25rem 5rem; }
+  .breadcrumb { font-size: .8rem; color: var(--gray-600); margin-bottom: 1.25rem; }
+  .breadcrumb a { color: var(--gray-600); }
+  .page-header { margin-bottom: 2rem; }
+  .page-header h1 { font-size: 1.7rem; font-weight: 800; color: var(--navy); margin-bottom: .4rem; }
+  .subtitle { color: var(--gray-500); font-size: .9rem; margin-bottom: 1rem; }
+  .league-tabs { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .tab {
+    display: inline-block; border: 1px solid var(--border); border-radius: 20px;
+    padding: .3rem .9rem; font-size: .82rem; font-weight: 700;
+    color: var(--gray-600); text-decoration: none; background: var(--bg-card, #fff);
+  }
+  .tab:hover { border-color: var(--navy); color: var(--navy); }
+  .tab.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+</style>

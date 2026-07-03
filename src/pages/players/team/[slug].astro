@@ -1,0 +1,136 @@
+---
+// MLB チーム別選手一覧（打者・投手の成績テーブル付き）
+import Layout from '../../../layouts/Layout.astro';
+import { loadMlbTeams, loadMlbPlayersByTeam } from '../../../lib/mlbRoster';
+
+export async function getStaticPaths() {
+  const teams = loadMlbTeams();
+  const byTeam = loadMlbPlayersByTeam();
+  return teams
+    .filter(t => (byTeam.get(t.id) ?? []).length > 0)
+    .map(t => ({
+      params: { slug: t.slug },
+      props: { team: t, players: byTeam.get(t.id) ?? [] },
+    }));
+}
+
+const { team, players } = Astro.props;
+
+const batters = players.filter(p => p.group === 'hitting');
+const pitchers = players.filter(p => p.group === 'pitching');
+const others = players.filter(p => p.group !== 'hitting' && p.group !== 'pitching');
+
+function f3(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(3); }
+function f2(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : n.toFixed(2); }
+function fi(v: any): string { if (v == null) return '—'; const n = Number(v); return isNaN(n) ? '—' : String(n); }
+
+const leagueLabel = team.league === 'al' ? 'ア・リーグ' : 'ナ・リーグ';
+const leagueUrl = team.league === 'al' ? '/players/american-league/' : '/players/national-league/';
+const pageTitle = `${team.name} 選手一覧・成績`;
+const description = `${team.name}（${leagueLabel}）の収録選手${players.length}名の最新成績一覧。打者は打率・本塁打・OPS、投手は防御率・勝敗・奪三振を掲載。`;
+---
+
+<Layout title={`${pageTitle} | Baseballab`} description={description} ogUrl={`https://baseballab.com/players/team/${team.slug}/`}>
+  <main class="page-container">
+    <nav class="breadcrumb">
+      <a href="/">TOP</a> › <a href="/players/">MLB 選手</a> › <a href={leagueUrl}>{leagueLabel}</a> › {team.name}
+    </nav>
+    <header class="page-header">
+      <h1>{team.name} 選手一覧</h1>
+      <p class="subtitle">{players.length}名収録 · <a href={`/teams/${team.slug}/`}>球団情報を見る →</a></p>
+    </header>
+
+    {batters.length > 0 && (
+      <section class="roster-section">
+        <h2>打者（{batters.length}名）</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th class="name">選手</th><th>POS</th><th>試合</th><th>打率</th><th>本塁打</th><th>打点</th><th>盗塁</th><th>OPS</th></tr>
+            </thead>
+            <tbody>
+              {batters.map(p => (
+                <tr>
+                  <td class="name"><a href={`/players/${p.slug}/`}>{p.name}</a></td>
+                  <td>{p.pos}</td>
+                  <td>{fi(p.stat.gamesPlayed)}</td>
+                  <td>{f3(p.stat.avg)}</td>
+                  <td>{fi(p.stat.homeRuns)}</td>
+                  <td>{fi(p.stat.rbi)}</td>
+                  <td>{fi(p.stat.stolenBases)}</td>
+                  <td>{f3(p.stat.ops)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )}
+
+    {pitchers.length > 0 && (
+      <section class="roster-section">
+        <h2>投手（{pitchers.length}名）</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th class="name">選手</th><th>登板</th><th>防御率</th><th>勝</th><th>負</th><th>S</th><th>奪三振</th><th>WHIP</th></tr>
+            </thead>
+            <tbody>
+              {pitchers.map(p => (
+                <tr>
+                  <td class="name"><a href={`/players/${p.slug}/`}>{p.name}</a></td>
+                  <td>{fi(p.stat.gamesPlayed)}</td>
+                  <td>{f2(p.stat.era)}</td>
+                  <td>{fi(p.stat.wins)}</td>
+                  <td>{fi(p.stat.losses)}</td>
+                  <td>{fi(p.stat.saves)}</td>
+                  <td>{fi(p.stat.strikeOuts)}</td>
+                  <td>{f2(p.stat.whip)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )}
+
+    {others.length > 0 && (
+      <section class="roster-section">
+        <h2>その他（{others.length}名）</h2>
+        <ul class="other-list">
+          {others.map(p => <li><a href={`/players/${p.slug}/`}>{p.name}</a>（{p.pos}）</li>)}
+        </ul>
+      </section>
+    )}
+
+    <p class="src-note">データ: MLB Stats API（毎日自動更新）</p>
+  </main>
+</Layout>
+
+<style>
+  .page-container { max-width: 900px; margin: 0 auto; padding: 2rem 1.25rem 5rem; }
+  .breadcrumb { font-size: .8rem; color: var(--gray-600); margin-bottom: 1.25rem; }
+  .breadcrumb a { color: var(--gray-600); }
+  .page-header { margin-bottom: 2rem; }
+  .page-header h1 { font-size: 1.7rem; font-weight: 800; color: var(--navy); margin-bottom: .4rem; }
+  .subtitle { color: var(--gray-500); font-size: .9rem; }
+  .subtitle a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .subtitle a:hover { text-decoration: underline; }
+
+  .roster-section { margin-bottom: 2.5rem; }
+  .roster-section h2 {
+    font-size: 1.1rem; font-weight: 800; color: var(--navy);
+    border-left: 4px solid var(--navy); padding-left: .75rem; margin-bottom: .9rem;
+  }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  th, td { padding: .5rem .6rem; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  th { background: var(--gray-100); font-size: .74rem; font-weight: 700; color: var(--gray-600); }
+  th.name, td.name { text-align: left; }
+  td.name a { color: var(--navy); font-weight: 600; text-decoration: none; }
+  td.name a:hover { color: var(--accent); text-decoration: underline; }
+
+  .other-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; font-size: .88rem; }
+  .other-list a { color: var(--navy); font-weight: 600; }
+  .src-note { font-size: .75rem; color: var(--gray-500); margin-top: 1rem; }
+</style>

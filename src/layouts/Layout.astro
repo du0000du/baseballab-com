@@ -22,7 +22,22 @@ const pathname = Astro.url.pathname;
 const isEn = pathname.startsWith('/en/') || pathname === '/en';
 const lang = isEn ? 'en' : 'ja';
 const jaUrl = isEn ? (pathname.replace(/^\/en/, '') || '/') : pathname;
-const enUrl = isEn ? pathname : ('/en' + pathname);
+// EN 版が存在するルートのみ /en/対応ページへ、無ければ EN トップへ（404リンク防止）
+function hasEnVersion(path: string): boolean {
+  if (path === '/') return true;
+  const exact = [
+    '/gear/', '/glossary/', '/streaming/', '/teams/', '/players/', '/mlb/', '/npb/',
+    '/mlb/leaders/', '/mlb/analysis/', '/mlb/results/', '/mlb/standings/', '/mlb/trends/',
+    '/npb/leaders/', '/npb/results/', '/npb/standings/', '/npb/trends/',
+  ];
+  if (exact.includes(path)) return true;
+  const mlb = path.match(/^\/(teams|players)\/([^/]+)\/$/);
+  if (mlb) return !['american-league', 'national-league', 'team'].includes(mlb[2]);
+  const npb = path.match(/^\/npb\/(teams|players)\/([^/]+)\/$/);
+  if (npb) return !['central-league', 'pacific-league', 'team'].includes(npb[2]);
+  return false;
+}
+const enUrl = isEn ? pathname : (hasEnVersion(pathname) ? '/en' + pathname : '/en/');
 const jaAbsolute = `https://baseballab.com${jaUrl}`;
 const enAbsolute = `https://baseballab.com${enUrl}`;
 ---
@@ -195,15 +210,16 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
         .footer-links { grid-template-columns: repeat(2, 1fr); }
       }
 
-      /* ===== RESPONSIVE ===== */
+      /* ===== RESPONSIVE / MENU ===== */
       .hamburger {
-        display: none;
+        display: flex;
         flex-direction: column;
         gap: 5px;
         background: none;
         border: none;
         cursor: pointer;
         padding: 4px;
+        margin-left: 0.75rem;
       }
       .hamburger span {
         display: block;
@@ -213,25 +229,89 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
         border-radius: 2px;
         transition: transform 0.2s, opacity 0.2s;
       }
+
+      /* ドロップダウン全体メニュー（アコーディオン式） */
       .mobile-nav {
         display: none;
-        flex-direction: column;
         background: var(--navy-dark);
-        padding: 0.5rem 1.25rem 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
       }
-      .mobile-nav a {
-        color: rgba(255,255,255,0.85);
+      .mobile-nav.open { display: block; }
+      .mnav-inner {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 0.5rem 1.25rem 1.25rem;
+      }
+      .mnav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        color: rgba(255,255,255,0.92);
         font-size: 1rem;
-        font-weight: 600;
-        padding: 0.7rem 0;
+        font-weight: 700;
+        font-family: inherit;
+        padding: 0.85rem 0.25rem;
+        cursor: pointer;
+        text-align: left;
+      }
+      .mnav-toggle .chev {
+        font-size: 0.7rem;
+        opacity: 0.6;
+        transition: transform 0.2s;
+      }
+      .mnav-group.open .mnav-toggle .chev { transform: rotate(180deg); }
+      .mnav-group.open .mnav-toggle { color: #fff; }
+      .mnav-sub-wrap {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.25s ease;
+      }
+      .mnav-group.open .mnav-sub-wrap { grid-template-rows: 1fr; }
+      .mnav-sub {
+        overflow: hidden;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255,255,255,0.04);
+        border-radius: 0 0 8px 8px;
+      }
+      .mnav-sub a {
+        color: rgba(255,255,255,0.78);
+        font-size: 0.92rem;
+        font-weight: 500;
+        padding: 0.65rem 0.5rem 0.65rem 1.4rem;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        transition: background 0.12s, color 0.12s;
+      }
+      .mnav-sub a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+      .mnav-sub a:last-child { border-bottom: none; }
+      .mnav-sub .mnav-subhead {
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        color: rgba(255,255,255,0.4);
+        padding: 0.7rem 0.5rem 0.25rem 1.4rem;
+        text-transform: uppercase;
+      }
+      .mnav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: rgba(255,255,255,0.92);
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.85rem 0.25rem;
         border-bottom: 1px solid rgba(255,255,255,0.08);
       }
-      .mobile-nav a:last-child { border-bottom: none; }
-      .mobile-nav.open { display: flex; }
+      .mnav-link:hover { color: #fff; }
+      .mnav-link .chev { font-size: 0.7rem; opacity: 0.6; }
 
       @media (max-width: 768px) {
         .site-nav { display: none; }
-        .hamburger { display: flex; }
       }
 
       /* ===== LANG SWITCHER ===== */
@@ -368,23 +448,91 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
         </button>
       </div>
     </header>
-    <nav id="mobile-nav" class="mobile-nav" aria-label={isEn ? 'Mobile navigation' : 'モバイルナビゲーション'}>
+    <nav id="mobile-nav" class="mobile-nav" aria-label={isEn ? 'Site menu' : 'サイト全体メニュー'}>
+      <div class="mnav-inner">
       {isEn ? (
         <>
-          <a href="/en/mlb/">MLB</a>
-          <a href="/en/npb/">NPB</a>
-          <a href="/en/glossary/">Stats Guide</a>
+          <div class="mnav-group">
+            <button class="mnav-toggle" aria-expanded="false">MLB <span class="chev">▼</span></button>
+            <div class="mnav-sub-wrap"><div class="mnav-sub">
+              <a href="/en/mlb/standings/">Standings</a>
+              <a href="/en/mlb/leaders/">Stat Leaders</a>
+              <a href="/en/mlb/results/">Recent Results</a>
+              <a href="/en/teams/">Teams</a>
+              <a href="/en/players/">Players</a>
+              <a href="/en/mlb/trends/">Trends</a>
+              <a href="/en/mlb/analysis/">Analysis</a>
+              <a href="/en/mlb/">MLB Hub</a>
+            </div></div>
+          </div>
+          <div class="mnav-group">
+            <button class="mnav-toggle" aria-expanded="false">NPB <span class="chev">▼</span></button>
+            <div class="mnav-sub-wrap"><div class="mnav-sub">
+              <a href="/en/npb/standings/">Standings</a>
+              <a href="/en/npb/leaders/">Stat Leaders</a>
+              <a href="/en/npb/results/">Recent Results</a>
+              <a href="/en/npb/trends/">Trends</a>
+              <a href="/en/npb/">NPB Hub</a>
+            </div></div>
+          </div>
+          <a class="mnav-link" href="/en/glossary/">Stats Guide <span class="chev">›</span></a>
+          <div class="mnav-group">
+            <button class="mnav-toggle" aria-expanded="false">More <span class="chev">▼</span></button>
+            <div class="mnav-sub-wrap"><div class="mnav-sub">
+              <a href="/en/gear/">Gear</a>
+              <a href="/en/streaming/">Streaming</a>
+            </div></div>
+          </div>
         </>
       ) : (
         <>
-          <a href="/mlb/">MLB</a>
-          <a href="/npb/">NPB</a>
-          <a href="/glossary/">指標解説</a>
-          <a href="/gear/">機材</a>
-          <a href="/streaming/">配信</a>
-          <a href="/search/">🔍 検索</a>
+          <div class="mnav-group">
+            <button class="mnav-toggle" aria-expanded="false">MLB <span class="chev">▼</span></button>
+            <div class="mnav-sub-wrap"><div class="mnav-sub">
+              <a href="/mlb/standings/">順位表</a>
+              <a href="/mlb/leaders/">成績ランキング</a>
+              <a href="/mlb/results/">直近3試合 結果</a>
+              <a href="/teams/">球団一覧</a>
+              <p class="mnav-subhead">選手一覧</p>
+              <a href="/players/">全選手</a>
+              <a href="/players/american-league/">ア・リーグ（チーム別）</a>
+              <a href="/players/national-league/">ナ・リーグ（チーム別）</a>
+              <p class="mnav-subhead">その他のMLBページ</p>
+              <a href="/mlb/trends/">トレンド</a>
+              <a href="/mlb/japanese/">日本人メジャー選手</a>
+              <a href="/mlb/analysis/">データ分析</a>
+              <a href="/season/">シーズン概況</a>
+              <a href="/mlb/">MLBデータハブ</a>
+            </div></div>
+          </div>
+          <div class="mnav-group">
+            <button class="mnav-toggle" aria-expanded="false">NPB <span class="chev">▼</span></button>
+            <div class="mnav-sub-wrap"><div class="mnav-sub">
+              <a href="/npb/standings/">順位表</a>
+              <a href="/npb/leaders/">成績ランキング</a>
+              <a href="/npb/results/">直近3試合 結果</a>
+              <a href="/npb/teams/">球団一覧</a>
+              <p class="mnav-subhead">選手一覧</p>
+              <a href="/npb/players/">全選手</a>
+              <a href="/npb/players/central-league/">セ・リーグ（チーム別）</a>
+              <a href="/npb/players/pacific-league/">パ・リーグ（チーム別）</a>
+              <p class="mnav-subhead">その他のNPBページ</p>
+              <a href="/npb/trends/">トレンド</a>
+              <a href="/npb/">NPBデータハブ</a>
+            </div></div>
+          </div>
+          <a class="mnav-link" href="/glossary/">指標解説 <span class="chev">›</span></a>
+          <div class="mnav-group">
+            <button class="mnav-toggle" aria-expanded="false">その他 <span class="chev">▼</span></button>
+            <div class="mnav-sub-wrap"><div class="mnav-sub">
+              <a href="/gear/">機材ガイド</a>
+              <a href="/streaming/">配信サービス比較</a>
+            </div></div>
+          </div>
+          <a class="mnav-link" href="/search/">🔍 検索 <span class="chev">›</span></a>
         </>
       )}
+      </div>
     </nav>
     <script is:inline>
       (function(){
@@ -394,6 +542,29 @@ const enAbsolute = `https://baseballab.com${enUrl}`;
         btn.addEventListener('click', function(){
           var open = nav.classList.toggle('open');
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        // アコーディオン: 大分類クリックで小項目を開閉（同時に開くのは1つ）
+        nav.addEventListener('click', function(e){
+          var t = e.target.closest('.mnav-toggle');
+          if (!t) return;
+          var g = t.parentElement;
+          var wasOpen = g.classList.contains('open');
+          nav.querySelectorAll('.mnav-group.open').forEach(function(o){
+            o.classList.remove('open');
+            var ot = o.querySelector('.mnav-toggle');
+            if (ot) ot.setAttribute('aria-expanded', 'false');
+          });
+          if (!wasOpen) {
+            g.classList.add('open');
+            t.setAttribute('aria-expanded', 'true');
+          }
+        });
+        // メニュー外クリックで閉じる
+        document.addEventListener('click', function(e){
+          if (!nav.classList.contains('open')) return;
+          if (nav.contains(e.target) || btn.contains(e.target)) return;
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
         });
       })();
     </script>

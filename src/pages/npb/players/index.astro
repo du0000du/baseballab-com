@@ -71,6 +71,9 @@ const ogUrl = 'https://baseballab.com/npb/players/';
     .filter-btn:hover { border-color:var(--navy); color:var(--navy); }
     .filter-btn.active { background:var(--navy); border-color:var(--navy); color:#fff; }
     .filter-btn.all.active { background:var(--gray-800); border-color:var(--gray-800); }
+    .league-tab { display:inline-block; background:var(--navy); border:1px solid var(--navy); border-radius:20px;
+      padding:.28rem .85rem; font-size:.8rem; font-weight:600; color:#fff; text-decoration:none; transition:opacity .15s; }
+    .league-tab:hover { opacity:.85; }
   </style>
 
   <section class="hero">
@@ -85,6 +88,11 @@ const ogUrl = 'https://baseballab.com/npb/players/';
   {/* チームフィルター */}
   <div class="filter-wrap">
     <div class="container">
+      <p class="filter-label">まとめて見る</p>
+      <div class="filter-btns" style="margin-bottom:.9rem;">
+        <a class="league-tab" href="/npb/players/central-league/">セ・リーグ選手一覧（チーム別）</a>
+        <a class="league-tab" href="/npb/players/pacific-league/">パ・リーグ選手一覧（チーム別）</a>
+      </div>
       <p class="filter-label">球団で絞り込む</p>
       <div class="filter-btns">
         <button class="filter-btn all active" data-filter="all">すべて</button>
