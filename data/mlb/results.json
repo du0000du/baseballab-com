@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-03T04:34:50Z",
+  "fetchedAt": "2026-07-03T11:32:38Z",
   "season": "2026",
   "asOfDate": "2026-07-03",
   "teams": [
@@ -1120,6 +1120,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-07-02",
+          "opponent": "San Diego Padres",
+          "opponentAbbr": "SD",
+          "home": true,
+          "score": 12,
+          "opponentScore": 7,
+          "result": "W",
+          "venue": "UNIQLO Field at Dodger Stadium"
+        },
+        {
           "date": "2026-07-01",
           "opponent": "Athletics",
           "opponentAbbr": "ATH",
@@ -1138,16 +1148,6 @@
           "opponentScore": 3,
           "result": "W",
           "venue": "Sutter Health Park"
-        },
-        {
-          "date": "2026-06-29",
-          "opponent": "Athletics",
-          "opponentAbbr": "ATH",
-          "home": false,
-          "score": 9,
-          "opponentScore": 4,
-          "result": "W",
-          "venue": "Sutter Health Park"
         }
       ]
     },
@@ -1160,6 +1160,16 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "recentGames": [
+        {
+          "date": "2026-07-02",
+          "opponent": "Los Angeles Dodgers",
+          "opponentAbbr": "LAD",
+          "home": false,
+          "score": 7,
+          "opponentScore": 12,
+          "result": "L",
+          "venue": "UNIQLO Field at Dodger Stadium"
+        },
         {
           "date": "2026-07-01",
           "opponent": "Chicago Cubs",
@@ -1177,16 +1187,6 @@
           "home": false,
           "score": 7,
           "opponentScore": 9,
-          "result": "L",
-          "venue": "Wrigley Field"
-        },
-        {
-          "date": "2026-06-29",
-          "opponent": "Chicago Cubs",
-          "opponentAbbr": "CHC",
-          "home": false,
-          "score": 2,
-          "opponentScore": 3,
           "result": "L",
           "venue": "Wrigley Field"
         }
