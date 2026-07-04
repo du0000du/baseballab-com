@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-04T14:59:31Z",
+  "fetchedAt": "2026-07-04T17:59:19Z",
   "season": "2026",
   "asOfDate": "2026-07-04",
   "teams": [
@@ -751,6 +751,16 @@
       "divisionShort": "NL Central",
       "recentGames": [
         {
+          "date": "2026-07-04",
+          "opponent": "Washington Nationals",
+          "opponentAbbr": "WSH",
+          "home": false,
+          "score": 7,
+          "opponentScore": 1,
+          "result": "W",
+          "venue": "Nationals Park"
+        },
+        {
           "date": "2026-07-03",
           "opponent": "Washington Nationals",
           "opponentAbbr": "WSH",
@@ -768,16 +778,6 @@
           "score": 6,
           "opponentScore": 1,
           "result": "W",
-          "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-07-01",
-          "opponent": "Philadelphia Phillies",
-          "opponentAbbr": "PHI",
-          "home": false,
-          "score": 6,
-          "opponentScore": 10,
-          "result": "L",
           "venue": "Citizens Bank Park"
         }
       ]
@@ -997,6 +997,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-04",
+          "opponent": "Pittsburgh Pirates",
+          "opponentAbbr": "PIT",
+          "home": true,
+          "score": 1,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "Nationals Park"
+        },
+        {
           "date": "2026-07-03",
           "opponent": "Pittsburgh Pirates",
           "opponentAbbr": "PIT",
@@ -1013,16 +1023,6 @@
           "home": false,
           "score": 10,
           "opponentScore": 2,
-          "result": "W",
-          "venue": "Fenway Park"
-        },
-        {
-          "date": "2026-06-30",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": false,
-          "score": 8,
-          "opponentScore": 1,
           "result": "W",
           "venue": "Fenway Park"
         }

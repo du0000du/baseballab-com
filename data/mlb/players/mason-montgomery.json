@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 682254,
+    "fullName": "Mason Montgomery",
+    "link": "/api/v1/people/682254",
+    "firstName": "Mason",
+    "lastName": "Montgomery",
+    "primaryNumber": "46",
+    "birthDate": "2000-06-17",
+    "currentAge": 26,
+    "birthCity": "Austin",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Mason",
+    "useLastName": "Montgomery",
+    "middleName": "Jack",
+    "boxscoreName": "Montgomery, M",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2024-09-05",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Mason Montgomery",
+    "nameSlug": "mason-montgomery-682254",
+    "firstLastName": "Mason Montgomery",
+    "lastFirstName": "Montgomery, Mason",
+    "lastInitName": "Montgomery, M",
+    "initLastName": "M Montgomery",
+    "fullFMLName": "Mason Jack Montgomery",
+    "fullLFMName": "Montgomery, Mason Jack",
+    "strikeZoneTop": 3.47,
+    "strikeZoneBottom": 1.59
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 35,
+            "gamesStarted": 4,
+            "groundOuts": 33,
+            "airOuts": 18,
+            "runs": 18,
+            "doubles": 7,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 50,
+            "baseOnBalls": 16,
+            "intentionalWalks": 0,
+            "hits": 30,
+            "hitByPitch": 0,
+            "avg": ".229",
+            "atBats": 131,
+            "obp": ".313",
+            "slg": ".374",
+            "ops": ".687",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 606,
+            "era": "4.50",
+            "inningsPitched": "34.0",
+            "wins": 2,
+            "losses": 3,
+            "saves": 0,
+            "saveOpportunities": 2,
+            "holds": 9,
+            "blownSaves": 2,
+            "earnedRuns": 17,
+            "whip": "1.35",
+            "battersFaced": 147,
+            "outs": 102,
+            "gamesPitched": 35,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 384,
+            "strikePercentage": ".630",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 49,
+            "groundOutsToAirouts": "1.83",
+            "winPercentage": ".400",
+            "pitchesPerInning": "17.82",
+            "gamesFinished": 6,
+            "strikeoutWalkRatio": "3.13",
+            "strikeoutsPer9Inn": "13.24",
+            "walksPer9Inn": "4.24",
+            "hitsPer9Inn": "7.94",
+            "runsScoredPer9": "4.76",
+            "homeRunsPer9": "1.06",
+            "inheritedRunners": 18,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 134,
+            "name": "Pittsburgh Pirates",
+            "link": "/api/v1/teams/134"
+          },
+          "player": {
+            "id": 682254,
+            "fullName": "Mason Montgomery",
+            "link": "/api/v1/people/682254"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T14:59:31Z",
+  "fetched_at": "2026-07-04T17:59:19Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -47,16 +47,16 @@
       },
       {
         "rank": 7,
-        "playerId": 621566,
-        "player": "Matt Olson",
-        "team": "ATL",
-        "value": 22
-      },
-      {
-        "rank": 7,
         "playerId": 695578,
         "player": "James Wood",
         "team": "WSH",
+        "value": 23
+      },
+      {
+        "rank": 8,
+        "playerId": 621566,
+        "player": "Matt Olson",
+        "team": "ATL",
         "value": 22
       },
       {
@@ -129,7 +129,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".303"
+        "value": ".307"
       },
       {
         "rank": 9,
@@ -198,23 +198,23 @@
       },
       {
         "rank": 7,
+        "playerId": 664040,
+        "player": "Brandon Lowe",
+        "team": "PIT",
+        "value": 60
+      },
+      {
+        "rank": 7,
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
         "value": 60
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 624413,
         "player": "Pete Alonso",
         "team": "BAL",
-        "value": 59
-      },
-      {
-        "rank": 9,
-        "playerId": 693307,
-        "player": "Dillon Dingler",
-        "team": "DET",
         "value": 59
       }
     ],
@@ -409,6 +409,13 @@
       },
       {
         "rank": 6,
+        "playerId": 677952,
+        "player": "Braxton Ashcraft",
+        "team": "PIT",
+        "value": 9
+      },
+      {
+        "rank": 6,
         "playerId": 543135,
         "player": "Nathan Eovaldi",
         "team": "TEX",
@@ -426,13 +433,6 @@
         "playerId": 656492,
         "player": "Foster Griffin",
         "team": "WSH",
-        "value": 9
-      },
-      {
-        "rank": 6,
-        "playerId": 663436,
-        "player": "Davis Martin",
-        "team": "CWS",
         "value": 9
       }
     ],
@@ -474,38 +474,38 @@
       },
       {
         "rank": 6,
+        "playerId": 677952,
+        "player": "Braxton Ashcraft",
+        "team": "PIT",
+        "value": 122
+      },
+      {
+        "rank": 7,
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
         "value": 119
       },
       {
-        "rank": 7,
+        "rank": 8,
         "playerId": 672282,
         "player": "Reid Detmers",
         "team": "LAA",
         "value": 117
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 695505,
         "player": "Chase Burns",
         "team": "CIN",
         "value": 116
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 666200,
         "player": "Jesús Luzardo",
         "team": "PHI",
         "value": 116
-      },
-      {
-        "rank": 10,
-        "playerId": 677952,
-        "player": "Braxton Ashcraft",
-        "team": "PIT",
-        "value": 115
       }
     ],
     "saves": [
