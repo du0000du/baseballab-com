@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-04T04:27:11Z",
+  "fetched_at": "2026-07-04T10:54:46Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -559,24 +559,24 @@
         "value": 18
       },
       {
-        "rank": 8,
+        "rank": 7,
+        "playerId": 686973,
+        "player": "Louis Varland",
+        "team": "TOR",
+        "value": 18
+      },
+      {
+        "rank": 9,
         "playerId": 670280,
         "player": "David Bednar",
         "team": "NYY",
         "value": 17
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 547973,
         "player": "Aroldis Chapman",
         "team": "BOS",
-        "value": 17
-      },
-      {
-        "rank": 8,
-        "playerId": 628452,
-        "player": "Raisel Iglesias",
-        "team": "ATL",
         "value": 17
       }
     ]
