@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 669432,
+    "fullName": "Trevor Rogers",
+    "link": "/api/v1/people/669432",
+    "firstName": "Trevor",
+    "lastName": "Rogers",
+    "primaryNumber": "28",
+    "birthDate": "1997-11-13",
+    "currentAge": 28,
+    "birthCity": "Carlsbad",
+    "birthStateProvince": "NM",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 230,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Trevor",
+    "useLastName": "Rogers",
+    "middleName": "J'Daniel",
+    "boxscoreName": "Rogers, Tr",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2017,
+    "mlbDebutDate": "2020-08-25",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Trevor Rogers",
+    "nameSlug": "trevor-rogers-669432",
+    "firstLastName": "Trevor Rogers",
+    "lastFirstName": "Rogers, Trevor",
+    "lastInitName": "Rogers, T",
+    "initLastName": "T Rogers",
+    "fullFMLName": "Trevor J'Daniel Rogers",
+    "fullLFMName": "Rogers, Trevor J'Daniel",
+    "strikeZoneTop": 3.81,
+    "strikeZoneBottom": 1.77
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 16,
+            "gamesStarted": 16,
+            "groundOuts": 71,
+            "airOuts": 111,
+            "runs": 46,
+            "doubles": 19,
+            "triples": 2,
+            "homeRuns": 9,
+            "strikeOuts": 65,
+            "baseOnBalls": 29,
+            "intentionalWalks": 0,
+            "hits": 82,
+            "hitByPitch": 1,
+            "avg": ".251",
+            "atBats": 327,
+            "obp": ".312",
+            "slg": ".404",
+            "ops": ".716",
+            "caughtStealing": 1,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".900",
+            "caughtStealingPercentage": ".100",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1413,
+            "era": "4.70",
+            "inningsPitched": "84.1",
+            "wins": 6,
+            "losses": 7,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 44,
+            "whip": "1.32",
+            "battersFaced": 359,
+            "outs": 253,
+            "gamesPitched": 16,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 949,
+            "strikePercentage": ".670",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 132,
+            "groundOutsToAirouts": "0.64",
+            "winPercentage": ".462",
+            "pitchesPerInning": "16.75",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.24",
+            "strikeoutsPer9Inn": "6.94",
+            "walksPer9Inn": "3.09",
+            "hitsPer9Inn": "8.75",
+            "runsScoredPer9": "4.91",
+            "homeRunsPer9": "0.96",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          },
+          "player": {
+            "id": 669432,
+            "fullName": "Trevor Rogers",
+            "link": "/api/v1/people/669432"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
