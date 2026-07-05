@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-05T15:07:23Z",
+  "fetched_at": "2026-07-05T17:58:34Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -129,7 +129,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".307"
+        "value": ".309"
       },
       {
         "rank": 9,
@@ -205,16 +205,16 @@
       },
       {
         "rank": 7,
-        "playerId": 664040,
-        "player": "Brandon Lowe",
-        "team": "PIT",
+        "playerId": 605137,
+        "player": "Josh Bell",
+        "team": "MIN",
         "value": 60
       },
       {
         "rank": 7,
-        "playerId": 701398,
-        "player": "Sal Stewart",
-        "team": "CIN",
+        "playerId": 664040,
+        "player": "Brandon Lowe",
+        "team": "PIT",
         "value": 60
       }
     ],
