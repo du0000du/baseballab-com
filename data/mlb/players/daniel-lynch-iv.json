@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 663738,
+    "fullName": "Daniel Lynch IV",
+    "link": "/api/v1/people/663738",
+    "firstName": "Daniel",
+    "lastName": "Lynch",
+    "primaryNumber": "41",
+    "birthDate": "1996-11-17",
+    "currentAge": 29,
+    "birthCity": "Richmond",
+    "birthStateProvince": "VA",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Daniel",
+    "useLastName": "Lynch IV",
+    "middleName": "A.",
+    "boxscoreName": "Lynch IV",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "mlbDebutDate": "2021-05-03",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Daniel Lynch IV",
+    "nameTitle": "IV",
+    "nameSuffix": "IV",
+    "nameSlug": "daniel-lynch-iv-663738",
+    "firstLastName": "Daniel Lynch IV",
+    "lastFirstName": "Lynch IV, Daniel",
+    "lastInitName": "Lynch IV, D",
+    "initLastName": "D Lynch IV",
+    "fullFMLName": "Daniel A. Lynch IV",
+    "fullLFMName": "Lynch IV, Daniel A.",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 37,
+            "gamesStarted": 0,
+            "groundOuts": 40,
+            "airOuts": 37,
+            "runs": 13,
+            "doubles": 7,
+            "triples": 1,
+            "homeRuns": 2,
+            "strikeOuts": 32,
+            "baseOnBalls": 11,
+            "intentionalWalks": 0,
+            "hits": 24,
+            "hitByPitch": 2,
+            "avg": ".182",
+            "atBats": 132,
+            "obp": ".253",
+            "slg": ".295",
+            "ops": ".548",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 551,
+            "era": "2.50",
+            "inningsPitched": "36.0",
+            "wins": 2,
+            "losses": 2,
+            "saves": 1,
+            "saveOpportunities": 3,
+            "holds": 10,
+            "blownSaves": 2,
+            "earnedRuns": 10,
+            "whip": "0.97",
+            "battersFaced": 146,
+            "outs": 108,
+            "gamesPitched": 37,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 345,
+            "strikePercentage": ".630",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 39,
+            "groundOutsToAirouts": "1.08",
+            "winPercentage": ".500",
+            "pitchesPerInning": "15.31",
+            "gamesFinished": 2,
+            "strikeoutWalkRatio": "2.91",
+            "strikeoutsPer9Inn": "8.00",
+            "walksPer9Inn": "2.75",
+            "hitsPer9Inn": "6.00",
+            "runsScoredPer9": "3.25",
+            "homeRunsPer9": "0.50",
+            "inheritedRunners": 19,
+            "inheritedRunnersScored": 4,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 663738,
+            "fullName": "Daniel Lynch IV",
+            "link": "/api/v1/people/663738"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

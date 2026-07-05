@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 687075,
+    "fullName": "Brandon Sproat",
+    "link": "/api/v1/people/687075",
+    "firstName": "Brandon",
+    "lastName": "Sproat",
+    "primaryNumber": "23",
+    "birthDate": "2000-09-17",
+    "currentAge": 25,
+    "birthCity": "Pensacola",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Brandon",
+    "useLastName": "Sproat",
+    "middleName": "Carl",
+    "boxscoreName": "Sproat",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2023,
+    "pronunciation": "rhymes with Boat",
+    "mlbDebutDate": "2025-09-07",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brandon Sproat",
+    "nameSlug": "brandon-sproat-687075",
+    "firstLastName": "Brandon Sproat",
+    "lastFirstName": "Sproat, Brandon",
+    "lastInitName": "Sproat, B",
+    "initLastName": "B Sproat",
+    "fullFMLName": "Brandon Carl Sproat",
+    "fullLFMName": "Sproat, Brandon Carl",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 17,
+            "gamesStarted": 15,
+            "groundOuts": 68,
+            "airOuts": 70,
+            "runs": 45,
+            "doubles": 15,
+            "triples": 0,
+            "homeRuns": 14,
+            "strikeOuts": 84,
+            "baseOnBalls": 37,
+            "intentionalWalks": 0,
+            "hits": 71,
+            "hitByPitch": 6,
+            "avg": ".244",
+            "atBats": 291,
+            "obp": ".341",
+            "slg": ".440",
+            "ops": ".781",
+            "caughtStealing": 6,
+            "stolenBases": 8,
+            "stolenBasePercentage": ".571",
+            "caughtStealingPercentage": ".429",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1375,
+            "era": "5.13",
+            "inningsPitched": "79.0",
+            "wins": 3,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 45,
+            "whip": "1.37",
+            "battersFaced": 336,
+            "outs": 237,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 853,
+            "strikePercentage": ".620",
+            "hitBatsmen": 6,
+            "balks": 0,
+            "wildPitches": 5,
+            "pickoffs": 3,
+            "totalBases": 128,
+            "groundOutsToAirouts": "0.97",
+            "winPercentage": ".429",
+            "pitchesPerInning": "17.41",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.27",
+            "strikeoutsPer9Inn": "9.57",
+            "walksPer9Inn": "4.22",
+            "hitsPer9Inn": "8.09",
+            "runsScoredPer9": "5.13",
+            "homeRunsPer9": "1.59",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 687075,
+            "fullName": "Brandon Sproat",
+            "link": "/api/v1/people/687075"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
