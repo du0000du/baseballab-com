@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 805299,
+    "fullName": "Brandyn Garcia",
+    "link": "/api/v1/people/805299",
+    "firstName": "Brandyn",
+    "lastName": "Garcia",
+    "primaryNumber": "55",
+    "birthDate": "2000-05-27",
+    "currentAge": 26,
+    "birthCity": "Newport",
+    "birthStateProvince": "RI",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 235,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Brandyn",
+    "useLastName": "Garcia",
+    "middleName": "Michael",
+    "boxscoreName": "Garcia, B",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2023,
+    "mlbDebutDate": "2025-07-21",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Brandyn Garcia",
+    "nameSlug": "brandyn-garcia-805299",
+    "firstLastName": "Brandyn Garcia",
+    "lastFirstName": "Garcia, Brandyn",
+    "lastInitName": "Garcia, B",
+    "initLastName": "B Garcia",
+    "fullFMLName": "Brandyn Michael Garcia",
+    "fullLFMName": "Garcia, Brandyn Michael",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 25,
+            "gamesStarted": 0,
+            "groundOuts": 24,
+            "airOuts": 14,
+            "runs": 5,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 22,
+            "baseOnBalls": 6,
+            "intentionalWalks": 1,
+            "hits": 12,
+            "hitByPitch": 3,
+            "avg": ".169",
+            "atBats": 71,
+            "obp": ".263",
+            "slg": ".183",
+            "ops": ".446",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 281,
+            "era": "2.11",
+            "inningsPitched": "21.1",
+            "wins": 0,
+            "losses": 1,
+            "saves": 1,
+            "saveOpportunities": 1,
+            "holds": 9,
+            "blownSaves": 0,
+            "earnedRuns": 5,
+            "whip": "0.84",
+            "battersFaced": 81,
+            "outs": 64,
+            "gamesPitched": 25,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 185,
+            "strikePercentage": ".660",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 13,
+            "groundOutsToAirouts": "1.71",
+            "winPercentage": ".000",
+            "pitchesPerInning": "13.17",
+            "gamesFinished": 4,
+            "strikeoutWalkRatio": "3.67",
+            "strikeoutsPer9Inn": "9.28",
+            "walksPer9Inn": "2.53",
+            "hitsPer9Inn": "5.06",
+            "runsScoredPer9": "2.11",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 6,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 805299,
+            "fullName": "Brandyn Garcia",
+            "link": "/api/v1/people/805299"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

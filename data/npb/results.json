@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-07-04T17:58:31Z",
+  "fetchedAt": "2026-07-05T04:47:29Z",
   "season": "2026",
-  "asOfDate": "2026-07-04",
+  "asOfDate": "2026-07-05",
   "teams": [
     {
       "slug": "hanshin-tigers",
@@ -89,6 +89,16 @@
       "accent": "#000000",
       "recentGames": [
         {
+          "date": "2026-07-05",
+          "opponent": "中日ドラゴンズ",
+          "opponentSlug": "chunichi-dragons",
+          "home": true,
+          "score": 0,
+          "opponentScore": 0,
+          "result": "T",
+          "stadium": "東京ドーム"
+        },
+        {
           "date": "2026-07-04",
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
@@ -107,16 +117,6 @@
           "opponentScore": 1,
           "result": "L",
           "stadium": "東京ドーム"
-        },
-        {
-          "date": "2026-07-01",
-          "opponent": "東京ヤクルトスワローズ",
-          "opponentSlug": "yakult-swallows",
-          "home": false,
-          "score": 2,
-          "opponentScore": 1,
-          "result": "W",
-          "stadium": "明治神宮野球場"
         }
       ]
     },
@@ -127,6 +127,16 @@
       "color": "#002569",
       "accent": "#ffffff",
       "recentGames": [
+        {
+          "date": "2026-07-05",
+          "opponent": "読売ジャイアンツ",
+          "opponentSlug": "yomiuri-giants",
+          "home": false,
+          "score": 0,
+          "opponentScore": 0,
+          "result": "T",
+          "stadium": "東京ドーム"
+        },
         {
           "date": "2026-07-04",
           "opponent": "読売ジャイアンツ",
@@ -146,16 +156,6 @@
           "opponentScore": 0,
           "result": "W",
           "stadium": "東京ドーム"
-        },
-        {
-          "date": "2026-07-02",
-          "opponent": "阪神タイガース",
-          "opponentSlug": "hanshin-tigers",
-          "home": true,
-          "score": 3,
-          "opponentScore": 2,
-          "result": "W",
-          "stadium": "バンテリンドームナゴヤ"
         }
       ]
     },
@@ -284,6 +284,16 @@
       "accent": "#000000",
       "recentGames": [
         {
+          "date": "2026-07-05",
+          "opponent": "千葉ロッテマリーンズ",
+          "opponentSlug": "lotte-marines",
+          "home": false,
+          "score": 3,
+          "opponentScore": 0,
+          "result": "W",
+          "stadium": "ZOZOマリンスタジアム"
+        },
+        {
           "date": "2026-07-04",
           "opponent": "千葉ロッテマリーンズ",
           "opponentSlug": "lotte-marines",
@@ -302,16 +312,6 @@
           "opponentScore": 2,
           "result": "W",
           "stadium": "ZOZOマリンスタジアム"
-        },
-        {
-          "date": "2026-07-02",
-          "opponent": "埼玉西武ライオンズ",
-          "opponentSlug": "seibu-lions",
-          "home": false,
-          "score": 3,
-          "opponentScore": 1,
-          "result": "W",
-          "stadium": "ベルーナドーム"
         }
       ]
     },
@@ -440,6 +440,16 @@
       "accent": "#ffffff",
       "recentGames": [
         {
+          "date": "2026-07-05",
+          "opponent": "福岡ソフトバンクホークス",
+          "opponentSlug": "softbank-hawks",
+          "home": true,
+          "score": 0,
+          "opponentScore": 3,
+          "result": "L",
+          "stadium": "ZOZOマリンスタジアム"
+        },
+        {
           "date": "2026-07-04",
           "opponent": "福岡ソフトバンクホークス",
           "opponentSlug": "softbank-hawks",
@@ -457,16 +467,6 @@
           "score": 2,
           "opponentScore": 3,
           "result": "L",
-          "stadium": "ZOZOマリンスタジアム"
-        },
-        {
-          "date": "2026-07-01",
-          "opponent": "東北楽天ゴールデンイーグルス",
-          "opponentSlug": "rakuten-eagles",
-          "home": true,
-          "score": 5,
-          "opponentScore": 0,
-          "result": "W",
           "stadium": "ZOZOマリンスタジアム"
         }
       ]

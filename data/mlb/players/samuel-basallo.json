@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 694212,
+    "fullName": "Samuel Basallo",
+    "link": "/api/v1/people/694212",
+    "firstName": "Samuel",
+    "lastName": "Basallo",
+    "primaryNumber": "29",
+    "birthDate": "2004-08-13",
+    "currentAge": 21,
+    "birthCity": "Santo Domingo",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 4\"",
+    "weight": 250,
+    "active": true,
+    "primaryPosition": {
+      "code": "2",
+      "name": "Catcher",
+      "type": "Catcher",
+      "abbreviation": "C"
+    },
+    "useName": "Samuel",
+    "useLastName": "Basallo",
+    "middleName": "Alexander",
+    "boxscoreName": "Basallo",
+    "gender": "M",
+    "nameMatrilineal": "Mendez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "SAM-well bah-SY-yo",
+    "mlbDebutDate": "2025-08-17",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Samuel Basallo",
+    "nameSlug": "samuel-basallo-694212",
+    "firstLastName": "Samuel Basallo",
+    "lastFirstName": "Basallo, Samuel",
+    "lastInitName": "Basallo, S",
+    "initLastName": "S Basallo",
+    "fullFMLName": "Samuel Alexander Basallo",
+    "fullLFMName": "Basallo, Samuel Alexander",
+    "strikeZoneTop": 3.39,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 21,
+            "gamesPlayed": 76,
+            "groundOuts": 61,
+            "airOuts": 56,
+            "runs": 31,
+            "doubles": 9,
+            "triples": 1,
+            "homeRuns": 14,
+            "strikeOuts": 70,
+            "baseOnBalls": 25,
+            "intentionalWalks": 2,
+            "hits": 64,
+            "hitByPitch": 0,
+            "avg": ".257",
+            "atBats": 249,
+            "obp": ".322",
+            "slg": ".470",
+            "ops": ".792",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1013,
+            "plateAppearances": 276,
+            "totalBases": 117,
+            "rbi": 42,
+            "leftOnBase": 108,
+            "sacBunts": 0,
+            "sacFlies": 2,
+            "babip": ".299",
+            "groundOutsToAirouts": "1.09",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "17.79"
+          },
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          },
+          "player": {
+            "id": 694212,
+            "fullName": "Samuel Basallo",
+            "link": "/api/v1/people/694212"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

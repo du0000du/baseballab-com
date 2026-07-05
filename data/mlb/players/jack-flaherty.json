@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 656427,
+    "fullName": "Jack Flaherty",
+    "link": "/api/v1/people/656427",
+    "firstName": "Jack",
+    "lastName": "Flaherty",
+    "primaryNumber": "9",
+    "birthDate": "1995-10-15",
+    "currentAge": 30,
+    "birthCity": "Burbank",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jack",
+    "useLastName": "Flaherty",
+    "middleName": "Rafe",
+    "boxscoreName": "Flaherty",
+    "nickName": "Flare",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2017-09-01",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jack Flaherty",
+    "nameSlug": "jack-flaherty-656427",
+    "firstLastName": "Jack Flaherty",
+    "lastFirstName": "Flaherty, Jack",
+    "lastInitName": "Flaherty, J",
+    "initLastName": "J Flaherty",
+    "fullFMLName": "Jack Rafe Flaherty",
+    "fullLFMName": "Flaherty, Jack Rafe",
+    "strikeZoneTop": 3.48,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 17,
+            "gamesStarted": 17,
+            "groundOuts": 51,
+            "airOuts": 87,
+            "runs": 47,
+            "doubles": 20,
+            "triples": 3,
+            "homeRuns": 8,
+            "strikeOuts": 92,
+            "baseOnBalls": 37,
+            "intentionalWalks": 1,
+            "hits": 74,
+            "hitByPitch": 6,
+            "avg": ".248",
+            "atBats": 298,
+            "obp": ".339",
+            "slg": ".416",
+            "ops": ".755",
+            "caughtStealing": 1,
+            "stolenBases": 3,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1471,
+            "era": "4.60",
+            "inningsPitched": "76.1",
+            "wins": 2,
+            "losses": 8,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 39,
+            "whip": "1.45",
+            "battersFaced": 347,
+            "outs": 229,
+            "gamesPitched": 17,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 902,
+            "strikePercentage": ".610",
+            "hitBatsmen": 6,
+            "balks": 1,
+            "wildPitches": 5,
+            "pickoffs": 0,
+            "totalBases": 124,
+            "groundOutsToAirouts": "0.59",
+            "winPercentage": ".200",
+            "pitchesPerInning": "19.27",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.49",
+            "strikeoutsPer9Inn": "10.85",
+            "walksPer9Inn": "4.36",
+            "hitsPer9Inn": "8.72",
+            "runsScoredPer9": "5.54",
+            "homeRunsPer9": "0.94",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 4
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 656427,
+            "fullName": "Jack Flaherty",
+            "link": "/api/v1/people/656427"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

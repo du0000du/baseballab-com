@@ -1,22 +1,9 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-07-04T17:57:51Z",
+  "fetchedAt": "2026-07-05T04:46:47Z",
   "central": [
     {
       "rank": 1,
-      "teamSlug": "yomiuri-giants",
-      "teamName": "読売ジャイアンツ",
-      "teamAbbr": "G",
-      "league": "central",
-      "games": 72,
-      "wins": 38,
-      "losses": 32,
-      "ties": 2,
-      "pct": ".543",
-      "gb": "--"
-    },
-    {
-      "rank": 2,
       "teamSlug": "hanshin-tigers",
       "teamName": "阪神タイガース",
       "teamAbbr": "T",
@@ -26,7 +13,20 @@
       "losses": 33,
       "ties": 1,
       "pct": ".535",
-      "gb": "0.5"
+      "gb": "--"
+    },
+    {
+      "rank": 2,
+      "teamSlug": "yomiuri-giants",
+      "teamName": "読売ジャイアンツ",
+      "teamAbbr": "G",
+      "league": "central",
+      "games": 73,
+      "wins": 38,
+      "losses": 33,
+      "ties": 2,
+      "pct": ".535",
+      "gb": "--"
     },
     {
       "rank": 3,
@@ -34,11 +34,11 @@
       "teamName": "東京ヤクルトスワローズ",
       "teamAbbr": "S",
       "league": "central",
-      "games": 72,
+      "games": 73,
       "wins": 38,
-      "losses": 33,
+      "losses": 34,
       "ties": 1,
-      "pct": ".535",
+      "pct": ".528",
       "gb": "0.5"
     },
     {
@@ -52,7 +52,7 @@
       "losses": 39,
       "ties": 4,
       "pct": ".418",
-      "gb": "8.5"
+      "gb": "8.0"
     },
     {
       "rank": 5,
@@ -60,12 +60,12 @@
       "teamName": "横浜DeNAベイスターズ",
       "teamAbbr": "DB",
       "league": "central",
-      "games": 73,
-      "wins": 28,
+      "games": 74,
+      "wins": 29,
       "losses": 42,
       "ties": 3,
-      "pct": ".400",
-      "gb": "10.0"
+      "pct": ".408",
+      "gb": "9.0"
     },
     {
       "rank": 6,
@@ -73,12 +73,12 @@
       "teamName": "中日ドラゴンズ",
       "teamAbbr": "D",
       "league": "central",
-      "games": 74,
-      "wins": 28,
+      "games": 75,
+      "wins": 29,
       "losses": 45,
       "ties": 1,
-      "pct": ".384",
-      "gb": "11.5"
+      "pct": ".392",
+      "gb": "10.5"
     }
   ],
   "pacific": [
@@ -88,11 +88,11 @@
       "teamName": "福岡ソフトバンクホークス",
       "teamAbbr": "H",
       "league": "pacific",
-      "games": 74,
+      "games": 75,
       "wins": 45,
-      "losses": 28,
+      "losses": 29,
       "ties": 1,
-      "pct": ".616",
+      "pct": ".608",
       "gb": "--"
     },
     {
@@ -106,7 +106,7 @@
       "losses": 32,
       "ties": 3,
       "pct": ".579",
-      "gb": "2.5"
+      "gb": "2.0"
     },
     {
       "rank": 3,
@@ -114,15 +114,28 @@
       "teamName": "北海道日本ハムファイターズ",
       "teamAbbr": "F",
       "league": "pacific",
-      "games": 79,
+      "games": 80,
       "wins": 45,
-      "losses": 34,
+      "losses": 35,
       "ties": 0,
-      "pct": ".570",
+      "pct": ".563",
       "gb": "3.0"
     },
     {
       "rank": 4,
+      "teamSlug": "lotte-marines",
+      "teamName": "千葉ロッテマリーンズ",
+      "teamAbbr": "M",
+      "league": "pacific",
+      "games": 73,
+      "wins": 36,
+      "losses": 34,
+      "ties": 3,
+      "pct": ".5142",
+      "gb": "7.0"
+    },
+    {
+      "rank": 5,
       "teamSlug": "orix-buffaloes",
       "teamName": "オリックス・バファローズ",
       "teamAbbr": "B",
@@ -131,21 +144,8 @@
       "wins": 38,
       "losses": 36,
       "ties": 2,
-      "pct": ".514",
-      "gb": "7.5"
-    },
-    {
-      "rank": 5,
-      "teamSlug": "lotte-marines",
-      "teamName": "千葉ロッテマリーンズ",
-      "teamAbbr": "M",
-      "league": "pacific",
-      "games": 72,
-      "wins": 35,
-      "losses": 34,
-      "ties": 3,
-      "pct": ".507",
-      "gb": "8.0"
+      "pct": ".5135",
+      "gb": "7.0"
     },
     {
       "rank": 6,
@@ -153,31 +153,18 @@
       "teamName": "東北楽天ゴールデンイーグルス",
       "teamAbbr": "E",
       "league": "pacific",
-      "games": 74,
-      "wins": 28,
+      "games": 75,
+      "wins": 29,
       "losses": 45,
       "ties": 1,
-      "pct": ".384",
-      "gb": "17.0"
+      "pct": ".392",
+      "gb": "16.0"
     }
   ],
-  "estimatedAsOf": "2026-07-04",
+  "estimatedAsOf": "2026-07-05",
   "estimatedCentral": [
     {
       "rank": 1,
-      "teamSlug": "yomiuri-giants",
-      "teamName": "読売ジャイアンツ",
-      "teamAbbr": "G",
-      "league": "central",
-      "games": 73,
-      "wins": 38,
-      "losses": 33,
-      "ties": 2,
-      "pct": ".535",
-      "gb": "--"
-    },
-    {
-      "rank": 2,
       "teamSlug": "hanshin-tigers",
       "teamName": "阪神タイガース",
       "teamAbbr": "T",
@@ -186,6 +173,19 @@
       "wins": 38,
       "losses": 33,
       "ties": 1,
+      "pct": ".535",
+      "gb": "--"
+    },
+    {
+      "rank": 2,
+      "teamSlug": "yomiuri-giants",
+      "teamName": "読売ジャイアンツ",
+      "teamAbbr": "G",
+      "league": "central",
+      "games": 74,
+      "wins": 38,
+      "losses": 33,
+      "ties": 3,
       "pct": ".535",
       "gb": "0"
     },
@@ -234,10 +234,10 @@
       "teamName": "中日ドラゴンズ",
       "teamAbbr": "D",
       "league": "central",
-      "games": 75,
+      "games": 76,
       "wins": 29,
       "losses": 45,
-      "ties": 1,
+      "ties": 2,
       "pct": ".391",
       "gb": "10.5"
     }
@@ -249,11 +249,11 @@
       "teamName": "福岡ソフトバンクホークス",
       "teamAbbr": "H",
       "league": "pacific",
-      "games": 75,
-      "wins": 45,
+      "games": 76,
+      "wins": 46,
       "losses": 29,
       "ties": 1,
-      "pct": ".608",
+      "pct": ".613",
       "gb": "--"
     },
     {
@@ -267,7 +267,7 @@
       "losses": 32,
       "ties": 3,
       "pct": ".578",
-      "gb": "2"
+      "gb": "2.5"
     },
     {
       "rank": 3,
@@ -280,23 +280,10 @@
       "losses": 35,
       "ties": 0,
       "pct": ".562",
-      "gb": "3"
+      "gb": "3.5"
     },
     {
       "rank": 4,
-      "teamSlug": "lotte-marines",
-      "teamName": "千葉ロッテマリーンズ",
-      "teamAbbr": "M",
-      "league": "pacific",
-      "games": 73,
-      "wins": 36,
-      "losses": 34,
-      "ties": 3,
-      "pct": ".514",
-      "gb": "7"
-    },
-    {
-      "rank": 5,
       "teamSlug": "orix-buffaloes",
       "teamName": "オリックス・バファローズ",
       "teamAbbr": "B",
@@ -306,7 +293,20 @@
       "losses": 36,
       "ties": 2,
       "pct": ".513",
-      "gb": "7"
+      "gb": "7.5"
+    },
+    {
+      "rank": 5,
+      "teamSlug": "lotte-marines",
+      "teamName": "千葉ロッテマリーンズ",
+      "teamAbbr": "M",
+      "league": "pacific",
+      "games": 74,
+      "wins": 36,
+      "losses": 35,
+      "ties": 3,
+      "pct": ".507",
+      "gb": "8"
     },
     {
       "rank": 6,
@@ -319,7 +319,7 @@
       "losses": 45,
       "ties": 1,
       "pct": ".391",
-      "gb": "16"
+      "gb": "16.5"
     }
   ]
 }

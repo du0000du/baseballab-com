@@ -9,7 +9,7 @@
   "group": "pitching",
   "qualified": true,
   "season": "2026",
-  "rank": 13,
+  "rank": 14,
   "stats": {
     "era": 3.06,
     "games": 14,
@@ -36,8 +36,8 @@
     "er": 28,
     "whip": 1.03
   },
-  "asOf": "2026-07-03",
-  "fetchedAt": "2026-07-04T17:57:51Z",
+  "asOf": "2026-07-04",
+  "fetchedAt": "2026-07-05T04:46:47Z",
   "source": "NPB.jp 日本野球機構",
   "sourceUrl": "https://npb.jp/bis/2026/stats/pit_c.html"
 }
