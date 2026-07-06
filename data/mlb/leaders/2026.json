@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-06T16:49:22Z",
+  "fetched_at": "2026-07-06T18:52:49Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -129,7 +129,7 @@
         "playerId": 669016,
         "player": "Brandon Marsh",
         "team": "PHI",
-        "value": ".309"
+        "value": ".308"
       },
       {
         "rank": 9,
@@ -302,38 +302,38 @@
       },
       {
         "rank": 2,
-        "playerId": 650911,
-        "player": "Cristopher Sánchez",
-        "team": "PHI",
-        "value": "2.00"
-      },
-      {
-        "rank": 3,
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
         "value": "2.08"
       },
       {
-        "rank": 4,
+        "rank": 3,
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
         "value": "2.25"
       },
       {
-        "rank": 5,
+        "rank": 4,
         "playerId": 519242,
         "player": "Chris Sale",
         "team": "ATL",
         "value": "2.27"
       },
       {
-        "rank": 6,
+        "rank": 5,
         "playerId": 695505,
         "player": "Chase Burns",
         "team": "CIN",
         "value": "2.40"
+      },
+      {
+        "rank": 6,
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
+        "value": "2.44"
       },
       {
         "rank": 7,
@@ -452,11 +452,11 @@
         "value": 137
       },
       {
-        "rank": 3,
+        "rank": 2,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
-        "value": 136
+        "value": 137
       },
       {
         "rank": 4,
