@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-06T18:52:49Z",
+  "fetchedAt": "2026-07-06T23:16:52Z",
   "season": "2026",
   "asOfDate": "2026-07-06",
   "teams": [
@@ -136,6 +136,16 @@
       "divisionShort": "AL Central",
       "recentGames": [
         {
+          "date": "2026-07-06",
+          "opponent": "Philadelphia Phillies",
+          "opponentAbbr": "PHI",
+          "home": true,
+          "score": 15,
+          "opponentScore": 1,
+          "result": "W",
+          "venue": "Kauffman Stadium"
+        },
+        {
           "date": "2026-07-05",
           "opponent": "Philadelphia Phillies",
           "opponentAbbr": "PHI",
@@ -152,16 +162,6 @@
           "home": true,
           "score": 1,
           "opponentScore": 6,
-          "result": "L",
-          "venue": "Kauffman Stadium"
-        },
-        {
-          "date": "2026-07-02",
-          "opponent": "Tampa Bay Rays",
-          "opponentAbbr": "TB",
-          "home": true,
-          "score": 2,
-          "opponentScore": 5,
           "result": "L",
           "venue": "Kauffman Stadium"
         }
@@ -956,6 +956,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-06",
+          "opponent": "Kansas City Royals",
+          "opponentAbbr": "KC",
+          "home": false,
+          "score": 1,
+          "opponentScore": 15,
+          "result": "L",
+          "venue": "Kauffman Stadium"
+        },
+        {
           "date": "2026-07-05",
           "opponent": "Kansas City Royals",
           "opponentAbbr": "KC",
@@ -974,16 +984,6 @@
           "opponentScore": 1,
           "result": "W",
           "venue": "Kauffman Stadium"
-        },
-        {
-          "date": "2026-07-02",
-          "opponent": "Pittsburgh Pirates",
-          "opponentAbbr": "PIT",
-          "home": true,
-          "score": 1,
-          "opponentScore": 6,
-          "result": "L",
-          "venue": "Citizens Bank Park"
         }
       ]
     },

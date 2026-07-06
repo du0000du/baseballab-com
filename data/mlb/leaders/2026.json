@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-06T18:52:49Z",
+  "fetched_at": "2026-07-06T23:16:51Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -91,17 +91,17 @@
       },
       {
         "rank": 3,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
+        "playerId": 670541,
+        "player": "Yordan Alvarez",
+        "team": "HOU",
         "value": ".321"
       },
       {
         "rank": 4,
-        "playerId": 670541,
-        "player": "Yordan Alvarez",
-        "team": "HOU",
-        "value": ".320"
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".319"
       },
       {
         "rank": 5,
@@ -129,7 +129,7 @@
         "playerId": 669016,
         "player": "Brandon Marsh",
         "team": "PHI",
-        "value": ".308"
+        "value": ".305"
       },
       {
         "rank": 9,
@@ -305,7 +305,7 @@
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
-        "value": "2.08"
+        "value": "2.02"
       },
       {
         "rank": 3,
@@ -330,38 +330,38 @@
       },
       {
         "rank": 6,
-        "playerId": 650911,
-        "player": "Cristopher Sánchez",
-        "team": "PHI",
-        "value": "2.44"
-      },
-      {
-        "rank": 7,
         "playerId": 808967,
         "player": "Yoshinobu Yamamoto",
         "team": "LAD",
         "value": "2.49"
       },
       {
-        "rank": 8,
+        "rank": 7,
         "playerId": 676974,
         "player": "Max Meyer",
         "team": "MIA",
         "value": "2.53"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "playerId": 543243,
         "player": "Sonny Gray",
         "team": "BOS",
         "value": "2.61"
       },
       {
-        "rank": 10,
+        "rank": 9,
         "playerId": 607259,
         "player": "Nick Martinez",
         "team": "TB",
         "value": "2.61"
+      },
+      {
+        "rank": 10,
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
+        "value": "2.62"
       }
     ],
     "wins": [
@@ -466,14 +466,14 @@
         "value": 125
       },
       {
-        "rank": 5,
+        "rank": 4,
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
-        "value": 123
+        "value": 125
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 668909,
         "player": "Gavin Williams",
         "team": "CLE",
