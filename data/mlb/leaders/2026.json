@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-05T22:48:46Z",
+  "fetched_at": "2026-07-06T05:02:25Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -80,7 +80,7 @@
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".344"
+        "value": ".346"
       },
       {
         "rank": 2,
@@ -105,16 +105,16 @@
       },
       {
         "rank": 5,
-        "playerId": 687859,
-        "player": "Troy Johnston",
-        "team": "COL",
-        "value": ".313"
-      },
-      {
-        "rank": 6,
         "playerId": 808982,
         "player": "Jung Hoo Lee",
         "team": "SF",
+        "value": ".315"
+      },
+      {
+        "rank": 6,
+        "playerId": 687859,
+        "player": "Troy Johnston",
+        "team": "COL",
         "value": ".313"
       },
       {
@@ -269,24 +269,24 @@
         "value": 21
       },
       {
-        "rank": 8,
+        "rank": 6,
+        "playerId": 665487,
+        "player": "Fernando Tatis Jr.",
+        "team": "SD",
+        "value": 21
+      },
+      {
+        "rank": 9,
         "playerId": 676609,
         "player": "José Caballero",
         "team": "NYY",
         "value": 20
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 804606,
         "player": "Konnor Griffin",
         "team": "PIT",
-        "value": 20
-      },
-      {
-        "rank": 8,
-        "playerId": 665487,
-        "player": "Fernando Tatis Jr.",
-        "team": "SD",
         "value": 20
       }
     ]
@@ -525,23 +525,23 @@
       },
       {
         "rank": 3,
+        "playerId": 695243,
+        "player": "Mason Miller",
+        "team": "SD",
+        "value": 22
+      },
+      {
+        "rank": 3,
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
         "value": 22
       },
       {
-        "rank": 4,
+        "rank": 5,
         "playerId": 661395,
         "player": "Jhoan Duran",
         "team": "PHI",
-        "value": 21
-      },
-      {
-        "rank": 4,
-        "playerId": 695243,
-        "player": "Mason Miller",
-        "team": "SD",
         "value": 21
       },
       {
@@ -550,6 +550,13 @@
         "player": "Paul Sewald",
         "team": "AZ",
         "value": 20
+      },
+      {
+        "rank": 7,
+        "playerId": 547973,
+        "player": "Aroldis Chapman",
+        "team": "BOS",
+        "value": 18
       },
       {
         "rank": 7,
@@ -566,17 +573,10 @@
         "value": 18
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 670280,
         "player": "David Bednar",
         "team": "NYY",
-        "value": 17
-      },
-      {
-        "rank": 9,
-        "playerId": 547973,
-        "player": "Aroldis Chapman",
-        "team": "BOS",
         "value": 17
       }
     ]
