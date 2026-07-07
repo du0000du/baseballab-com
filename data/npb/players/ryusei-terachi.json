@@ -7,14 +7,14 @@
   "teamName": "千葉ロッテマリーンズ",
   "league": "pacific",
   "group": "batting",
-  "qualified": true,
+  "qualified": false,
   "season": "2026",
-  "rank": 25,
+  "rank": null,
   "stats": {
-    "avg": 0.173,
-    "games": 60,
-    "pa": 229,
-    "ab": 202,
+    "avg": 0.172,
+    "games": 61,
+    "pa": 230,
+    "ab": 203,
     "runs": 9,
     "hits": 35,
     "doubles": 3,
@@ -31,12 +31,12 @@
     "hbp": 2,
     "so": 40,
     "gidp": 2,
-    "slg": 0.233,
-    "obp": 0.254,
-    "ops": 0.487
+    "slg": 0.232,
+    "obp": 0.253,
+    "ops": 0.485
   },
-  "asOf": "2026-07-06",
-  "fetchedAt": "2026-07-07T16:18:29Z",
+  "asOf": "2026-07-07",
+  "fetchedAt": "2026-07-07T18:55:58Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/bat_p.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/idb1_m.html"
 }

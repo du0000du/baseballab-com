@@ -12,7 +12,7 @@
   "rank": null,
   "stats": {
     "era": 0.0,
-    "games": 3,
+    "games": 4,
     "wins": 0,
     "losses": 0,
     "saves": 0,
@@ -22,22 +22,22 @@
     "sho": 0,
     "nbb": 0,
     "winpct": 0.0,
-    "bf": 17,
-    "ip": 3.1,
+    "bf": 20,
+    "ip": 4.1,
     "hits": 3,
     "hr": 0,
     "bb": 4,
     "ibb": 0,
     "hbp": 1,
-    "so": 5,
+    "so": 6,
     "wp": 0,
     "balk": 0,
     "runs": 0,
     "er": 0,
-    "whip": 2.1
+    "whip": 1.62
   },
-  "asOf": "2026-07-06",
-  "fetchedAt": "2026-07-07T16:18:29Z",
+  "asOf": "2026-07-07",
+  "fetchedAt": "2026-07-07T18:55:58Z",
   "source": "NPB.jp 日本野球機構",
   "sourceUrl": "https://npb.jp/bis/2026/stats/idp1_e.html"
 }

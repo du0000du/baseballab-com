@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-07T16:20:02Z",
+  "fetched_at": "2026-07-07T18:57:20Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -149,16 +149,16 @@
     "rbi": [
       {
         "rank": 1,
-        "playerId": 670541,
-        "player": "Yordan Alvarez",
-        "team": "HOU",
-        "value": 67
-      },
-      {
-        "rank": 1,
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
+        "value": 69
+      },
+      {
+        "rank": 2,
+        "playerId": 670541,
+        "player": "Yordan Alvarez",
+        "team": "HOU",
         "value": 67
       },
       {
@@ -298,7 +298,7 @@
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
-        "value": "1.47"
+        "value": "1.61"
       },
       {
         "rank": 2,
@@ -442,7 +442,7 @@
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
-        "value": 156
+        "value": 161
       },
       {
         "rank": 2,
