@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-07T04:41:09Z",
+  "fetchedAt": "2026-07-07T11:49:45Z",
   "season": "2026",
   "asOfDate": "2026-07-07",
   "teams": [
@@ -1079,6 +1079,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-07-06",
+          "opponent": "Los Angeles Dodgers",
+          "opponentAbbr": "LAD",
+          "home": false,
+          "score": 7,
+          "opponentScore": 8,
+          "result": "L",
+          "venue": "UNIQLO Field at Dodger Stadium"
+        },
+        {
           "date": "2026-07-05",
           "opponent": "San Francisco Giants",
           "opponentAbbr": "SF",
@@ -1097,16 +1107,6 @@
           "opponentScore": 6,
           "result": "L",
           "venue": "Coors Field"
-        },
-        {
-          "date": "2026-07-03",
-          "opponent": "San Francisco Giants",
-          "opponentAbbr": "SF",
-          "home": true,
-          "score": 15,
-          "opponentScore": 3,
-          "result": "W",
-          "venue": "Coors Field"
         }
       ]
     },
@@ -1119,6 +1119,16 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "recentGames": [
+        {
+          "date": "2026-07-06",
+          "opponent": "Colorado Rockies",
+          "opponentAbbr": "COL",
+          "home": true,
+          "score": 8,
+          "opponentScore": 7,
+          "result": "W",
+          "venue": "UNIQLO Field at Dodger Stadium"
+        },
         {
           "date": "2026-07-05",
           "opponent": "San Diego Padres",
@@ -1136,16 +1146,6 @@
           "home": true,
           "score": 3,
           "opponentScore": 0,
-          "result": "W",
-          "venue": "UNIQLO Field at Dodger Stadium"
-        },
-        {
-          "date": "2026-07-03",
-          "opponent": "San Diego Padres",
-          "opponentAbbr": "SD",
-          "home": true,
-          "score": 4,
-          "opponentScore": 3,
           "result": "W",
           "venue": "UNIQLO Field at Dodger Stadium"
         }
