@@ -1,12 +1,20 @@
 name: Deploy to Cloudflare Pages
 
+# 直接 push（人間・Claude の変更）に加えて、Data Sync ワークフローの完了でも起動する。
+# 理由: sync.yml は GITHUB_TOKEN で push するため、既定では on:push を発火させない
+# (GitHub Actions の再帰トリガー防止仕様)。これにより毎日4回のデータ更新が
+# コミットはされてもデプロイされず、本番が最大1日以上遅れる状態になっていた。
 on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows: ["Data Sync"]
+    types: [completed]
 
 jobs:
   deploy:
+    if: github.event_name == 'push' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -15,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
