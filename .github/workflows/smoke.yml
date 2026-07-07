@@ -1,0 +1,68 @@
+name: Production Smoke Test
+
+# 本番サイトの生存確認＋データ鮮度チェック（第11-12回評議会: 失敗検知の仕組み化）
+# 失敗時は GitHub が自動でリポジトリオーナーへメール通知する。
+# データ同期(01:00 UTC)→Cloudflare ビルド完了後の 02:00 UTC (11:00 JST) に毎日実行。
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    name: Live Site Checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Key pages respond with expected content
+        run: |
+          fail=0
+          check() {
+            url="$1"; pattern="$2"
+            body=$(curl -sSL --max-time 30 "$url") || { echo "::error::FETCH FAIL: $url"; fail=1; return; }
+            if echo "$body" | grep -q "$pattern"; then
+              echo "OK: $url ($pattern)"
+            else
+              echo "::error::PATTERN MISS: $url (expected: $pattern)"
+              fail=1
+            fi
+          }
+          check "https://baseballab.com/"                        "Baseballab"
+          check "https://baseballab.com/npb/leaders/"            "勝利"
+          check "https://baseballab.com/mlb/leaders/"            "ホームラン"
+          check "https://baseballab.com/npb/standings/"          "勝率"
+          check "https://baseballab.com/npb/players/"            "選手"
+          check "https://baseballab.com/players/shohei-ohtani/"  "Ohtani"
+          check "https://baseballab.com/mlb/japanese/"           "日本人"
+          check "https://baseballab.com/glossary/"               "指標"
+          check "https://baseballab.com/search/"                 "検索"
+          check "https://baseballab.com/sitemap-index.xml"       "sitemap"
+          exit $fail
+
+      - name: Nonexistent URL returns 404
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 "https://baseballab.com/smoke-test-should-not-exist-404/")
+          if [ "$code" = "404" ]; then
+            echo "OK: 404 page returns HTTP 404"
+          else
+            echo "::error::404 check failed: got HTTP $code"
+            exit 1
+          fi
+
+      - name: NPB data freshness on live site (within 7 days)
+        run: |
+          body=$(curl -sSL --max-time 30 "https://baseballab.com/npb/")
+          latest=$(echo "$body" | grep -oE '20[0-9]{2}-[0-9]{2}-[0-9]{2}' | sort | tail -1)
+          if [ -z "$latest" ]; then
+            echo "::error::No date found on /npb/ — freshness unknown"
+            exit 1
+          fi
+          threshold=$(date -u -d '7 days ago' '+%Y-%m-%d')
+          echo "latest data date: $latest / threshold: $threshold"
+          if [ "$latest" \< "$threshold" ]; then
+            echo "::error::STALE DATA: /npb/ shows $latest (older than 7 days) — sync pipeline may be broken"
+            exit 1
+          fi
+          echo "OK: data is fresh"
