@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-06T23:16:51Z",
+  "fetched_at": "2026-07-07T04:41:09Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -39,32 +39,32 @@
         "value": 25
       },
       {
-        "rank": 6,
+        "rank": 5,
         "playerId": 700250,
         "player": "Ben Rice",
         "team": "NYY",
-        "value": 24
+        "value": 25
       },
       {
         "rank": 7,
-        "playerId": 695657,
-        "player": "Colson Montgomery",
-        "team": "CWS",
-        "value": 23
+        "playerId": 621566,
+        "player": "Matt Olson",
+        "team": "ATL",
+        "value": 24
       },
       {
         "rank": 7,
         "playerId": 695578,
         "player": "James Wood",
         "team": "WSH",
-        "value": 23
+        "value": 24
       },
       {
         "rank": 9,
-        "playerId": 621566,
-        "player": "Matt Olson",
-        "team": "ATL",
-        "value": 22
+        "playerId": 695657,
+        "player": "Colson Montgomery",
+        "team": "CWS",
+        "value": 23
       },
       {
         "rank": 10,
@@ -87,21 +87,21 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "SF",
-        "value": ".326"
+        "value": ".325"
       },
       {
         "rank": 3,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".321"
+        "value": ".318"
       },
       {
         "rank": 4,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".319"
+        "value": ".317"
       },
       {
         "rank": 5,
@@ -112,31 +112,31 @@
       },
       {
         "rank": 6,
-        "playerId": 687859,
-        "player": "Troy Johnston",
-        "team": "COL",
-        "value": ".313"
-      },
-      {
-        "rank": 7,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
         "value": ".312"
       },
       {
+        "rank": 7,
+        "playerId": 687859,
+        "player": "Troy Johnston",
+        "team": "COL",
+        "value": ".310"
+      },
+      {
         "rank": 8,
+        "playerId": 671739,
+        "player": "Michael Harris II",
+        "team": "ATL",
+        "value": ".306"
+      },
+      {
+        "rank": 9,
         "playerId": 669016,
         "player": "Brandon Marsh",
         "team": "PHI",
         "value": ".305"
-      },
-      {
-        "rank": 9,
-        "playerId": 671739,
-        "player": "Michael Harris II",
-        "team": "ATL",
-        "value": ".302"
       },
       {
         "rank": 10,
@@ -173,38 +173,38 @@
         "playerId": 671277,
         "player": "Luis García Jr.",
         "team": "WSH",
-        "value": 64
+        "value": 65
       },
       {
         "rank": 5,
+        "playerId": 682928,
+        "player": "CJ Abrams",
+        "team": "WSH",
+        "value": 64
+      },
+      {
+        "rank": 6,
         "playerId": 676475,
         "player": "Alec Burleson",
         "team": "STL",
         "value": 63
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 664040,
         "player": "Brandon Lowe",
         "team": "PIT",
         "value": 63
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 681624,
         "player": "Andy Pages",
         "team": "LAD",
         "value": 63
       },
       {
-        "rank": 8,
-        "playerId": 682928,
-        "player": "CJ Abrams",
-        "team": "WSH",
-        "value": 61
-      },
-      {
-        "rank": 8,
+        "rank": 9,
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
@@ -224,7 +224,7 @@
         "playerId": 683083,
         "player": "Nasim Nuñez",
         "team": "WSH",
-        "value": 32
+        "value": 33
       },
       {
         "rank": 2,
@@ -305,7 +305,7 @@
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
-        "value": "2.02"
+        "value": "2.01"
       },
       {
         "rank": 3,
@@ -460,16 +460,16 @@
       },
       {
         "rank": 4,
-        "playerId": 666200,
-        "player": "Jesús Luzardo",
-        "team": "PHI",
-        "value": 125
-      },
-      {
-        "rank": 4,
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
+        "value": 131
+      },
+      {
+        "rank": 5,
+        "playerId": 666200,
+        "player": "Jesús Luzardo",
+        "team": "PHI",
         "value": 125
       },
       {

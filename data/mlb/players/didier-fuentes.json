@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 800311,
+    "fullName": "Didier Fuentes",
+    "link": "/api/v1/people/800311",
+    "firstName": "Didier",
+    "lastName": "Fuentes",
+    "primaryNumber": "72",
+    "birthDate": "2005-06-17",
+    "currentAge": 21,
+    "birthCity": "Tolu",
+    "birthCountry": "Colombia",
+    "height": "6' 0\"",
+    "weight": 170,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Didier",
+    "useLastName": "Fuentes",
+    "middleName": "Nicolas",
+    "boxscoreName": "Fuentes",
+    "gender": "M",
+    "nameMatrilineal": "Martinez",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2025-06-20",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Didier Fuentes",
+    "nameSlug": "didier-fuentes-800311",
+    "firstLastName": "Didier Fuentes",
+    "lastFirstName": "Fuentes, Didier",
+    "lastInitName": "Fuentes, D",
+    "initLastName": "D Fuentes",
+    "fullFMLName": "Didier Nicolas Fuentes",
+    "fullLFMName": "Fuentes, Didier Nicolas",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 21,
+            "gamesPlayed": 28,
+            "gamesStarted": 1,
+            "groundOuts": 25,
+            "airOuts": 37,
+            "runs": 10,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 39,
+            "baseOnBalls": 11,
+            "intentionalWalks": 0,
+            "hits": 29,
+            "hitByPitch": 2,
+            "avg": ".228",
+            "atBats": 127,
+            "obp": ".294",
+            "slg": ".299",
+            "ops": ".593",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 604,
+            "era": "2.60",
+            "inningsPitched": "34.2",
+            "wins": 4,
+            "losses": 0,
+            "saves": 1,
+            "saveOpportunities": 1,
+            "holds": 9,
+            "blownSaves": 0,
+            "earnedRuns": 10,
+            "whip": "1.15",
+            "battersFaced": 143,
+            "outs": 104,
+            "gamesPitched": 28,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 394,
+            "strikePercentage": ".650",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 38,
+            "groundOutsToAirouts": "0.68",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "17.42",
+            "gamesFinished": 4,
+            "strikeoutWalkRatio": "3.55",
+            "strikeoutsPer9Inn": "10.13",
+            "walksPer9Inn": "2.86",
+            "hitsPer9Inn": "7.53",
+            "runsScoredPer9": "2.60",
+            "homeRunsPer9": "0.26",
+            "inheritedRunners": 15,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 800311,
+            "fullName": "Didier Fuentes",
+            "link": "/api/v1/people/800311"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
