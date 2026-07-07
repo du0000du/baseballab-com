@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-07T11:48:55Z",
+  "fetchedAt": "2026-07-07T16:19:22Z",
   "season": "2026",
   "asOfDate": "2026-07-07",
   "teams": [
@@ -54,7 +54,7 @@
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
           "home": false,
-          "score": 3,
+          "score": 4,
           "opponentScore": 0,
           "result": "W",
           "stadium": "バンテリンドームナゴヤ"
@@ -133,7 +133,7 @@
           "opponentSlug": "yokohama-dena",
           "home": true,
           "score": 0,
-          "opponentScore": 3,
+          "opponentScore": 4,
           "result": "L",
           "stadium": "バンテリンドームナゴヤ"
         },
@@ -171,9 +171,9 @@
           "opponent": "東京ヤクルトスワローズ",
           "opponentSlug": "yakult-swallows",
           "home": false,
-          "score": 2,
+          "score": 4,
           "opponentScore": 3,
-          "result": "L",
+          "result": "W",
           "stadium": "明治神宮野球場"
         },
         {
@@ -211,8 +211,8 @@
           "opponentSlug": "hiroshima-carp",
           "home": true,
           "score": 3,
-          "opponentScore": 2,
-          "result": "W",
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "明治神宮野球場"
         },
         {
@@ -249,7 +249,7 @@
           "opponent": "福岡ソフトバンクホークス",
           "opponentSlug": "softbank-hawks",
           "home": false,
-          "score": 2,
+          "score": 3,
           "opponentScore": 6,
           "result": "L",
           "stadium": "みずほPayPayドーム福岡"
@@ -289,7 +289,7 @@
           "opponentSlug": "orix-buffaloes",
           "home": true,
           "score": 6,
-          "opponentScore": 2,
+          "opponentScore": 3,
           "result": "W",
           "stadium": "みずほPayPayドーム福岡"
         },
@@ -366,8 +366,8 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": true,
-          "score": 0,
-          "opponentScore": 4,
+          "score": 1,
+          "opponentScore": 6,
           "result": "L",
           "stadium": "楽天モバイルパーク宮城"
         },
@@ -405,8 +405,8 @@
           "opponent": "東北楽天ゴールデンイーグルス",
           "opponentSlug": "rakuten-eagles",
           "home": false,
-          "score": 4,
-          "opponentScore": 0,
+          "score": 6,
+          "opponentScore": 1,
           "result": "W",
           "stadium": "楽天モバイルパーク宮城"
         },
