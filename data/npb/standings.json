@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-07-08T11:02:44Z",
+  "fetchedAt": "2026-07-08T15:57:49Z",
   "central": [
     {
       "rank": 1,
@@ -196,11 +196,11 @@
       "teamAbbr": "S",
       "league": "central",
       "games": 76,
-      "wins": 39,
-      "losses": 36,
+      "wins": 38,
+      "losses": 37,
       "ties": 1,
-      "pct": ".520",
-      "gb": "1.5"
+      "pct": ".506",
+      "gb": "2.5"
     },
     {
       "rank": 4,
@@ -222,11 +222,11 @@
       "teamAbbr": "C",
       "league": "central",
       "games": 74,
-      "wins": 29,
-      "losses": 41,
+      "wins": 30,
+      "losses": 40,
       "ties": 4,
-      "pct": ".414",
-      "gb": "9"
+      "pct": ".428",
+      "gb": "8"
     },
     {
       "rank": 6,
@@ -250,10 +250,10 @@
       "teamAbbr": "H",
       "league": "pacific",
       "games": 78,
-      "wins": 48,
-      "losses": 29,
+      "wins": 47,
+      "losses": 30,
       "ties": 1,
-      "pct": ".623",
+      "pct": ".610",
       "gb": "--"
     },
     {
@@ -267,7 +267,7 @@
       "losses": 34,
       "ties": 3,
       "pct": ".569",
-      "gb": "4"
+      "gb": "3"
     },
     {
       "rank": 3,
@@ -280,10 +280,23 @@
       "losses": 36,
       "ties": 0,
       "pct": ".566",
-      "gb": "4"
+      "gb": "3"
     },
     {
       "rank": 4,
+      "teamSlug": "orix-buffaloes",
+      "teamName": "オリックス・バファローズ",
+      "teamAbbr": "B",
+      "league": "pacific",
+      "games": 79,
+      "wins": 40,
+      "losses": 37,
+      "ties": 2,
+      "pct": ".519",
+      "gb": "7"
+    },
+    {
+      "rank": 5,
       "teamSlug": "lotte-marines",
       "teamName": "千葉ロッテマリーンズ",
       "teamAbbr": "M",
@@ -293,20 +306,7 @@
       "losses": 36,
       "ties": 3,
       "pct": ".506",
-      "gb": "9"
-    },
-    {
-      "rank": 5,
-      "teamSlug": "orix-buffaloes",
-      "teamName": "オリックス・バファローズ",
-      "teamAbbr": "B",
-      "league": "pacific",
-      "games": 79,
-      "wins": 39,
-      "losses": 38,
-      "ties": 2,
-      "pct": ".506",
-      "gb": "9"
+      "gb": "8"
     },
     {
       "rank": 6,
@@ -319,7 +319,7 @@
       "losses": 47,
       "ties": 1,
       "pct": ".389",
-      "gb": "18"
+      "gb": "17"
     }
   ]
 }
