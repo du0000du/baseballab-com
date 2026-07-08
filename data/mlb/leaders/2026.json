@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-08T04:01:37Z",
+  "fetched_at": "2026-07-08T11:04:10Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -525,20 +525,20 @@
       },
       {
         "rank": 3,
+        "playerId": 695243,
+        "player": "Mason Miller",
+        "team": "SD",
+        "value": 23
+      },
+      {
+        "rank": 4,
         "playerId": 661395,
         "player": "Jhoan Duran",
         "team": "PHI",
         "value": 22
       },
       {
-        "rank": 3,
-        "playerId": 695243,
-        "player": "Mason Miller",
-        "team": "SD",
-        "value": 22
-      },
-      {
-        "rank": 3,
+        "rank": 4,
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
