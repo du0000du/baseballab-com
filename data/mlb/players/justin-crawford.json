@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 702222,
+    "fullName": "Justin Crawford",
+    "link": "/api/v1/people/702222",
+    "firstName": "Justin",
+    "lastName": "Crawford",
+    "primaryNumber": "2",
+    "birthDate": "2004-01-13",
+    "currentAge": 22,
+    "birthCity": "Phoenix",
+    "birthStateProvince": "AZ",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 188,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Justin",
+    "useLastName": "Crawford",
+    "boxscoreName": "Crawford",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "mlbDebutDate": "2026-03-26",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Justin Crawford",
+    "nameSlug": "justin-crawford-702222",
+    "firstLastName": "Justin Crawford",
+    "lastFirstName": "Crawford, Justin",
+    "lastInitName": "Crawford, J",
+    "initLastName": "J Crawford",
+    "fullFMLName": "Justin Crawford",
+    "fullLFMName": "Crawford, Justin",
+    "strikeZoneTop": 3.28,
+    "strikeZoneBottom": 1.66
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 22,
+            "gamesPlayed": 86,
+            "groundOuts": 84,
+            "airOuts": 53,
+            "runs": 27,
+            "doubles": 12,
+            "triples": 2,
+            "homeRuns": 2,
+            "strikeOuts": 58,
+            "baseOnBalls": 16,
+            "intentionalWalks": 0,
+            "hits": 67,
+            "hitByPitch": 2,
+            "avg": ".258",
+            "atBats": 260,
+            "obp": ".306",
+            "slg": ".342",
+            "ops": ".648",
+            "caughtStealing": 3,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".786",
+            "caughtStealingPercentage": ".214",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 1062,
+            "plateAppearances": 280,
+            "totalBases": 89,
+            "rbi": 19,
+            "leftOnBase": 108,
+            "sacBunts": 2,
+            "sacFlies": 0,
+            "babip": ".325",
+            "groundOutsToAirouts": "1.58",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "130.00"
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 702222,
+            "fullName": "Justin Crawford",
+            "link": "/api/v1/people/702222"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 640448,
+    "fullName": "Kyle Finnegan",
+    "link": "/api/v1/people/640448",
+    "firstName": "Kyle",
+    "lastName": "Finnegan",
+    "primaryNumber": "67",
+    "birthDate": "1991-09-04",
+    "currentAge": 34,
+    "birthCity": "Detroit",
+    "birthStateProvince": "MI",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 198,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Kyle",
+    "useLastName": "Finnegan",
+    "middleName": "Edward",
+    "boxscoreName": "Finnegan",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2013,
+    "mlbDebutDate": "2020-07-25",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Kyle Finnegan",
+    "nameSlug": "kyle-finnegan-640448",
+    "firstLastName": "Kyle Finnegan",
+    "lastFirstName": "Finnegan, Kyle",
+    "lastInitName": "Finnegan, K",
+    "initLastName": "K Finnegan",
+    "fullFMLName": "Kyle Edward Finnegan",
+    "fullLFMName": "Finnegan, Kyle Edward",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 39,
+            "gamesStarted": 0,
+            "groundOuts": 44,
+            "airOuts": 37,
+            "runs": 10,
+            "doubles": 9,
+            "triples": 1,
+            "homeRuns": 4,
+            "strikeOuts": 31,
+            "baseOnBalls": 25,
+            "intentionalWalks": 0,
+            "hits": 37,
+            "hitByPitch": 0,
+            "avg": ".250",
+            "atBats": 148,
+            "obp": ".358",
+            "slg": ".405",
+            "ops": ".763",
+            "caughtStealing": 3,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".700",
+            "caughtStealingPercentage": ".300",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 656,
+            "era": "2.18",
+            "inningsPitched": "41.1",
+            "wins": 2,
+            "losses": 0,
+            "saves": 1,
+            "saveOpportunities": 6,
+            "holds": 10,
+            "blownSaves": 5,
+            "earnedRuns": 10,
+            "whip": "1.50",
+            "battersFaced": 174,
+            "outs": 124,
+            "gamesPitched": 39,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 401,
+            "strikePercentage": ".610",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 60,
+            "groundOutsToAirouts": "1.19",
+            "winPercentage": "1.000",
+            "pitchesPerInning": "15.87",
+            "gamesFinished": 3,
+            "strikeoutWalkRatio": "1.24",
+            "strikeoutsPer9Inn": "6.75",
+            "walksPer9Inn": "5.44",
+            "hitsPer9Inn": "8.06",
+            "runsScoredPer9": "2.18",
+            "homeRunsPer9": "0.87",
+            "inheritedRunners": 23,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 640448,
+            "fullName": "Kyle Finnegan",
+            "link": "/api/v1/people/640448"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 672724,
+    "fullName": "Oswald Peraza",
+    "link": "/api/v1/people/672724",
+    "firstName": "Oswald",
+    "lastName": "Peraza",
+    "primaryNumber": "2",
+    "birthDate": "2000-06-15",
+    "currentAge": 26,
+    "birthCity": "Barquisimeto",
+    "birthCountry": "Venezuela",
+    "height": "5' 11\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Oswald",
+    "useLastName": "Peraza",
+    "middleName": "Dair",
+    "boxscoreName": "Peraza, O",
+    "gender": "M",
+    "nameMatrilineal": "Sandoval",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2022-09-02",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Oswald Peraza",
+    "nameSlug": "oswald-peraza-672724",
+    "firstLastName": "Oswald Peraza",
+    "lastFirstName": "Peraza, Oswald",
+    "lastInitName": "Peraza, O",
+    "initLastName": "O Peraza",
+    "fullFMLName": "Oswald Dair Peraza",
+    "fullLFMName": "Peraza, Oswald Dair",
+    "strikeZoneTop": 3.187,
+    "strikeZoneBottom": 1.608
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 79,
+            "groundOuts": 65,
+            "airOuts": 48,
+            "runs": 25,
+            "doubles": 11,
+            "triples": 2,
+            "homeRuns": 7,
+            "strikeOuts": 76,
+            "baseOnBalls": 9,
+            "intentionalWalks": 0,
+            "hits": 61,
+            "hitByPitch": 6,
+            "avg": ".245",
+            "atBats": 249,
+            "obp": ".288",
+            "slg": ".390",
+            "ops": ".678",
+            "caughtStealing": 2,
+            "stolenBases": 10,
+            "stolenBasePercentage": ".833",
+            "caughtStealingPercentage": ".167",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 961,
+            "plateAppearances": 265,
+            "totalBases": 97,
+            "rbi": 22,
+            "leftOnBase": 111,
+            "sacBunts": 1,
+            "sacFlies": 0,
+            "babip": ".325",
+            "groundOutsToAirouts": "1.35",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "35.57"
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 672724,
+            "fullName": "Oswald Peraza",
+            "link": "/api/v1/people/672724"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
