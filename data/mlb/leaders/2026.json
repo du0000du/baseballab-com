@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-09T16:24:24Z",
+  "fetched_at": "2026-07-09T18:47:44Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -19,24 +19,24 @@
       },
       {
         "rank": 3,
+        "playerId": 691406,
+        "player": "Junior Caminero",
+        "team": "TB",
+        "value": 27
+      },
+      {
+        "rank": 3,
         "playerId": 696100,
         "player": "Hunter Goodman",
         "team": "COL",
         "value": 27
       },
       {
-        "rank": 4,
-        "playerId": 691406,
-        "player": "Junior Caminero",
-        "team": "TB",
-        "value": 26
-      },
-      {
-        "rank": 4,
+        "rank": 3,
         "playerId": 700250,
         "player": "Ben Rice",
         "team": "NYY",
-        "value": 26
+        "value": 27
       },
       {
         "rank": 6,
@@ -47,17 +47,17 @@
       },
       {
         "rank": 6,
+        "playerId": 621566,
+        "player": "Matt Olson",
+        "team": "ATL",
+        "value": 25
+      },
+      {
+        "rank": 6,
         "playerId": 695578,
         "player": "James Wood",
         "team": "WSH",
         "value": 25
-      },
-      {
-        "rank": 8,
-        "playerId": 621566,
-        "player": "Matt Olson",
-        "team": "ATL",
-        "value": 24
       },
       {
         "rank": 9,
@@ -87,7 +87,7 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".327"
+        "value": ".328"
       },
       {
         "rank": 3,
@@ -101,7 +101,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".311"
+        "value": ".310"
       },
       {
         "rank": 5,
@@ -129,7 +129,7 @@
         "playerId": 671739,
         "player": "Michael Harris II",
         "team": "ATL",
-        "value": ".307"
+        "value": ".306"
       },
       {
         "rank": 9,
@@ -270,20 +270,20 @@
       },
       {
         "rank": 8,
+        "playerId": 676609,
+        "player": "José Caballero",
+        "team": "NYY",
+        "value": 21
+      },
+      {
+        "rank": 8,
         "playerId": 665833,
         "player": "Oneil Cruz",
         "team": "PIT",
         "value": 21
       },
       {
-        "rank": 9,
-        "playerId": 676609,
-        "player": "José Caballero",
-        "team": "NYY",
-        "value": 20
-      },
-      {
-        "rank": 9,
+        "rank": 10,
         "playerId": 804606,
         "player": "Konnor Griffin",
         "team": "PIT",
@@ -467,23 +467,23 @@
       },
       {
         "rank": 5,
+        "playerId": 668909,
+        "player": "Gavin Williams",
+        "team": "CLE",
+        "value": 130
+      },
+      {
+        "rank": 6,
         "playerId": 666200,
         "player": "Jesús Luzardo",
         "team": "PHI",
         "value": 125
       },
       {
-        "rank": 6,
+        "rank": 7,
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
-        "value": 123
-      },
-      {
-        "rank": 6,
-        "playerId": 668909,
-        "player": "Gavin Williams",
-        "team": "CLE",
         "value": 123
       },
       {
