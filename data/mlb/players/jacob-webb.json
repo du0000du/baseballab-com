@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 657097,
+    "fullName": "Jacob Webb",
+    "link": "/api/v1/people/657097",
+    "firstName": "Jacob",
+    "lastName": "Webb",
+    "primaryNumber": "71",
+    "birthDate": "1993-08-15",
+    "currentAge": 32,
+    "birthCity": "Riverside",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jacob",
+    "useLastName": "Webb",
+    "middleName": "Lawrence",
+    "boxscoreName": "Webb, J",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2019-04-16",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jacob Webb",
+    "nameSlug": "jacob-webb-657097",
+    "firstLastName": "Jacob Webb",
+    "lastFirstName": "Webb, Jacob",
+    "lastInitName": "Webb, J",
+    "initLastName": "J Webb",
+    "fullFMLName": "Jacob Lawrence Webb",
+    "fullLFMName": "Webb, Jacob Lawrence",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 40,
+            "gamesStarted": 0,
+            "groundOuts": 34,
+            "airOuts": 38,
+            "runs": 17,
+            "doubles": 2,
+            "triples": 0,
+            "homeRuns": 6,
+            "strikeOuts": 47,
+            "baseOnBalls": 15,
+            "intentionalWalks": 0,
+            "hits": 37,
+            "hitByPitch": 0,
+            "avg": ".240",
+            "atBats": 154,
+            "obp": ".304",
+            "slg": ".370",
+            "ops": ".674",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 704,
+            "era": "3.18",
+            "inningsPitched": "39.2",
+            "wins": 3,
+            "losses": 2,
+            "saves": 4,
+            "saveOpportunities": 8,
+            "holds": 6,
+            "blownSaves": 4,
+            "earnedRuns": 14,
+            "whip": "1.31",
+            "battersFaced": 171,
+            "outs": 119,
+            "gamesPitched": 40,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 466,
+            "strikePercentage": ".660",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 1,
+            "totalBases": 57,
+            "groundOutsToAirouts": "0.89",
+            "winPercentage": ".600",
+            "pitchesPerInning": "17.75",
+            "gamesFinished": 12,
+            "strikeoutWalkRatio": "3.13",
+            "strikeoutsPer9Inn": "10.66",
+            "walksPer9Inn": "3.40",
+            "hitsPer9Inn": "8.39",
+            "runsScoredPer9": "3.86",
+            "homeRunsPer9": "1.36",
+            "inheritedRunners": 16,
+            "inheritedRunnersScored": 6,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 657097,
+            "fullName": "Jacob Webb",
+            "link": "/api/v1/people/657097"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
