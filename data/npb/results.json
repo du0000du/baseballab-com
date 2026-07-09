@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-09T11:56:32Z",
+  "fetchedAt": "2026-07-09T16:23:33Z",
   "season": "2026",
   "asOfDate": "2026-07-09",
   "teams": [
@@ -16,7 +16,7 @@
           "opponentSlug": "yomiuri-giants",
           "home": true,
           "score": 10,
-          "opponentScore": 1,
+          "opponentScore": 2,
           "result": "W",
           "stadium": "阪神甲子園球場"
         },
@@ -93,7 +93,7 @@
           "opponent": "阪神タイガース",
           "opponentSlug": "hanshin-tigers",
           "home": false,
-          "score": 1,
+          "score": 2,
           "opponentScore": 10,
           "result": "L",
           "stadium": "阪神甲子園球場"
