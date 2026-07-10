@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 686580,
+    "fullName": "Justin Slaten",
+    "link": "/api/v1/people/686580",
+    "firstName": "Justin",
+    "lastName": "Slaten",
+    "primaryNumber": "63",
+    "birthDate": "1997-09-15",
+    "currentAge": 28,
+    "birthCity": "Longview",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 222,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Justin",
+    "useLastName": "Slaten",
+    "middleName": "Michael",
+    "boxscoreName": "Slaten",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "pronunciation": "SLATE-in",
+    "mlbDebutDate": "2024-03-30",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Justin Slaten",
+    "nameSlug": "justin-slaten-686580",
+    "firstLastName": "Justin Slaten",
+    "lastFirstName": "Slaten, Justin",
+    "lastInitName": "Slaten, J",
+    "initLastName": "J Slaten",
+    "fullFMLName": "Justin Michael Slaten",
+    "fullLFMName": "Slaten, Justin Michael",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 25,
+            "gamesStarted": 0,
+            "groundOuts": 18,
+            "airOuts": 17,
+            "runs": 17,
+            "doubles": 5,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 29,
+            "baseOnBalls": 5,
+            "intentionalWalks": 0,
+            "hits": 28,
+            "hitByPitch": 0,
+            "avg": ".311",
+            "atBats": 90,
+            "obp": ".347",
+            "slg": ".500",
+            "ops": ".847",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 359,
+            "era": "5.82",
+            "inningsPitched": "21.2",
+            "wins": 1,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 1,
+            "holds": 11,
+            "blownSaves": 1,
+            "earnedRuns": 14,
+            "whip": "1.52",
+            "battersFaced": 97,
+            "outs": 65,
+            "gamesPitched": 25,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 239,
+            "strikePercentage": ".670",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 45,
+            "groundOutsToAirouts": "1.06",
+            "winPercentage": ".200",
+            "pitchesPerInning": "16.57",
+            "gamesFinished": 3,
+            "strikeoutWalkRatio": "5.80",
+            "strikeoutsPer9Inn": "12.05",
+            "walksPer9Inn": "2.08",
+            "hitsPer9Inn": "11.63",
+            "runsScoredPer9": "7.06",
+            "homeRunsPer9": "1.66",
+            "inheritedRunners": 12,
+            "inheritedRunnersScored": 2,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 111,
+            "name": "Boston Red Sox",
+            "link": "/api/v1/teams/111"
+          },
+          "player": {
+            "id": 686580,
+            "fullName": "Justin Slaten",
+            "link": "/api/v1/people/686580"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

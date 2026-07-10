@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 663757,
+    "fullName": "Trent Grisham",
+    "link": "/api/v1/people/663757",
+    "firstName": "Trenton",
+    "lastName": "Grisham",
+    "primaryNumber": "12",
+    "birthDate": "1996-11-01",
+    "currentAge": 29,
+    "birthCity": "Burleson",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 221,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Trent",
+    "useLastName": "Grisham",
+    "middleName": "Marcus",
+    "boxscoreName": "Grisham",
+    "nickName": "Grish",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "pronunciation": "GRISH-um",
+    "mlbDebutDate": "2019-08-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Trent Grisham",
+    "nameSlug": "trent-grisham-663757",
+    "firstLastName": "Trent Grisham",
+    "lastFirstName": "Grisham, Trent",
+    "lastInitName": "Grisham, T",
+    "initLastName": "T Grisham",
+    "fullFMLName": "Trenton Marcus Grisham",
+    "fullLFMName": "Grisham, Trenton Marcus",
+    "strikeZoneTop": 3.138,
+    "strikeZoneBottom": 1.584
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 73,
+            "groundOuts": 62,
+            "airOuts": 82,
+            "runs": 47,
+            "doubles": 14,
+            "triples": 2,
+            "homeRuns": 9,
+            "strikeOuts": 49,
+            "baseOnBalls": 39,
+            "intentionalWalks": 0,
+            "hits": 58,
+            "hitByPitch": 0,
+            "avg": ".234",
+            "atBats": 248,
+            "obp": ".334",
+            "slg": ".415",
+            "ops": ".749",
+            "caughtStealing": 1,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".875",
+            "caughtStealingPercentage": ".125",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1160,
+            "plateAppearances": 290,
+            "totalBases": 103,
+            "rbi": 38,
+            "leftOnBase": 90,
+            "sacBunts": 0,
+            "sacFlies": 3,
+            "babip": ".254",
+            "groundOutsToAirouts": "0.76",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "27.56"
+          },
+          "team": {
+            "id": 147,
+            "name": "New York Yankees",
+            "link": "/api/v1/teams/147"
+          },
+          "player": {
+            "id": 663757,
+            "fullName": "Trent Grisham",
+            "link": "/api/v1/people/663757"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
