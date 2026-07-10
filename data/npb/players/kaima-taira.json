@@ -7,9 +7,9 @@
   "teamName": "埼玉西武ライオンズ",
   "league": "pacific",
   "group": "pitching",
-  "qualified": true,
+  "qualified": false,
   "season": "2026",
-  "rank": 1,
+  "rank": null,
   "stats": {
     "era": 0.99,
     "games": 13,
@@ -36,8 +36,8 @@
     "er": 9,
     "whip": 0.91
   },
-  "asOf": "2026-07-09",
-  "fetchedAt": "2026-07-10T16:14:53Z",
+  "asOf": "2026-07-10",
+  "fetchedAt": "2026-07-10T18:17:46Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/pit_p.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/idp1_l.html"
 }
