@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-10T11:51:05Z",
+  "fetchedAt": "2026-07-10T16:15:33Z",
   "season": "2026",
   "asOfDate": "2026-07-10",
   "teams": [
@@ -54,8 +54,8 @@
           "opponent": "読売ジャイアンツ",
           "opponentSlug": "yomiuri-giants",
           "home": false,
-          "score": 7,
-          "opponentScore": 4,
+          "score": 11,
+          "opponentScore": 6,
           "result": "W",
           "stadium": "東京ドーム"
         },
@@ -93,8 +93,8 @@
           "opponent": "横浜DeNAベイスターズ",
           "opponentSlug": "yokohama-dena",
           "home": true,
-          "score": 4,
-          "opponentScore": 7,
+          "score": 6,
+          "opponentScore": 11,
           "result": "L",
           "stadium": "東京ドーム"
         },
@@ -249,8 +249,8 @@
           "opponent": "千葉ロッテマリーンズ",
           "opponentSlug": "lotte-marines",
           "home": true,
-          "score": 4,
-          "opponentScore": 7,
+          "score": 6,
+          "opponentScore": 8,
           "result": "L",
           "stadium": "京セラドームOSAKA"
         },
@@ -444,8 +444,8 @@
           "opponent": "オリックス・バファローズ",
           "opponentSlug": "orix-buffaloes",
           "home": false,
-          "score": 7,
-          "opponentScore": 4,
+          "score": 8,
+          "opponentScore": 6,
           "result": "W",
           "stadium": "京セラドームOSAKA"
         },
