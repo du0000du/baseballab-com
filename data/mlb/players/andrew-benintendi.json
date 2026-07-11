@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 643217,
+    "fullName": "Andrew Benintendi",
+    "link": "/api/v1/people/643217",
+    "firstName": "Andrew",
+    "lastName": "Benintendi",
+    "primaryNumber": "23",
+    "birthDate": "1994-07-06",
+    "currentAge": 32,
+    "birthCity": "Cincinnati",
+    "birthStateProvince": "OH",
+    "birthCountry": "USA",
+    "height": "5' 9\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "10",
+      "name": "Designated Hitter",
+      "type": "Hitter",
+      "abbreviation": "DH"
+    },
+    "useName": "Andrew",
+    "useLastName": "Benintendi",
+    "middleName": "Sebastian",
+    "boxscoreName": "Benintendi",
+    "nickName": "Benny",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "mlbDebutDate": "2016-08-02",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Andrew Benintendi",
+    "nameSlug": "andrew-benintendi-643217",
+    "firstLastName": "Andrew Benintendi",
+    "lastFirstName": "Benintendi, Andrew",
+    "lastInitName": "Benintendi, A",
+    "initLastName": "A Benintendi",
+    "fullFMLName": "Andrew Sebastian Benintendi",
+    "fullLFMName": "Benintendi, Andrew Sebastian",
+    "strikeZoneTop": 3.068,
+    "strikeZoneBottom": 1.548
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 82,
+            "groundOuts": 59,
+            "airOuts": 71,
+            "runs": 36,
+            "doubles": 14,
+            "triples": 2,
+            "homeRuns": 10,
+            "strikeOuts": 69,
+            "baseOnBalls": 22,
+            "intentionalWalks": 0,
+            "hits": 63,
+            "hitByPitch": 0,
+            "avg": ".244",
+            "atBats": 258,
+            "obp": ".300",
+            "slg": ".430",
+            "ops": ".730",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1078,
+            "plateAppearances": 284,
+            "totalBases": 111,
+            "rbi": 46,
+            "leftOnBase": 105,
+            "sacBunts": 1,
+            "sacFlies": 3,
+            "babip": ".291",
+            "groundOutsToAirouts": "0.83",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "25.80"
+          },
+          "team": {
+            "id": 145,
+            "name": "Chicago White Sox",
+            "link": "/api/v1/teams/145"
+          },
+          "player": {
+            "id": 643217,
+            "fullName": "Andrew Benintendi",
+            "link": "/api/v1/people/643217"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
