@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-07-11T10:13:13Z",
+  "fetchedAt": "2026-07-11T14:44:09Z",
   "central": [
     {
       "rank": 1,
@@ -183,11 +183,11 @@
       "teamAbbr": "G",
       "league": "central",
       "games": 79,
-      "wins": 40,
+      "wins": 41,
       "losses": 36,
-      "ties": 3,
-      "pct": ".526",
-      "gb": "1.5"
+      "ties": 2,
+      "pct": ".532",
+      "gb": "1"
     },
     {
       "rank": 3,
@@ -210,10 +210,10 @@
       "league": "central",
       "games": 80,
       "wins": 33,
-      "losses": 43,
-      "ties": 4,
-      "pct": ".434",
-      "gb": "8.5"
+      "losses": 44,
+      "ties": 3,
+      "pct": ".428",
+      "gb": "9"
     },
     {
       "rank": 5,
