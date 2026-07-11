@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-11T03:59:22Z",
+  "fetched_at": "2026-07-11T10:14:39Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -87,7 +87,7 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "SF",
-        "value": ".329"
+        "value": ".331"
       },
       {
         "rank": 3,
@@ -105,17 +105,17 @@
       },
       {
         "rank": 5,
-        "playerId": 808982,
-        "player": "Jung Hoo Lee",
-        "team": "SF",
-        "value": ".311"
-      },
-      {
-        "rank": 6,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
         "value": ".310"
+      },
+      {
+        "rank": 6,
+        "playerId": 808982,
+        "player": "Jung Hoo Lee",
+        "team": "SF",
+        "value": ".309"
       },
       {
         "rank": 7,
@@ -133,10 +133,10 @@
       },
       {
         "rank": 9,
-        "playerId": 671739,
-        "player": "Michael Harris II",
-        "team": "ATL",
-        "value": ".302"
+        "playerId": 664983,
+        "player": "Jake McCarthy",
+        "team": "COL",
+        "value": ".301"
       },
       {
         "rank": 10,
@@ -152,7 +152,7 @@
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
-        "value": 73
+        "value": 74
       },
       {
         "rank": 2,
@@ -319,7 +319,7 @@
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
-        "value": "2.31"
+        "value": "2.29"
       },
       {
         "rank": 5,
@@ -538,11 +538,11 @@
         "value": 23
       },
       {
-        "rank": 5,
+        "rank": 3,
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
-        "value": 22
+        "value": 23
       },
       {
         "rank": 6,
@@ -559,24 +559,24 @@
         "value": 19
       },
       {
-        "rank": 8,
+        "rank": 7,
+        "playerId": 686973,
+        "player": "Louis Varland",
+        "team": "TOR",
+        "value": 19
+      },
+      {
+        "rank": 9,
         "playerId": 628452,
         "player": "Raisel Iglesias",
         "team": "ATL",
         "value": 18
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 656641,
         "player": "Jacob Latz",
         "team": "TEX",
-        "value": 18
-      },
-      {
-        "rank": 8,
-        "playerId": 686973,
-        "player": "Louis Varland",
-        "team": "TOR",
         "value": 18
       }
     ]
