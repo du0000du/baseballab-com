@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-11T14:45:37Z",
+  "fetched_at": "2026-07-11T17:49:26Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -108,7 +108,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".310"
+        "value": ".309"
       },
       {
         "rank": 6,
@@ -481,31 +481,31 @@
       },
       {
         "rank": 7,
+        "playerId": 677952,
+        "player": "Braxton Ashcraft",
+        "team": "PIT",
+        "value": 128
+      },
+      {
+        "rank": 8,
         "playerId": 690997,
         "player": "Nolan McLean",
         "team": "NYM",
         "value": 125
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 672282,
         "player": "Reid Detmers",
         "team": "LAA",
         "value": 123
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
         "value": 123
-      },
-      {
-        "rank": 10,
-        "playerId": 677952,
-        "player": "Braxton Ashcraft",
-        "team": "PIT",
-        "value": 122
       }
     ],
     "saves": [
