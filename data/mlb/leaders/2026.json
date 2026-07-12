@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-12T14:49:03Z",
+  "fetched_at": "2026-07-12T17:54:53Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -32,17 +32,17 @@
         "value": 28
       },
       {
-        "rank": 5,
-        "playerId": 696100,
-        "player": "Hunter Goodman",
-        "team": "COL",
-        "value": 27
-      },
-      {
-        "rank": 5,
+        "rank": 4,
         "playerId": 695578,
         "player": "James Wood",
         "team": "WSH",
+        "value": 28
+      },
+      {
+        "rank": 6,
+        "playerId": 696100,
+        "player": "Hunter Goodman",
+        "team": "COL",
         "value": 27
       },
       {
@@ -94,7 +94,7 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".320"
+        "value": ".319"
       },
       {
         "rank": 4,
@@ -108,7 +108,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".306"
+        "value": ".307"
       },
       {
         "rank": 6,
@@ -242,20 +242,20 @@
       },
       {
         "rank": 4,
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
+        "value": 24
+      },
+      {
+        "rank": 4,
         "playerId": 608070,
         "player": "José Ramírez",
         "team": "CLE",
         "value": 24
       },
       {
-        "rank": 5,
-        "playerId": 691718,
-        "player": "Pete Crow-Armstrong",
-        "team": "CHC",
-        "value": 23
-      },
-      {
-        "rank": 5,
+        "rank": 6,
         "playerId": 665487,
         "player": "Fernando Tatis Jr.",
         "team": "SD",
@@ -495,17 +495,17 @@
       },
       {
         "rank": 9,
+        "playerId": 694973,
+        "player": "Paul Skenes",
+        "team": "PIT",
+        "value": 126
+      },
+      {
+        "rank": 10,
         "playerId": 690997,
         "player": "Nolan McLean",
         "team": "NYM",
         "value": 125
-      },
-      {
-        "rank": 10,
-        "playerId": 672282,
-        "player": "Reid Detmers",
-        "team": "LAA",
-        "value": 123
       }
     ],
     "saves": [
