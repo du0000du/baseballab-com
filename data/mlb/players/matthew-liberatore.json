@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 669461,
+    "fullName": "Matthew Liberatore",
+    "link": "/api/v1/people/669461",
+    "firstName": "Matthew",
+    "lastName": "Liberatore",
+    "primaryNumber": "32",
+    "birthDate": "1999-11-06",
+    "currentAge": 26,
+    "birthCity": "Peoria",
+    "birthStateProvince": "AZ",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Matthew",
+    "useLastName": "Liberatore",
+    "middleName": "Joseph",
+    "boxscoreName": "Liberatore",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "pronunciation": "LIBB-er-uh-tore",
+    "mlbDebutDate": "2022-05-21",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Matthew Liberatore",
+    "nameSlug": "matthew-liberatore-669461",
+    "firstLastName": "Matthew Liberatore",
+    "lastFirstName": "Liberatore, Matthew",
+    "lastInitName": "Liberatore, M",
+    "initLastName": "M Liberatore",
+    "fullFMLName": "Matthew Joseph Liberatore",
+    "fullLFMName": "Liberatore, Matthew Joseph",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 19,
+            "gamesStarted": 19,
+            "groundOuts": 70,
+            "airOuts": 111,
+            "runs": 57,
+            "doubles": 16,
+            "triples": 1,
+            "homeRuns": 17,
+            "strikeOuts": 88,
+            "baseOnBalls": 36,
+            "intentionalWalks": 0,
+            "hits": 103,
+            "hitByPitch": 4,
+            "avg": ".282",
+            "atBats": 365,
+            "obp": ".348",
+            "slg": ".471",
+            "ops": ".819",
+            "caughtStealing": 4,
+            "stolenBases": 14,
+            "stolenBasePercentage": ".778",
+            "caughtStealingPercentage": ".222",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1573,
+            "era": "5.00",
+            "inningsPitched": "93.2",
+            "wins": 5,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 52,
+            "whip": "1.48",
+            "battersFaced": 412,
+            "outs": 281,
+            "gamesPitched": 19,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1002,
+            "strikePercentage": ".640",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 4,
+            "pickoffs": 3,
+            "totalBases": 172,
+            "groundOutsToAirouts": "0.63",
+            "winPercentage": ".455",
+            "pitchesPerInning": "16.79",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.44",
+            "strikeoutsPer9Inn": "8.46",
+            "walksPer9Inn": "3.46",
+            "hitsPer9Inn": "9.90",
+            "runsScoredPer9": "5.48",
+            "homeRunsPer9": "1.63",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 138,
+            "name": "St. Louis Cardinals",
+            "link": "/api/v1/teams/138"
+          },
+          "player": {
+            "id": 669461,
+            "fullName": "Matthew Liberatore",
+            "link": "/api/v1/people/669461"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

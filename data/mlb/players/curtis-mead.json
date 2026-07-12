@@ -1,0 +1,124 @@
+{
+  "info": {
+    "id": 678554,
+    "fullName": "Curtis Mead",
+    "link": "/api/v1/people/678554",
+    "firstName": "Curtis",
+    "lastName": "Mead",
+    "primaryNumber": "45",
+    "birthDate": "2000-10-26",
+    "currentAge": 25,
+    "birthCity": "Adelaide",
+    "birthCountry": "Australia",
+    "height": "6' 1\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Curtis",
+    "useLastName": "Mead",
+    "middleName": "James",
+    "boxscoreName": "Mead",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "meed",
+    "mlbDebutDate": "2023-08-04",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Curtis Mead",
+    "nameSlug": "curtis-mead-678554",
+    "firstLastName": "Curtis Mead",
+    "lastFirstName": "Mead, Curtis",
+    "lastInitName": "Mead, C",
+    "initLastName": "C Mead",
+    "fullFMLName": "Curtis James Mead",
+    "fullLFMName": "Mead, Curtis James",
+    "strikeZoneTop": 3.247,
+    "strikeZoneBottom": 1.639
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 79,
+            "groundOuts": 58,
+            "airOuts": 81,
+            "runs": 41,
+            "doubles": 13,
+            "triples": 1,
+            "homeRuns": 16,
+            "strikeOuts": 55,
+            "baseOnBalls": 33,
+            "intentionalWalks": 0,
+            "hits": 63,
+            "hitByPitch": 4,
+            "avg": ".245",
+            "atBats": 257,
+            "obp": ".340",
+            "slg": ".490",
+            "ops": ".830",
+            "caughtStealing": 2,
+            "stolenBases": 5,
+            "stolenBasePercentage": ".714",
+            "caughtStealingPercentage": ".286",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1248,
+            "plateAppearances": 294,
+            "totalBases": 126,
+            "rbi": 43,
+            "leftOnBase": 115,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".253",
+            "groundOutsToAirouts": "0.72",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "16.06"
+          },
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          },
+          "player": {
+            "id": 678554,
+            "fullName": "Curtis Mead",
+            "link": "/api/v1/people/678554"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

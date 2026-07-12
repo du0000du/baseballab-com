@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-07-11T17:48:41Z",
+  "fetchedAt": "2026-07-12T04:19:44Z",
   "season": "2026",
-  "asOfDate": "2026-07-11",
+  "asOfDate": "2026-07-12",
   "teams": [
     {
       "slug": "hanshin-tigers",
@@ -323,6 +323,16 @@
       "accent": "#cdd1d4",
       "recentGames": [
         {
+          "date": "2026-07-12",
+          "opponent": "埼玉西武ライオンズ",
+          "opponentSlug": "seibu-lions",
+          "home": false,
+          "score": 0,
+          "opponentScore": 3,
+          "result": "L",
+          "stadium": "ベルーナドーム"
+        },
+        {
           "date": "2026-07-11",
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
@@ -341,16 +351,6 @@
           "opponentScore": 2,
           "result": "L",
           "stadium": "ベルーナドーム"
-        },
-        {
-          "date": "2026-07-08",
-          "opponent": "千葉ロッテマリーンズ",
-          "opponentSlug": "lotte-marines",
-          "home": true,
-          "score": 7,
-          "opponentScore": 2,
-          "result": "W",
-          "stadium": "エスコンフィールドHOKKAIDO"
         }
       ]
     },
@@ -401,6 +401,16 @@
       "accent": "#ffffff",
       "recentGames": [
         {
+          "date": "2026-07-12",
+          "opponent": "北海道日本ハムファイターズ",
+          "opponentSlug": "nipponham-fighters",
+          "home": true,
+          "score": 3,
+          "opponentScore": 0,
+          "result": "W",
+          "stadium": "ベルーナドーム"
+        },
+        {
           "date": "2026-07-11",
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
@@ -419,16 +429,6 @@
           "opponentScore": 1,
           "result": "W",
           "stadium": "ベルーナドーム"
-        },
-        {
-          "date": "2026-07-08",
-          "opponent": "東北楽天ゴールデンイーグルス",
-          "opponentSlug": "rakuten-eagles",
-          "home": false,
-          "score": 2,
-          "opponentScore": 5,
-          "result": "L",
-          "stadium": "楽天モバイルパーク宮城"
         }
       ]
     },
