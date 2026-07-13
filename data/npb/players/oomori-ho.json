@@ -12,10 +12,10 @@
   "rank": null,
   "stats": {
     "avg": 0.233,
-    "games": 68,
+    "games": 69,
     "pa": 224,
     "ab": 210,
-    "runs": 23,
+    "runs": 24,
     "hits": 49,
     "doubles": 6,
     "triples": 2,
@@ -35,8 +35,8 @@
     "obp": 0.265,
     "ops": 0.603
   },
-  "asOf": "2026-07-11",
-  "fetchedAt": "2026-07-12T17:53:26Z",
+  "asOf": "2026-07-12",
+  "fetchedAt": "2026-07-13T04:22:42Z",
   "source": "NPB.jp 日本野球機構",
   "sourceUrl": "https://npb.jp/bis/2026/stats/idb1_c.html"
 }

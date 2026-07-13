@@ -7,9 +7,9 @@
   "teamName": "広島東洋カープ",
   "league": "central",
   "group": "pitching",
-  "qualified": true,
+  "qualified": false,
   "season": "2026",
-  "rank": 15,
+  "rank": null,
   "stats": {
     "era": 4.52,
     "games": 14,
@@ -36,8 +36,8 @@
     "er": 39,
     "whip": 1.4
   },
-  "asOf": "2026-07-11",
-  "fetchedAt": "2026-07-12T17:53:26Z",
+  "asOf": "2026-07-12",
+  "fetchedAt": "2026-07-13T04:22:42Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/pit_c.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/idp1_c.html"
 }
