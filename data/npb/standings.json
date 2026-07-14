@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-07-14T10:43:30Z",
+  "fetchedAt": "2026-07-14T15:16:55Z",
   "central": [
     {
       "rank": 1,
@@ -184,10 +184,10 @@
       "league": "central",
       "games": 81,
       "wins": 42,
-      "losses": 36,
-      "ties": 3,
-      "pct": ".538",
-      "gb": "1.5"
+      "losses": 37,
+      "ties": 2,
+      "pct": ".531",
+      "gb": "2"
     },
     {
       "rank": 3,
@@ -196,36 +196,36 @@
       "teamAbbr": "S",
       "league": "central",
       "games": 81,
-      "wins": 40,
+      "wins": 41,
       "losses": 39,
-      "ties": 2,
-      "pct": ".506",
-      "gb": "4"
+      "ties": 1,
+      "pct": ".512",
+      "gb": "3.5"
     },
     {
       "rank": 4,
-      "teamSlug": "hiroshima-carp",
-      "teamName": "広島東洋カープ",
-      "teamAbbr": "C",
-      "league": "central",
-      "games": 79,
-      "wins": 32,
-      "losses": 43,
-      "ties": 4,
-      "pct": ".426",
-      "gb": "10"
-    },
-    {
-      "rank": 5,
       "teamSlug": "yokohama-dena",
       "teamName": "横浜DeNAベイスターズ",
       "teamAbbr": "DB",
       "league": "central",
       "games": 82,
-      "wins": 33,
-      "losses": 46,
+      "wins": 34,
+      "losses": 45,
       "ties": 3,
-      "pct": ".417",
+      "pct": ".430",
+      "gb": "10"
+    },
+    {
+      "rank": 5,
+      "teamSlug": "hiroshima-carp",
+      "teamName": "広島東洋カープ",
+      "teamAbbr": "C",
+      "league": "central",
+      "games": 79,
+      "wins": 31,
+      "losses": 44,
+      "ties": 4,
+      "pct": ".413",
       "gb": "11"
     },
     {
