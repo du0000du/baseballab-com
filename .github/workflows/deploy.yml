@@ -50,4 +50,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./dist --project-name=baseballab-com --commit-dirty=true
+          # --branch=main を明示: checkout は detached HEAD になるため、
+          # 分岐名の自動検出に委ねると Production ではなく Preview 扱いに
+          # なることがあり、その場合カスタムドメイン(baseballab.com)には
+          # 反映されない(Actions ジョブ自体は成功と出るため気づきにくい)。
+          command: pages deploy ./dist --project-name=baseballab-com --branch=main --commit-dirty=true

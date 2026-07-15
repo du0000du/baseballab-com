@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-15T03:51:09Z",
+  "fetchedAt": "2026-07-15T04:19:51Z",
   "season": "2026",
   "asOfDate": "2026-07-15",
   "teams": [
@@ -284,6 +284,16 @@
       "accent": "#000000",
       "recentGames": [
         {
+          "date": "2026-07-15",
+          "opponent": "北海道日本ハムファイターズ",
+          "opponentSlug": "nipponham-fighters",
+          "home": true,
+          "score": 0,
+          "opponentScore": 1,
+          "result": "L",
+          "stadium": "みずほPayPayドーム福岡"
+        },
+        {
           "date": "2026-07-14",
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
@@ -302,16 +312,6 @@
           "opponentScore": 0,
           "result": "W",
           "stadium": "楽天モバイルパーク宮城"
-        },
-        {
-          "date": "2026-07-11",
-          "opponent": "東北楽天ゴールデンイーグルス",
-          "opponentSlug": "rakuten-eagles",
-          "home": false,
-          "score": 9,
-          "opponentScore": 2,
-          "result": "W",
-          "stadium": "楽天モバイルパーク宮城"
         }
       ]
     },
@@ -322,6 +322,16 @@
       "color": "#0a1f44",
       "accent": "#cdd1d4",
       "recentGames": [
+        {
+          "date": "2026-07-15",
+          "opponent": "福岡ソフトバンクホークス",
+          "opponentSlug": "softbank-hawks",
+          "home": false,
+          "score": 1,
+          "opponentScore": 0,
+          "result": "W",
+          "stadium": "みずほPayPayドーム福岡"
+        },
         {
           "date": "2026-07-14",
           "opponent": "福岡ソフトバンクホークス",
@@ -340,16 +350,6 @@
           "score": 1,
           "opponentScore": 12,
           "result": "L",
-          "stadium": "ベルーナドーム"
-        },
-        {
-          "date": "2026-07-11",
-          "opponent": "埼玉西武ライオンズ",
-          "opponentSlug": "seibu-lions",
-          "home": false,
-          "score": 8,
-          "opponentScore": 2,
-          "result": "W",
           "stadium": "ベルーナドーム"
         }
       ]
