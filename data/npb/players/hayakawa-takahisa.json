@@ -7,9 +7,9 @@
   "teamName": "東北楽天ゴールデンイーグルス",
   "league": "pacific",
   "group": "pitching",
-  "qualified": true,
+  "qualified": false,
   "season": "2026",
-  "rank": 3,
+  "rank": null,
   "stats": {
     "era": 2.22,
     "games": 12,
@@ -36,8 +36,8 @@
     "er": 20,
     "whip": 0.94
   },
-  "asOf": "2026-07-13",
-  "fetchedAt": "2026-07-14T17:57:20Z",
+  "asOf": "2026-07-14",
+  "fetchedAt": "2026-07-15T03:50:31Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/pit_p.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/idp1_e.html"
 }
