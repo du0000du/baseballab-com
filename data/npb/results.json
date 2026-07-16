@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-16T10:58:33Z",
+  "fetchedAt": "2026-07-16T15:27:07Z",
   "season": "2026",
   "asOfDate": "2026-07-16",
   "teams": [
@@ -15,7 +15,7 @@
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
           "home": true,
-          "score": 2,
+          "score": 3,
           "opponentScore": 1,
           "result": "W",
           "stadium": "阪神甲子園球場"
@@ -93,9 +93,9 @@
           "opponent": "東京ヤクルトスワローズ",
           "opponentSlug": "yakult-swallows",
           "home": true,
-          "score": 1,
+          "score": 3,
           "opponentScore": 1,
-          "result": "T",
+          "result": "W",
           "stadium": "東京ドーム"
         },
         {
@@ -133,7 +133,7 @@
           "opponentSlug": "hanshin-tigers",
           "home": false,
           "score": 1,
-          "opponentScore": 2,
+          "opponentScore": 3,
           "result": "L",
           "stadium": "阪神甲子園球場"
         },
@@ -211,8 +211,8 @@
           "opponentSlug": "yomiuri-giants",
           "home": false,
           "score": 1,
-          "opponentScore": 1,
-          "result": "T",
+          "opponentScore": 3,
+          "result": "L",
           "stadium": "東京ドーム"
         },
         {
@@ -249,8 +249,8 @@
           "opponent": "東北楽天ゴールデンイーグルス",
           "opponentSlug": "rakuten-eagles",
           "home": true,
-          "score": 1,
-          "opponentScore": 3,
+          "score": 8,
+          "opponentScore": 12,
           "result": "L",
           "stadium": "京セラドームOSAKA"
         },
@@ -366,8 +366,8 @@
           "opponent": "オリックス・バファローズ",
           "opponentSlug": "orix-buffaloes",
           "home": false,
-          "score": 3,
-          "opponentScore": 1,
+          "score": 12,
+          "opponentScore": 8,
           "result": "W",
           "stadium": "京セラドームOSAKA"
         },
@@ -405,9 +405,9 @@
           "opponent": "千葉ロッテマリーンズ",
           "opponentSlug": "lotte-marines",
           "home": false,
-          "score": 2,
-          "opponentScore": 2,
-          "result": "T",
+          "score": 3,
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "ZOZOマリンスタジアム"
         },
         {
@@ -444,9 +444,9 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": true,
-          "score": 2,
-          "opponentScore": 2,
-          "result": "T",
+          "score": 4,
+          "opponentScore": 3,
+          "result": "W",
           "stadium": "ZOZOマリンスタジアム"
         },
         {
