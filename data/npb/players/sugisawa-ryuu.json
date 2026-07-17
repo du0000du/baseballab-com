@@ -11,10 +11,10 @@
   "season": "2026",
   "rank": null,
   "stats": {
-    "avg": 0.348,
-    "games": 21,
-    "pa": 53,
-    "ab": 46,
+    "avg": 0.34,
+    "games": 22,
+    "pa": 54,
+    "ab": 47,
     "runs": 10,
     "hits": 16,
     "doubles": 5,
@@ -29,14 +29,14 @@
     "bb": 4,
     "ibb": 0,
     "hbp": 1,
-    "so": 11,
+    "so": 12,
     "gidp": 1,
-    "slg": 0.565,
-    "obp": 0.404,
-    "ops": 0.969
+    "slg": 0.553,
+    "obp": 0.396,
+    "ops": 0.949
   },
-  "asOf": "2026-07-15",
-  "fetchedAt": "2026-07-16T17:59:18Z",
+  "asOf": "2026-07-16",
+  "fetchedAt": "2026-07-17T03:53:29Z",
   "source": "NPB.jp 日本野球機構",
   "sourceUrl": "https://npb.jp/bis/2026/stats/idb1_b.html"
 }

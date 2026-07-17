@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-16T18:00:47Z",
+  "fetched_at": "2026-07-17T03:54:51Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -133,17 +133,17 @@
       },
       {
         "rank": 9,
-        "playerId": 669016,
-        "player": "Brandon Marsh",
-        "team": "PHI",
-        "value": ".301"
-      },
-      {
-        "rank": 10,
         "playerId": 687859,
         "player": "Troy Johnston",
         "team": "COL",
         "value": ".301"
+      },
+      {
+        "rank": 10,
+        "playerId": 673962,
+        "player": "Josh Jung",
+        "team": "TEX",
+        "value": ".298"
       }
     ],
     "rbi": [

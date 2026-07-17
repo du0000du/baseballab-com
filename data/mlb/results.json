@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-07-16T18:00:48Z",
+  "fetchedAt": "2026-07-17T03:54:51Z",
   "season": "2026",
-  "asOfDate": "2026-07-16",
+  "asOfDate": "2026-07-17",
   "teams": [
     {
       "id": 145,
@@ -915,6 +915,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-16",
+          "opponent": "Philadelphia Phillies",
+          "opponentAbbr": "PHI",
+          "home": false,
+          "score": 4,
+          "opponentScore": 1,
+          "result": "W",
+          "venue": "Citizens Bank Park"
+        },
+        {
           "date": "2026-07-12",
           "opponent": "Boston Red Sox",
           "opponentAbbr": "BOS",
@@ -933,16 +943,6 @@
           "opponentScore": 4,
           "result": "L",
           "venue": "Citi Field"
-        },
-        {
-          "date": "2026-07-10",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": true,
-          "score": 2,
-          "opponentScore": 6,
-          "result": "L",
-          "venue": "Citi Field"
         }
       ]
     },
@@ -955,6 +955,16 @@
       "division": "National League East",
       "divisionShort": "NL East",
       "recentGames": [
+        {
+          "date": "2026-07-16",
+          "opponent": "New York Mets",
+          "opponentAbbr": "NYM",
+          "home": true,
+          "score": 1,
+          "opponentScore": 4,
+          "result": "L",
+          "venue": "Citizens Bank Park"
+        },
         {
           "date": "2026-07-12",
           "opponent": "Detroit Tigers",
@@ -973,16 +983,6 @@
           "score": 4,
           "opponentScore": 2,
           "result": "W",
-          "venue": "Comerica Park"
-        },
-        {
-          "date": "2026-07-10",
-          "opponent": "Detroit Tigers",
-          "opponentAbbr": "DET",
-          "home": false,
-          "score": 2,
-          "opponentScore": 10,
-          "result": "L",
           "venue": "Comerica Park"
         }
       ]
