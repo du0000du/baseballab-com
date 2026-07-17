@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-17T15:07:23Z",
+  "fetched_at": "2026-07-17T17:59:41Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -94,7 +94,7 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".322"
+        "value": ".321"
       },
       {
         "rank": 4,
