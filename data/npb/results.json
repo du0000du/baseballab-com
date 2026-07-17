@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-17T10:46:08Z",
+  "fetchedAt": "2026-07-17T15:06:46Z",
   "season": "2026",
   "asOfDate": "2026-07-17",
   "teams": [
@@ -15,8 +15,8 @@
           "opponent": "広島東洋カープ",
           "opponentSlug": "hiroshima-carp",
           "home": true,
-          "score": 3,
-          "opponentScore": 0,
+          "score": 4,
+          "opponentScore": 2,
           "result": "W",
           "stadium": "阪神甲子園球場"
         },
@@ -54,8 +54,8 @@
           "opponent": "東京ヤクルトスワローズ",
           "opponentSlug": "yakult-swallows",
           "home": false,
-          "score": 4,
-          "opponentScore": 2,
+          "score": 12,
+          "opponentScore": 4,
           "result": "W",
           "stadium": "明治神宮野球場"
         },
@@ -93,9 +93,9 @@
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
           "home": false,
-          "score": 1,
+          "score": 4,
           "opponentScore": 1,
-          "result": "T",
+          "result": "W",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -133,8 +133,8 @@
           "opponentSlug": "yomiuri-giants",
           "home": true,
           "score": 1,
-          "opponentScore": 1,
-          "result": "T",
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -171,8 +171,8 @@
           "opponent": "阪神タイガース",
           "opponentSlug": "hanshin-tigers",
           "home": false,
-          "score": 0,
-          "opponentScore": 3,
+          "score": 2,
+          "opponentScore": 4,
           "result": "L",
           "stadium": "阪神甲子園球場"
         },
@@ -210,8 +210,8 @@
           "opponent": "横浜DeNAベイスターズ",
           "opponentSlug": "yokohama-dena",
           "home": true,
-          "score": 2,
-          "opponentScore": 4,
+          "score": 4,
+          "opponentScore": 12,
           "result": "L",
           "stadium": "明治神宮野球場"
         },
