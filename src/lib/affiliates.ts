@@ -39,7 +39,7 @@ export const AT_AFFILIATES: ATAffiliate[] = [
     name: 'DAZN for BUSINESS',
     category: 'streaming',
     description: 'プロ野球・Jリーグなどスポーツを法人向けに一挙配信。飲食店・スポーツバー向けビジネスプラン。',
-    clickUrl: 'https://h.accesstrade.net/sp/cc?rk=0100ph5m00our9',
+    clickUrl: 'https://h.accesstrade.net/sp/cc?rk=0100ph5l00our9',
     imgUrl: 'https://a.image.accesstrade.net/m/m_img/1088821/20230720/bn_300_250.png',
     icon: '📺',
     cta: 'DAZNビジネスを見る',
