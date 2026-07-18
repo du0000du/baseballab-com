@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-18T10:17:55Z",
+  "fetchedAt": "2026-07-18T14:44:13Z",
   "season": "2026",
   "asOfDate": "2026-07-18",
   "teams": [
@@ -15,9 +15,9 @@
           "opponent": "広島東洋カープ",
           "opponentSlug": "hiroshima-carp",
           "home": true,
-          "score": 0,
-          "opponentScore": 0,
-          "result": "T",
+          "score": 1,
+          "opponentScore": 2,
+          "result": "L",
           "stadium": "阪神甲子園球場"
         },
         {
@@ -54,7 +54,7 @@
           "opponent": "東京ヤクルトスワローズ",
           "opponentSlug": "yakult-swallows",
           "home": false,
-          "score": 3,
+          "score": 8,
           "opponentScore": 0,
           "result": "W",
           "stadium": "明治神宮野球場"
@@ -171,9 +171,9 @@
           "opponent": "阪神タイガース",
           "opponentSlug": "hanshin-tigers",
           "home": false,
-          "score": 0,
-          "opponentScore": 0,
-          "result": "T",
+          "score": 2,
+          "opponentScore": 1,
+          "result": "W",
           "stadium": "阪神甲子園球場"
         },
         {
@@ -211,7 +211,7 @@
           "opponentSlug": "yokohama-dena",
           "home": true,
           "score": 0,
-          "opponentScore": 3,
+          "opponentScore": 8,
           "result": "L",
           "stadium": "明治神宮野球場"
         },
@@ -288,8 +288,8 @@
           "opponent": "千葉ロッテマリーンズ",
           "opponentSlug": "lotte-marines",
           "home": true,
-          "score": 3,
-          "opponentScore": 1,
+          "score": 5,
+          "opponentScore": 4,
           "result": "W",
           "stadium": "みずほPayPayドーム福岡"
         },
@@ -366,9 +366,9 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": false,
-          "score": 1,
-          "opponentScore": 1,
-          "result": "T",
+          "score": 3,
+          "opponentScore": 2,
+          "result": "W",
           "stadium": "ベルーナドーム"
         },
         {
@@ -405,9 +405,9 @@
           "opponent": "東北楽天ゴールデンイーグルス",
           "opponentSlug": "rakuten-eagles",
           "home": true,
-          "score": 1,
-          "opponentScore": 1,
-          "result": "T",
+          "score": 2,
+          "opponentScore": 3,
+          "result": "L",
           "stadium": "ベルーナドーム"
         },
         {
@@ -444,8 +444,8 @@
           "opponent": "福岡ソフトバンクホークス",
           "opponentSlug": "softbank-hawks",
           "home": false,
-          "score": 1,
-          "opponentScore": 3,
+          "score": 4,
+          "opponentScore": 5,
           "result": "L",
           "stadium": "みずほPayPayドーム福岡"
         },
