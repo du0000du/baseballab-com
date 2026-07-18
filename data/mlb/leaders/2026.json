@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T03:48:43Z",
+  "fetched_at": "2026-07-18T10:18:35Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -68,9 +68,9 @@
       },
       {
         "rank": 10,
-        "playerId": 660271,
-        "player": "Shohei Ohtani",
-        "team": "LAD",
+        "playerId": 669127,
+        "player": "Shea Langeliers",
+        "team": "ATH",
         "value": 22
       }
     ],
@@ -87,7 +87,7 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "SF",
-        "value": ".330"
+        "value": ".328"
       },
       {
         "rank": 3,
@@ -115,7 +115,7 @@
         "playerId": 808982,
         "player": "Jung Hoo Lee",
         "team": "SF",
-        "value": ".305"
+        "value": ".307"
       },
       {
         "rank": 7,
@@ -531,17 +531,17 @@
         "value": 25
       },
       {
-        "rank": 4,
-        "playerId": 661395,
-        "player": "Jhoan Duran",
-        "team": "PHI",
-        "value": 24
-      },
-      {
-        "rank": 4,
+        "rank": 2,
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
+        "value": 25
+      },
+      {
+        "rank": 5,
+        "playerId": 661395,
+        "player": "Jhoan Duran",
+        "team": "PHI",
         "value": 24
       },
       {
