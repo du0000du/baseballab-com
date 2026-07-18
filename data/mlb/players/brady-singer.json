@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 663903,
+    "fullName": "Brady Singer",
+    "link": "/api/v1/people/663903",
+    "firstName": "Brady",
+    "lastName": "Singer",
+    "primaryNumber": "51",
+    "birthDate": "1996-08-04",
+    "currentAge": 29,
+    "birthCity": "Leesburg",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 215,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Brady",
+    "useLastName": "Singer",
+    "middleName": "Alan",
+    "boxscoreName": "Singer",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "mlbDebutDate": "2020-07-25",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Brady Singer",
+    "nameSlug": "brady-singer-663903",
+    "firstLastName": "Brady Singer",
+    "lastFirstName": "Singer, Brady",
+    "lastInitName": "Singer, B",
+    "initLastName": "B Singer",
+    "fullFMLName": "Brady Alan Singer",
+    "fullLFMName": "Singer, Brady Alan",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 19,
+            "gamesStarted": 19,
+            "groundOuts": 96,
+            "airOuts": 106,
+            "runs": 54,
+            "doubles": 16,
+            "triples": 2,
+            "homeRuns": 21,
+            "strikeOuts": 82,
+            "baseOnBalls": 31,
+            "intentionalWalks": 0,
+            "hits": 105,
+            "hitByPitch": 8,
+            "avg": ".272",
+            "atBats": 386,
+            "obp": ".337",
+            "slg": ".487",
+            "ops": ".824",
+            "caughtStealing": 2,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".818",
+            "caughtStealingPercentage": ".182",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1671,
+            "era": "4.56",
+            "inningsPitched": "96.2",
+            "wins": 4,
+            "losses": 9,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 49,
+            "whip": "1.41",
+            "battersFaced": 428,
+            "outs": 290,
+            "gamesPitched": 19,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1031,
+            "strikePercentage": ".620",
+            "hitBatsmen": 8,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 1,
+            "totalBases": 188,
+            "groundOutsToAirouts": "0.91",
+            "winPercentage": ".308",
+            "pitchesPerInning": "17.29",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.65",
+            "strikeoutsPer9Inn": "7.63",
+            "walksPer9Inn": "2.89",
+            "hitsPer9Inn": "9.78",
+            "runsScoredPer9": "5.03",
+            "homeRunsPer9": "1.96",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 113,
+            "name": "Cincinnati Reds",
+            "link": "/api/v1/teams/113"
+          },
+          "player": {
+            "id": 663903,
+            "fullName": "Brady Singer",
+            "link": "/api/v1/people/663903"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

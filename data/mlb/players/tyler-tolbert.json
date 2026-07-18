@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 686475,
+    "fullName": "Tyler Tolbert",
+    "link": "/api/v1/people/686475",
+    "firstName": "Tyler",
+    "lastName": "Tolbert",
+    "primaryNumber": "2",
+    "birthDate": "1998-01-27",
+    "currentAge": 28,
+    "birthCity": "Birmingham",
+    "birthStateProvince": "AL",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Tyler",
+    "useLastName": "Tolbert",
+    "middleName": "Mangual",
+    "boxscoreName": "Tolbert",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2019,
+    "mlbDebutDate": "2025-03-31",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Tyler Tolbert",
+    "nameSlug": "tyler-tolbert-686475",
+    "firstLastName": "Tyler Tolbert",
+    "lastFirstName": "Tolbert, Tyler",
+    "lastInitName": "Tolbert, T",
+    "initLastName": "T Tolbert",
+    "fullFMLName": "Tyler Mangual Tolbert",
+    "fullLFMName": "Tolbert, Tyler Mangual",
+    "strikeZoneTop": 3.126,
+    "strikeZoneBottom": 1.578
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 35,
+            "groundOuts": 14,
+            "airOuts": 11,
+            "runs": 17,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 11,
+            "baseOnBalls": 4,
+            "intentionalWalks": 0,
+            "hits": 20,
+            "hitByPitch": 0,
+            "avg": ".370",
+            "atBats": 54,
+            "obp": ".407",
+            "slg": ".500",
+            "ops": ".907",
+            "caughtStealing": 3,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".786",
+            "caughtStealingPercentage": ".214",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 211,
+            "plateAppearances": 60,
+            "totalBases": 27,
+            "rbi": 5,
+            "leftOnBase": 25,
+            "sacBunts": 1,
+            "sacFlies": 1,
+            "babip": ".429",
+            "groundOutsToAirouts": "1.27",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "27.00"
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 686475,
+            "fullName": "Tyler Tolbert",
+            "link": "/api/v1/people/686475"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
