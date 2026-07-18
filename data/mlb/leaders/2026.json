@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-18T14:44:58Z",
+  "fetched_at": "2026-07-18T17:51:45Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -105,16 +105,16 @@
       },
       {
         "rank": 5,
-        "playerId": 693304,
-        "player": "Nick Gonzales",
-        "team": "PIT",
-        "value": ".308"
-      },
-      {
-        "rank": 6,
         "playerId": 808982,
         "player": "Jung Hoo Lee",
         "team": "SF",
+        "value": ".307"
+      },
+      {
+        "rank": 6,
+        "playerId": 693304,
+        "player": "Nick Gonzales",
+        "team": "PIT",
         "value": ".307"
       },
       {
@@ -466,18 +466,18 @@
         "value": 137
       },
       {
-        "rank": 5,
+        "rank": 4,
+        "playerId": 668909,
+        "player": "Gavin Williams",
+        "team": "CLE",
+        "value": 137
+      },
+      {
+        "rank": 6,
         "playerId": 666200,
         "player": "Jesús Luzardo",
         "team": "PHI",
         "value": 136
-      },
-      {
-        "rank": 6,
-        "playerId": 668909,
-        "player": "Gavin Williams",
-        "team": "CLE",
-        "value": 134
       },
       {
         "rank": 7,
