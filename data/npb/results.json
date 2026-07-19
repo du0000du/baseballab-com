@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-07-18T17:51:07Z",
+  "fetchedAt": "2026-07-19T04:17:18Z",
   "season": "2026",
-  "asOfDate": "2026-07-18",
+  "asOfDate": "2026-07-19",
   "teams": [
     {
       "slug": "hanshin-tigers",
@@ -245,6 +245,16 @@
       "accent": "#b09b5b",
       "recentGames": [
         {
+          "date": "2026-07-19",
+          "opponent": "北海道日本ハムファイターズ",
+          "opponentSlug": "nipponham-fighters",
+          "home": false,
+          "score": 1,
+          "opponentScore": 2,
+          "result": "L",
+          "stadium": "エスコンフィールドHOKKAIDO"
+        },
+        {
           "date": "2026-07-18",
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
@@ -261,16 +271,6 @@
           "home": true,
           "score": 8,
           "opponentScore": 12,
-          "result": "L",
-          "stadium": "京セラドームOSAKA"
-        },
-        {
-          "date": "2026-07-15",
-          "opponent": "東北楽天ゴールデンイーグルス",
-          "opponentSlug": "rakuten-eagles",
-          "home": true,
-          "score": 2,
-          "opponentScore": 3,
           "result": "L",
           "stadium": "京セラドームOSAKA"
         }
@@ -323,6 +323,16 @@
       "accent": "#cdd1d4",
       "recentGames": [
         {
+          "date": "2026-07-19",
+          "opponent": "オリックス・バファローズ",
+          "opponentSlug": "orix-buffaloes",
+          "home": true,
+          "score": 2,
+          "opponentScore": 1,
+          "result": "W",
+          "stadium": "エスコンフィールドHOKKAIDO"
+        },
+        {
           "date": "2026-07-18",
           "opponent": "オリックス・バファローズ",
           "opponentSlug": "orix-buffaloes",
@@ -340,16 +350,6 @@
           "score": 2,
           "opponentScore": 6,
           "result": "L",
-          "stadium": "みずほPayPayドーム福岡"
-        },
-        {
-          "date": "2026-07-15",
-          "opponent": "福岡ソフトバンクホークス",
-          "opponentSlug": "softbank-hawks",
-          "home": false,
-          "score": 7,
-          "opponentScore": 6,
-          "result": "W",
           "stadium": "みずほPayPayドーム福岡"
         }
       ]

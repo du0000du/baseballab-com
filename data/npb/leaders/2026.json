@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-07-18T17:51:07Z",
+  "fetchedAt": "2026-07-19T04:17:18Z",
   "central": {
     "batting": {
       "avg": [
@@ -10,7 +10,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.339
+          "value": 0.334
         },
         {
           "rank": 2,
@@ -18,7 +18,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.303
+          "value": 0.299
         },
         {
           "rank": 3,
@@ -26,23 +26,23 @@
           "player": "中野 拓夢",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.29
+          "value": 0.292
         },
         {
           "rank": 4,
-          "slug": "urata-shunsuke",
-          "player": "浦田 俊輔",
-          "team": "巨",
-          "teamSlug": "yomiuri-giants",
-          "value": 0.283
-        },
-        {
-          "rank": 5,
           "slug": "ryuki-watarai",
           "player": "度会 隆輝",
           "team": "デ",
           "teamSlug": "yokohama-dena",
           "value": 0.282
+        },
+        {
+          "rank": 5,
+          "slug": "urata-shunsuke",
+          "player": "浦田 俊輔",
+          "team": "巨",
+          "teamSlug": "yomiuri-giants",
+          "value": 0.281
         },
         {
           "rank": 6,
@@ -58,15 +58,15 @@
           "player": "佐野 恵太",
           "team": "デ",
           "teamSlug": "yokohama-dena",
-          "value": 0.263
+          "value": 0.27
         },
         {
           "rank": 8,
-          "slug": "darubekku",
-          "player": "ダルベック",
-          "team": "巨",
-          "teamSlug": "yomiuri-giants",
-          "value": 0.257
+          "slug": "shogo-sakakura",
+          "player": "坂倉 将吾",
+          "team": "広",
+          "teamSlug": "hiroshima-carp",
+          "value": 0.258
         },
         {
           "rank": 9,
@@ -74,15 +74,15 @@
           "player": "サンタナ",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 0.256
+          "value": 0.257
         },
         {
           "rank": 10,
-          "slug": "shogo-sakakura",
-          "player": "坂倉 将吾",
-          "team": "広",
-          "teamSlug": "hiroshima-carp",
-          "value": 0.255
+          "slug": "darubekku",
+          "player": "ダルベック",
+          "team": "巨",
+          "teamSlug": "yomiuri-giants",
+          "value": 0.256
         }
       ],
       "hr": [
@@ -104,18 +104,18 @@
         },
         {
           "rank": 3,
-          "slug": "darubekku",
-          "player": "ダルベック",
-          "team": "巨",
-          "teamSlug": "yomiuri-giants",
-          "value": 15
-        },
-        {
-          "rank": 4,
           "slug": "santana",
           "player": "サンタナ",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
+          "value": 15
+        },
+        {
+          "rank": 4,
+          "slug": "darubekku",
+          "player": "ダルベック",
+          "team": "巨",
+          "teamSlug": "yomiuri-giants",
           "value": 15
         },
         {
@@ -128,6 +128,14 @@
         },
         {
           "rank": 6,
+          "slug": "seiya-hosokawa",
+          "player": "細川 成也",
+          "team": "中",
+          "teamSlug": "chunichi-dragons",
+          "value": 13
+        },
+        {
+          "rank": 7,
           "slug": "maki-shuugo",
           "player": "牧 秀悟",
           "team": "デ",
@@ -135,19 +143,11 @@
           "value": 13
         },
         {
-          "rank": 7,
+          "rank": 8,
           "slug": "yusuke-oyama",
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 12
-        },
-        {
-          "rank": 8,
-          "slug": "seiya-hosokawa",
-          "player": "細川 成也",
-          "team": "中",
-          "teamSlug": "chunichi-dragons",
           "value": 12
         },
         {
@@ -156,12 +156,12 @@
           "player": "サノー",
           "team": "中",
           "teamSlug": "chunichi-dragons",
-          "value": 11
+          "value": 12
         },
         {
           "rank": 10,
-          "slug": "fabian",
-          "player": "ファビアン",
+          "slug": "shogo-sakakura",
+          "player": "坂倉 将吾",
           "team": "広",
           "teamSlug": "hiroshima-carp",
           "value": 10
@@ -198,7 +198,7 @@
           "player": "ダルベック",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
-          "value": 48
+          "value": 49
         },
         {
           "rank": 5,
@@ -206,7 +206,7 @@
           "player": "坂倉 将吾",
           "team": "広",
           "teamSlug": "hiroshima-carp",
-          "value": 44
+          "value": 45
         },
         {
           "rank": 6,
@@ -214,7 +214,7 @@
           "player": "細川 成也",
           "team": "中",
           "teamSlug": "chunichi-dragons",
-          "value": 43
+          "value": 44
         },
         {
           "rank": 7,
@@ -226,19 +226,19 @@
         },
         {
           "rank": 8,
+          "slug": "keita-sano",
+          "player": "佐野 恵太",
+          "team": "デ",
+          "teamSlug": "yokohama-dena",
+          "value": 34
+        },
+        {
+          "rank": 9,
           "slug": "santana",
           "player": "サンタナ",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
           "value": 34
-        },
-        {
-          "rank": 9,
-          "slug": "keita-sano",
-          "player": "佐野 恵太",
-          "team": "デ",
-          "teamSlug": "yokohama-dena",
-          "value": 32
         },
         {
           "rank": 10,
@@ -264,7 +264,7 @@
           "player": "浦田 俊輔",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
-          "value": 23
+          "value": 24
         },
         {
           "rank": 3,
@@ -338,7 +338,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 1.067
+          "value": 1.054
         },
         {
           "rank": 2,
@@ -346,7 +346,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.998
+          "value": 0.986
         },
         {
           "rank": 3,
@@ -354,7 +354,7 @@
           "player": "サンタナ",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 0.887
+          "value": 0.884
         },
         {
           "rank": 4,
@@ -370,7 +370,7 @@
           "player": "ダルベック",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
-          "value": 0.795
+          "value": 0.788
         },
         {
           "rank": 6,
@@ -378,10 +378,18 @@
           "player": "坂倉 将吾",
           "team": "広",
           "teamSlug": "hiroshima-carp",
-          "value": 0.75
+          "value": 0.768
         },
         {
           "rank": 7,
+          "slug": "seiya-hosokawa",
+          "player": "細川 成也",
+          "team": "中",
+          "teamSlug": "chunichi-dragons",
+          "value": 0.758
+        },
+        {
+          "rank": 8,
           "slug": "ryuki-watarai",
           "player": "度会 隆輝",
           "team": "デ",
@@ -389,28 +397,20 @@
           "value": 0.746
         },
         {
-          "rank": 8,
-          "slug": "seiya-hosokawa",
-          "player": "細川 成也",
-          "team": "中",
-          "teamSlug": "chunichi-dragons",
-          "value": 0.741
-        },
-        {
           "rank": 9,
           "slug": "kaito-muramatsu",
           "player": "村松 開人",
           "team": "中",
           "teamSlug": "chunichi-dragons",
-          "value": 0.74
+          "value": 0.729
         },
         {
           "rank": 10,
-          "slug": "kyabejji",
-          "player": "キャベッジ",
-          "team": "巨",
-          "teamSlug": "yomiuri-giants",
-          "value": 0.721
+          "slug": "keita-sano",
+          "player": "佐野 恵太",
+          "team": "デ",
+          "teamSlug": "yokohama-dena",
+          "value": 0.727
         }
       ],
       "hits": [
@@ -436,7 +436,7 @@
           "player": "中野 拓夢",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 89
+          "value": 90
         },
         {
           "rank": 4,
@@ -444,7 +444,7 @@
           "player": "佐野 恵太",
           "team": "デ",
           "teamSlug": "yokohama-dena",
-          "value": 79
+          "value": 82
         },
         {
           "rank": 5,
@@ -452,7 +452,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 78
+          "value": 79
         },
         {
           "rank": 6,
@@ -460,7 +460,7 @@
           "player": "ダルベック",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
-          "value": 75
+          "value": 76
         },
         {
           "rank": 7,
@@ -468,10 +468,18 @@
           "player": "勝又 温史",
           "team": "デ",
           "teamSlug": "yokohama-dena",
-          "value": 74
+          "value": 75
         },
         {
           "rank": 8,
+          "slug": "shogo-sakakura",
+          "player": "坂倉 将吾",
+          "team": "広",
+          "teamSlug": "hiroshima-carp",
+          "value": 72
+        },
+        {
+          "rank": 9,
           "slug": "kaito-muramatsu",
           "player": "村松 開人",
           "team": "中",
@@ -479,20 +487,12 @@
           "value": 72
         },
         {
-          "rank": 9,
+          "rank": 10,
           "slug": "ryuki-watarai",
           "player": "度会 隆輝",
           "team": "デ",
           "teamSlug": "yokohama-dena",
           "value": 71
-        },
-        {
-          "rank": 10,
-          "slug": "shogo-sakakura",
-          "player": "坂倉 将吾",
-          "team": "広",
-          "teamSlug": "hiroshima-carp",
-          "value": 70
         }
       ]
     },
@@ -638,18 +638,18 @@
         },
         {
           "rank": 8,
-          "slug": "okamoto-shun",
-          "player": "岡本 駿",
-          "team": "広",
-          "teamSlug": "hiroshima-carp",
-          "value": 6
-        },
-        {
-          "rank": 9,
           "slug": "take-maru-kazuyuki",
           "player": "竹丸 和幸",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
+          "value": 6
+        },
+        {
+          "rank": 9,
+          "slug": "okamoto-shun",
+          "player": "岡本 駿",
+          "team": "広",
+          "teamSlug": "hiroshima-carp",
           "value": 6
         },
         {
@@ -688,6 +688,14 @@
         },
         {
           "rank": 4,
+          "slug": "take-maru-kazuyuki",
+          "player": "竹丸 和幸",
+          "team": "巨",
+          "teamSlug": "yomiuri-giants",
+          "value": 91
+        },
+        {
+          "rank": 5,
           "slug": "uittorii",
           "player": "ウィットリー",
           "team": "巨",
@@ -695,7 +703,7 @@
           "value": 91
         },
         {
-          "rank": 5,
+          "rank": 6,
           "slug": "yuya-yanagi",
           "player": "柳 裕也",
           "team": "中",
@@ -703,7 +711,7 @@
           "value": 88
         },
         {
-          "rank": 6,
+          "rank": 7,
           "slug": "yutaro-ishida",
           "player": "石田 裕太郎",
           "team": "デ",
@@ -711,7 +719,7 @@
           "value": 88
         },
         {
-          "rank": 7,
+          "rank": 8,
           "slug": "taichi-yamano",
           "player": "山野 太一",
           "team": "ヤ",
@@ -719,7 +727,7 @@
           "value": 87
         },
         {
-          "rank": 8,
+          "rank": 9,
           "slug": "inoue-on-dai",
           "player": "井上 温大",
           "team": "巨",
@@ -727,20 +735,12 @@
           "value": 87
         },
         {
-          "rank": 9,
+          "rank": 10,
           "slug": "yumeto-kanemaru",
           "player": "金丸 夢斗",
           "team": "中",
           "teamSlug": "chunichi-dragons",
           "value": 84
-        },
-        {
-          "rank": 10,
-          "slug": "take-maru-kazuyuki",
-          "player": "竹丸 和幸",
-          "team": "巨",
-          "teamSlug": "yomiuri-giants",
-          "value": 81
         }
       ],
       "saves": [
@@ -798,7 +798,7 @@
           "player": "森浦 大輔",
           "team": "広",
           "teamSlug": "hiroshima-carp",
-          "value": 9
+          "value": 10
         },
         {
           "rank": 8,
@@ -836,18 +836,18 @@
         },
         {
           "rank": 2,
-          "slug": "reinoruzu",
-          "player": "レイノルズ",
-          "team": "デ",
-          "teamSlug": "yokohama-dena",
-          "value": 24
-        },
-        {
-          "rank": 3,
           "slug": "haan",
           "player": "ハーン",
           "team": "広",
           "teamSlug": "hiroshima-carp",
+          "value": 25
+        },
+        {
+          "rank": 3,
+          "slug": "reinoruzu",
+          "player": "レイノルズ",
+          "team": "デ",
+          "teamSlug": "yokohama-dena",
           "value": 24
         },
         {
@@ -876,6 +876,14 @@
         },
         {
           "rank": 7,
+          "slug": "yoshida-hijiri-ya",
+          "player": "吉田 聖弥",
+          "team": "中",
+          "teamSlug": "chunichi-dragons",
+          "value": 14
+        },
+        {
+          "rank": 8,
           "slug": "fune-sako-taiga",
           "player": "船迫 大雅",
           "team": "巨",
@@ -883,28 +891,20 @@
           "value": 13
         },
         {
-          "rank": 8,
-          "slug": "yoshida-hijiri-ya",
-          "player": "吉田 聖弥",
+          "rank": 9,
+          "slug": "hashimoto-yuuki",
+          "player": "橋本 侑樹",
           "team": "中",
           "teamSlug": "chunichi-dragons",
           "value": 13
         },
         {
-          "rank": 9,
+          "rank": 10,
           "slug": "taka-taichi",
           "player": "髙 太一",
           "team": "広",
           "teamSlug": "hiroshima-carp",
           "value": 13
-        },
-        {
-          "rank": 10,
-          "slug": "hashimoto-yuuki",
-          "player": "橋本 侑樹",
-          "team": "中",
-          "teamSlug": "chunichi-dragons",
-          "value": 12
         }
       ],
       "whip": [
@@ -1000,7 +1000,7 @@
           "player": "レイエス",
           "team": "日",
           "teamSlug": "nipponham-fighters",
-          "value": 0.324
+          "value": 0.326
         },
         {
           "rank": 2,
@@ -1008,39 +1008,39 @@
           "player": "滝澤 夏央",
           "team": "西",
           "teamSlug": "seibu-lions",
-          "value": 0.301
+          "value": 0.3
         },
         {
           "rank": 3,
-          "slug": "mishou-nishikawa",
-          "player": "西川 史礁",
-          "team": "ロ",
-          "teamSlug": "lotte-marines",
-          "value": 0.297
-        },
-        {
-          "rank": 4,
           "slug": "kensuke-kondo",
           "player": "近藤 健介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.297
+          "value": 0.299
+        },
+        {
+          "rank": 4,
+          "slug": "mishou-nishikawa",
+          "player": "西川 史礁",
+          "team": "ロ",
+          "teamSlug": "lotte-marines",
+          "value": 0.299
         },
         {
           "rank": 5,
-          "slug": "ryosuke-tatsumi",
-          "player": "辰己 涼介",
-          "team": "楽",
-          "teamSlug": "rakuten-eagles",
-          "value": 0.293
-        },
-        {
-          "rank": 6,
           "slug": "tatsuki-mizuno",
           "player": "水野 達稀",
           "team": "日",
           "teamSlug": "nipponham-fighters",
-          "value": 0.292
+          "value": 0.294
+        },
+        {
+          "rank": 6,
+          "slug": "ryosuke-tatsumi",
+          "player": "辰己 涼介",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 0.29
         },
         {
           "rank": 7,
@@ -1064,7 +1064,7 @@
           "player": "周東 佑京",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.287
+          "value": 0.286
         },
         {
           "rank": 10,
@@ -1072,7 +1072,7 @@
           "player": "牧原 大成",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.281
+          "value": 0.284
         }
       ],
       "hr": [
@@ -1134,6 +1134,14 @@
         },
         {
           "rank": 8,
+          "slug": "makkasukaa",
+          "player": "マッカスカー",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 12
+        },
+        {
+          "rank": 9,
           "slug": "nebin",
           "player": "ネビン",
           "team": "西",
@@ -1141,19 +1149,11 @@
           "value": 12
         },
         {
-          "rank": 9,
+          "rank": 10,
           "slug": "kotaro-kurebayashi",
           "player": "紅林 弘太郎",
           "team": "オ",
           "teamSlug": "orix-buffaloes",
-          "value": 11
-        },
-        {
-          "rank": 10,
-          "slug": "yuki-yanagita",
-          "player": "柳田 悠岐",
-          "team": "ソ",
-          "teamSlug": "softbank-hawks",
           "value": 11
         }
       ],
@@ -1164,7 +1164,7 @@
           "player": "近藤 健介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 68
+          "value": 69
         },
         {
           "rank": 2,
@@ -1172,7 +1172,7 @@
           "player": "栗原 陵矢",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 65
+          "value": 67
         },
         {
           "rank": 3,
@@ -1180,23 +1180,23 @@
           "player": "レイエス",
           "team": "日",
           "teamSlug": "nipponham-fighters",
-          "value": 49
+          "value": 50
         },
         {
           "rank": 4,
-          "slug": "nomura-yuuki",
-          "player": "野村 佑希",
-          "team": "日",
-          "teamSlug": "nipponham-fighters",
-          "value": 42
-        },
-        {
-          "rank": 5,
           "slug": "chusei-manami",
           "player": "万波 中正",
           "team": "日",
           "teamSlug": "nipponham-fighters",
-          "value": 41
+          "value": 43
+        },
+        {
+          "rank": 5,
+          "slug": "nomura-yuuki",
+          "player": "野村 佑希",
+          "team": "日",
+          "teamSlug": "nipponham-fighters",
+          "value": 43
         },
         {
           "rank": 6,
@@ -1224,18 +1224,18 @@
         },
         {
           "rank": 9,
+          "slug": "yamaguchi-kou-teru",
+          "player": "山口 航輝",
+          "team": "ロ",
+          "teamSlug": "lotte-marines",
+          "value": 36
+        },
+        {
+          "rank": 10,
           "slug": "ryoma-nishikawa",
           "player": "西川 龍馬",
           "team": "オ",
           "teamSlug": "orix-buffaloes",
-          "value": 35
-        },
-        {
-          "rank": 10,
-          "slug": "satou-tsushi-ya",
-          "player": "佐藤 都志也",
-          "team": "ロ",
-          "teamSlug": "lotte-marines",
           "value": 35
         }
       ],
@@ -1274,6 +1274,14 @@
         },
         {
           "rank": 5,
+          "slug": "tatsuki-mizuno",
+          "player": "水野 達稀",
+          "team": "日",
+          "teamSlug": "nipponham-fighters",
+          "value": 10
+        },
+        {
+          "rank": 6,
           "slug": "kanario",
           "player": "カナリオ",
           "team": "西",
@@ -1281,15 +1289,23 @@
           "value": 9
         },
         {
-          "rank": 6,
-          "slug": "tatsuki-mizuno",
-          "player": "水野 達稀",
+          "rank": 7,
+          "slug": "gojuu-hata-akira-ta",
+          "player": "五十幡 亮汰",
           "team": "日",
           "teamSlug": "nipponham-fighters",
           "value": 8
         },
         {
-          "rank": 7,
+          "rank": 8,
+          "slug": "taira-tatsuya",
+          "player": "平良 竜哉",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 8
+        },
+        {
+          "rank": 9,
           "slug": "taisei-makihara",
           "player": "牧原 大成",
           "team": "ソ",
@@ -1297,25 +1313,9 @@
           "value": 7
         },
         {
-          "rank": 8,
-          "slug": "gojuu-hata-akira-ta",
-          "player": "五十幡 亮汰",
-          "team": "日",
-          "teamSlug": "nipponham-fighters",
-          "value": 7
-        },
-        {
-          "rank": 9,
+          "rank": 10,
           "slug": "kofukata-hiroto",
           "player": "小深田 大翔",
-          "team": "楽",
-          "teamSlug": "rakuten-eagles",
-          "value": 7
-        },
-        {
-          "rank": 10,
-          "slug": "taira-tatsuya",
-          "player": "平良 竜哉",
           "team": "楽",
           "teamSlug": "rakuten-eagles",
           "value": 7
@@ -1328,7 +1328,7 @@
           "player": "近藤 健介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.992
+          "value": 0.989
         },
         {
           "rank": 2,
@@ -1336,7 +1336,7 @@
           "player": "レイエス",
           "team": "日",
           "teamSlug": "nipponham-fighters",
-          "value": 0.961
+          "value": 0.964
         },
         {
           "rank": 3,
@@ -1344,23 +1344,23 @@
           "player": "栗原 陵矢",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.91
+          "value": 0.919
         },
         {
           "rank": 4,
-          "slug": "ryosuke-tatsumi",
-          "player": "辰己 涼介",
-          "team": "楽",
-          "teamSlug": "rakuten-eagles",
-          "value": 0.822
-        },
-        {
-          "rank": 5,
           "slug": "chusei-manami",
           "player": "万波 中正",
           "team": "日",
           "teamSlug": "nipponham-fighters",
-          "value": 0.817
+          "value": 0.823
+        },
+        {
+          "rank": 5,
+          "slug": "ryosuke-tatsumi",
+          "player": "辰己 涼介",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 0.814
         },
         {
           "rank": 6,
@@ -1368,7 +1368,7 @@
           "player": "西川 史礁",
           "team": "ロ",
           "teamSlug": "lotte-marines",
-          "value": 0.796
+          "value": 0.799
         },
         {
           "rank": 7,
@@ -1392,7 +1392,7 @@
           "player": "紅林 弘太郎",
           "team": "オ",
           "teamSlug": "orix-buffaloes",
-          "value": 0.76
+          "value": 0.754
         },
         {
           "rank": 10,
@@ -1400,7 +1400,7 @@
           "player": "太田 椋",
           "team": "オ",
           "teamSlug": "orix-buffaloes",
-          "value": 0.748
+          "value": 0.752
         }
       ],
       "hits": [
@@ -1410,7 +1410,7 @@
           "player": "レイエス",
           "team": "日",
           "teamSlug": "nipponham-fighters",
-          "value": 101
+          "value": 103
         },
         {
           "rank": 2,
@@ -1418,7 +1418,7 @@
           "player": "西川 龍馬",
           "team": "オ",
           "teamSlug": "orix-buffaloes",
-          "value": 98
+          "value": 99
         },
         {
           "rank": 3,
@@ -1426,10 +1426,26 @@
           "player": "西川 史礁",
           "team": "ロ",
           "teamSlug": "lotte-marines",
-          "value": 96
+          "value": 98
         },
         {
           "rank": 4,
+          "slug": "tatsuki-mizuno",
+          "player": "水野 達稀",
+          "team": "日",
+          "teamSlug": "nipponham-fighters",
+          "value": 92
+        },
+        {
+          "rank": 5,
+          "slug": "seiya-watanabe",
+          "player": "渡部 聖弥",
+          "team": "西",
+          "teamSlug": "seibu-lions",
+          "value": 91
+        },
+        {
+          "rank": 6,
           "slug": "ryosuke-tatsumi",
           "player": "辰己 涼介",
           "team": "楽",
@@ -1437,36 +1453,20 @@
           "value": 90
         },
         {
-          "rank": 5,
-          "slug": "tatsuki-mizuno",
-          "player": "水野 達稀",
-          "team": "日",
-          "teamSlug": "nipponham-fighters",
-          "value": 90
-        },
-        {
-          "rank": 6,
-          "slug": "seiya-watanabe",
-          "player": "渡部 聖弥",
-          "team": "西",
-          "teamSlug": "seibu-lions",
-          "value": 90
-        },
-        {
           "rank": 7,
-          "slug": "kazuki-murabayashi",
-          "player": "村林 一輝",
-          "team": "楽",
-          "teamSlug": "rakuten-eagles",
-          "value": 86
-        },
-        {
-          "rank": 8,
           "slug": "kensuke-kondo",
           "player": "近藤 健介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 85
+          "value": 87
+        },
+        {
+          "rank": 8,
+          "slug": "kazuki-murabayashi",
+          "player": "村林 一輝",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 87
         },
         {
           "rank": 9,
@@ -1474,7 +1474,7 @@
           "player": "栗原 陵矢",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 85
+          "value": 86
         },
         {
           "rank": 10,
@@ -1482,7 +1482,7 @@
           "player": "周東 佑京",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 82
+          "value": 83
         }
       ]
     },
@@ -1490,22 +1490,14 @@
       "era": [
         {
           "rank": 1,
-          "slug": "kaima-taira",
-          "player": "平良 海馬",
-          "team": "西",
-          "teamSlug": "seibu-lions",
-          "value": 0.92
-        },
-        {
-          "rank": 2,
           "slug": "ootsu-ryousuke",
           "player": "大津 亮介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 1.89
+          "value": 2.08
         },
         {
-          "rank": 3,
+          "rank": 2,
           "slug": "kitayama-kou-moto",
           "player": "北山 亘基",
           "team": "日",
@@ -1513,7 +1505,7 @@
           "value": 2.15
         },
         {
-          "rank": 4,
+          "rank": 3,
           "slug": "sumida-tomoichirou",
           "player": "隅田 知一郎",
           "team": "西",
@@ -1521,7 +1513,7 @@
           "value": 2.27
         },
         {
-          "rank": 5,
+          "rank": 4,
           "slug": "takahashi-mitsunari",
           "player": "髙橋 光成",
           "team": "西",
@@ -1529,12 +1521,20 @@
           "value": 2.31
         },
         {
-          "rank": 6,
+          "rank": 5,
           "slug": "esupinooza",
           "player": "エスピノーザ",
           "team": "オ",
           "teamSlug": "orix-buffaloes",
           "value": 2.4
+        },
+        {
+          "rank": 6,
+          "slug": "natsuki-takeuchi",
+          "player": "武内 夏暉",
+          "team": "西",
+          "teamSlug": "seibu-lions",
+          "value": 2.71
         },
         {
           "rank": 7,
@@ -1584,7 +1584,7 @@
           "player": "大津 亮介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 8
+          "value": 9
         },
         {
           "rank": 3,
@@ -1620,14 +1620,6 @@
         },
         {
           "rank": 7,
-          "slug": "kaima-taira",
-          "player": "平良 海馬",
-          "team": "西",
-          "teamSlug": "seibu-lions",
-          "value": 7
-        },
-        {
-          "rank": 8,
           "slug": "sumida-tomoichirou",
           "player": "隅田 知一郎",
           "team": "西",
@@ -1635,7 +1627,7 @@
           "value": 7
         },
         {
-          "rank": 9,
+          "rank": 8,
           "slug": "takahashi-mitsunari",
           "player": "髙橋 光成",
           "team": "西",
@@ -1643,11 +1635,19 @@
           "value": 7
         },
         {
+          "rank": 9,
+          "slug": "kaima-taira",
+          "player": "平良 海馬",
+          "team": "西",
+          "teamSlug": "seibu-lions",
+          "value": 7
+        },
+        {
           "rank": 10,
-          "slug": "aren-kuri",
-          "player": "九里 亜蓮",
-          "team": "オ",
-          "teamSlug": "orix-buffaloes",
+          "slug": "natsuki-takeuchi",
+          "player": "武内 夏暉",
+          "team": "西",
+          "teamSlug": "seibu-lions",
           "value": 6
         }
       ],
@@ -1662,6 +1662,14 @@
         },
         {
           "rank": 2,
+          "slug": "kosei-shoji",
+          "player": "荘司 康誠",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 100
+        },
+        {
+          "rank": 3,
           "slug": "aren-kuri",
           "player": "九里 亜蓮",
           "team": "オ",
@@ -1669,7 +1677,7 @@
           "value": 99
         },
         {
-          "rank": 3,
+          "rank": 4,
           "slug": "sumida-tomoichirou",
           "player": "隅田 知一郎",
           "team": "西",
@@ -1677,19 +1685,11 @@
           "value": 96
         },
         {
-          "rank": 4,
+          "rank": 5,
           "slug": "kitayama-kou-moto",
           "player": "北山 亘基",
           "team": "日",
           "teamSlug": "nipponham-fighters",
-          "value": 92
-        },
-        {
-          "rank": 5,
-          "slug": "kosei-shoji",
-          "player": "荘司 康誠",
-          "team": "楽",
-          "teamSlug": "rakuten-eagles",
           "value": 92
         },
         {
@@ -1710,14 +1710,6 @@
         },
         {
           "rank": 8,
-          "slug": "kaima-taira",
-          "player": "平良 海馬",
-          "team": "西",
-          "teamSlug": "seibu-lions",
-          "value": 82
-        },
-        {
-          "rank": 9,
           "slug": "sei-matsumoto",
           "player": "松本 晴",
           "team": "ソ",
@@ -1725,12 +1717,20 @@
           "value": 82
         },
         {
-          "rank": 10,
-          "slug": "takahashi-mitsunari",
-          "player": "髙橋 光成",
+          "rank": 9,
+          "slug": "kaima-taira",
+          "player": "平良 海馬",
           "team": "西",
           "teamSlug": "seibu-lions",
-          "value": 77
+          "value": 82
+        },
+        {
+          "rank": 10,
+          "slug": "ootsu-ryousuke",
+          "player": "大津 亮介",
+          "team": "ソ",
+          "teamSlug": "softbank-hawks",
+          "value": 80
         }
       ],
       "saves": [
@@ -1752,6 +1752,14 @@
         },
         {
           "rank": 3,
+          "slug": "shoma-fujihira",
+          "player": "藤平 尚真",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 19
+        },
+        {
+          "rank": 4,
           "slug": "yanagawa-dai-sei",
           "player": "柳川 大晟",
           "team": "日",
@@ -1759,20 +1767,12 @@
           "value": 19
         },
         {
-          "rank": 4,
-          "slug": "shoma-fujihira",
-          "player": "藤平 尚真",
-          "team": "楽",
-          "teamSlug": "rakuten-eagles",
-          "value": 18
-        },
-        {
           "rank": 5,
           "slug": "sugiyama-kazuki",
           "player": "杉山 一樹",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 18
+          "value": 19
         },
         {
           "rank": 6,
@@ -1870,7 +1870,7 @@
           "player": "オスナ",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 14
+          "value": 15
         },
         {
           "rank": 8,
@@ -1878,7 +1878,7 @@
           "player": "松本 裕樹",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 13
+          "value": 14
         },
         {
           "rank": 9,
@@ -1908,10 +1908,10 @@
         },
         {
           "rank": 2,
-          "slug": "kaima-taira",
-          "player": "平良 海馬",
-          "team": "西",
-          "teamSlug": "seibu-lions",
+          "slug": "kitayama-kou-moto",
+          "player": "北山 亘基",
+          "team": "日",
+          "teamSlug": "nipponham-fighters",
           "value": 0.94
         },
         {
@@ -1920,15 +1920,15 @@
           "player": "大津 亮介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.94
+          "value": 1.0
         },
         {
           "rank": 4,
-          "slug": "kitayama-kou-moto",
-          "player": "北山 亘基",
-          "team": "日",
-          "teamSlug": "nipponham-fighters",
-          "value": 0.94
+          "slug": "natsuki-takeuchi",
+          "player": "武内 夏暉",
+          "team": "西",
+          "teamSlug": "seibu-lions",
+          "value": 1.0
         },
         {
           "rank": 5,
@@ -1972,11 +1972,11 @@
         },
         {
           "rank": 10,
-          "slug": "itou-taikai",
-          "player": "伊藤 大海",
-          "team": "日",
-          "teamSlug": "nipponham-fighters",
-          "value": 1.26
+          "slug": "kosei-shoji",
+          "player": "荘司 康誠",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 1.25
         }
       ]
     }

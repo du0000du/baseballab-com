@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 680757,
+    "fullName": "Steven Kwan",
+    "link": "/api/v1/people/680757",
+    "firstName": "Steven",
+    "lastName": "Kwan",
+    "primaryNumber": "38",
+    "birthDate": "1997-09-05",
+    "currentAge": 28,
+    "birthCity": "Los Gatos",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "5' 8\"",
+    "weight": 170,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "Steven",
+    "useLastName": "Kwan",
+    "middleName": "Robert",
+    "boxscoreName": "Kwan",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "mlbDebutDate": "2022-04-07",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Steven Kwan",
+    "nameSlug": "steven-kwan-680757",
+    "firstLastName": "Steven Kwan",
+    "lastFirstName": "Kwan, Steven",
+    "lastInitName": "Kwan, S",
+    "initLastName": "S Kwan",
+    "fullFMLName": "Steven Robert Kwan",
+    "fullLFMName": "Kwan, Steven Robert",
+    "strikeZoneTop": 3.023,
+    "strikeZoneBottom": 1.525
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 28,
+            "gamesPlayed": 91,
+            "groundOuts": 90,
+            "airOuts": 112,
+            "runs": 40,
+            "doubles": 11,
+            "triples": 2,
+            "homeRuns": 1,
+            "strikeOuts": 36,
+            "baseOnBalls": 47,
+            "intentionalWalks": 1,
+            "hits": 72,
+            "hitByPitch": 3,
+            "avg": ".237",
+            "atBats": 304,
+            "obp": ".343",
+            "slg": ".296",
+            "ops": ".639",
+            "caughtStealing": 1,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".857",
+            "caughtStealingPercentage": ".143",
+            "groundIntoDoublePlay": 7,
+            "numberOfPitches": 1414,
+            "plateAppearances": 361,
+            "totalBases": 90,
+            "rbi": 16,
+            "leftOnBase": 114,
+            "sacBunts": 4,
+            "sacFlies": 2,
+            "babip": ".264",
+            "groundOutsToAirouts": "0.80",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "304.00"
+          },
+          "team": {
+            "id": 114,
+            "name": "Cleveland Guardians",
+            "link": "/api/v1/teams/114"
+          },
+          "player": {
+            "id": 680757,
+            "fullName": "Steven Kwan",
+            "link": "/api/v1/people/680757"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

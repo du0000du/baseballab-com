@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 669373,
+    "fullName": "Tarik Skubal",
+    "link": "/api/v1/people/669373",
+    "firstName": "Tarik",
+    "lastName": "Skubal",
+    "primaryNumber": "29",
+    "birthDate": "1996-11-20",
+    "currentAge": 29,
+    "birthCity": "Hayward",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 240,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Tarik",
+    "useLastName": "Skubal",
+    "middleName": "Daniel",
+    "boxscoreName": "Skubal",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "pronunciation": "tare-ick sku-ble",
+    "mlbDebutDate": "2020-08-18",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Tarik Skubal",
+    "nameSlug": "tarik-skubal-669373",
+    "firstLastName": "Tarik Skubal",
+    "lastFirstName": "Skubal, Tarik",
+    "lastInitName": "Skubal, T",
+    "initLastName": "T Skubal",
+    "fullFMLName": "Tarik Daniel Skubal",
+    "fullLFMName": "Skubal, Tarik Daniel",
+    "strikeZoneTop": 3.344,
+    "strikeZoneBottom": 1.688
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 14,
+            "gamesStarted": 14,
+            "groundOuts": 85,
+            "airOuts": 57,
+            "runs": 29,
+            "doubles": 13,
+            "triples": 1,
+            "homeRuns": 10,
+            "strikeOuts": 98,
+            "baseOnBalls": 11,
+            "intentionalWalks": 0,
+            "hits": 66,
+            "hitByPitch": 4,
+            "avg": ".217",
+            "atBats": 304,
+            "obp": ".253",
+            "slg": ".365",
+            "ops": ".618",
+            "caughtStealing": 1,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".800",
+            "caughtStealingPercentage": ".200",
+            "groundIntoDoublePlay": 12,
+            "numberOfPitches": 1248,
+            "era": "2.83",
+            "inningsPitched": "82.2",
+            "wins": 5,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 26,
+            "whip": "0.93",
+            "battersFaced": 321,
+            "outs": 248,
+            "gamesPitched": 14,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 853,
+            "strikePercentage": ".680",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 111,
+            "groundOutsToAirouts": "1.49",
+            "winPercentage": ".500",
+            "pitchesPerInning": "15.10",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "8.91",
+            "strikeoutsPer9Inn": "10.67",
+            "walksPer9Inn": "1.20",
+            "hitsPer9Inn": "7.19",
+            "runsScoredPer9": "3.16",
+            "homeRunsPer9": "1.09",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 669373,
+            "fullName": "Tarik Skubal",
+            "link": "/api/v1/people/669373"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
