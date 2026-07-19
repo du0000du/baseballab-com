@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-07-19T10:26:08Z",
+  "fetchedAt": "2026-07-19T14:47:15Z",
   "central": [
     {
       "rank": 1,
@@ -170,10 +170,10 @@
       "teamAbbr": "T",
       "league": "central",
       "games": 85,
-      "wins": 46,
-      "losses": 38,
+      "wins": 47,
+      "losses": 37,
       "ties": 1,
-      "pct": ".547",
+      "pct": ".559",
       "gb": "--"
     },
     {
@@ -187,7 +187,7 @@
       "losses": 38,
       "ties": 2,
       "pct": ".547",
-      "gb": "0"
+      "gb": "1"
     },
     {
       "rank": 3,
@@ -200,7 +200,7 @@
       "losses": 44,
       "ties": 1,
       "pct": ".482",
-      "gb": "5.5"
+      "gb": "6.5"
     },
     {
       "rank": 4,
@@ -213,7 +213,7 @@
       "losses": 46,
       "ties": 3,
       "pct": ".445",
-      "gb": "8.5"
+      "gb": "9.5"
     },
     {
       "rank": 5,
@@ -222,11 +222,11 @@
       "teamAbbr": "C",
       "league": "central",
       "games": 83,
-      "wins": 34,
-      "losses": 45,
+      "wins": 33,
+      "losses": 46,
       "ties": 4,
-      "pct": ".430",
-      "gb": "9.5"
+      "pct": ".417",
+      "gb": "11.5"
     },
     {
       "rank": 6,
@@ -239,7 +239,7 @@
       "losses": 53,
       "ties": 1,
       "pct": ".390",
-      "gb": "13.5"
+      "gb": "14.5"
     }
   ],
   "estimatedPacific": [
@@ -250,10 +250,10 @@
       "teamAbbr": "H",
       "league": "pacific",
       "games": 86,
-      "wins": 52,
+      "wins": 53,
       "losses": 32,
-      "ties": 2,
-      "pct": ".619",
+      "ties": 1,
+      "pct": ".623",
       "gb": "--"
     },
     {
@@ -267,7 +267,7 @@
       "losses": 37,
       "ties": 3,
       "pct": ".574",
-      "gb": "3.5"
+      "gb": "4"
     },
     {
       "rank": 3,
@@ -280,7 +280,7 @@
       "losses": 40,
       "ties": 0,
       "pct": ".560",
-      "gb": "4.5"
+      "gb": "5"
     },
     {
       "rank": 4,
@@ -293,7 +293,7 @@
       "losses": 43,
       "ties": 2,
       "pct": ".494",
-      "gb": "10.5"
+      "gb": "11"
     },
     {
       "rank": 5,
@@ -303,10 +303,10 @@
       "league": "pacific",
       "games": 84,
       "wins": 39,
-      "losses": 41,
-      "ties": 4,
-      "pct": ".487",
-      "gb": "11"
+      "losses": 42,
+      "ties": 3,
+      "pct": ".481",
+      "gb": "12"
     },
     {
       "rank": 6,
@@ -319,7 +319,7 @@
       "losses": 50,
       "ties": 1,
       "pct": ".411",
-      "gb": "17.5"
+      "gb": "18"
     }
   ]
 }
