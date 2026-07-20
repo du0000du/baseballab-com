@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-20T11:44:14Z",
+  "fetchedAt": "2026-07-20T15:45:48Z",
   "season": "2026",
   "asOfDate": "2026-07-20",
   "teams": [
@@ -16,7 +16,7 @@
           "opponentSlug": "yokohama-dena",
           "home": false,
           "score": 0,
-          "opponentScore": 4,
+          "opponentScore": 7,
           "result": "L",
           "stadium": "横浜スタジアム"
         },
@@ -54,7 +54,7 @@
           "opponent": "阪神タイガース",
           "opponentSlug": "hanshin-tigers",
           "home": true,
-          "score": 4,
+          "score": 7,
           "opponentScore": 0,
           "result": "W",
           "stadium": "横浜スタジアム"
