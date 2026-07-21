@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-07-20T18:50:34Z",
+  "fetchedAt": "2026-07-21T04:02:39Z",
   "season": "2026",
-  "asOfDate": "2026-07-20",
+  "asOfDate": "2026-07-21",
   "teams": [
     {
       "id": 145,
@@ -12,6 +12,16 @@
       "division": "American League Central",
       "divisionShort": "AL Central",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Texas Rangers",
+          "opponentAbbr": "TEX",
+          "home": false,
+          "score": 10,
+          "opponentScore": 3,
+          "result": "W",
+          "venue": "Globe Life Field"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Toronto Blue Jays",
@@ -31,16 +41,6 @@
           "opponentScore": 1,
           "result": "L",
           "venue": "Rogers Centre"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Toronto Blue Jays",
-          "opponentAbbr": "TOR",
-          "home": false,
-          "score": 12,
-          "opponentScore": 4,
-          "result": "W",
-          "venue": "Rogers Centre"
         }
       ]
     },
@@ -53,6 +53,16 @@
       "division": "American League Central",
       "divisionShort": "AL Central",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Minnesota Twins",
+          "opponentAbbr": "MIN",
+          "home": true,
+          "score": 13,
+          "opponentScore": 4,
+          "result": "W",
+          "venue": "Progressive Field"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Pittsburgh Pirates",
@@ -71,16 +81,6 @@
           "score": 1,
           "opponentScore": 7,
           "result": "L",
-          "venue": "Progressive Field"
-        },
-        {
-          "date": "2026-07-18",
-          "opponent": "Pittsburgh Pirates",
-          "opponentAbbr": "PIT",
-          "home": true,
-          "score": 5,
-          "opponentScore": 3,
-          "result": "W",
           "venue": "Progressive Field"
         }
       ]
@@ -136,6 +136,16 @@
       "divisionShort": "AL Central",
       "recentGames": [
         {
+          "date": "2026-07-20",
+          "opponent": "San Francisco Giants",
+          "opponentAbbr": "SF",
+          "home": true,
+          "score": 4,
+          "opponentScore": 3,
+          "result": "W",
+          "venue": "Kauffman Stadium"
+        },
+        {
           "date": "2026-07-19",
           "opponent": "San Diego Padres",
           "opponentAbbr": "SD",
@@ -154,16 +164,6 @@
           "opponentScore": 1,
           "result": "W",
           "venue": "Kauffman Stadium"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "San Diego Padres",
-          "opponentAbbr": "SD",
-          "home": true,
-          "score": 7,
-          "opponentScore": 6,
-          "result": "W",
-          "venue": "Kauffman Stadium"
         }
       ]
     },
@@ -176,6 +176,16 @@
       "division": "American League Central",
       "divisionShort": "AL Central",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Cleveland Guardians",
+          "opponentAbbr": "CLE",
+          "home": false,
+          "score": 4,
+          "opponentScore": 13,
+          "result": "L",
+          "venue": "Progressive Field"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Chicago Cubs",
@@ -195,16 +205,6 @@
           "opponentScore": 6,
           "result": "L",
           "venue": "Wrigley Field"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Chicago Cubs",
-          "opponentAbbr": "CHC",
-          "home": false,
-          "score": 5,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "Wrigley Field"
         }
       ]
     },
@@ -217,6 +217,16 @@
       "division": "American League East",
       "divisionShort": "AL East",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Boston Red Sox",
+          "opponentAbbr": "BOS",
+          "home": false,
+          "score": 5,
+          "opponentScore": 6,
+          "result": "L",
+          "venue": "Fenway Park"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Houston Astros",
@@ -236,16 +246,6 @@
           "opponentScore": 2,
           "result": "W",
           "venue": "Daikin Park"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Houston Astros",
-          "opponentAbbr": "HOU",
-          "home": false,
-          "score": 3,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "Daikin Park"
         }
       ]
     },
@@ -258,6 +258,16 @@
       "division": "American League East",
       "divisionShort": "AL East",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Baltimore Orioles",
+          "opponentAbbr": "BAL",
+          "home": true,
+          "score": 6,
+          "opponentScore": 5,
+          "result": "W",
+          "venue": "Fenway Park"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Tampa Bay Rays",
@@ -277,16 +287,6 @@
           "opponentScore": 6,
           "result": "W",
           "venue": "Fenway Park"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Tampa Bay Rays",
-          "opponentAbbr": "TB",
-          "home": true,
-          "score": 10,
-          "opponentScore": 0,
-          "result": "W",
-          "venue": "Fenway Park"
         }
       ]
     },
@@ -299,6 +299,16 @@
       "division": "American League East",
       "divisionShort": "AL East",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Pittsburgh Pirates",
+          "opponentAbbr": "PIT",
+          "home": true,
+          "score": 8,
+          "opponentScore": 5,
+          "result": "W",
+          "venue": "Yankee Stadium"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Los Angeles Dodgers",
@@ -318,16 +328,6 @@
           "opponentScore": 1,
           "result": "W",
           "venue": "Yankee Stadium"
-        },
-        {
-          "date": "2026-07-18",
-          "opponent": "Los Angeles Dodgers",
-          "opponentAbbr": "LAD",
-          "home": true,
-          "score": 0,
-          "opponentScore": 0,
-          "result": "T",
-          "venue": "Yankee Stadium"
         }
       ]
     },
@@ -340,6 +340,16 @@
       "division": "American League East",
       "divisionShort": "AL East",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Toronto Blue Jays",
+          "opponentAbbr": "TOR",
+          "home": false,
+          "score": 7,
+          "opponentScore": 1,
+          "result": "W",
+          "venue": "Rogers Centre"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Boston Red Sox",
@@ -359,16 +369,6 @@
           "opponentScore": 7,
           "result": "L",
           "venue": "Fenway Park"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": false,
-          "score": 0,
-          "opponentScore": 10,
-          "result": "L",
-          "venue": "Fenway Park"
         }
       ]
     },
@@ -381,6 +381,16 @@
       "division": "American League East",
       "divisionShort": "AL East",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Tampa Bay Rays",
+          "opponentAbbr": "TB",
+          "home": true,
+          "score": 1,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "Rogers Centre"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Chicago White Sox",
@@ -399,16 +409,6 @@
           "score": 1,
           "opponentScore": 0,
           "result": "W",
-          "venue": "Rogers Centre"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Chicago White Sox",
-          "opponentAbbr": "CWS",
-          "home": true,
-          "score": 4,
-          "opponentScore": 12,
-          "result": "L",
           "venue": "Rogers Centre"
         }
       ]
@@ -464,6 +464,16 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-07-20",
+          "opponent": "Miami Marlins",
+          "opponentAbbr": "MIA",
+          "home": true,
+          "score": 8,
+          "opponentScore": 5,
+          "result": "W",
+          "venue": "Daikin Park"
+        },
+        {
           "date": "2026-07-19",
           "opponent": "Baltimore Orioles",
           "opponentAbbr": "BAL",
@@ -480,16 +490,6 @@
           "home": true,
           "score": 2,
           "opponentScore": 4,
-          "result": "L",
-          "venue": "Daikin Park"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Baltimore Orioles",
-          "opponentAbbr": "BAL",
-          "home": true,
-          "score": 2,
-          "opponentScore": 3,
           "result": "L",
           "venue": "Daikin Park"
         }
@@ -587,6 +587,16 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-07-20",
+          "opponent": "Chicago White Sox",
+          "opponentAbbr": "CWS",
+          "home": true,
+          "score": 3,
+          "opponentScore": 10,
+          "result": "L",
+          "venue": "Globe Life Field"
+        },
+        {
           "date": "2026-07-19",
           "opponent": "Atlanta Braves",
           "opponentAbbr": "ATL",
@@ -604,16 +614,6 @@
           "score": 7,
           "opponentScore": 6,
           "result": "W",
-          "venue": "Truist Park"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Atlanta Braves",
-          "opponentAbbr": "ATL",
-          "home": false,
-          "score": 1,
-          "opponentScore": 15,
-          "result": "L",
           "venue": "Truist Park"
         }
       ]
@@ -710,6 +710,16 @@
       "divisionShort": "NL Central",
       "recentGames": [
         {
+          "date": "2026-07-20",
+          "opponent": "New York Mets",
+          "opponentAbbr": "NYM",
+          "home": true,
+          "score": 8,
+          "opponentScore": 3,
+          "result": "W",
+          "venue": "American Family Field"
+        },
+        {
           "date": "2026-07-19",
           "opponent": "Miami Marlins",
           "opponentAbbr": "MIA",
@@ -728,16 +738,6 @@
           "opponentScore": 6,
           "result": "W",
           "venue": "American Family Field"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Miami Marlins",
-          "opponentAbbr": "MIA",
-          "home": true,
-          "score": 2,
-          "opponentScore": 1,
-          "result": "W",
-          "venue": "American Family Field"
         }
       ]
     },
@@ -750,6 +750,16 @@
       "division": "National League Central",
       "divisionShort": "NL Central",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "New York Yankees",
+          "opponentAbbr": "NYY",
+          "home": false,
+          "score": 5,
+          "opponentScore": 8,
+          "result": "L",
+          "venue": "Yankee Stadium"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Cleveland Guardians",
@@ -768,16 +778,6 @@
           "score": 7,
           "opponentScore": 1,
           "result": "W",
-          "venue": "Progressive Field"
-        },
-        {
-          "date": "2026-07-18",
-          "opponent": "Cleveland Guardians",
-          "opponentAbbr": "CLE",
-          "home": false,
-          "score": 3,
-          "opponentScore": 5,
-          "result": "L",
           "venue": "Progressive Field"
         }
       ]
@@ -833,6 +833,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-20",
+          "opponent": "San Diego Padres",
+          "opponentAbbr": "SD",
+          "home": true,
+          "score": 3,
+          "opponentScore": 2,
+          "result": "W",
+          "venue": "Truist Park"
+        },
+        {
           "date": "2026-07-19",
           "opponent": "Texas Rangers",
           "opponentAbbr": "TEX",
@@ -851,16 +861,6 @@
           "opponentScore": 7,
           "result": "L",
           "venue": "Truist Park"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Texas Rangers",
-          "opponentAbbr": "TEX",
-          "home": true,
-          "score": 15,
-          "opponentScore": 1,
-          "result": "W",
-          "venue": "Truist Park"
         }
       ]
     },
@@ -873,6 +873,16 @@
       "division": "National League East",
       "divisionShort": "NL East",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Houston Astros",
+          "opponentAbbr": "HOU",
+          "home": false,
+          "score": 5,
+          "opponentScore": 8,
+          "result": "L",
+          "venue": "Daikin Park"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Milwaukee Brewers",
@@ -892,16 +902,6 @@
           "opponentScore": 8,
           "result": "L",
           "venue": "American Family Field"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Milwaukee Brewers",
-          "opponentAbbr": "MIL",
-          "home": false,
-          "score": 1,
-          "opponentScore": 2,
-          "result": "L",
-          "venue": "American Family Field"
         }
       ]
     },
@@ -914,6 +914,16 @@
       "division": "National League East",
       "divisionShort": "NL East",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Milwaukee Brewers",
+          "opponentAbbr": "MIL",
+          "home": false,
+          "score": 3,
+          "opponentScore": 8,
+          "result": "L",
+          "venue": "American Family Field"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Philadelphia Phillies",
@@ -932,16 +942,6 @@
           "score": 1,
           "opponentScore": 6,
           "result": "L",
-          "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-07-16",
-          "opponent": "Philadelphia Phillies",
-          "opponentAbbr": "PHI",
-          "home": false,
-          "score": 4,
-          "opponentScore": 1,
-          "result": "W",
           "venue": "Citizens Bank Park"
         }
       ]
@@ -956,6 +956,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-20",
+          "opponent": "Los Angeles Dodgers",
+          "opponentAbbr": "LAD",
+          "home": true,
+          "score": 10,
+          "opponentScore": 7,
+          "result": "W",
+          "venue": "Citizens Bank Park"
+        },
+        {
           "date": "2026-07-19",
           "opponent": "New York Mets",
           "opponentAbbr": "NYM",
@@ -974,16 +984,6 @@
           "opponentScore": 1,
           "result": "W",
           "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-07-16",
-          "opponent": "New York Mets",
-          "opponentAbbr": "NYM",
-          "home": true,
-          "score": 1,
-          "opponentScore": 4,
-          "result": "L",
-          "venue": "Citizens Bank Park"
         }
       ]
     },
@@ -996,6 +996,16 @@
       "division": "National League East",
       "divisionShort": "NL East",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Colorado Rockies",
+          "opponentAbbr": "COL",
+          "home": false,
+          "score": 7,
+          "opponentScore": 3,
+          "result": "W",
+          "venue": "Coors Field"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Athletics",
@@ -1014,16 +1024,6 @@
           "score": 1,
           "opponentScore": 15,
           "result": "L",
-          "venue": "Sutter Health Park"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Athletics",
-          "opponentAbbr": "ATH",
-          "home": false,
-          "score": 23,
-          "opponentScore": 4,
-          "result": "W",
           "venue": "Sutter Health Park"
         }
       ]
@@ -1079,6 +1079,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-07-20",
+          "opponent": "Washington Nationals",
+          "opponentAbbr": "WSH",
+          "home": true,
+          "score": 3,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "Coors Field"
+        },
+        {
           "date": "2026-07-19",
           "opponent": "Cincinnati Reds",
           "opponentAbbr": "CIN",
@@ -1097,16 +1107,6 @@
           "opponentScore": 3,
           "result": "W",
           "venue": "Coors Field"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Cincinnati Reds",
-          "opponentAbbr": "CIN",
-          "home": true,
-          "score": 2,
-          "opponentScore": 7,
-          "result": "L",
-          "venue": "Coors Field"
         }
       ]
     },
@@ -1119,6 +1119,16 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Philadelphia Phillies",
+          "opponentAbbr": "PHI",
+          "home": false,
+          "score": 7,
+          "opponentScore": 10,
+          "result": "L",
+          "venue": "Citizens Bank Park"
+        },
         {
           "date": "2026-07-19",
           "opponent": "New York Yankees",
@@ -1138,16 +1148,6 @@
           "opponentScore": 2,
           "result": "L",
           "venue": "Yankee Stadium"
-        },
-        {
-          "date": "2026-07-18",
-          "opponent": "New York Yankees",
-          "opponentAbbr": "NYY",
-          "home": false,
-          "score": 0,
-          "opponentScore": 0,
-          "result": "T",
-          "venue": "Yankee Stadium"
         }
       ]
     },
@@ -1160,6 +1160,16 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Atlanta Braves",
+          "opponentAbbr": "ATL",
+          "home": false,
+          "score": 2,
+          "opponentScore": 3,
+          "result": "L",
+          "venue": "Truist Park"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Kansas City Royals",
@@ -1179,16 +1189,6 @@
           "opponentScore": 6,
           "result": "L",
           "venue": "Kauffman Stadium"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Kansas City Royals",
-          "opponentAbbr": "KC",
-          "home": false,
-          "score": 6,
-          "opponentScore": 7,
-          "result": "L",
-          "venue": "Kauffman Stadium"
         }
       ]
     },
@@ -1201,6 +1201,16 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "recentGames": [
+        {
+          "date": "2026-07-20",
+          "opponent": "Kansas City Royals",
+          "opponentAbbr": "KC",
+          "home": false,
+          "score": 3,
+          "opponentScore": 4,
+          "result": "L",
+          "venue": "Kauffman Stadium"
+        },
         {
           "date": "2026-07-19",
           "opponent": "Seattle Mariners",
@@ -1219,16 +1229,6 @@
           "score": 3,
           "opponentScore": 4,
           "result": "L",
-          "venue": "T-Mobile Park"
-        },
-        {
-          "date": "2026-07-17",
-          "opponent": "Seattle Mariners",
-          "opponentAbbr": "SEA",
-          "home": false,
-          "score": 7,
-          "opponentScore": 0,
-          "result": "W",
           "venue": "T-Mobile Park"
         }
       ]
