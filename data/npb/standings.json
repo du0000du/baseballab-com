@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-07-21T11:06:06Z",
+  "fetchedAt": "2026-07-21T15:29:14Z",
   "central": [
     {
       "rank": 1,
@@ -165,6 +165,19 @@
   "estimatedCentral": [
     {
       "rank": 1,
+      "teamSlug": "hanshin-tigers",
+      "teamName": "阪神タイガース",
+      "teamAbbr": "T",
+      "league": "central",
+      "games": 87,
+      "wins": 48,
+      "losses": 38,
+      "ties": 1,
+      "pct": ".558",
+      "gb": "--"
+    },
+    {
+      "rank": 2,
       "teamSlug": "yomiuri-giants",
       "teamName": "読売ジャイアンツ",
       "teamAbbr": "G",
@@ -174,20 +187,7 @@
       "losses": 38,
       "ties": 2,
       "pct": ".558",
-      "gb": "--"
-    },
-    {
-      "rank": 2,
-      "teamSlug": "hanshin-tigers",
-      "teamName": "阪神タイガース",
-      "teamAbbr": "T",
-      "league": "central",
-      "games": 87,
-      "wins": 47,
-      "losses": 38,
-      "ties": 2,
-      "pct": ".552",
-      "gb": "0.5"
+      "gb": "0"
     },
     {
       "rank": 3,
@@ -210,10 +210,10 @@
       "league": "central",
       "games": 88,
       "wins": 38,
-      "losses": 46,
-      "ties": 4,
-      "pct": ".452",
-      "gb": "9"
+      "losses": 47,
+      "ties": 3,
+      "pct": ".447",
+      "gb": "9.5"
     },
     {
       "rank": 5,

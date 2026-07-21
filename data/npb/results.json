@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-21T11:06:55Z",
+  "fetchedAt": "2026-07-21T15:30:06Z",
   "season": "2026",
   "asOfDate": "2026-07-21",
   "teams": [
@@ -15,9 +15,9 @@
           "opponent": "横浜DeNAベイスターズ",
           "opponentSlug": "yokohama-dena",
           "home": false,
-          "score": 1,
+          "score": 2,
           "opponentScore": 1,
-          "result": "T",
+          "result": "W",
           "stadium": "横浜スタジアム"
         },
         {
@@ -55,8 +55,8 @@
           "opponentSlug": "hanshin-tigers",
           "home": true,
           "score": 1,
-          "opponentScore": 1,
-          "result": "T",
+          "opponentScore": 2,
+          "result": "L",
           "stadium": "横浜スタジアム"
         },
         {
@@ -94,7 +94,7 @@
           "opponentSlug": "hiroshima-carp",
           "home": false,
           "score": 11,
-          "opponentScore": 1,
+          "opponentScore": 5,
           "result": "W",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
@@ -132,8 +132,8 @@
           "opponent": "東京ヤクルトスワローズ",
           "opponentSlug": "yakult-swallows",
           "home": true,
-          "score": 4,
-          "opponentScore": 3,
+          "score": 11,
+          "opponentScore": 4,
           "result": "W",
           "stadium": "バンテリンドームナゴヤ"
         },
@@ -171,7 +171,7 @@
           "opponent": "読売ジャイアンツ",
           "opponentSlug": "yomiuri-giants",
           "home": true,
-          "score": 1,
+          "score": 5,
           "opponentScore": 11,
           "result": "L",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
@@ -210,8 +210,8 @@
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
           "home": false,
-          "score": 3,
-          "opponentScore": 4,
+          "score": 4,
+          "opponentScore": 11,
           "result": "L",
           "stadium": "バンテリンドームナゴヤ"
         },
