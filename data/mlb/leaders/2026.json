@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-22T04:11:09Z",
+  "fetched_at": "2026-07-22T11:09:11Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -374,6 +374,13 @@
       },
       {
         "rank": 1,
+        "playerId": 695505,
+        "player": "Chase Burns",
+        "team": "CIN",
+        "value": 12
+      },
+      {
+        "rank": 1,
         "playerId": 543243,
         "player": "Sonny Gray",
         "team": "BOS",
@@ -387,21 +394,14 @@
         "value": 12
       },
       {
-        "rank": 4,
-        "playerId": 695505,
-        "player": "Chase Burns",
-        "team": "CIN",
-        "value": 11
-      },
-      {
-        "rank": 4,
+        "rank": 5,
         "playerId": 656492,
         "player": "Foster Griffin",
         "team": "WSH",
         "value": 11
       },
       {
-        "rank": 4,
+        "rank": 5,
         "playerId": 680736,
         "player": "Justin Wrobleski",
         "team": "LAD",
