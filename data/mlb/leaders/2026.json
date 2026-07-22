@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-22T15:27:12Z",
+  "fetched_at": "2026-07-22T18:05:31Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -108,7 +108,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".309"
+        "value": ".308"
       },
       {
         "rank": 6,
