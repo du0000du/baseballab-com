@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-23T11:07:58Z",
+  "fetchedAt": "2026-07-23T15:48:38Z",
   "season": "2026",
   "asOfDate": "2026-07-23",
   "teams": [
@@ -249,8 +249,8 @@
           "opponent": "福岡ソフトバンクホークス",
           "opponentSlug": "softbank-hawks",
           "home": true,
-          "score": 2,
-          "opponentScore": 3,
+          "score": 5,
+          "opponentScore": 6,
           "result": "L",
           "stadium": "京セラドームOSAKA"
         },
@@ -288,8 +288,8 @@
           "opponent": "オリックス・バファローズ",
           "opponentSlug": "orix-buffaloes",
           "home": false,
-          "score": 3,
-          "opponentScore": 2,
+          "score": 6,
+          "opponentScore": 5,
           "result": "W",
           "stadium": "京セラドームOSAKA"
         },
@@ -327,8 +327,8 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": true,
-          "score": 9,
-          "opponentScore": 1,
+          "score": 11,
+          "opponentScore": 2,
           "result": "W",
           "stadium": "エスコンフィールドHOKKAIDO"
         },
@@ -366,9 +366,9 @@
           "opponent": "千葉ロッテマリーンズ",
           "opponentSlug": "lotte-marines",
           "home": true,
-          "score": 1,
+          "score": 4,
           "opponentScore": 3,
-          "result": "L",
+          "result": "W",
           "stadium": "楽天モバイルパーク宮城"
         },
         {
@@ -405,8 +405,8 @@
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
           "home": false,
-          "score": 1,
-          "opponentScore": 9,
+          "score": 2,
+          "opponentScore": 11,
           "result": "L",
           "stadium": "エスコンフィールドHOKKAIDO"
         },
@@ -445,8 +445,8 @@
           "opponentSlug": "rakuten-eagles",
           "home": false,
           "score": 3,
-          "opponentScore": 1,
-          "result": "W",
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "楽天モバイルパーク宮城"
         },
         {
