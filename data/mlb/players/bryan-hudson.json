@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 663542,
+    "fullName": "Bryan Hudson",
+    "link": "/api/v1/people/663542",
+    "firstName": "Bryan",
+    "lastName": "Hudson",
+    "primaryNumber": "60",
+    "birthDate": "1997-05-08",
+    "currentAge": 29,
+    "birthCity": "Godfrey",
+    "birthStateProvince": "IL",
+    "birthCountry": "USA",
+    "height": "6' 8\"",
+    "weight": 248,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Bryan",
+    "useLastName": "Hudson",
+    "middleName": "Michael",
+    "boxscoreName": "Hudson, B",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "mlbDebutDate": "2023-06-17",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Bryan Hudson",
+    "nameSlug": "bryan-hudson-663542",
+    "firstLastName": "Bryan Hudson",
+    "lastFirstName": "Hudson, Bryan",
+    "lastInitName": "Hudson, B",
+    "initLastName": "B Hudson",
+    "fullFMLName": "Bryan Michael Hudson",
+    "fullLFMName": "Hudson, Bryan Michael",
+    "strikeZoneTop": 3.567,
+    "strikeZoneBottom": 1.8
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 44,
+            "gamesStarted": 6,
+            "groundOuts": 41,
+            "airOuts": 41,
+            "runs": 12,
+            "doubles": 4,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 42,
+            "baseOnBalls": 16,
+            "intentionalWalks": 1,
+            "hits": 36,
+            "hitByPitch": 4,
+            "avg": ".238",
+            "atBats": 151,
+            "obp": ".318",
+            "slg": ".285",
+            "ops": ".603",
+            "caughtStealing": 0,
+            "stolenBases": 6,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 697,
+            "era": "2.08",
+            "inningsPitched": "43.1",
+            "wins": 3,
+            "losses": 2,
+            "saves": 4,
+            "saveOpportunities": 6,
+            "holds": 6,
+            "blownSaves": 2,
+            "earnedRuns": 10,
+            "whip": "1.20",
+            "battersFaced": 181,
+            "outs": 130,
+            "gamesPitched": 44,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 456,
+            "strikePercentage": ".650",
+            "hitBatsmen": 4,
+            "balks": 1,
+            "wildPitches": 0,
+            "pickoffs": 2,
+            "totalBases": 43,
+            "groundOutsToAirouts": "1.00",
+            "winPercentage": ".600",
+            "pitchesPerInning": "16.08",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "2.63",
+            "strikeoutsPer9Inn": "8.72",
+            "walksPer9Inn": "3.32",
+            "hitsPer9Inn": "7.48",
+            "runsScoredPer9": "2.49",
+            "homeRunsPer9": "0.21",
+            "inheritedRunners": 14,
+            "inheritedRunnersScored": 7,
+            "catchersInterference": 1,
+            "sacBunts": 4,
+            "sacFlies": 5
+          },
+          "team": {
+            "id": 145,
+            "name": "Chicago White Sox",
+            "link": "/api/v1/teams/145"
+          },
+          "player": {
+            "id": 663542,
+            "fullName": "Bryan Hudson",
+            "link": "/api/v1/people/663542"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
