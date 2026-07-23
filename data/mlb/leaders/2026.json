@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-23T15:49:14Z",
+  "fetched_at": "2026-07-23T18:09:37Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -126,24 +126,24 @@
       },
       {
         "rank": 8,
+        "playerId": 671739,
+        "player": "Michael Harris II",
+        "team": "ATL",
+        "value": ".299"
+      },
+      {
+        "rank": 9,
         "playerId": 681198,
         "player": "TJ Rumfield",
         "team": "COL",
         "value": ".297"
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 676391,
         "player": "Ernie Clement",
         "team": "TOR",
         "value": ".297"
-      },
-      {
-        "rank": 10,
-        "playerId": 671739,
-        "player": "Michael Harris II",
-        "team": "ATL",
-        "value": ".296"
       }
     ],
     "rbi": [
@@ -305,7 +305,7 @@
         "playerId": 519242,
         "player": "Chris Sale",
         "team": "ATL",
-        "value": "2.06"
+        "value": "2.19"
       },
       {
         "rank": 3,
@@ -453,23 +453,23 @@
       },
       {
         "rank": 3,
+        "playerId": 668909,
+        "player": "Gavin Williams",
+        "team": "CLE",
+        "value": 152
+      },
+      {
+        "rank": 4,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
         "value": 151
       },
       {
-        "rank": 4,
+        "rank": 5,
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
-        "value": 145
-      },
-      {
-        "rank": 4,
-        "playerId": 668909,
-        "player": "Gavin Williams",
-        "team": "CLE",
         "value": 145
       },
       {
@@ -502,10 +502,10 @@
       },
       {
         "rank": 10,
-        "playerId": 657746,
-        "player": "Joe Ryan",
-        "team": "MIN",
-        "value": 131
+        "playerId": 519242,
+        "player": "Chris Sale",
+        "team": "ATL",
+        "value": 134
       }
     ],
     "saves": [
