@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-24T15:22:01Z",
+  "fetched_at": "2026-07-24T18:14:53Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -208,7 +208,7 @@
         "playerId": 681624,
         "player": "Andy Pages",
         "team": "LAD",
-        "value": 68
+        "value": 67
       },
       {
         "rank": 10,
@@ -351,17 +351,17 @@
       },
       {
         "rank": 9,
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
+        "value": "2.65"
+      },
+      {
+        "rank": 10,
         "playerId": 656302,
         "player": "Dylan Cease",
         "team": "TOR",
         "value": "2.67"
-      },
-      {
-        "rank": 10,
-        "playerId": 676974,
-        "player": "Max Meyer",
-        "team": "MIA",
-        "value": "2.68"
       }
     ],
     "wins": [
