@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-23T18:09:37Z",
+  "fetched_at": "2026-07-24T04:00:39Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -108,7 +108,7 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".308"
+        "value": ".307"
       },
       {
         "rank": 6,
@@ -143,7 +143,7 @@
         "playerId": 676391,
         "player": "Ernie Clement",
         "team": "TOR",
-        "value": ".297"
+        "value": ".296"
       }
     ],
     "rbi": [
@@ -155,17 +155,17 @@
         "value": 77
       },
       {
-        "rank": 2,
-        "playerId": 682928,
-        "player": "CJ Abrams",
-        "team": "WSH",
-        "value": 76
-      },
-      {
-        "rank": 2,
+        "rank": 1,
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
+        "value": 77
+      },
+      {
+        "rank": 3,
+        "playerId": 682928,
+        "player": "CJ Abrams",
+        "team": "WSH",
         "value": 76
       },
       {
@@ -402,37 +402,37 @@
       },
       {
         "rank": 5,
+        "playerId": 519242,
+        "player": "Chris Sale",
+        "team": "ATL",
+        "value": 11
+      },
+      {
+        "rank": 5,
         "playerId": 680736,
         "player": "Justin Wrobleski",
         "team": "LAD",
         "value": 11
       },
       {
-        "rank": 7,
+        "rank": 8,
         "playerId": 645261,
         "player": "Sandy Alcantara",
         "team": "MIA",
         "value": 10
       },
       {
-        "rank": 7,
+        "rank": 8,
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
         "value": 10
       },
       {
-        "rank": 7,
+        "rank": 8,
         "playerId": 669467,
         "player": "Andre Pallante",
         "team": "STL",
-        "value": 10
-      },
-      {
-        "rank": 7,
-        "playerId": 519242,
-        "player": "Chris Sale",
-        "team": "ATL",
         "value": 10
       }
     ],
@@ -446,17 +446,17 @@
       },
       {
         "rank": 2,
+        "playerId": 668909,
+        "player": "Gavin Williams",
+        "team": "CLE",
+        "value": 156
+      },
+      {
+        "rank": 3,
         "playerId": 656302,
         "player": "Dylan Cease",
         "team": "TOR",
         "value": 155
-      },
-      {
-        "rank": 3,
-        "playerId": 668909,
-        "player": "Gavin Williams",
-        "team": "CLE",
-        "value": 152
       },
       {
         "rank": 4,
@@ -563,14 +563,14 @@
         "playerId": 628452,
         "player": "Raisel Iglesias",
         "team": "ATL",
-        "value": 20
+        "value": 21
       },
       {
         "rank": 8,
         "playerId": 686973,
         "player": "Louis Varland",
         "team": "TOR",
-        "value": 20
+        "value": 21
       },
       {
         "rank": 10,
