@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-25T10:26:09Z",
+  "fetchedAt": "2026-07-25T14:55:32Z",
   "season": "2026",
   "asOfDate": "2026-07-25",
   "teams": [
@@ -16,7 +16,7 @@
           "opponentSlug": "yomiuri-giants",
           "home": false,
           "score": 1,
-          "opponentScore": 4,
+          "opponentScore": 5,
           "result": "L",
           "stadium": "東京ドーム"
         },
@@ -93,7 +93,7 @@
           "opponent": "阪神タイガース",
           "opponentSlug": "hanshin-tigers",
           "home": true,
-          "score": 4,
+          "score": 5,
           "opponentScore": 1,
           "result": "W",
           "stadium": "東京ドーム"
@@ -171,8 +171,8 @@
           "opponent": "東京ヤクルトスワローズ",
           "opponentSlug": "yakult-swallows",
           "home": true,
-          "score": 0,
-          "opponentScore": 1,
+          "score": 1,
+          "opponentScore": 2,
           "result": "L",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
@@ -210,8 +210,8 @@
           "opponent": "広島東洋カープ",
           "opponentSlug": "hiroshima-carp",
           "home": false,
-          "score": 1,
-          "opponentScore": 0,
+          "score": 2,
+          "opponentScore": 1,
           "result": "W",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
@@ -288,9 +288,9 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": true,
-          "score": 3,
-          "opponentScore": 2,
-          "result": "W",
+          "score": 6,
+          "opponentScore": 8,
+          "result": "L",
           "stadium": "みずほPayPayドーム福岡"
         },
         {
@@ -405,9 +405,9 @@
           "opponent": "福岡ソフトバンクホークス",
           "opponentSlug": "softbank-hawks",
           "home": false,
-          "score": 2,
-          "opponentScore": 3,
-          "result": "L",
+          "score": 8,
+          "opponentScore": 6,
+          "result": "W",
           "stadium": "みずほPayPayドーム福岡"
         },
         {
