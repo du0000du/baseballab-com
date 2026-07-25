@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-25T03:57:48Z",
+  "fetched_at": "2026-07-25T10:26:53Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -94,7 +94,7 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "SF",
-        "value": ".323"
+        "value": ".324"
       },
       {
         "rank": 4,
@@ -126,17 +126,17 @@
       },
       {
         "rank": 8,
-        "playerId": 808982,
-        "player": "Jung Hoo Lee",
-        "team": "SF",
-        "value": ".301"
-      },
-      {
-        "rank": 9,
         "playerId": 671739,
         "player": "Michael Harris II",
         "team": "ATL",
         "value": ".300"
+      },
+      {
+        "rank": 9,
+        "playerId": 808982,
+        "player": "Jung Hoo Lee",
+        "team": "SF",
+        "value": ".299"
       },
       {
         "rank": 10,

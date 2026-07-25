@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-25T03:57:48Z",
+  "fetchedAt": "2026-07-25T10:26:54Z",
   "season": "2026",
   "asOfDate": "2026-07-25",
   "teams": [
@@ -505,6 +505,16 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-07-24",
+          "opponent": "San Francisco Giants",
+          "opponentAbbr": "SF",
+          "home": false,
+          "score": 6,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "Oracle Park"
+        },
+        {
           "date": "2026-07-22",
           "opponent": "St. Louis Cardinals",
           "opponentAbbr": "STL",
@@ -521,16 +531,6 @@
           "home": true,
           "score": 5,
           "opponentScore": 1,
-          "result": "W",
-          "venue": "Angel Stadium"
-        },
-        {
-          "date": "2026-07-20",
-          "opponent": "St. Louis Cardinals",
-          "opponentAbbr": "STL",
-          "home": true,
-          "score": 3,
-          "opponentScore": 2,
           "result": "W",
           "venue": "Angel Stadium"
         }
@@ -1202,6 +1202,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-07-24",
+          "opponent": "Los Angeles Angels",
+          "opponentAbbr": "LAA",
+          "home": true,
+          "score": 7,
+          "opponentScore": 6,
+          "result": "W",
+          "venue": "Oracle Park"
+        },
+        {
           "date": "2026-07-22",
           "opponent": "Kansas City Royals",
           "opponentAbbr": "KC",
@@ -1218,16 +1228,6 @@
           "home": false,
           "score": 2,
           "opponentScore": 3,
-          "result": "L",
-          "venue": "Kauffman Stadium"
-        },
-        {
-          "date": "2026-07-20",
-          "opponent": "Kansas City Royals",
-          "opponentAbbr": "KC",
-          "home": false,
-          "score": 3,
-          "opponentScore": 4,
           "result": "L",
           "venue": "Kauffman Stadium"
         }
