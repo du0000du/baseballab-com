@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-26T14:58:03Z",
+  "fetched_at": "2026-07-26T17:57:23Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -80,7 +80,7 @@
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".331"
+        "value": ".330"
       },
       {
         "rank": 2,
@@ -108,7 +108,7 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".306"
+        "value": ".303"
       },
       {
         "rank": 6,
@@ -133,16 +133,16 @@
       },
       {
         "rank": 9,
-        "playerId": 518692,
-        "player": "Freddie Freeman",
-        "team": "LAD",
-        "value": ".299"
-      },
-      {
-        "rank": 10,
         "playerId": 681198,
         "player": "TJ Rumfield",
         "team": "COL",
+        "value": ".298"
+      },
+      {
+        "rank": 10,
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
         "value": ".298"
       }
     ],
@@ -337,31 +337,31 @@
       },
       {
         "rank": 7,
+        "playerId": 800048,
+        "player": "Parker Messick",
+        "team": "CLE",
+        "value": "2.59"
+      },
+      {
+        "rank": 8,
         "playerId": 680736,
         "player": "Justin Wrobleski",
         "team": "LAD",
         "value": "2.62"
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
         "value": "2.64"
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
         "value": "2.65"
-      },
-      {
-        "rank": 10,
-        "playerId": 676974,
-        "player": "Max Meyer",
-        "team": "MIA",
-        "value": "2.68"
       }
     ],
     "wins": [
