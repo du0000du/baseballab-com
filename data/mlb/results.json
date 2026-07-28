@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-28T15:59:47Z",
+  "fetchedAt": "2026-07-28T18:08:49Z",
   "season": "2026",
   "asOfDate": "2026-07-28",
   "teams": [
@@ -833,6 +833,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-28",
+          "opponent": "New York Mets",
+          "opponentAbbr": "NYM",
+          "home": false,
+          "score": 0,
+          "opponentScore": 0,
+          "result": "T",
+          "venue": "Citi Field"
+        },
+        {
           "date": "2026-07-27",
           "opponent": "New York Mets",
           "opponentAbbr": "NYM",
@@ -850,16 +860,6 @@
           "score": 3,
           "opponentScore": 2,
           "result": "W",
-          "venue": "Oriole Park at Camden Yards"
-        },
-        {
-          "date": "2026-07-25",
-          "opponent": "Baltimore Orioles",
-          "opponentAbbr": "BAL",
-          "home": false,
-          "score": 2,
-          "opponentScore": 3,
-          "result": "L",
           "venue": "Oriole Park at Camden Yards"
         }
       ]
@@ -915,6 +915,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-07-28",
+          "opponent": "Atlanta Braves",
+          "opponentAbbr": "ATL",
+          "home": true,
+          "score": 0,
+          "opponentScore": 0,
+          "result": "T",
+          "venue": "Citi Field"
+        },
+        {
           "date": "2026-07-27",
           "opponent": "Atlanta Braves",
           "opponentAbbr": "ATL",
@@ -932,16 +942,6 @@
           "score": 8,
           "opponentScore": 3,
           "result": "W",
-          "venue": "Citi Field"
-        },
-        {
-          "date": "2026-07-25",
-          "opponent": "Los Angeles Dodgers",
-          "opponentAbbr": "LAD",
-          "home": true,
-          "score": 3,
-          "opponentScore": 4,
-          "result": "L",
           "venue": "Citi Field"
         }
       ]

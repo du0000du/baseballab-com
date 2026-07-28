@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-28T15:59:46Z",
+  "fetched_at": "2026-07-28T18:08:49Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -319,7 +319,7 @@
         "playerId": 695505,
         "player": "Chase Burns",
         "team": "CIN",
-        "value": "2.42"
+        "value": "2.40"
       },
       {
         "rank": 5,
