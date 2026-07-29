@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-29T15:45:50Z",
+  "fetched_at": "2026-07-29T18:03:29Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -80,7 +80,7 @@
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".328"
+        "value": ".329"
       },
       {
         "rank": 2,
@@ -143,7 +143,7 @@
         "playerId": 676391,
         "player": "Ernie Clement",
         "team": "TOR",
-        "value": ".296"
+        "value": ".294"
       }
     ],
     "rbi": [
@@ -263,17 +263,17 @@
       },
       {
         "rank": 7,
+        "playerId": 665923,
+        "player": "Esteury Ruiz",
+        "team": "MIA",
+        "value": 25
+      },
+      {
+        "rank": 7,
         "playerId": 665487,
         "player": "Fernando Tatis Jr.",
         "team": "SD",
         "value": 25
-      },
-      {
-        "rank": 8,
-        "playerId": 665923,
-        "player": "Esteury Ruiz",
-        "team": "MIA",
-        "value": 24
       },
       {
         "rank": 9,
@@ -337,17 +337,17 @@
       },
       {
         "rank": 7,
+        "playerId": 593958,
+        "player": "Eduardo Rodriguez",
+        "team": "AZ",
+        "value": "2.52"
+      },
+      {
+        "rank": 8,
         "playerId": 800048,
         "player": "Parker Messick",
         "team": "CLE",
         "value": "2.59"
-      },
-      {
-        "rank": 8,
-        "playerId": 593958,
-        "player": "Eduardo Rodriguez",
-        "team": "AZ",
-        "value": "2.64"
       },
       {
         "rank": 9,
@@ -460,6 +460,13 @@
       },
       {
         "rank": 4,
+        "playerId": 666200,
+        "player": "Jesús Luzardo",
+        "team": "PHI",
+        "value": 157
+      },
+      {
+        "rank": 4,
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
@@ -471,13 +478,6 @@
         "player": "Cristopher Sánchez",
         "team": "PHI",
         "value": 157
-      },
-      {
-        "rank": 6,
-        "playerId": 666200,
-        "player": "Jesús Luzardo",
-        "team": "PHI",
-        "value": 152
       },
       {
         "rank": 7,
