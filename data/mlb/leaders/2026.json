@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-29T03:58:17Z",
+  "fetched_at": "2026-07-29T11:26:22Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -87,14 +87,14 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "SF",
-        "value": ".323"
+        "value": ".325"
       },
       {
         "rank": 3,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".323"
+        "value": ".325"
       },
       {
         "rank": 4,
@@ -105,9 +105,9 @@
       },
       {
         "rank": 5,
-        "playerId": 518692,
-        "player": "Freddie Freeman",
-        "team": "LAD",
+        "playerId": 808982,
+        "player": "Jung Hoo Lee",
+        "team": "SF",
         "value": ".301"
       },
       {
@@ -119,10 +119,10 @@
       },
       {
         "rank": 7,
-        "playerId": 808982,
-        "player": "Jung Hoo Lee",
-        "team": "SF",
-        "value": ".300"
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
+        "value": ".299"
       },
       {
         "rank": 8,
@@ -136,7 +136,7 @@
         "playerId": 664983,
         "player": "Jake McCarthy",
         "team": "COL",
-        "value": ".297"
+        "value": ".296"
       },
       {
         "rank": 10,
@@ -159,10 +159,10 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": 79
+        "value": 80
       },
       {
-        "rank": 2,
+        "rank": 3,
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",

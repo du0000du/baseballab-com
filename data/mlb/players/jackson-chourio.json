@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 694192,
+    "fullName": "Jackson Chourio",
+    "link": "/api/v1/people/694192",
+    "firstName": "Jackson",
+    "lastName": "Chourio",
+    "primaryNumber": "11",
+    "birthDate": "2004-03-11",
+    "currentAge": 22,
+    "birthCity": "Maracaibo",
+    "birthCountry": "Venezuela",
+    "height": "6' 1\"",
+    "weight": 199,
+    "active": true,
+    "primaryPosition": {
+      "code": "7",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "LF"
+    },
+    "useName": "Jackson",
+    "useLastName": "Chourio",
+    "middleName": "Bryan",
+    "boxscoreName": "Chourio, J",
+    "gender": "M",
+    "nameMatrilineal": "Lugo",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "CHOO-ree-oh",
+    "mlbDebutDate": "2024-03-29",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jackson Chourio",
+    "nameSlug": "jackson-chourio-694192",
+    "firstLastName": "Jackson Chourio",
+    "lastFirstName": "Chourio, Jackson",
+    "lastInitName": "Chourio, J",
+    "initLastName": "J Chourio",
+    "fullFMLName": "Jackson Bryan Chourio",
+    "fullLFMName": "Chourio, Jackson Bryan",
+    "strikeZoneTop": 3.24,
+    "strikeZoneBottom": 1.63
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 22,
+            "gamesPlayed": 73,
+            "groundOuts": 68,
+            "airOuts": 73,
+            "runs": 51,
+            "doubles": 19,
+            "triples": 0,
+            "homeRuns": 13,
+            "strikeOuts": 80,
+            "baseOnBalls": 24,
+            "intentionalWalks": 2,
+            "hits": 85,
+            "hitByPitch": 2,
+            "avg": ".279",
+            "atBats": 305,
+            "obp": ".334",
+            "slg": ".469",
+            "ops": ".803",
+            "caughtStealing": 1,
+            "stolenBases": 10,
+            "stolenBasePercentage": ".909",
+            "caughtStealingPercentage": ".091",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1300,
+            "plateAppearances": 332,
+            "totalBases": 143,
+            "rbi": 42,
+            "leftOnBase": 129,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".338",
+            "groundOutsToAirouts": "0.93",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "23.46"
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 694192,
+            "fullName": "Jackson Chourio",
+            "link": "/api/v1/people/694192"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
