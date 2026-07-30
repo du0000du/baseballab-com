@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-30T15:46:45Z",
+  "fetched_at": "2026-07-30T18:11:37Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -105,24 +105,24 @@
       },
       {
         "rank": 5,
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".303"
+      },
+      {
+        "rank": 6,
         "playerId": 808982,
         "player": "Jung Hoo Lee",
         "team": "SF",
         "value": ".302"
       },
       {
-        "rank": 6,
+        "rank": 7,
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
         "value": ".302"
-      },
-      {
-        "rank": 7,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
-        "value": ".301"
       },
       {
         "rank": 8,
