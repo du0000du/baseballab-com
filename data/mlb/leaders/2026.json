@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-30T03:49:13Z",
+  "fetched_at": "2026-07-30T11:07:22Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -94,7 +94,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".322"
+        "value": ".321"
       },
       {
         "rank": 4,
@@ -105,16 +105,16 @@
       },
       {
         "rank": 5,
-        "playerId": 518692,
-        "player": "Freddie Freeman",
-        "team": "LAD",
+        "playerId": 808982,
+        "player": "Jung Hoo Lee",
+        "team": "SF",
         "value": ".302"
       },
       {
         "rank": 6,
-        "playerId": 808982,
-        "player": "Jung Hoo Lee",
-        "team": "SF",
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
         "value": ".302"
       },
       {
