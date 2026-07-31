@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-31T11:29:00Z",
+  "fetchedAt": "2026-07-31T15:55:11Z",
   "season": "2026",
   "asOfDate": "2026-07-31",
   "teams": [
@@ -15,9 +15,9 @@
           "opponent": "東京ヤクルトスワローズ",
           "opponentSlug": "yakult-swallows",
           "home": true,
-          "score": 0,
+          "score": 4,
           "opponentScore": 3,
-          "result": "L",
+          "result": "W",
           "stadium": "阪神甲子園球場"
         },
         {
@@ -133,8 +133,8 @@
           "opponentSlug": "hiroshima-carp",
           "home": true,
           "score": 1,
-          "opponentScore": 1,
-          "result": "T",
+          "opponentScore": 3,
+          "result": "L",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -171,9 +171,9 @@
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
           "home": false,
-          "score": 1,
+          "score": 3,
           "opponentScore": 1,
-          "result": "T",
+          "result": "W",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -211,8 +211,8 @@
           "opponentSlug": "hanshin-tigers",
           "home": false,
           "score": 3,
-          "opponentScore": 0,
-          "result": "W",
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "阪神甲子園球場"
         },
         {
@@ -249,9 +249,9 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": true,
-          "score": 3,
-          "opponentScore": 3,
-          "result": "T",
+          "score": 5,
+          "opponentScore": 4,
+          "result": "W",
           "stadium": "京セラドームOSAKA"
         },
         {
@@ -405,9 +405,9 @@
           "opponent": "オリックス・バファローズ",
           "opponentSlug": "orix-buffaloes",
           "home": false,
-          "score": 3,
-          "opponentScore": 3,
-          "result": "T",
+          "score": 4,
+          "opponentScore": 5,
+          "result": "L",
           "stadium": "京セラドームOSAKA"
         },
         {
