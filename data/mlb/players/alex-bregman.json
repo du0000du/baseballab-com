@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 608324,
+    "fullName": "Alex Bregman",
+    "link": "/api/v1/people/608324",
+    "firstName": "Alexander",
+    "lastName": "Bregman",
+    "primaryNumber": "3",
+    "birthDate": "1994-03-30",
+    "currentAge": 32,
+    "birthCity": "Albuquerque",
+    "birthStateProvince": "NM",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 190,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Alex",
+    "useLastName": "Bregman",
+    "middleName": "David",
+    "boxscoreName": "Bregman",
+    "nickName": "A-Breg",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "pronunciation": "BREGG-min",
+    "mlbDebutDate": "2016-07-25",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Alex Bregman",
+    "nameSlug": "alex-bregman-608324",
+    "firstLastName": "Alex Bregman",
+    "lastFirstName": "Bregman, Alex",
+    "lastInitName": "Bregman, A",
+    "initLastName": "A Bregman",
+    "fullFMLName": "Alexander David Bregman",
+    "fullLFMName": "Bregman, Alexander David",
+    "strikeZoneTop": 3.126,
+    "strikeZoneBottom": 1.578
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 106,
+            "groundOuts": 97,
+            "airOuts": 146,
+            "runs": 57,
+            "doubles": 21,
+            "triples": 1,
+            "homeRuns": 11,
+            "strikeOuts": 78,
+            "baseOnBalls": 54,
+            "intentionalWalks": 2,
+            "hits": 104,
+            "hitByPitch": 8,
+            "avg": ".248",
+            "atBats": 420,
+            "obp": ".341",
+            "slg": ".381",
+            "ops": ".722",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 1951,
+            "plateAppearances": 487,
+            "totalBases": 160,
+            "rbi": 47,
+            "leftOnBase": 221,
+            "sacBunts": 0,
+            "sacFlies": 5,
+            "babip": ".277",
+            "groundOutsToAirouts": "0.66",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "38.18"
+          },
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          },
+          "player": {
+            "id": 608324,
+            "fullName": "Alex Bregman",
+            "link": "/api/v1/people/608324"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
