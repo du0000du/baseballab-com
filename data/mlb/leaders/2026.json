@@ -1,79 +1,8 @@
 {
-  "fetched_at": "2026-07-31T15:55:57Z",
+  "fetched_at": "2026-07-31T18:17:44Z",
   "season": "2026",
   "batting": {
-    "homeRuns": [
-      {
-        "rank": 1,
-        "playerId": 670541,
-        "player": "Yordan Alvarez",
-        "team": "HOU",
-        "value": 35
-      },
-      {
-        "rank": 2,
-        "playerId": 656941,
-        "player": "Kyle Schwarber",
-        "team": "PHI",
-        "value": 33
-      },
-      {
-        "rank": 3,
-        "playerId": 696100,
-        "player": "Hunter Goodman",
-        "team": "COL",
-        "value": 31
-      },
-      {
-        "rank": 3,
-        "playerId": 700250,
-        "player": "Ben Rice",
-        "team": "NYY",
-        "value": 31
-      },
-      {
-        "rank": 5,
-        "playerId": 695578,
-        "player": "James Wood",
-        "team": "WSH",
-        "value": 30
-      },
-      {
-        "rank": 6,
-        "playerId": 691406,
-        "player": "Junior Caminero",
-        "team": "TB",
-        "value": 29
-      },
-      {
-        "rank": 7,
-        "playerId": 621566,
-        "player": "Matt Olson",
-        "team": "ATL",
-        "value": 28
-      },
-      {
-        "rank": 8,
-        "playerId": 682928,
-        "player": "CJ Abrams",
-        "team": "WSH",
-        "value": 27
-      },
-      {
-        "rank": 9,
-        "playerId": 621439,
-        "player": "Byron Buxton",
-        "team": "MIN",
-        "value": 25
-      },
-      {
-        "rank": 10,
-        "playerId": 691718,
-        "player": "Pete Crow-Armstrong",
-        "team": "CHC",
-        "value": 24
-      }
-    ],
+    "homeRuns": [],
     "avg": [
       {
         "rank": 1,
