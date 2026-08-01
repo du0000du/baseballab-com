@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-01T04:15:41Z",
+  "fetched_at": "2026-08-01T10:39:55Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -108,7 +108,7 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".304"
+        "value": ".305"
       },
       {
         "rank": 6,
@@ -140,9 +140,9 @@
       },
       {
         "rank": 10,
-        "playerId": 660271,
-        "player": "Shohei Ohtani",
-        "team": "LAD",
+        "playerId": 676391,
+        "player": "Ernie Clement",
+        "team": "TOR",
         "value": ".292"
       }
     ],
