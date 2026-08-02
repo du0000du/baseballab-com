@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-02T04:18:46Z",
+  "fetchedAt": "2026-08-02T10:40:26Z",
   "season": "2026",
   "asOfDate": "2026-08-02",
   "teams": [
@@ -95,6 +95,16 @@
       "divisionShort": "AL Central",
       "recentGames": [
         {
+          "date": "2026-08-01",
+          "opponent": "Athletics",
+          "opponentAbbr": "ATH",
+          "home": false,
+          "score": 8,
+          "opponentScore": 6,
+          "result": "W",
+          "venue": "Sutter Health Park"
+        },
+        {
           "date": "2026-07-31",
           "opponent": "Athletics",
           "opponentAbbr": "ATH",
@@ -112,16 +122,6 @@
           "score": 9,
           "opponentScore": 10,
           "result": "L",
-          "venue": "Comerica Park"
-        },
-        {
-          "date": "2026-07-28",
-          "opponent": "Baltimore Orioles",
-          "opponentAbbr": "BAL",
-          "home": true,
-          "score": 14,
-          "opponentScore": 0,
-          "result": "W",
           "venue": "Comerica Park"
         }
       ]
@@ -423,6 +423,16 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-08-01",
+          "opponent": "Detroit Tigers",
+          "opponentAbbr": "DET",
+          "home": true,
+          "score": 6,
+          "opponentScore": 8,
+          "result": "L",
+          "venue": "Sutter Health Park"
+        },
+        {
           "date": "2026-07-31",
           "opponent": "Detroit Tigers",
           "opponentAbbr": "DET",
@@ -439,16 +449,6 @@
           "home": true,
           "score": 4,
           "opponentScore": 5,
-          "result": "L",
-          "venue": "Sutter Health Park"
-        },
-        {
-          "date": "2026-07-29",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": true,
-          "score": 2,
-          "opponentScore": 4,
           "result": "L",
           "venue": "Sutter Health Park"
         }
