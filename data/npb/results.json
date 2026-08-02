@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-02T10:39:48Z",
+  "fetchedAt": "2026-08-02T14:54:43Z",
   "season": "2026",
   "asOfDate": "2026-08-02",
   "teams": [
@@ -15,8 +15,8 @@
           "opponent": "東京ヤクルトスワローズ",
           "opponentSlug": "yakult-swallows",
           "home": true,
-          "score": 3,
-          "opponentScore": 1,
+          "score": 4,
+          "opponentScore": 3,
           "result": "W",
           "stadium": "阪神甲子園球場"
         },
@@ -132,9 +132,9 @@
           "opponent": "広島東洋カープ",
           "opponentSlug": "hiroshima-carp",
           "home": true,
-          "score": 2,
-          "opponentScore": 2,
-          "result": "T",
+          "score": 3,
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -171,9 +171,9 @@
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
           "home": false,
-          "score": 2,
-          "opponentScore": 2,
-          "result": "T",
+          "score": 4,
+          "opponentScore": 3,
+          "result": "W",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -210,8 +210,8 @@
           "opponent": "阪神タイガース",
           "opponentSlug": "hanshin-tigers",
           "home": false,
-          "score": 1,
-          "opponentScore": 3,
+          "score": 3,
+          "opponentScore": 4,
           "result": "L",
           "stadium": "阪神甲子園球場"
         },
