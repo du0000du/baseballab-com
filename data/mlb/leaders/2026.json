@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-02T14:55:27Z",
+  "fetched_at": "2026-08-02T17:57:07Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -94,7 +94,7 @@
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".322"
+        "value": ".321"
       },
       {
         "rank": 4,
@@ -115,14 +115,14 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".304"
+        "value": ".303"
       },
       {
         "rank": 7,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
-        "value": ".302"
+        "value": ".301"
       },
       {
         "rank": 8,
@@ -155,11 +155,11 @@
         "value": 85
       },
       {
-        "rank": 2,
+        "rank": 1,
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
-        "value": 84
+        "value": 85
       },
       {
         "rank": 3,
@@ -319,7 +319,7 @@
         "playerId": 695505,
         "player": "Chase Burns",
         "team": "CIN",
-        "value": "2.40"
+        "value": "2.38"
       },
       {
         "rank": 5,
@@ -453,16 +453,16 @@
       },
       {
         "rank": 3,
-        "playerId": 650911,
-        "player": "Cristopher Sánchez",
-        "team": "PHI",
-        "value": 168
-      },
-      {
-        "rank": 3,
         "playerId": 668909,
         "player": "Gavin Williams",
         "team": "CLE",
+        "value": 170
+      },
+      {
+        "rank": 4,
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
         "value": 168
       },
       {

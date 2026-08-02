@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 476594,
+    "fullName": "Robert Stock",
+    "link": "/api/v1/people/476594",
+    "firstName": "Robert",
+    "lastName": "Stock",
+    "primaryNumber": "89",
+    "birthDate": "1989-11-21",
+    "currentAge": 36,
+    "birthCity": "Bellevue",
+    "birthStateProvince": "WA",
+    "birthCountry": "USA",
+    "height": "6' 1\"",
+    "weight": 260,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Robert",
+    "useLastName": "Stock",
+    "middleName": "Anthony",
+    "boxscoreName": "Stock",
+    "nickName": "Cretch",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2009,
+    "mlbDebutDate": "2018-06-24",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Robert Stock",
+    "nameSlug": "robert-stock-476594",
+    "firstLastName": "Robert Stock",
+    "lastFirstName": "Stock, Robert",
+    "lastInitName": "Stock, R",
+    "initLastName": "R Stock",
+    "fullFMLName": "Robert Anthony Stock",
+    "fullLFMName": "Stock, Robert Anthony",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 36,
+            "gamesPlayed": 1,
+            "gamesStarted": 1,
+            "groundOuts": 2,
+            "airOuts": 1,
+            "runs": 0,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 1,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 0,
+            "hitByPitch": 0,
+            "avg": ".000",
+            "atBats": 4,
+            "obp": ".000",
+            "slg": ".000",
+            "ops": ".000",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 19,
+            "era": "0.00",
+            "inningsPitched": "1.1",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "whip": "0.00",
+            "battersFaced": 4,
+            "outs": 4,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 11,
+            "strikePercentage": ".580",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 0,
+            "groundOutsToAirouts": "2.00",
+            "winPercentage": ".---",
+            "pitchesPerInning": "14.25",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "-.--",
+            "strikeoutsPer9Inn": "6.75",
+            "walksPer9Inn": "0.00",
+            "hitsPer9Inn": "0.00",
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121"
+          },
+          "player": {
+            "id": 476594,
+            "fullName": "Robert Stock",
+            "link": "/api/v1/people/476594"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
