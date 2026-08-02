@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 672515,
+    "fullName": "Gabriel Moreno",
+    "link": "/api/v1/people/672515",
+    "firstName": "Gabriel",
+    "lastName": "Moreno",
+    "primaryNumber": "14",
+    "birthDate": "2000-02-14",
+    "currentAge": 26,
+    "birthCity": "Barquisimeto",
+    "birthCountry": "Venezuela",
+    "height": "5' 9\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "2",
+      "name": "Catcher",
+      "type": "Catcher",
+      "abbreviation": "C"
+    },
+    "useName": "Gabriel",
+    "useLastName": "Moreno",
+    "middleName": "Jose",
+    "boxscoreName": "Moreno",
+    "gender": "M",
+    "nameMatrilineal": "Marquez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "MO-rain-oh",
+    "mlbDebutDate": "2022-06-11",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Gabriel Moreno",
+    "nameSlug": "gabriel-moreno-672515",
+    "firstLastName": "Gabriel Moreno",
+    "lastFirstName": "Moreno, Gabriel",
+    "lastInitName": "Moreno, G",
+    "initLastName": "G Moreno",
+    "fullFMLName": "Gabriel Jose Moreno",
+    "fullLFMName": "Moreno, Gabriel Jose",
+    "strikeZoneTop": 3.07,
+    "strikeZoneBottom": 1.55
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 84,
+            "groundOuts": 81,
+            "airOuts": 81,
+            "runs": 46,
+            "doubles": 18,
+            "triples": 0,
+            "homeRuns": 8,
+            "strikeOuts": 51,
+            "baseOnBalls": 40,
+            "intentionalWalks": 0,
+            "hits": 89,
+            "hitByPitch": 4,
+            "avg": ".302",
+            "atBats": 295,
+            "obp": ".384",
+            "slg": ".444",
+            "ops": ".828",
+            "caughtStealing": 1,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".800",
+            "caughtStealingPercentage": ".200",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1507,
+            "plateAppearances": 346,
+            "totalBases": 131,
+            "rbi": 47,
+            "leftOnBase": 117,
+            "sacBunts": 0,
+            "sacFlies": 7,
+            "babip": ".333",
+            "groundOutsToAirouts": "1.00",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "36.88"
+          },
+          "team": {
+            "id": 109,
+            "name": "Arizona Diamondbacks",
+            "link": "/api/v1/teams/109"
+          },
+          "player": {
+            "id": 672515,
+            "fullName": "Gabriel Moreno",
+            "link": "/api/v1/people/672515"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
