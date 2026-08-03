@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-03T12:21:19Z",
+  "fetchedAt": "2026-08-03T16:14:53Z",
   "season": "2026",
   "asOfDate": "2026-08-03",
   "teams": [
@@ -249,9 +249,9 @@
           "opponent": "東北楽天ゴールデンイーグルス",
           "opponentSlug": "rakuten-eagles",
           "home": false,
-          "score": 6,
+          "score": 9,
           "opponentScore": 6,
-          "result": "T",
+          "result": "W",
           "stadium": "楽天モバイルパーク宮城"
         },
         {
@@ -367,8 +367,8 @@
           "opponentSlug": "orix-buffaloes",
           "home": true,
           "score": 6,
-          "opponentScore": 6,
-          "result": "T",
+          "opponentScore": 9,
+          "result": "L",
           "stadium": "楽天モバイルパーク宮城"
         },
         {
