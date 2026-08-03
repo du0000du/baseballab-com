@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 687562,
+    "fullName": "Jake Bennett",
+    "link": "/api/v1/people/687562",
+    "firstName": "William",
+    "lastName": "Bennett",
+    "primaryNumber": "64",
+    "birthDate": "2000-12-02",
+    "currentAge": 25,
+    "birthCity": "Tulsa",
+    "birthStateProvince": "OK",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 234,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jake",
+    "useLastName": "Bennett",
+    "middleName": "Jacob",
+    "boxscoreName": "Bennett",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2022,
+    "mlbDebutDate": "2026-05-01",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Jake Bennett",
+    "nameSlug": "jake-bennett-687562",
+    "firstLastName": "Jake Bennett",
+    "lastFirstName": "Bennett, Jake",
+    "lastInitName": "Bennett, J",
+    "initLastName": "J Bennett",
+    "fullFMLName": "William Jacob Bennett",
+    "fullLFMName": "Bennett, William Jacob",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 25,
+            "gamesPlayed": 12,
+            "gamesStarted": 12,
+            "groundOuts": 77,
+            "airOuts": 79,
+            "runs": 23,
+            "doubles": 7,
+            "triples": 0,
+            "homeRuns": 5,
+            "strikeOuts": 50,
+            "baseOnBalls": 13,
+            "intentionalWalks": 2,
+            "hits": 59,
+            "hitByPitch": 2,
+            "avg": ".228",
+            "atBats": 259,
+            "obp": ".267",
+            "slg": ".313",
+            "ops": ".580",
+            "caughtStealing": 0,
+            "stolenBases": 9,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 979,
+            "era": "2.90",
+            "inningsPitched": "71.1",
+            "wins": 7,
+            "losses": 4,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 23,
+            "whip": "1.01",
+            "battersFaced": 280,
+            "outs": 214,
+            "gamesPitched": 12,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 655,
+            "strikePercentage": ".670",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 81,
+            "groundOutsToAirouts": "0.97",
+            "winPercentage": ".636",
+            "pitchesPerInning": "13.72",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "3.85",
+            "strikeoutsPer9Inn": "6.31",
+            "walksPer9Inn": "1.64",
+            "hitsPer9Inn": "7.44",
+            "runsScoredPer9": "2.90",
+            "homeRunsPer9": "0.63",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 3,
+            "sacFlies": 3
+          },
+          "team": {
+            "id": 111,
+            "name": "Boston Red Sox",
+            "link": "/api/v1/teams/111"
+          },
+          "player": {
+            "id": 687562,
+            "fullName": "Jake Bennett",
+            "link": "/api/v1/people/687562"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
