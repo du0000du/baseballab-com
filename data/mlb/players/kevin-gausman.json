@@ -5,6 +5,7 @@
     "link": "/api/v1/people/592332",
     "firstName": "Kevin",
     "lastName": "Gausman",
+    "primaryNumber": "12",
     "birthDate": "1991-01-06",
     "currentAge": 35,
     "birthCity": "Centennial",
