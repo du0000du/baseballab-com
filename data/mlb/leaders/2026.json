@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-05T03:52:26Z",
+  "fetched_at": "2026-08-05T11:20:59Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -514,7 +514,7 @@
         "playerId": 641329,
         "player": "Bryan Baker",
         "team": "TB",
-        "value": 31
+        "value": 32
       },
       {
         "rank": 2,
