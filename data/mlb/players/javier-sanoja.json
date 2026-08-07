@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 691594,
+    "fullName": "Javier Sanoja",
+    "link": "/api/v1/people/691594",
+    "firstName": "Javier",
+    "lastName": "Sanoja",
+    "primaryNumber": "8",
+    "birthDate": "2002-09-03",
+    "currentAge": 23,
+    "birthCity": "Maracay",
+    "birthCountry": "Venezuela",
+    "height": "5' 7\"",
+    "weight": 150,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Javier",
+    "useLastName": "Sanoja",
+    "middleName": "Ernesto",
+    "boxscoreName": "Sanoja",
+    "gender": "M",
+    "nameMatrilineal": "Duran",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "sahn-oh-ha",
+    "mlbDebutDate": "2024-09-07",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Javier Sanoja",
+    "nameSlug": "javier-sanoja-691594",
+    "firstLastName": "Javier Sanoja",
+    "lastFirstName": "Sanoja, Javier",
+    "lastInitName": "Sanoja, J",
+    "initLastName": "J Sanoja",
+    "fullFMLName": "Javier Ernesto Sanoja",
+    "fullLFMName": "Sanoja, Javier Ernesto",
+    "strikeZoneTop": 2.995,
+    "strikeZoneBottom": 1.512
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 23,
+            "gamesPlayed": 98,
+            "groundOuts": 80,
+            "airOuts": 110,
+            "runs": 27,
+            "doubles": 23,
+            "triples": 2,
+            "homeRuns": 4,
+            "strikeOuts": 24,
+            "baseOnBalls": 16,
+            "intentionalWalks": 0,
+            "hits": 78,
+            "hitByPitch": 0,
+            "avg": ".269",
+            "atBats": 290,
+            "obp": ".306",
+            "slg": ".403",
+            "ops": ".709",
+            "caughtStealing": 4,
+            "stolenBases": 6,
+            "stolenBasePercentage": ".600",
+            "caughtStealingPercentage": ".400",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1027,
+            "plateAppearances": 308,
+            "totalBases": 117,
+            "rbi": 39,
+            "leftOnBase": 121,
+            "sacBunts": 1,
+            "sacFlies": 1,
+            "babip": ".281",
+            "groundOutsToAirouts": "0.73",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "72.50"
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 691594,
+            "fullName": "Javier Sanoja",
+            "link": "/api/v1/people/691594"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

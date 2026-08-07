@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 655316,
+    "fullName": "Andruw Monasterio",
+    "link": "/api/v1/people/655316",
+    "firstName": "Andruw",
+    "lastName": "Monasterio",
+    "primaryNumber": "32",
+    "birthDate": "1997-05-30",
+    "currentAge": 29,
+    "birthCity": "Caracas",
+    "birthCountry": "Venezuela",
+    "height": "5' 11\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "6",
+      "name": "Shortstop",
+      "type": "Infielder",
+      "abbreviation": "SS"
+    },
+    "useName": "Andruw",
+    "useLastName": "Monasterio",
+    "middleName": "José",
+    "boxscoreName": "Monasterio",
+    "gender": "M",
+    "nameMatrilineal": "Palacios",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "AHN-drew",
+    "mlbDebutDate": "2023-05-28",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Andruw Monasterio",
+    "nameSlug": "andruw-monasterio-655316",
+    "firstLastName": "Andruw Monasterio",
+    "lastFirstName": "Monasterio, Andruw",
+    "lastInitName": "Monasterio, A",
+    "initLastName": "A Monasterio",
+    "fullFMLName": "Andruw José Monasterio",
+    "fullLFMName": "Monasterio, Andruw José",
+    "strikeZoneTop": 3.148,
+    "strikeZoneBottom": 1.589
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 74,
+            "groundOuts": 39,
+            "airOuts": 70,
+            "runs": 28,
+            "doubles": 21,
+            "triples": 1,
+            "homeRuns": 6,
+            "strikeOuts": 50,
+            "baseOnBalls": 16,
+            "intentionalWalks": 0,
+            "hits": 57,
+            "hitByPitch": 2,
+            "avg": ".268",
+            "atBats": 213,
+            "obp": ".322",
+            "slg": ".460",
+            "ops": ".782",
+            "caughtStealing": 4,
+            "stolenBases": 3,
+            "stolenBasePercentage": ".429",
+            "caughtStealingPercentage": ".571",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 1005,
+            "plateAppearances": 234,
+            "totalBases": 98,
+            "rbi": 28,
+            "leftOnBase": 101,
+            "sacBunts": 1,
+            "sacFlies": 2,
+            "babip": ".321",
+            "groundOutsToAirouts": "0.56",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "35.50"
+          },
+          "team": {
+            "id": 111,
+            "name": "Boston Red Sox",
+            "link": "/api/v1/teams/111"
+          },
+          "player": {
+            "id": 655316,
+            "fullName": "Andruw Monasterio",
+            "link": "/api/v1/people/655316"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

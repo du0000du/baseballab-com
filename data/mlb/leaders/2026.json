@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-06T11:23:05Z",
+  "fetched_at": "2026-08-07T03:42:49Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -36,10 +36,10 @@
         "playerId": 621566,
         "player": "Matt Olson",
         "team": "ATL",
-        "value": 31
+        "value": 32
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 700250,
         "player": "Ben Rice",
         "team": "NYY",
@@ -68,9 +68,9 @@
       },
       {
         "rank": 9,
-        "playerId": 660271,
-        "player": "Shohei Ohtani",
-        "team": "LAD",
+        "playerId": 693307,
+        "player": "Dillon Dingler",
+        "team": "DET",
         "value": 26
       }
     ],
@@ -87,14 +87,14 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "PHI",
-        "value": ".324"
+        "value": ".326"
       },
       {
         "rank": 3,
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".320"
+        "value": ".318"
       },
       {
         "rank": 4,
@@ -108,7 +108,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".306"
+        "value": ".309"
       },
       {
         "rank": 6,
@@ -159,7 +159,7 @@
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
-        "value": 86
+        "value": 87
       },
       {
         "rank": 3,
@@ -177,24 +177,24 @@
       },
       {
         "rank": 5,
+        "playerId": 693307,
+        "player": "Dillon Dingler",
+        "team": "DET",
+        "value": 78
+      },
+      {
+        "rank": 5,
         "playerId": 671277,
         "player": "Luis García Jr.",
         "team": "NYY",
         "value": 78
       },
       {
-        "rank": 6,
+        "rank": 7,
         "playerId": 676475,
         "player": "Alec Burleson",
         "team": "STL",
         "value": 77
-      },
-      {
-        "rank": 7,
-        "playerId": 693307,
-        "player": "Dillon Dingler",
-        "team": "DET",
-        "value": 75
       },
       {
         "rank": 8,
@@ -228,23 +228,23 @@
       },
       {
         "rank": 2,
+        "playerId": 677951,
+        "player": "Bobby Witt Jr.",
+        "team": "KC",
+        "value": 31
+      },
+      {
+        "rank": 3,
         "playerId": 665862,
         "player": "Jazz Chisholm Jr.",
         "team": "NYY",
         "value": 30
       },
       {
-        "rank": 2,
+        "rank": 3,
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": 30
-      },
-      {
-        "rank": 2,
-        "playerId": 677951,
-        "player": "Bobby Witt Jr.",
-        "team": "KC",
         "value": 30
       },
       {
@@ -252,7 +252,7 @@
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 28
+        "value": 29
       },
       {
         "rank": 6,
@@ -316,17 +316,17 @@
       },
       {
         "rank": 4,
+        "playerId": 656302,
+        "player": "Dylan Cease",
+        "team": "TOR",
+        "value": "2.28"
+      },
+      {
+        "rank": 5,
         "playerId": 695505,
         "player": "Chase Burns",
         "team": "CIN",
         "value": "2.35"
-      },
-      {
-        "rank": 5,
-        "playerId": 656302,
-        "player": "Dylan Cease",
-        "team": "TOR",
-        "value": "2.41"
       },
       {
         "rank": 6,
@@ -340,7 +340,7 @@
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
-        "value": "2.61"
+        "value": "2.65"
       },
       {
         "rank": 8,
@@ -367,16 +367,16 @@
     "wins": [
       {
         "rank": 1,
-        "playerId": 543243,
-        "player": "Sonny Gray",
-        "team": "BOS",
-        "value": 14
-      },
-      {
-        "rank": 1,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
+        "value": 15
+      },
+      {
+        "rank": 2,
+        "playerId": 543243,
+        "player": "Sonny Gray",
+        "team": "BOS",
         "value": 14
       },
       {
@@ -404,7 +404,7 @@
         "rank": 4,
         "playerId": 656492,
         "player": "Foster Griffin",
-        "team": "WSH",
+        "team": "CLE",
         "value": 12
       },
       {
@@ -446,31 +446,31 @@
       },
       {
         "rank": 2,
+        "playerId": 656302,
+        "player": "Dylan Cease",
+        "team": "TOR",
+        "value": 184
+      },
+      {
+        "rank": 3,
         "playerId": 668909,
         "player": "Gavin Williams",
         "team": "CLE",
         "value": 178
       },
       {
-        "rank": 3,
-        "playerId": 656302,
-        "player": "Dylan Cease",
-        "team": "TOR",
+        "rank": 4,
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
         "value": 174
       },
       {
-        "rank": 4,
+        "rank": 5,
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
         "value": 171
-      },
-      {
-        "rank": 5,
-        "playerId": 650911,
-        "player": "Cristopher Sánchez",
-        "team": "PHI",
-        "value": 168
       },
       {
         "rank": 6,
@@ -488,24 +488,24 @@
       },
       {
         "rank": 8,
+        "playerId": 690997,
+        "player": "Nolan McLean",
+        "team": "NYM",
+        "value": 156
+      },
+      {
+        "rank": 9,
         "playerId": 672282,
         "player": "Reid Detmers",
         "team": "LAA",
         "value": 150
       },
       {
-        "rank": 9,
-        "playerId": 690997,
-        "player": "Nolan McLean",
-        "team": "NYM",
-        "value": 148
-      },
-      {
         "rank": 10,
-        "playerId": 680732,
-        "player": "Sean Burke",
-        "team": "CWS",
-        "value": 144
+        "playerId": 677952,
+        "player": "Braxton Ashcraft",
+        "team": "PIT",
+        "value": 145
       }
     ],
     "saves": [
