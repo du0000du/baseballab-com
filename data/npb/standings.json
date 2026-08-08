@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-08-08T09:34:58Z",
+  "fetchedAt": "2026-08-08T14:23:00Z",
   "central": [
     {
       "rank": 1,
@@ -196,11 +196,11 @@
       "teamAbbr": "DB",
       "league": "central",
       "games": 100,
-      "wins": 44,
+      "wins": 45,
       "losses": 52,
-      "ties": 4,
-      "pct": ".458",
-      "gb": "9"
+      "ties": 3,
+      "pct": ".463",
+      "gb": "8.5"
     },
     {
       "rank": 4,
@@ -236,10 +236,10 @@
       "league": "central",
       "games": 97,
       "wins": 38,
-      "losses": 54,
-      "ties": 5,
-      "pct": ".413",
-      "gb": "13"
+      "losses": 55,
+      "ties": 4,
+      "pct": ".408",
+      "gb": "13.5"
     }
   ],
   "estimatedPacific": [
@@ -251,13 +251,26 @@
       "league": "pacific",
       "games": 100,
       "wins": 63,
-      "losses": 35,
-      "ties": 2,
-      "pct": ".642",
+      "losses": 36,
+      "ties": 1,
+      "pct": ".636",
       "gb": "--"
     },
     {
       "rank": 2,
+      "teamSlug": "seibu-lions",
+      "teamName": "埼玉西武ライオンズ",
+      "teamAbbr": "L",
+      "league": "pacific",
+      "games": 103,
+      "wins": 56,
+      "losses": 44,
+      "ties": 3,
+      "pct": ".560",
+      "gb": "7.5"
+    },
+    {
+      "rank": 3,
       "teamSlug": "nipponham-fighters",
       "teamName": "北海道日本ハムファイターズ",
       "teamAbbr": "F",
@@ -267,20 +280,7 @@
       "losses": 46,
       "ties": 0,
       "pct": ".557",
-      "gb": "8"
-    },
-    {
-      "rank": 3,
-      "teamSlug": "seibu-lions",
-      "teamName": "埼玉西武ライオンズ",
-      "teamAbbr": "L",
-      "league": "pacific",
-      "games": 103,
-      "wins": 55,
-      "losses": 44,
-      "ties": 4,
-      "pct": ".555",
-      "gb": "8.5"
+      "gb": "7.5"
     },
     {
       "rank": 4,
@@ -293,7 +293,7 @@
       "losses": 50,
       "ties": 2,
       "pct": ".500",
-      "gb": "14"
+      "gb": "13.5"
     },
     {
       "rank": 5,
@@ -306,7 +306,7 @@
       "losses": 49,
       "ties": 3,
       "pct": ".478",
-      "gb": "16"
+      "gb": "15.5"
     },
     {
       "rank": 6,
@@ -319,7 +319,7 @@
       "losses": 59,
       "ties": 1,
       "pct": ".391",
-      "gb": "24.5"
+      "gb": "24"
     }
   ]
 }
