@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-08T02:48:02Z",
+  "fetched_at": "2026-08-08T09:36:27Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -26,17 +26,17 @@
       },
       {
         "rank": 2,
+        "playerId": 621566,
+        "player": "Matt Olson",
+        "team": "ATL",
+        "value": 33
+      },
+      {
+        "rank": 2,
         "playerId": 656941,
         "player": "Kyle Schwarber",
         "team": "PHI",
         "value": 33
-      },
-      {
-        "rank": 5,
-        "playerId": 621566,
-        "player": "Matt Olson",
-        "team": "ATL",
-        "value": 32
       },
       {
         "rank": 6,
@@ -80,14 +80,14 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".329"
+        "value": ".328"
       },
       {
         "rank": 2,
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "PHI",
-        "value": ".324"
+        "value": ".323"
       },
       {
         "rank": 3,
@@ -108,7 +108,7 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".308"
+        "value": ".307"
       },
       {
         "rank": 6,
@@ -119,10 +119,10 @@
       },
       {
         "rank": 7,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
-        "value": ".298"
+        "playerId": 672515,
+        "player": "Gabriel Moreno",
+        "team": "AZ",
+        "value": ".301"
       },
       {
         "rank": 8,
@@ -133,16 +133,16 @@
       },
       {
         "rank": 9,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
+        "playerId": 650490,
+        "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".297"
+        "value": ".296"
       },
       {
         "rank": 10,
-        "playerId": 660271,
-        "player": "Shohei Ohtani",
-        "team": "LAD",
+        "playerId": 681198,
+        "player": "TJ Rumfield",
+        "team": "COL",
         "value": ".296"
       }
     ],
@@ -201,20 +201,20 @@
         "playerId": 681624,
         "player": "Andy Pages",
         "team": "LAD",
-        "value": 74
-      },
-      {
-        "rank": 9,
-        "playerId": 664040,
-        "player": "Brandon Lowe",
-        "team": "PIT",
-        "value": 73
+        "value": 75
       },
       {
         "rank": 9,
         "playerId": 700250,
         "player": "Ben Rice",
         "team": "NYY",
+        "value": 74
+      },
+      {
+        "rank": 10,
+        "playerId": 664040,
+        "player": "Brandon Lowe",
+        "team": "PIT",
         "value": 73
       }
     ],
@@ -358,10 +358,10 @@
       },
       {
         "rank": 10,
-        "playerId": 808967,
-        "player": "Yoshinobu Yamamoto",
-        "team": "LAD",
-        "value": "2.76"
+        "playerId": 656876,
+        "player": "Drew Rasmussen",
+        "team": "TB",
+        "value": "2.75"
       }
     ],
     "wins": [
@@ -514,7 +514,7 @@
         "playerId": 641329,
         "player": "Bryan Baker",
         "team": "TB",
-        "value": 32
+        "value": 33
       },
       {
         "rank": 2,
@@ -531,17 +531,17 @@
         "value": 28
       },
       {
-        "rank": 4,
-        "playerId": 547973,
-        "player": "Aroldis Chapman",
-        "team": "BOS",
-        "value": 27
-      },
-      {
-        "rank": 4,
+        "rank": 3,
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
+        "value": 28
+      },
+      {
+        "rank": 5,
+        "playerId": 547973,
+        "player": "Aroldis Chapman",
+        "team": "BOS",
         "value": 27
       },
       {
