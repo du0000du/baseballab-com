@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-09T02:55:46Z",
+  "fetched_at": "2026-08-09T09:38:12Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -115,14 +115,14 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".305"
+        "value": ".304"
       },
       {
         "rank": 7,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
-        "value": ".304"
+        "value": ".303"
       },
       {
         "rank": 8,
@@ -143,7 +143,7 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".295"
+        "value": ".298"
       }
     ],
     "rbi": [
@@ -228,30 +228,30 @@
       },
       {
         "rank": 2,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
+        "value": 31
+      },
+      {
+        "rank": 2,
         "playerId": 677951,
         "player": "Bobby Witt Jr.",
         "team": "KC",
         "value": 31
       },
       {
-        "rank": 3,
+        "rank": 4,
         "playerId": 665862,
         "player": "Jazz Chisholm Jr.",
         "team": "NYY",
         "value": 30
       },
       {
-        "rank": 3,
+        "rank": 4,
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 30
-      },
-      {
-        "rank": 3,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
         "value": 30
       },
       {
@@ -514,7 +514,7 @@
         "playerId": 641329,
         "player": "Bryan Baker",
         "team": "TB",
-        "value": 33
+        "value": 34
       },
       {
         "rank": 2,
