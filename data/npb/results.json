@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-09T09:37:26Z",
+  "fetchedAt": "2026-08-09T14:25:20Z",
   "season": "2026",
   "asOfDate": "2026-08-09",
   "teams": [
@@ -15,9 +15,9 @@
           "opponent": "中日ドラゴンズ",
           "opponentSlug": "chunichi-dragons",
           "home": false,
-          "score": 0,
+          "score": 1,
           "opponentScore": 0,
-          "result": "T",
+          "result": "W",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -54,9 +54,9 @@
           "opponent": "広島東洋カープ",
           "opponentSlug": "hiroshima-carp",
           "home": false,
-          "score": 0,
+          "score": 3,
           "opponentScore": 0,
-          "result": "T",
+          "result": "W",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
         {
@@ -133,8 +133,8 @@
           "opponentSlug": "hanshin-tigers",
           "home": true,
           "score": 0,
-          "opponentScore": 0,
-          "result": "T",
+          "opponentScore": 1,
+          "result": "L",
           "stadium": "バンテリンドームナゴヤ"
         },
         {
@@ -172,8 +172,8 @@
           "opponentSlug": "yokohama-dena",
           "home": true,
           "score": 0,
-          "opponentScore": 0,
-          "result": "T",
+          "opponentScore": 3,
+          "result": "L",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
         {
@@ -250,8 +250,8 @@
           "opponentSlug": "lotte-marines",
           "home": true,
           "score": 2,
-          "opponentScore": 2,
-          "result": "T",
+          "opponentScore": 7,
+          "result": "L",
           "stadium": "京セラドームOSAKA"
         },
         {
@@ -288,7 +288,7 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": true,
-          "score": 1,
+          "score": 5,
           "opponentScore": 0,
           "result": "W",
           "stadium": "みずほPayPayドーム福岡"
@@ -406,7 +406,7 @@
           "opponentSlug": "softbank-hawks",
           "home": false,
           "score": 0,
-          "opponentScore": 1,
+          "opponentScore": 5,
           "result": "L",
           "stadium": "みずほPayPayドーム福岡"
         },
@@ -444,9 +444,9 @@
           "opponent": "オリックス・バファローズ",
           "opponentSlug": "orix-buffaloes",
           "home": false,
-          "score": 2,
+          "score": 7,
           "opponentScore": 2,
-          "result": "T",
+          "result": "W",
           "stadium": "京セラドームOSAKA"
         },
         {
