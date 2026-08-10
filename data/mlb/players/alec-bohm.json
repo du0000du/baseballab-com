@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 664761,
+    "fullName": "Alec Bohm",
+    "link": "/api/v1/people/664761",
+    "firstName": "Alec",
+    "lastName": "Bohm",
+    "primaryNumber": "28",
+    "birthDate": "1996-08-03",
+    "currentAge": 30,
+    "birthCity": "Omaha",
+    "birthStateProvince": "NE",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 218,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Alec",
+    "useLastName": "Bohm",
+    "middleName": "Daniel",
+    "boxscoreName": "Bohm",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "pronunciation": "bome; like home",
+    "mlbDebutDate": "2020-08-13",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Alec Bohm",
+    "nameSlug": "alec-bohm-664761",
+    "firstLastName": "Alec Bohm",
+    "lastFirstName": "Bohm, Alec",
+    "lastInitName": "Bohm, A",
+    "initLastName": "A Bohm",
+    "fullFMLName": "Alec Daniel Bohm",
+    "fullLFMName": "Bohm, Alec Daniel",
+    "strikeZoneTop": 3.407,
+    "strikeZoneBottom": 1.719
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 114,
+            "groundOuts": 146,
+            "airOuts": 120,
+            "runs": 39,
+            "doubles": 17,
+            "triples": 0,
+            "homeRuns": 13,
+            "strikeOuts": 66,
+            "baseOnBalls": 31,
+            "intentionalWalks": 1,
+            "hits": 96,
+            "hitByPitch": 7,
+            "avg": ".227",
+            "atBats": 423,
+            "obp": ".288",
+            "slg": ".359",
+            "ops": ".647",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 16,
+            "numberOfPitches": 1692,
+            "plateAppearances": 466,
+            "totalBases": 152,
+            "rbi": 63,
+            "leftOnBase": 182,
+            "sacBunts": 0,
+            "sacFlies": 5,
+            "babip": ".238",
+            "groundOutsToAirouts": "1.22",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "32.54"
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 664761,
+            "fullName": "Alec Bohm",
+            "link": "/api/v1/people/664761"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
