@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-11T02:57:37Z",
+  "fetched_at": "2026-08-11T09:59:50Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -19,6 +19,13 @@
       },
       {
         "rank": 3,
+        "playerId": 691406,
+        "player": "Junior Caminero",
+        "team": "TB",
+        "value": 34
+      },
+      {
+        "rank": 3,
         "playerId": 696100,
         "player": "Hunter Goodman",
         "team": "COL",
@@ -30,13 +37,6 @@
         "player": "Matt Olson",
         "team": "ATL",
         "value": 34
-      },
-      {
-        "rank": 5,
-        "playerId": 691406,
-        "player": "Junior Caminero",
-        "team": "TB",
-        "value": 33
       },
       {
         "rank": 6,
@@ -80,7 +80,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".322"
+        "value": ".323"
       },
       {
         "rank": 2,
@@ -98,10 +98,10 @@
       },
       {
         "rank": 4,
-        "playerId": 664983,
-        "player": "Jake McCarthy",
-        "team": "COL",
-        "value": ".307"
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
+        "value": ".308"
       },
       {
         "rank": 5,
@@ -111,39 +111,39 @@
         "value": ".306"
       },
       {
-        "rank": 6,
+        "rank": 5,
+        "playerId": 664983,
+        "player": "Jake McCarthy",
+        "team": "COL",
+        "value": ".306"
+      },
+      {
+        "rank": 7,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
+        "value": ".305"
+      },
+      {
+        "rank": 8,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
         "value": ".304"
       },
       {
-        "rank": 7,
-        "playerId": 518692,
-        "player": "Freddie Freeman",
-        "team": "LAD",
-        "value": ".303"
-      },
-      {
-        "rank": 8,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
-        "value": ".302"
-      },
-      {
         "rank": 9,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".299"
+        "value": ".302"
       },
       {
         "rank": 10,
         "playerId": 808982,
         "player": "Jung Hoo Lee",
         "team": "SF",
-        "value": ".299"
+        "value": ".300"
       }
     ],
     "rbi": [
@@ -228,17 +228,17 @@
       },
       {
         "rank": 2,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
+        "value": 33
+      },
+      {
+        "rank": 3,
         "playerId": 677951,
         "player": "Bobby Witt Jr.",
         "team": "KC",
         "value": 32
-      },
-      {
-        "rank": 3,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
-        "value": 31
       },
       {
         "rank": 4,
@@ -518,20 +518,20 @@
       },
       {
         "rank": 2,
+        "playerId": 695243,
+        "player": "Mason Miller",
+        "team": "SD",
+        "value": 30
+      },
+      {
+        "rank": 2,
         "playerId": 671922,
         "player": "Cade Smith",
         "team": "CLE",
         "value": 30
       },
       {
-        "rank": 3,
-        "playerId": 695243,
-        "player": "Mason Miller",
-        "team": "SD",
-        "value": 29
-      },
-      {
-        "rank": 3,
+        "rank": 4,
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
