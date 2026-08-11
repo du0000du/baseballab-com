@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-10T17:45:46Z",
+  "fetched_at": "2026-08-11T02:57:37Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -84,37 +84,37 @@
       },
       {
         "rank": 2,
-        "playerId": 650333,
-        "player": "Luis Arraez",
-        "team": "PHI",
-        "value": ".320"
-      },
-      {
-        "rank": 3,
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
         "value": ".318"
       },
       {
+        "rank": 3,
+        "playerId": 650333,
+        "player": "Luis Arraez",
+        "team": "PHI",
+        "value": ".316"
+      },
+      {
         "rank": 4,
+        "playerId": 664983,
+        "player": "Jake McCarthy",
+        "team": "COL",
+        "value": ".307"
+      },
+      {
+        "rank": 5,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
         "value": ".306"
       },
       {
-        "rank": 5,
-        "playerId": 664983,
-        "player": "Jake McCarthy",
-        "team": "COL",
-        "value": ".306"
-      },
-      {
         "rank": 6,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
+        "playerId": 672515,
+        "player": "Gabriel Moreno",
+        "team": "AZ",
         "value": ".304"
       },
       {
@@ -126,9 +126,9 @@
       },
       {
         "rank": 8,
-        "playerId": 672515,
-        "player": "Gabriel Moreno",
-        "team": "AZ",
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
         "value": ".302"
       },
       {
@@ -136,14 +136,14 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".298"
+        "value": ".299"
       },
       {
         "rank": 10,
         "playerId": 808982,
         "player": "Jung Hoo Lee",
         "team": "SF",
-        "value": ".298"
+        "value": ".299"
       }
     ],
     "rbi": [
@@ -177,20 +177,20 @@
       },
       {
         "rank": 5,
+        "playerId": 676475,
+        "player": "Alec Burleson",
+        "team": "STL",
+        "value": 81
+      },
+      {
+        "rank": 6,
         "playerId": 693307,
         "player": "Dillon Dingler",
         "team": "DET",
         "value": 80
       },
       {
-        "rank": 6,
-        "playerId": 676475,
-        "player": "Alec Burleson",
-        "team": "STL",
-        "value": 78
-      },
-      {
-        "rank": 6,
+        "rank": 7,
         "playerId": 671277,
         "player": "Luis García Jr.",
         "team": "NYY",
@@ -228,16 +228,16 @@
       },
       {
         "rank": 2,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
-        "value": 31
-      },
-      {
-        "rank": 2,
         "playerId": 677951,
         "player": "Bobby Witt Jr.",
         "team": "KC",
+        "value": 32
+      },
+      {
+        "rank": 3,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
         "value": 31
       },
       {
@@ -488,24 +488,24 @@
       },
       {
         "rank": 8,
+        "playerId": 672282,
+        "player": "Reid Detmers",
+        "team": "LAA",
+        "value": 156
+      },
+      {
+        "rank": 8,
         "playerId": 690997,
         "player": "Nolan McLean",
         "team": "NYM",
         "value": 156
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 519242,
         "player": "Chris Sale",
         "team": "ATL",
         "value": 151
-      },
-      {
-        "rank": 10,
-        "playerId": 672282,
-        "player": "Reid Detmers",
-        "team": "LAA",
-        "value": 150
       }
     ],
     "saves": [
@@ -559,24 +559,24 @@
         "value": 25
       },
       {
-        "rank": 8,
+        "rank": 7,
+        "playerId": 686973,
+        "player": "Louis Varland",
+        "team": "TOR",
+        "value": 25
+      },
+      {
+        "rank": 9,
         "playerId": 628452,
         "player": "Raisel Iglesias",
         "team": "ATL",
         "value": 24
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 623149,
         "player": "Paul Sewald",
         "team": "AZ",
-        "value": 24
-      },
-      {
-        "rank": 8,
-        "playerId": 686973,
-        "player": "Louis Varland",
-        "team": "TOR",
         "value": 24
       }
     ]

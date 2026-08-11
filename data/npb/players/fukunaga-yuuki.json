@@ -22,7 +22,7 @@
     "hr": 2,
     "tb": 78,
     "rbi": 15,
-    "sb": 10,
+    "sb": 11,
     "cs": 2,
     "sac": 0,
     "sf": 0,
@@ -35,8 +35,8 @@
     "obp": 0.352,
     "ops": 0.688
   },
-  "asOf": "2026-08-09",
-  "fetchedAt": "2026-08-10T17:44:12Z",
+  "asOf": "2026-08-10",
+  "fetchedAt": "2026-08-11T02:56:13Z",
   "source": "NPB.jp 日本野球機構",
   "sourceUrl": "https://npb.jp/bis/2026/stats/idb1_d.html"
 }
