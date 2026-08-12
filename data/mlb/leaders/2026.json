@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-12T03:16:32Z",
+  "fetched_at": "2026-08-12T10:02:19Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -101,27 +101,27 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".308"
+        "value": ".307"
       },
       {
         "rank": 5,
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".306"
+        "value": ".305"
       },
       {
         "rank": 6,
-        "playerId": 672515,
-        "player": "Gabriel Moreno",
-        "team": "AZ",
-        "value": ".306"
-      },
-      {
-        "rank": 7,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
+        "value": ".304"
+      },
+      {
+        "rank": 7,
+        "playerId": 672515,
+        "player": "Gabriel Moreno",
+        "team": "AZ",
         "value": ".304"
       },
       {
@@ -129,14 +129,14 @@
         "playerId": 664983,
         "player": "Jake McCarthy",
         "team": "COL",
-        "value": ".304"
+        "value": ".303"
       },
       {
         "rank": 9,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".302"
+        "value": ".301"
       },
       {
         "rank": 10,
@@ -351,17 +351,17 @@
       },
       {
         "rank": 9,
-        "playerId": 607259,
-        "player": "Nick Martinez",
-        "team": "TB",
-        "value": "2.67"
-      },
-      {
-        "rank": 10,
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
         "value": "2.70"
+      },
+      {
+        "rank": 10,
+        "playerId": 607259,
+        "player": "Nick Martinez",
+        "team": "TB",
+        "value": "2.74"
       }
     ],
     "wins": [
@@ -409,6 +409,13 @@
       },
       {
         "rank": 6,
+        "playerId": 607259,
+        "player": "Nick Martinez",
+        "team": "TB",
+        "value": 12
+      },
+      {
+        "rank": 6,
         "playerId": 669467,
         "player": "Andre Pallante",
         "team": "STL",
@@ -422,18 +429,11 @@
         "value": 12
       },
       {
-        "rank": 9,
-        "playerId": 677952,
-        "player": "Braxton Ashcraft",
-        "team": "PIT",
-        "value": 11
-      },
-      {
-        "rank": 9,
-        "playerId": 607259,
-        "player": "Nick Martinez",
-        "team": "TB",
-        "value": 11
+        "rank": 6,
+        "playerId": 608372,
+        "player": "Tomoyuki Sugano",
+        "team": "COL",
+        "value": 12
       }
     ],
     "strikeOuts": [
