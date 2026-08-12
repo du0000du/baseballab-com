@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-08-12T10:00:47Z",
+  "fetchedAt": "2026-08-12T14:49:47Z",
   "central": [
     {
       "rank": 1,
@@ -258,28 +258,28 @@
     },
     {
       "rank": 2,
-      "teamSlug": "nipponham-fighters",
-      "teamName": "北海道日本ハムファイターズ",
-      "teamAbbr": "F",
-      "league": "pacific",
-      "games": 107,
-      "wins": 60,
-      "losses": 47,
-      "ties": 0,
-      "pct": ".560",
-      "gb": "8.5"
-    },
-    {
-      "rank": 3,
       "teamSlug": "seibu-lions",
       "teamName": "埼玉西武ライオンズ",
       "teamAbbr": "L",
       "league": "pacific",
       "games": 106,
-      "wins": 57,
-      "losses": 46,
+      "wins": 58,
+      "losses": 45,
       "ties": 3,
-      "pct": ".553",
+      "pct": ".563",
+      "gb": "8.5"
+    },
+    {
+      "rank": 3,
+      "teamSlug": "nipponham-fighters",
+      "teamName": "北海道日本ハムファイターズ",
+      "teamAbbr": "F",
+      "league": "pacific",
+      "games": 107,
+      "wins": 59,
+      "losses": 48,
+      "ties": 0,
+      "pct": ".551",
       "gb": "9.5"
     },
     {
@@ -289,11 +289,11 @@
       "teamAbbr": "B",
       "league": "pacific",
       "games": 105,
-      "wins": 52,
-      "losses": 51,
+      "wins": 51,
+      "losses": 52,
       "ties": 2,
-      "pct": ".504",
-      "gb": "14.5"
+      "pct": ".495",
+      "gb": "15.5"
     },
     {
       "rank": 5,
@@ -315,11 +315,11 @@
       "teamAbbr": "E",
       "league": "pacific",
       "games": 101,
-      "wins": 38,
-      "losses": 62,
+      "wins": 39,
+      "losses": 61,
       "ties": 1,
-      "pct": ".380",
-      "gb": "27"
+      "pct": ".390",
+      "gb": "26"
     }
   ]
 }
