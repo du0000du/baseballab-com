@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-13T03:20:46Z",
+  "fetched_at": "2026-08-13T10:03:56Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -112,17 +112,17 @@
       },
       {
         "rank": 6,
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
+        "value": ".306"
+      },
+      {
+        "rank": 7,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
         "value": ".305"
-      },
-      {
-        "rank": 7,
-        "playerId": 518692,
-        "player": "Freddie Freeman",
-        "team": "LAD",
-        "value": ".304"
       },
       {
         "rank": 8,
