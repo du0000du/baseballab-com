@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-13T14:51:59Z",
+  "fetched_at": "2026-08-13T17:52:51Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -98,16 +98,16 @@
       },
       {
         "rank": 4,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
-        "value": ".307"
-      },
-      {
-        "rank": 5,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
+        "value": ".308"
+      },
+      {
+        "rank": 5,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
         "value": ".307"
       },
       {
@@ -156,16 +156,16 @@
       },
       {
         "rank": 2,
-        "playerId": 670541,
-        "player": "Yordan Alvarez",
-        "team": "HOU",
-        "value": 87
-      },
-      {
-        "rank": 2,
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
+        "value": 88
+      },
+      {
+        "rank": 3,
+        "playerId": 670541,
+        "player": "Yordan Alvarez",
+        "team": "HOU",
         "value": 87
       },
       {
@@ -187,7 +187,7 @@
         "playerId": 693307,
         "player": "Dillon Dingler",
         "team": "DET",
-        "value": 80
+        "value": 81
       },
       {
         "rank": 7,
@@ -333,7 +333,7 @@
         "playerId": 800048,
         "player": "Parker Messick",
         "team": "CLE",
-        "value": "2.57"
+        "value": "2.59"
       },
       {
         "rank": 7,
