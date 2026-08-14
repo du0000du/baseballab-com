@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 700712,
+    "fullName": "Walbert Ureña",
+    "link": "/api/v1/people/700712",
+    "firstName": "Walbert",
+    "lastName": "Ureña",
+    "primaryNumber": "57",
+    "birthDate": "2004-01-25",
+    "currentAge": 22,
+    "birthCity": "Mao",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 0\"",
+    "weight": 210,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Walbert",
+    "useLastName": "Ureña",
+    "middleName": "Jhoel",
+    "boxscoreName": "Ureña",
+    "gender": "M",
+    "nameMatrilineal": "Fernandez",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2026-03-26",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Walbert Ureña",
+    "nameSlug": "walbert-urena-700712",
+    "firstLastName": "Walbert Ureña",
+    "lastFirstName": "Ureña, Walbert",
+    "lastInitName": "Ureña, W",
+    "initLastName": "W Ureña",
+    "fullFMLName": "Walbert Jhoel Ureña",
+    "fullLFMName": "Ureña, Walbert Jhoel",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 22,
+            "gamesPlayed": 22,
+            "gamesStarted": 20,
+            "groundOuts": 119,
+            "airOuts": 95,
+            "runs": 39,
+            "doubles": 14,
+            "triples": 0,
+            "homeRuns": 6,
+            "strikeOuts": 102,
+            "baseOnBalls": 57,
+            "intentionalWalks": 1,
+            "hits": 78,
+            "hitByPitch": 8,
+            "avg": ".199",
+            "atBats": 392,
+            "obp": ".312",
+            "slg": ".281",
+            "ops": ".593",
+            "caughtStealing": 3,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".700",
+            "caughtStealingPercentage": ".300",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 1842,
+            "era": "2.67",
+            "inningsPitched": "107.2",
+            "wins": 8,
+            "losses": 8,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 1,
+            "blownSaves": 0,
+            "earnedRuns": 32,
+            "whip": "1.25",
+            "battersFaced": 459,
+            "outs": 323,
+            "gamesPitched": 22,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1138,
+            "strikePercentage": ".620",
+            "hitBatsmen": 8,
+            "balks": 1,
+            "wildPitches": 4,
+            "pickoffs": 1,
+            "totalBases": 110,
+            "groundOutsToAirouts": "1.25",
+            "winPercentage": ".500",
+            "pitchesPerInning": "17.11",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "1.79",
+            "strikeoutsPer9Inn": "8.53",
+            "walksPer9Inn": "4.76",
+            "hitsPer9Inn": "6.52",
+            "runsScoredPer9": "3.26",
+            "homeRunsPer9": "0.50",
+            "inheritedRunners": 1,
+            "inheritedRunnersScored": 1,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 108,
+            "name": "Los Angeles Angels",
+            "link": "/api/v1/teams/108"
+          },
+          "player": {
+            "id": 700712,
+            "fullName": "Walbert Ureña",
+            "link": "/api/v1/people/700712"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
