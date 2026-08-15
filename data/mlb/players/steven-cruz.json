@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 674444,
+    "fullName": "Steven Cruz",
+    "link": "/api/v1/people/674444",
+    "firstName": "Steven",
+    "lastName": "Cruz",
+    "primaryNumber": "64",
+    "birthDate": "1999-06-15",
+    "currentAge": 27,
+    "birthCity": "Tenares",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 7\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Steven",
+    "useLastName": "Cruz",
+    "middleName": "Adalberto",
+    "boxscoreName": "Cruz",
+    "gender": "M",
+    "nameMatrilineal": "Rosario",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2023-08-29",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Steven Cruz",
+    "nameSlug": "steven-cruz-674444",
+    "firstLastName": "Steven Cruz",
+    "lastFirstName": "Cruz, Steven",
+    "lastInitName": "Cruz, S",
+    "initLastName": "S Cruz",
+    "fullFMLName": "Steven Adalberto Cruz",
+    "fullLFMName": "Cruz, Steven Adalberto",
+    "strikeZoneTop": 3.522,
+    "strikeZoneBottom": 1.778
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 43,
+            "gamesStarted": 2,
+            "groundOuts": 44,
+            "airOuts": 37,
+            "runs": 22,
+            "doubles": 5,
+            "triples": 0,
+            "homeRuns": 11,
+            "strikeOuts": 51,
+            "baseOnBalls": 18,
+            "intentionalWalks": 2,
+            "hits": 37,
+            "hitByPitch": 2,
+            "avg": ".220",
+            "atBats": 168,
+            "obp": ".303",
+            "slg": ".446",
+            "ops": ".749",
+            "caughtStealing": 0,
+            "stolenBases": 2,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 721,
+            "era": "4.17",
+            "inningsPitched": "45.1",
+            "wins": 2,
+            "losses": 3,
+            "saves": 4,
+            "saveOpportunities": 5,
+            "holds": 4,
+            "blownSaves": 1,
+            "earnedRuns": 21,
+            "whip": "1.21",
+            "battersFaced": 189,
+            "outs": 136,
+            "gamesPitched": 43,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 474,
+            "strikePercentage": ".660",
+            "hitBatsmen": 2,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 75,
+            "groundOutsToAirouts": "1.19",
+            "winPercentage": ".400",
+            "pitchesPerInning": "15.90",
+            "gamesFinished": 14,
+            "strikeoutWalkRatio": "2.83",
+            "strikeoutsPer9Inn": "10.13",
+            "walksPer9Inn": "3.57",
+            "hitsPer9Inn": "7.35",
+            "runsScoredPer9": "4.37",
+            "homeRunsPer9": "2.18",
+            "inheritedRunners": 11,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 674444,
+            "fullName": "Steven Cruz",
+            "link": "/api/v1/people/674444"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

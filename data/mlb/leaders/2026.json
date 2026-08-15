@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-15T02:07:14Z",
+  "fetched_at": "2026-08-15T09:24:27Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -80,7 +80,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".325"
+        "value": ".323"
       },
       {
         "rank": 2,
@@ -129,20 +129,20 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".302"
+        "value": ".301"
       },
       {
         "rank": 9,
         "playerId": 664983,
         "player": "Jake McCarthy",
         "team": "COL",
-        "value": ".300"
+        "value": ".296"
       },
       {
         "rank": 10,
-        "playerId": 673962,
-        "player": "Josh Jung",
-        "team": "TEX",
+        "playerId": 681198,
+        "player": "TJ Rumfield",
+        "team": "COL",
         "value": ".294"
       }
     ],
@@ -191,27 +191,27 @@
       },
       {
         "rank": 7,
+        "playerId": 691406,
+        "player": "Junior Caminero",
+        "team": "TB",
+        "value": 78
+      },
+      {
+        "rank": 7,
         "playerId": 671277,
         "player": "Luis García Jr.",
         "team": "NYY",
         "value": 78
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 624413,
         "player": "Pete Alonso",
         "team": "BAL",
         "value": 77
       },
       {
-        "rank": 8,
-        "playerId": 691406,
-        "player": "Junior Caminero",
-        "team": "TB",
-        "value": 77
-      },
-      {
-        "rank": 8,
+        "rank": 9,
         "playerId": 664040,
         "player": "Brandon Lowe",
         "team": "PIT",
@@ -231,7 +231,7 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": 34
+        "value": 35
       },
       {
         "rank": 3,
@@ -347,7 +347,7 @@
         "playerId": 808967,
         "player": "Yoshinobu Yamamoto",
         "team": "LAD",
-        "value": "2.65"
+        "value": "2.60"
       },
       {
         "rank": 9,
