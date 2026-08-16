@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-16T02:14:11Z",
+  "fetched_at": "2026-08-16T09:26:35Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -481,27 +481,27 @@
       },
       {
         "rank": 7,
+        "playerId": 672282,
+        "player": "Reid Detmers",
+        "team": "LAA",
+        "value": 167
+      },
+      {
+        "rank": 8,
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
         "value": 166
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 519242,
         "player": "Chris Sale",
         "team": "ATL",
         "value": 160
       },
       {
-        "rank": 9,
-        "playerId": 672282,
-        "player": "Reid Detmers",
-        "team": "LAA",
-        "value": 159
-      },
-      {
-        "rank": 9,
+        "rank": 10,
         "playerId": 690997,
         "player": "Nolan McLean",
         "team": "NYM",
@@ -574,9 +574,9 @@
       },
       {
         "rank": 9,
-        "playerId": 623149,
-        "player": "Paul Sewald",
-        "team": "AZ",
+        "playerId": 656641,
+        "player": "Jacob Latz",
+        "team": "TEX",
         "value": 24
       }
     ]
