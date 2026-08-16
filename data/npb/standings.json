@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-08-16T09:25:07Z",
+  "fetchedAt": "2026-08-16T14:13:20Z",
   "central": [
     {
       "rank": 1,
@@ -191,29 +191,29 @@
     },
     {
       "rank": 3,
+      "teamSlug": "yakult-swallows",
+      "teamName": "東京ヤクルトスワローズ",
+      "teamAbbr": "S",
+      "league": "central",
+      "games": 105,
+      "wins": 49,
+      "losses": 55,
+      "ties": 1,
+      "pct": ".471",
+      "gb": "9.5"
+    },
+    {
+      "rank": 4,
       "teamSlug": "yokohama-dena",
       "teamName": "横浜DeNAベイスターズ",
       "teamAbbr": "DB",
       "league": "central",
       "games": 107,
       "wins": 48,
-      "losses": 55,
-      "ties": 4,
-      "pct": ".466",
-      "gb": "10"
-    },
-    {
-      "rank": 4,
-      "teamSlug": "yakult-swallows",
-      "teamName": "東京ヤクルトスワローズ",
-      "teamAbbr": "S",
-      "league": "central",
-      "games": 105,
-      "wins": 48,
-      "losses": 55,
-      "ties": 2,
-      "pct": ".466",
-      "gb": "10"
+      "losses": 56,
+      "ties": 3,
+      "pct": ".461",
+      "gb": "10.5"
     },
     {
       "rank": 5,
