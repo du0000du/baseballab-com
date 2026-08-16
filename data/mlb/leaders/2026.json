@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-16T14:14:51Z",
+  "fetched_at": "2026-08-16T17:14:02Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -105,24 +105,24 @@
       },
       {
         "rank": 5,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
-        "value": ".308"
-      },
-      {
-        "rank": 6,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
         "value": ".307"
       },
       {
+        "rank": 6,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
+        "value": ".306"
+      },
+      {
         "rank": 7,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".303"
+        "value": ".304"
       },
       {
         "rank": 8,
