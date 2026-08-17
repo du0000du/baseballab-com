@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T02:12:23Z",
+  "fetchedAt": "2026-08-17T09:39:43Z",
   "season": "2026",
   "asOfDate": "2026-08-17",
   "teams": [
@@ -464,6 +464,16 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-08-16",
+          "opponent": "Seattle Mariners",
+          "opponentAbbr": "SEA",
+          "home": true,
+          "score": 2,
+          "opponentScore": 3,
+          "result": "L",
+          "venue": "Daikin Park"
+        },
+        {
           "date": "2026-08-15",
           "opponent": "Seattle Mariners",
           "opponentAbbr": "SEA",
@@ -482,16 +492,6 @@
           "opponentScore": 7,
           "result": "W",
           "venue": "Daikin Park"
-        },
-        {
-          "date": "2026-08-12",
-          "opponent": "San Francisco Giants",
-          "opponentAbbr": "SF",
-          "home": false,
-          "score": 2,
-          "opponentScore": 1,
-          "result": "W",
-          "venue": "Oracle Park"
         }
       ]
     },
@@ -546,6 +546,16 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-08-16",
+          "opponent": "Houston Astros",
+          "opponentAbbr": "HOU",
+          "home": false,
+          "score": 3,
+          "opponentScore": 2,
+          "result": "W",
+          "venue": "Daikin Park"
+        },
+        {
           "date": "2026-08-15",
           "opponent": "Houston Astros",
           "opponentAbbr": "HOU",
@@ -564,16 +574,6 @@
           "opponentScore": 10,
           "result": "L",
           "venue": "Daikin Park"
-        },
-        {
-          "date": "2026-08-13",
-          "opponent": "New York Yankees",
-          "opponentAbbr": "NYY",
-          "home": false,
-          "score": 1,
-          "opponentScore": 0,
-          "result": "W",
-          "venue": "Yankee Stadium"
         }
       ]
     },
