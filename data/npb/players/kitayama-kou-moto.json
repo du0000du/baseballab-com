@@ -7,9 +7,9 @@
   "teamName": "北海道日本ハムファイターズ",
   "league": "pacific",
   "group": "pitching",
-  "qualified": true,
+  "qualified": false,
   "season": "2026",
-  "rank": 1,
+  "rank": null,
   "stats": {
     "era": 2.2,
     "games": 18,
@@ -36,8 +36,8 @@
     "er": 27,
     "whip": 1.02
   },
-  "asOf": "2026-08-15",
-  "fetchedAt": "2026-08-16T17:12:37Z",
+  "asOf": "2026-08-16",
+  "fetchedAt": "2026-08-17T02:10:59Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/pit_p.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/idp1_f.html"
 }
