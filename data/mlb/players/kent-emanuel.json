@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 592288,
+    "fullName": "Kent Emanuel",
+    "link": "/api/v1/people/592288",
+    "firstName": "Kent",
+    "lastName": "Emanuel",
+    "primaryNumber": "67",
+    "birthDate": "1992-06-04",
+    "currentAge": 34,
+    "birthCity": "Woodstock",
+    "birthStateProvince": "GA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Kent",
+    "useLastName": "Emanuel",
+    "middleName": "Jeffrey",
+    "boxscoreName": "Emanuel",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2013,
+    "mlbDebutDate": "2021-04-24",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Kent Emanuel",
+    "nameSlug": "kent-emanuel-592288",
+    "firstLastName": "Kent Emanuel",
+    "lastFirstName": "Emanuel, Kent",
+    "lastInitName": "Emanuel, K",
+    "initLastName": "K Emanuel",
+    "fullFMLName": "Kent Jeffrey Emanuel",
+    "fullLFMName": "Emanuel, Kent Jeffrey",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 1,
+            "gamesStarted": 1,
+            "groundOuts": 4,
+            "airOuts": 6,
+            "runs": 2,
+            "doubles": 2,
+            "triples": 1,
+            "homeRuns": 0,
+            "strikeOuts": 4,
+            "baseOnBalls": 3,
+            "intentionalWalks": 0,
+            "hits": 5,
+            "hitByPitch": 1,
+            "avg": ".263",
+            "atBats": 19,
+            "obp": ".391",
+            "slg": ".474",
+            "ops": ".865",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 96,
+            "era": "3.60",
+            "inningsPitched": "5.0",
+            "wins": 0,
+            "losses": 1,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 2,
+            "whip": "1.60",
+            "battersFaced": 23,
+            "outs": 15,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 60,
+            "strikePercentage": ".630",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 9,
+            "groundOutsToAirouts": "0.67",
+            "winPercentage": ".000",
+            "pitchesPerInning": "19.20",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "1.33",
+            "strikeoutsPer9Inn": "7.20",
+            "walksPer9Inn": "5.40",
+            "hitsPer9Inn": "9.00",
+            "runsScoredPer9": "3.60",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 113,
+            "name": "Cincinnati Reds",
+            "link": "/api/v1/teams/113"
+          },
+          "player": {
+            "id": 592288,
+            "fullName": "Kent Emanuel",
+            "link": "/api/v1/people/592288"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
