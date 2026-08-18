@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-18T02:08:38Z",
+  "fetched_at": "2026-08-18T09:31:35Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -47,31 +47,31 @@
       },
       {
         "rank": 7,
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
+        "value": 30
+      },
+      {
+        "rank": 7,
         "playerId": 695578,
         "player": "James Wood",
         "team": "WSH",
         "value": 30
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 682928,
         "player": "CJ Abrams",
         "team": "WSH",
         "value": 29
       },
       {
-        "rank": 8,
-        "playerId": 691718,
-        "player": "Pete Crow-Armstrong",
-        "team": "CHC",
+        "rank": 9,
+        "playerId": 660271,
+        "player": "Shohei Ohtani",
+        "team": "LAD",
         "value": 29
-      },
-      {
-        "rank": 10,
-        "playerId": 624413,
-        "player": "Pete Alonso",
-        "team": "BAL",
-        "value": 28
       }
     ],
     "avg": [
@@ -129,14 +129,14 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".298"
+        "value": ".302"
       },
       {
         "rank": 9,
-        "playerId": 664983,
-        "player": "Jake McCarthy",
-        "team": "COL",
-        "value": ".294"
+        "playerId": 660271,
+        "player": "Shohei Ohtani",
+        "team": "LAD",
+        "value": ".295"
       },
       {
         "rank": 10,
@@ -198,23 +198,23 @@
       },
       {
         "rank": 8,
+        "playerId": 681624,
+        "player": "Andy Pages",
+        "team": "LAD",
+        "value": 80
+      },
+      {
+        "rank": 9,
         "playerId": 691406,
         "player": "Junior Caminero",
         "team": "TB",
         "value": 79
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 671277,
         "player": "Luis García Jr.",
         "team": "NYY",
-        "value": 79
-      },
-      {
-        "rank": 8,
-        "playerId": 664040,
-        "player": "Brandon Lowe",
-        "team": "PIT",
         "value": 79
       }
     ],
