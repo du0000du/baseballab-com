@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-19T14:24:48Z",
+  "fetched_at": "2026-08-19T17:20:44Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -98,24 +98,24 @@
       },
       {
         "rank": 4,
-        "playerId": 693304,
-        "player": "Nick Gonzales",
-        "team": "PIT",
-        "value": ".308"
-      },
-      {
-        "rank": 5,
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
         "value": ".308"
       },
       {
-        "rank": 5,
+        "rank": 4,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
         "value": ".308"
+      },
+      {
+        "rank": 6,
+        "playerId": 693304,
+        "player": "Nick Gonzales",
+        "team": "PIT",
+        "value": ".307"
       },
       {
         "rank": 7,
@@ -487,11 +487,11 @@
         "value": 167
       },
       {
-        "rank": 8,
+        "rank": 7,
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
-        "value": 166
+        "value": 167
       },
       {
         "rank": 9,
