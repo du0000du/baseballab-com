@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-08-19T09:31:15Z",
+  "fetchedAt": "2026-08-19T14:23:08Z",
   "central": [
     {
       "rank": 1,
@@ -170,10 +170,10 @@
       "teamAbbr": "T",
       "league": "central",
       "games": 108,
-      "wins": 60,
+      "wins": 61,
       "losses": 46,
-      "ties": 2,
-      "pct": ".566",
+      "ties": 1,
+      "pct": ".570",
       "gb": "--"
     },
     {
@@ -187,7 +187,7 @@
       "losses": 50,
       "ties": 2,
       "pct": ".532",
-      "gb": "3.5"
+      "gb": "4"
     },
     {
       "rank": 3,
@@ -200,7 +200,7 @@
       "losses": 56,
       "ties": 3,
       "pct": ".471",
-      "gb": "10"
+      "gb": "10.5"
     },
     {
       "rank": 4,
@@ -210,10 +210,10 @@
       "league": "central",
       "games": 107,
       "wins": 49,
-      "losses": 56,
-      "ties": 2,
-      "pct": ".466",
-      "gb": "10.5"
+      "losses": 57,
+      "ties": 1,
+      "pct": ".462",
+      "gb": "11.5"
     },
     {
       "rank": 5,
@@ -226,7 +226,7 @@
       "losses": 58,
       "ties": 4,
       "pct": ".420",
-      "gb": "15"
+      "gb": "15.5"
     },
     {
       "rank": 6,
@@ -239,7 +239,7 @@
       "losses": 64,
       "ties": 1,
       "pct": ".418",
-      "gb": "16"
+      "gb": "16.5"
     }
   ],
   "estimatedPacific": [
@@ -303,10 +303,10 @@
       "league": "pacific",
       "games": 106,
       "wins": 48,
-      "losses": 54,
-      "ties": 4,
-      "pct": ".470",
-      "gb": "17"
+      "losses": 55,
+      "ties": 3,
+      "pct": ".466",
+      "gb": "17.5"
     },
     {
       "rank": 6,
@@ -315,11 +315,11 @@
       "teamAbbr": "E",
       "league": "pacific",
       "games": 107,
-      "wins": 42,
+      "wins": 43,
       "losses": 63,
-      "ties": 2,
-      "pct": ".400",
-      "gb": "24.5"
+      "ties": 1,
+      "pct": ".405",
+      "gb": "24"
     }
   ]
 }
