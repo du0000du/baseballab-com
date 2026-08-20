@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 663947,
+    "fullName": "Tyler Holton",
+    "link": "/api/v1/people/663947",
+    "firstName": "Weston",
+    "lastName": "Holton",
+    "primaryNumber": "87",
+    "birthDate": "1996-06-13",
+    "currentAge": 30,
+    "birthCity": "Tallahassee",
+    "birthStateProvince": "FL",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Tyler",
+    "useLastName": "Holton",
+    "middleName": "Tyler",
+    "boxscoreName": "Holton",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "mlbDebutDate": "2022-04-28",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Tyler Holton",
+    "nameSlug": "tyler-holton-663947",
+    "firstLastName": "Tyler Holton",
+    "lastFirstName": "Holton, Tyler",
+    "lastInitName": "Holton, T",
+    "initLastName": "T Holton",
+    "fullFMLName": "Weston Tyler Holton",
+    "fullLFMName": "Holton, Weston Tyler",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 54,
+            "gamesStarted": 3,
+            "groundOuts": 74,
+            "airOuts": 47,
+            "runs": 25,
+            "doubles": 10,
+            "triples": 1,
+            "homeRuns": 7,
+            "strikeOuts": 47,
+            "baseOnBalls": 14,
+            "intentionalWalks": 0,
+            "hits": 60,
+            "hitByPitch": 4,
+            "avg": ".264",
+            "atBats": 227,
+            "obp": ".318",
+            "slg": ".410",
+            "ops": ".728",
+            "caughtStealing": 2,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".000",
+            "caughtStealingPercentage": "1.000",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 926,
+            "era": "3.07",
+            "inningsPitched": "58.2",
+            "wins": 1,
+            "losses": 5,
+            "saves": 2,
+            "saveOpportunities": 4,
+            "holds": 13,
+            "blownSaves": 2,
+            "earnedRuns": 20,
+            "whip": "1.26",
+            "battersFaced": 246,
+            "outs": 176,
+            "gamesPitched": 54,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 597,
+            "strikePercentage": ".640",
+            "hitBatsmen": 4,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 1,
+            "totalBases": 93,
+            "groundOutsToAirouts": "1.57",
+            "winPercentage": ".167",
+            "pitchesPerInning": "15.78",
+            "gamesFinished": 9,
+            "strikeoutWalkRatio": "3.36",
+            "strikeoutsPer9Inn": "7.21",
+            "walksPer9Inn": "2.15",
+            "hitsPer9Inn": "9.20",
+            "runsScoredPer9": "3.84",
+            "homeRunsPer9": "1.07",
+            "inheritedRunners": 25,
+            "inheritedRunnersScored": 5,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          },
+          "player": {
+            "id": 663947,
+            "fullName": "Tyler Holton",
+            "link": "/api/v1/people/663947"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

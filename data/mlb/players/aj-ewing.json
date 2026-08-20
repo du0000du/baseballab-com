@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 805999,
+    "fullName": "A.J. Ewing",
+    "link": "/api/v1/people/805999",
+    "firstName": "Andrew",
+    "lastName": "Ewing",
+    "primaryNumber": "9",
+    "birthDate": "2004-08-10",
+    "currentAge": 22,
+    "birthCity": "Kettering",
+    "birthStateProvince": "OH",
+    "birthCountry": "USA",
+    "height": "5' 10\"",
+    "weight": 160,
+    "active": true,
+    "primaryPosition": {
+      "code": "8",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "CF"
+    },
+    "useName": "A.J.",
+    "useLastName": "Ewing",
+    "middleName": "Joseph",
+    "boxscoreName": "Ewing",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2023,
+    "mlbDebutDate": "2026-05-12",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "A.J. Ewing",
+    "nameSlug": "a-j-ewing-805999",
+    "firstLastName": "A.J. Ewing",
+    "lastFirstName": "Ewing, A.J.",
+    "lastInitName": "Ewing, A",
+    "initLastName": "A Ewing",
+    "fullFMLName": "Andrew Joseph Ewing",
+    "fullLFMName": "Ewing, Andrew Joseph",
+    "strikeZoneTop": 3.14,
+    "strikeZoneBottom": 1.58
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 21,
+            "gamesPlayed": 87,
+            "groundOuts": 68,
+            "airOuts": 80,
+            "runs": 40,
+            "doubles": 16,
+            "triples": 1,
+            "homeRuns": 7,
+            "strikeOuts": 95,
+            "baseOnBalls": 35,
+            "intentionalWalks": 0,
+            "hits": 78,
+            "hitByPitch": 2,
+            "avg": ".248",
+            "atBats": 315,
+            "obp": ".324",
+            "slg": ".371",
+            "ops": ".695",
+            "caughtStealing": 7,
+            "stolenBases": 17,
+            "stolenBasePercentage": ".708",
+            "caughtStealingPercentage": ".292",
+            "groundIntoDoublePlay": 1,
+            "numberOfPitches": 1448,
+            "plateAppearances": 358,
+            "totalBases": 117,
+            "rbi": 28,
+            "leftOnBase": 112,
+            "sacBunts": 3,
+            "sacFlies": 3,
+            "babip": ".329",
+            "groundOutsToAirouts": "0.85",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "45.00"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121"
+          },
+          "player": {
+            "id": 805999,
+            "fullName": "A.J. Ewing",
+            "link": "/api/v1/people/805999"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
