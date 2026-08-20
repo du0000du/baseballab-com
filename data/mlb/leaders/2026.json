@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-20T14:27:10Z",
+  "fetched_at": "2026-08-20T17:22:27Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -169,11 +169,11 @@
         "value": 91
       },
       {
-        "rank": 4,
+        "rank": 3,
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
-        "value": 90
+        "value": 91
       },
       {
         "rank": 5,
@@ -456,7 +456,7 @@
         "playerId": 668909,
         "player": "Gavin Williams",
         "team": "CLE",
-        "value": 190
+        "value": 192
       },
       {
         "rank": 4,
