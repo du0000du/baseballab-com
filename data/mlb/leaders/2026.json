@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-20T02:09:45Z",
+  "fetched_at": "2026-08-20T09:33:15Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -87,7 +87,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".318"
+        "value": ".317"
       },
       {
         "rank": 3,
@@ -133,16 +133,16 @@
       },
       {
         "rank": 9,
-        "playerId": 808982,
-        "player": "Jung Hoo Lee",
-        "team": "SF",
-        "value": ".294"
+        "playerId": 664983,
+        "player": "Jake McCarthy",
+        "team": "COL",
+        "value": ".295"
       },
       {
         "rank": 10,
-        "playerId": 673962,
-        "player": "Josh Jung",
-        "team": "TEX",
+        "playerId": 808982,
+        "player": "Jung Hoo Lee",
+        "team": "SF",
         "value": ".294"
       }
     ],
