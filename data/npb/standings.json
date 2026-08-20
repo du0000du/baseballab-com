@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-08-20T09:31:51Z",
+  "fetchedAt": "2026-08-20T14:25:44Z",
   "central": [
     {
       "rank": 1,
@@ -170,10 +170,10 @@
       "teamAbbr": "T",
       "league": "central",
       "games": 109,
-      "wins": 62,
-      "losses": 46,
+      "wins": 61,
+      "losses": 47,
       "ties": 1,
-      "pct": ".574",
+      "pct": ".564",
       "gb": "--"
     },
     {
@@ -187,7 +187,7 @@
       "losses": 50,
       "ties": 2,
       "pct": ".537",
-      "gb": "4"
+      "gb": "3"
     },
     {
       "rank": 3,
@@ -200,7 +200,7 @@
       "losses": 57,
       "ties": 3,
       "pct": ".467",
-      "gb": "11.5"
+      "gb": "10.5"
     },
     {
       "rank": 4,
@@ -209,36 +209,36 @@
       "teamAbbr": "S",
       "league": "central",
       "games": 108,
-      "wins": 49,
-      "losses": 58,
+      "wins": 50,
+      "losses": 57,
       "ties": 1,
-      "pct": ".457",
-      "gb": "12.5"
+      "pct": ".467",
+      "gb": "10.5"
     },
     {
       "rank": 5,
-      "teamSlug": "chunichi-dragons",
-      "teamName": "中日ドラゴンズ",
-      "teamAbbr": "D",
-      "league": "central",
-      "games": 112,
-      "wins": 47,
-      "losses": 64,
-      "ties": 1,
-      "pct": ".423",
-      "gb": "16.5"
-    },
-    {
-      "rank": 6,
       "teamSlug": "hiroshima-carp",
       "teamName": "広島東洋カープ",
       "teamAbbr": "C",
       "league": "central",
       "games": 105,
-      "wins": 42,
-      "losses": 59,
+      "wins": 43,
+      "losses": 58,
       "ties": 4,
-      "pct": ".415",
+      "pct": ".425",
+      "gb": "14.5"
+    },
+    {
+      "rank": 6,
+      "teamSlug": "chunichi-dragons",
+      "teamName": "中日ドラゴンズ",
+      "teamAbbr": "D",
+      "league": "central",
+      "games": 112,
+      "wins": 46,
+      "losses": 65,
+      "ties": 1,
+      "pct": ".414",
       "gb": "16.5"
     }
   ],
@@ -264,10 +264,10 @@
       "league": "pacific",
       "games": 113,
       "wins": 62,
-      "losses": 47,
-      "ties": 4,
-      "pct": ".568",
-      "gb": "6.5"
+      "losses": 48,
+      "ties": 3,
+      "pct": ".563",
+      "gb": "7"
     },
     {
       "rank": 3,
@@ -289,11 +289,11 @@
       "teamAbbr": "B",
       "league": "pacific",
       "games": 112,
-      "wins": 53,
+      "wins": 54,
       "losses": 56,
-      "ties": 3,
-      "pct": ".486",
-      "gb": "15.5"
+      "ties": 2,
+      "pct": ".490",
+      "gb": "15"
     },
     {
       "rank": 5,
