@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-21T09:34:26Z",
+  "fetchedAt": "2026-08-21T14:25:40Z",
   "season": "2026",
   "asOfDate": "2026-08-21",
   "teams": [
@@ -15,9 +15,9 @@
           "opponent": "横浜DeNAベイスターズ",
           "opponentSlug": "yokohama-dena",
           "home": true,
-          "score": 0,
+          "score": 4,
           "opponentScore": 1,
-          "result": "L",
+          "result": "W",
           "stadium": "阪神甲子園球場"
         },
         {
@@ -55,8 +55,8 @@
           "opponentSlug": "hanshin-tigers",
           "home": false,
           "score": 1,
-          "opponentScore": 0,
-          "result": "W",
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "阪神甲子園球場"
         },
         {
@@ -93,9 +93,9 @@
           "opponent": "広島東洋カープ",
           "opponentSlug": "hiroshima-carp",
           "home": false,
-          "score": 0,
+          "score": 2,
           "opponentScore": 0,
-          "result": "T",
+          "result": "W",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
         {
@@ -172,8 +172,8 @@
           "opponentSlug": "yomiuri-giants",
           "home": true,
           "score": 0,
-          "opponentScore": 0,
-          "result": "T",
+          "opponentScore": 2,
+          "result": "L",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
         },
         {
@@ -327,9 +327,9 @@
           "opponent": "千葉ロッテマリーンズ",
           "opponentSlug": "lotte-marines",
           "home": true,
-          "score": 1,
-          "opponentScore": 0,
-          "result": "W",
+          "score": 3,
+          "opponentScore": 4,
+          "result": "L",
           "stadium": "エスコンフィールドHOKKAIDO"
         },
         {
@@ -366,9 +366,9 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": false,
-          "score": 0,
-          "opponentScore": 0,
-          "result": "T",
+          "score": 4,
+          "opponentScore": 6,
+          "result": "L",
           "stadium": "ベルーナドーム"
         },
         {
@@ -405,9 +405,9 @@
           "opponent": "東北楽天ゴールデンイーグルス",
           "opponentSlug": "rakuten-eagles",
           "home": true,
-          "score": 0,
-          "opponentScore": 0,
-          "result": "T",
+          "score": 6,
+          "opponentScore": 4,
+          "result": "W",
           "stadium": "ベルーナドーム"
         },
         {
@@ -444,9 +444,9 @@
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
           "home": false,
-          "score": 0,
-          "opponentScore": 1,
-          "result": "L",
+          "score": 4,
+          "opponentScore": 3,
+          "result": "W",
           "stadium": "エスコンフィールドHOKKAIDO"
         },
         {
