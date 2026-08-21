@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-20T17:22:27Z",
+  "fetched_at": "2026-08-21T02:16:25Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -87,7 +87,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".317"
+        "value": ".319"
       },
       {
         "rank": 3,
@@ -112,17 +112,17 @@
       },
       {
         "rank": 6,
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".308"
+      },
+      {
+        "rank": 7,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
         "value": ".307"
-      },
-      {
-        "rank": 7,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
-        "value": ".306"
       },
       {
         "rank": 8,
@@ -143,7 +143,7 @@
         "playerId": 808982,
         "player": "Jung Hoo Lee",
         "team": "SF",
-        "value": ".294"
+        "value": ".293"
       }
     ],
     "rbi": [
@@ -152,27 +152,27 @@
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
-        "value": 94
+        "value": 96
       },
       {
         "rank": 2,
-        "playerId": 676475,
-        "player": "Alec Burleson",
-        "team": "STL",
-        "value": 92
-      },
-      {
-        "rank": 3,
-        "playerId": 682928,
-        "player": "CJ Abrams",
-        "team": "WSH",
-        "value": 91
-      },
-      {
-        "rank": 3,
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
+        "value": 94
+      },
+      {
+        "rank": 3,
+        "playerId": 676475,
+        "player": "Alec Burleson",
+        "team": "STL",
+        "value": 93
+      },
+      {
+        "rank": 4,
+        "playerId": 682928,
+        "player": "CJ Abrams",
+        "team": "WSH",
         "value": 91
       },
       {
@@ -201,20 +201,20 @@
         "playerId": 691406,
         "player": "Junior Caminero",
         "team": "TB",
+        "value": 81
+      },
+      {
+        "rank": 9,
+        "playerId": 671277,
+        "player": "Luis García Jr.",
+        "team": "NYY",
         "value": 80
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 664040,
         "player": "Brandon Lowe",
         "team": "PIT",
-        "value": 80
-      },
-      {
-        "rank": 8,
-        "playerId": 660271,
-        "player": "Shohei Ohtani",
-        "team": "LAD",
         "value": 80
       }
     ],
@@ -452,11 +452,11 @@
         "value": 201
       },
       {
-        "rank": 3,
+        "rank": 2,
         "playerId": 668909,
         "player": "Gavin Williams",
         "team": "CLE",
-        "value": 192
+        "value": 201
       },
       {
         "rank": 4,
@@ -521,20 +521,20 @@
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
-        "value": 32
-      },
-      {
-        "rank": 3,
-        "playerId": 695243,
-        "player": "Mason Miller",
-        "team": "SD",
-        "value": 31
+        "value": 33
       },
       {
         "rank": 3,
         "playerId": 671922,
         "player": "Cade Smith",
         "team": "CLE",
+        "value": 32
+      },
+      {
+        "rank": 4,
+        "playerId": 695243,
+        "player": "Mason Miller",
+        "team": "SD",
         "value": 31
       },
       {
@@ -570,7 +570,7 @@
         "playerId": 628452,
         "player": "Raisel Iglesias",
         "team": "ATL",
-        "value": 25
+        "value": 26
       },
       {
         "rank": 10,
