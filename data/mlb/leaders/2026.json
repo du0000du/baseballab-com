@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-21T17:22:18Z",
+  "fetched_at": "2026-08-22T02:07:58Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -54,6 +54,13 @@
       },
       {
         "rank": 8,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "BAL",
+        "value": 30
+      },
+      {
+        "rank": 8,
         "playerId": 660271,
         "player": "Shohei Ohtani",
         "team": "LAD",
@@ -65,13 +72,6 @@
         "player": "James Wood",
         "team": "WSH",
         "value": 30
-      },
-      {
-        "rank": 10,
-        "playerId": 682928,
-        "player": "CJ Abrams",
-        "team": "WSH",
-        "value": 29
       }
     ],
     "avg": [
@@ -80,7 +80,7 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "PHI",
-        "value": ".319"
+        "value": ".322"
       },
       {
         "rank": 2,
@@ -98,31 +98,31 @@
       },
       {
         "rank": 4,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
+        "playerId": 672515,
+        "player": "Gabriel Moreno",
+        "team": "AZ",
         "value": ".309"
       },
       {
         "rank": 5,
-        "playerId": 672640,
-        "player": "Otto Lopez",
-        "team": "MIA",
-        "value": ".308"
-      },
-      {
-        "rank": 6,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
+        "playerId": 802415,
+        "player": "Chandler Simpson",
         "team": "TB",
         "value": ".308"
       },
       {
-        "rank": 7,
-        "playerId": 672515,
-        "player": "Gabriel Moreno",
-        "team": "AZ",
+        "rank": 6,
+        "playerId": 672640,
+        "player": "Otto Lopez",
+        "team": "MIA",
         "value": ".307"
+      },
+      {
+        "rank": 7,
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".305"
       },
       {
         "rank": 8,
@@ -136,13 +136,13 @@
         "playerId": 664983,
         "player": "Jake McCarthy",
         "team": "COL",
-        "value": ".295"
+        "value": ".293"
       },
       {
         "rank": 10,
-        "playerId": 808982,
-        "player": "Jung Hoo Lee",
-        "team": "SF",
+        "playerId": 671739,
+        "player": "Michael Harris II",
+        "team": "ATL",
         "value": ".293"
       }
     ],
@@ -155,11 +155,11 @@
         "value": 96
       },
       {
-        "rank": 2,
+        "rank": 1,
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
-        "value": 94
+        "value": 96
       },
       {
         "rank": 3,
@@ -180,17 +180,17 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": 88
+        "value": 89
       },
       {
         "rank": 6,
         "playerId": 624413,
         "player": "Pete Alonso",
         "team": "BAL",
-        "value": 82
+        "value": 85
       },
       {
-        "rank": 6,
+        "rank": 7,
         "playerId": 693307,
         "player": "Dillon Dingler",
         "team": "DET",
@@ -224,7 +224,7 @@
         "playerId": 683083,
         "player": "Nasim Nuñez",
         "team": "WSH",
-        "value": 40
+        "value": 42
       },
       {
         "rank": 2,
@@ -284,9 +284,9 @@
       },
       {
         "rank": 10,
-        "playerId": 647304,
-        "player": "Josh Naylor",
-        "team": "SEA",
+        "playerId": 672640,
+        "player": "Otto Lopez",
+        "team": "MIA",
         "value": 25
       }
     ]
@@ -298,21 +298,21 @@
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
-        "value": "1.75"
+        "value": "1.68"
       },
       {
         "rank": 2,
-        "playerId": 519242,
-        "player": "Chris Sale",
-        "team": "ATL",
+        "playerId": 693645,
+        "player": "Cam Schlittler",
+        "team": "NYY",
         "value": "2.16"
       },
       {
         "rank": 3,
-        "playerId": 693645,
-        "player": "Cam Schlittler",
-        "team": "NYY",
-        "value": "2.19"
+        "playerId": 519242,
+        "player": "Chris Sale",
+        "team": "ATL",
+        "value": "2.20"
       },
       {
         "rank": 4,
@@ -351,33 +351,33 @@
       },
       {
         "rank": 9,
-        "playerId": 543243,
-        "player": "Sonny Gray",
-        "team": "BOS",
-        "value": "2.65"
-      },
-      {
-        "rank": 10,
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
-        "value": "2.71"
+        "value": "2.69"
+      },
+      {
+        "rank": 10,
+        "playerId": 543243,
+        "player": "Sonny Gray",
+        "team": "BOS",
+        "value": "2.79"
       }
     ],
     "wins": [
+      {
+        "rank": 1,
+        "playerId": 543243,
+        "player": "Sonny Gray",
+        "team": "BOS",
+        "value": 16
+      },
       {
         "rank": 1,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
         "value": 16
-      },
-      {
-        "rank": 2,
-        "playerId": 543243,
-        "player": "Sonny Gray",
-        "team": "BOS",
-        "value": 15
       },
       {
         "rank": 3,
@@ -416,23 +416,23 @@
       },
       {
         "rank": 5,
+        "playerId": 694819,
+        "player": "Jacob Misiorowski",
+        "team": "MIL",
+        "value": 13
+      },
+      {
+        "rank": 5,
         "playerId": 656876,
         "player": "Drew Rasmussen",
         "team": "TB",
         "value": 13
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 607259,
         "player": "Nick Martinez",
         "team": "TB",
-        "value": 12
-      },
-      {
-        "rank": 9,
-        "playerId": 694819,
-        "player": "Jacob Misiorowski",
-        "team": "MIL",
         "value": 12
       }
     ],
@@ -442,7 +442,7 @@
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
-        "value": 210
+        "value": 216
       },
       {
         "rank": 2,
@@ -460,51 +460,51 @@
       },
       {
         "rank": 4,
-        "playerId": 693645,
-        "player": "Cam Schlittler",
-        "team": "NYY",
-        "value": 189
+        "playerId": 666200,
+        "player": "Jesús Luzardo",
+        "team": "PHI",
+        "value": 194
       },
       {
         "rank": 5,
+        "playerId": 693645,
+        "player": "Cam Schlittler",
+        "team": "NYY",
+        "value": 193
+      },
+      {
+        "rank": 6,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
         "value": 187
       },
       {
-        "rank": 6,
-        "playerId": 666200,
-        "player": "Jesús Luzardo",
-        "team": "PHI",
-        "value": 185
+        "rank": 7,
+        "playerId": 672282,
+        "player": "Reid Detmers",
+        "team": "LAA",
+        "value": 172
       },
       {
-        "rank": 7,
+        "rank": 8,
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
         "value": 171
       },
       {
-        "rank": 8,
-        "playerId": 672282,
-        "player": "Reid Detmers",
-        "team": "LAA",
-        "value": 167
+        "rank": 9,
+        "playerId": 519242,
+        "player": "Chris Sale",
+        "team": "ATL",
+        "value": 166
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 676917,
         "player": "Cade Cavalli",
         "team": "WSH",
-        "value": 162
-      },
-      {
-        "rank": 9,
-        "playerId": 690997,
-        "player": "Nolan McLean",
-        "team": "NYM",
         "value": 162
       }
     ],
@@ -542,7 +542,14 @@
         "playerId": 670280,
         "player": "David Bednar",
         "team": "NYY",
-        "value": 29
+        "value": 30
+      },
+      {
+        "rank": 6,
+        "playerId": 547973,
+        "player": "Aroldis Chapman",
+        "team": "BOS",
+        "value": 28
       },
       {
         "rank": 6,
@@ -557,13 +564,6 @@
         "player": "Louis Varland",
         "team": "TOR",
         "value": 28
-      },
-      {
-        "rank": 8,
-        "playerId": 547973,
-        "player": "Aroldis Chapman",
-        "team": "BOS",
-        "value": 27
       },
       {
         "rank": 9,
