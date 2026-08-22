@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-22T09:25:11Z",
+  "fetchedAt": "2026-08-22T14:12:16Z",
   "season": "2026",
   "asOfDate": "2026-08-22",
   "teams": [
@@ -367,8 +367,8 @@
           "opponentSlug": "seibu-lions",
           "home": false,
           "score": 0,
-          "opponentScore": 0,
-          "result": "T",
+          "opponentScore": 2,
+          "result": "L",
           "stadium": "ベルーナドーム"
         },
         {
@@ -405,9 +405,9 @@
           "opponent": "東北楽天ゴールデンイーグルス",
           "opponentSlug": "rakuten-eagles",
           "home": true,
-          "score": 0,
+          "score": 2,
           "opponentScore": 0,
-          "result": "T",
+          "result": "W",
           "stadium": "ベルーナドーム"
         },
         {

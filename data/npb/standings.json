@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-08-22T09:24:22Z",
+  "fetchedAt": "2026-08-22T14:11:33Z",
   "central": [
     {
       "rank": 1,
@@ -263,11 +263,11 @@
       "teamAbbr": "L",
       "league": "pacific",
       "games": 115,
-      "wins": 63,
+      "wins": 64,
       "losses": 48,
-      "ties": 4,
-      "pct": ".567",
-      "gb": "7"
+      "ties": 3,
+      "pct": ".571",
+      "gb": "6.5"
     },
     {
       "rank": 3,
@@ -316,10 +316,10 @@
       "league": "pacific",
       "games": 110,
       "wins": 43,
-      "losses": 65,
-      "ties": 2,
-      "pct": ".398",
-      "gb": "25.5"
+      "losses": 66,
+      "ties": 1,
+      "pct": ".394",
+      "gb": "26"
     }
   ]
 }
