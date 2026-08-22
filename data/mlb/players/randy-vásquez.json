@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 681190,
+    "fullName": "Randy Vásquez",
+    "link": "/api/v1/people/681190",
+    "firstName": "Randy",
+    "lastName": "Vásquez",
+    "primaryNumber": "98",
+    "birthDate": "1998-11-03",
+    "currentAge": 27,
+    "birthCity": "Navarette",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 0\"",
+    "weight": 165,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Randy",
+    "useLastName": "Vásquez",
+    "middleName": "Marcelino",
+    "boxscoreName": "Vásquez, R",
+    "gender": "M",
+    "nameMatrilineal": "Martinez",
+    "isPlayer": true,
+    "isVerified": false,
+    "mlbDebutDate": "2023-05-26",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Randy Vásquez",
+    "nameSlug": "randy-vasquez-681190",
+    "firstLastName": "Randy Vásquez",
+    "lastFirstName": "Vásquez, Randy",
+    "lastInitName": "Vásquez, R",
+    "initLastName": "R Vásquez",
+    "fullFMLName": "Randy Marcelino Vásquez",
+    "fullLFMName": "Vásquez, Randy Marcelino",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 25,
+            "gamesStarted": 20,
+            "groundOuts": 113,
+            "airOuts": 151,
+            "runs": 59,
+            "doubles": 26,
+            "triples": 4,
+            "homeRuns": 15,
+            "strikeOuts": 74,
+            "baseOnBalls": 32,
+            "intentionalWalks": 1,
+            "hits": 123,
+            "hitByPitch": 5,
+            "avg": ".271",
+            "atBats": 454,
+            "obp": ".322",
+            "slg": ".445",
+            "ops": ".767",
+            "caughtStealing": 4,
+            "stolenBases": 12,
+            "stolenBasePercentage": ".750",
+            "caughtStealingPercentage": ".250",
+            "groundIntoDoublePlay": 11,
+            "numberOfPitches": 1903,
+            "era": "4.19",
+            "inningsPitched": "118.0",
+            "wins": 9,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 1,
+            "blownSaves": 0,
+            "earnedRuns": 55,
+            "whip": "1.31",
+            "battersFaced": 498,
+            "outs": 354,
+            "gamesPitched": 25,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1240,
+            "strikePercentage": ".650",
+            "hitBatsmen": 5,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 202,
+            "groundOutsToAirouts": "0.75",
+            "winPercentage": ".600",
+            "pitchesPerInning": "16.13",
+            "gamesFinished": 2,
+            "strikeoutWalkRatio": "2.31",
+            "strikeoutsPer9Inn": "5.64",
+            "walksPer9Inn": "2.44",
+            "hitsPer9Inn": "9.38",
+            "runsScoredPer9": "4.50",
+            "homeRunsPer9": "1.14",
+            "inheritedRunners": 4,
+            "inheritedRunnersScored": 3,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 135,
+            "name": "San Diego Padres",
+            "link": "/api/v1/teams/135"
+          },
+          "player": {
+            "id": 681190,
+            "fullName": "Randy Vásquez",
+            "link": "/api/v1/people/681190"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

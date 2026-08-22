@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-22T02:07:58Z",
+  "fetched_at": "2026-08-22T09:25:50Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -50,7 +50,7 @@
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 31
+        "value": 32
       },
       {
         "rank": 8,
@@ -87,21 +87,21 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".319"
+        "value": ".321"
       },
       {
         "rank": 3,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".310"
+        "value": ".311"
       },
       {
         "rank": 4,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
-        "value": ".309"
+        "value": ".308"
       },
       {
         "rank": 5,
@@ -129,21 +129,21 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".303"
+        "value": ".300"
       },
       {
         "rank": 9,
-        "playerId": 664983,
-        "player": "Jake McCarthy",
-        "team": "COL",
-        "value": ".293"
-      },
-      {
-        "rank": 10,
         "playerId": 671739,
         "player": "Michael Harris II",
         "team": "ATL",
         "value": ".293"
+      },
+      {
+        "rank": 10,
+        "playerId": 664983,
+        "player": "Jake McCarthy",
+        "team": "COL",
+        "value": ".292"
       }
     ],
     "rbi": [
@@ -180,7 +180,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": 89
+        "value": 90
       },
       {
         "rank": 6,
@@ -205,16 +205,16 @@
       },
       {
         "rank": 9,
-        "playerId": 671277,
-        "player": "Luis García Jr.",
-        "team": "NYY",
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
         "value": 80
       },
       {
         "rank": 9,
-        "playerId": 664040,
-        "player": "Brandon Lowe",
-        "team": "PIT",
+        "playerId": 671277,
+        "player": "Luis García Jr.",
+        "team": "NYY",
         "value": 80
       }
     ],
@@ -347,14 +347,14 @@
         "playerId": 808967,
         "player": "Yoshinobu Yamamoto",
         "team": "LAD",
-        "value": "2.60"
+        "value": "2.61"
       },
       {
         "rank": 9,
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
-        "value": "2.69"
+        "value": "2.61"
       },
       {
         "rank": 10,
@@ -429,11 +429,11 @@
         "value": 13
       },
       {
-        "rank": 10,
-        "playerId": 607259,
-        "player": "Nick Martinez",
-        "team": "TB",
-        "value": 12
+        "rank": 5,
+        "playerId": 593958,
+        "player": "Eduardo Rodriguez",
+        "team": "AZ",
+        "value": 13
       }
     ],
     "strikeOuts": [

@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 670167,
+    "fullName": "John Schreiber",
+    "link": "/api/v1/people/670167",
+    "firstName": "John",
+    "lastName": "Schreiber",
+    "primaryNumber": "46",
+    "birthDate": "1994-03-05",
+    "currentAge": 32,
+    "birthCity": "Wyandotte",
+    "birthStateProvince": "MI",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 224,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "John",
+    "useLastName": "Schreiber",
+    "middleName": "Robert",
+    "boxscoreName": "Schreiber",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2016,
+    "pronunciation": "SHRY-ber",
+    "mlbDebutDate": "2019-08-09",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "John Schreiber",
+    "nameSlug": "john-schreiber-670167",
+    "firstLastName": "John Schreiber",
+    "lastFirstName": "Schreiber, John",
+    "lastInitName": "Schreiber, J",
+    "initLastName": "J Schreiber",
+    "fullFMLName": "John Robert Schreiber",
+    "fullLFMName": "Schreiber, John Robert",
+    "strikeZoneTop": 3.299,
+    "strikeZoneBottom": 1.665
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 52,
+            "gamesStarted": 0,
+            "groundOuts": 50,
+            "airOuts": 47,
+            "runs": 23,
+            "doubles": 9,
+            "triples": 0,
+            "homeRuns": 7,
+            "strikeOuts": 34,
+            "baseOnBalls": 22,
+            "intentionalWalks": 3,
+            "hits": 41,
+            "hitByPitch": 1,
+            "avg": ".243",
+            "atBats": 169,
+            "obp": ".330",
+            "slg": ".420",
+            "ops": ".750",
+            "caughtStealing": 1,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 785,
+            "era": "3.86",
+            "inningsPitched": "46.2",
+            "wins": 0,
+            "losses": 3,
+            "saves": 1,
+            "saveOpportunities": 4,
+            "holds": 13,
+            "blownSaves": 3,
+            "earnedRuns": 20,
+            "whip": "1.35",
+            "battersFaced": 195,
+            "outs": 140,
+            "gamesPitched": 52,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 482,
+            "strikePercentage": ".610",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 0,
+            "totalBases": 71,
+            "groundOutsToAirouts": "1.06",
+            "winPercentage": ".000",
+            "pitchesPerInning": "16.82",
+            "gamesFinished": 5,
+            "strikeoutWalkRatio": "1.55",
+            "strikeoutsPer9Inn": "6.56",
+            "walksPer9Inn": "4.24",
+            "hitsPer9Inn": "7.91",
+            "runsScoredPer9": "4.44",
+            "homeRunsPer9": "1.35",
+            "inheritedRunners": 23,
+            "inheritedRunnersScored": 7,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 670167,
+            "fullName": "John Schreiber",
+            "link": "/api/v1/people/670167"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
