@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-23T02:17:05Z",
+  "fetched_at": "2026-08-23T09:26:15Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -112,16 +112,16 @@
       },
       {
         "rank": 6,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
-        "value": ".306"
-      },
-      {
-        "rank": 7,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
+        "value": ".307"
+      },
+      {
+        "rank": 7,
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
         "value": ".306"
       },
       {
@@ -143,7 +143,7 @@
         "playerId": 664983,
         "player": "Jake McCarthy",
         "team": "COL",
-        "value": ".292"
+        "value": ".294"
       }
     ],
     "rbi": [
@@ -524,18 +524,18 @@
         "value": 33
       },
       {
-        "rank": 3,
+        "rank": 2,
         "playerId": 671922,
         "player": "Cade Smith",
         "team": "CLE",
-        "value": 32
+        "value": 33
       },
       {
         "rank": 4,
         "playerId": 695243,
         "player": "Mason Miller",
         "team": "SD",
-        "value": 31
+        "value": 32
       },
       {
         "rank": 5,
