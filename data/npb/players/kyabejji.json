@@ -7,9 +7,9 @@
   "teamName": "読売ジャイアンツ",
   "league": "central",
   "group": "batting",
-  "qualified": true,
+  "qualified": false,
   "season": "2026",
-  "rank": 18,
+  "rank": null,
   "stats": {
     "avg": 0.231,
     "games": 96,
@@ -35,8 +35,8 @@
     "obp": 0.282,
     "ops": 0.673
   },
-  "asOf": "2026-08-22",
-  "fetchedAt": "2026-08-23T17:13:28Z",
+  "asOf": "2026-08-23",
+  "fetchedAt": "2026-08-24T02:13:57Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/bat_c.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/idb1_g.html"
 }
