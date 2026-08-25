@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-25T14:36:33Z",
+  "fetched_at": "2026-08-25T17:25:26Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -94,7 +94,7 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".312"
+        "value": ".310"
       },
       {
         "rank": 4,
