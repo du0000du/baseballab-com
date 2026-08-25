@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-08-24T17:25:03Z",
+  "fetchedAt": "2026-08-25T02:11:08Z",
   "season": "2026",
-  "asOfDate": "2026-08-24",
+  "asOfDate": "2026-08-25",
   "teams": [
     {
       "id": 145,
@@ -95,6 +95,16 @@
       "divisionShort": "AL Central",
       "recentGames": [
         {
+          "date": "2026-08-24",
+          "opponent": "Tampa Bay Rays",
+          "opponentAbbr": "TB",
+          "home": true,
+          "score": 1,
+          "opponentScore": 4,
+          "result": "L",
+          "venue": "Comerica Park"
+        },
+        {
           "date": "2026-08-23",
           "opponent": "Kansas City Royals",
           "opponentAbbr": "KC",
@@ -111,16 +121,6 @@
           "home": false,
           "score": 1,
           "opponentScore": 3,
-          "result": "L",
-          "venue": "Kauffman Stadium"
-        },
-        {
-          "date": "2026-08-21",
-          "opponent": "Kansas City Royals",
-          "opponentAbbr": "KC",
-          "home": false,
-          "score": 2,
-          "opponentScore": 5,
           "result": "L",
           "venue": "Kauffman Stadium"
         }
@@ -259,6 +259,16 @@
       "divisionShort": "AL East",
       "recentGames": [
         {
+          "date": "2026-08-24",
+          "opponent": "Miami Marlins",
+          "opponentAbbr": "MIA",
+          "home": false,
+          "score": 4,
+          "opponentScore": 2,
+          "result": "W",
+          "venue": "loanDepot park"
+        },
+        {
           "date": "2026-08-23",
           "opponent": "San Francisco Giants",
           "opponentAbbr": "SF",
@@ -275,16 +285,6 @@
           "home": true,
           "score": 3,
           "opponentScore": 2,
-          "result": "W",
-          "venue": "Fenway Park"
-        },
-        {
-          "date": "2026-08-21",
-          "opponent": "San Francisco Giants",
-          "opponentAbbr": "SF",
-          "home": true,
-          "score": 6,
-          "opponentScore": 4,
           "result": "W",
           "venue": "Fenway Park"
         }
@@ -341,6 +341,16 @@
       "divisionShort": "AL East",
       "recentGames": [
         {
+          "date": "2026-08-24",
+          "opponent": "Detroit Tigers",
+          "opponentAbbr": "DET",
+          "home": false,
+          "score": 4,
+          "opponentScore": 1,
+          "result": "W",
+          "venue": "Comerica Park"
+        },
+        {
           "date": "2026-08-23",
           "opponent": "Baltimore Orioles",
           "opponentAbbr": "BAL",
@@ -357,16 +367,6 @@
           "home": false,
           "score": 2,
           "opponentScore": 3,
-          "result": "L",
-          "venue": "Oriole Park at Camden Yards"
-        },
-        {
-          "date": "2026-08-21",
-          "opponent": "Baltimore Orioles",
-          "opponentAbbr": "BAL",
-          "home": false,
-          "score": 3,
-          "opponentScore": 5,
           "result": "L",
           "venue": "Oriole Park at Camden Yards"
         }
@@ -874,6 +874,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-08-24",
+          "opponent": "Boston Red Sox",
+          "opponentAbbr": "BOS",
+          "home": true,
+          "score": 2,
+          "opponentScore": 4,
+          "result": "L",
+          "venue": "loanDepot park"
+        },
+        {
           "date": "2026-08-23",
           "opponent": "Washington Nationals",
           "opponentAbbr": "WSH",
@@ -889,16 +899,6 @@
           "opponentAbbr": "WSH",
           "home": true,
           "score": 4,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "loanDepot park"
-        },
-        {
-          "date": "2026-08-21",
-          "opponent": "Washington Nationals",
-          "opponentAbbr": "WSH",
-          "home": true,
-          "score": 3,
           "opponentScore": 2,
           "result": "W",
           "venue": "loanDepot park"
@@ -997,6 +997,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-08-24",
+          "opponent": "Colorado Rockies",
+          "opponentAbbr": "COL",
+          "home": true,
+          "score": 13,
+          "opponentScore": 3,
+          "result": "W",
+          "venue": "Nationals Park"
+        },
+        {
           "date": "2026-08-23",
           "opponent": "Miami Marlins",
           "opponentAbbr": "MIA",
@@ -1013,16 +1023,6 @@
           "home": false,
           "score": 2,
           "opponentScore": 4,
-          "result": "L",
-          "venue": "loanDepot park"
-        },
-        {
-          "date": "2026-08-21",
-          "opponent": "Miami Marlins",
-          "opponentAbbr": "MIA",
-          "home": false,
-          "score": 2,
-          "opponentScore": 3,
           "result": "L",
           "venue": "loanDepot park"
         }
@@ -1079,6 +1079,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-08-24",
+          "opponent": "Washington Nationals",
+          "opponentAbbr": "WSH",
+          "home": false,
+          "score": 3,
+          "opponentScore": 13,
+          "result": "L",
+          "venue": "Nationals Park"
+        },
+        {
           "date": "2026-08-23",
           "opponent": "Cleveland Guardians",
           "opponentAbbr": "CLE",
@@ -1095,16 +1105,6 @@
           "home": true,
           "score": 3,
           "opponentScore": 4,
-          "result": "L",
-          "venue": "Coors Field"
-        },
-        {
-          "date": "2026-08-21",
-          "opponent": "Cleveland Guardians",
-          "opponentAbbr": "CLE",
-          "home": true,
-          "score": 1,
-          "opponentScore": 9,
           "result": "L",
           "venue": "Coors Field"
         }
