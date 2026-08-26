@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T14:36:27Z",
+  "fetched_at": "2026-08-26T18:53:18Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -112,17 +112,17 @@
       },
       {
         "rank": 6,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
-        "value": ".303"
-      },
-      {
-        "rank": 7,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
         "value": ".303"
+      },
+      {
+        "rank": 7,
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".301"
       },
       {
         "rank": 8,
