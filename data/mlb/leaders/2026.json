@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-26T02:17:24Z",
+  "fetched_at": "2026-08-26T09:39:11Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -122,7 +122,7 @@
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
-        "value": ".302"
+        "value": ".303"
       },
       {
         "rank": 8,
@@ -152,7 +152,7 @@
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
-        "value": 98
+        "value": 99
       },
       {
         "rank": 2,
@@ -263,20 +263,20 @@
       },
       {
         "rank": 6,
+        "playerId": 608070,
+        "player": "José Ramírez",
+        "team": "CLE",
+        "value": 30
+      },
+      {
+        "rank": 6,
         "playerId": 665487,
         "player": "Fernando Tatis Jr.",
         "team": "SD",
         "value": 30
       },
       {
-        "rank": 8,
-        "playerId": 608070,
-        "player": "José Ramírez",
-        "team": "CLE",
-        "value": 29
-      },
-      {
-        "rank": 8,
+        "rank": 9,
         "playerId": 665923,
         "player": "Esteury Ruiz",
         "team": "MIA",
@@ -484,7 +484,7 @@
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
-        "value": 173
+        "value": 175
       },
       {
         "rank": 8,
@@ -495,17 +495,17 @@
       },
       {
         "rank": 9,
+        "playerId": 671737,
+        "player": "Taj Bradley",
+        "team": "MIN",
+        "value": 169
+      },
+      {
+        "rank": 9,
         "playerId": 676917,
         "player": "Cade Cavalli",
         "team": "WSH",
         "value": 169
-      },
-      {
-        "rank": 10,
-        "playerId": 690997,
-        "player": "Nolan McLean",
-        "team": "NYM",
-        "value": 168
       }
     ],
     "saves": [
@@ -521,7 +521,7 @@
         "playerId": 671922,
         "player": "Cade Smith",
         "team": "CLE",
-        "value": 34
+        "value": 35
       },
       {
         "rank": 3,
