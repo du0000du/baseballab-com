@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-08-26T09:37:46Z",
+  "fetchedAt": "2026-08-26T14:34:51Z",
   "central": [
     {
       "rank": 1,
@@ -183,27 +183,14 @@
       "teamAbbr": "G",
       "league": "central",
       "games": 115,
-      "wins": 61,
-      "losses": 52,
+      "wins": 62,
+      "losses": 51,
       "ties": 2,
-      "pct": ".539",
-      "gb": "2.5"
+      "pct": ".548",
+      "gb": "1.5"
     },
     {
       "rank": 3,
-      "teamSlug": "yakult-swallows",
-      "teamName": "東京ヤクルトスワローズ",
-      "teamAbbr": "S",
-      "league": "central",
-      "games": 113,
-      "wins": 51,
-      "losses": 61,
-      "ties": 1,
-      "pct": ".455",
-      "gb": "12"
-    },
-    {
-      "rank": 4,
       "teamSlug": "yokohama-dena",
       "teamName": "横浜DeNAベイスターズ",
       "teamAbbr": "DB",
@@ -214,6 +201,19 @@
       "ties": 3,
       "pct": ".450",
       "gb": "12.5"
+    },
+    {
+      "rank": 4,
+      "teamSlug": "yakult-swallows",
+      "teamName": "東京ヤクルトスワローズ",
+      "teamAbbr": "S",
+      "league": "central",
+      "games": 113,
+      "wins": 50,
+      "losses": 62,
+      "ties": 1,
+      "pct": ".446",
+      "gb": "13"
     },
     {
       "rank": 5,
@@ -250,10 +250,10 @@
       "teamAbbr": "H",
       "league": "pacific",
       "games": 114,
-      "wins": 71,
-      "losses": 41,
+      "wins": 70,
+      "losses": 42,
       "ties": 2,
-      "pct": ".633",
+      "pct": ".625",
       "gb": "--"
     },
     {
@@ -264,10 +264,10 @@
       "league": "pacific",
       "games": 118,
       "wins": 66,
-      "losses": 48,
-      "ties": 4,
-      "pct": ".578",
-      "gb": "6"
+      "losses": 49,
+      "ties": 3,
+      "pct": ".573",
+      "gb": "5.5"
     },
     {
       "rank": 3,
@@ -276,11 +276,11 @@
       "teamAbbr": "F",
       "league": "pacific",
       "games": 118,
-      "wins": 63,
+      "wins": 64,
       "losses": 53,
-      "ties": 2,
-      "pct": ".543",
-      "gb": "10"
+      "ties": 1,
+      "pct": ".547",
+      "gb": "8.5"
     },
     {
       "rank": 4,
@@ -289,11 +289,11 @@
       "teamAbbr": "B",
       "league": "pacific",
       "games": 116,
-      "wins": 55,
-      "losses": 59,
+      "wins": 56,
+      "losses": 58,
       "ties": 2,
-      "pct": ".482",
-      "gb": "17"
+      "pct": ".491",
+      "gb": "15"
     },
     {
       "rank": 5,
@@ -302,11 +302,11 @@
       "teamAbbr": "M",
       "league": "pacific",
       "games": 111,
-      "wins": 51,
-      "losses": 57,
+      "wins": 52,
+      "losses": 56,
       "ties": 3,
-      "pct": ".472",
-      "gb": "18"
+      "pct": ".481",
+      "gb": "16"
     },
     {
       "rank": 6,
@@ -315,10 +315,10 @@
       "teamAbbr": "E",
       "league": "pacific",
       "games": 113,
-      "wins": 45,
-      "losses": 67,
+      "wins": 44,
+      "losses": 68,
       "ties": 1,
-      "pct": ".401",
+      "pct": ".392",
       "gb": "26"
     }
   ]
