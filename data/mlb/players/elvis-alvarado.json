@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 665660,
+    "fullName": "Elvis Alvarado",
+    "link": "/api/v1/people/665660",
+    "firstName": "Elvis",
+    "lastName": "Alvarado",
+    "primaryNumber": "37",
+    "birthDate": "1999-02-23",
+    "currentAge": 27,
+    "birthCity": "Sabaneta",
+    "birthCountry": "Dominican Republic",
+    "height": "6' 6\"",
+    "weight": 253,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Elvis",
+    "useLastName": "Alvarado",
+    "middleName": "Ernesto",
+    "boxscoreName": "Alvarado",
+    "gender": "M",
+    "nameMatrilineal": "Vargas",
+    "isPlayer": true,
+    "isVerified": true,
+    "mlbDebutDate": "2025-05-09",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Elvis Alvarado",
+    "nameSlug": "elvis-alvarado-665660",
+    "firstLastName": "Elvis Alvarado",
+    "lastFirstName": "Alvarado, Elvis",
+    "lastInitName": "Alvarado, E",
+    "initLastName": "E Alvarado",
+    "fullFMLName": "Elvis Ernesto Alvarado",
+    "fullLFMName": "Alvarado, Elvis Ernesto",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 27,
+            "gamesPlayed": 44,
+            "gamesStarted": 0,
+            "groundOuts": 30,
+            "airOuts": 41,
+            "runs": 20,
+            "doubles": 9,
+            "triples": 0,
+            "homeRuns": 8,
+            "strikeOuts": 53,
+            "baseOnBalls": 20,
+            "intentionalWalks": 0,
+            "hits": 32,
+            "hitByPitch": 2,
+            "avg": ".206",
+            "atBats": 155,
+            "obp": ".303",
+            "slg": ".419",
+            "ops": ".722",
+            "caughtStealing": 4,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".333",
+            "caughtStealingPercentage": ".667",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 745,
+            "era": "4.09",
+            "inningsPitched": "44.0",
+            "wins": 4,
+            "losses": 3,
+            "saves": 5,
+            "saveOpportunities": 6,
+            "holds": 8,
+            "blownSaves": 1,
+            "earnedRuns": 20,
+            "whip": "1.18",
+            "battersFaced": 178,
+            "outs": 132,
+            "gamesPitched": 44,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 479,
+            "strikePercentage": ".640",
+            "hitBatsmen": 2,
+            "balks": 1,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 65,
+            "groundOutsToAirouts": "0.73",
+            "winPercentage": ".571",
+            "pitchesPerInning": "16.93",
+            "gamesFinished": 17,
+            "strikeoutWalkRatio": "2.65",
+            "strikeoutsPer9Inn": "10.84",
+            "walksPer9Inn": "4.09",
+            "hitsPer9Inn": "6.55",
+            "runsScoredPer9": "4.09",
+            "homeRunsPer9": "1.64",
+            "inheritedRunners": 31,
+            "inheritedRunnersScored": 11,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 133,
+            "name": "Athletics",
+            "link": "/api/v1/teams/133"
+          },
+          "player": {
+            "id": 665660,
+            "fullName": "Elvis Alvarado",
+            "link": "/api/v1/people/665660"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
