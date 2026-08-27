@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-27T10:42:23Z",
+  "fetched_at": "2026-08-27T19:26:41Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -133,10 +133,10 @@
       },
       {
         "rank": 9,
-        "playerId": 664983,
-        "player": "Jake McCarthy",
-        "team": "COL",
-        "value": ".294"
+        "playerId": 676475,
+        "player": "Alec Burleson",
+        "team": "STL",
+        "value": ".293"
       },
       {
         "rank": 10,
@@ -224,7 +224,7 @@
         "playerId": 683083,
         "player": "Nasim Nuñez",
         "team": "WSH",
-        "value": 42
+        "value": 43
       },
       {
         "rank": 2,
