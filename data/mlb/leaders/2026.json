@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-27T19:26:41Z",
+  "fetched_at": "2026-08-27T23:23:41Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -80,7 +80,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".322"
+        "value": ".321"
       },
       {
         "rank": 2,
@@ -129,14 +129,14 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".301"
+        "value": ".300"
       },
       {
         "rank": 9,
         "playerId": 676475,
         "player": "Alec Burleson",
         "team": "STL",
-        "value": ".293"
+        "value": ".292"
       },
       {
         "rank": 10,
@@ -159,7 +159,7 @@
         "playerId": 676475,
         "player": "Alec Burleson",
         "team": "STL",
-        "value": 98
+        "value": 99
       },
       {
         "rank": 3,
@@ -312,7 +312,7 @@
         "playerId": 519242,
         "player": "Chris Sale",
         "team": "ATL",
-        "value": "2.20"
+        "value": "2.18"
       },
       {
         "rank": 4,
@@ -337,17 +337,17 @@
       },
       {
         "rank": 7,
-        "playerId": 808967,
-        "player": "Yoshinobu Yamamoto",
-        "team": "LAD",
-        "value": "2.61"
-      },
-      {
-        "rank": 8,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
         "value": "2.62"
+      },
+      {
+        "rank": 8,
+        "playerId": 808967,
+        "player": "Yoshinobu Yamamoto",
+        "team": "LAD",
+        "value": "2.67"
       },
       {
         "rank": 9,
@@ -528,7 +528,7 @@
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
-        "value": 33
+        "value": 34
       },
       {
         "rank": 4,
