@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-27T23:23:41Z",
+  "fetched_at": "2026-08-28T01:15:17Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -80,7 +80,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".321"
+        "value": ".319"
       },
       {
         "rank": 2,
@@ -129,7 +129,7 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".300"
+        "value": ".299"
       },
       {
         "rank": 9,
@@ -143,7 +143,7 @@
         "playerId": 671739,
         "player": "Michael Harris II",
         "team": "ATL",
-        "value": ".291"
+        "value": ".292"
       }
     ],
     "rbi": [
@@ -231,20 +231,20 @@
         "playerId": 665862,
         "player": "Jazz Chisholm Jr.",
         "team": "NYY",
-        "value": 36
-      },
-      {
-        "rank": 3,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
-        "value": 35
+        "value": 38
       },
       {
         "rank": 3,
         "playerId": 677951,
         "player": "Bobby Witt Jr.",
         "team": "KC",
+        "value": 36
+      },
+      {
+        "rank": 4,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
         "value": 35
       },
       {
@@ -298,21 +298,21 @@
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
-        "value": "1.68"
+        "value": "1.73"
       },
       {
         "rank": 2,
+        "playerId": 519242,
+        "player": "Chris Sale",
+        "team": "ATL",
+        "value": "2.08"
+      },
+      {
+        "rank": 3,
         "playerId": 693645,
         "player": "Cam Schlittler",
         "team": "NYY",
         "value": "2.16"
-      },
-      {
-        "rank": 3,
-        "playerId": 519242,
-        "player": "Chris Sale",
-        "team": "ATL",
-        "value": "2.18"
       },
       {
         "rank": 4,
@@ -337,17 +337,17 @@
       },
       {
         "rank": 7,
+        "playerId": 808967,
+        "player": "Yoshinobu Yamamoto",
+        "team": "LAD",
+        "value": "2.56"
+      },
+      {
+        "rank": 8,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
         "value": "2.62"
-      },
-      {
-        "rank": 8,
-        "playerId": 808967,
-        "player": "Yoshinobu Yamamoto",
-        "team": "LAD",
-        "value": "2.67"
       },
       {
         "rank": 9,
@@ -442,7 +442,7 @@
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
-        "value": 216
+        "value": 222
       },
       {
         "rank": 2,
@@ -481,30 +481,30 @@
       },
       {
         "rank": 7,
+        "playerId": 519242,
+        "player": "Chris Sale",
+        "team": "ATL",
+        "value": 176
+      },
+      {
+        "rank": 8,
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
         "value": 175
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 672282,
         "player": "Reid Detmers",
         "team": "LAA",
         "value": 172
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 671737,
         "player": "Taj Bradley",
         "team": "MIN",
-        "value": 169
-      },
-      {
-        "rank": 9,
-        "playerId": 676917,
-        "player": "Cade Cavalli",
-        "team": "WSH",
         "value": 169
       }
     ],
