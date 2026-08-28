@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 543238,
+    "fullName": "Anthony Gose",
+    "link": "/api/v1/people/543238",
+    "firstName": "Anthony",
+    "lastName": "Gose",
+    "primaryNumber": "34",
+    "birthDate": "1990-08-10",
+    "currentAge": 36,
+    "birthCity": "Bellflower",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 200,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Anthony",
+    "useLastName": "Gose",
+    "middleName": "Robert",
+    "boxscoreName": "Gose",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2008,
+    "pronunciation": "gohz",
+    "mlbDebutDate": "2012-07-17",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Anthony Gose",
+    "nameSlug": "anthony-gose-543238",
+    "firstLastName": "Anthony Gose",
+    "lastFirstName": "Gose, Anthony",
+    "lastInitName": "Gose, A",
+    "initLastName": "A Gose",
+    "fullFMLName": "Anthony Robert Gose",
+    "fullLFMName": "Gose, Anthony Robert",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 35,
+            "gamesPlayed": 1,
+            "gamesStarted": 0,
+            "groundOuts": 1,
+            "airOuts": 2,
+            "runs": 0,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 0,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 0,
+            "hitByPitch": 0,
+            "avg": ".000",
+            "atBats": 3,
+            "obp": ".000",
+            "slg": ".000",
+            "ops": ".000",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 0,
+            "numberOfPitches": 12,
+            "era": "0.00",
+            "inningsPitched": "1.0",
+            "wins": 0,
+            "losses": 0,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 0,
+            "whip": "0.00",
+            "battersFaced": 3,
+            "outs": 3,
+            "gamesPitched": 1,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 7,
+            "strikePercentage": ".580",
+            "hitBatsmen": 0,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 0,
+            "groundOutsToAirouts": "0.50",
+            "winPercentage": ".---",
+            "pitchesPerInning": "12.00",
+            "gamesFinished": 1,
+            "strikeoutWalkRatio": "-.--",
+            "strikeoutsPer9Inn": "0.00",
+            "walksPer9Inn": "0.00",
+            "hitsPer9Inn": "0.00",
+            "runsScoredPer9": "0.00",
+            "homeRunsPer9": "0.00",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 543238,
+            "fullName": "Anthony Gose",
+            "link": "/api/v1/people/543238"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
