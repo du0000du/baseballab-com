@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-28T20:43:13Z",
+  "fetched_at": "2026-08-28T23:19:15Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -91,17 +91,17 @@
       },
       {
         "rank": 3,
-        "playerId": 672640,
-        "player": "Otto Lopez",
-        "team": "MIA",
-        "value": ".308"
-      },
-      {
-        "rank": 3,
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
         "value": ".308"
+      },
+      {
+        "rank": 4,
+        "playerId": 672640,
+        "player": "Otto Lopez",
+        "team": "MIA",
+        "value": ".307"
       },
       {
         "rank": 5,
@@ -122,7 +122,7 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".301"
+        "value": ".300"
       },
       {
         "rank": 8,
@@ -319,7 +319,7 @@
         "playerId": 656302,
         "player": "Dylan Cease",
         "team": "TOR",
-        "value": "2.37"
+        "value": "2.36"
       },
       {
         "rank": 5,
@@ -467,17 +467,17 @@
       },
       {
         "rank": 5,
+        "playerId": 693645,
+        "player": "Cam Schlittler",
+        "team": "NYY",
+        "value": 194
+      },
+      {
+        "rank": 5,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
         "value": 194
-      },
-      {
-        "rank": 6,
-        "playerId": 693645,
-        "player": "Cam Schlittler",
-        "team": "NYY",
-        "value": 193
       },
       {
         "rank": 7,

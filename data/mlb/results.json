@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-28T20:43:13Z",
+  "fetchedAt": "2026-08-28T23:19:15Z",
   "season": "2026",
   "asOfDate": "2026-08-28",
   "teams": [
@@ -628,6 +628,16 @@
       "divisionShort": "NL Central",
       "recentGames": [
         {
+          "date": "2026-08-28",
+          "opponent": "Cincinnati Reds",
+          "opponentAbbr": "CIN",
+          "home": true,
+          "score": 8,
+          "opponentScore": 10,
+          "result": "L",
+          "venue": "Wrigley Field"
+        },
+        {
           "date": "2026-08-26",
           "opponent": "Arizona Diamondbacks",
           "opponentAbbr": "AZ",
@@ -646,16 +656,6 @@
           "opponentScore": 5,
           "result": "L",
           "venue": "Chase Field"
-        },
-        {
-          "date": "2026-08-24",
-          "opponent": "Arizona Diamondbacks",
-          "opponentAbbr": "AZ",
-          "home": false,
-          "score": 7,
-          "opponentScore": 0,
-          "result": "W",
-          "venue": "Chase Field"
         }
       ]
     },
@@ -668,6 +668,16 @@
       "division": "National League Central",
       "divisionShort": "NL Central",
       "recentGames": [
+        {
+          "date": "2026-08-28",
+          "opponent": "Chicago Cubs",
+          "opponentAbbr": "CHC",
+          "home": false,
+          "score": 10,
+          "opponentScore": 8,
+          "result": "W",
+          "venue": "Wrigley Field"
+        },
         {
           "date": "2026-08-26",
           "opponent": "San Francisco Giants",
@@ -685,16 +695,6 @@
           "home": false,
           "score": 1,
           "opponentScore": 3,
-          "result": "L",
-          "venue": "Oracle Park"
-        },
-        {
-          "date": "2026-08-24",
-          "opponent": "San Francisco Giants",
-          "opponentAbbr": "SF",
-          "home": false,
-          "score": 0,
-          "opponentScore": 5,
           "result": "L",
           "venue": "Oracle Park"
         }
