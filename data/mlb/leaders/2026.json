@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-28T12:19:57Z",
+  "fetched_at": "2026-08-28T20:43:13Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -152,7 +152,7 @@
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
-        "value": 100
+        "value": 102
       },
       {
         "rank": 2,
