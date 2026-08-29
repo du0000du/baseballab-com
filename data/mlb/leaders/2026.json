@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-29T17:28:24Z",
+  "fetched_at": "2026-08-29T19:35:57Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -40,17 +40,17 @@
       },
       {
         "rank": 5,
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
+        "value": 35
+      },
+      {
+        "rank": 5,
         "playerId": 700250,
         "player": "Ben Rice",
         "team": "NYY",
         "value": 35
-      },
-      {
-        "rank": 7,
-        "playerId": 691718,
-        "player": "Pete Crow-Armstrong",
-        "team": "CHC",
-        "value": 33
       },
       {
         "rank": 8,
@@ -68,9 +68,9 @@
       },
       {
         "rank": 9,
-        "playerId": 695578,
-        "player": "James Wood",
-        "team": "WSH",
+        "playerId": 701398,
+        "player": "Sal Stewart",
+        "team": "CIN",
         "value": 30
       }
     ],
@@ -108,7 +108,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".305"
+        "value": ".306"
       },
       {
         "rank": 6,
@@ -152,7 +152,7 @@
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
-        "value": 102
+        "value": 104
       },
       {
         "rank": 2,
@@ -198,20 +198,20 @@
       },
       {
         "rank": 8,
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
+        "value": 86
+      },
+      {
+        "rank": 9,
         "playerId": 691406,
         "player": "Junior Caminero",
         "team": "TB",
         "value": 85
       },
       {
-        "rank": 9,
-        "playerId": 691718,
-        "player": "Pete Crow-Armstrong",
-        "team": "CHC",
-        "value": 83
-      },
-      {
-        "rank": 9,
+        "rank": 10,
         "playerId": 700250,
         "player": "Ben Rice",
         "team": "NYY",

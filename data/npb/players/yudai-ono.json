@@ -7,9 +7,9 @@
   "teamName": "中日ドラゴンズ",
   "league": "central",
   "group": "pitching",
-  "qualified": true,
+  "qualified": false,
   "season": "2026",
-  "rank": 3,
+  "rank": null,
   "stats": {
     "era": 2.04,
     "games": 18,
@@ -36,8 +36,8 @@
     "er": 27,
     "whip": 0.97
   },
-  "asOf": "2026-08-28",
-  "fetchedAt": "2026-08-29T17:26:55Z",
+  "asOf": "2026-08-29",
+  "fetchedAt": "2026-08-29T19:34:27Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/pit_c.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/idp1_d.html"
 }
