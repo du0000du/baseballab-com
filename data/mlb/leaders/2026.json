@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-29T14:11:05Z",
+  "fetched_at": "2026-08-29T17:28:24Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -122,7 +122,7 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".302"
+        "value": ".301"
       },
       {
         "rank": 8,
