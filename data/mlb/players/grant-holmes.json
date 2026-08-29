@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 656550,
+    "fullName": "Grant Holmes",
+    "link": "/api/v1/people/656550",
+    "firstName": "Harrison",
+    "lastName": "Holmes",
+    "primaryNumber": "66",
+    "birthDate": "1996-03-22",
+    "currentAge": 30,
+    "birthCity": "Conway",
+    "birthStateProvince": "SC",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 226,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Grant",
+    "useLastName": "Holmes",
+    "middleName": "Grant",
+    "boxscoreName": "Holmes, G",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "mlbDebutDate": "2024-06-16",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Grant Holmes",
+    "nameSlug": "grant-holmes-656550",
+    "firstLastName": "Grant Holmes",
+    "lastFirstName": "Holmes, Grant",
+    "lastInitName": "Holmes, G",
+    "initLastName": "G Holmes",
+    "fullFMLName": "Harrison Grant Holmes",
+    "fullLFMName": "Holmes, Harrison Grant",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 30,
+            "gamesPlayed": 26,
+            "gamesStarted": 25,
+            "groundOuts": 129,
+            "airOuts": 145,
+            "runs": 55,
+            "doubles": 19,
+            "triples": 1,
+            "homeRuns": 19,
+            "strikeOuts": 103,
+            "baseOnBalls": 55,
+            "intentionalWalks": 0,
+            "hits": 117,
+            "hitByPitch": 3,
+            "avg": ".240",
+            "atBats": 487,
+            "obp": ".318",
+            "slg": ".400",
+            "ops": ".718",
+            "caughtStealing": 2,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".667",
+            "caughtStealingPercentage": ".333",
+            "groundIntoDoublePlay": 9,
+            "numberOfPitches": 2055,
+            "era": "3.71",
+            "inningsPitched": "128.2",
+            "wins": 9,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 53,
+            "whip": "1.34",
+            "battersFaced": 552,
+            "outs": 386,
+            "gamesPitched": 26,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1293,
+            "strikePercentage": ".630",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 5,
+            "pickoffs": 0,
+            "totalBases": 195,
+            "groundOutsToAirouts": "0.89",
+            "winPercentage": ".643",
+            "pitchesPerInning": "15.97",
+            "gamesFinished": 1,
+            "strikeoutWalkRatio": "1.87",
+            "strikeoutsPer9Inn": "7.20",
+            "walksPer9Inn": "3.85",
+            "hitsPer9Inn": "8.18",
+            "runsScoredPer9": "3.85",
+            "homeRunsPer9": "1.33",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 6
+          },
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          },
+          "player": {
+            "id": 656550,
+            "fullName": "Grant Holmes",
+            "link": "/api/v1/people/656550"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

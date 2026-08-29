@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-29T00:49:14Z",
+  "fetchedAt": "2026-08-29T07:29:53Z",
   "season": "2026",
   "asOfDate": "2026-08-29",
   "teams": [
@@ -323,6 +323,16 @@
       "accent": "#cdd1d4",
       "recentGames": [
         {
+          "date": "2026-08-29",
+          "opponent": "千葉ロッテマリーンズ",
+          "opponentSlug": "lotte-marines",
+          "home": false,
+          "score": 9,
+          "opponentScore": 7,
+          "result": "W",
+          "stadium": "ZOZOマリンスタジアム"
+        },
+        {
           "date": "2026-08-28",
           "opponent": "千葉ロッテマリーンズ",
           "opponentSlug": "lotte-marines",
@@ -340,16 +350,6 @@
           "score": 9,
           "opponentScore": 1,
           "result": "W",
-          "stadium": "エスコンフィールドHOKKAIDO"
-        },
-        {
-          "date": "2026-08-25",
-          "opponent": "埼玉西武ライオンズ",
-          "opponentSlug": "seibu-lions",
-          "home": true,
-          "score": 1,
-          "opponentScore": 3,
-          "result": "L",
           "stadium": "エスコンフィールドHOKKAIDO"
         }
       ]
@@ -440,6 +440,16 @@
       "accent": "#ffffff",
       "recentGames": [
         {
+          "date": "2026-08-29",
+          "opponent": "北海道日本ハムファイターズ",
+          "opponentSlug": "nipponham-fighters",
+          "home": true,
+          "score": 7,
+          "opponentScore": 9,
+          "result": "L",
+          "stadium": "ZOZOマリンスタジアム"
+        },
+        {
           "date": "2026-08-28",
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
@@ -457,16 +467,6 @@
           "score": 2,
           "opponentScore": 4,
           "result": "L",
-          "stadium": "みずほPayPayドーム福岡"
-        },
-        {
-          "date": "2026-08-26",
-          "opponent": "福岡ソフトバンクホークス",
-          "opponentSlug": "softbank-hawks",
-          "home": false,
-          "score": 6,
-          "opponentScore": 5,
-          "result": "W",
           "stadium": "みずほPayPayドーム福岡"
         }
       ]

@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-08-29T00:48:35Z",
+  "fetchedAt": "2026-08-29T07:29:14Z",
   "central": [
     {
       "rank": 1,
@@ -161,7 +161,7 @@
       "gb": "26.0"
     }
   ],
-  "estimatedAsOf": "2026-08-28",
+  "estimatedAsOf": "2026-08-29",
   "estimatedCentral": [
     {
       "rank": 1,
@@ -275,12 +275,12 @@
       "teamName": "北海道日本ハムファイターズ",
       "teamAbbr": "F",
       "league": "pacific",
-      "games": 119,
-      "wins": 65,
+      "games": 120,
+      "wins": 66,
       "losses": 53,
       "ties": 1,
-      "pct": ".550",
-      "gb": "9"
+      "pct": ".554",
+      "gb": "8.5"
     },
     {
       "rank": 4,
@@ -301,12 +301,12 @@
       "teamName": "千葉ロッテマリーンズ",
       "teamAbbr": "M",
       "league": "pacific",
-      "games": 113,
+      "games": 114,
       "wins": 52,
-      "losses": 58,
+      "losses": 59,
       "ties": 3,
-      "pct": ".472",
-      "gb": "18"
+      "pct": ".468",
+      "gb": "18.5"
     },
     {
       "rank": 6,

@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 701656,
+    "fullName": "Logan Henderson",
+    "link": "/api/v1/people/701656",
+    "firstName": "Logan",
+    "lastName": "Henderson",
+    "primaryNumber": "43",
+    "birthDate": "2002-03-02",
+    "currentAge": 24,
+    "birthCity": "Houston",
+    "birthStateProvince": "TX",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 209,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Logan",
+    "useLastName": "Henderson",
+    "middleName": "Blake",
+    "boxscoreName": "Henderson",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "mlbDebutDate": "2025-04-20",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Logan Henderson",
+    "nameSlug": "logan-henderson-701656",
+    "firstLastName": "Logan Henderson",
+    "lastFirstName": "Henderson, Logan",
+    "lastInitName": "Henderson, L",
+    "initLastName": "L Henderson",
+    "fullFMLName": "Logan Blake Henderson",
+    "fullLFMName": "Henderson, Logan Blake",
+    "strikeZoneTop": 3.21,
+    "strikeZoneBottom": 1.62
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 24,
+            "gamesPlayed": 14,
+            "gamesStarted": 14,
+            "groundOuts": 46,
+            "airOuts": 90,
+            "runs": 21,
+            "doubles": 9,
+            "triples": 1,
+            "homeRuns": 11,
+            "strikeOuts": 86,
+            "baseOnBalls": 14,
+            "intentionalWalks": 0,
+            "hits": 49,
+            "hitByPitch": 1,
+            "avg": ".181",
+            "atBats": 270,
+            "obp": ".225",
+            "slg": ".344",
+            "ops": ".569",
+            "caughtStealing": 2,
+            "stolenBases": 2,
+            "stolenBasePercentage": ".500",
+            "caughtStealingPercentage": ".500",
+            "groundIntoDoublePlay": 5,
+            "numberOfPitches": 1134,
+            "era": "2.48",
+            "inningsPitched": "76.1",
+            "wins": 9,
+            "losses": 2,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 21,
+            "whip": "0.83",
+            "battersFaced": 286,
+            "outs": 229,
+            "gamesPitched": 14,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 782,
+            "strikePercentage": ".690",
+            "hitBatsmen": 1,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 0,
+            "totalBases": 93,
+            "groundOutsToAirouts": "0.51",
+            "winPercentage": ".818",
+            "pitchesPerInning": "14.86",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "6.14",
+            "strikeoutsPer9Inn": "10.14",
+            "walksPer9Inn": "1.65",
+            "hitsPer9Inn": "5.78",
+            "runsScoredPer9": "2.48",
+            "homeRunsPer9": "1.30",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 0
+          },
+          "team": {
+            "id": 158,
+            "name": "Milwaukee Brewers",
+            "link": "/api/v1/teams/158"
+          },
+          "player": {
+            "id": 701656,
+            "fullName": "Logan Henderson",
+            "link": "/api/v1/people/701656"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
