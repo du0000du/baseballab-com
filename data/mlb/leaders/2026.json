@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-30T14:17:44Z",
+  "fetched_at": "2026-08-30T17:52:03Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -108,14 +108,14 @@
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".306"
+        "value": ".305"
       },
       {
         "rank": 6,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".304"
+        "value": ".303"
       },
       {
         "rank": 7,
@@ -140,9 +140,9 @@
       },
       {
         "rank": 10,
-        "playerId": 808982,
-        "player": "Jung Hoo Lee",
-        "team": "SF",
+        "playerId": 681198,
+        "player": "TJ Rumfield",
+        "team": "COL",
         "value": ".291"
       }
     ],
