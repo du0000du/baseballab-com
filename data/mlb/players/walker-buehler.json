@@ -1,0 +1,155 @@
+{
+  "info": {
+    "id": 621111,
+    "fullName": "Walker Buehler",
+    "link": "/api/v1/people/621111",
+    "firstName": "Walker",
+    "lastName": "Buehler",
+    "primaryNumber": "10",
+    "birthDate": "1994-07-28",
+    "currentAge": 32,
+    "birthCity": "Lexington",
+    "birthStateProvince": "KY",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Walker",
+    "useLastName": "Buehler",
+    "middleName": "Anthony",
+    "boxscoreName": "Buehler",
+    "nickName": "Buetane",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2015,
+    "pronunciation": "BYOO-ler",
+    "mlbDebutDate": "2017-09-07",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Walker Buehler",
+    "nameSlug": "walker-buehler-621111",
+    "firstLastName": "Walker Buehler",
+    "lastFirstName": "Buehler, Walker",
+    "lastInitName": "Buehler, W",
+    "initLastName": "W Buehler",
+    "fullFMLName": "Walker Anthony Buehler",
+    "fullLFMName": "Buehler, Walker Anthony",
+    "strikeZoneTop": 3.29,
+    "strikeZoneBottom": 1.6
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 31,
+            "gamesPlayed": 27,
+            "gamesStarted": 27,
+            "groundOuts": 135,
+            "airOuts": 130,
+            "runs": 69,
+            "doubles": 22,
+            "triples": 3,
+            "homeRuns": 17,
+            "strikeOuts": 111,
+            "baseOnBalls": 49,
+            "intentionalWalks": 2,
+            "hits": 129,
+            "hitByPitch": 5,
+            "avg": ".256",
+            "atBats": 503,
+            "obp": ".328",
+            "slg": ".414",
+            "ops": ".742",
+            "caughtStealing": 4,
+            "stolenBases": 11,
+            "stolenBasePercentage": ".733",
+            "caughtStealingPercentage": ".267",
+            "groundIntoDoublePlay": 10,
+            "numberOfPitches": 2218,
+            "era": "4.66",
+            "inningsPitched": "131.1",
+            "wins": 8,
+            "losses": 6,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 68,
+            "whip": "1.36",
+            "battersFaced": 559,
+            "outs": 394,
+            "gamesPitched": 27,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1389,
+            "strikePercentage": ".630",
+            "hitBatsmen": 5,
+            "balks": 0,
+            "wildPitches": 3,
+            "pickoffs": 2,
+            "totalBases": 208,
+            "groundOutsToAirouts": "1.04",
+            "winPercentage": ".571",
+            "pitchesPerInning": "16.89",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "2.27",
+            "strikeoutsPer9Inn": "7.61",
+            "walksPer9Inn": "3.36",
+            "hitsPer9Inn": "8.84",
+            "runsScoredPer9": "4.73",
+            "homeRunsPer9": "1.16",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 1,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 135,
+            "name": "San Diego Padres",
+            "link": "/api/v1/teams/135"
+          },
+          "player": {
+            "id": 621111,
+            "fullName": "Walker Buehler",
+            "link": "/api/v1/people/621111"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

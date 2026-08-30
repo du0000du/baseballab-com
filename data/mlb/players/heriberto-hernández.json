@@ -1,0 +1,125 @@
+{
+  "info": {
+    "id": 681715,
+    "fullName": "Heriberto Hernández",
+    "link": "/api/v1/people/681715",
+    "firstName": "Heriberto",
+    "lastName": "Hernandez",
+    "primaryNumber": "13",
+    "birthDate": "1999-12-16",
+    "currentAge": 26,
+    "birthCity": "Bonao",
+    "birthCountry": "Dominican Republic",
+    "height": "5' 11\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "7",
+      "name": "Outfielder",
+      "type": "Outfielder",
+      "abbreviation": "LF"
+    },
+    "useName": "Heriberto",
+    "useLastName": "Hernández",
+    "middleName": "Jose",
+    "boxscoreName": "Hernández, H",
+    "gender": "M",
+    "nameMatrilineal": "De La Rosa",
+    "isPlayer": true,
+    "isVerified": false,
+    "pronunciation": "air-ee-behr-toe",
+    "mlbDebutDate": "2025-05-30",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Heriberto Hernández",
+    "nameSlug": "heriberto-hernandez-681715",
+    "firstLastName": "Heriberto Hernández",
+    "lastFirstName": "Hernández, Heriberto",
+    "lastInitName": "Hernández, H",
+    "initLastName": "H Hernández",
+    "fullFMLName": "Heriberto Jose Hernández",
+    "fullLFMName": "Hernández, Heriberto Jose",
+    "strikeZoneTop": 3.179,
+    "strikeZoneBottom": 1.604
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 104,
+            "groundOuts": 77,
+            "airOuts": 84,
+            "runs": 39,
+            "doubles": 14,
+            "triples": 1,
+            "homeRuns": 22,
+            "strikeOuts": 104,
+            "baseOnBalls": 38,
+            "intentionalWalks": 1,
+            "hits": 81,
+            "hitByPitch": 2,
+            "avg": ".235",
+            "atBats": 345,
+            "obp": ".313",
+            "slg": ".472",
+            "ops": ".785",
+            "caughtStealing": 4,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".692",
+            "caughtStealingPercentage": ".308",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 1522,
+            "plateAppearances": 386,
+            "totalBases": 163,
+            "rbi": 58,
+            "leftOnBase": 183,
+            "sacBunts": 0,
+            "sacFlies": 1,
+            "babip": ".268",
+            "groundOutsToAirouts": "0.92",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "15.68"
+          },
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          },
+          "player": {
+            "id": 681715,
+            "fullName": "Heriberto Hernández",
+            "link": "/api/v1/people/681715"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
