@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-30T17:52:03Z",
+  "fetchedAt": "2026-08-30T19:36:27Z",
   "season": "2026",
   "asOfDate": "2026-08-30",
   "teams": [
@@ -874,6 +874,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-08-30",
+          "opponent": "Washington Nationals",
+          "opponentAbbr": "WSH",
+          "home": false,
+          "score": 6,
+          "opponentScore": 2,
+          "result": "W",
+          "venue": "Nationals Park"
+        },
+        {
           "date": "2026-08-29",
           "opponent": "Washington Nationals",
           "opponentAbbr": "WSH",
@@ -892,16 +902,6 @@
           "opponentScore": 9,
           "result": "L",
           "venue": "Nationals Park"
-        },
-        {
-          "date": "2026-08-26",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": true,
-          "score": 4,
-          "opponentScore": 0,
-          "result": "W",
-          "venue": "loanDepot park"
         }
       ]
     },
@@ -997,6 +997,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-08-30",
+          "opponent": "Miami Marlins",
+          "opponentAbbr": "MIA",
+          "home": true,
+          "score": 2,
+          "opponentScore": 6,
+          "result": "L",
+          "venue": "Nationals Park"
+        },
+        {
           "date": "2026-08-29",
           "opponent": "Miami Marlins",
           "opponentAbbr": "MIA",
@@ -1013,16 +1023,6 @@
           "home": true,
           "score": 9,
           "opponentScore": 2,
-          "result": "W",
-          "venue": "Nationals Park"
-        },
-        {
-          "date": "2026-08-27",
-          "opponent": "Colorado Rockies",
-          "opponentAbbr": "COL",
-          "home": true,
-          "score": 7,
-          "opponentScore": 1,
           "result": "W",
           "venue": "Nationals Park"
         }
