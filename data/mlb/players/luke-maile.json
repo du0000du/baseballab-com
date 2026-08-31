@@ -1,0 +1,127 @@
+{
+  "info": {
+    "id": 571912,
+    "fullName": "Luke Maile",
+    "link": "/api/v1/people/571912",
+    "firstName": "Luke",
+    "lastName": "Maile",
+    "primaryNumber": "18",
+    "birthDate": "1991-02-06",
+    "currentAge": 35,
+    "birthCity": "Edgewood",
+    "birthStateProvince": "KY",
+    "birthCountry": "USA",
+    "height": "6' 3\"",
+    "weight": 225,
+    "active": true,
+    "primaryPosition": {
+      "code": "2",
+      "name": "Catcher",
+      "type": "Catcher",
+      "abbreviation": "C"
+    },
+    "useName": "Luke",
+    "useLastName": "Maile",
+    "middleName": "Richard",
+    "boxscoreName": "Maile",
+    "nickName": "Lukey Barrels",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2012,
+    "pronunciation": "may-lee",
+    "mlbDebutDate": "2015-09-01",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Luke Maile",
+    "nameSlug": "luke-maile-571912",
+    "firstLastName": "Luke Maile",
+    "lastFirstName": "Maile, Luke",
+    "lastInitName": "Maile, L",
+    "initLastName": "L Maile",
+    "fullFMLName": "Luke Richard Maile",
+    "fullLFMName": "Maile, Luke Richard",
+    "strikeZoneTop": 3.322,
+    "strikeZoneBottom": 1.676
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 35,
+            "gamesPlayed": 13,
+            "groundOuts": 6,
+            "airOuts": 11,
+            "runs": 2,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 11,
+            "baseOnBalls": 1,
+            "intentionalWalks": 0,
+            "hits": 5,
+            "hitByPitch": 0,
+            "avg": ".152",
+            "atBats": 33,
+            "obp": ".176",
+            "slg": ".273",
+            "ops": ".449",
+            "caughtStealing": 0,
+            "stolenBases": 0,
+            "stolenBasePercentage": ".---",
+            "caughtStealingPercentage": ".---",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 120,
+            "plateAppearances": 34,
+            "totalBases": 9,
+            "rbi": 5,
+            "leftOnBase": 23,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".190",
+            "groundOutsToAirouts": "0.55",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "33.00"
+          },
+          "team": {
+            "id": 118,
+            "name": "Kansas City Royals",
+            "link": "/api/v1/teams/118"
+          },
+          "player": {
+            "id": 571912,
+            "fullName": "Luke Maile",
+            "link": "/api/v1/people/571912"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
