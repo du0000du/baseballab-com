@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-31T21:43:40Z",
+  "fetched_at": "2026-09-01T05:48:25Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -68,9 +68,9 @@
       },
       {
         "rank": 10,
-        "playerId": 660271,
-        "player": "Shohei Ohtani",
-        "team": "LAD",
+        "playerId": 646240,
+        "player": "Rafael Devers",
+        "team": "SF",
         "value": 30
       }
     ],
@@ -87,14 +87,14 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "PHI",
-        "value": ".317"
+        "value": ".316"
       },
       {
         "rank": 3,
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".309"
+        "value": ".311"
       },
       {
         "rank": 4,
@@ -119,24 +119,24 @@
       },
       {
         "rank": 7,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
+        "playerId": 672515,
+        "player": "Gabriel Moreno",
+        "team": "AZ",
         "value": ".303"
       },
       {
         "rank": 8,
-        "playerId": 672515,
-        "player": "Gabriel Moreno",
-        "team": "AZ",
-        "value": ".302"
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".300"
       },
       {
         "rank": 9,
         "playerId": 671739,
         "player": "Michael Harris II",
         "team": "ATL",
-        "value": ".295"
+        "value": ".297"
       },
       {
         "rank": 10,
@@ -173,7 +173,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": 93
+        "value": 94
       },
       {
         "rank": 5,
@@ -224,7 +224,7 @@
         "playerId": 683083,
         "player": "Nasim Nuñez",
         "team": "WSH",
-        "value": 43
+        "value": 44
       },
       {
         "rank": 2,
@@ -238,7 +238,7 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": 37
+        "value": 38
       },
       {
         "rank": 4,
@@ -481,31 +481,31 @@
       },
       {
         "rank": 7,
+        "playerId": 671737,
+        "player": "Taj Bradley",
+        "team": "MIN",
+        "value": 178
+      },
+      {
+        "rank": 8,
         "playerId": 676917,
         "player": "Cade Cavalli",
         "team": "WSH",
         "value": 177
       },
       {
-        "rank": 7,
+        "rank": 8,
         "playerId": 519242,
         "player": "Chris Sale",
         "team": "ATL",
         "value": 177
       },
       {
-        "rank": 9,
+        "rank": 10,
         "playerId": 694973,
         "player": "Paul Skenes",
         "team": "PIT",
         "value": 175
-      },
-      {
-        "rank": 10,
-        "playerId": 672282,
-        "player": "Reid Detmers",
-        "team": "LAA",
-        "value": 174
       }
     ],
     "saves": [
@@ -560,17 +560,17 @@
       },
       {
         "rank": 8,
+        "playerId": 661395,
+        "player": "Jhoan Duran",
+        "team": "PHI",
+        "value": 29
+      },
+      {
+        "rank": 8,
         "playerId": 628452,
         "player": "Raisel Iglesias",
         "team": "ATL",
         "value": 29
-      },
-      {
-        "rank": 9,
-        "playerId": 661395,
-        "player": "Jhoan Duran",
-        "team": "PHI",
-        "value": 28
       },
       {
         "rank": 10,
