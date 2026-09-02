@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-02T17:31:48Z",
+  "fetchedAt": "2026-09-02T19:35:41Z",
   "season": "2026",
   "asOfDate": "2026-09-02",
   "teams": [
@@ -669,6 +669,16 @@
       "divisionShort": "NL Central",
       "recentGames": [
         {
+          "date": "2026-09-02",
+          "opponent": "San Diego Padres",
+          "opponentAbbr": "SD",
+          "home": true,
+          "score": 7,
+          "opponentScore": 3,
+          "result": "W",
+          "venue": "Great American Ball Park"
+        },
+        {
           "date": "2026-09-01",
           "opponent": "San Diego Padres",
           "opponentAbbr": "SD",
@@ -687,16 +697,6 @@
           "opponentScore": 5,
           "result": "L",
           "venue": "Great American Ball Park"
-        },
-        {
-          "date": "2026-08-30",
-          "opponent": "Chicago Cubs",
-          "opponentAbbr": "CHC",
-          "home": false,
-          "score": 7,
-          "opponentScore": 5,
-          "result": "W",
-          "venue": "Wrigley Field"
         }
       ]
     },
@@ -1161,6 +1161,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-09-02",
+          "opponent": "Cincinnati Reds",
+          "opponentAbbr": "CIN",
+          "home": false,
+          "score": 3,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "Great American Ball Park"
+        },
+        {
           "date": "2026-09-01",
           "opponent": "Cincinnati Reds",
           "opponentAbbr": "CIN",
@@ -1179,16 +1189,6 @@
           "opponentScore": 0,
           "result": "W",
           "venue": "Great American Ball Park"
-        },
-        {
-          "date": "2026-08-30",
-          "opponent": "Tampa Bay Rays",
-          "opponentAbbr": "TB",
-          "home": false,
-          "score": 4,
-          "opponentScore": 5,
-          "result": "L",
-          "venue": "Tropicana Field"
         }
       ]
     },

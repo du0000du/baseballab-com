@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-02T17:31:48Z",
+  "fetched_at": "2026-09-02T19:35:40Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -136,7 +136,7 @@
         "playerId": 671739,
         "player": "Michael Harris II",
         "team": "ATL",
-        "value": ".296"
+        "value": ".295"
       },
       {
         "rank": 10,
