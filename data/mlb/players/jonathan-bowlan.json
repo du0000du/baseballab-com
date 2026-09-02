@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 680742,
+    "fullName": "Jonathan Bowlan",
+    "link": "/api/v1/people/680742",
+    "firstName": "Jonathan",
+    "lastName": "Bowlan",
+    "primaryNumber": "52",
+    "birthDate": "1996-12-01",
+    "currentAge": 29,
+    "birthCity": "Arlington",
+    "birthStateProvince": "TN",
+    "birthCountry": "USA",
+    "height": "6' 6\"",
+    "weight": 240,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Jonathan",
+    "useLastName": "Bowlan",
+    "boxscoreName": "Bowlan",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": false,
+    "draftYear": 2018,
+    "pronunciation": "boh-lin",
+    "mlbDebutDate": "2023-09-27",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jonathan Bowlan",
+    "nameSlug": "jonathan-bowlan-680742",
+    "firstLastName": "Jonathan Bowlan",
+    "lastFirstName": "Bowlan, Jonathan",
+    "lastInitName": "Bowlan, J",
+    "initLastName": "J Bowlan",
+    "fullFMLName": "Jonathan  Bowlan",
+    "fullLFMName": "Bowlan, Jonathan",
+    "strikeZoneTop": 3.478,
+    "strikeZoneBottom": 1.755
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 53,
+            "gamesStarted": 0,
+            "groundOuts": 45,
+            "airOuts": 42,
+            "runs": 18,
+            "doubles": 3,
+            "triples": 1,
+            "homeRuns": 5,
+            "strikeOuts": 64,
+            "baseOnBalls": 14,
+            "intentionalWalks": 0,
+            "hits": 36,
+            "hitByPitch": 3,
+            "avg": ".195",
+            "atBats": 185,
+            "obp": ".260",
+            "slg": ".303",
+            "ops": ".563",
+            "caughtStealing": 3,
+            "stolenBases": 4,
+            "stolenBasePercentage": ".571",
+            "caughtStealingPercentage": ".429",
+            "groundIntoDoublePlay": 4,
+            "numberOfPitches": 860,
+            "era": "2.82",
+            "inningsPitched": "51.0",
+            "wins": 2,
+            "losses": 1,
+            "saves": 2,
+            "saveOpportunities": 6,
+            "holds": 12,
+            "blownSaves": 4,
+            "earnedRuns": 16,
+            "whip": "0.98",
+            "battersFaced": 204,
+            "outs": 153,
+            "gamesPitched": 53,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 553,
+            "strikePercentage": ".640",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 56,
+            "groundOutsToAirouts": "1.07",
+            "winPercentage": ".667",
+            "pitchesPerInning": "16.86",
+            "gamesFinished": 7,
+            "strikeoutWalkRatio": "4.57",
+            "strikeoutsPer9Inn": "11.29",
+            "walksPer9Inn": "2.47",
+            "hitsPer9Inn": "6.35",
+            "runsScoredPer9": "3.18",
+            "homeRunsPer9": "0.88",
+            "inheritedRunners": 25,
+            "inheritedRunnersScored": 7,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 143,
+            "name": "Philadelphia Phillies",
+            "link": "/api/v1/teams/143"
+          },
+          "player": {
+            "id": 680742,
+            "fullName": "Jonathan Bowlan",
+            "link": "/api/v1/people/680742"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

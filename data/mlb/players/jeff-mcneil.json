@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 643446,
+    "fullName": "Jeff McNeil",
+    "link": "/api/v1/people/643446",
+    "firstName": "Jeffrey",
+    "lastName": "McNeil",
+    "primaryNumber": "22",
+    "birthDate": "1992-04-08",
+    "currentAge": 34,
+    "birthCity": "Santa Barbara",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 0\"",
+    "weight": 195,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Jeff",
+    "useLastName": "McNeil",
+    "middleName": "Todd",
+    "boxscoreName": "McNeil",
+    "nickName": "Flying Squirrel",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2013,
+    "mlbDebutDate": "2018-07-24",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Jeff McNeil",
+    "nameSlug": "jeff-mcneil-643446",
+    "firstLastName": "Jeff McNeil",
+    "lastFirstName": "McNeil, Jeff",
+    "lastInitName": "McNeil, J",
+    "initLastName": "J McNeil",
+    "fullFMLName": "Jeffrey Todd McNeil",
+    "fullLFMName": "McNeil, Jeffrey Todd",
+    "strikeZoneTop": 3.214,
+    "strikeZoneBottom": 1.622
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 122,
+            "groundOuts": 111,
+            "airOuts": 136,
+            "runs": 40,
+            "doubles": 19,
+            "triples": 0,
+            "homeRuns": 7,
+            "strikeOuts": 48,
+            "baseOnBalls": 26,
+            "intentionalWalks": 1,
+            "hits": 105,
+            "hitByPitch": 5,
+            "avg": ".266",
+            "atBats": 395,
+            "obp": ".316",
+            "slg": ".367",
+            "ops": ".683",
+            "caughtStealing": 2,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".778",
+            "caughtStealingPercentage": ".222",
+            "groundIntoDoublePlay": 12,
+            "numberOfPitches": 1498,
+            "plateAppearances": 432,
+            "totalBases": 145,
+            "rbi": 49,
+            "leftOnBase": 159,
+            "sacBunts": 1,
+            "sacFlies": 4,
+            "babip": ".285",
+            "groundOutsToAirouts": "0.82",
+            "catchersInterference": 1,
+            "atBatsPerHomeRun": "56.43"
+          },
+          "team": {
+            "id": 133,
+            "name": "Athletics",
+            "link": "/api/v1/teams/133"
+          },
+          "player": {
+            "id": 643446,
+            "fullName": "Jeff McNeil",
+            "link": "/api/v1/people/643446"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
