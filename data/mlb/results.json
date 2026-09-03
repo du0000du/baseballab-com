@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-03T17:24:35Z",
+  "fetchedAt": "2026-09-03T19:33:19Z",
   "season": "2026",
   "asOfDate": "2026-09-03",
   "teams": [
@@ -751,6 +751,16 @@
       "divisionShort": "NL Central",
       "recentGames": [
         {
+          "date": "2026-09-03",
+          "opponent": "San Francisco Giants",
+          "opponentAbbr": "SF",
+          "home": true,
+          "score": 5,
+          "opponentScore": 2,
+          "result": "W",
+          "venue": "PNC Park"
+        },
+        {
           "date": "2026-09-02",
           "opponent": "San Francisco Giants",
           "opponentAbbr": "SF",
@@ -769,16 +779,6 @@
           "opponentScore": 12,
           "result": "W",
           "venue": "PNC Park"
-        },
-        {
-          "date": "2026-08-30",
-          "opponent": "St. Louis Cardinals",
-          "opponentAbbr": "STL",
-          "home": false,
-          "score": 5,
-          "opponentScore": 4,
-          "result": "W",
-          "venue": "Busch Stadium"
         }
       ]
     },
@@ -1202,6 +1202,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-09-03",
+          "opponent": "Pittsburgh Pirates",
+          "opponentAbbr": "PIT",
+          "home": false,
+          "score": 2,
+          "opponentScore": 5,
+          "result": "L",
+          "venue": "PNC Park"
+        },
+        {
           "date": "2026-09-02",
           "opponent": "Pittsburgh Pirates",
           "opponentAbbr": "PIT",
@@ -1220,16 +1230,6 @@
           "opponentScore": 13,
           "result": "L",
           "venue": "PNC Park"
-        },
-        {
-          "date": "2026-08-31",
-          "opponent": "Atlanta Braves",
-          "opponentAbbr": "ATL",
-          "home": false,
-          "score": 7,
-          "opponentScore": 3,
-          "result": "W",
-          "venue": "Truist Park"
         }
       ]
     }
