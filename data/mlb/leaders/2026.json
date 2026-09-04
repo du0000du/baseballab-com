@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-03T19:33:18Z",
+  "fetched_at": "2026-09-04T05:12:02Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -15,7 +15,7 @@
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 38
+        "value": 39
       },
       {
         "rank": 3,
@@ -57,10 +57,10 @@
         "playerId": 624413,
         "player": "Pete Alonso",
         "team": "BAL",
-        "value": 32
+        "value": 33
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 646240,
         "player": "Rafael Devers",
         "team": "SF",
@@ -80,7 +80,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".317"
+        "value": ".316"
       },
       {
         "rank": 2,
@@ -91,37 +91,37 @@
       },
       {
         "rank": 3,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
-        "value": ".312"
-      },
-      {
-        "rank": 4,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
         "value": ".310"
       },
       {
+        "rank": 4,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
+        "value": ".309"
+      },
+      {
         "rank": 5,
-        "playerId": 518692,
-        "player": "Freddie Freeman",
-        "team": "LAD",
-        "value": ".306"
-      },
-      {
-        "rank": 6,
-        "playerId": 672640,
-        "player": "Otto Lopez",
-        "team": "MIA",
-        "value": ".304"
-      },
-      {
-        "rank": 7,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
+        "value": ".303"
+      },
+      {
+        "rank": 6,
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
+        "value": ".303"
+      },
+      {
+        "rank": 7,
+        "playerId": 672640,
+        "player": "Otto Lopez",
+        "team": "MIA",
         "value": ".302"
       },
       {
@@ -143,7 +143,7 @@
         "playerId": 800050,
         "player": "Chase DeLauter",
         "team": "CLE",
-        "value": ".295"
+        "value": ".293"
       }
     ],
     "rbi": [
@@ -177,24 +177,24 @@
       },
       {
         "rank": 4,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "BAL",
+        "value": 94
+      },
+      {
+        "rank": 4,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
         "value": 94
       },
       {
-        "rank": 6,
-        "playerId": 624413,
-        "player": "Pete Alonso",
-        "team": "BAL",
-        "value": 92
-      },
-      {
         "rank": 7,
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 91
+        "value": 93
       },
       {
         "rank": 8,
@@ -538,25 +538,25 @@
         "value": 32
       },
       {
-        "rank": 5,
+        "rank": 4,
+        "playerId": 686973,
+        "player": "Louis Varland",
+        "team": "TOR",
+        "value": 32
+      },
+      {
+        "rank": 6,
         "playerId": 670280,
         "player": "David Bednar",
         "team": "NYY",
         "value": 31
       },
       {
-        "rank": 5,
-        "playerId": 686973,
-        "player": "Louis Varland",
-        "team": "TOR",
-        "value": 31
-      },
-      {
-        "rank": 7,
+        "rank": 6,
         "playerId": 547973,
         "player": "Aroldis Chapman",
         "team": "BOS",
-        "value": 30
+        "value": 31
       },
       {
         "rank": 8,
