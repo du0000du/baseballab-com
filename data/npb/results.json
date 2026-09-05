@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-05T12:22:46Z",
+  "fetchedAt": "2026-09-05T16:23:41Z",
   "season": "2026",
   "asOfDate": "2026-09-05",
   "teams": [
@@ -93,9 +93,9 @@
           "opponent": "広島東洋カープ",
           "opponentSlug": "hiroshima-carp",
           "home": true,
-          "score": 5,
+          "score": 10,
           "opponentScore": 5,
-          "result": "T",
+          "result": "W",
           "stadium": "東京ドーム"
         },
         {
@@ -172,8 +172,8 @@
           "opponentSlug": "yomiuri-giants",
           "home": false,
           "score": 5,
-          "opponentScore": 5,
-          "result": "T",
+          "opponentScore": 10,
+          "result": "L",
           "stadium": "東京ドーム"
         },
         {

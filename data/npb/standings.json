@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-09-05T12:21:59Z",
+  "fetchedAt": "2026-09-05T16:23:02Z",
   "central": [
     {
       "rank": 1,
@@ -183,11 +183,11 @@
       "teamAbbr": "G",
       "league": "central",
       "games": 123,
-      "wins": 65,
+      "wins": 66,
       "losses": 55,
-      "ties": 3,
-      "pct": ".541",
-      "gb": "4"
+      "ties": 2,
+      "pct": ".545",
+      "gb": "3.5"
     },
     {
       "rank": 3,
@@ -217,19 +217,6 @@
     },
     {
       "rank": 5,
-      "teamSlug": "hiroshima-carp",
-      "teamName": "広島東洋カープ",
-      "teamAbbr": "C",
-      "league": "central",
-      "games": 119,
-      "wins": 49,
-      "losses": 65,
-      "ties": 5,
-      "pct": ".429",
-      "gb": "17"
-    },
-    {
-      "rank": 6,
       "teamSlug": "chunichi-dragons",
       "teamName": "中日ドラゴンズ",
       "teamAbbr": "D",
@@ -240,6 +227,19 @@
       "ties": 2,
       "pct": ".427",
       "gb": "18"
+    },
+    {
+      "rank": 6,
+      "teamSlug": "hiroshima-carp",
+      "teamName": "広島東洋カープ",
+      "teamAbbr": "C",
+      "league": "central",
+      "games": 119,
+      "wins": 49,
+      "losses": 66,
+      "ties": 4,
+      "pct": ".426",
+      "gb": "17.5"
     }
   ],
   "estimatedPacific": [
