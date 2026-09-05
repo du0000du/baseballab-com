@@ -9,21 +9,21 @@
   "group": "pitching",
   "qualified": false,
   "season": "2026",
-  "rank": null,
+  "rank": 10,
   "stats": {
-    "era": 2.08,
-    "games": 48,
+    "era": 2.03,
+    "games": 49,
     "wins": 4,
     "losses": 2,
     "saves": 0,
-    "holds": 16,
-    "hp": 20,
+    "holds": 17,
+    "hp": 21,
     "cg": 0,
     "sho": 0,
     "nbb": 0,
     "winpct": 0.667,
-    "bf": 193,
-    "ip": 47.2,
+    "bf": 196,
+    "ip": 48.2,
     "hits": 38,
     "hr": 4,
     "bb": 14,
@@ -34,10 +34,10 @@
     "balk": 1,
     "runs": 11,
     "er": 11,
-    "whip": 1.09
+    "whip": 1.07
   },
-  "asOf": "2026-09-04",
-  "fetchedAt": "2026-09-05T16:23:02Z",
+  "asOf": "2026-09-05",
+  "fetchedAt": "2026-09-05T18:41:35Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/idp1_c.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/pit_c.html"
 }
