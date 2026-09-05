@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 657514,
+    "fullName": "Brennan Bernardino",
+    "link": "/api/v1/people/657514",
+    "firstName": "Brennan",
+    "lastName": "Bernardino",
+    "primaryNumber": "83",
+    "birthDate": "1992-01-15",
+    "currentAge": 34,
+    "birthCity": "Valencia",
+    "birthStateProvince": "CA",
+    "birthCountry": "USA",
+    "height": "6' 4\"",
+    "weight": 216,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Brennan",
+    "useLastName": "Bernardino",
+    "middleName": "Allen",
+    "boxscoreName": "Bernardino",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2014,
+    "pronunciation": "ber-nar-DEEN-o",
+    "mlbDebutDate": "2022-07-31",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "L",
+      "description": "Left"
+    },
+    "nameFirstLast": "Brennan Bernardino",
+    "nameSlug": "brennan-bernardino-657514",
+    "firstLastName": "Brennan Bernardino",
+    "lastFirstName": "Bernardino, Brennan",
+    "lastInitName": "Bernardino, B",
+    "initLastName": "B Bernardino",
+    "fullFMLName": "Brennan Allen Bernardino",
+    "fullLFMName": "Bernardino, Brennan Allen",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 34,
+            "gamesPlayed": 66,
+            "gamesStarted": 2,
+            "groundOuts": 59,
+            "airOuts": 66,
+            "runs": 21,
+            "doubles": 12,
+            "triples": 1,
+            "homeRuns": 4,
+            "strikeOuts": 41,
+            "baseOnBalls": 14,
+            "intentionalWalks": 1,
+            "hits": 50,
+            "hitByPitch": 3,
+            "avg": ".237",
+            "atBats": 211,
+            "obp": ".291",
+            "slg": ".360",
+            "ops": ".651",
+            "caughtStealing": 1,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".900",
+            "caughtStealingPercentage": ".100",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 888,
+            "era": "2.54",
+            "inningsPitched": "56.2",
+            "wins": 3,
+            "losses": 3,
+            "saves": 1,
+            "saveOpportunities": 5,
+            "holds": 12,
+            "blownSaves": 4,
+            "earnedRuns": 16,
+            "whip": "1.13",
+            "battersFaced": 234,
+            "outs": 170,
+            "gamesPitched": 66,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 554,
+            "strikePercentage": ".620",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 1,
+            "pickoffs": 3,
+            "totalBases": 76,
+            "groundOutsToAirouts": "0.89",
+            "winPercentage": ".500",
+            "pitchesPerInning": "15.67",
+            "gamesFinished": 10,
+            "strikeoutWalkRatio": "2.93",
+            "strikeoutsPer9Inn": "6.51",
+            "walksPer9Inn": "2.22",
+            "hitsPer9Inn": "7.94",
+            "runsScoredPer9": "3.34",
+            "homeRunsPer9": "0.64",
+            "inheritedRunners": 44,
+            "inheritedRunnersScored": 12,
+            "catchersInterference": 1,
+            "sacBunts": 3,
+            "sacFlies": 2
+          },
+          "team": {
+            "id": 115,
+            "name": "Colorado Rockies",
+            "link": "/api/v1/teams/115"
+          },
+          "player": {
+            "id": 657514,
+            "fullName": "Brennan Bernardino",
+            "link": "/api/v1/people/657514"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
