@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-05T05:00:58Z",
+  "fetchedAt": "2026-09-05T12:23:24Z",
   "season": "2026",
   "asOfDate": "2026-09-05",
   "teams": [
@@ -423,6 +423,16 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-09-04",
+          "opponent": "Seattle Mariners",
+          "opponentAbbr": "SEA",
+          "home": false,
+          "score": 7,
+          "opponentScore": 6,
+          "result": "W",
+          "venue": "T-Mobile Park"
+        },
+        {
           "date": "2026-09-03",
           "opponent": "Seattle Mariners",
           "opponentAbbr": "SEA",
@@ -440,16 +450,6 @@
           "score": 9,
           "opponentScore": 2,
           "result": "W",
-          "venue": "Globe Life Field"
-        },
-        {
-          "date": "2026-09-01",
-          "opponent": "Texas Rangers",
-          "opponentAbbr": "TEX",
-          "home": false,
-          "score": 5,
-          "opponentScore": 8,
-          "result": "L",
           "venue": "Globe Life Field"
         }
       ]
@@ -546,6 +546,16 @@
       "divisionShort": "AL West",
       "recentGames": [
         {
+          "date": "2026-09-04",
+          "opponent": "Athletics",
+          "opponentAbbr": "ATH",
+          "home": true,
+          "score": 6,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "T-Mobile Park"
+        },
+        {
           "date": "2026-09-03",
           "opponent": "Athletics",
           "opponentAbbr": "ATH",
@@ -562,16 +572,6 @@
           "home": false,
           "score": 8,
           "opponentScore": 3,
-          "result": "W",
-          "venue": "Fenway Park"
-        },
-        {
-          "date": "2026-09-01",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": false,
-          "score": 9,
-          "opponentScore": 6,
           "result": "W",
           "venue": "Fenway Park"
         }
