@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-06T16:35:49Z",
+  "fetched_at": "2026-09-06T18:47:15Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -19,20 +19,20 @@
       },
       {
         "rank": 3,
+        "playerId": 670541,
+        "player": "Yordan Alvarez",
+        "team": "HOU",
+        "value": 38
+      },
+      {
+        "rank": 3,
         "playerId": 691406,
         "player": "Junior Caminero",
         "team": "TB",
         "value": 38
       },
       {
-        "rank": 4,
-        "playerId": 670541,
-        "player": "Yordan Alvarez",
-        "team": "HOU",
-        "value": 37
-      },
-      {
-        "rank": 4,
+        "rank": 5,
         "playerId": 621566,
         "player": "Matt Olson",
         "team": "ATL",
@@ -87,7 +87,7 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".315"
+        "value": ".317"
       },
       {
         "rank": 3,
@@ -101,14 +101,14 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".307"
+        "value": ".306"
       },
       {
         "rank": 5,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".304"
+        "value": ".303"
       },
       {
         "rank": 6,
@@ -122,7 +122,7 @@
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".300"
+        "value": ".301"
       },
       {
         "rank": 8,
@@ -152,7 +152,7 @@
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
-        "value": 106
+        "value": 107
       },
       {
         "rank": 2,
@@ -170,30 +170,30 @@
       },
       {
         "rank": 4,
-        "playerId": 682928,
-        "player": "CJ Abrams",
-        "team": "WSH",
-        "value": 94
-      },
-      {
-        "rank": 4,
-        "playerId": 624413,
-        "player": "Pete Alonso",
-        "team": "BAL",
-        "value": 94
-      },
-      {
-        "rank": 4,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": 94
+        "value": 95
       },
       {
         "rank": 4,
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
+        "value": 95
+      },
+      {
+        "rank": 6,
+        "playerId": 682928,
+        "player": "CJ Abrams",
+        "team": "WSH",
+        "value": 94
+      },
+      {
+        "rank": 6,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "BAL",
         "value": 94
       },
       {
@@ -277,17 +277,17 @@
       },
       {
         "rank": 9,
-        "playerId": 665923,
-        "player": "Esteury Ruiz",
+        "playerId": 672640,
+        "player": "Otto Lopez",
         "team": "MIA",
         "value": 30
       },
       {
-        "rank": 10,
-        "playerId": 672640,
-        "player": "Otto Lopez",
+        "rank": 9,
+        "playerId": 665923,
+        "player": "Esteury Ruiz",
         "team": "MIA",
-        "value": 29
+        "value": 30
       }
     ]
   },
@@ -340,7 +340,7 @@
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
-        "value": "2.59"
+        "value": "2.63"
       },
       {
         "rank": 8,
@@ -446,17 +446,17 @@
       },
       {
         "rank": 2,
+        "playerId": 668909,
+        "player": "Gavin Williams",
+        "team": "CLE",
+        "value": 225
+      },
+      {
+        "rank": 3,
         "playerId": 656302,
         "player": "Dylan Cease",
         "team": "TOR",
         "value": 221
-      },
-      {
-        "rank": 3,
-        "playerId": 668909,
-        "player": "Gavin Williams",
-        "team": "CLE",
-        "value": 217
       },
       {
         "rank": 4,
