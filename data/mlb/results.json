@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-07T18:31:25Z",
+  "fetchedAt": "2026-09-07T20:19:27Z",
   "season": "2026",
   "asOfDate": "2026-09-07",
   "teams": [
@@ -833,6 +833,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-09-07",
+          "opponent": "Philadelphia Phillies",
+          "opponentAbbr": "PHI",
+          "home": false,
+          "score": 0,
+          "opponentScore": 1,
+          "result": "L",
+          "venue": "Citizens Bank Park"
+        },
+        {
           "date": "2026-09-06",
           "opponent": "Philadelphia Phillies",
           "opponentAbbr": "PHI",
@@ -851,16 +861,6 @@
           "opponentScore": 4,
           "result": "L",
           "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-09-04",
-          "opponent": "Philadelphia Phillies",
-          "opponentAbbr": "PHI",
-          "home": false,
-          "score": 5,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "Citizens Bank Park"
         }
       ]
     },
@@ -873,6 +873,16 @@
       "division": "National League East",
       "divisionShort": "NL East",
       "recentGames": [
+        {
+          "date": "2026-09-07",
+          "opponent": "New York Mets",
+          "opponentAbbr": "NYM",
+          "home": true,
+          "score": 4,
+          "opponentScore": 9,
+          "result": "L",
+          "venue": "loanDepot park"
+        },
         {
           "date": "2026-09-06",
           "opponent": "Chicago Cubs",
@@ -892,16 +902,6 @@
           "opponentScore": 6,
           "result": "L",
           "venue": "loanDepot park"
-        },
-        {
-          "date": "2026-09-04",
-          "opponent": "Chicago Cubs",
-          "opponentAbbr": "CHC",
-          "home": true,
-          "score": 1,
-          "opponentScore": 6,
-          "result": "L",
-          "venue": "loanDepot park"
         }
       ]
     },
@@ -914,6 +914,16 @@
       "division": "National League East",
       "divisionShort": "NL East",
       "recentGames": [
+        {
+          "date": "2026-09-07",
+          "opponent": "Miami Marlins",
+          "opponentAbbr": "MIA",
+          "home": false,
+          "score": 9,
+          "opponentScore": 4,
+          "result": "W",
+          "venue": "loanDepot park"
+        },
         {
           "date": "2026-09-06",
           "opponent": "San Francisco Giants",
@@ -933,16 +943,6 @@
           "opponentScore": 9,
           "result": "L",
           "venue": "Citi Field"
-        },
-        {
-          "date": "2026-09-04",
-          "opponent": "San Francisco Giants",
-          "opponentAbbr": "SF",
-          "home": true,
-          "score": 10,
-          "opponentScore": 6,
-          "result": "W",
-          "venue": "Citi Field"
         }
       ]
     },
@@ -955,6 +955,16 @@
       "division": "National League East",
       "divisionShort": "NL East",
       "recentGames": [
+        {
+          "date": "2026-09-07",
+          "opponent": "Atlanta Braves",
+          "opponentAbbr": "ATL",
+          "home": true,
+          "score": 1,
+          "opponentScore": 0,
+          "result": "W",
+          "venue": "Citizens Bank Park"
+        },
         {
           "date": "2026-09-06",
           "opponent": "Atlanta Braves",
@@ -973,16 +983,6 @@
           "score": 4,
           "opponentScore": 2,
           "result": "W",
-          "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-09-04",
-          "opponent": "Atlanta Braves",
-          "opponentAbbr": "ATL",
-          "home": true,
-          "score": 2,
-          "opponentScore": 5,
-          "result": "L",
           "venue": "Citizens Bank Park"
         }
       ]

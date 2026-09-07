@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-07T18:31:25Z",
+  "fetched_at": "2026-09-07T20:19:27Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -8,7 +8,7 @@
         "playerId": 656941,
         "player": "Kyle Schwarber",
         "team": "PHI",
-        "value": 42
+        "value": 43
       },
       {
         "rank": 2,
@@ -112,31 +112,31 @@
       },
       {
         "rank": 6,
-        "playerId": 518692,
-        "player": "Freddie Freeman",
-        "team": "LAD",
-        "value": ".301"
-      },
-      {
-        "rank": 7,
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
         "value": ".301"
       },
       {
-        "rank": 8,
-        "playerId": 672515,
-        "player": "Gabriel Moreno",
-        "team": "AZ",
-        "value": ".299"
+        "rank": 7,
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
+        "value": ".301"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "playerId": 681198,
         "player": "TJ Rumfield",
         "team": "COL",
         "value": ".299"
+      },
+      {
+        "rank": 9,
+        "playerId": 672515,
+        "player": "Gabriel Moreno",
+        "team": "AZ",
+        "value": ".298"
       },
       {
         "rank": 10,
@@ -184,17 +184,17 @@
       },
       {
         "rank": 5,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "BAL",
+        "value": 95
+      },
+      {
+        "rank": 5,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
         "value": 95
-      },
-      {
-        "rank": 7,
-        "playerId": 624413,
-        "player": "Pete Alonso",
-        "team": "BAL",
-        "value": 94
       },
       {
         "rank": 8,
@@ -252,7 +252,7 @@
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 33
+        "value": 35
       },
       {
         "rank": 6,
@@ -409,6 +409,13 @@
       },
       {
         "rank": 6,
+        "playerId": 666200,
+        "player": "Jesús Luzardo",
+        "team": "PHI",
+        "value": 14
+      },
+      {
+        "rank": 6,
         "playerId": 607259,
         "player": "Nick Martinez",
         "team": "TB",
@@ -426,13 +433,6 @@
         "playerId": 656876,
         "player": "Drew Rasmussen",
         "team": "TB",
-        "value": 14
-      },
-      {
-        "rank": 6,
-        "playerId": 519242,
-        "player": "Chris Sale",
-        "team": "ATL",
         "value": 14
       }
     ],
@@ -459,11 +459,11 @@
         "value": 221
       },
       {
-        "rank": 4,
+        "rank": 3,
         "playerId": 666200,
         "player": "Jesús Luzardo",
         "team": "PHI",
-        "value": 218
+        "value": 221
       },
       {
         "rank": 5,
