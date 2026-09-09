@@ -1,168 +1,7 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-09-09T17:26:03Z",
+  "fetchedAt": "2026-09-09T19:34:06Z",
   "central": [
-    {
-      "rank": 1,
-      "teamSlug": "hanshin-tigers",
-      "teamName": "阪神タイガース",
-      "teamAbbr": "T",
-      "league": "central",
-      "games": 122,
-      "wins": 69,
-      "losses": 52,
-      "ties": 1,
-      "pct": ".570",
-      "gb": "--"
-    },
-    {
-      "rank": 2,
-      "teamSlug": "yomiuri-giants",
-      "teamName": "読売ジャイアンツ",
-      "teamAbbr": "G",
-      "league": "central",
-      "games": 125,
-      "wins": 67,
-      "losses": 56,
-      "ties": 2,
-      "pct": ".545",
-      "gb": "3.0"
-    },
-    {
-      "rank": 3,
-      "teamSlug": "yokohama-dena",
-      "teamName": "横浜DeNAベイスターズ",
-      "teamAbbr": "DB",
-      "league": "central",
-      "games": 123,
-      "wins": 57,
-      "losses": 63,
-      "ties": 3,
-      "pct": ".475",
-      "gb": "11.5"
-    },
-    {
-      "rank": 4,
-      "teamSlug": "yakult-swallows",
-      "teamName": "東京ヤクルトスワローズ",
-      "teamAbbr": "S",
-      "league": "central",
-      "games": 123,
-      "wins": 54,
-      "losses": 67,
-      "ties": 2,
-      "pct": ".446",
-      "gb": "15.0"
-    },
-    {
-      "rank": 5,
-      "teamSlug": "chunichi-dragons",
-      "teamName": "中日ドラゴンズ",
-      "teamAbbr": "D",
-      "league": "central",
-      "games": 127,
-      "wins": 54,
-      "losses": 71,
-      "ties": 2,
-      "pct": ".432",
-      "gb": "17.0"
-    },
-    {
-      "rank": 6,
-      "teamSlug": "hiroshima-carp",
-      "teamName": "広島東洋カープ",
-      "teamAbbr": "C",
-      "league": "central",
-      "games": 120,
-      "wins": 49,
-      "losses": 67,
-      "ties": 4,
-      "pct": ".422",
-      "gb": "17.5"
-    }
-  ],
-  "pacific": [
-    {
-      "rank": 1,
-      "teamSlug": "softbank-hawks",
-      "teamName": "福岡ソフトバンクホークス",
-      "teamAbbr": "H",
-      "league": "pacific",
-      "games": 124,
-      "wins": 76,
-      "losses": 45,
-      "ties": 3,
-      "pct": ".628",
-      "gb": "--"
-    },
-    {
-      "rank": 2,
-      "teamSlug": "seibu-lions",
-      "teamName": "埼玉西武ライオンズ",
-      "teamAbbr": "L",
-      "league": "pacific",
-      "games": 126,
-      "wins": 71,
-      "losses": 52,
-      "ties": 3,
-      "pct": ".577",
-      "gb": "6.0"
-    },
-    {
-      "rank": 3,
-      "teamSlug": "nipponham-fighters",
-      "teamName": "北海道日本ハムファイターズ",
-      "teamAbbr": "F",
-      "league": "pacific",
-      "games": 127,
-      "wins": 71,
-      "losses": 54,
-      "ties": 2,
-      "pct": ".568",
-      "gb": "7.0"
-    },
-    {
-      "rank": 4,
-      "teamSlug": "orix-buffaloes",
-      "teamName": "オリックス・バファローズ",
-      "teamAbbr": "B",
-      "league": "pacific",
-      "games": 126,
-      "wins": 59,
-      "losses": 65,
-      "ties": 2,
-      "pct": ".476",
-      "gb": "18.5"
-    },
-    {
-      "rank": 5,
-      "teamSlug": "lotte-marines",
-      "teamName": "千葉ロッテマリーンズ",
-      "teamAbbr": "M",
-      "league": "pacific",
-      "games": 120,
-      "wins": 55,
-      "losses": 62,
-      "ties": 3,
-      "pct": ".470",
-      "gb": "19.0"
-    },
-    {
-      "rank": 6,
-      "teamSlug": "rakuten-eagles",
-      "teamName": "東北楽天ゴールデンイーグルス",
-      "teamAbbr": "E",
-      "league": "pacific",
-      "games": 123,
-      "wins": 47,
-      "losses": 75,
-      "ties": 1,
-      "pct": ".385",
-      "gb": "29.5"
-    }
-  ],
-  "estimatedAsOf": "2026-09-09",
-  "estimatedCentral": [
     {
       "rank": 1,
       "teamSlug": "hanshin-tigers",
@@ -173,7 +12,7 @@
       "wins": 69,
       "losses": 53,
       "ties": 1,
-      "pct": ".565",
+      "pct": ".566",
       "gb": "--"
     },
     {
@@ -187,7 +26,7 @@
       "losses": 56,
       "ties": 2,
       "pct": ".548",
-      "gb": "2"
+      "gb": "2.0"
     },
     {
       "rank": 3,
@@ -212,8 +51,8 @@
       "wins": 54,
       "losses": 68,
       "ties": 2,
-      "pct": ".442",
-      "gb": "15"
+      "pct": ".443",
+      "gb": "15.0"
     },
     {
       "rank": 5,
@@ -225,8 +64,8 @@
       "wins": 54,
       "losses": 72,
       "ties": 2,
-      "pct": ".428",
-      "gb": "17"
+      "pct": ".429",
+      "gb": "17.0"
     },
     {
       "rank": 6,
@@ -242,7 +81,7 @@
       "gb": "16.5"
     }
   ],
-  "estimatedPacific": [
+  "pacific": [
     {
       "rank": 1,
       "teamSlug": "softbank-hawks",
@@ -266,8 +105,8 @@
       "wins": 72,
       "losses": 52,
       "ties": 3,
-      "pct": ".580",
-      "gb": "6"
+      "pct": ".581",
+      "gb": "6.0"
     },
     {
       "rank": 3,
@@ -280,7 +119,7 @@
       "losses": 55,
       "ties": 2,
       "pct": ".563",
-      "gb": "8"
+      "gb": "8.0"
     },
     {
       "rank": 4,
@@ -292,8 +131,8 @@
       "wins": 56,
       "losses": 62,
       "ties": 3,
-      "pct": ".474",
-      "gb": "19"
+      "pct": ".475",
+      "gb": "19.0"
     },
     {
       "rank": 5,
