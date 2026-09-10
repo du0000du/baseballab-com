@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-09T19:35:31Z",
+  "fetched_at": "2026-09-10T05:24:39Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -8,7 +8,7 @@
         "playerId": 656941,
         "player": "Kyle Schwarber",
         "team": "PHI",
-        "value": 43
+        "value": 44
       },
       {
         "rank": 2,
@@ -80,62 +80,62 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "PHI",
-        "value": ".316"
+        "value": ".318"
       },
       {
         "rank": 2,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".311"
+        "value": ".312"
       },
       {
         "rank": 3,
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".307"
+        "value": ".309"
       },
       {
         "rank": 4,
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".306"
+        "value": ".305"
       },
       {
         "rank": 5,
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".306"
+        "value": ".305"
       },
       {
         "rank": 6,
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".301"
+        "value": ".303"
       },
       {
         "rank": 7,
         "playerId": 672515,
         "player": "Gabriel Moreno",
         "team": "AZ",
-        "value": ".300"
-      },
-      {
-        "rank": 8,
-        "playerId": 681198,
-        "player": "TJ Rumfield",
-        "team": "COL",
         "value": ".299"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
+        "value": ".297"
+      },
+      {
+        "rank": 9,
+        "playerId": 681198,
+        "player": "TJ Rumfield",
+        "team": "COL",
         "value": ".297"
       },
       {
@@ -143,7 +143,7 @@
         "playerId": 800050,
         "player": "Chase DeLauter",
         "team": "CLE",
-        "value": ".294"
+        "value": ".296"
       }
     ],
     "rbi": [
@@ -184,16 +184,16 @@
       },
       {
         "rank": 6,
-        "playerId": 682928,
-        "player": "CJ Abrams",
-        "team": "WSH",
-        "value": 95
-      },
-      {
-        "rank": 6,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
+        "value": 96
+      },
+      {
+        "rank": 7,
+        "playerId": 682928,
+        "player": "CJ Abrams",
+        "team": "WSH",
         "value": 95
       },
       {
@@ -211,11 +211,11 @@
         "value": 92
       },
       {
-        "rank": 10,
-        "playerId": 671277,
-        "player": "Luis García Jr.",
-        "team": "NYY",
-        "value": 88
+        "rank": 9,
+        "playerId": 656941,
+        "player": "Kyle Schwarber",
+        "team": "PHI",
+        "value": 92
       }
     ],
     "stolenBases": [
@@ -224,20 +224,20 @@
         "playerId": 683083,
         "player": "Nasim Nuñez",
         "team": "WSH",
-        "value": 45
-      },
-      {
-        "rank": 2,
-        "playerId": 665862,
-        "player": "Jazz Chisholm Jr.",
-        "team": "NYY",
-        "value": 40
+        "value": 46
       },
       {
         "rank": 2,
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
+        "value": 41
+      },
+      {
+        "rank": 3,
+        "playerId": 665862,
+        "player": "Jazz Chisholm Jr.",
+        "team": "NYY",
         "value": 40
       },
       {
@@ -337,31 +337,31 @@
       },
       {
         "rank": 7,
-        "playerId": 650911,
-        "player": "Cristopher Sánchez",
-        "team": "PHI",
-        "value": "2.58"
-      },
-      {
-        "rank": 8,
         "playerId": 808967,
         "player": "Yoshinobu Yamamoto",
         "team": "LAD",
-        "value": "2.67"
+        "value": "2.62"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "playerId": 543243,
         "player": "Sonny Gray",
         "team": "BOS",
         "value": "2.69"
       },
       {
-        "rank": 10,
+        "rank": 9,
         "playerId": 695505,
         "player": "Chase Burns",
         "team": "CIN",
         "value": "2.73"
+      },
+      {
+        "rank": 10,
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
+        "value": "2.79"
       }
     ],
     "wins": [
@@ -373,11 +373,11 @@
         "value": 17
       },
       {
-        "rank": 2,
+        "rank": 1,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
-        "value": 16
+        "value": 17
       },
       {
         "rank": 3,
@@ -477,7 +477,7 @@
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
-        "value": 207
+        "value": 210
       },
       {
         "rank": 7,
