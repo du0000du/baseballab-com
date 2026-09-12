@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-12T05:13:10Z",
+  "fetched_at": "2026-09-12T12:38:54Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -535,7 +535,7 @@
         "playerId": 695243,
         "player": "Mason Miller",
         "team": "SD",
-        "value": 34
+        "value": 35
       },
       {
         "rank": 5,

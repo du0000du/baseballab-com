@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-12T05:13:10Z",
+  "fetchedAt": "2026-09-12T12:38:54Z",
   "season": "2026",
   "asOfDate": "2026-09-12",
   "teams": [
@@ -1161,6 +1161,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-09-11",
+          "opponent": "San Francisco Giants",
+          "opponentAbbr": "SF",
+          "home": false,
+          "score": 7,
+          "opponentScore": 5,
+          "result": "W",
+          "venue": "Oracle Park"
+        },
+        {
           "date": "2026-09-09",
           "opponent": "Washington Nationals",
           "opponentAbbr": "WSH",
@@ -1179,16 +1189,6 @@
           "opponentScore": 4,
           "result": "W",
           "venue": "Petco Park"
-        },
-        {
-          "date": "2026-09-07",
-          "opponent": "Washington Nationals",
-          "opponentAbbr": "WSH",
-          "home": true,
-          "score": 3,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "Petco Park"
         }
       ]
     },
@@ -1201,6 +1201,16 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "recentGames": [
+        {
+          "date": "2026-09-11",
+          "opponent": "San Diego Padres",
+          "opponentAbbr": "SD",
+          "home": true,
+          "score": 5,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "Oracle Park"
+        },
         {
           "date": "2026-09-09",
           "opponent": "St. Louis Cardinals",
@@ -1218,16 +1228,6 @@
           "home": true,
           "score": 2,
           "opponentScore": 1,
-          "result": "W",
-          "venue": "Oracle Park"
-        },
-        {
-          "date": "2026-09-07",
-          "opponent": "St. Louis Cardinals",
-          "opponentAbbr": "STL",
-          "home": true,
-          "score": 5,
-          "opponentScore": 4,
           "result": "W",
           "venue": "Oracle Park"
         }

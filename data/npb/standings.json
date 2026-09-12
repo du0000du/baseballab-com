@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-09-12T05:11:44Z",
+  "fetchedAt": "2026-09-12T12:37:20Z",
   "central": [
     {
       "rank": 1,
@@ -171,9 +171,9 @@
       "league": "central",
       "games": 124,
       "wins": 69,
-      "losses": 53,
-      "ties": 2,
-      "pct": ".565",
+      "losses": 54,
+      "ties": 1,
+      "pct": ".560",
       "gb": "--"
     },
     {
@@ -183,11 +183,11 @@
       "teamAbbr": "G",
       "league": "central",
       "games": 128,
-      "wins": 69,
+      "wins": 70,
       "losses": 56,
-      "ties": 3,
-      "pct": ".552",
-      "gb": "1.5"
+      "ties": 2,
+      "pct": ".555",
+      "gb": "0.5"
     },
     {
       "rank": 3,
@@ -196,11 +196,11 @@
       "teamAbbr": "DB",
       "league": "central",
       "games": 127,
-      "wins": 60,
+      "wins": 61,
       "losses": 63,
-      "ties": 4,
-      "pct": ".487",
-      "gb": "9.5"
+      "ties": 3,
+      "pct": ".491",
+      "gb": "8.5"
     },
     {
       "rank": 4,
@@ -209,11 +209,11 @@
       "teamAbbr": "S",
       "league": "central",
       "games": 126,
-      "wins": 54,
+      "wins": 55,
       "losses": 69,
-      "ties": 3,
-      "pct": ".439",
-      "gb": "15.5"
+      "ties": 2,
+      "pct": ".443",
+      "gb": "14.5"
     },
     {
       "rank": 5,
@@ -223,9 +223,9 @@
       "league": "central",
       "games": 130,
       "wins": 54,
-      "losses": 73,
-      "ties": 3,
-      "pct": ".425",
+      "losses": 74,
+      "ties": 2,
+      "pct": ".421",
       "gb": "17.5"
     },
     {
@@ -236,9 +236,9 @@
       "league": "central",
       "games": 123,
       "wins": 50,
-      "losses": 68,
-      "ties": 5,
-      "pct": ".423",
+      "losses": 69,
+      "ties": 4,
+      "pct": ".420",
       "gb": "17"
     }
   ],
@@ -250,10 +250,10 @@
       "teamAbbr": "H",
       "league": "pacific",
       "games": 128,
-      "wins": 79,
-      "losses": 46,
+      "wins": 80,
+      "losses": 45,
       "ties": 3,
-      "pct": ".632",
+      "pct": ".640",
       "gb": "--"
     },
     {
@@ -262,12 +262,12 @@
       "teamName": "埼玉西武ライオンズ",
       "teamAbbr": "L",
       "league": "pacific",
-      "games": 129,
+      "games": 130,
       "wins": 73,
       "losses": 53,
-      "ties": 3,
+      "ties": 4,
       "pct": ".579",
-      "gb": "6.5"
+      "gb": "7.5"
     },
     {
       "rank": 3,
@@ -275,38 +275,38 @@
       "teamName": "北海道日本ハムファイターズ",
       "teamAbbr": "F",
       "league": "pacific",
-      "games": 129,
+      "games": 130,
       "wins": 71,
       "losses": 56,
-      "ties": 2,
+      "ties": 3,
       "pct": ".559",
-      "gb": "9"
+      "gb": "10"
     },
     {
       "rank": 4,
-      "teamSlug": "lotte-marines",
-      "teamName": "千葉ロッテマリーンズ",
-      "teamAbbr": "M",
-      "league": "pacific",
-      "games": 124,
-      "wins": 58,
-      "losses": 63,
-      "ties": 3,
-      "pct": ".479",
-      "gb": "19"
-    },
-    {
-      "rank": 5,
       "teamSlug": "orix-buffaloes",
       "teamName": "オリックス・バファローズ",
       "teamAbbr": "B",
       "league": "pacific",
       "games": 130,
-      "wins": 60,
+      "wins": 61,
       "losses": 67,
+      "ties": 2,
+      "pct": ".476",
+      "gb": "20.5"
+    },
+    {
+      "rank": 5,
+      "teamSlug": "lotte-marines",
+      "teamName": "千葉ロッテマリーンズ",
+      "teamAbbr": "M",
+      "league": "pacific",
+      "games": 124,
+      "wins": 57,
+      "losses": 64,
       "ties": 3,
-      "pct": ".472",
-      "gb": "20"
+      "pct": ".471",
+      "gb": "21"
     },
     {
       "rank": 6,
@@ -316,10 +316,10 @@
       "league": "pacific",
       "games": 126,
       "wins": 47,
-      "losses": 77,
-      "ties": 2,
-      "pct": ".379",
-      "gb": "31.5"
+      "losses": 78,
+      "ties": 1,
+      "pct": ".376",
+      "gb": "33"
     }
   ]
 }

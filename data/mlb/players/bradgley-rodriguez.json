@@ -1,0 +1,153 @@
+{
+  "info": {
+    "id": 699134,
+    "fullName": "Bradgley Rodriguez",
+    "link": "/api/v1/people/699134",
+    "firstName": "Bradgley",
+    "lastName": "Rodriguez",
+    "primaryNumber": "72",
+    "birthDate": "2003-11-16",
+    "currentAge": 22,
+    "birthCity": "Petare",
+    "birthCountry": "Venezuela",
+    "height": "6' 1\"",
+    "weight": 160,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Bradgley",
+    "useLastName": "Rodriguez",
+    "middleName": "Eduardo",
+    "boxscoreName": "Rodriguez, B",
+    "gender": "M",
+    "nameMatrilineal": "Rodriguez",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "BRAD-glay",
+    "mlbDebutDate": "2025-05-31",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Bradgley Rodriguez",
+    "nameSlug": "bradgley-rodriguez-699134",
+    "firstLastName": "Bradgley Rodriguez",
+    "lastFirstName": "Rodriguez, Bradgley",
+    "lastInitName": "Rodriguez, B",
+    "initLastName": "B Rodriguez",
+    "fullFMLName": "Bradgley Eduardo Rodriguez",
+    "fullLFMName": "Rodriguez, Bradgley Eduardo",
+    "strikeZoneTop": 3.255,
+    "strikeZoneBottom": 1.643
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 22,
+            "gamesPlayed": 62,
+            "gamesStarted": 4,
+            "groundOuts": 68,
+            "airOuts": 59,
+            "runs": 21,
+            "doubles": 13,
+            "triples": 1,
+            "homeRuns": 3,
+            "strikeOuts": 74,
+            "baseOnBalls": 18,
+            "intentionalWalks": 1,
+            "hits": 51,
+            "hitByPitch": 0,
+            "avg": ".205",
+            "atBats": 249,
+            "obp": ".257",
+            "slg": ".301",
+            "ops": ".558",
+            "caughtStealing": 0,
+            "stolenBases": 3,
+            "stolenBasePercentage": "1.000",
+            "caughtStealingPercentage": ".000",
+            "groundIntoDoublePlay": 3,
+            "numberOfPitches": 1066,
+            "era": "1.90",
+            "inningsPitched": "66.1",
+            "wins": 3,
+            "losses": 3,
+            "saves": 2,
+            "saveOpportunities": 7,
+            "holds": 14,
+            "blownSaves": 5,
+            "earnedRuns": 14,
+            "whip": "1.04",
+            "battersFaced": 270,
+            "outs": 199,
+            "gamesPitched": 62,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 723,
+            "strikePercentage": ".680",
+            "hitBatsmen": 0,
+            "balks": 1,
+            "wildPitches": 0,
+            "pickoffs": 0,
+            "totalBases": 75,
+            "groundOutsToAirouts": "1.15",
+            "winPercentage": ".500",
+            "pitchesPerInning": "16.07",
+            "gamesFinished": 8,
+            "strikeoutWalkRatio": "4.11",
+            "strikeoutsPer9Inn": "10.04",
+            "walksPer9Inn": "2.44",
+            "hitsPer9Inn": "6.92",
+            "runsScoredPer9": "2.85",
+            "homeRunsPer9": "0.41",
+            "inheritedRunners": 27,
+            "inheritedRunnersScored": 14,
+            "catchersInterference": 0,
+            "sacBunts": 2,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 135,
+            "name": "San Diego Padres",
+            "link": "/api/v1/teams/135"
+          },
+          "player": {
+            "id": 699134,
+            "fullName": "Bradgley Rodriguez",
+            "link": "/api/v1/people/699134"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
