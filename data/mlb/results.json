@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-13T17:09:47Z",
+  "fetchedAt": "2026-09-13T19:10:32Z",
   "season": "2026",
   "asOfDate": "2026-09-13",
   "teams": [
@@ -95,6 +95,16 @@
       "divisionShort": "AL Central",
       "recentGames": [
         {
+          "date": "2026-09-13",
+          "opponent": "Colorado Rockies",
+          "opponentAbbr": "COL",
+          "home": true,
+          "score": 8,
+          "opponentScore": 1,
+          "result": "W",
+          "venue": "Comerica Park"
+        },
+        {
           "date": "2026-09-12",
           "opponent": "Colorado Rockies",
           "opponentAbbr": "COL",
@@ -110,16 +120,6 @@
           "opponentAbbr": "COL",
           "home": true,
           "score": 6,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "Comerica Park"
-        },
-        {
-          "date": "2026-09-09",
-          "opponent": "Minnesota Twins",
-          "opponentAbbr": "MIN",
-          "home": true,
-          "score": 7,
           "opponentScore": 2,
           "result": "W",
           "venue": "Comerica Park"
@@ -1079,6 +1079,16 @@
       "divisionShort": "NL West",
       "recentGames": [
         {
+          "date": "2026-09-13",
+          "opponent": "Detroit Tigers",
+          "opponentAbbr": "DET",
+          "home": false,
+          "score": 1,
+          "opponentScore": 8,
+          "result": "L",
+          "venue": "Comerica Park"
+        },
+        {
           "date": "2026-09-12",
           "opponent": "Detroit Tigers",
           "opponentAbbr": "DET",
@@ -1097,16 +1107,6 @@
           "opponentScore": 6,
           "result": "L",
           "venue": "Comerica Park"
-        },
-        {
-          "date": "2026-09-10",
-          "opponent": "New York Yankees",
-          "opponentAbbr": "NYY",
-          "home": false,
-          "score": 3,
-          "opponentScore": 10,
-          "result": "L",
-          "venue": "Yankee Stadium"
         }
       ]
     },

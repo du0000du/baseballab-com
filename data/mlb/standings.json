@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-13T17:09:46Z",
+  "fetchedAt": "2026-09-13T19:10:32Z",
   "season": "2026",
   "asOfDate": "2026-09-13",
   "teams": [
@@ -71,17 +71,17 @@
       "leagueShort": "AL",
       "division": "American League Central",
       "divisionShort": "AL Central",
-      "wins": 69,
+      "wins": 70,
       "losses": 79,
-      "games": 148,
-      "gamesPlayed": 148,
-      "gamesBack": "7.0",
-      "winPct": 0.4662,
-      "runsScored": 658,
-      "runsAllowed": 595,
-      "runDiff": 63,
-      "pythWinPct": 0.5459,
-      "luckDelta": -0.0797
+      "games": 149,
+      "gamesPlayed": 149,
+      "gamesBack": "6.5",
+      "winPct": 0.4698,
+      "runsScored": 666,
+      "runsAllowed": 596,
+      "runDiff": 70,
+      "pythWinPct": 0.5506,
+      "luckDelta": -0.0808
     },
     {
       "id": 118,
@@ -592,16 +592,16 @@
       "division": "National League West",
       "divisionShort": "NL West",
       "wins": 55,
-      "losses": 93,
-      "games": 148,
-      "gamesPlayed": 148,
-      "gamesBack": "35.0",
-      "winPct": 0.3716,
-      "runsScored": 695,
-      "runsAllowed": 857,
-      "runDiff": -162,
-      "pythWinPct": 0.4053,
-      "luckDelta": -0.0337
+      "losses": 94,
+      "games": 149,
+      "gamesPlayed": 149,
+      "gamesBack": "35.5",
+      "winPct": 0.3691,
+      "runsScored": 696,
+      "runsAllowed": 865,
+      "runDiff": -169,
+      "pythWinPct": 0.4018,
+      "luckDelta": -0.0327
     }
   ]
 }
