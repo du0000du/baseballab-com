@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-14T20:43:11Z",
+  "fetched_at": "2026-09-15T05:31:50Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -15,7 +15,7 @@
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 41
+        "value": 42
       },
       {
         "rank": 3,
@@ -71,7 +71,7 @@
         "playerId": 672960,
         "player": "Kazuma Okamoto",
         "team": "TOR",
-        "value": 32
+        "value": 33
       }
     ],
     "avg": [
@@ -94,7 +94,7 @@
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
-        "value": ".309"
+        "value": ".307"
       },
       {
         "rank": 4,
@@ -129,14 +129,14 @@
         "playerId": 681198,
         "player": "TJ Rumfield",
         "team": "COL",
-        "value": ".298"
+        "value": ".299"
       },
       {
         "rank": 9,
         "playerId": 664983,
         "player": "Jake McCarthy",
         "team": "COL",
-        "value": ".295"
+        "value": ".296"
       },
       {
         "rank": 10,
@@ -152,7 +152,7 @@
         "playerId": 676475,
         "player": "Alec Burleson",
         "team": "STL",
-        "value": 109
+        "value": 110
       },
       {
         "rank": 2,
@@ -163,27 +163,27 @@
       },
       {
         "rank": 3,
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
+        "value": 102
+      },
+      {
+        "rank": 4,
         "playerId": 624413,
         "player": "Pete Alonso",
         "team": "BAL",
         "value": 100
       },
       {
-        "rank": 3,
+        "rank": 4,
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
         "value": 100
       },
       {
-        "rank": 5,
-        "playerId": 691718,
-        "player": "Pete Crow-Armstrong",
-        "team": "CHC",
-        "value": 98
-      },
-      {
-        "rank": 5,
+        "rank": 6,
         "playerId": 646240,
         "player": "Rafael Devers",
         "team": "SF",
@@ -252,7 +252,7 @@
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 36
+        "value": 37
       },
       {
         "rank": 6,
@@ -263,17 +263,17 @@
       },
       {
         "rank": 7,
-        "playerId": 676609,
-        "player": "José Caballero",
-        "team": "NYY",
-        "value": 31
-      },
-      {
-        "rank": 7,
         "playerId": 608070,
         "player": "José Ramírez",
         "team": "CLE",
-        "value": 31
+        "value": 33
+      },
+      {
+        "rank": 8,
+        "playerId": 676609,
+        "player": "José Caballero",
+        "team": "NYY",
+        "value": 32
       },
       {
         "rank": 9,
@@ -453,16 +453,16 @@
       },
       {
         "rank": 3,
-        "playerId": 693645,
-        "player": "Cam Schlittler",
-        "team": "NYY",
-        "value": 228
-      },
-      {
-        "rank": 3,
         "playerId": 668909,
         "player": "Gavin Williams",
         "team": "CLE",
+        "value": 235
+      },
+      {
+        "rank": 4,
+        "playerId": 693645,
+        "player": "Cam Schlittler",
+        "team": "NYY",
         "value": 228
       },
       {
@@ -481,17 +481,17 @@
       },
       {
         "rank": 7,
+        "playerId": 672282,
+        "player": "Reid Detmers",
+        "team": "LAA",
+        "value": 199
+      },
+      {
+        "rank": 8,
         "playerId": 676917,
         "player": "Cade Cavalli",
         "team": "WSH",
         "value": 194
-      },
-      {
-        "rank": 8,
-        "playerId": 672282,
-        "player": "Reid Detmers",
-        "team": "LAA",
-        "value": 191
       },
       {
         "rank": 9,
@@ -521,17 +521,17 @@
         "playerId": 695243,
         "player": "Mason Miller",
         "team": "SD",
-        "value": 36
+        "value": 37
       },
       {
         "rank": 2,
         "playerId": 676617,
         "player": "Riley O'Brien",
         "team": "STL",
-        "value": 36
+        "value": 37
       },
       {
-        "rank": 2,
+        "rank": 4,
         "playerId": 671922,
         "player": "Cade Smith",
         "team": "CLE",
