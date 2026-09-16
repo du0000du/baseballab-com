@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-16T17:52:53Z",
+  "fetched_at": "2026-09-16T19:50:07Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -323,17 +323,17 @@
       },
       {
         "rank": 5,
-        "playerId": 800048,
-        "player": "Parker Messick",
-        "team": "CLE",
-        "value": "2.46"
-      },
-      {
-        "rank": 6,
         "playerId": 808967,
         "player": "Yoshinobu Yamamoto",
         "team": "LAD",
         "value": "2.51"
+      },
+      {
+        "rank": 6,
+        "playerId": 800048,
+        "player": "Parker Messick",
+        "team": "CLE",
+        "value": "2.57"
       },
       {
         "rank": 7,
@@ -531,11 +531,11 @@
         "value": 37
       },
       {
-        "rank": 4,
+        "rank": 2,
         "playerId": 671922,
         "player": "Cade Smith",
         "team": "CLE",
-        "value": 36
+        "value": 37
       },
       {
         "rank": 5,

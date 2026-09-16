@@ -7,14 +7,14 @@
   "teamName": "東北楽天ゴールデンイーグルス",
   "league": "pacific",
   "group": "batting",
-  "qualified": false,
+  "qualified": true,
   "season": "2026",
-  "rank": null,
+  "rank": 11,
   "stats": {
-    "avg": 0.279,
-    "games": 109,
-    "pa": 393,
-    "ab": 351,
+    "avg": 0.276,
+    "games": 110,
+    "pa": 397,
+    "ab": 355,
     "runs": 49,
     "hits": 98,
     "doubles": 22,
@@ -31,12 +31,12 @@
     "hbp": 3,
     "so": 46,
     "gidp": 7,
-    "slg": 0.402,
-    "obp": 0.337,
-    "ops": 0.739
+    "slg": 0.397,
+    "obp": 0.333,
+    "ops": 0.73
   },
-  "asOf": "2026-09-15",
-  "fetchedAt": "2026-09-16T17:51:18Z",
+  "asOf": "2026-09-16",
+  "fetchedAt": "2026-09-16T19:48:40Z",
   "source": "NPB.jp 日本野球機構",
-  "sourceUrl": "https://npb.jp/bis/2026/stats/idb1_e.html"
+  "sourceUrl": "https://npb.jp/bis/2026/stats/bat_p.html"
 }
