@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17T14:07:05Z",
+  "fetched_at": "2026-09-17T17:52:54Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -94,7 +94,7 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".310"
+        "value": ".309"
       },
       {
         "rank": 4,
@@ -105,17 +105,17 @@
       },
       {
         "rank": 5,
-        "playerId": 693304,
-        "player": "Nick Gonzales",
-        "team": "PIT",
-        "value": ".307"
-      },
-      {
-        "rank": 6,
         "playerId": 672640,
         "player": "Otto Lopez",
         "team": "MIA",
         "value": ".306"
+      },
+      {
+        "rank": 6,
+        "playerId": 693304,
+        "player": "Nick Gonzales",
+        "team": "PIT",
+        "value": ".305"
       },
       {
         "rank": 7,
@@ -143,7 +143,7 @@
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
-        "value": ".293"
+        "value": ".294"
       }
     ],
     "rbi": [
@@ -344,17 +344,17 @@
       },
       {
         "rank": 8,
-        "playerId": 543243,
-        "player": "Sonny Gray",
-        "team": "BOS",
+        "playerId": 656876,
+        "player": "Drew Rasmussen",
+        "team": "TB",
         "value": "2.76"
       },
       {
         "rank": 9,
-        "playerId": 656876,
-        "player": "Drew Rasmussen",
-        "team": "TB",
-        "value": "2.81"
+        "playerId": 543243,
+        "player": "Sonny Gray",
+        "team": "BOS",
+        "value": "2.76"
       },
       {
         "rank": 10,
