@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17T17:52:54Z",
+  "fetched_at": "2026-09-17T19:58:26Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -84,17 +84,17 @@
       },
       {
         "rank": 2,
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
+        "value": ".311"
+      },
+      {
+        "rank": 3,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
         "value": ".310"
-      },
-      {
-        "rank": 3,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
-        "value": ".309"
       },
       {
         "rank": 4,
@@ -115,7 +115,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".305"
+        "value": ".304"
       },
       {
         "rank": 7,
@@ -126,24 +126,24 @@
       },
       {
         "rank": 8,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
+        "playerId": 664983,
+        "player": "Jake McCarthy",
+        "team": "COL",
         "value": ".297"
       },
       {
         "rank": 9,
-        "playerId": 664983,
-        "player": "Jake McCarthy",
-        "team": "COL",
+        "playerId": 518692,
+        "player": "Freddie Freeman",
+        "team": "LAD",
         "value": ".295"
       },
       {
         "rank": 10,
-        "playerId": 518692,
-        "player": "Freddie Freeman",
-        "team": "LAD",
-        "value": ".294"
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".295"
       }
     ],
     "rbi": [
@@ -159,7 +159,7 @@
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
-        "value": 108
+        "value": 109
       },
       {
         "rank": 3,
@@ -231,10 +231,10 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": 42
+        "value": 44
       },
       {
-        "rank": 2,
+        "rank": 3,
         "playerId": 677951,
         "player": "Bobby Witt Jr.",
         "team": "KC",
@@ -347,7 +347,7 @@
         "playerId": 656876,
         "player": "Drew Rasmussen",
         "team": "TB",
-        "value": "2.76"
+        "value": "2.72"
       },
       {
         "rank": 9,
@@ -409,30 +409,30 @@
       },
       {
         "rank": 3,
+        "playerId": 656876,
+        "player": "Drew Rasmussen",
+        "team": "TB",
+        "value": 15
+      },
+      {
+        "rank": 3,
         "playerId": 593958,
         "player": "Eduardo Rodriguez",
         "team": "AZ",
         "value": 15
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 677952,
         "player": "Braxton Ashcraft",
         "team": "PIT",
         "value": 14
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 666200,
         "player": "Jesús Luzardo",
         "team": "PHI",
-        "value": 14
-      },
-      {
-        "rank": 8,
-        "playerId": 656876,
-        "player": "Drew Rasmussen",
-        "team": "TB",
         "value": 14
       }
     ],
