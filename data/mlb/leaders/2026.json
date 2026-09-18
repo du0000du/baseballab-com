@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17T19:58:26Z",
+  "fetched_at": "2026-09-18T05:21:16Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -29,10 +29,10 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": 39
+        "value": 40
       },
       {
-        "rank": 4,
+        "rank": 5,
         "playerId": 621566,
         "player": "Matt Olson",
         "team": "ATL",
@@ -80,21 +80,21 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "PHI",
-        "value": ".316"
+        "value": ".315"
       },
       {
         "rank": 2,
-        "playerId": 802415,
-        "player": "Chandler Simpson",
-        "team": "TB",
+        "playerId": 670541,
+        "player": "Yordan Alvarez",
+        "team": "HOU",
         "value": ".311"
       },
       {
         "rank": 3,
-        "playerId": 670541,
-        "player": "Yordan Alvarez",
-        "team": "HOU",
-        "value": ".310"
+        "playerId": 802415,
+        "player": "Chandler Simpson",
+        "team": "TB",
+        "value": ".311"
       },
       {
         "rank": 4,
@@ -122,14 +122,14 @@
         "playerId": 681198,
         "player": "TJ Rumfield",
         "team": "COL",
-        "value": ".300"
+        "value": ".301"
       },
       {
         "rank": 8,
         "playerId": 664983,
         "player": "Jake McCarthy",
         "team": "COL",
-        "value": ".297"
+        "value": ".295"
       },
       {
         "rank": 9,
@@ -187,10 +187,10 @@
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": 98
+        "value": 99
       },
       {
-        "rank": 6,
+        "rank": 7,
         "playerId": 646240,
         "player": "Rafael Devers",
         "team": "SF",
@@ -354,7 +354,7 @@
         "playerId": 543243,
         "player": "Sonny Gray",
         "team": "BOS",
-        "value": "2.76"
+        "value": "2.82"
       },
       {
         "rank": 10,
@@ -481,30 +481,30 @@
       },
       {
         "rank": 7,
+        "playerId": 671737,
+        "player": "Taj Bradley",
+        "team": "MIN",
+        "value": 199
+      },
+      {
+        "rank": 7,
         "playerId": 672282,
         "player": "Reid Detmers",
         "team": "LAA",
         "value": 199
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 676917,
         "player": "Cade Cavalli",
         "team": "WSH",
         "value": 194
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 669302,
         "player": "Logan Gilbert",
         "team": "SEA",
-        "value": 194
-      },
-      {
-        "rank": 8,
-        "playerId": 594798,
-        "player": "Jacob deGrom",
-        "team": "TEX",
         "value": 194
       }
     ],
@@ -570,7 +570,7 @@
         "playerId": 661395,
         "player": "Jhoan Duran",
         "team": "PHI",
-        "value": 31
+        "value": 32
       },
       {
         "rank": 10,
