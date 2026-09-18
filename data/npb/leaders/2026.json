@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-09-18T17:22:40Z",
+  "fetchedAt": "2026-09-18T19:21:38Z",
   "central": {
     "batting": {
       "avg": [
@@ -10,7 +10,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.315
+          "value": 0.314
         },
         {
           "rank": 2,
@@ -18,23 +18,23 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.297
+          "value": 0.298
         },
         {
           "rank": 3,
-          "slug": "maki-shuugo",
-          "player": "牧 秀悟",
+          "slug": "ryuki-watarai",
+          "player": "度会 隆輝",
           "team": "デ",
           "teamSlug": "yokohama-dena",
           "value": 0.288
         },
         {
           "rank": 4,
-          "slug": "ryuki-watarai",
-          "player": "度会 隆輝",
+          "slug": "maki-shuugo",
+          "player": "牧 秀悟",
           "team": "デ",
           "teamSlug": "yokohama-dena",
-          "value": 0.286
+          "value": 0.285
         },
         {
           "rank": 5,
@@ -42,7 +42,7 @@
           "player": "松本 剛",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
-          "value": 0.283
+          "value": 0.285
         },
         {
           "rank": 6,
@@ -50,7 +50,7 @@
           "player": "中野 拓夢",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.28
+          "value": 0.279
         },
         {
           "rank": 7,
@@ -78,11 +78,11 @@
         },
         {
           "rank": 10,
-          "slug": "kaito-muramatsu",
-          "player": "村松 開人",
-          "team": "中",
-          "teamSlug": "chunichi-dragons",
-          "value": 0.259
+          "slug": "izumiguchi-tomo-ta",
+          "player": "泉口 友汰",
+          "team": "巨",
+          "teamSlug": "yomiuri-giants",
+          "value": 0.258
         }
       ],
       "hr": [
@@ -174,7 +174,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 93
+          "value": 94
         },
         {
           "rank": 2,
@@ -198,7 +198,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 73
+          "value": 74
         },
         {
           "rank": 5,
@@ -252,19 +252,19 @@
       "sb": [
         {
           "rank": 1,
+          "slug": "yukihiro-iwata",
+          "player": "岩田 幸宏",
+          "team": "ヤ",
+          "teamSlug": "yakult-swallows",
+          "value": 37
+        },
+        {
+          "rank": 2,
           "slug": "urata-shunsuke",
           "player": "浦田 俊輔",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
           "value": 36
-        },
-        {
-          "rank": 2,
-          "slug": "yukihiro-iwata",
-          "player": "岩田 幸宏",
-          "team": "ヤ",
-          "teamSlug": "yakult-swallows",
-          "value": 35
         },
         {
           "rank": 3,
@@ -320,7 +320,7 @@
           "player": "並木 秀尊",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 11
+          "value": 12
         },
         {
           "rank": 10,
@@ -338,7 +338,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 1.009
+          "value": 1.005
         },
         {
           "rank": 2,
@@ -346,7 +346,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.965
+          "value": 0.968
         },
         {
           "rank": 3,
@@ -354,7 +354,7 @@
           "player": "牧 秀悟",
           "team": "デ",
           "teamSlug": "yokohama-dena",
-          "value": 0.945
+          "value": 0.935
         },
         {
           "rank": 4,
@@ -362,7 +362,7 @@
           "player": "サンタナ",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 0.82
+          "value": 0.817
         },
         {
           "rank": 5,
@@ -370,7 +370,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.8
+          "value": 0.797
         },
         {
           "rank": 6,
@@ -378,7 +378,7 @@
           "player": "ダルベック",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
-          "value": 0.783
+          "value": 0.779
         },
         {
           "rank": 7,
@@ -386,7 +386,7 @@
           "player": "細川 成也",
           "team": "中",
           "teamSlug": "chunichi-dragons",
-          "value": 0.778
+          "value": 0.772
         },
         {
           "rank": 8,
@@ -394,7 +394,7 @@
           "player": "度会 隆輝",
           "team": "デ",
           "teamSlug": "yokohama-dena",
-          "value": 0.746
+          "value": 0.752
         },
         {
           "rank": 9,
@@ -410,7 +410,7 @@
           "player": "坂倉 将吾",
           "team": "広",
           "teamSlug": "hiroshima-carp",
-          "value": 0.719
+          "value": 0.712
         }
       ],
       "hits": [
@@ -420,7 +420,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 151
+          "value": 152
         },
         {
           "rank": 2,
@@ -428,7 +428,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 141
+          "value": 142
         },
         {
           "rank": 3,
@@ -444,7 +444,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 126
+          "value": 127
         },
         {
           "rank": 5,
@@ -452,7 +452,7 @@
           "player": "度会 隆輝",
           "team": "デ",
           "teamSlug": "yokohama-dena",
-          "value": 120
+          "value": 122
         },
         {
           "rank": 6,
@@ -516,6 +516,14 @@
         },
         {
           "rank": 3,
+          "slug": "inoue-on-dai",
+          "player": "井上 温大",
+          "team": "巨",
+          "teamSlug": "yomiuri-giants",
+          "value": 2.16
+        },
+        {
+          "rank": 4,
           "slug": "katsuki-azuma",
           "player": "東 克樹",
           "team": "デ",
@@ -523,7 +531,7 @@
           "value": 2.22
         },
         {
-          "rank": 4,
+          "rank": 5,
           "slug": "yuya-yanagi",
           "player": "柳 裕也",
           "team": "中",
@@ -531,15 +539,15 @@
           "value": 2.34
         },
         {
-          "rank": 5,
+          "rank": 6,
           "slug": "taichi-yamano",
           "player": "山野 太一",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 2.43
+          "value": 2.37
         },
         {
-          "rank": 6,
+          "rank": 7,
           "slug": "hiroto-saiki",
           "player": "才木 浩人",
           "team": "神",
@@ -547,15 +555,15 @@
           "value": 2.46
         },
         {
-          "rank": 7,
+          "rank": 8,
           "slug": "yumeto-kanemaru",
           "player": "金丸 夢斗",
           "team": "中",
           "teamSlug": "chunichi-dragons",
-          "value": 2.75
+          "value": 2.72
         },
         {
-          "rank": 8,
+          "rank": 9,
           "slug": "okukawa-yasunobu",
           "player": "奥川 恭伸",
           "team": "ヤ",
@@ -563,7 +571,7 @@
           "value": 2.75
         },
         {
-          "rank": 9,
+          "rank": 10,
           "slug": "hiroki-tokoda",
           "player": "床田 寛樹",
           "team": "広",
@@ -590,18 +598,18 @@
         },
         {
           "rank": 3,
-          "slug": "shoki-murakami",
-          "player": "村上 頌樹",
-          "team": "神",
-          "teamSlug": "hanshin-tigers",
-          "value": 10
-        },
-        {
-          "rank": 4,
           "slug": "taichi-yamano",
           "player": "山野 太一",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
+          "value": 11
+        },
+        {
+          "rank": 4,
+          "slug": "shoki-murakami",
+          "player": "村上 頌樹",
+          "team": "神",
+          "teamSlug": "hanshin-tigers",
           "value": 10
         },
         {
@@ -664,6 +672,22 @@
         },
         {
           "rank": 2,
+          "slug": "taichi-yamano",
+          "player": "山野 太一",
+          "team": "ヤ",
+          "teamSlug": "yakult-swallows",
+          "value": 141
+        },
+        {
+          "rank": 3,
+          "slug": "yumeto-kanemaru",
+          "player": "金丸 夢斗",
+          "team": "中",
+          "teamSlug": "chunichi-dragons",
+          "value": 141
+        },
+        {
+          "rank": 4,
           "slug": "shoki-murakami",
           "player": "村上 頌樹",
           "team": "神",
@@ -671,7 +695,7 @@
           "value": 138
         },
         {
-          "rank": 3,
+          "rank": 5,
           "slug": "haruto-takahashi",
           "player": "髙橋 遥人",
           "team": "神",
@@ -679,36 +703,20 @@
           "value": 138
         },
         {
-          "rank": 4,
-          "slug": "taichi-yamano",
-          "player": "山野 太一",
-          "team": "ヤ",
-          "teamSlug": "yakult-swallows",
-          "value": 134
-        },
-        {
-          "rank": 5,
-          "slug": "yumeto-kanemaru",
-          "player": "金丸 夢斗",
-          "team": "中",
-          "teamSlug": "chunichi-dragons",
-          "value": 132
-        },
-        {
           "rank": 6,
-          "slug": "take-maru-kazuyuki",
-          "player": "竹丸 和幸",
+          "slug": "inoue-on-dai",
+          "player": "井上 温大",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
           "value": 130
         },
         {
           "rank": 7,
-          "slug": "inoue-on-dai",
-          "player": "井上 温大",
+          "slug": "take-maru-kazuyuki",
+          "player": "竹丸 和幸",
           "team": "巨",
           "teamSlug": "yomiuri-giants",
-          "value": 123
+          "value": 130
         },
         {
           "rank": 8,
@@ -806,7 +814,7 @@
           "player": "工藤 泰成",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 9
+          "value": 10
         },
         {
           "rank": 10,
@@ -828,18 +836,18 @@
         },
         {
           "rank": 2,
-          "slug": "reinoruzu",
-          "player": "レイノルズ",
-          "team": "デ",
-          "teamSlug": "yokohama-dena",
-          "value": 27
-        },
-        {
-          "rank": 3,
           "slug": "tomoya-hoshi",
           "player": "星 知弥",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
+          "value": 28
+        },
+        {
+          "rank": 3,
+          "slug": "reinoruzu",
+          "player": "レイノルズ",
+          "team": "デ",
+          "teamSlug": "yokohama-dena",
           "value": 27
         },
         {
@@ -938,10 +946,18 @@
           "player": "山野 太一",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 0.99
+          "value": 0.97
         },
         {
           "rank": 6,
+          "slug": "inoue-on-dai",
+          "player": "井上 温大",
+          "team": "巨",
+          "teamSlug": "yomiuri-giants",
+          "value": 1.01
+        },
+        {
+          "rank": 7,
           "slug": "okukawa-yasunobu",
           "player": "奥川 恭伸",
           "team": "ヤ",
@@ -949,7 +965,7 @@
           "value": 1.01
         },
         {
-          "rank": 7,
+          "rank": 8,
           "slug": "yuya-yanagi",
           "player": "柳 裕也",
           "team": "中",
@@ -957,15 +973,15 @@
           "value": 1.17
         },
         {
-          "rank": 8,
+          "rank": 9,
           "slug": "yumeto-kanemaru",
           "player": "金丸 夢斗",
           "team": "中",
           "teamSlug": "chunichi-dragons",
-          "value": 1.19
+          "value": 1.17
         },
         {
-          "rank": 9,
+          "rank": 10,
           "slug": "hiroki-tokoda",
           "player": "床田 寛樹",
           "team": "広",
