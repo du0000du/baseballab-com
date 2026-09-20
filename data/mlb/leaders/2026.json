@@ -1,21 +1,21 @@
 {
-  "fetched_at": "2026-09-20T17:09:58Z",
+  "fetched_at": "2026-09-20T19:13:20Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
+      {
+        "rank": 1,
+        "playerId": 691718,
+        "player": "Pete Crow-Armstrong",
+        "team": "CHC",
+        "value": 45
+      },
       {
         "rank": 1,
         "playerId": 656941,
         "player": "Kyle Schwarber",
         "team": "PHI",
         "value": 45
-      },
-      {
-        "rank": 2,
-        "playerId": 691718,
-        "player": "Pete Crow-Armstrong",
-        "team": "CHC",
-        "value": 44
       },
       {
         "rank": 3,
@@ -80,21 +80,21 @@
         "playerId": 650333,
         "player": "Luis Arraez",
         "team": "PHI",
-        "value": ".313"
+        "value": ".314"
       },
       {
         "rank": 2,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": ".312"
+        "value": ".311"
       },
       {
         "rank": 3,
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".309"
+        "value": ".310"
       },
       {
         "rank": 4,
@@ -115,7 +115,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".304"
+        "value": ".303"
       },
       {
         "rank": 7,
@@ -136,13 +136,13 @@
         "playerId": 650490,
         "player": "Yandy Díaz",
         "team": "TB",
-        "value": ".293"
+        "value": ".292"
       },
       {
         "rank": 10,
-        "playerId": 671739,
-        "player": "Michael Harris II",
-        "team": "ATL",
+        "playerId": 800050,
+        "player": "Chase DeLauter",
+        "team": "CLE",
         "value": ".290"
       }
     ],
@@ -163,16 +163,16 @@
       },
       {
         "rank": 3,
-        "playerId": 624413,
-        "player": "Pete Alonso",
-        "team": "BAL",
-        "value": 105
-      },
-      {
-        "rank": 3,
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
+        "value": 107
+      },
+      {
+        "rank": 4,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "BAL",
         "value": 105
       },
       {
@@ -227,11 +227,11 @@
         "value": 46
       },
       {
-        "rank": 2,
+        "rank": 1,
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": 45
+        "value": 46
       },
       {
         "rank": 3,
@@ -252,7 +252,7 @@
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 37
+        "value": 38
       },
       {
         "rank": 6,
@@ -270,20 +270,20 @@
       },
       {
         "rank": 8,
+        "playerId": 682928,
+        "player": "CJ Abrams",
+        "team": "WSH",
+        "value": 33
+      },
+      {
+        "rank": 8,
         "playerId": 665923,
         "player": "Esteury Ruiz",
         "team": "MIA",
         "value": 33
       },
       {
-        "rank": 9,
-        "playerId": 682928,
-        "player": "CJ Abrams",
-        "team": "WSH",
-        "value": 32
-      },
-      {
-        "rank": 9,
+        "rank": 10,
         "playerId": 676609,
         "player": "José Caballero",
         "team": "NYY",
@@ -358,10 +358,10 @@
       },
       {
         "rank": 10,
-        "playerId": 593958,
-        "player": "Eduardo Rodriguez",
-        "team": "AZ",
-        "value": "2.89"
+        "playerId": 650911,
+        "player": "Cristopher Sánchez",
+        "team": "PHI",
+        "value": "2.88"
       }
     ],
     "wins": [
@@ -473,11 +473,11 @@
         "value": 221
       },
       {
-        "rank": 6,
+        "rank": 5,
         "playerId": 650911,
         "player": "Cristopher Sánchez",
         "team": "PHI",
-        "value": 215
+        "value": 221
       },
       {
         "rank": 7,
@@ -502,10 +502,10 @@
       },
       {
         "rank": 10,
-        "playerId": 669302,
-        "player": "Logan Gilbert",
-        "team": "SEA",
-        "value": 194
+        "playerId": 594798,
+        "player": "Jacob deGrom",
+        "team": "TEX",
+        "value": 195
       }
     ],
     "saves": [
