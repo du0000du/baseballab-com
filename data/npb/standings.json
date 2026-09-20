@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-09-20T05:29:31Z",
+  "fetchedAt": "2026-09-20T13:26:45Z",
   "central": [
     {
       "rank": 1,
@@ -169,11 +169,11 @@
       "teamName": "阪神タイガース",
       "teamAbbr": "T",
       "league": "central",
-      "games": 130,
-      "wins": 71,
+      "games": 131,
+      "wins": 72,
       "losses": 58,
       "ties": 1,
-      "pct": ".550",
+      "pct": ".553",
       "gb": "--"
     },
     {
@@ -183,10 +183,10 @@
       "teamAbbr": "G",
       "league": "central",
       "games": 134,
-      "wins": 72,
+      "wins": 73,
       "losses": 59,
-      "ties": 3,
-      "pct": ".549",
+      "ties": 2,
+      "pct": ".553",
       "gb": "0"
     },
     {
@@ -195,12 +195,12 @@
       "teamName": "横浜DeNAベイスターズ",
       "teamAbbr": "DB",
       "league": "central",
-      "games": 133,
+      "games": 134,
       "wins": 66,
-      "losses": 64,
+      "losses": 65,
       "ties": 3,
-      "pct": ".507",
-      "gb": "5.5"
+      "pct": ".503",
+      "gb": "6.5"
     },
     {
       "rank": 4,
@@ -210,10 +210,10 @@
       "league": "central",
       "games": 133,
       "wins": 57,
-      "losses": 73,
-      "ties": 3,
-      "pct": ".438",
-      "gb": "14.5"
+      "losses": 74,
+      "ties": 2,
+      "pct": ".435",
+      "gb": "15.5"
     },
     {
       "rank": 5,
@@ -221,11 +221,11 @@
       "teamName": "中日ドラゴンズ",
       "teamAbbr": "D",
       "league": "central",
-      "games": 135,
-      "wins": 57,
+      "games": 136,
+      "wins": 58,
       "losses": 76,
       "ties": 2,
-      "pct": ".428",
+      "pct": ".432",
       "gb": "16"
     },
     {
@@ -234,12 +234,12 @@
       "teamName": "広島東洋カープ",
       "teamAbbr": "C",
       "league": "central",
-      "games": 129,
+      "games": 130,
       "wins": 53,
-      "losses": 72,
+      "losses": 73,
       "ties": 4,
-      "pct": ".424",
-      "gb": "16"
+      "pct": ".420",
+      "gb": "17"
     }
   ],
   "estimatedPacific": [
@@ -250,10 +250,10 @@
       "teamAbbr": "H",
       "league": "pacific",
       "games": 134,
-      "wins": 85,
-      "losses": 46,
+      "wins": 84,
+      "losses": 47,
       "ties": 3,
-      "pct": ".648",
+      "pct": ".641",
       "gb": "--"
     },
     {
@@ -267,7 +267,7 @@
       "losses": 56,
       "ties": 4,
       "pct": ".569",
-      "gb": "10.5"
+      "gb": "9.5"
     },
     {
       "rank": 3,
@@ -280,7 +280,7 @@
       "losses": 59,
       "ties": 3,
       "pct": ".553",
-      "gb": "12.5"
+      "gb": "11.5"
     },
     {
       "rank": 4,
@@ -293,7 +293,7 @@
       "losses": 70,
       "ties": 2,
       "pct": ".473",
-      "gb": "23"
+      "gb": "22"
     },
     {
       "rank": 5,
@@ -306,7 +306,7 @@
       "losses": 68,
       "ties": 3,
       "pct": ".460",
-      "gb": "24.5"
+      "gb": "23.5"
     },
     {
       "rank": 6,
@@ -315,11 +315,11 @@
       "teamAbbr": "E",
       "league": "pacific",
       "games": 131,
-      "wins": 51,
-      "losses": 79,
+      "wins": 52,
+      "losses": 78,
       "ties": 1,
-      "pct": ".392",
-      "gb": "33.5"
+      "pct": ".400",
+      "gb": "31.5"
     }
   ]
 }
