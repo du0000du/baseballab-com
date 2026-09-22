@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-22T17:51:09Z",
+  "fetched_at": "2026-09-22T19:59:50Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -94,7 +94,7 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".311"
+        "value": ".309"
       },
       {
         "rank": 4,
@@ -140,9 +140,9 @@
       },
       {
         "rank": 10,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
+        "playerId": 800050,
+        "player": "Chase DeLauter",
+        "team": "CLE",
         "value": ".291"
       }
     ],
@@ -270,24 +270,24 @@
       },
       {
         "rank": 8,
+        "playerId": 676609,
+        "player": "José Caballero",
+        "team": "NYY",
+        "value": 34
+      },
+      {
+        "rank": 9,
         "playerId": 682928,
         "player": "CJ Abrams",
         "team": "WSH",
         "value": 33
       },
       {
-        "rank": 8,
+        "rank": 9,
         "playerId": 665923,
         "player": "Esteury Ruiz",
         "team": "MIA",
         "value": 33
-      },
-      {
-        "rank": 10,
-        "playerId": 676609,
-        "player": "José Caballero",
-        "team": "NYY",
-        "value": 32
       }
     ]
   },
@@ -358,9 +358,9 @@
       },
       {
         "rank": 10,
-        "playerId": 607259,
-        "player": "Nick Martinez",
-        "team": "TB",
+        "playerId": 593958,
+        "player": "Eduardo Rodriguez",
+        "team": "AZ",
         "value": "2.89"
       }
     ],
@@ -542,24 +542,24 @@
         "playerId": 670280,
         "player": "David Bednar",
         "team": "NYY",
-        "value": 34
+        "value": 35
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 547973,
         "player": "Aroldis Chapman",
         "team": "BOS",
         "value": 34
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 628452,
         "player": "Raisel Iglesias",
         "team": "ATL",
         "value": 34
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 686973,
         "player": "Louis Varland",
         "team": "TOR",

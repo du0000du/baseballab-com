@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-22T17:51:10Z",
+  "fetchedAt": "2026-09-22T19:59:51Z",
   "season": "2026",
   "asOfDate": "2026-09-22",
   "teams": [
@@ -218,6 +218,16 @@
       "divisionShort": "AL East",
       "recentGames": [
         {
+          "date": "2026-09-22",
+          "opponent": "Toronto Blue Jays",
+          "opponentAbbr": "TOR",
+          "home": true,
+          "score": 0,
+          "opponentScore": 0,
+          "result": "T",
+          "venue": "Oriole Park at Camden Yards"
+        },
+        {
           "date": "2026-09-21",
           "opponent": "Toronto Blue Jays",
           "opponentAbbr": "TOR",
@@ -234,16 +244,6 @@
           "home": true,
           "score": 0,
           "opponentScore": 3,
-          "result": "L",
-          "venue": "Oriole Park at Camden Yards"
-        },
-        {
-          "date": "2026-09-19",
-          "opponent": "Milwaukee Brewers",
-          "opponentAbbr": "MIL",
-          "home": true,
-          "score": 0,
-          "opponentScore": 1,
           "result": "L",
           "venue": "Oriole Park at Camden Yards"
         }
@@ -300,6 +300,16 @@
       "divisionShort": "AL East",
       "recentGames": [
         {
+          "date": "2026-09-22",
+          "opponent": "Tampa Bay Rays",
+          "opponentAbbr": "TB",
+          "home": true,
+          "score": 2,
+          "opponentScore": 0,
+          "result": "W",
+          "venue": "Yankee Stadium"
+        },
+        {
           "date": "2026-09-20",
           "opponent": "Arizona Diamondbacks",
           "opponentAbbr": "AZ",
@@ -318,16 +328,6 @@
           "opponentScore": 5,
           "result": "L",
           "venue": "Chase Field"
-        },
-        {
-          "date": "2026-09-18",
-          "opponent": "Arizona Diamondbacks",
-          "opponentAbbr": "AZ",
-          "home": false,
-          "score": 9,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "Chase Field"
         }
       ]
     },
@@ -340,6 +340,16 @@
       "division": "American League East",
       "divisionShort": "AL East",
       "recentGames": [
+        {
+          "date": "2026-09-22",
+          "opponent": "New York Yankees",
+          "opponentAbbr": "NYY",
+          "home": false,
+          "score": 0,
+          "opponentScore": 2,
+          "result": "L",
+          "venue": "Yankee Stadium"
+        },
         {
           "date": "2026-09-20",
           "opponent": "Boston Red Sox",
@@ -359,16 +369,6 @@
           "opponentScore": 1,
           "result": "W",
           "venue": "Tropicana Field"
-        },
-        {
-          "date": "2026-09-18",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": true,
-          "score": 2,
-          "opponentScore": 4,
-          "result": "L",
-          "venue": "Tropicana Field"
         }
       ]
     },
@@ -381,6 +381,16 @@
       "division": "American League East",
       "divisionShort": "AL East",
       "recentGames": [
+        {
+          "date": "2026-09-22",
+          "opponent": "Baltimore Orioles",
+          "opponentAbbr": "BAL",
+          "home": false,
+          "score": 0,
+          "opponentScore": 0,
+          "result": "T",
+          "venue": "Oriole Park at Camden Yards"
+        },
         {
           "date": "2026-09-21",
           "opponent": "Baltimore Orioles",
@@ -399,16 +409,6 @@
           "score": 7,
           "opponentScore": 2,
           "result": "W",
-          "venue": "Globe Life Field"
-        },
-        {
-          "date": "2026-09-19",
-          "opponent": "Texas Rangers",
-          "opponentAbbr": "TEX",
-          "home": false,
-          "score": 2,
-          "opponentScore": 6,
-          "result": "L",
           "venue": "Globe Life Field"
         }
       ]
