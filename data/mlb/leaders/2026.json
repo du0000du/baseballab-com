@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-22T13:55:19Z",
+  "fetched_at": "2026-09-22T17:51:09Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -94,7 +94,7 @@
         "playerId": 802415,
         "player": "Chandler Simpson",
         "team": "TB",
-        "value": ".309"
+        "value": ".311"
       },
       {
         "rank": 4,
@@ -133,17 +133,17 @@
       },
       {
         "rank": 9,
-        "playerId": 650490,
-        "player": "Yandy Díaz",
-        "team": "TB",
-        "value": ".292"
-      },
-      {
-        "rank": 10,
         "playerId": 518692,
         "player": "Freddie Freeman",
         "team": "LAD",
         "value": ".292"
+      },
+      {
+        "rank": 10,
+        "playerId": 650490,
+        "player": "Yandy Díaz",
+        "team": "TB",
+        "value": ".291"
       }
     ],
     "rbi": [
@@ -358,9 +358,9 @@
       },
       {
         "rank": 10,
-        "playerId": 593958,
-        "player": "Eduardo Rodriguez",
-        "team": "AZ",
+        "playerId": 607259,
+        "player": "Nick Martinez",
+        "team": "TB",
         "value": "2.89"
       }
     ],
