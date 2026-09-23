@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-09-23T14:04:55Z",
+  "fetchedAt": "2026-09-23T18:04:28Z",
   "central": {
     "batting": {
       "avg": [
@@ -1160,18 +1160,18 @@
         },
         {
           "rank": 5,
-          "slug": "yuki-yanagita",
-          "player": "柳田 悠岐",
-          "team": "ソ",
-          "teamSlug": "softbank-hawks",
-          "value": 66
-        },
-        {
-          "rank": 6,
           "slug": "makkasukaa",
           "player": "マッカスカー",
           "team": "楽",
           "teamSlug": "rakuten-eagles",
+          "value": 67
+        },
+        {
+          "rank": 6,
+          "slug": "yuki-yanagita",
+          "player": "柳田 悠岐",
+          "team": "ソ",
+          "teamSlug": "softbank-hawks",
           "value": 66
         },
         {
@@ -1694,11 +1694,11 @@
         },
         {
           "rank": 10,
-          "slug": "kota-tatsu",
-          "player": "達 孝太",
-          "team": "日",
-          "teamSlug": "nipponham-fighters",
-          "value": 120
+          "slug": "naoyuki-uesawa",
+          "player": "上沢 直之",
+          "team": "ソ",
+          "teamSlug": "softbank-hawks",
+          "value": 121
         }
       ],
       "saves": [
