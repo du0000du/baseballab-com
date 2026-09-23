@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-23T18:05:07Z",
+  "fetched_at": "2026-09-23T19:56:35Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -19,6 +19,13 @@
       },
       {
         "rank": 3,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "BAL",
+        "value": 41
+      },
+      {
+        "rank": 3,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
@@ -32,14 +39,7 @@
         "value": 41
       },
       {
-        "rank": 5,
-        "playerId": 624413,
-        "player": "Pete Alonso",
-        "team": "BAL",
-        "value": 40
-      },
-      {
-        "rank": 5,
+        "rank": 6,
         "playerId": 621566,
         "player": "Matt Olson",
         "team": "ATL",
@@ -156,17 +156,17 @@
       },
       {
         "rank": 2,
+        "playerId": 624413,
+        "player": "Pete Alonso",
+        "team": "BAL",
+        "value": 110
+      },
+      {
+        "rank": 2,
         "playerId": 701398,
         "player": "Sal Stewart",
         "team": "CIN",
         "value": 110
-      },
-      {
-        "rank": 3,
-        "playerId": 624413,
-        "player": "Pete Alonso",
-        "team": "BAL",
-        "value": 108
       },
       {
         "rank": 4,
@@ -180,10 +180,10 @@
         "playerId": 682928,
         "player": "CJ Abrams",
         "team": "WSH",
-        "value": 102
+        "value": 103
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
@@ -224,7 +224,7 @@
         "playerId": 683083,
         "player": "Nasim Nuñez",
         "team": "WSH",
-        "value": 47
+        "value": 49
       },
       {
         "rank": 2,
