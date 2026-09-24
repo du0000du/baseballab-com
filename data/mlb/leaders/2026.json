@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24T14:02:33Z",
+  "fetched_at": "2026-09-24T18:05:33Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -115,7 +115,7 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".301"
+        "value": ".303"
       },
       {
         "rank": 7,
@@ -152,7 +152,7 @@
         "playerId": 676475,
         "player": "Alec Burleson",
         "team": "STL",
-        "value": 112
+        "value": 113
       },
       {
         "rank": 2,
