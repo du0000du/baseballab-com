@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24T18:05:33Z",
+  "fetched_at": "2026-09-24T20:14:49Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -115,19 +115,19 @@
         "playerId": 693304,
         "player": "Nick Gonzales",
         "team": "PIT",
-        "value": ".303"
+        "value": ".301"
       },
       {
         "rank": 7,
-        "playerId": 681198,
-        "player": "TJ Rumfield",
+        "playerId": 664983,
+        "player": "Jake McCarthy",
         "team": "COL",
-        "value": ".296"
+        "value": ".295"
       },
       {
         "rank": 8,
-        "playerId": 664983,
-        "player": "Jake McCarthy",
+        "playerId": 681198,
+        "player": "TJ Rumfield",
         "team": "COL",
         "value": ".295"
       },
@@ -252,7 +252,7 @@
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 39
+        "value": 40
       },
       {
         "rank": 6,
@@ -351,17 +351,17 @@
       },
       {
         "rank": 9,
+        "playerId": 593958,
+        "player": "Eduardo Rodriguez",
+        "team": "AZ",
+        "value": "2.84"
+      },
+      {
+        "rank": 10,
         "playerId": 666200,
         "player": "Jesús Luzardo",
         "team": "PHI",
         "value": "2.87"
-      },
-      {
-        "rank": 10,
-        "playerId": 593958,
-        "player": "Eduardo Rodriguez",
-        "team": "AZ",
-        "value": "2.89"
       }
     ],
     "wins": [
