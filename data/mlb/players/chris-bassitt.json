@@ -1,0 +1,154 @@
+{
+  "info": {
+    "id": 605135,
+    "fullName": "Chris Bassitt",
+    "link": "/api/v1/people/605135",
+    "firstName": "Christopher",
+    "lastName": "Bassitt",
+    "primaryNumber": "40",
+    "birthDate": "1989-02-22",
+    "currentAge": 37,
+    "birthCity": "Toledo",
+    "birthStateProvince": "OH",
+    "birthCountry": "USA",
+    "height": "6' 5\"",
+    "weight": 220,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Chris",
+    "useLastName": "Bassitt",
+    "middleName": "M.",
+    "boxscoreName": "Bassitt",
+    "nickName": "C Bass",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2011,
+    "mlbDebutDate": "2014-08-30",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Chris Bassitt",
+    "nameSlug": "chris-bassitt-605135",
+    "firstLastName": "Chris Bassitt",
+    "lastFirstName": "Bassitt, Chris",
+    "lastInitName": "Bassitt, C",
+    "initLastName": "C Bassitt",
+    "fullFMLName": "Christopher M. Bassitt",
+    "fullLFMName": "Bassitt, Christopher M.",
+    "strikeZoneTop": 3.433,
+    "strikeZoneBottom": 1.733
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 37,
+            "gamesPlayed": 20,
+            "gamesStarted": 18,
+            "groundOuts": 110,
+            "airOuts": 109,
+            "runs": 53,
+            "doubles": 23,
+            "triples": 0,
+            "homeRuns": 10,
+            "strikeOuts": 74,
+            "baseOnBalls": 38,
+            "intentionalWalks": 0,
+            "hits": 120,
+            "hitByPitch": 9,
+            "avg": ".293",
+            "atBats": 409,
+            "obp": ".363",
+            "slg": ".423",
+            "ops": ".786",
+            "caughtStealing": 4,
+            "stolenBases": 9,
+            "stolenBasePercentage": ".692",
+            "caughtStealingPercentage": ".308",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1731,
+            "era": "4.59",
+            "inningsPitched": "102.0",
+            "wins": 9,
+            "losses": 5,
+            "saves": 0,
+            "saveOpportunities": 0,
+            "holds": 0,
+            "blownSaves": 0,
+            "earnedRuns": 52,
+            "whip": "1.55",
+            "battersFaced": 460,
+            "outs": 306,
+            "gamesPitched": 20,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 1092,
+            "strikePercentage": ".630",
+            "hitBatsmen": 9,
+            "balks": 2,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 173,
+            "groundOutsToAirouts": "1.01",
+            "winPercentage": ".643",
+            "pitchesPerInning": "16.97",
+            "gamesFinished": 0,
+            "strikeoutWalkRatio": "1.95",
+            "strikeoutsPer9Inn": "6.53",
+            "walksPer9Inn": "3.35",
+            "hitsPer9Inn": "10.59",
+            "runsScoredPer9": "4.68",
+            "homeRunsPer9": "0.88",
+            "inheritedRunners": 0,
+            "inheritedRunnersScored": 0,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 4
+          },
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          },
+          "player": {
+            "id": 605135,
+            "fullName": "Chris Bassitt",
+            "link": "/api/v1/people/605135"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

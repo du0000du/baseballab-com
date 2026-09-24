@@ -1,0 +1,152 @@
+{
+  "info": {
+    "id": 666974,
+    "fullName": "Yennier Cano",
+    "link": "/api/v1/people/666974",
+    "firstName": "Yennier",
+    "lastName": "Cano",
+    "primaryNumber": "78",
+    "birthDate": "1994-03-09",
+    "currentAge": 32,
+    "birthCity": "Havana",
+    "birthCountry": "Cuba",
+    "height": "6' 4\"",
+    "weight": 245,
+    "active": true,
+    "primaryPosition": {
+      "code": "1",
+      "name": "Pitcher",
+      "type": "Pitcher",
+      "abbreviation": "P"
+    },
+    "useName": "Yennier",
+    "useLastName": "Cano",
+    "boxscoreName": "Cano",
+    "gender": "M",
+    "nameMatrilineal": "Banes",
+    "isPlayer": true,
+    "isVerified": true,
+    "pronunciation": "YEN-neer",
+    "mlbDebutDate": "2022-05-11",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Yennier Cano",
+    "nameSlug": "yennier-cano-666974",
+    "firstLastName": "Yennier Cano",
+    "lastFirstName": "Cano, Yennier",
+    "lastInitName": "Cano, Y",
+    "initLastName": "Y Cano",
+    "fullFMLName": "Yennier  Cano",
+    "fullLFMName": "Cano, Yennier",
+    "strikeZoneTop": 3.388,
+    "strikeZoneBottom": 1.71
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "pitching"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 32,
+            "gamesPlayed": 68,
+            "gamesStarted": 0,
+            "groundOuts": 67,
+            "airOuts": 36,
+            "runs": 19,
+            "doubles": 6,
+            "triples": 0,
+            "homeRuns": 2,
+            "strikeOuts": 45,
+            "baseOnBalls": 13,
+            "intentionalWalks": 0,
+            "hits": 40,
+            "hitByPitch": 3,
+            "avg": ".214",
+            "atBats": 187,
+            "obp": ".275",
+            "slg": ".278",
+            "ops": ".553",
+            "caughtStealing": 2,
+            "stolenBases": 7,
+            "stolenBasePercentage": ".778",
+            "caughtStealingPercentage": ".222",
+            "groundIntoDoublePlay": 2,
+            "numberOfPitches": 794,
+            "era": "2.90",
+            "inningsPitched": "49.2",
+            "wins": 4,
+            "losses": 3,
+            "saves": 3,
+            "saveOpportunities": 5,
+            "holds": 14,
+            "blownSaves": 2,
+            "earnedRuns": 16,
+            "whip": "1.07",
+            "battersFaced": 204,
+            "outs": 149,
+            "gamesPitched": 68,
+            "completeGames": 0,
+            "shutouts": 0,
+            "strikes": 499,
+            "strikePercentage": ".630",
+            "hitBatsmen": 3,
+            "balks": 0,
+            "wildPitches": 2,
+            "pickoffs": 0,
+            "totalBases": 52,
+            "groundOutsToAirouts": "1.86",
+            "winPercentage": ".571",
+            "pitchesPerInning": "15.99",
+            "gamesFinished": 10,
+            "strikeoutWalkRatio": "3.46",
+            "strikeoutsPer9Inn": "8.15",
+            "walksPer9Inn": "2.36",
+            "hitsPer9Inn": "7.25",
+            "runsScoredPer9": "3.44",
+            "homeRunsPer9": "0.36",
+            "inheritedRunners": 35,
+            "inheritedRunnersScored": 8,
+            "catchersInterference": 0,
+            "sacBunts": 0,
+            "sacFlies": 1
+          },
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          },
+          "player": {
+            "id": 666974,
+            "fullName": "Yennier Cano",
+            "link": "/api/v1/people/666974"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
