@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 680700,
+    "fullName": "Richie Palacios",
+    "link": "/api/v1/people/680700",
+    "firstName": "Richard",
+    "lastName": "Palacios",
+    "primaryNumber": "1",
+    "birthDate": "1997-05-16",
+    "currentAge": 29,
+    "birthCity": "Brooklyn",
+    "birthStateProvince": "NY",
+    "birthCountry": "USA",
+    "height": "5' 8\"",
+    "weight": 185,
+    "active": true,
+    "primaryPosition": {
+      "code": "4",
+      "name": "Second Base",
+      "type": "Infielder",
+      "abbreviation": "2B"
+    },
+    "useName": "Richie",
+    "useLastName": "Palacios",
+    "middleName": "Jordan",
+    "boxscoreName": "Palacios, R",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2018,
+    "pronunciation": "puh-LAH-see-ohs",
+    "mlbDebutDate": "2022-04-25",
+    "batSide": {
+      "code": "L",
+      "description": "Left"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Richie Palacios",
+    "nameSlug": "richie-palacios-680700",
+    "firstLastName": "Richie Palacios",
+    "lastFirstName": "Palacios, Richie",
+    "lastInitName": "Palacios, R",
+    "initLastName": "R Palacios",
+    "fullFMLName": "Richard  Palacios",
+    "fullLFMName": "Palacios, Richard ",
+    "strikeZoneTop": 3.04,
+    "strikeZoneBottom": 1.53
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 29,
+            "gamesPlayed": 122,
+            "groundOuts": 95,
+            "airOuts": 100,
+            "runs": 51,
+            "doubles": 13,
+            "triples": 2,
+            "homeRuns": 10,
+            "strikeOuts": 67,
+            "baseOnBalls": 45,
+            "intentionalWalks": 0,
+            "hits": 79,
+            "hitByPitch": 4,
+            "avg": ".234",
+            "atBats": 337,
+            "obp": ".330",
+            "slg": ".374",
+            "ops": ".704",
+            "caughtStealing": 7,
+            "stolenBases": 17,
+            "stolenBasePercentage": ".708",
+            "caughtStealingPercentage": ".292",
+            "groundIntoDoublePlay": 6,
+            "numberOfPitches": 1506,
+            "plateAppearances": 390,
+            "totalBases": 126,
+            "rbi": 53,
+            "leftOnBase": 156,
+            "sacBunts": 2,
+            "sacFlies": 2,
+            "babip": ".263",
+            "groundOutsToAirouts": "0.95",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "33.70"
+          },
+          "team": {
+            "id": 139,
+            "name": "Tampa Bay Rays",
+            "link": "/api/v1/teams/139"
+          },
+          "player": {
+            "id": 680700,
+            "fullName": "Richie Palacios",
+            "link": "/api/v1/people/680700"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}

@@ -1,0 +1,126 @@
+{
+  "info": {
+    "id": 680869,
+    "fullName": "Zack Gelof",
+    "link": "/api/v1/people/680869",
+    "firstName": "Zachary",
+    "lastName": "Gelof",
+    "primaryNumber": "20",
+    "birthDate": "1999-10-19",
+    "currentAge": 26,
+    "birthCity": "Rehoboth Beach",
+    "birthStateProvince": "DE",
+    "birthCountry": "USA",
+    "height": "6' 2\"",
+    "weight": 205,
+    "active": true,
+    "primaryPosition": {
+      "code": "5",
+      "name": "Third Base",
+      "type": "Infielder",
+      "abbreviation": "3B"
+    },
+    "useName": "Zack",
+    "useLastName": "Gelof",
+    "middleName": "Dunn",
+    "boxscoreName": "Gelof",
+    "gender": "M",
+    "isPlayer": true,
+    "isVerified": true,
+    "draftYear": 2021,
+    "pronunciation": "GEH-lof",
+    "mlbDebutDate": "2023-07-14",
+    "batSide": {
+      "code": "R",
+      "description": "Right"
+    },
+    "pitchHand": {
+      "code": "R",
+      "description": "Right"
+    },
+    "nameFirstLast": "Zack Gelof",
+    "nameSlug": "zack-gelof-680869",
+    "firstLastName": "Zack Gelof",
+    "lastFirstName": "Gelof, Zack",
+    "lastInitName": "Gelof, Z",
+    "initLastName": "Z Gelof",
+    "fullFMLName": "Zachary Dunn Gelof",
+    "fullLFMName": "Gelof, Zachary Dunn",
+    "strikeZoneTop": 3.292,
+    "strikeZoneBottom": 1.661
+  },
+  "stats": [
+    {
+      "type": {
+        "displayName": "season"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2026",
+          "stat": {
+            "age": 26,
+            "gamesPlayed": 108,
+            "groundOuts": 91,
+            "airOuts": 93,
+            "runs": 74,
+            "doubles": 16,
+            "triples": 2,
+            "homeRuns": 22,
+            "strikeOuts": 102,
+            "baseOnBalls": 31,
+            "intentionalWalks": 0,
+            "hits": 99,
+            "hitByPitch": 7,
+            "avg": ".259",
+            "atBats": 382,
+            "obp": ".326",
+            "slg": ".484",
+            "ops": ".810",
+            "caughtStealing": 3,
+            "stolenBases": 16,
+            "stolenBasePercentage": ".842",
+            "caughtStealingPercentage": ".158",
+            "groundIntoDoublePlay": 8,
+            "numberOfPitches": 1648,
+            "plateAppearances": 423,
+            "totalBases": 185,
+            "rbi": 54,
+            "leftOnBase": 146,
+            "sacBunts": 3,
+            "sacFlies": 0,
+            "babip": ".298",
+            "groundOutsToAirouts": "0.98",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "17.36"
+          },
+          "team": {
+            "id": 133,
+            "name": "Athletics",
+            "link": "/api/v1/teams/133"
+          },
+          "player": {
+            "id": 680869,
+            "fullName": "Zack Gelof",
+            "link": "/api/v1/people/680869"
+          },
+          "league": {
+            "id": 103,
+            "name": "American League",
+            "link": "/api/v1/league/103"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R"
+        }
+      ]
+    }
+  ],
+  "season": 2026
+}
