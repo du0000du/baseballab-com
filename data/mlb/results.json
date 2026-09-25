@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-25T18:09:56Z",
+  "fetchedAt": "2026-09-25T20:13:00Z",
   "season": "2026",
   "asOfDate": "2026-09-25",
   "teams": [
@@ -259,6 +259,16 @@
       "divisionShort": "AL East",
       "recentGames": [
         {
+          "date": "2026-09-25",
+          "opponent": "Chicago Cubs",
+          "opponentAbbr": "CHC",
+          "home": true,
+          "score": 4,
+          "opponentScore": 3,
+          "result": "W",
+          "venue": "Fenway Park"
+        },
+        {
           "date": "2026-09-24",
           "opponent": "Cleveland Guardians",
           "opponentAbbr": "CLE",
@@ -276,16 +286,6 @@
           "score": 1,
           "opponentScore": 0,
           "result": "W",
-          "venue": "Fenway Park"
-        },
-        {
-          "date": "2026-09-22",
-          "opponent": "Cleveland Guardians",
-          "opponentAbbr": "CLE",
-          "home": true,
-          "score": 2,
-          "opponentScore": 3,
-          "result": "L",
           "venue": "Fenway Park"
         }
       ]
@@ -628,6 +628,16 @@
       "divisionShort": "NL Central",
       "recentGames": [
         {
+          "date": "2026-09-25",
+          "opponent": "Boston Red Sox",
+          "opponentAbbr": "BOS",
+          "home": false,
+          "score": 3,
+          "opponentScore": 4,
+          "result": "L",
+          "venue": "Fenway Park"
+        },
+        {
           "date": "2026-09-24",
           "opponent": "Miami Marlins",
           "opponentAbbr": "MIA",
@@ -644,16 +654,6 @@
           "home": true,
           "score": 2,
           "opponentScore": 3,
-          "result": "L",
-          "venue": "Wrigley Field"
-        },
-        {
-          "date": "2026-09-22",
-          "opponent": "Miami Marlins",
-          "opponentAbbr": "MIA",
-          "home": true,
-          "score": 2,
-          "opponentScore": 8,
           "result": "L",
           "venue": "Wrigley Field"
         }

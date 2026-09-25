@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-25T18:09:56Z",
+  "fetched_at": "2026-09-25T20:13:00Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -248,11 +248,11 @@
         "value": 41
       },
       {
-        "rank": 5,
+        "rank": 4,
         "playerId": 691718,
         "player": "Pete Crow-Armstrong",
         "team": "CHC",
-        "value": 40
+        "value": 41
       },
       {
         "rank": 6,
