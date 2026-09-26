@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-26T17:30:20Z",
+  "fetched_at": "2026-09-26T19:31:54Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -68,9 +68,9 @@
       },
       {
         "rank": 10,
-        "playerId": 808959,
-        "player": "Munetaka Murakami",
-        "team": "CWS",
+        "playerId": 664040,
+        "player": "Brandon Lowe",
+        "team": "PIT",
         "value": 35
       }
     ],

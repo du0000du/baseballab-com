@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-26T17:30:20Z",
+  "fetchedAt": "2026-09-26T19:31:54Z",
   "season": "2026",
   "asOfDate": "2026-09-26",
   "teams": [
@@ -915,6 +915,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-09-26",
+          "opponent": "Washington Nationals",
+          "opponentAbbr": "WSH",
+          "home": false,
+          "score": 7,
+          "opponentScore": 1,
+          "result": "W",
+          "venue": "Nationals Park"
+        },
+        {
           "date": "2026-09-25",
           "opponent": "Washington Nationals",
           "opponentAbbr": "WSH",
@@ -932,16 +942,6 @@
           "score": 1,
           "opponentScore": 3,
           "result": "L",
-          "venue": "Globe Life Field"
-        },
-        {
-          "date": "2026-09-23",
-          "opponent": "Texas Rangers",
-          "opponentAbbr": "TEX",
-          "home": false,
-          "score": 7,
-          "opponentScore": 2,
-          "result": "W",
           "venue": "Globe Life Field"
         }
       ]
@@ -997,6 +997,16 @@
       "divisionShort": "NL East",
       "recentGames": [
         {
+          "date": "2026-09-26",
+          "opponent": "New York Mets",
+          "opponentAbbr": "NYM",
+          "home": true,
+          "score": 1,
+          "opponentScore": 7,
+          "result": "L",
+          "venue": "Nationals Park"
+        },
+        {
           "date": "2026-09-25",
           "opponent": "New York Mets",
           "opponentAbbr": "NYM",
@@ -1013,16 +1023,6 @@
           "home": false,
           "score": 4,
           "opponentScore": 2,
-          "result": "W",
-          "venue": "Comerica Park"
-        },
-        {
-          "date": "2026-09-22",
-          "opponent": "Detroit Tigers",
-          "opponentAbbr": "DET",
-          "home": false,
-          "score": 3,
-          "opponentScore": 1,
           "result": "W",
           "venue": "Comerica Park"
         }
