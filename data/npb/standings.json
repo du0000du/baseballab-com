@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-09-27T05:54:32Z",
+  "fetchedAt": "2026-09-27T14:33:10Z",
   "central": [
     {
       "rank": 1,
@@ -182,12 +182,12 @@
       "teamName": "読売ジャイアンツ",
       "teamAbbr": "G",
       "league": "central",
-      "games": 138,
-      "wins": 74,
+      "games": 139,
+      "wins": 75,
       "losses": 62,
       "ties": 2,
-      "pct": ".544",
-      "gb": "2.5"
+      "pct": ".547",
+      "gb": "2"
     },
     {
       "rank": 3,
@@ -208,12 +208,12 @@
       "teamName": "東京ヤクルトスワローズ",
       "teamAbbr": "S",
       "league": "central",
-      "games": 137,
+      "games": 138,
       "wins": 59,
-      "losses": 76,
+      "losses": 77,
       "ties": 2,
-      "pct": ".437",
-      "gb": "17"
+      "pct": ".433",
+      "gb": "17.5"
     },
     {
       "rank": 5,
@@ -262,12 +262,12 @@
       "teamName": "埼玉西武ライオンズ",
       "teamAbbr": "L",
       "league": "pacific",
-      "games": 138,
-      "wins": 75,
+      "games": 139,
+      "wins": 76,
       "losses": 59,
       "ties": 4,
-      "pct": ".559",
-      "gb": "13"
+      "pct": ".562",
+      "gb": "12.5"
     },
     {
       "rank": 3,
@@ -275,12 +275,12 @@
       "teamName": "北海道日本ハムファイターズ",
       "teamAbbr": "F",
       "league": "pacific",
-      "games": 140,
+      "games": 141,
       "wins": 76,
-      "losses": 61,
+      "losses": 62,
       "ties": 3,
-      "pct": ".554",
-      "gb": "13.5"
+      "pct": ".550",
+      "gb": "14"
     },
     {
       "rank": 4,
@@ -301,12 +301,12 @@
       "teamName": "千葉ロッテマリーンズ",
       "teamAbbr": "M",
       "league": "pacific",
-      "games": 133,
-      "wins": 59,
+      "games": 134,
+      "wins": 60,
       "losses": 71,
       "ties": 3,
-      "pct": ".453",
-      "gb": "27"
+      "pct": ".458",
+      "gb": "26.5"
     },
     {
       "rank": 6,
@@ -314,12 +314,12 @@
       "teamName": "東北楽天ゴールデンイーグルス",
       "teamAbbr": "E",
       "league": "pacific",
-      "games": 135,
+      "games": 136,
       "wins": 54,
-      "losses": 80,
+      "losses": 81,
       "ties": 1,
-      "pct": ".402",
-      "gb": "34"
+      "pct": ".400",
+      "gb": "34.5"
     }
   ]
 }
