@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-09-26T19:30:55Z",
+  "fetchedAt": "2026-09-27T05:55:17Z",
   "season": "2026",
-  "asOfDate": "2026-09-26",
+  "asOfDate": "2026-09-27",
   "teams": [
     {
       "slug": "hanshin-tigers",
@@ -50,6 +50,16 @@
       "accent": "#ffffff",
       "recentGames": [
         {
+          "date": "2026-09-27",
+          "opponent": "広島東洋カープ",
+          "opponentSlug": "hiroshima-carp",
+          "home": false,
+          "score": 1,
+          "opponentScore": 2,
+          "result": "L",
+          "stadium": "MAZDA Zoom-Zoomスタジアム広島"
+        },
+        {
           "date": "2026-09-26",
           "opponent": "阪神タイガース",
           "opponentSlug": "hanshin-tigers",
@@ -68,16 +78,6 @@
           "opponentScore": 1,
           "result": "W",
           "stadium": "阪神甲子園球場"
-        },
-        {
-          "date": "2026-09-23",
-          "opponent": "中日ドラゴンズ",
-          "opponentSlug": "chunichi-dragons",
-          "home": false,
-          "score": 4,
-          "opponentScore": 3,
-          "result": "W",
-          "stadium": "バンテリンドームナゴヤ"
         }
       ]
     },
@@ -167,6 +167,16 @@
       "accent": "#ffffff",
       "recentGames": [
         {
+          "date": "2026-09-27",
+          "opponent": "横浜DeNAベイスターズ",
+          "opponentSlug": "yokohama-dena",
+          "home": true,
+          "score": 2,
+          "opponentScore": 1,
+          "result": "W",
+          "stadium": "MAZDA Zoom-Zoomスタジアム広島"
+        },
+        {
           "date": "2026-09-25",
           "opponent": "読売ジャイアンツ",
           "opponentSlug": "yomiuri-giants",
@@ -184,16 +194,6 @@
           "score": 3,
           "opponentScore": 1,
           "result": "W",
-          "stadium": "東京ドーム"
-        },
-        {
-          "date": "2026-09-23",
-          "opponent": "読売ジャイアンツ",
-          "opponentSlug": "yomiuri-giants",
-          "home": false,
-          "score": 1,
-          "opponentScore": 2,
-          "result": "L",
           "stadium": "東京ドーム"
         }
       ]
@@ -245,6 +245,16 @@
       "accent": "#b09b5b",
       "recentGames": [
         {
+          "date": "2026-09-27",
+          "opponent": "福岡ソフトバンクホークス",
+          "opponentSlug": "softbank-hawks",
+          "home": true,
+          "score": 1,
+          "opponentScore": 4,
+          "result": "L",
+          "stadium": "京セラドームOSAKA"
+        },
+        {
           "date": "2026-09-26",
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
@@ -263,16 +273,6 @@
           "opponentScore": 9,
           "result": "L",
           "stadium": "みずほPayPayドーム福岡"
-        },
-        {
-          "date": "2026-09-23",
-          "opponent": "千葉ロッテマリーンズ",
-          "opponentSlug": "lotte-marines",
-          "home": true,
-          "score": 1,
-          "opponentScore": 0,
-          "result": "W",
-          "stadium": "京セラドームOSAKA"
         }
       ]
     },
@@ -283,6 +283,16 @@
       "color": "#fbc600",
       "accent": "#000000",
       "recentGames": [
+        {
+          "date": "2026-09-27",
+          "opponent": "オリックス・バファローズ",
+          "opponentSlug": "orix-buffaloes",
+          "home": false,
+          "score": 4,
+          "opponentScore": 1,
+          "result": "W",
+          "stadium": "京セラドームOSAKA"
+        },
         {
           "date": "2026-09-26",
           "opponent": "東北楽天ゴールデンイーグルス",
@@ -302,16 +312,6 @@
           "opponentScore": 0,
           "result": "W",
           "stadium": "みずほPayPayドーム福岡"
-        },
-        {
-          "date": "2026-09-23",
-          "opponent": "埼玉西武ライオンズ",
-          "opponentSlug": "seibu-lions",
-          "home": false,
-          "score": 10,
-          "opponentScore": 3,
-          "result": "W",
-          "stadium": "ベルーナドーム"
         }
       ]
     },
