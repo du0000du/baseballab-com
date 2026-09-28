@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-27T19:57:19Z",
+  "fetched_at": "2026-09-28T06:01:26Z",
   "season": "2026",
   "batting": {
     "homeRuns": [
@@ -140,10 +140,10 @@
       },
       {
         "rank": 10,
-        "playerId": 664983,
-        "player": "Jake McCarthy",
-        "team": "COL",
-        "value": ".292"
+        "playerId": 694192,
+        "player": "Jackson Chourio",
+        "team": "MIL",
+        "value": ".291"
       }
     ],
     "rbi": [
@@ -183,24 +183,24 @@
         "value": 106
       },
       {
-        "rank": 6,
+        "rank": 5,
         "playerId": 670541,
         "player": "Yordan Alvarez",
         "team": "HOU",
-        "value": 105
-      },
-      {
-        "rank": 7,
-        "playerId": 691406,
-        "player": "Junior Caminero",
-        "team": "TB",
-        "value": 101
+        "value": 106
       },
       {
         "rank": 7,
         "playerId": 691023,
         "player": "Jordan Walker",
         "team": "STL",
+        "value": 102
+      },
+      {
+        "rank": 8,
+        "playerId": 691406,
+        "player": "Junior Caminero",
+        "team": "TB",
         "value": 101
       },
       {
@@ -298,7 +298,7 @@
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
-        "value": "1.83"
+        "value": "1.80"
       },
       {
         "rank": 2,
@@ -354,7 +354,7 @@
         "playerId": 666200,
         "player": "Jesús Luzardo",
         "team": "PHI",
-        "value": "2.87"
+        "value": "2.86"
       },
       {
         "rank": 10,
@@ -381,6 +381,13 @@
       },
       {
         "rank": 3,
+        "playerId": 694819,
+        "player": "Jacob Misiorowski",
+        "team": "MIL",
+        "value": 16
+      },
+      {
+        "rank": 3,
         "playerId": 656876,
         "player": "Drew Rasmussen",
         "team": "TB",
@@ -394,31 +401,24 @@
         "value": 16
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 695505,
         "player": "Chase Burns",
         "team": "CIN",
         "value": 15
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 656492,
         "player": "Foster Griffin",
         "team": "CLE",
         "value": 15
       },
       {
-        "rank": 5,
+        "rank": 6,
         "playerId": 607259,
         "player": "Nick Martinez",
         "team": "TB",
-        "value": 15
-      },
-      {
-        "rank": 5,
-        "playerId": 694819,
-        "player": "Jacob Misiorowski",
-        "team": "MIL",
         "value": 15
       },
       {
@@ -442,7 +442,7 @@
         "playerId": 694819,
         "player": "Jacob Misiorowski",
         "team": "MIL",
-        "value": 249
+        "value": 252
       },
       {
         "rank": 2,
@@ -494,11 +494,11 @@
         "value": 205
       },
       {
-        "rank": 9,
+        "rank": 8,
         "playerId": 669302,
         "player": "Logan Gilbert",
         "team": "SEA",
-        "value": 204
+        "value": 205
       },
       {
         "rank": 10,
