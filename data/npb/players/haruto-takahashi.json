@@ -30,14 +30,14 @@
     "ibb": 2,
     "hbp": 2,
     "so": 144,
-    "wp": 3,
+    "wp": 2,
     "balk": 1,
     "runs": 37,
     "er": 33,
     "whip": 0.9
   },
-  "asOf": "2026-09-27",
-  "fetchedAt": "2026-09-28T17:20:39Z",
+  "asOf": "2026-09-28",
+  "fetchedAt": "2026-09-28T20:19:05Z",
   "source": "NPB.jp 日本野球機構",
   "sourceUrl": "https://npb.jp/bis/2026/stats/pit_c.html"
 }
