@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-09-30T15:37:43Z",
+  "fetchedAt": "2026-09-30T18:43:36Z",
   "central": {
     "batting": {
       "avg": [
@@ -10,7 +10,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.315
+          "value": 0.316
         },
         {
           "rank": 2,
@@ -18,7 +18,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.292
+          "value": 0.295
         },
         {
           "rank": 3,
@@ -26,7 +26,7 @@
           "player": "増田 珠",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 0.289
+          "value": 0.291
         },
         {
           "rank": 4,
@@ -34,7 +34,7 @@
           "player": "中野 拓夢",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.287
+          "value": 0.289
         },
         {
           "rank": 5,
@@ -92,7 +92,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 37
+          "value": 38
         },
         {
           "rank": 2,
@@ -148,7 +148,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 18
+          "value": 19
         },
         {
           "rank": 9,
@@ -174,7 +174,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 100
+          "value": 102
         },
         {
           "rank": 2,
@@ -182,7 +182,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 83
+          "value": 84
         },
         {
           "rank": 3,
@@ -190,7 +190,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 81
+          "value": 82
         },
         {
           "rank": 4,
@@ -338,7 +338,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 1.012
+          "value": 1.021
         },
         {
           "rank": 2,
@@ -346,7 +346,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.951
+          "value": 0.958
         },
         {
           "rank": 3,
@@ -370,7 +370,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.809
+          "value": 0.813
         },
         {
           "rank": 6,
@@ -394,7 +394,7 @@
           "player": "増田 珠",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 0.738
+          "value": 0.741
         },
         {
           "rank": 9,
@@ -420,7 +420,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 161
+          "value": 162
         },
         {
           "rank": 2,
@@ -428,7 +428,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 147
+          "value": 150
         },
         {
           "rank": 3,
@@ -436,7 +436,7 @@
           "player": "中野 拓夢",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 140
+          "value": 142
         },
         {
           "rank": 4,
@@ -444,7 +444,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 137
+          "value": 138
         },
         {
           "rank": 5,
@@ -512,7 +512,7 @@
           "player": "髙橋 遥人",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 1.97
+          "value": 1.87
         },
         {
           "rank": 3,
@@ -578,7 +578,7 @@
           "player": "髙橋 遥人",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 15
+          "value": 16
         },
         {
           "rank": 2,
@@ -672,6 +672,14 @@
         },
         {
           "rank": 3,
+          "slug": "haruto-takahashi",
+          "player": "髙橋 遥人",
+          "team": "神",
+          "teamSlug": "hanshin-tigers",
+          "value": 150
+        },
+        {
+          "rank": 4,
           "slug": "yumeto-kanemaru",
           "player": "金丸 夢斗",
           "team": "中",
@@ -679,20 +687,12 @@
           "value": 146
         },
         {
-          "rank": 4,
+          "rank": 5,
           "slug": "taichi-yamano",
           "player": "山野 太一",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
           "value": 145
-        },
-        {
-          "rank": 5,
-          "slug": "haruto-takahashi",
-          "player": "髙橋 遥人",
-          "team": "神",
-          "teamSlug": "hanshin-tigers",
-          "value": 144
         },
         {
           "rank": 6,
@@ -906,7 +906,7 @@
           "player": "髙橋 遥人",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.9
+          "value": 0.88
         },
         {
           "rank": 2,
@@ -954,7 +954,7 @@
           "player": "奥川 恭伸",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 1.03
+          "value": 1.04
         },
         {
           "rank": 8,
@@ -1380,11 +1380,11 @@
         },
         {
           "rank": 10,
-          "slug": "mishou-nishikawa",
-          "player": "西川 史礁",
-          "team": "ロ",
-          "teamSlug": "lotte-marines",
-          "value": 0.754
+          "slug": "ryo-ota",
+          "player": "太田 椋",
+          "team": "オ",
+          "teamSlug": "orix-buffaloes",
+          "value": 0.753
         }
       ],
       "hits": [
@@ -1410,7 +1410,7 @@
           "player": "西川 史礁",
           "team": "ロ",
           "teamSlug": "lotte-marines",
-          "value": 148
+          "value": 149
         },
         {
           "rank": 4,
@@ -1538,19 +1538,19 @@
         },
         {
           "rank": 9,
+          "slug": "kosei-shoji",
+          "player": "荘司 康誠",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 3.45
+        },
+        {
+          "rank": 10,
           "slug": "jakuson",
           "player": "ジャクソン",
           "team": "ロ",
           "teamSlug": "lotte-marines",
           "value": 3.46
-        },
-        {
-          "rank": 10,
-          "slug": "kosei-shoji",
-          "player": "荘司 康誠",
-          "team": "楽",
-          "teamSlug": "rakuten-eagles",
-          "value": 3.64
         }
       ],
       "wins": [
@@ -1642,7 +1642,7 @@
           "player": "荘司 康誠",
           "team": "楽",
           "teamSlug": "rakuten-eagles",
-          "value": 163
+          "value": 171
         },
         {
           "rank": 2,
@@ -1756,7 +1756,7 @@
           "player": "藤平 尚真",
           "team": "楽",
           "teamSlug": "rakuten-eagles",
-          "value": 28
+          "value": 29
         },
         {
           "rank": 6,
@@ -1932,18 +1932,18 @@
         },
         {
           "rank": 7,
-          "slug": "jakuson",
-          "player": "ジャクソン",
-          "team": "ロ",
-          "teamSlug": "lotte-marines",
-          "value": 1.19
-        },
-        {
-          "rank": 8,
           "slug": "kosei-shoji",
           "player": "荘司 康誠",
           "team": "楽",
           "teamSlug": "rakuten-eagles",
+          "value": 1.16
+        },
+        {
+          "rank": 8,
+          "slug": "jakuson",
+          "player": "ジャクソン",
+          "team": "ロ",
+          "teamSlug": "lotte-marines",
           "value": 1.19
         },
         {
