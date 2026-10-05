@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-10-05T17:53:40Z",
+  "fetchedAt": "2026-10-05T21:18:11Z",
   "central": {
     "batting": {
       "avg": [
@@ -1008,7 +1008,7 @@
           "player": "近藤 健介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.31
+          "value": 0.309
         },
         {
           "rank": 3,
@@ -1032,7 +1032,7 @@
           "player": "西川 史礁",
           "team": "ロ",
           "teamSlug": "lotte-marines",
-          "value": 0.293
+          "value": 0.291
         },
         {
           "rank": 6,
@@ -1068,11 +1068,11 @@
         },
         {
           "rank": 10,
-          "slug": "nakajima-daisuke",
-          "player": "中島 大輔",
-          "team": "楽",
-          "teamSlug": "rakuten-eagles",
-          "value": 0.276
+          "slug": "yuki-shuto",
+          "player": "周東 佑京",
+          "team": "ソ",
+          "teamSlug": "softbank-hawks",
+          "value": 0.275
         }
       ],
       "hr": [
@@ -1090,7 +1090,7 @@
           "player": "山口 航輝",
           "team": "ロ",
           "teamSlug": "lotte-marines",
-          "value": 37
+          "value": 38
         },
         {
           "rank": 3,
@@ -1188,7 +1188,7 @@
           "player": "山口 航輝",
           "team": "ロ",
           "teamSlug": "lotte-marines",
-          "value": 80
+          "value": 81
         },
         {
           "rank": 5,
@@ -1204,7 +1204,7 @@
           "player": "マッカスカー",
           "team": "楽",
           "teamSlug": "rakuten-eagles",
-          "value": 69
+          "value": 70
         },
         {
           "rank": 7,
@@ -1246,7 +1246,7 @@
           "player": "周東 佑京",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 29
+          "value": 30
         },
         {
           "rank": 2,
@@ -1254,7 +1254,7 @@
           "player": "庄子 雄大",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 21
+          "value": 22
         },
         {
           "rank": 3,
@@ -1282,6 +1282,14 @@
         },
         {
           "rank": 6,
+          "slug": "kanario",
+          "player": "カナリオ",
+          "team": "西",
+          "teamSlug": "seibu-lions",
+          "value": 13
+        },
+        {
+          "rank": 7,
           "slug": "gojuu-hata-akira-ta",
           "player": "五十幡 亮汰",
           "team": "日",
@@ -1289,19 +1297,11 @@
           "value": 13
         },
         {
-          "rank": 7,
+          "rank": 8,
           "slug": "kyota-fujiwara",
           "player": "藤原 恭大",
           "team": "ロ",
           "teamSlug": "lotte-marines",
-          "value": 12
-        },
-        {
-          "rank": 8,
-          "slug": "kanario",
-          "player": "カナリオ",
-          "team": "西",
-          "teamSlug": "seibu-lions",
           "value": 12
         },
         {
@@ -1328,7 +1328,7 @@
           "player": "近藤 健介",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 1.003
+          "value": 1.0
         },
         {
           "rank": 2,
@@ -1344,7 +1344,7 @@
           "player": "山口 航輝",
           "team": "ロ",
           "teamSlug": "lotte-marines",
-          "value": 0.93
+          "value": 0.935
         },
         {
           "rank": 4,
@@ -1352,7 +1352,7 @@
           "player": "栗原 陵矢",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.923
+          "value": 0.922
         },
         {
           "rank": 5,
@@ -1360,7 +1360,7 @@
           "player": "正木 智也",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 0.893
+          "value": 0.888
         },
         {
           "rank": 6,
@@ -1442,7 +1442,7 @@
           "player": "栗原 陵矢",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 145
+          "value": 146
         },
         {
           "rank": 6,
@@ -1474,15 +1474,15 @@
           "player": "周東 佑京",
           "team": "ソ",
           "teamSlug": "softbank-hawks",
-          "value": 132
+          "value": 133
         },
         {
           "rank": 10,
-          "slug": "ryo-ota",
-          "player": "太田 椋",
-          "team": "オ",
-          "teamSlug": "orix-buffaloes",
-          "value": 130
+          "slug": "ryosuke-tatsumi",
+          "player": "辰己 涼介",
+          "team": "楽",
+          "teamSlug": "rakuten-eagles",
+          "value": 132
         }
       ]
     },
@@ -1772,7 +1772,7 @@
           "player": "藤平 尚真",
           "team": "楽",
           "teamSlug": "rakuten-eagles",
-          "value": 29
+          "value": 30
         },
         {
           "rank": 6,
