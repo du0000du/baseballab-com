@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-10-07T16:05:45Z",
+  "fetchedAt": "2026-10-07T19:39:25Z",
   "central": {
     "batting": {
       "avg": [
@@ -10,18 +10,10 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.311
+          "value": 0.308
         },
         {
           "rank": 2,
-          "slug": "shota-morishita",
-          "player": "森下 翔太",
-          "team": "神",
-          "teamSlug": "hanshin-tigers",
-          "value": 0.293
-        },
-        {
-          "rank": 3,
           "slug": "masuda-shu",
           "player": "増田 珠",
           "team": "ヤ",
@@ -29,28 +21,36 @@
           "value": 0.293
         },
         {
+          "rank": 3,
+          "slug": "shota-morishita",
+          "player": "森下 翔太",
+          "team": "神",
+          "teamSlug": "hanshin-tigers",
+          "value": 0.292
+        },
+        {
           "rank": 4,
           "slug": "takumu-nakano",
           "player": "中野 拓夢",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.289
+          "value": 0.288
         },
         {
           "rank": 5,
+          "slug": "yusuke-oyama",
+          "player": "大山 悠輔",
+          "team": "神",
+          "teamSlug": "hanshin-tigers",
+          "value": 0.284
+        },
+        {
+          "rank": 6,
           "slug": "maki-shuugo",
           "player": "牧 秀悟",
           "team": "デ",
           "teamSlug": "yokohama-dena",
           "value": 0.283
-        },
-        {
-          "rank": 6,
-          "slug": "yusuke-oyama",
-          "player": "大山 悠輔",
-          "team": "神",
-          "teamSlug": "hanshin-tigers",
-          "value": 0.282
         },
         {
           "rank": 7,
@@ -338,7 +338,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 1.006
+          "value": 0.998
         },
         {
           "rank": 2,
@@ -346,7 +346,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.953
+          "value": 0.952
         },
         {
           "rank": 3,
@@ -358,19 +358,19 @@
         },
         {
           "rank": 4,
+          "slug": "yusuke-oyama",
+          "player": "大山 悠輔",
+          "team": "神",
+          "teamSlug": "hanshin-tigers",
+          "value": 0.817
+        },
+        {
+          "rank": 5,
           "slug": "santana",
           "player": "サンタナ",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
           "value": 0.815
-        },
-        {
-          "rank": 5,
-          "slug": "yusuke-oyama",
-          "player": "大山 悠輔",
-          "team": "神",
-          "teamSlug": "hanshin-tigers",
-          "value": 0.813
         },
         {
           "rank": 6,
@@ -410,7 +410,7 @@
           "player": "坂倉 将吾",
           "team": "広",
           "teamSlug": "hiroshima-carp",
-          "value": 0.727
+          "value": 0.725
         }
       ],
       "hits": [
@@ -444,7 +444,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 143
+          "value": 145
         },
         {
           "rank": 5,
@@ -460,7 +460,7 @@
           "player": "坂倉 将吾",
           "team": "広",
           "teamSlug": "hiroshima-carp",
-          "value": 126
+          "value": 127
         },
         {
           "rank": 7,
@@ -876,6 +876,14 @@
         },
         {
           "rank": 7,
+          "slug": "taka-taichi",
+          "player": "髙 太一",
+          "team": "広",
+          "teamSlug": "hiroshima-carp",
+          "value": 24
+        },
+        {
+          "rank": 8,
           "slug": "nakagawa-kouta",
           "player": "中川 皓太",
           "team": "巨",
@@ -883,27 +891,19 @@
           "value": 24
         },
         {
-          "rank": 8,
-          "slug": "taka-taichi",
-          "player": "髙 太一",
+          "rank": 9,
+          "slug": "endou-atsushi",
+          "player": "遠藤 淳志",
           "team": "広",
           "teamSlug": "hiroshima-carp",
           "value": 23
         },
         {
-          "rank": 9,
+          "rank": 10,
           "slug": "kodai-nakagawa",
           "player": "中川 虎大",
           "team": "デ",
           "teamSlug": "yokohama-dena",
-          "value": 22
-        },
-        {
-          "rank": 10,
-          "slug": "endou-atsushi",
-          "player": "遠藤 淳志",
-          "team": "広",
-          "teamSlug": "hiroshima-carp",
           "value": 22
         }
       ],
