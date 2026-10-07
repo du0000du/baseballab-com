@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-07T06:38:19Z",
+  "fetchedAt": "2026-10-07T16:05:45Z",
   "season": "2026",
   "asOfDate": "2026-10-07",
   "teams": [
@@ -10,6 +10,16 @@
       "color": "#fdef00",
       "accent": "#000000",
       "recentGames": [
+        {
+          "date": "2026-10-07",
+          "opponent": "広島東洋カープ",
+          "opponentSlug": "hiroshima-carp",
+          "home": false,
+          "score": 2,
+          "opponentScore": 1,
+          "result": "W",
+          "stadium": "MAZDA Zoom-Zoomスタジアム広島"
+        },
         {
           "date": "2026-10-06",
           "opponent": "広島東洋カープ",
@@ -27,16 +37,6 @@
           "home": true,
           "score": 1,
           "opponentScore": 2,
-          "result": "L",
-          "stadium": "阪神甲子園球場"
-        },
-        {
-          "date": "2026-10-03",
-          "opponent": "広島東洋カープ",
-          "opponentSlug": "hiroshima-carp",
-          "home": true,
-          "score": 4,
-          "opponentScore": 6,
           "result": "L",
           "stadium": "阪神甲子園球場"
         }
@@ -167,6 +167,16 @@
       "accent": "#ffffff",
       "recentGames": [
         {
+          "date": "2026-10-07",
+          "opponent": "阪神タイガース",
+          "opponentSlug": "hanshin-tigers",
+          "home": true,
+          "score": 1,
+          "opponentScore": 2,
+          "result": "L",
+          "stadium": "MAZDA Zoom-Zoomスタジアム広島"
+        },
+        {
           "date": "2026-10-06",
           "opponent": "阪神タイガース",
           "opponentSlug": "hanshin-tigers",
@@ -185,16 +195,6 @@
           "opponentScore": 4,
           "result": "W",
           "stadium": "MAZDA Zoom-Zoomスタジアム広島"
-        },
-        {
-          "date": "2026-10-03",
-          "opponent": "阪神タイガース",
-          "opponentSlug": "hanshin-tigers",
-          "home": false,
-          "score": 6,
-          "opponentScore": 4,
-          "result": "W",
-          "stadium": "阪神甲子園球場"
         }
       ]
     },
