@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "fetchedAt": "2026-10-08T16:08:12Z",
+  "fetchedAt": "2026-10-08T19:34:57Z",
   "central": {
     "batting": {
       "avg": [
@@ -10,7 +10,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.308
+          "value": 0.306
         },
         {
           "rank": 2,
@@ -34,7 +34,7 @@
           "player": "中野 拓夢",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.288
+          "value": 0.287
         },
         {
           "rank": 5,
@@ -42,7 +42,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.284
+          "value": 0.285
         },
         {
           "rank": 6,
@@ -256,7 +256,7 @@
           "player": "岩田 幸宏",
           "team": "ヤ",
           "teamSlug": "yakult-swallows",
-          "value": 38
+          "value": 39
         },
         {
           "rank": 2,
@@ -338,7 +338,7 @@
           "player": "佐藤 輝明",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.998
+          "value": 0.992
         },
         {
           "rank": 2,
@@ -346,7 +346,7 @@
           "player": "森下 翔太",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.952
+          "value": 0.951
         },
         {
           "rank": 3,
@@ -362,7 +362,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 0.817
+          "value": 0.819
         },
         {
           "rank": 5,
@@ -444,7 +444,7 @@
           "player": "大山 悠輔",
           "team": "神",
           "teamSlug": "hanshin-tigers",
-          "value": 145
+          "value": 146
         },
         {
           "rank": 5,
