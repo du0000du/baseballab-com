@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-10T06:29:24Z",
+  "fetchedAt": "2026-10-10T15:03:13Z",
   "season": "2026",
   "asOfDate": "2026-10-10",
   "teams": [
@@ -54,9 +54,9 @@
           "opponent": "読売ジャイアンツ",
           "opponentSlug": "yomiuri-giants",
           "home": true,
-          "score": 1,
+          "score": 2,
           "opponentScore": 1,
-          "result": "T",
+          "result": "W",
           "stadium": "横浜スタジアム"
         },
         {
@@ -94,8 +94,8 @@
           "opponentSlug": "yokohama-dena",
           "home": false,
           "score": 1,
-          "opponentScore": 1,
-          "result": "T",
+          "opponentScore": 2,
+          "result": "L",
           "stadium": "横浜スタジアム"
         },
         {
@@ -328,8 +328,8 @@
           "opponentSlug": "seibu-lions",
           "home": true,
           "score": 2,
-          "opponentScore": 1,
-          "result": "W",
+          "opponentScore": 3,
+          "result": "L",
           "stadium": "エスコンフィールドHOKKAIDO"
         },
         {
@@ -405,9 +405,9 @@
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
           "home": false,
-          "score": 1,
+          "score": 3,
           "opponentScore": 2,
-          "result": "L",
+          "result": "W",
           "stadium": "エスコンフィールドHOKKAIDO"
         },
         {
