@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-11T06:34:49Z",
+  "fetchedAt": "2026-10-11T15:20:19Z",
   "season": "2026",
   "asOfDate": "2026-10-11",
   "teams": [
@@ -54,7 +54,7 @@
           "opponent": "読売ジャイアンツ",
           "opponentSlug": "yomiuri-giants",
           "home": true,
-          "score": 2,
+          "score": 4,
           "opponentScore": 1,
           "result": "W",
           "stadium": "横浜スタジアム"
@@ -94,7 +94,7 @@
           "opponentSlug": "yokohama-dena",
           "home": false,
           "score": 1,
-          "opponentScore": 2,
+          "opponentScore": 4,
           "result": "L",
           "stadium": "横浜スタジアム"
         },
