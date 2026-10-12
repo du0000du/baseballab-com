@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-12T06:40:15Z",
+  "fetchedAt": "2026-10-12T18:35:59Z",
   "season": "2026",
   "asOfDate": "2026-10-12",
   "teams": [
@@ -327,8 +327,8 @@
           "opponent": "埼玉西武ライオンズ",
           "opponentSlug": "seibu-lions",
           "home": true,
-          "score": 3,
-          "opponentScore": 0,
+          "score": 4,
+          "opponentScore": 1,
           "result": "W",
           "stadium": "エスコンフィールドHOKKAIDO"
         },
@@ -405,8 +405,8 @@
           "opponent": "北海道日本ハムファイターズ",
           "opponentSlug": "nipponham-fighters",
           "home": false,
-          "score": 0,
-          "opponentScore": 3,
+          "score": 1,
+          "opponentScore": 4,
           "result": "L",
           "stadium": "エスコンフィールドHOKKAIDO"
         },
