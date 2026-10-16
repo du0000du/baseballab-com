@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-10-15T20:09:10Z",
+  "fetchedAt": "2026-10-16T05:12:58Z",
   "season": "2026",
-  "asOfDate": "2026-10-15",
+  "asOfDate": "2026-10-16",
   "teams": [
     {
       "id": 145,
@@ -30,16 +30,6 @@
           "score": 6,
           "opponentScore": 9,
           "result": "L",
-          "venue": "Rate Field"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Colorado Rockies",
-          "opponentAbbr": "COL",
-          "home": true,
-          "score": 6,
-          "opponentScore": 1,
-          "result": "W",
           "venue": "Rate Field"
         }
       ]
@@ -70,16 +60,6 @@
           "home": false,
           "score": 11,
           "opponentScore": 5,
-          "result": "W",
-          "venue": "Kauffman Stadium"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Kansas City Royals",
-          "opponentAbbr": "KC",
-          "home": false,
-          "score": 12,
-          "opponentScore": 9,
           "result": "W",
           "venue": "Kauffman Stadium"
         }
@@ -113,16 +93,6 @@
           "opponentScore": 3,
           "result": "W",
           "venue": "Comerica Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Pittsburgh Pirates",
-          "opponentAbbr": "PIT",
-          "home": true,
-          "score": 8,
-          "opponentScore": 7,
-          "result": "W",
-          "venue": "Comerica Park"
         }
       ]
     },
@@ -152,16 +122,6 @@
           "home": true,
           "score": 5,
           "opponentScore": 11,
-          "result": "L",
-          "venue": "Kauffman Stadium"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Cleveland Guardians",
-          "opponentAbbr": "CLE",
-          "home": true,
-          "score": 9,
-          "opponentScore": 12,
           "result": "L",
           "venue": "Kauffman Stadium"
         }
@@ -195,16 +155,6 @@
           "opponentScore": 6,
           "result": "L",
           "venue": "Target Field"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Texas Rangers",
-          "opponentAbbr": "TEX",
-          "home": true,
-          "score": 10,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "Target Field"
         }
       ]
     },
@@ -225,26 +175,6 @@
           "score": 0,
           "opponentScore": 0,
           "result": "T",
-          "venue": "Yankee Stadium"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "New York Yankees",
-          "opponentAbbr": "NYY",
-          "home": false,
-          "score": 10,
-          "opponentScore": 2,
-          "result": "W",
-          "venue": "Yankee Stadium"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "New York Yankees",
-          "opponentAbbr": "NYY",
-          "home": false,
-          "score": 3,
-          "opponentScore": 6,
-          "result": "L",
           "venue": "Yankee Stadium"
         }
       ]
@@ -267,26 +197,6 @@
           "opponentScore": 6,
           "result": "L",
           "venue": "Tropicana Field"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Chicago Cubs",
-          "opponentAbbr": "CHC",
-          "home": true,
-          "score": 4,
-          "opponentScore": 3,
-          "result": "W",
-          "venue": "Fenway Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Chicago Cubs",
-          "opponentAbbr": "CHC",
-          "home": true,
-          "score": 2,
-          "opponentScore": 0,
-          "result": "W",
-          "venue": "Fenway Park"
         }
       ]
     },
@@ -307,26 +217,6 @@
           "score": 0,
           "opponentScore": 0,
           "result": "T",
-          "venue": "Yankee Stadium"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Baltimore Orioles",
-          "opponentAbbr": "BAL",
-          "home": true,
-          "score": 2,
-          "opponentScore": 10,
-          "result": "L",
-          "venue": "Yankee Stadium"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Baltimore Orioles",
-          "opponentAbbr": "BAL",
-          "home": true,
-          "score": 6,
-          "opponentScore": 3,
-          "result": "W",
           "venue": "Yankee Stadium"
         }
       ]
@@ -357,16 +247,6 @@
           "home": false,
           "score": 12,
           "opponentScore": 1,
-          "result": "W",
-          "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Philadelphia Phillies",
-          "opponentAbbr": "PHI",
-          "home": false,
-          "score": 2,
-          "opponentScore": 0,
           "result": "W",
           "venue": "Citizens Bank Park"
         }
@@ -400,16 +280,6 @@
           "opponentScore": 5,
           "result": "L",
           "venue": "Rogers Centre"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Cincinnati Reds",
-          "opponentAbbr": "CIN",
-          "home": true,
-          "score": 6,
-          "opponentScore": 5,
-          "result": "W",
-          "venue": "Rogers Centre"
         }
       ]
     },
@@ -440,16 +310,6 @@
           "score": 2,
           "opponentScore": 13,
           "result": "L",
-          "venue": "Sutter Health Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Houston Astros",
-          "opponentAbbr": "HOU",
-          "home": true,
-          "score": 6,
-          "opponentScore": 5,
-          "result": "W",
           "venue": "Sutter Health Park"
         }
       ]
@@ -482,16 +342,6 @@
           "opponentScore": 2,
           "result": "W",
           "venue": "Sutter Health Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Athletics",
-          "opponentAbbr": "ATH",
-          "home": false,
-          "score": 5,
-          "opponentScore": 6,
-          "result": "L",
-          "venue": "Sutter Health Park"
         }
       ]
     },
@@ -522,16 +372,6 @@
           "score": 4,
           "opponentScore": 8,
           "result": "L",
-          "venue": "T-Mobile Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Seattle Mariners",
-          "opponentAbbr": "SEA",
-          "home": false,
-          "score": 7,
-          "opponentScore": 5,
-          "result": "W",
           "venue": "T-Mobile Park"
         }
       ]
@@ -564,16 +404,6 @@
           "opponentScore": 4,
           "result": "W",
           "venue": "T-Mobile Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Los Angeles Angels",
-          "opponentAbbr": "LAA",
-          "home": true,
-          "score": 5,
-          "opponentScore": 7,
-          "result": "L",
-          "venue": "T-Mobile Park"
         }
       ]
     },
@@ -605,16 +435,6 @@
           "opponentScore": 2,
           "result": "W",
           "venue": "Target Field"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Minnesota Twins",
-          "opponentAbbr": "MIN",
-          "home": false,
-          "score": 2,
-          "opponentScore": 10,
-          "result": "L",
-          "venue": "Target Field"
         }
       ]
     },
@@ -636,26 +456,6 @@
           "opponentScore": 2,
           "result": "W",
           "venue": "Tropicana Field"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": false,
-          "score": 3,
-          "opponentScore": 4,
-          "result": "L",
-          "venue": "Fenway Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Boston Red Sox",
-          "opponentAbbr": "BOS",
-          "home": false,
-          "score": 0,
-          "opponentScore": 2,
-          "result": "L",
-          "venue": "Fenway Park"
         }
       ]
     },
@@ -687,16 +487,6 @@
           "opponentScore": 1,
           "result": "W",
           "venue": "Rogers Centre"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Toronto Blue Jays",
-          "opponentAbbr": "TOR",
-          "home": false,
-          "score": 5,
-          "opponentScore": 6,
-          "result": "L",
-          "venue": "Rogers Centre"
         }
       ]
     },
@@ -726,16 +516,6 @@
           "home": true,
           "score": 3,
           "opponentScore": 2,
-          "result": "W",
-          "venue": "American Family Field"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "St. Louis Cardinals",
-          "opponentAbbr": "STL",
-          "home": true,
-          "score": 8,
-          "opponentScore": 4,
           "result": "W",
           "venue": "American Family Field"
         }
@@ -769,16 +549,6 @@
           "opponentScore": 4,
           "result": "L",
           "venue": "Comerica Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Detroit Tigers",
-          "opponentAbbr": "DET",
-          "home": false,
-          "score": 7,
-          "opponentScore": 8,
-          "result": "L",
-          "venue": "Comerica Park"
         }
       ]
     },
@@ -808,16 +578,6 @@
           "home": false,
           "score": 2,
           "opponentScore": 3,
-          "result": "L",
-          "venue": "American Family Field"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Milwaukee Brewers",
-          "opponentAbbr": "MIL",
-          "home": false,
-          "score": 4,
-          "opponentScore": 8,
           "result": "L",
           "venue": "American Family Field"
         }
@@ -851,16 +611,6 @@
           "opponentScore": 3,
           "result": "W",
           "venue": "loanDepot park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Miami Marlins",
-          "opponentAbbr": "MIA",
-          "home": false,
-          "score": 0,
-          "opponentScore": 3,
-          "result": "L",
-          "venue": "loanDepot park"
         }
       ]
     },
@@ -891,16 +641,6 @@
           "score": 3,
           "opponentScore": 8,
           "result": "L",
-          "venue": "loanDepot park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Atlanta Braves",
-          "opponentAbbr": "ATL",
-          "home": true,
-          "score": 3,
-          "opponentScore": 0,
-          "result": "W",
           "venue": "loanDepot park"
         }
       ]
@@ -933,16 +673,6 @@
           "opponentScore": 1,
           "result": "W",
           "venue": "Nationals Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Washington Nationals",
-          "opponentAbbr": "WSH",
-          "home": false,
-          "score": 6,
-          "opponentScore": 7,
-          "result": "L",
-          "venue": "Nationals Park"
         }
       ]
     },
@@ -972,16 +702,6 @@
           "home": true,
           "score": 1,
           "opponentScore": 12,
-          "result": "L",
-          "venue": "Citizens Bank Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Tampa Bay Rays",
-          "opponentAbbr": "TB",
-          "home": true,
-          "score": 0,
-          "opponentScore": 2,
           "result": "L",
           "venue": "Citizens Bank Park"
         }
@@ -1015,16 +735,6 @@
           "opponentScore": 7,
           "result": "L",
           "venue": "Nationals Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "New York Mets",
-          "opponentAbbr": "NYM",
-          "home": true,
-          "score": 7,
-          "opponentScore": 6,
-          "result": "W",
-          "venue": "Nationals Park"
         }
       ]
     },
@@ -1055,16 +765,6 @@
           "score": 7,
           "opponentScore": 10,
           "result": "L",
-          "venue": "Petco Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "San Diego Padres",
-          "opponentAbbr": "SD",
-          "home": false,
-          "score": 11,
-          "opponentScore": 4,
-          "result": "W",
           "venue": "Petco Park"
         }
       ]
@@ -1097,16 +797,6 @@
           "opponentScore": 6,
           "result": "W",
           "venue": "Rate Field"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Chicago White Sox",
-          "opponentAbbr": "CWS",
-          "home": false,
-          "score": 1,
-          "opponentScore": 6,
-          "result": "L",
-          "venue": "Rate Field"
         }
       ]
     },
@@ -1136,16 +826,6 @@
           "home": false,
           "score": 4,
           "opponentScore": 3,
-          "result": "W",
-          "venue": "Oracle Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "San Francisco Giants",
-          "opponentAbbr": "SF",
-          "home": false,
-          "score": 2,
-          "opponentScore": 0,
           "result": "W",
           "venue": "Oracle Park"
         }
@@ -1179,16 +859,6 @@
           "opponentScore": 7,
           "result": "W",
           "venue": "Petco Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Arizona Diamondbacks",
-          "opponentAbbr": "AZ",
-          "home": true,
-          "score": 4,
-          "opponentScore": 11,
-          "result": "L",
-          "venue": "Petco Park"
         }
       ]
     },
@@ -1218,16 +888,6 @@
           "home": true,
           "score": 3,
           "opponentScore": 4,
-          "result": "L",
-          "venue": "Oracle Park"
-        },
-        {
-          "date": "2026-09-25",
-          "opponent": "Los Angeles Dodgers",
-          "opponentAbbr": "LAD",
-          "home": true,
-          "score": 0,
-          "opponentScore": 2,
           "result": "L",
           "venue": "Oracle Park"
         }
