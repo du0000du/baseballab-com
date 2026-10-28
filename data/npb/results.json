@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-28T06:24:14Z",
+  "fetchedAt": "2026-10-28T15:44:27Z",
   "season": "2026",
   "asOfDate": "2026-10-28",
   "teams": [
@@ -50,6 +50,16 @@
       "accent": "#ffffff",
       "recentGames": [
         {
+          "date": "2026-10-28",
+          "opponent": "福岡ソフトバンクホークス",
+          "opponentSlug": "softbank-hawks",
+          "home": true,
+          "score": 2,
+          "opponentScore": 4,
+          "result": "L",
+          "stadium": "横浜スタジアム"
+        },
+        {
           "date": "2026-10-27",
           "opponent": "福岡ソフトバンクホークス",
           "opponentSlug": "softbank-hawks",
@@ -66,16 +76,6 @@
           "home": false,
           "score": 3,
           "opponentScore": 4,
-          "result": "L",
-          "stadium": "みずほPayPayドーム福岡"
-        },
-        {
-          "date": "2026-10-24",
-          "opponent": "福岡ソフトバンクホークス",
-          "opponentSlug": "softbank-hawks",
-          "home": false,
-          "score": 1,
-          "opponentScore": 3,
           "result": "L",
           "stadium": "みずほPayPayドーム福岡"
         }
@@ -284,6 +284,16 @@
       "accent": "#000000",
       "recentGames": [
         {
+          "date": "2026-10-28",
+          "opponent": "横浜DeNAベイスターズ",
+          "opponentSlug": "yokohama-dena",
+          "home": false,
+          "score": 4,
+          "opponentScore": 2,
+          "result": "W",
+          "stadium": "横浜スタジアム"
+        },
+        {
           "date": "2026-10-27",
           "opponent": "横浜DeNAベイスターズ",
           "opponentSlug": "yokohama-dena",
@@ -300,16 +310,6 @@
           "home": true,
           "score": 4,
           "opponentScore": 3,
-          "result": "W",
-          "stadium": "みずほPayPayドーム福岡"
-        },
-        {
-          "date": "2026-10-24",
-          "opponent": "横浜DeNAベイスターズ",
-          "opponentSlug": "yokohama-dena",
-          "home": true,
-          "score": 3,
-          "opponentScore": 1,
           "result": "W",
           "stadium": "みずほPayPayドーム福岡"
         }
