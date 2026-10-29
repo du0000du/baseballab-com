@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-29T19:21:59Z",
+  "fetchedAt": "2026-10-29T21:30:48Z",
   "season": "2026",
   "asOfDate": "2026-10-29",
   "players": [
@@ -529,7 +529,7 @@
       "teamAbbr": "",
       "position": "RF",
       "posType": "OF",
-      "active": true,
+      "active": false,
       "season": {
         "hitting": {
           "age": 31,
@@ -620,7 +620,7 @@
       "teamAbbr": "",
       "position": "P",
       "posType": "P",
-      "active": true,
+      "active": false,
       "season": {
         "pitching": {
           "age": 32,

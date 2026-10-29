@@ -5,7 +5,6 @@
     "link": "/api/v1/people/592332",
     "firstName": "Kevin",
     "lastName": "Gausman",
-    "primaryNumber": "12",
     "birthDate": "1991-01-06",
     "currentAge": 35,
     "birthCity": "Centennial",
@@ -13,7 +12,7 @@
     "birthCountry": "USA",
     "height": "6' 2\"",
     "weight": 205,
-    "active": true,
+    "active": false,
     "primaryPosition": {
       "code": "1",
       "name": "Pitcher",
@@ -30,6 +29,7 @@
     "isVerified": true,
     "draftYear": 2012,
     "pronunciation": "GAWZ-min",
+    "lastPlayedDate": "2026-09-23",
     "mlbDebutDate": "2013-05-23",
     "batSide": {
       "code": "L",
