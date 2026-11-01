@@ -1,7 +1,7 @@
 {
-  "fetchedAt": "2026-10-31T20:22:46Z",
+  "fetchedAt": "2026-11-01T06:56:36Z",
   "season": "2026",
-  "asOfDate": "2026-10-31",
+  "asOfDate": "2026-11-01",
   "teams": [
     {
       "slug": "hanshin-tigers",
@@ -146,16 +146,6 @@
           "opponentScore": 5,
           "result": "L",
           "stadium": "バンテリンドームナゴヤ"
-        },
-        {
-          "date": "2026-09-26",
-          "opponent": "東京ヤクルトスワローズ",
-          "opponentSlug": "yakult-swallows",
-          "home": true,
-          "score": 3,
-          "opponentScore": 5,
-          "result": "L",
-          "stadium": "バンテリンドームナゴヤ"
         }
       ]
     },
@@ -251,26 +241,6 @@
           "home": true,
           "score": 0,
           "opponentScore": 6,
-          "result": "L",
-          "stadium": "京セラドームOSAKA"
-        },
-        {
-          "date": "2026-09-29",
-          "opponent": "埼玉西武ライオンズ",
-          "opponentSlug": "seibu-lions",
-          "home": true,
-          "score": 1,
-          "opponentScore": 2,
-          "result": "L",
-          "stadium": "京セラドームOSAKA"
-        },
-        {
-          "date": "2026-09-27",
-          "opponent": "福岡ソフトバンクホークス",
-          "opponentSlug": "softbank-hawks",
-          "home": true,
-          "score": 5,
-          "opponentScore": 12,
           "result": "L",
           "stadium": "京セラドームOSAKA"
         }
