@@ -132,7 +132,8 @@
           "player": {
             "id": 669923,
             "fullName": "George Kirby",
-            "link": "/api/v1/people/669923"
+            "link": "/api/v1/people/669923",
+            "nameSlug": "george-kirby-669923"
           },
           "league": {
             "id": 103,

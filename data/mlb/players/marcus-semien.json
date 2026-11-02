@@ -106,7 +106,8 @@
           "player": {
             "id": 543760,
             "fullName": "Marcus Semien",
-            "link": "/api/v1/people/543760"
+            "link": "/api/v1/people/543760",
+            "nameSlug": "marcus-semien-543760"
           },
           "league": {
             "id": 104,

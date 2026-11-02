@@ -104,7 +104,8 @@
           "player": {
             "id": 666023,
             "fullName": "Freddy Fermin",
-            "link": "/api/v1/people/666023"
+            "link": "/api/v1/people/666023",
+            "nameSlug": "freddy-fermin-666023"
           },
           "league": {
             "id": 104,

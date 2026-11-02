@@ -105,7 +105,8 @@
           "player": {
             "id": 663728,
             "fullName": "Cal Raleigh",
-            "link": "/api/v1/people/663728"
+            "link": "/api/v1/people/663728",
+            "nameSlug": "cal-raleigh-663728"
           },
           "league": {
             "id": 103,

@@ -133,7 +133,8 @@
           "player": {
             "id": 656302,
             "fullName": "Dylan Cease",
-            "link": "/api/v1/people/656302"
+            "link": "/api/v1/people/656302",
+            "nameSlug": "dylan-cease-656302"
           },
           "league": {
             "id": 103,

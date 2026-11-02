@@ -104,7 +104,8 @@
           "player": {
             "id": 683737,
             "fullName": "Michael Busch",
-            "link": "/api/v1/people/683737"
+            "link": "/api/v1/people/683737",
+            "nameSlug": "michael-busch-683737"
           },
           "league": {
             "id": 104,

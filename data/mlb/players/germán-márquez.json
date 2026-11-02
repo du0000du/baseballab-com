@@ -131,7 +131,8 @@
           "player": {
             "id": 608566,
             "fullName": "Germán Márquez",
-            "link": "/api/v1/people/608566"
+            "link": "/api/v1/people/608566",
+            "nameSlug": "german-marquez-608566"
           },
           "league": {
             "id": 104,

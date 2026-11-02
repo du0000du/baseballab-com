@@ -104,7 +104,8 @@
           "player": {
             "id": 682998,
             "fullName": "Corbin Carroll",
-            "link": "/api/v1/people/682998"
+            "link": "/api/v1/people/682998",
+            "nameSlug": "corbin-carroll-682998"
           },
           "league": {
             "id": 104,

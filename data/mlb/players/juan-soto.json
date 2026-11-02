@@ -104,7 +104,8 @@
           "player": {
             "id": 665742,
             "fullName": "Juan Soto",
-            "link": "/api/v1/people/665742"
+            "link": "/api/v1/people/665742",
+            "nameSlug": "juan-soto-665742"
           },
           "league": {
             "id": 104,

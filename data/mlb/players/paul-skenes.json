@@ -132,7 +132,8 @@
           "player": {
             "id": 694973,
             "fullName": "Paul Skenes",
-            "link": "/api/v1/people/694973"
+            "link": "/api/v1/people/694973",
+            "nameSlug": "paul-skenes-694973"
           },
           "league": {
             "id": 104,

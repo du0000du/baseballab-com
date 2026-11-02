@@ -99,7 +99,8 @@
           "player": {
             "id": 668939,
             "fullName": "Adley Rutschman",
-            "link": "/api/v1/people/668939"
+            "link": "/api/v1/people/668939",
+            "nameSlug": "adley-rutschman-668939"
           },
           "league": {
             "id": 103,
@@ -160,7 +161,8 @@
           "player": {
             "id": 668939,
             "fullName": "Adley Rutschman",
-            "link": "/api/v1/people/668939"
+            "link": "/api/v1/people/668939",
+            "nameSlug": "adley-rutschman-668939"
           },
           "league": {
             "id": 103,
@@ -220,7 +222,8 @@
           "player": {
             "id": 668939,
             "fullName": "Adley Rutschman",
-            "link": "/api/v1/people/668939"
+            "link": "/api/v1/people/668939",
+            "nameSlug": "adley-rutschman-668939"
           },
           "league": {
             "id": 103,

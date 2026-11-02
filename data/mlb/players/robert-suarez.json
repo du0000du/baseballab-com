@@ -131,7 +131,8 @@
           "player": {
             "id": 663158,
             "fullName": "Robert Suarez",
-            "link": "/api/v1/people/663158"
+            "link": "/api/v1/people/663158",
+            "nameSlug": "robert-suarez-663158"
           },
           "league": {
             "id": 104,

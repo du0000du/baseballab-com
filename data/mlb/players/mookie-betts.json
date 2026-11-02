@@ -104,7 +104,8 @@
           "player": {
             "id": 605141,
             "fullName": "Mookie Betts",
-            "link": "/api/v1/people/605141"
+            "link": "/api/v1/people/605141",
+            "nameSlug": "mookie-betts-605141"
           },
           "league": {
             "id": 104,

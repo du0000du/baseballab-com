@@ -133,7 +133,8 @@
           "player": {
             "id": 676979,
             "fullName": "Garrett Crochet",
-            "link": "/api/v1/people/676979"
+            "link": "/api/v1/people/676979",
+            "nameSlug": "garrett-crochet-676979"
           },
           "league": {
             "id": 103,

@@ -105,7 +105,8 @@
           "player": {
             "id": 596019,
             "fullName": "Francisco Lindor",
-            "link": "/api/v1/people/596019"
+            "link": "/api/v1/people/596019",
+            "nameSlug": "francisco-lindor-596019"
           },
           "league": {
             "id": 104,

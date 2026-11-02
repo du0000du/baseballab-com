@@ -129,7 +129,8 @@
           "player": {
             "id": 592332,
             "fullName": "Kevin Gausman",
-            "link": "/api/v1/people/592332"
+            "link": "/api/v1/people/592332",
+            "nameSlug": "kevin-gausman-592332"
           },
           "sport": {
             "id": 1,
@@ -214,7 +215,8 @@
           "player": {
             "id": 592332,
             "fullName": "Kevin Gausman",
-            "link": "/api/v1/people/592332"
+            "link": "/api/v1/people/592332",
+            "nameSlug": "kevin-gausman-592332"
           },
           "league": {
             "id": 104,
@@ -302,7 +304,8 @@
           "player": {
             "id": 592332,
             "fullName": "Kevin Gausman",
-            "link": "/api/v1/people/592332"
+            "link": "/api/v1/people/592332",
+            "nameSlug": "kevin-gausman-592332"
           },
           "league": {
             "id": 103,

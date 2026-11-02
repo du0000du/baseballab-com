@@ -105,7 +105,8 @@
           "player": {
             "id": 642133,
             "fullName": "Rowdy Tellez",
-            "link": "/api/v1/people/642133"
+            "link": "/api/v1/people/642133",
+            "nameSlug": "rowdy-tellez-642133"
           },
           "league": {
             "id": 104,

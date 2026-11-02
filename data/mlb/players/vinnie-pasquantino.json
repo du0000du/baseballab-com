@@ -105,7 +105,8 @@
           "player": {
             "id": 686469,
             "fullName": "Vinnie Pasquantino",
-            "link": "/api/v1/people/686469"
+            "link": "/api/v1/people/686469",
+            "nameSlug": "vinnie-pasquantino-686469"
           },
           "league": {
             "id": 103,

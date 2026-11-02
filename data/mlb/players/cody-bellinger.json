@@ -105,7 +105,8 @@
           "player": {
             "id": 641355,
             "fullName": "Cody Bellinger",
-            "link": "/api/v1/people/641355"
+            "link": "/api/v1/people/641355",
+            "nameSlug": "cody-bellinger-641355"
           },
           "league": {
             "id": 103,

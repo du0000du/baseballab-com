@@ -105,7 +105,8 @@
           "player": {
             "id": 621566,
             "fullName": "Matt Olson",
-            "link": "/api/v1/people/621566"
+            "link": "/api/v1/people/621566",
+            "nameSlug": "matt-olson-621566"
           },
           "league": {
             "id": 104,

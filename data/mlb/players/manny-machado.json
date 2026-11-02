@@ -105,7 +105,8 @@
           "player": {
             "id": 592518,
             "fullName": "Manny Machado",
-            "link": "/api/v1/people/592518"
+            "link": "/api/v1/people/592518",
+            "nameSlug": "manny-machado-592518"
           },
           "league": {
             "id": 104,

@@ -132,7 +132,8 @@
           "player": {
             "id": 671096,
             "fullName": "Andrew Abbott",
-            "link": "/api/v1/people/671096"
+            "link": "/api/v1/people/671096",
+            "nameSlug": "andrew-abbott-671096"
           },
           "league": {
             "id": 104,

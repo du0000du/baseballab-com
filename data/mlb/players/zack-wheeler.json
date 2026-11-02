@@ -134,7 +134,8 @@
           "player": {
             "id": 554430,
             "fullName": "Zack Wheeler",
-            "link": "/api/v1/people/554430"
+            "link": "/api/v1/people/554430",
+            "nameSlug": "zack-wheeler-554430"
           },
           "league": {
             "id": 104,

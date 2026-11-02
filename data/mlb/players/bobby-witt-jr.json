@@ -106,7 +106,8 @@
           "player": {
             "id": 677951,
             "fullName": "Bobby Witt Jr.",
-            "link": "/api/v1/people/677951"
+            "link": "/api/v1/people/677951",
+            "nameSlug": "bobby-witt-jr-677951"
           },
           "league": {
             "id": 103,

@@ -106,7 +106,8 @@
           "player": {
             "id": 595978,
             "fullName": "Austin Hedges",
-            "link": "/api/v1/people/595978"
+            "link": "/api/v1/people/595978",
+            "nameSlug": "austin-hedges-595978"
           },
           "league": {
             "id": 103,
