@@ -5,7 +5,7 @@
     "link": "/api/v1/people/595978",
     "firstName": "Austin",
     "lastName": "Hedges",
-    "primaryNumber": "17",
+    "primaryNumber": "27",
     "birthDate": "1992-08-18",
     "currentAge": 34,
     "birthCity": "San Juan Capistrano",
@@ -13,7 +13,7 @@
     "birthCountry": "USA",
     "height": "6' 0\"",
     "weight": 220,
-    "active": false,
+    "active": true,
     "primaryPosition": {
       "code": "2",
       "name": "Catcher",
@@ -29,7 +29,6 @@
     "isPlayer": true,
     "isVerified": true,
     "draftYear": 2011,
-    "lastPlayedDate": "2026-09-27",
     "mlbDebutDate": "2015-05-04",
     "batSide": {
       "code": "R",
